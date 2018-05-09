@@ -1,0 +1,11 @@
+{
+  "name": "auroratide.com",
+  "version": "0.0.0",
+  "description": "Timothy Foster's humble website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Timothy Foster",
+  "license": "ISC"
+}
