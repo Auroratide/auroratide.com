@@ -10,6 +10,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      Client: path.resolve(__dirname, 'src', 'client'),
+      Test: path.resolve(__dirname, 'test')
+    }
   },
   module: {
     rules: [ {

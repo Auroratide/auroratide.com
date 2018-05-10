@@ -8,7 +8,7 @@
     "build": "npm-run-all build:js build:html",
     "build:js": "webpack",
     "build:html": "mkdir -p public && cp src/client/index.html public/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest"
   },
   "author": "Timothy Foster",
   "license": "ISC",
@@ -20,9 +20,13 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-webpack-alias": "^2.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "http-server": "^0.11.1",
+    "jest": "^22.4.3",
     "npm-run-all": "^4.1.3",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3"
