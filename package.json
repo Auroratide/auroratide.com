@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 3000",
+    "start:dev": "npm run build && npm-run-all --parallel build:js start",
     "build": "npm-run-all build:js build:html",
     "build:js": "webpack",
+    "build:js:watch": "webpack --watch",
     "build:html": "mkdir -p public && cp src/client/index.html public/index.html",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch"
   },
   "author": "Timothy Foster",
   "license": "ISC",
