@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.css';
 
 const App = () =>
-  <div className={styles.app}>
+  <div>
     <p>Hello World!</p>
   </div>;
 

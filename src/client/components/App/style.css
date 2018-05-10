@@ -1,3 +1,7 @@
-.app {
-  color: red;
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
 }
