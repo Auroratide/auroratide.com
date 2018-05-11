@@ -1,0 +1,59 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1:last-child, h2:last-child, h3:last-child,
+h4:last-child, h5:last-child, h6:last-child,
+p:last-child, blockquote:last-child, pre:last-child,
+dl:last-child, ol:last-child, ul:last-child {
+  margin-bottom: 0;
+}
+
+img, button, input, select, textarea {
+  margin: 0;
+}
+
+ol ol, ol ul, ul ol, ul ul {
+  margin-bottom: 0;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+code {
+  font-family: monospace;
+}
+
+table {
+  border-collapse: collapse;
+}
