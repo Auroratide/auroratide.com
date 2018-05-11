@@ -1,3 +1,4 @@
+@import 'palette';
 @import 'typography';
 
 html {
@@ -6,4 +7,12 @@ html {
 
 body {
   @apply --sans;
+  background-color: var(--grey);
+}
+
+.app {
+  background-color: var(--white);
+  width: 72rem;
+  margin: auto;
+  padding: 1rem;
 }
