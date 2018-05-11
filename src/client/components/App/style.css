@@ -1,7 +1,9 @@
+@import 'typography';
+
 html {
-  font-size: 16px;
+  font-size: var(--base-size);
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  @apply --sans;
 }
