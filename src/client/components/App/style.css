@@ -1,9 +1,5 @@
 @import 'theme';
 
-html {
-  font-size: var(--base-size);
-}
-
 body {
   @apply --sans;
   background-color: var(--grey);
