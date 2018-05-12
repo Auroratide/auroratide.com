@@ -4,8 +4,9 @@
   "description": "Timothy Foster's humble website",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -p 3000",
-    "start:dev": "npm run build && npm-run-all --parallel build:webpack:watch start",
+    "start": "serve -s -n -t -S -p 3000 public",
+    "start:dev": "serve -s -n -l -u -p 3000 -c 0 public",
+    "start:watch": "npm run build && npm-run-all --parallel build:webpack:watch start:dev",
     "build": "npm-run-all build:webpack build:html",
     "build:webpack": "webpack",
     "build:webpack:watch": "webpack --watch",
@@ -19,7 +20,8 @@
   "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "serve": "^6.5.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -31,7 +33,6 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "http-server": "^0.11.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
     "npm-run-all": "^4.1.3",
