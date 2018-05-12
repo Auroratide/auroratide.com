@@ -12,8 +12,9 @@
     "build:webpack:watch": "webpack --watch",
     "build:html": "mkdir -p public && cp src/client/index.html public/index.html",
     "clean": "rm -rf public",
-    "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --watch"
+    "test": "NODE_ENV=test jest test/",
+    "test:watch": "NODE_ENV=test jest test/ --watch",
+    "components:create": "node scripts/components/create"
   },
   "author": "Timothy Foster",
   "license": "ISC",
@@ -30,6 +31,7 @@
     "babel-plugin-webpack-alias": "^2.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "commander": "^2.15.1",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
