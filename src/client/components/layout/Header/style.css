@@ -1,5 +1,6 @@
 @import 'theme';
 
-.header {
-  
+header {
+  background: var(--secondary);
+  color: var(--white);
 }

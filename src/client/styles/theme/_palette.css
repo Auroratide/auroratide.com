@@ -1,4 +1,8 @@
 :root {
   --grey: #DDDDDD;
   --white: #FFFFFF;
+
+  --deep-blue: #001533;
+
+  --secondary: var(--deep-blue);
 }

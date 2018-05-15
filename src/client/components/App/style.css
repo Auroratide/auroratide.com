@@ -7,7 +7,4 @@ body {
 
 .app {
   background-color: var(--white);
-  width: 72rem;
-  margin: auto;
-  padding: 1rem;
 }
