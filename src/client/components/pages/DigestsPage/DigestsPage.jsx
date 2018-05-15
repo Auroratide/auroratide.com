@@ -1,8 +1,9 @@
 import React from 'react';
+import Page from 'Client/components/layout/Page';
 
 const DigestsPage = () =>
-  <div>
+  <Page>
     <p>Hello Digests!</p>
-  </div>;
+  </Page>;
 
 export default DigestsPage;

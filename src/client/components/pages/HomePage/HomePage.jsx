@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from 'Client/components/layout/Page';
 import Link from 'Client/components/core/Link';
 
 const HomePage = () =>
-  <div>
+  <Page>
     <p>Hello World!</p>
     <p><Link to='/digests'>Go to Digests</Link></p>
-  </div>;
+  </Page>;
 
 export default HomePage;
