@@ -3,6 +3,8 @@
   --white: #FFFFFF;
 
   --deep-blue: #001533;
+  --aurora-blue: #448DDD;
 
+  --primary: var(--aurora-blue);
   --secondary: var(--deep-blue);
 }

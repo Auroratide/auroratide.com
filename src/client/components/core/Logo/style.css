@@ -1,0 +1,11 @@
+@import 'theme';
+
+.logo {
+  overflow: visible;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.logo img {
+  width: 100%;
+}
