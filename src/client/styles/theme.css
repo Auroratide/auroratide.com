@@ -1,3 +1,4 @@
 @import './_normalize';
 @import './theme/_palette';
+@import './theme/_transitions';
 @import './theme/_typography';

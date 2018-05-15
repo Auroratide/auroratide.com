@@ -1,9 +1,30 @@
 @import 'theme';
 
-.top-bar {
-  
+:root {
+  --border-thickness: 0.75rem;
 }
 
-.logo {
-  width: 4rem;
+.logo-link {
+  position: relative;
+  display: block;
+  width: 5.25rem;
+  height: 5.25rem;
+}
+
+.logo-link .logo {
+  border: var(--border-thickness) solid var(--secondary);
+  width: 100%;
+  height: 100%;
+  transition: var(--short-transition) border-width;
+}
+
+.logo-link .logo img {
+  position: absolute;
+  top: calc(var(--border-thickness) / 2);
+  left: calc(var(--border-thickness) / 2);
+  width: calc(100% - var(--border-thickness));
+}
+
+.logo-link:hover .logo {
+  border-width: calc(var(--border-thickness) * 1.5);
 }

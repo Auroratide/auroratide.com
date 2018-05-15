@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './style.css';
 import Container from 'Client/components/core/Container';
+import Link from 'Client/components/core/Link';
 import Logo from 'Client/components/core/Logo';
 
 const TopBar = () =>
-  <nav className={styles.topBar}>
+  <nav>
     <Container>
-      <Logo className={styles.logo} />
+      <Link to='/' className={styles['logo-link']}>
+        <Logo className={styles.logo} />
+      </Link>
     </Container>
   </nav>;
 
