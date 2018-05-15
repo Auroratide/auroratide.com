@@ -20,9 +20,9 @@
 
 .logo-link .logo img {
   position: absolute;
-  top: calc(var(--border-thickness) / 2);
-  left: calc(var(--border-thickness) / 2);
-  width: calc(100% - var(--border-thickness));
+  top: calc(var(--border-thickness));
+  left: calc(var(--border-thickness));
+  width: calc(100% - 2 * var(--border-thickness));
 }
 
 .logo-link:hover .logo {
