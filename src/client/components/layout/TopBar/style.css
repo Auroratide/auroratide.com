@@ -2,6 +2,7 @@
 
 :root {
   --border-thickness: 0.75rem;
+  --border-thickness-large: 1rem;
 }
 
 .logo-link {
@@ -27,4 +28,25 @@
 
 .logo-link:hover .logo {
   border-width: calc(var(--border-thickness) * 1.5);
+}
+
+@media (--large-screen) {
+  .logo-link {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .logo-link .logo {
+    border-width: var(--border-thickness-large);
+  }
+
+  .logo-link .logo img {
+    top: calc(var(--border-thickness-large));
+    left: calc(var(--border-thickness-large));
+    width: calc(100% - 2 * var(--border-thickness-large));
+  }
+  
+  .logo-link:hover .logo {
+    border-width: calc(var(--border-thickness-large) * 1.5);
+  }
 }
