@@ -4,28 +4,7 @@
   color: var(--white);
 }
 
-.container {
+.top-bar .container {
   display: flex;
   max-height: 7rem;
-}
-
-.link-container {
-  display: flex;
-  margin-left: 3rem;
-  /* align-self: center; */
-}
-
-.link-container .link {
-  display: flex;
-  align-items: center;
-  font-size: var(--lg);
-  border-bottom: 0 solid var(--primary);
-  padding-top: 0;
-  transition: var(--short-transition) border-bottom-width,
-              var(--short-transition) padding-top;
-}
-
-.link-container .link:hover {
-  border-bottom-width: 0.5rem;
-  padding-top: 0.5rem;
 }

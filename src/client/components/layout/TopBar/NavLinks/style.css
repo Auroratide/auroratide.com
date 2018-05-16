@@ -1,0 +1,22 @@
+@import 'theme';
+
+.nav-links {
+  display: flex;
+  margin-left: 3rem;
+  /* align-self: center; */
+}
+
+.nav-links .link {
+  display: flex;
+  align-items: center;
+  font-size: var(--lg);
+  border-bottom: 0 solid var(--primary);
+  padding-top: 0;
+  transition: var(--short-transition) border-bottom-width,
+              var(--short-transition) padding-top;
+}
+
+.nav-links .link:hover {
+  border-bottom-width: 0.5rem;
+  padding-top: 0.5rem;
+}
