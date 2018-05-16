@@ -1,3 +1,7 @@
 :root {
   --sans: { font-family: 'Source Sans Pro', sans-serif; };
+
+  --sm: 0.75rem;
+  --md: 1rem;
+  --lg: 1.25rem;
 }

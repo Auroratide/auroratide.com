@@ -1,1 +1,19 @@
 @import 'theme';
+
+.top-bar a {
+  color: var(--white);
+}
+
+.container {
+  display: flex;
+  max-height: 7rem;
+}
+
+.link-container {
+  margin-left: 3rem;
+  align-self: center;
+}
+
+.link-container .link {
+  font-size: var(--lg);
+}
