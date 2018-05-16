@@ -10,7 +10,7 @@ module.exports = {
     path: path.join(__dirname, 'public')
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.css'],
     alias: {
       Client: path.resolve(__dirname, 'src', 'client'),
       Test: path.resolve(__dirname, 'test')

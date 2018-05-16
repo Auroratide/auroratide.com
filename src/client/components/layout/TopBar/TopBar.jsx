@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.css';
+import styles from './style';
 import Container from 'Client/components/core/Container';
 import Link from 'Client/components/core/Link';
 import Logo from 'Client/components/core/Logo';

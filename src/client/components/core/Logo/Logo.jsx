@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Assets from 'Client/config/assets';
 
-import styles from './style.css';
+import styles from './style';
 
 const Logo = ({ className }) =>
   <div className={classnames(styles.logo, className)}>

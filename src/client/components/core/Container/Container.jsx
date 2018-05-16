@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styles from './style.css';
+import styles from './style';
 
 const Container = ({ className, children }) =>
   <div className={classnames(styles.container, className)}>
