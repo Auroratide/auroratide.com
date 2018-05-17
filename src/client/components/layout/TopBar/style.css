@@ -1,6 +1,10 @@
 @import 'theme';
 
 .top-bar a {
+  color: var(--off-white);
+}
+
+.top-bar a:hover {
   color: var(--white);
 }
 
@@ -11,5 +15,6 @@
 
 .top-bar .nav-links {
   display: flex;
+  flex: 1;
   margin-left: 3rem;
 }
