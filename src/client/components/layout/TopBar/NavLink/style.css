@@ -1,12 +1,6 @@
 @import 'theme';
 
-.nav-links {
-  display: flex;
-  margin-left: 3rem;
-  /* align-self: center; */
-}
-
-.nav-links .link {
+.nav-link {
   display: flex;
   align-items: center;
   font-size: var(--lg);
@@ -16,7 +10,8 @@
               var(--short-transition) padding-top;
 }
 
-.nav-links .link:hover {
+.nav-link:hover,
+.nav-link.active {
   border-bottom-width: 0.5rem;
   padding-top: 0.5rem;
 }
