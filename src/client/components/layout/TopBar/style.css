@@ -10,11 +10,31 @@
 
 .top-bar .container {
   display: flex;
-  max-height: 7rem;
+  flex-direction: column;
+}
+
+.top-bar .main-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 .top-bar .nav-links {
   display: flex;
-  flex: 1;
-  margin-left: 3rem;
+  flex-direction: column;
+}
+
+@media (--large-screen) {
+  .top-bar .container {
+    flex-direction: row;
+    max-height: 7rem;
+  }
+
+  .top-bar .nav-links {
+    flex-direction: row;
+    margin-left: 3rem;
+  }
+
+  .top-bar .hamburger {
+    display: none;
+  }
 }
