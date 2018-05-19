@@ -1,3 +1,4 @@
 :root {
   --short-transition: 128ms linear;
+  --medium-transition: 400ms ease-out;
 }

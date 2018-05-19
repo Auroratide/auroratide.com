@@ -4,8 +4,10 @@ module.exports = {
     es6: true
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
+      experimentalDecorators: true,
       experimentalObjectRestSpread: true,
       jsx: true
     },
