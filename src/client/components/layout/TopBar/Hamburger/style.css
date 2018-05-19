@@ -1,0 +1,32 @@
+@import 'theme';
+
+.hamburger {
+  position: relative;
+  color: var(--off-white);
+  font-size: var(--xxl);
+  padding: 0 1.5rem;
+  z-index: 1;
+}
+
+.hamburger:hover {
+  color: var(--white);
+}
+
+.hamburger::before {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border: 30px solid var(--secondary);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  background: var(--primary);
+  z-index: -1;
+  transition: var(--short-transition) border-width;
+}
+
+.hamburger.active::before {
+  border-width: 0;
+}
