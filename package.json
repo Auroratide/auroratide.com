@@ -23,6 +23,9 @@
   "author": "Timothy Foster",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
     "classnames": "^2.2.5",
     "mobx": "^4.2.1",
     "mobx-react": "^5.1.2",
