@@ -31,7 +31,9 @@
 
   .top-bar .nav-links {
     flex-direction: row;
+    flex: 1;
     margin-left: 3rem;
+    height: auto;
   }
 
   .top-bar .hamburger {
