@@ -1,19 +1,15 @@
 @import 'theme';
-
-:root {
-  --border-thickness: 0.75rem;
-  --border-thickness-large: 1rem;
-}
+@import '../_dimensions';
 
 .logo-link {
   position: relative;
   display: block;
-  width: 5.25rem;
-  height: 5.25rem;
+  width: var(--circle-width);
+  height: var(--circle-width);
 }
 
 .logo-link .logo {
-  border: var(--border-thickness) solid var(--secondary);
+  border: var(--circle-border-thickness) solid var(--secondary);
   width: 100%;
   height: 100%;
   transition: var(--short-transition) border-width;
@@ -21,13 +17,13 @@
 
 .logo-link .logo img {
   position: absolute;
-  top: calc(var(--border-thickness));
-  left: calc(var(--border-thickness));
-  width: calc(100% - 2 * var(--border-thickness));
+  top: calc(var(--circle-border-thickness));
+  left: calc(var(--circle-border-thickness));
+  width: calc(100% - 2 * var(--circle-border-thickness));
 }
 
 .logo-link:hover .logo {
-  border-width: calc(var(--border-thickness) * 1.5);
+  border-width: calc(var(--circle-border-thickness) * 1.5);
 }
 
 @media (--large-screen) {
@@ -37,16 +33,16 @@
   }
 
   .logo-link .logo {
-    border-width: var(--border-thickness-large);
+    border-width: var(--circle-border-thickness-large);
   }
 
   .logo-link .logo img {
-    top: calc(var(--border-thickness-large));
-    left: calc(var(--border-thickness-large));
-    width: calc(100% - 2 * var(--border-thickness-large));
+    top: calc(var(--circle-border-thickness-large));
+    left: calc(var(--circle-border-thickness-large));
+    width: calc(100% - 2 * var(--circle-border-thickness-large));
   }
   
   .logo-link:hover .logo {
-    border-width: calc(var(--border-thickness-large) * 1.5);
+    border-width: calc(var(--circle-border-thickness-large) * 1.5);
   }
 }

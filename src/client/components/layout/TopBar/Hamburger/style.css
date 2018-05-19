@@ -1,10 +1,15 @@
 @import 'theme';
+@import '../_dimensions';
+
+:root {
+  --hamburger-circle-width: calc(var(--circle-width) - 2 * var(--circle-border-thickness));
+}
 
 .hamburger {
   position: relative;
   color: var(--off-white);
   font-size: var(--xxl);
-  padding: 0 1.5rem;
+  padding: 0 calc(2 * var(--circle-border-thickness));
   z-index: 1;
 }
 
@@ -14,11 +19,11 @@
 
 .hamburger::before {
   position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 60px;
-  border: 30px solid var(--secondary);
+  top: calc(50% - var(--hamburger-circle-width) / 2);
+  left: calc(50% - var(--hamburger-circle-width) / 2);
+  width: var(--hamburger-circle-width);
+  height: var(--hamburger-circle-width);
+  border: calc(var(--hamburger-circle-width) / 2) solid var(--secondary);
   border-radius: 50%;
   content: '';
   display: block;
