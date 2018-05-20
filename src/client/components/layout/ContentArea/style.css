@@ -1,0 +1,12 @@
+@import 'theme';
+
+.content-area {
+  background: var(--white);
+  padding: 1rem;
+}
+
+@media (--large-screen) {
+  .content-area {
+    padding: 2rem;
+  }
+}

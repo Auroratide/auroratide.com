@@ -1,9 +1,12 @@
 import React from 'react';
 import Container from 'Client/components/core/Container';
+import ContentArea from 'Client/components/layout/ContentArea';
 
 const DigestsPage = () =>
   <Container>
-    <p>Hello Digests!</p>
+    <ContentArea>
+      <p>Hello Digests!</p>
+    </ContentArea>
   </Container>;
 
 export default DigestsPage;
