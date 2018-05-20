@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react';
+import { withRouter } from 'react-router-dom';
 import TopBar from './TopBar';
 import container from './container';
 
-export default container(observer(TopBar));
+export default withRouter(container(observer(TopBar)));
