@@ -15,8 +15,9 @@
     "clean": "rm -rf public",
     "lint": "eslint '{src,test}/**/*.{js,jsx}'",
     "test": "npm-run-all lint test:all",
-    "test:all": "npm run test:unit",
+    "test:all": "npm-run-all test:unit test:behavioural",
     "test:unit": "NODE_ENV=test jest test/unit",
+    "test:behavioural": "NODE_ENV=test jest test/behavioural",
     "test:watch": "NODE_ENV=test jest test/ --watch",
     "components:create": "node scripts/components/create"
   },
