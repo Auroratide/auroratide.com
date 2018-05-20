@@ -1,0 +1,7 @@
+@import 'theme';
+
+footer {
+  color: var(--off-white);
+  background: var(--secondary);
+  padding: 3rem 0;
+}
