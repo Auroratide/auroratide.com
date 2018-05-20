@@ -4,4 +4,5 @@ footer {
   color: var(--off-white);
   background: var(--secondary);
   padding: 3rem 0;
+  text-align: center;
 }
