@@ -1,0 +1,5 @@
+@import 'theme';
+
+.nav-link {
+  flex: 0 0 5rem;
+}
