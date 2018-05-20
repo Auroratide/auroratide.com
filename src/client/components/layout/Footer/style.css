@@ -21,3 +21,22 @@ footer .nav-links {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
+
+footer .icon-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+footer .icon-links .linked-in::before {
+  background: var(--linked-in);
+}
+
+footer .icon-links .twitter::before {
+  background: var(--twitter);
+}
+
+footer .icon-links .github::before {
+  background: var(--github);
+}

@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import classnames from 'classnames';
 
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTwitter,
+  faLinkedinIn,
+  faGithubAlt
+} from '@fortawesome/free-brands-svg-icons';
+
 const library = {
-  'bars': faBars
+  'bars': faBars,
+  'twitter': faTwitter,
+  'linked-in': faLinkedinIn,
+  'github-alt': faGithubAlt
 };
 
 const Icon = ({ icon, className }) =>

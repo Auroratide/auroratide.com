@@ -1,0 +1,37 @@
+@import 'theme';
+
+:root {
+  --circle-width: 3.75rem;
+  --border-thickness: 0.4rem;
+}
+
+.icon-link {
+  position: relative;
+  flex: 0 0 7rem;
+  padding: 1.5rem 0;
+  color: var(--off-white);
+  font-size: var(--xxl);
+  z-index: 1;
+}
+
+.icon-link:hover {
+  color: var(--white);
+}
+
+.icon-link::before {
+  position: absolute;
+  top: calc(50% - var(--circle-width) / 2);
+  left: calc(50% - var(--circle-width) / 2);
+  width: var(--circle-width);
+  height: var(--circle-width);
+  border: 0 solid var(--secondary);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  z-index: -1;
+  transition: var(--short-transition) border-width;
+}
+
+.icon-link:hover::before {
+  border-width: var(--border-thickness / 2);
+}

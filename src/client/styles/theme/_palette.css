@@ -8,4 +8,8 @@
 
   --primary: var(--aurora-blue);
   --secondary: var(--deep-blue);
+
+  --github: #333333;
+  --linked-in: #0077B5;
+  --twitter: #29AAE1;
 }
