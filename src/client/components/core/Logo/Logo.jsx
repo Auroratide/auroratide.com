@@ -7,7 +7,7 @@ import styles from './style';
 
 const Logo = ({ className }) =>
   <div className={classnames(styles.logo, className)}>
-    <img src={Assets.Logo.NO_BACK} alt='A' />
+    <img src={Assets.Logo.NO_BACK} />
   </div>;
 
 Logo.propTypes = {
