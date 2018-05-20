@@ -5,8 +5,8 @@ import classnames from 'classnames';
 
 const isExternal = link => /http/.test(link);
 
-const renderInternalLink = ( { to, className, children } ) =>  // eslint-disable-line react/prop-types
-  <RouterLink to={to} onClick={scroll.toTop} className={classnames(className)}>{children}</RouterLink>;
+const renderInternalLink = ( { to, className, onClick, children } ) =>  // eslint-disable-line react/prop-types
+  <RouterLink to={to} onClick={onClick} className={classnames(className)}>{children}</RouterLink>;
 
 const renderExternalLink = ( { to, className, children } ) =>  // eslint-disable-line react/prop-types
   <a href={to} className={classnames(className)}>{children}</a>;
@@ -22,6 +22,7 @@ const Link = (props) => {
 
 Link.propTypes = {
   to: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
   className: PropTypes.string,
   children: PropTypes.node
 };

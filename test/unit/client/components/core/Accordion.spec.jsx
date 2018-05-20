@@ -32,6 +32,7 @@ describe('<Accordion />', () => {
     });
 
     it('should set expanded to false', () => {
+      state.expanded = true;
       state.collapse();
       expect(state.expanded).toBe(false);
     });

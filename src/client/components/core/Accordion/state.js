@@ -5,6 +5,6 @@ export default class AccordionState {
   value = 5;
 
   expand = () => this.expanded = true;
-  collapse = () => this.collapse = false;
+  collapse = () => this.expanded = false;
   toggle = () => this.expanded = !this.expanded;
 }

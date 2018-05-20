@@ -12,13 +12,13 @@ const TopBar = ({ accordionState }) =>
   <nav className={styles['top-bar']}>
     <Container className={styles.container}>
       <div className={styles['main-links']}>
-        <LogoLink />
+        <LogoLink onClick={accordionState.collapse} />
         <Hamburger className={styles.hamburger} onClick={accordionState.toggle} active={accordionState.expanded} />
       </div>
       <Accordion state={accordionState} className={styles['nav-links']}>
-        <NavLink name='Posts' />
-        <NavLink name='Digests' />
-        <NavLink name='Stories' />
+        <NavLink name='Posts' onClick={accordionState.collapse} />
+        <NavLink name='Digests' onClick={accordionState.collapse} />
+        <NavLink name='Stories' onClick={accordionState.collapse} />
       </Accordion>
     </Container>
   </nav>;
