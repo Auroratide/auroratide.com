@@ -10,10 +10,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: var(--primary);
-}
-
 button {
   background: none;
   border: none;
