@@ -8,7 +8,7 @@ const state = new Accordion.State();
 
 const HomePage = () =>
   <Container>
-    <ContentArea>
+    <ContentArea white>
       <p>Hello World!</p>
       <p><Link to='/digests'>Go to Digests</Link></p>
       <br /><br />

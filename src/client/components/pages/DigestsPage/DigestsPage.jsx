@@ -1,11 +1,22 @@
 import React from 'react';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
+import DigestItem from 'Client/components/core/DigestItem';
+
+const sampleDigest = {
+  title: 'A Wonderful Day',
+  by: 'Some Website',
+  category: 'Example',
+  summary: 'This is a summary.  It is meant to be about two to three sentences long.  This is the final sentence.'
+};
 
 const DigestsPage = () =>
   <Container>
     <ContentArea>
-      <p>Hello Digests!</p>
+      <DigestItem digest={sampleDigest} />
+      <DigestItem digest={sampleDigest} />
+      <DigestItem digest={sampleDigest} />
+      <DigestItem digest={sampleDigest} />
     </ContentArea>
   </Container>;
 

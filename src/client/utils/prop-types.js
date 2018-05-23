@@ -8,7 +8,15 @@ const routerLocation = PropTypes.shape({
   state: PropTypes.object
 });
 
+const digest = PropTypes.shape({
+  title: PropTypes.string,
+  by: PropTypes.string,
+  category: PropTypes.string,
+  summary: PropTypes.string
+});
+
 export default {
   routerLocation,
+  digest,
   ...PropTypes
 };

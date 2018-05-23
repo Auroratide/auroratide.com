@@ -34,6 +34,11 @@ dl:last-child, ol:last-child, ul:last-child {
   margin-bottom: 0;
 }
 
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: normal;
+}
+
 img, button, input, select, textarea {
   margin: 0;
 }

@@ -1,9 +1,14 @@
 :root {
   --sans: 'Source Sans Pro', sans-serif;
 
+  --light: 300;
+  --normal: 400;
+  --bold: 700;
+
   --xs: 0.5rem;
   --sm: 0.75rem;
   --md: 1rem;
+  --ml: 1.125rem;
   --lg: 1.25rem;
   --xl: 1.5rem;
   --xxl: 2rem;
