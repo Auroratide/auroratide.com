@@ -7,7 +7,9 @@ const sampleDigest = {
   title: 'A Wonderful Day',
   by: 'Some Website',
   category: 'Example',
-  summary: 'This is a summary.  It is meant to be about two to three sentences long.  This is the final sentence.'
+  summary: 'This is a summary.  It is meant to be about two to three sentences long.  This is the final sentence.',
+  icon: 'bars',
+  color: 'aurora-blue'
 };
 
 const DigestsPage = () =>

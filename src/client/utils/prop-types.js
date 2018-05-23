@@ -12,7 +12,9 @@ const digest = PropTypes.shape({
   title: PropTypes.string,
   by: PropTypes.string,
   category: PropTypes.string,
-  summary: PropTypes.string
+  summary: PropTypes.string,
+  icon: PropTypes.string,
+  color: PropTypes.string
 });
 
 export default {
