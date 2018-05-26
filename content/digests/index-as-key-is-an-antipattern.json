@@ -1,0 +1,13 @@
+{
+  "digest": {
+    "id": "1",
+    "title": "Index as key is an anti-pattern",
+    "by": "Robin Pokorny",
+    "category": "React",
+    "link": "https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318",
+    "icon": "key",
+    "color": "aurora-blue",
+    "summary": "When rendering a list of things in React, it might be tempting to use the array index as a key, but be warned: It's a trap! Using index can cause unexpected behaviour when reordering elements.  It's generally best to use an id unique to the resource unless you know your list is static.",
+    "created_at": "2018-05-26T16:01:32.394Z"
+  }
+}

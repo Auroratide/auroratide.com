@@ -22,7 +22,8 @@
     "test:unit": "NODE_ENV=test jest test/unit",
     "test:behavioural": "NODE_ENV=test jest test/behavioural",
     "test:watch": "NODE_ENV=test jest test/ --watch",
-    "components:create": "node scripts/components/create"
+    "components:create": "node scripts/components/create",
+    "digests:create": "node scripts/digests/create"
   },
   "author": "Timothy Foster",
   "license": "ISC",
