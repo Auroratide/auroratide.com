@@ -14,7 +14,8 @@ const digest = PropTypes.shape({
   category: PropTypes.string,
   summary: PropTypes.string,
   icon: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  link: PropTypes.string
 });
 
 export default {

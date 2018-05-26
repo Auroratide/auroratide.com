@@ -5,15 +5,20 @@
   --circle-width-large: 6.5rem;
 }
 
-.digest-item {
-  background: var(--white);
+a.digest-item-container {
+  display: block;
   margin-bottom: 1rem;
-  padding: 0.25rem;
-  border-top-right-radius: calc(var(--circle-width) / 2);
+  color: var(--off-black);
 }
 
-.digest-item:last-child {
+a.digest-item-container:last-child {
   margin-bottom: 0;
+}
+
+.digest-item {
+  background: var(--white);
+  padding: 0.25rem;
+  border-top-right-radius: calc(var(--circle-width) / 2);
 }
 
 .digest-item .icon {
@@ -53,9 +58,12 @@
 }
 
 @media (--large-screen) {
+  a.digest-item-container {
+    margin-bottom: 2rem;
+  }
+  
   .digest-item {
     background: var(--white);
-    margin-bottom: 2rem;
     border-top-right-radius: calc(var(--circle-width-large) / 2);
   }
 

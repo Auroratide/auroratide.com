@@ -6,5 +6,6 @@ export default zaha({
   category: is.string(),
   summary: is.string(),
   icon: is.string(),
-  color: is.string()
+  color: is.string(),
+  link: is.string()
 });

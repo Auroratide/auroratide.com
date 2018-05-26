@@ -9,7 +9,8 @@ const sampleDigest = {
   category: 'Example',
   summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis porta porta. Ut sapien sapien, rutrum nec metus at, cursus dictum est. Vestibulum ligula mauris, pretium ac sem sed, elementum eleifend nisl. Phasellus ultricies tortor ut urna commodo convallis. Nunc et tristique ante. Phasellus in lorem sit amet enim placerat bibendum pharetra a est. Nunc id urna pulvinar, egestas quam in, lobortis purus.',
   icon: 'bars',
-  color: 'aurora-blue'
+  color: 'aurora-blue',
+  link: 'http://auroratide.com'
 };
 
 const DigestsPage = () =>
