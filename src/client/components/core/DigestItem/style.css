@@ -1,4 +1,4 @@
-@import 'theme';
+@import "theme";
 
 :root {
   --circle-width: 3.5rem;
@@ -69,7 +69,7 @@ a.digest-item-container:hover {
   a.digest-item-container {
     margin-bottom: 2rem;
   }
-  
+
   .digest-item {
     background: var(--white);
     border-top-right-radius: calc(var(--circle-width-large) / 2);

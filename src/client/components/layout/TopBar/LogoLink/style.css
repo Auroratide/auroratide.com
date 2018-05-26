@@ -1,5 +1,5 @@
-@import 'theme';
-@import '../_dimensions';
+@import "theme";
+@import "../_dimensions";
 
 .logo-link {
   position: relative;
@@ -41,7 +41,7 @@
     left: calc(var(--circle-border-thickness-large));
     width: calc(100% - 2 * var(--circle-border-thickness-large));
   }
-  
+
   .logo-link:hover .logo {
     border-width: calc(var(--circle-border-thickness-large) * 1.5);
   }

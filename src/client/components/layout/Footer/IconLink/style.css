@@ -1,4 +1,4 @@
-@import 'theme';
+@import "theme";
 
 :root {
   --circle-width: 3.75rem;
@@ -26,7 +26,7 @@
   height: var(--circle-width);
   border: 0 solid var(--secondary);
   border-radius: 50%;
-  content: '';
+  content: "";
   display: block;
   z-index: -1;
   transition: var(--short-transition) border-width;

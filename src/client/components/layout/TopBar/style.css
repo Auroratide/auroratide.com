@@ -1,4 +1,4 @@
-@import 'theme';
+@import "theme";
 
 .top-bar a {
   color: var(--off-white);

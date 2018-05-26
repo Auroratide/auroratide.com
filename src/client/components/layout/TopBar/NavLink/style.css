@@ -1,4 +1,4 @@
-@import 'theme';
+@import "theme";
 
 .nav-link {
   display: flex;
@@ -8,9 +8,10 @@
   font-size: var(--lg);
   border-right: 0 solid var(--primary);
   padding-right: 1.5rem;
-  transition: var(--short-transition) border-right-width,
-              var(--short-transition) padding-right,
-              var(--short-transition) color;
+  transition:
+    var(--short-transition) border-right-width,
+    var(--short-transition) padding-right,
+    var(--short-transition) color;
 }
 
 .nav-link:hover,
@@ -26,16 +27,16 @@
     border-bottom: 0 solid var(--primary);
     padding-top: 0;
     padding-right: 0;
-    transition: var(--short-transition) border-bottom-width,
-                var(--short-transition) padding-top,
-                var(--short-transition) color;
+    transition:
+      var(--short-transition) border-bottom-width,
+      var(--short-transition) padding-top,
+      var(--short-transition) color;
   }
 
   .nav-link:hover,
   .nav-link.active {
     border-bottom-width: 0.5rem;
     padding-top: 0.5rem;
-
     border-right-width: 0;
     padding-right: 0;
   }

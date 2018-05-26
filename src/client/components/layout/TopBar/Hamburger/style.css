@@ -1,5 +1,5 @@
-@import 'theme';
-@import '../_dimensions';
+@import "theme";
+@import "../_dimensions";
 
 :root {
   --hamburger-circle-width: calc(var(--circle-width) - 2 * var(--circle-border-thickness));
@@ -25,7 +25,7 @@
   height: var(--hamburger-circle-width);
   border: calc(var(--hamburger-circle-width) / 2) solid var(--secondary);
   border-radius: 50%;
-  content: '';
+  content: "";
   display: block;
   background: var(--primary);
   z-index: -1;
