@@ -34,3 +34,9 @@ npm run start:watch
 npm run components:create -- path/NameOfComponent
 npm run components:create -- --styled path/NameOfComponent
 ```
+
+**Create a Digest**
+
+```
+npm run digests:create -- name-of-digest
+```
