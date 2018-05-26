@@ -1,26 +1,29 @@
 import React from 'react';
+import PropTypes from 'Client/utils/prop-types';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import DigestItem from 'Client/components/core/DigestItem';
+import DigestsStore from 'Client/store/digests-store';
 
-const sampleDigest = {
-  title: 'A Wonderful Day',
-  by: 'Some Website',
-  category: 'Example',
-  summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis porta porta. Ut sapien sapien, rutrum nec metus at, cursus dictum est. Vestibulum ligula mauris, pretium ac sem sed, elementum eleifend nisl. Phasellus ultricies tortor ut urna commodo convallis. Nunc et tristique ante. Phasellus in lorem sit amet enim placerat bibendum pharetra a est. Nunc id urna pulvinar, egestas quam in, lobortis purus.',
-  icon: 'bars',
-  color: 'aurora-blue',
-  link: 'http://auroratide.com'
+class DigestsPage extends React.Component {
+
+  componentDidMount() {
+    this.props.digestsStore.refreshDigests();
+  }
+
+  render() {
+    const { digestsStore } = this.props;
+    return <Container>
+      <ContentArea>
+        {digestsStore.digests.length > 0 && <DigestItem digest={digestsStore.digests[0]} />}
+      </ContentArea>
+    </Container>;
+  }
+
+}
+
+DigestsPage.propTypes = {
+  digestsStore: PropTypes.instanceOf(DigestsStore).isRequired
 };
-
-const DigestsPage = () =>
-  <Container>
-    <ContentArea>
-      <DigestItem digest={sampleDigest} />
-      <DigestItem digest={sampleDigest} />
-      <DigestItem digest={sampleDigest} />
-      <DigestItem digest={sampleDigest} />
-    </ContentArea>
-  </Container>;
 
 export default DigestsPage;
