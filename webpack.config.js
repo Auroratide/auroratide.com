@@ -13,6 +13,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.css'],
     alias: {
       Client: path.resolve(__dirname, 'src', 'client'),
+      Content: path.resolve(__dirname, 'src', 'content'),
       Test: path.resolve(__dirname, 'test')
     }
   },
