@@ -1,18 +1,32 @@
-const fs = require('fs');
+/* eslint-disable no-console */
 const path = require('path');
-const mkdirp = require('mkdirp');
+const {
+  getListOfDigestFiles,
+  parseDigest,
+  sortByCreatedAt,
+  ensureFolderExists,
+  saveDigests
+} = require('./steps');
 
-const DIGEST_PATH = path.join('content', 'digests', 'index-as-key-is-an-antipattern.json');
-const ENCODING = { encoding: 'utf-8' };
-
-const digestContents = fs.readFileSync(DIGEST_PATH, ENCODING);
-const digest = JSON.parse(digestContents).digest;
-
-const digestsObject = {
-  digests: [ digest ]
-};
-
+const DIGESTS_PATH = path.join('content', 'digests');
 const PUBLIC_PATH = path.join('public', 'api', 'digests');
-mkdirp.sync(PUBLIC_PATH);
 
-fs.writeFileSync(path.join(PUBLIC_PATH, 'index.json'), JSON.stringify(digestsObject));
+try {
+  const startTime = new Date().getTime();
+
+  console.log('Starting to build digests...');
+
+  const digestFiles = getListOfDigestFiles(DIGESTS_PATH);
+  const digests = digestFiles.map(file => parseDigest(path.join(DIGESTS_PATH, file)));
+  sortByCreatedAt(digests);
+  ensureFolderExists(PUBLIC_PATH);
+  saveDigests(path.join(PUBLIC_PATH, 'index.json'), { digests });
+
+  const endTime = new Date().getTime();
+  const elapsedMilliseconds = endTime - startTime;
+
+  console.log(`Successfully build digests in ${elapsedMilliseconds / 1000} seconds!`);
+} catch(error) {
+  console.error('ERROR: Digests could not be built.', error);
+  process.exit(1);
+}
