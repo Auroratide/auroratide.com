@@ -1,6 +1,7 @@
 {
-  "next_id": "2",
+  "next_id": "3",
   "digests": {
-    "1": "index-as-key-is-an-antipattern"
+    "1": "index-as-key-is-an-antipattern",
+    "2": "8-react-conditional-rendering-methods"
   }
 }

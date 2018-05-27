@@ -98,3 +98,7 @@ a.digest-item-container:hover {
 .digest-item .icon.color-aurora-blue {
   background: var(--aurora-blue);
 }
+
+.digest-item .icon.color-fable-lavender {
+  background: var(--fable-lavender);
+}
