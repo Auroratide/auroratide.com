@@ -6,11 +6,12 @@ import HomePage from 'Client/components/pages/HomePage';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 
 const App = () =>
-  <Page>
-    <Switch>
+  <Switch>
+    <Route exact path='/' component={HomePage} />
+    <Page>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/digests' component={DigestsPage} />
-    </Switch>
-  </Page>;
+    </Page>
+  </Switch>;
 
 export default App;

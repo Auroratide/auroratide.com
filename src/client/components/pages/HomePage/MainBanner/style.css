@@ -1,0 +1,32 @@
+@import "theme";
+
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: var(--secondary);
+}
+
+.main-banner .logo {
+  max-width: 12rem;
+  margin-bottom: 2rem;
+}
+
+.main-banner .text {
+  color: var(--off-white);
+}
+
+.main-banner .text h1 {
+  font-size: var(--jb);
+  letter-spacing: 0.125rem;
+  margin-bottom: 1rem;
+}
+
+.main-banner .text .subtitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--lg);
+  font-style: italic;
+  opacity: 0.75;
+}
