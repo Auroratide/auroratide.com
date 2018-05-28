@@ -15,7 +15,7 @@ class DigestsPage extends React.Component {
     const { digestsStore } = this.props;
     return <Container>
       <ContentArea>
-        {digestsStore.digests.length > 0 && <DigestItem digest={digestsStore.digests[0]} />}
+        {digestsStore.digests.map(digest => <DigestItem digest={digest} key={digest.id} />)}
       </ContentArea>
     </Container>;
   }

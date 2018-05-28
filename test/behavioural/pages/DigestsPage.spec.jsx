@@ -9,24 +9,27 @@ import DigestItem from 'Client/components/core/DigestItem';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 
 describe('DigestsPage Behaviour', () => {
-  let digest;
+  let digestBuilder;
   const page = () => mountWithStore(<DigestsPage />);
 
   beforeEach(() => {
-    digest = new DigestDataBuilder()
+    digestBuilder = new DigestDataBuilder()
       .withTitle('The Title')
-      .withIcon('bars')
-      .build();
+      .withIcon('bars');
 
     http
       .when.get('/digests/index.json')
       .then.reply(200, {
-        digests: [ digest ]
+        digests: [
+          digestBuilder.withId('1').build(),
+          digestBuilder.withId('2').build()
+        ]
       });
   });
 
   it('should render the digests from the API', async () => {
     const expectedDigest = new DigestBuilder()
+      .withId('1')
       .withTitle('The Title')
       .withIcon('bars')
       .build();
@@ -35,7 +38,16 @@ describe('DigestsPage Behaviour', () => {
     await allActionsToComplete();
     wrapper.update();
 
-    expect(wrapper.find(DigestItem).props().digest).toEqual(expectedDigest);
+    expect(wrapper.find(DigestItem).at(0).props().digest).toEqual(expectedDigest);
+  });
+
+  it('should render digests with id as key', async () => {
+    const wrapper = page();
+    await allActionsToComplete();
+    wrapper.update();
+
+    expect(wrapper.find(DigestItem).at(0).key()).toEqual('1');
+    expect(wrapper.find(DigestItem).at(1).key()).toEqual('2');
   });
 
 });

@@ -1,6 +1,7 @@
 import req from './req';
 
 const mapDigest = raw => ( {
+  id: raw.id,
   title: raw.title,
   by: raw.by,
   category: raw.category,

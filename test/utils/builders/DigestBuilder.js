@@ -1,6 +1,7 @@
 import zaha, { is } from 'zaha';
 
 export default zaha({
+  id: is.string(),
   title: is.string(),
   by: is.string(),
   category: is.string(),
