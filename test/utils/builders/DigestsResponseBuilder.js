@@ -1,17 +1,6 @@
-import zaha, { is } from 'zaha';
+import { is } from 'zaha';
+import DigestDataBuilder from './DigestDataBuilder';
 import ResponseBuilder from './ResponseBuilder';
-
-export const DigestDataBuilder = zaha({
-  id: is.string(),
-  title: is.string(),
-  by: is.string(),
-  category: is.string(),
-  summary: is.string(),
-  icon: is.string(),
-  color: is.string(),
-  link: is.string(),
-  created_at: is.string()
-});
 
 export default class DigestsResposeBuilder extends ResponseBuilder {
   constructor() {

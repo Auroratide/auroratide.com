@@ -1,7 +1,7 @@
 import React from 'react';
 import { mountWithStore } from 'Test/enzyme';
 import http from 'Test/utils/mock-http';
-import { DigestDataBuilder } from 'Test/utils/builders/DigestsResponseBuilder';
+import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 import DigestBuilder from 'Test/utils/builders/DigestBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 

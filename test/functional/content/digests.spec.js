@@ -3,7 +3,7 @@ import path from 'path';
 import mkdirp from 'mkdirp';
 import rimraf from 'rimraf';
 import build from 'Content/digests/steps';
-import { DigestDataBuilder } from 'Test/utils/builders/DigestsResponseBuilder';
+import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 
 describe('Build Digests Functional', () => {
 

@@ -1,6 +1,7 @@
 import req from 'Client/api/req';
 import { getAll } from 'Client/api/digests';
-import DigestsResponseBuilder, { DigestDataBuilder } from 'Test/utils/builders/DigestsResponseBuilder';
+import DigestsResponseBuilder from 'Test/utils/builders/DigestsResponseBuilder';
+import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 
 describe('Digests API', () => {
 
