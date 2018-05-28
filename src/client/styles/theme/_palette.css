@@ -15,4 +15,24 @@
   --github: #333333;
   --linked-in: #0077B5;
   --twitter: #29AAE1;
+
+  --palette-swap-background: {
+    &.color-aurora-blue {
+      background: var(--aurora-blue);
+    }
+
+    &.color-fable-lavender {
+      background: var(--fable-lavender);
+    }
+  }
+
+  --palette-swap-border-color: {
+    &.color-aurora-blue {
+      border-color: var(--aurora-blue);
+    }
+
+    &.color-fable-lavender {
+      border-color: var(--fable-lavender);
+    }
+  }
 }

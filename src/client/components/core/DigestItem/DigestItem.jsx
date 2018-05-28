@@ -6,7 +6,7 @@ import Link from 'Client/components/core/Link';
 import styles from './style';
 
 const DigestItem = ({ digest }) =>
-  <Link to={digest.link} className={styles['digest-item-container']} newTab>
+  <Link to={digest.link} className={classnames(styles['digest-item-container'], styles[`color-${digest.color}`])} newTab>
     <article className={styles['digest-item']}>
       <div className={classnames(styles.icon, styles[`color-${digest.color}`])}>
         <Icon icon={digest.icon} />

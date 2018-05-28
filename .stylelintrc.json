@@ -19,7 +19,6 @@
     "selector-class-pattern": "[a-z-]+",
     "selector-max-empty-lines": 0,
     "selector-max-id": 0,
-    "max-nesting-depth": 0,
     "no-unknown-animations": true,
     "color-hex-case": "upper",
     "color-hex-length": "long",
