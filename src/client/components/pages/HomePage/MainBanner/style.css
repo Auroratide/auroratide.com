@@ -1,11 +1,14 @@
 @import "theme";
 
 .main-banner {
+  background: var(--secondary);
+}
+
+.main-banner .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background: var(--secondary);
 }
 
 .main-banner .logo {
@@ -29,4 +32,36 @@
   font-size: var(--lg);
   font-style: italic;
   opacity: 0.75;
+}
+
+@media (--large-screen) {
+  .main-banner {
+    margin-bottom: 6rem;
+  }
+
+  .main-banner .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-height: 40rem;
+    padding: 0;
+  }
+
+  .main-banner .logo {
+    flex: 1;
+    align-self: flex-start;
+    max-width: 42rem;
+    border: 2rem solid var(--secondary);
+  }
+
+  .main-banner .text {
+    padding: 2rem;
+  }
+
+  .main-banner .text h1 {
+    font-size: var(--xjb);
+  }
+
+  .main-banner .text .subtitle {
+    font-size: var(--xxl);
+  }
 }
