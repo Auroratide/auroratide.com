@@ -32,6 +32,42 @@
   font-size: var(--lg);
   font-style: italic;
   opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.main-banner .text .link-container {
+  text-align: center;
+}
+
+.main-banner .text .link {
+  color: var(--white);
+  font-size: var(--xl);
+  opacity: 0.9;
+}
+
+.main-banner .text .link:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+@keyframes steady-bounce-left-right {
+  0% { right: 0; }
+  60% { right: 0; }
+  70% { right: 0.5em; }
+  80% { right: 0; }
+  90% { right: 0.5em; }
+  100% { right: 0; }
+}
+
+.main-banner .text .link .icon {
+  position: relative;
+  margin-left: -0.75rem;
+  margin-right: 0.75rem;
+  animation: steady-bounce-left-right 4s infinite;
+}
+
+.main-banner .text .link:hover .icon {
+  animation: none;
 }
 
 @media (--large-screen) {
@@ -62,6 +98,10 @@
   }
 
   .main-banner .text .subtitle {
+    font-size: var(--xxl);
+  }
+
+  .main-banner .text .link {
     font-size: var(--xxl);
   }
 }

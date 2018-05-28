@@ -1,6 +1,7 @@
 import {
   faBars,
-  faKey
+  faKey,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -12,6 +13,7 @@ import {
 export default {
   'bars': faBars,
   'key': faKey,
+  'chevron-right': faChevronRight,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
