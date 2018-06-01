@@ -9,6 +9,7 @@
   --deep-blue: #001533;
   --aurora-blue: #448DDD;
   --fable-lavender: #9D77DD;
+  --eventide-black: #303038;
 
   --primary: var(--aurora-blue);
   --secondary: var(--deep-blue);
@@ -25,6 +26,10 @@
     &.color-fable-lavender {
       background: var(--fable-lavender);
     }
+
+    &.color-eventide-black {
+      background: var(--eventide-black);
+    }
   }
 
   --palette-swap-border-color: {
@@ -34,6 +39,10 @@
 
     &.color-fable-lavender {
       border-color: var(--fable-lavender);
+    }
+
+    &.color-eventide-black {
+      border-color: var(--eventide-black);
     }
   }
 }
