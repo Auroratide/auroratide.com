@@ -1,0 +1,21 @@
+@import "theme";
+
+.about-site-section {
+  padding: 3rem 1rem;
+}
+
+.about-site-section h1 {
+  text-align: center;
+  font-size: var(--xxl);
+  color: var(--dark-grey);
+}
+
+@media (--large-screen) {
+  .about-site-section {
+    padding-top: 0;
+  }
+
+  .about-site-section h1 {
+    font-size: var(--jb);
+  }
+}
