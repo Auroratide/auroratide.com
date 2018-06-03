@@ -10,6 +10,7 @@
   --aurora-blue: #448DDD;
   --fable-lavender: #9D77DD;
   --eventide-black: #303038;
+  --autumn-red: #BE2C38;
 
   --primary: var(--aurora-blue);
   --secondary: var(--deep-blue);
@@ -30,6 +31,10 @@
     &.color-eventide-black {
       background: var(--eventide-black);
     }
+
+    &.color-autumn-red {
+      background: var(--autumn-red);
+    }
   }
 
   --palette-swap-border-color: {
@@ -43,6 +48,10 @@
 
     &.color-eventide-black {
       border-color: var(--eventide-black);
+    }
+
+    &.color-autumn-red {
+      border-color: var(--autumn-red);
     }
   }
 }
