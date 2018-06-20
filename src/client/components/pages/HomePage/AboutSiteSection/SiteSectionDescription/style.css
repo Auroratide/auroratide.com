@@ -1,0 +1,30 @@
+@import "theme";
+
+.site-section-description {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.site-section-description .icon {
+  font-size: var(--xxl);
+  margin-bottom: 1.5rem;
+}
+
+.site-section-description h2 {
+  font-size: var(--xxl);
+}
+
+.site-section-description p {
+  font-size: var(--ml);
+}
+
+@media (--large-screen) {
+  .site-section-description {
+    padding: 0 0.5rem;
+  }
+
+  .site-section-description .icon {
+    font-size: var(--jb);
+  }
+}
