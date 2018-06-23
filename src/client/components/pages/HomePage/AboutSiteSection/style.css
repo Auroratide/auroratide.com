@@ -11,11 +11,6 @@
   margin-bottom: 4rem;
 }
 
-.about-site-section .site-section-descriptions {
-  display: flex;
-  flex-direction: column;
-}
-
 @media (--large-screen) {
   .about-site-section {
     padding-top: 0;
@@ -24,9 +19,5 @@
   .about-site-section h1 {
     font-size: var(--jb);
     margin-bottom: 6rem;
-  }
-
-  .about-site-section .site-section-descriptions {
-    flex-direction: row;
   }
 }

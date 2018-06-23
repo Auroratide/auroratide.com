@@ -6,9 +6,11 @@ import styles from './style';
 
 const SiteSectionDescription = ({ icon, title, description }) =>
   <div className={styles['site-section-description']}>
+    <div className={styles.text}>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
     <Icon icon={icon} className={styles.icon} />
-    <h2>{title}</h2>
-    <p>{description}</p>
   </div>;
 
 SiteSectionDescription.propTypes = {

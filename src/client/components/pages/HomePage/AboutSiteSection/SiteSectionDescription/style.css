@@ -1,9 +1,14 @@
 @import "theme";
 
 .site-section-description {
+  display: flex;
+  background: var(--white);
+  margin-bottom: 2rem;
+}
+
+.site-section-description .text {
   flex: 1;
-  text-align: center;
-  margin-bottom: 4rem;
+  padding: 1rem;
 }
 
 .site-section-description .icon {
@@ -17,13 +22,10 @@
 
 .site-section-description p {
   font-size: var(--ml);
+  font-weight: var(--light);
 }
 
 @media (--large-screen) {
-  .site-section-description {
-    padding: 0 0.5rem;
-  }
-
   .site-section-description .icon {
     font-size: var(--jb);
   }
