@@ -1,20 +1,22 @@
 @import "theme";
 
 :root {
-  --circle-width: 7rem;
+  --circle-width: 8.75rem;
 }
 
 .site-section-description {
   display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
   background: var(--white);
-  margin-bottom: 2rem;
   border-top-right-radius: calc(var(--circle-width) / 2);
   border-bottom-right-radius: calc(var(--circle-width) / 2);
 }
 
 .site-section-description .text {
   flex: 1;
-  padding: 1rem;
+  padding: 1rem 4rem 1rem 1rem;
 }
 
 .site-section-description .icon {
@@ -23,11 +25,18 @@
 }
 
 .site-section-description h2 {
-  font-size: var(--xxl);
+  font-size: var(--xl);
   margin-bottom: 0.5rem;
 }
 
 .site-section-description p {
   font-size: var(--ml);
   font-weight: var(--light);
+}
+
+@media (--large-screen) {
+  .site-section-description h2 {
+    font-size: var(--xxxl);
+    margin-bottom: 0.5rem;
+  }
 }
