@@ -33,16 +33,7 @@ a.digest-item-container:hover {
 }
 
 .digest-item .icon {
-  @apply --palette-swap-background;
-
-  width: calc(var(--circle-width));
-  height: calc(var(--circle-width));
-  font-size: var(--xl);
-  color: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: calc(var(--circle-width) / 2.25);
   float: right;
 }
 
@@ -94,8 +85,6 @@ a.digest-item-container:hover {
   }
 
   .digest-item .icon {
-    width: calc(var(--circle-width-large));
-    height: calc(var(--circle-width-large));
-    font-size: var(--jb);
+    font-size: calc(var(--circle-width-large) / 2.25);
   }
 }

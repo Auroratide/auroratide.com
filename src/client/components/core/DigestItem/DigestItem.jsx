@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 import classnames from 'classnames';
-import Icon from 'Client/components/core/Icon';
+import CircledIcon from 'Client/components/core/CircledIcon';
 import Link from 'Client/components/core/Link';
 import styles from './style';
 
 const DigestItem = ({ digest }) =>
   <Link to={digest.link} className={classnames(styles['digest-item-container'], styles[`color-${digest.color}`])} newTab>
     <article className={styles['digest-item']}>
-      <div className={classnames(styles.icon, styles[`color-${digest.color}`])}>
-        <Icon icon={digest.icon} />
-      </div>
+      <CircledIcon icon={digest.icon} color={digest.color} className={styles.icon} />
       <div className={styles.content}>
         <h1 className={styles.title}>{digest.title}</h1>
         <div className={styles.byline}>
