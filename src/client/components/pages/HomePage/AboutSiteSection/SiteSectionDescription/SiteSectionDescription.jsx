@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
+import Colors from 'Client/config/colors';
 import CircledIcon from 'Client/components/core/CircledIcon';
 
 import styles from './style';
@@ -10,7 +11,7 @@ const SiteSectionDescription = ({ icon, title, description }) =>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>
-    <CircledIcon icon={icon} color="aurora-blue" className={styles.icon} />
+    <CircledIcon icon={icon} color={Colors.AURORA_BLUE.name} className={styles.icon} />
   </div>;
 
 SiteSectionDescription.propTypes = {

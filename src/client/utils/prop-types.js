@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Colors from 'Client/config/colors';
 
 const routerLocation = PropTypes.shape({
   key: PropTypes.string,
@@ -7,6 +8,8 @@ const routerLocation = PropTypes.shape({
   hash: PropTypes.string,
   state: PropTypes.object
 });
+
+const color = PropTypes.oneOf(Colors.list());
 
 const digest = PropTypes.shape({
   title: PropTypes.string,
@@ -20,6 +23,7 @@ const digest = PropTypes.shape({
 
 export default {
   routerLocation,
+  color,
   digest,
   ...PropTypes
 };

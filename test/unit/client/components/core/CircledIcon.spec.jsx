@@ -5,6 +5,6 @@ import CircledIcon from 'Client/components/core/CircledIcon';
 
 describe('<CircledIcon />', () => {
   it('should render', () => {
-    expect(shallow(<CircledIcon />)).toHaveLength(1);
+    expect(shallow(<CircledIcon icon='bars' />)).toHaveLength(1);
   });
 });

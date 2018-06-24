@@ -15,8 +15,8 @@ const CircledIcon = ({ icon, color, className }) =>
   </div>;
 
 CircledIcon.propTypes = {
-  icon: PropTypes.string,
-  color: PropTypes.string,
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.color,
   className: PropTypes.string
 };
 
