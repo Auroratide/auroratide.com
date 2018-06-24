@@ -1,4 +1,5 @@
 import zaha, { is } from 'zaha';
+import Colors from 'Client/config/colors';
 
 export default zaha({
   id: is.string(),
@@ -7,6 +8,6 @@ export default zaha({
   category: is.string(),
   summary: is.string(),
   icon: is.string(),
-  color: is.string(),
+  color: is.oneOf(Colors.list()),
   link: is.string()
 });
