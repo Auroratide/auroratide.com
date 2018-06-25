@@ -7,11 +7,11 @@ import styles from './style';
 
 const SiteSectionDescription = ({ icon, title, description }) =>
   <div className={styles['site-section-description']}>
+    <CircledIcon icon={icon} color={Colors.AURORA_BLUE.name} className={styles.icon} />
     <div className={styles.text}>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>
-    <CircledIcon icon={icon} color={Colors.AURORA_BLUE.name} className={styles.icon} />
   </div>;
 
 SiteSectionDescription.propTypes = {

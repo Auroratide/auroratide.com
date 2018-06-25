@@ -1,25 +1,24 @@
 @import "theme";
 
 :root {
-  --circle-width: 5rem;
-  --circle-width-large: 8.75rem;
+  --circle-width: 4.5rem;
+  --circle-width-large: 8.25rem;
 }
 
 .site-section-description {
-  display: flex;
   margin-bottom: 2rem;
+  padding: 0.25rem;
   background: var(--white);
   border-top-right-radius: calc(var(--circle-width) / 2);
 }
 
 .site-section-description .text {
-  flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .site-section-description .icon {
   font-size: calc(var(--circle-width) / 2.25);
-  margin: 0.25rem;
+  float: right;
 }
 
 .site-section-description h2 {
@@ -34,6 +33,7 @@
 
 @media (--large-screen) {
   .site-section-description {
+    min-height: 8.75rem;
     width: 80%;
     margin: auto;
     margin-bottom: 3rem;
@@ -43,7 +43,7 @@
 
   .site-section-description .text {
     flex: 1;
-    padding-right: 4rem;
+    padding: 0.75rem calc(var(--circle-width-large) + 4rem) 0.75rem 0.75rem;
   }
 
   .site-section-description h2 {
