@@ -4,6 +4,7 @@ import http from 'Test/utils/mock-http';
 import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 import DigestBuilder from 'Test/utils/builders/DigestBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
+import Colors from 'Client/config/colors';
 
 import DigestItem from 'Client/components/core/DigestItem';
 import DigestsPage from 'Client/components/pages/DigestsPage';
@@ -15,6 +16,7 @@ describe('DigestsPage Behaviour', () => {
   beforeEach(() => {
     digestBuilder = new DigestDataBuilder()
       .withTitle('The Title')
+      .withColor(Colors.AURORA_BLUE.name)
       .withIcon('bars');
 
     http
@@ -31,6 +33,7 @@ describe('DigestsPage Behaviour', () => {
     const expectedDigest = new DigestBuilder()
       .withId('1')
       .withTitle('The Title')
+      .withColor(Colors.AURORA_BLUE.name)
       .withIcon('bars')
       .build();
 
