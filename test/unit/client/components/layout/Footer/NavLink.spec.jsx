@@ -5,6 +5,6 @@ import NavLink from 'Client/components/layout/Footer/NavLink';
 
 describe('<NavLink />', () => {
   it('should render', () => {
-    expect(shallow(<NavLink name='Digests' />)).toHaveLength(1);
+    expect(shallow(<NavLink to='/' name='Digests' />)).toHaveLength(1);
   });
 });

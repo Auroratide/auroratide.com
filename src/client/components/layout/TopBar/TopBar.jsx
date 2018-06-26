@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
+import Links from 'Client/config/links';
 import Container from 'Client/components/core/Container';
 import LogoLink from './LogoLink';
 import NavLink from './NavLink';
@@ -16,7 +17,7 @@ const TopBar = ({ accordionState }) =>
         <Hamburger className={styles.hamburger} onClick={accordionState.toggle} active={accordionState.expanded} />
       </div>
       <Accordion state={accordionState} className={styles['nav-links']}>
-        <NavLink name='Digests' onClick={accordionState.collapse} />
+        <NavLink name='Digests' to={Links.Auroratide.DIGESTS} onClick={accordionState.collapse} />
       </Accordion>
     </Container>
   </nav>;

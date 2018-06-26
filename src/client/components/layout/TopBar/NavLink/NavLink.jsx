@@ -7,9 +7,9 @@ import styles from './style';
 
 const isOnPage = (location, name) => location && location.pathname.includes(`/${name.toLowerCase()}`);
 
-const NavLink = ({ name, location, onClick }) =>
+const NavLink = ({ to, name, location, onClick }) =>
   <Link
-    to={`/${name.toLowerCase()}`}
+    to={to}
     onClick={onClick}
     className={classnames(
       styles['nav-link'],
@@ -20,6 +20,7 @@ const NavLink = ({ name, location, onClick }) =>
   </Link>;
 
 NavLink.propTypes = {
+  to: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.routerLocation,
   onClick: PropTypes.func

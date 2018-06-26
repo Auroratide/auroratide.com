@@ -10,6 +10,7 @@ describe('<NavLink />', () => {
 
   beforeEach(() => {
     props = {
+      to: '/',
       name: '',
       location: undefined
     };
