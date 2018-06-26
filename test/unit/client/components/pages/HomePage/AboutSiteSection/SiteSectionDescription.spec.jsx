@@ -5,6 +5,6 @@ import SiteSectionDescription from 'Client/components/pages/HomePage/AboutSiteSe
 
 describe('<SiteSectionDescription />', () => {
   it('should render', () => {
-    expect(shallow(<SiteSectionDescription icon='bars' />)).toHaveLength(1);
+    expect(shallow(<SiteSectionDescription to='/digests' icon='bars' />)).toHaveLength(1);
   });
 });
