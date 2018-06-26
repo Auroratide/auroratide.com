@@ -1,3 +1,8 @@
+const Auroratide = {
+  HOME: '/',
+  DIGESTS: '/digests'
+};
+
 const Social = {
   LINKED_IN: 'https://www.linkedin.com/in/timothy-foster-224946120',
   TWITTER: 'https://twitter.com/tfAuroratide',
@@ -5,5 +10,6 @@ const Social = {
 };
 
 export default {
+  Auroratide,
   Social
 };

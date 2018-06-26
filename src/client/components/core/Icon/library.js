@@ -3,7 +3,8 @@ import {
   faKey,
   faChevronRight,
   faLock,
-  faChalkboard
+  faChalkboard,
+  faNewspaper
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -18,6 +19,7 @@ export default {
   'chevron-right': faChevronRight,
   'lock': faLock,
   'chalkboard': faChalkboard,
+  'newspaper': faNewspaper,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
