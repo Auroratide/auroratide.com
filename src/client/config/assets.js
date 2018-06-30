@@ -3,9 +3,9 @@ const Logo = {
 };
 
 const Images = {
-  OMNIXIS_BOTTOM: '/assets/omnixis_bottom.png',
-  OMNIXIS_MIDDLE: '/assets/omnixis_middle.png',
-  OMNIXIS_TOP: '/assets/omnixis_top.png'
+  OMNIXIS_L: '/assets/omnixis-l.png',
+  OMNIXIS_O: '/assets/omnixis-o.png',
+  OMNIXIS_T: '/assets/omnixis-t.png'
 };
 
 export default {

@@ -1,35 +1,47 @@
 @import "theme";
 
 :root {
-  --one: 6.2rem;
-  --two: 12.4rem;
-  --three: 18.6rem;
-  --four: 24.8rem;
+  --width: 24.667rem;
+  --offscreen: 30rem;
 }
 
 .omnixis-image {
   position: relative;
-  width: var(--four);
-  height: var(--four);
+  width: var(--width);
+  height: var(--width);
+}
+
+@keyframes fall {
+  from {
+    opacity: 0;
+    bottom: var(--offscreen);
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+.omnixis-image img {
+  position: absolute;
+  width: var(--width);
+  left: 0;
+  bottom: var(--offscreen);
+  opacity: 0;
+  animation-name: fall;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
 }
 
 .omnixis-image .bottom {
-  position: absolute;
-  width: var(--three);
-  bottom: 0;
-  left: 0;
+  animation-delay: 1000ms;
 }
 
 .omnixis-image .middle {
-  position: absolute;
-  width: var(--two);
-  bottom: var(--one);
-  left: 0;
+  animation-delay: 1400ms;
 }
 
 .omnixis-image .top {
-  position: absolute;
-  width: var(--three);
-  bottom: var(--two);
-  left: var(--one);
+  animation-delay: 1800ms;
 }

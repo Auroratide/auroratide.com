@@ -6,9 +6,9 @@ import styles from './style';
 
 const OmnixisImage = ({ className }) =>
   <figure className={classnames(styles['omnixis-image'], className)}>
-    <img src={Assets.Images.OMNIXIS_TOP} className={styles.top} />
-    <img src={Assets.Images.OMNIXIS_MIDDLE} className={styles.middle} />
-    <img src={Assets.Images.OMNIXIS_BOTTOM} className={styles.bottom} />
+    <img src={Assets.Images.OMNIXIS_T} className={styles.top} />
+    <img src={Assets.Images.OMNIXIS_O} className={styles.middle} />
+    <img src={Assets.Images.OMNIXIS_L} className={styles.bottom} />
   </figure>;
 
 OmnixisImage.propTypes = {
