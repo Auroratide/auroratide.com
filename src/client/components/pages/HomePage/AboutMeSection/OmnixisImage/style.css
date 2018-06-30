@@ -1,0 +1,35 @@
+@import "theme";
+
+:root {
+  --one: 6.2rem;
+  --two: 12.4rem;
+  --three: 18.6rem;
+  --four: 24.8rem;
+}
+
+.omnixis-image {
+  position: relative;
+  width: var(--four);
+  height: var(--four);
+}
+
+.omnixis-image .bottom {
+  position: absolute;
+  width: var(--three);
+  bottom: 0;
+  left: 0;
+}
+
+.omnixis-image .middle {
+  position: absolute;
+  width: var(--two);
+  bottom: var(--one);
+  left: 0;
+}
+
+.omnixis-image .top {
+  position: absolute;
+  width: var(--three);
+  bottom: var(--two);
+  left: var(--one);
+}

@@ -1,0 +1,10 @@
+@import "theme";
+
+.coder-section {
+  display: flex;
+}
+
+.coder-section .text {
+  flex: 1;
+  padding-right: 2rem;
+}

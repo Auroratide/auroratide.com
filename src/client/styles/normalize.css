@@ -43,7 +43,7 @@ dl:last-child, ol:last-child, ul:last-child {
   margin-bottom: 0;
 }
 
-img, button, input, select, textarea {
+img, button, input, select, textarea, figure {
   margin: 0;
 }
 

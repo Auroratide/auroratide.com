@@ -1,0 +1,15 @@
+@import "theme";
+
+.about-me-section {
+  background: var(--white);
+  padding: 4rem 0;
+}
+
+.about-me-section h2 {
+  font-size: var(--jb);
+}
+
+.about-me-section p {
+  font-size: var(--ml);
+  font-weight: var(--light);
+}
