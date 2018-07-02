@@ -31,6 +31,7 @@ module.exports = {
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
+    'react/display-name': 0,
     'react/prefer-es6-class': 'error',
     'react/prefer-stateless-function': 'error',
   }

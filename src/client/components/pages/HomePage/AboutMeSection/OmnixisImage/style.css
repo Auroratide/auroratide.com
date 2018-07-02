@@ -32,16 +32,21 @@
   animation-name: fall;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 .omnixis-image .bottom {
-  animation-delay: 1000ms;
+  animation-delay: 250ms;
 }
 
 .omnixis-image .middle {
-  animation-delay: 1400ms;
+  animation-delay: 650ms;
 }
 
 .omnixis-image .top {
-  animation-delay: 1800ms;
+  animation-delay: 1050ms;
+}
+
+.omnixis-image[data-anim-state="running"] img {
+  animation-play-state: running;
 }
