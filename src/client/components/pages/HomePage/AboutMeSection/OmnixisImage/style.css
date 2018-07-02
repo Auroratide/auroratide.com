@@ -1,4 +1,5 @@
 @import "theme";
+@import "core/Animated/selectors";
 
 :root {
   --width: 24.667rem;
@@ -47,6 +48,6 @@
   animation-delay: 1050ms;
 }
 
-.omnixis-image[data-anim-state="running"] img {
+.omnixis-image:--anim-running img {
   animation-play-state: running;
 }

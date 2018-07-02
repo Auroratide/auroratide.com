@@ -1,0 +1,2 @@
+@custom-selector :--anim-running [data-anim-state="running"];
+@custom-selector :--anim-paused [data-anim-state="paused"];
