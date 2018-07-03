@@ -9,7 +9,12 @@ const Social = {
   GITHUB: 'https://github.com/Auroratide'
 };
 
+const External = {
+  THOUGHTWORKS: 'https://www.thoughtworks.com/'
+};
+
 export default {
   Auroratide,
-  Social
+  Social,
+  External
 };

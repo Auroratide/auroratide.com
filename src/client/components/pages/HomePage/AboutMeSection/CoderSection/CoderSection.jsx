@@ -1,13 +1,18 @@
 import React from 'react';
 import OmnixisImage from '../OmnixisImage';
+import Link from 'Client/components/core/Link';
+import Links from 'Client/config/links';
 import styles from './style';
 
 const CoderSection = () =>
   <div className={styles['coder-section']}>
     <div className={styles.text}>
-      <h2>Coder</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis volutpat lorem, eu porta justo. Pellentesque volutpat commodo egestas. Proin posuere urna at ligula sollicitudin lacinia. Nam congue, purus nec imperdiet tempor, velit sapien egestas enim, nec eleifend dui odio eu est.</p>
-      <p>Mauris rutrum facilisis nunc, sed blandit justo viverra eu. Nulla consectetur, lacus id ornare pellentesque, ante nisl finibus tortor, vitae ullamcorper purus odio a mi. Morbi feugiat risus ante, id imperdiet diam placerat viverra.</p>
+      <h2>I Code</h2>
+      <p>A long time ago, when I was still a student in school,  I had a graphing calculator which came with a bunch of games on it. But one day, a nefarious student randomly deleted all those games. Desperate, I sought out a manual hoping they could be undeleted, but I stumbled upon something much better.</p>
+      <p>The games could not be undeleted. Instead, they could be recreated.</p>
+      <p>That&apos;s how I discovered programming. Since then, I&apos;ve dabbled in game development, artificial intelligence, webapp creation, and much more. It turns out coding is a lot like magic.</p>
+      <p>Nowadays, I work for a brilliant software company called <Link to={Links.External.THOUGHTWORKS} newTab>ThoughtWorks</Link>, a world leader in technological advocacy.</p>
+      <p>Oh, the tetrisy thing on the right? That&apos;s Omnixis, a game I made. Try it out!</p>
     </div>
     <OmnixisImage className={styles.image} />
   </div>;
