@@ -14,7 +14,9 @@ const CoderSection = () =>
       <p>Nowadays, I work for a brilliant software company called <Link to={Links.External.THOUGHTWORKS} newTab>ThoughtWorks</Link>, a world leader in technological advocacy.</p>
       <p>Oh, the tetrisy thing on the right? That&apos;s Omnixis, a game I made. Try it out!</p>
     </div>
-    <OmnixisImage className={styles.image} />
+    <div className={styles['image-container']}>
+      <OmnixisImage className={styles.image} />
+    </div>
   </div>;
 
 export default CoderSection;

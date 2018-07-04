@@ -2,9 +2,24 @@
 
 .coder-section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .coder-section .text {
   flex: 1;
-  padding-right: 5rem;
+}
+
+.coder-section .image-container {
+  padding-top: 3rem;
+}
+
+@media (--large-screen) {
+  .coder-section {
+    flex-direction: row;
+  }
+
+  .coder-section .text {
+    padding-right: 5rem;
+  }
 }
