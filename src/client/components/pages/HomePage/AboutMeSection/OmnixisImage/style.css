@@ -44,19 +44,19 @@
     animation-fill-mode: forwards;
     animation-play-state: paused;
   }
-  
+
   .omnixis-image .bottom {
     animation-delay: 250ms;
   }
-  
+
   .omnixis-image .middle {
     animation-delay: 650ms;
   }
-  
+
   .omnixis-image .top {
     animation-delay: 1050ms;
   }
-  
+
   .omnixis-image:--anim-running img {
     animation-play-state: running;
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import OmnixisImage from '../OmnixisImage';
 import Link from 'Client/components/core/Link';
+import Muted from 'Client/components/core/Muted';
 import Links from 'Client/config/links';
 import styles from './style';
 
@@ -12,7 +13,7 @@ const CoderSection = () =>
       <p>The games could not be undeleted. Instead, they could be recreated.</p>
       <p>That&apos;s how I discovered programming. Since then, I&apos;ve dabbled in game development, artificial intelligence, webapp creation, and much more. It turns out coding is a lot like magic.</p>
       <p>Nowadays, I work for a brilliant software company called <Link to={Links.External.THOUGHTWORKS} newTab>ThoughtWorks</Link>, a world leader in technological advocacy.</p>
-      <p>Oh, the tetrisy thing on the right? That&apos;s Omnixis, a game I made. Try it out!</p>
+      <Muted.small>Oh, the tetrisy thing on the right? That&apos;s Omnixis, a game I made. <Link to={Links.External.OMNIXIS} newTab>Try it out</Link>!</Muted.small>
     </div>
     <div className={styles['image-container']}>
       <OmnixisImage className={styles.image} />

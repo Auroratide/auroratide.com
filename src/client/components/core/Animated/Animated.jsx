@@ -46,8 +46,4 @@ Animated.defaultProps = {
   tag: 'div'
 };
 
-const withTag = tag => props => <Animated tag={tag} {...props} />;
-
-Animated.figure = withTag('figure');
-
 export default Animated;
