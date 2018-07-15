@@ -1,0 +1,25 @@
+@import "theme";
+
+.writer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.writer-section .text {
+  flex: 1;
+}
+
+.writer-section .image-container {
+  padding-top: 3rem;
+}
+
+@media (--large-screen) {
+  .writer-section {
+    flex-direction: row-reverse;
+  }
+
+  .writer-section .text {
+    padding-left: 5rem;
+  }
+}

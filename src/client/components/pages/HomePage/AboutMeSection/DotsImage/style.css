@@ -1,0 +1,63 @@
+@import "theme";
+@import "core/Animated/selectors";
+
+:root {
+  --width: 67vw;
+  --max-width: 25rem;
+}
+
+.dots-image {
+  position: relative;
+  width: var(--width);
+  height: var(--width);
+  max-width: var(--max-width);
+  max-height: var(--max-width);
+}
+
+.dots-image img {
+  position: absolute;
+  width: var(--width);
+  max-width: var(--max-width);
+  left: 0;
+  bottom: 0;
+}
+
+/*
+@keyframes fall {
+  from {
+    opacity: 0;
+    bottom: var(--offscreen);
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@media (--large-screen) {
+  .omnixis-image img {
+    bottom: var(--offscreen);
+    opacity: 0;
+    animation-name: fall;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+  }
+
+  .omnixis-image .bottom {
+    animation-delay: 250ms;
+  }
+
+  .omnixis-image .middle {
+    animation-delay: 650ms;
+  }
+
+  .omnixis-image .top {
+    animation-delay: 1050ms;
+  }
+
+  .omnixis-image:--anim-running img {
+    animation-play-state: running;
+  }
+} */
