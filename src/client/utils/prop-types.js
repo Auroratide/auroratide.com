@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Component } from 'react';
 import Colors from 'Client/config/colors';
 
 const routerLocation = PropTypes.shape({
@@ -21,9 +22,12 @@ const digest = PropTypes.shape({
   link: PropTypes.string
 });
 
+const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);
+
 export default {
   routerLocation,
   color,
   digest,
+  component,
   ...PropTypes
 };
