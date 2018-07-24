@@ -15,13 +15,18 @@ const Subsection = ({ className, image, direction, children }) =>
 
 Subsection.Direction = {
   LEFT_TO_RIGHT: 'left-to-right',
-  RIGHT_TO_LEFT: 'right-to-left'
+  RIGHT_TO_LEFT: 'right-to-left',
+  TOP_TO_BOTTOM: 'top-to-bottom'
 };
 
 Subsection.propTypes = {
   className: PropTypes.string,
-  image: PropTypes.component,
-  direction: PropTypes.oneOf([Subsection.Direction.LEFT_TO_RIGHT, Subsection.Direction.RIGHT_TO_LEFT]),
+  image: PropTypes.component.isRequired,
+  direction: PropTypes.oneOf([
+    Subsection.Direction.LEFT_TO_RIGHT,
+    Subsection.Direction.RIGHT_TO_LEFT,
+    Subsection.Direction.TOP_TO_BOTTOM
+  ]),
   children: PropTypes.node
 };
 

@@ -5,6 +5,6 @@ import Subsection from 'Client/components/pages/HomePage/AboutMeSection/Subsecti
 
 describe('<Subsection />', () => {
   it('should render', () => {
-    expect(shallow(<Subsection />)).toHaveLength(1);
+    expect(shallow(<Subsection image={() => null} />)).toHaveLength(1);
   });
 });

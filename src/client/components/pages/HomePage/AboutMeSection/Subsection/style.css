@@ -31,4 +31,8 @@
   .subsection.right-to-left .text {
     padding-left: 5rem;
   }
+
+  .subsection.top-to-bottom {
+    flex-direction: column;
+  }
 }
