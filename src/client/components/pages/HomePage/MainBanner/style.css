@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
 }
 
 .main-banner .logo {
@@ -32,22 +32,15 @@
   font-size: var(--lg);
   font-style: italic;
   opacity: 0.75;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .main-banner .text .link-container {
   text-align: center;
 }
 
-.main-banner .text .link {
-  color: var(--white);
-  font-size: var(--xl);
-  opacity: 0.9;
-}
-
 .main-banner .text .link:hover {
   text-decoration: none;
-  opacity: 1;
 }
 
 @keyframes steady-bounce-left-right {

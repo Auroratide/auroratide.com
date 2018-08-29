@@ -38,7 +38,7 @@ class Animated extends React.Component {
 }
 
 Animated.propTypes = {
-  tag: PropTypes.string,
+  tag: PropTypes.tag,
   children: PropTypes.node
 };
 

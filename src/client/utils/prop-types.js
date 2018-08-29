@@ -24,10 +24,13 @@ const digest = PropTypes.shape({
 
 const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);
 
+const tag = PropTypes.oneOfType([PropTypes.string, component]);
+
 export default {
   routerLocation,
   color,
   digest,
   component,
+  tag,
   ...PropTypes
 };
