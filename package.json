@@ -4,8 +4,8 @@
   "description": "Timothy Foster's humble website",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s -n -t -S -p 3000 public",
-    "start:dev": "serve -s -n -l -u -p 3000 -c 0 public",
+    "start": "serve -s -n -l 3000 public",
+    "start:dev": "serve -s -n -l 3000 -d public",
     "start:watch": "npm run build && npm-run-all --parallel build:webpack:watch start:dev",
     "ci": "npm-run-all test:unit test:behavioural build",
     "build": "npm-run-all build:webpack build:html build:assets build:digests",
@@ -44,7 +44,7 @@
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.2.2",
     "regenerator-runtime": "^0.11.1",
-    "serve": "^6.5.6"
+    "serve": "^10.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
