@@ -12,7 +12,7 @@
     "build:webpack": "webpack",
     "build:webpack:watch": "webpack --watch",
     "build:html": "mkdir -p public && cp src/client/index.html public/index.html",
-    "build:assets": "mkdir -p public && cp -a src/assets public",
+    "build:assets": "mkdir -p public && cp -a content/assets public",
     "build:digests": "node src/content/digests/build",
     "clean": "rm -rf public",
     "lint": "npm-run-all lint:js lint:css",
