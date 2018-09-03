@@ -6,7 +6,7 @@ import DigestBuilder from 'Test/utils/builders/DigestBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import Colors from 'Client/config/colors';
 
-import DigestItem from 'Client/components/core/DigestItem';
+import DigestItem from 'Client/components/pages/DigestsPage/DigestItem';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 
 describe('DigestsPage Behaviour', () => {

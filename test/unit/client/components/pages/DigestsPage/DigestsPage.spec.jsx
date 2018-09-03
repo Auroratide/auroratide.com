@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'Test/enzyme';
 import DigestsStore from 'Client/store/digests-store';
-import DigestItem from 'Client/components/core/DigestItem';
 import DigestBuilder from 'Test/utils/builders/DigestBuilder';
 
+import DigestItem from 'Client/components/pages/DigestsPage/DigestItem';
 import DigestsPage from 'Client/components/pages/DigestsPage/DigestsPage';
 
 describe('<DigestsPage />', () => {

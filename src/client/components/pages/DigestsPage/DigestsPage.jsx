@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
-import DigestItem from 'Client/components/core/DigestItem';
+import DigestItem from './DigestItem';
 import DigestsStore from 'Client/store/digests-store';
 
 class DigestsPage extends React.Component {
