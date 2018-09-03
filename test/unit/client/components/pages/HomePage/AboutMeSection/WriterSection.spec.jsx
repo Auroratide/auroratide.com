@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'Test/enzyme';
 
-import WriterSection from 'Client/components/pages/HomePage/AboutMeSection/WriterSection';
+import TeacherSection from 'Client/components/pages/HomePage/AboutMeSection/TeacherSection';
 
 describe('<WriterSection />', () => {
   it('should render', () => {
-    expect(shallow(<WriterSection />)).toHaveLength(1);
+    expect(shallow(<TeacherSection />)).toHaveLength(1);
   });
 });

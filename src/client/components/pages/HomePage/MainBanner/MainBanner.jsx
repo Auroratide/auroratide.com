@@ -12,7 +12,7 @@ const MainBanner = () =>
       <div className={styles.text}>
         <h1>Auroratide</h1>
         <div className={styles.subtitle}>
-          <span>Coder</span><span>Writer</span><span>Dreamer</span>
+          <span>Coder</span><span>Teacher</span><span>Dreamer</span>
         </div>
         <div className={styles['link-container']}>
           <Button tag={Link} to='/digests' className={styles.link} outline>
