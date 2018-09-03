@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'Client/utils/prop-types';
 import classnames from 'classnames';
 import Assets from 'Client/config/assets';
 

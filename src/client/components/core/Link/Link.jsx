@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'Client/utils/prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import classnames from 'classnames';
 

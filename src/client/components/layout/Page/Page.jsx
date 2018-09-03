@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'Client/utils/prop-types';
 
 import Header from 'Client/components/layout/Header';
 import Main from 'Client/components/layout/Main';
