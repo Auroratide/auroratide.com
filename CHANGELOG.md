@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0 (03 Sep 2018)
+
+* Created the home page
+
 ## 0.3.0 (27 May 2018)
 
 * Added digests to the API
