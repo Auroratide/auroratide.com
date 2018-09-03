@@ -9,10 +9,10 @@
 }
 
 .logo-link .logo {
-  border: var(--circle-border-thickness) solid var(--secondary);
+  border: var(--circle-border-thickness) solid var(--palette-secondary);
   width: 100%;
   height: 100%;
-  transition: var(--short-transition) border-width;
+  transition: var(--transition-short) border-width;
 }
 
 .logo-link .logo img {
@@ -26,7 +26,7 @@
   border-width: calc(var(--circle-border-thickness) * 1.5);
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .logo-link {
     width: 10rem;
     height: 10rem;

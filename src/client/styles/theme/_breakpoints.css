@@ -1,1 +1,1 @@
-@custom-media --large-screen (width >= 1200px);
+@custom-media --breakpoint-lg (width >= 1200px);

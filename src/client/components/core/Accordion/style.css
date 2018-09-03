@@ -3,5 +3,5 @@
 .accordion {
   overflow: hidden;
   height: 0;
-  transition: var(--medium-transition) height;
+  transition: var(--transition-medium) height;
 }

@@ -15,7 +15,7 @@
   padding-top: 3rem;
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .subsection.left-to-right {
     flex-direction: row;
   }

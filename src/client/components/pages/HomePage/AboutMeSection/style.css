@@ -1,21 +1,21 @@
 @import "theme";
 
 .about-me-section {
-  background: var(--white);
+  background: var(--palette-white);
   padding: 4rem 1rem;
 }
 
 .about-me-section h2 {
-  font-size: var(--xxl);
+  font-size: var(--typography-xxl);
 }
 
 .about-me-section p {
-  font-size: var(--ml);
-  font-weight: var(--light);
+  font-size: var(--typography-ml);
+  font-weight: var(--typography-light);
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .about-me-section h2 {
-    font-size: var(--jb);
+    font-size: var(--typography-jb);
   }
 }

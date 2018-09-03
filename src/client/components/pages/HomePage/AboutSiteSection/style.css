@@ -6,18 +6,18 @@
 
 .about-site-section h1 {
   text-align: center;
-  font-size: var(--xxl);
-  color: var(--dark-grey);
+  font-size: var(--typography-xxl);
+  color: var(--palette-dark-grey);
   margin-bottom: 4rem;
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .about-site-section {
     padding-top: 0;
   }
 
   .about-site-section h1 {
-    font-size: var(--jb);
+    font-size: var(--typography-jb);
     margin-bottom: 6rem;
   }
 }

@@ -1,7 +1,7 @@
 @import "theme";
 
 .main-banner {
-  background: var(--secondary);
+  background: var(--palette-secondary);
 }
 
 .main-banner .container {
@@ -17,11 +17,11 @@
 }
 
 .main-banner .text {
-  color: var(--off-white);
+  color: var(--palette-off-white);
 }
 
 .main-banner .text h1 {
-  font-size: var(--jb);
+  font-size: var(--typography-jb);
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;
 }
@@ -29,7 +29,7 @@
 .main-banner .text .subtitle {
   display: flex;
   justify-content: space-between;
-  font-size: var(--lg);
+  font-size: var(--typography-lg);
   font-style: italic;
   opacity: 0.75;
   margin-bottom: 3rem;
@@ -63,7 +63,7 @@
   animation: none;
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .main-banner {
     margin-bottom: 6rem;
   }
@@ -79,7 +79,7 @@
     flex: 1;
     align-self: flex-start;
     max-width: 42rem;
-    border: 2rem solid var(--secondary);
+    border: 2rem solid var(--palette-secondary);
   }
 
   .main-banner .text {
@@ -87,14 +87,14 @@
   }
 
   .main-banner .text h1 {
-    font-size: var(--xjb);
+    font-size: var(--typography-xjb);
   }
 
   .main-banner .text .subtitle {
-    font-size: var(--xxl);
+    font-size: var(--typography-xxl);
   }
 
   .main-banner .text .link {
-    font-size: var(--xxl);
+    font-size: var(--typography-xxl);
   }
 }

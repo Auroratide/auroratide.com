@@ -5,10 +5,10 @@
   border-radius: 1em;
   padding: 0.1em 1.5em;
   transition:
-    var(--short-transition) padding-left,
-    var(--short-transition) padding-right,
-    var(--short-transition) margin-left,
-    var(--short-transition) margin-right;
+    var(--transition-short) padding-left,
+    var(--transition-short) padding-right,
+    var(--transition-short) margin-left,
+    var(--transition-short) margin-right;
 }
 
 .button:hover {
@@ -19,8 +19,8 @@
 }
 
 .button.outline {
-  border: 0.125rem solid var(--white);
-  color: var(--white);
+  border: 0.125rem solid var(--palette-white);
+  color: var(--palette-white);
   opacity: 0.875;
 }
 

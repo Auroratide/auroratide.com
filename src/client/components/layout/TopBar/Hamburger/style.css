@@ -7,14 +7,14 @@
 
 .hamburger {
   position: relative;
-  color: var(--off-white);
-  font-size: var(--xxl);
+  color: var(--palette-off-white);
+  font-size: var(--typography-xxl);
   padding: 0 calc(2 * var(--circle-border-thickness));
   z-index: 1;
 }
 
 .hamburger:hover {
-  color: var(--white);
+  color: var(--palette-white);
 }
 
 .hamburger::before {
@@ -23,13 +23,13 @@
   left: calc(50% - var(--hamburger-circle-width) / 2);
   width: var(--hamburger-circle-width);
   height: var(--hamburger-circle-width);
-  border: calc(var(--hamburger-circle-width) / 2) solid var(--secondary);
+  border: calc(var(--hamburger-circle-width) / 2) solid var(--palette-secondary);
   border-radius: 50%;
   content: "";
   display: block;
-  background: var(--primary);
+  background: var(--palette-primary);
   z-index: -1;
-  transition: var(--short-transition) border-width;
+  transition: var(--transition-short) border-width;
 }
 
 .hamburger.active::before {

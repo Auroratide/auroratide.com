@@ -5,10 +5,10 @@
 }
 
 .content-area.white {
-  background: var(--white);
+  background: var(--palette-white);
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .content-area {
     padding: 2rem;
   }

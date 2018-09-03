@@ -2,7 +2,7 @@
 
 .logo {
   overflow: visible;
-  background: var(--primary);
+  background: var(--palette-primary);
   border-radius: 50%;
 }
 

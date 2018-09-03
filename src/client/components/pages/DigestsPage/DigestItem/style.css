@@ -11,10 +11,10 @@ a.digest-item-container {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  color: var(--off-black);
+  color: var(--palette-off-black);
   border-left-width: 0;
   border-left-style: solid;
-  transition: var(--short-transition) border-left-width, var(--short-transition) width;
+  transition: var(--transition-short) border-left-width, var(--transition-short) width;
 }
 
 a.digest-item-container:last-child {
@@ -27,7 +27,7 @@ a.digest-item-container:hover {
 }
 
 .digest-item {
-  background: var(--white);
+  background: var(--palette-white);
   padding: 0.25rem;
   border-top-right-radius: calc(var(--circle-width) / 2);
 }
@@ -42,7 +42,7 @@ a.digest-item-container:hover {
 }
 
 .digest-item .title {
-  font-size: var(--lg);
+  font-size: var(--typography-lg);
   margin-bottom: 0.5rem;
 }
 
@@ -57,17 +57,17 @@ a.digest-item-container:hover {
 }
 
 .digest-item .summary {
-  font-weight: var(--light);
+  font-weight: var(--typography-light);
   text-align: justify;
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   a.digest-item-container {
     margin-bottom: 2rem;
   }
 
   .digest-item {
-    background: var(--white);
+    background: var(--palette-white);
     border-top-right-radius: calc(var(--circle-width-large) / 2);
   }
 
@@ -76,11 +76,11 @@ a.digest-item-container:hover {
   }
 
   .digest-item .title {
-    font-size: var(--xl);
+    font-size: var(--typography-xl);
   }
 
   .digest-item .summary {
-    font-size: var(--ml);
+    font-size: var(--typography-ml);
     text-align: left;
   }
 

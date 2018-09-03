@@ -1,11 +1,11 @@
 @import "theme";
 
 .top-bar a {
-  color: var(--off-white);
+  color: var(--palette-off-white);
 }
 
 .top-bar a:hover {
-  color: var(--white);
+  color: var(--palette-white);
 }
 
 .top-bar .container {
@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   .top-bar .container {
     flex-direction: row;
     max-height: 7rem;

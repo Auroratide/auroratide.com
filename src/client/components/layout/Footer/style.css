@@ -1,18 +1,18 @@
 @import "theme";
 
 footer {
-  color: var(--off-white);
-  background: var(--secondary);
+  color: var(--palette-off-white);
+  background: var(--palette-secondary);
   padding: 3rem 0;
   text-align: center;
 }
 
 footer a {
-  color: var(--grey);
+  color: var(--palette-grey);
 }
 
 footer a:hover {
-  color: var(--white);
+  color: var(--palette-white);
 }
 
 footer .nav-links {
@@ -30,13 +30,13 @@ footer .icon-links {
 }
 
 footer .icon-links .linked-in::before {
-  background: var(--linked-in);
+  background: var(--palette-linked-in);
 }
 
 footer .icon-links .twitter::before {
-  background: var(--twitter);
+  background: var(--palette-twitter);
 }
 
 footer .icon-links .github::before {
-  background: var(--github);
+  background: var(--palette-github);
 }

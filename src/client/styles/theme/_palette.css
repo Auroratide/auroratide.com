@@ -1,57 +1,57 @@
 :root {
-  --black: #000000;
-  --off-black: #333333;
-  --dark-grey: #707070;
-  --grey: #DDDDDD;
-  --off-white: #F7F7F7;
-  --white: #FFFFFF;
+  --palette-black: #000000;
+  --palette-off-black: #333333;
+  --palette-dark-grey: #707070;
+  --palette-grey: #DDDDDD;
+  --palette-off-white: #F7F7F7;
+  --palette-white: #FFFFFF;
 
-  --deep-blue: #001533;
-  --aurora-blue: #448DDD;
-  --fable-lavender: #9D77DD;
-  --eventide-black: #303038;
-  --autumn-red: #BE2C38;
+  --palette-deep-blue: #001533;
+  --palette-aurora-blue: #448DDD;
+  --palette-fable-lavender: #9D77DD;
+  --palette-eventide-black: #303038;
+  --palette-autumn-red: #BE2C38;
 
-  --primary: var(--aurora-blue);
-  --secondary: var(--deep-blue);
+  --palette-primary: var(--palette-aurora-blue);
+  --palette-secondary: var(--palette-deep-blue);
 
-  --github: #333333;
-  --linked-in: #0077B5;
-  --twitter: #29AAE1;
+  --palette-github: #333333;
+  --palette-linked-in: #0077B5;
+  --palette-twitter: #29AAE1;
 
   --palette-swap-background: {
     &.color-aurora-blue {
-      background: var(--aurora-blue);
+      background: var(--palette-aurora-blue);
     }
 
     &.color-fable-lavender {
-      background: var(--fable-lavender);
+      background: var(--palette-fable-lavender);
     }
 
     &.color-eventide-black {
-      background: var(--eventide-black);
+      background: var(--palette-eventide-black);
     }
 
     &.color-autumn-red {
-      background: var(--autumn-red);
+      background: var(--palette-autumn-red);
     }
   }
 
   --palette-swap-border-color: {
     &.color-aurora-blue {
-      border-color: var(--aurora-blue);
+      border-color: var(--palette-aurora-blue);
     }
 
     &.color-fable-lavender {
-      border-color: var(--fable-lavender);
+      border-color: var(--palette-fable-lavender);
     }
 
     &.color-eventide-black {
-      border-color: var(--eventide-black);
+      border-color: var(--palette-eventide-black);
     }
 
     &.color-autumn-red {
-      border-color: var(--autumn-red);
+      border-color: var(--palette-autumn-red);
     }
   }
 }

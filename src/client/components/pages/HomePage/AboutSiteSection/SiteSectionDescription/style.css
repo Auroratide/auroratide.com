@@ -12,10 +12,10 @@ a.container {
   width: 100%;
   margin: auto;
   margin-bottom: 2rem;
-  color: var(--off-black);
+  color: var(--palette-off-black);
   border-left-width: 0;
   border-left-style: solid;
-  transition: var(--short-transition) border-left-width, var(--short-transition) width;
+  transition: var(--transition-short) border-left-width, var(--transition-short) width;
 }
 
 a.container:last-child {
@@ -30,7 +30,7 @@ a.container:hover {
 .site-section-description {
   margin-bottom: 2rem;
   padding: 0.25rem;
-  background: var(--white);
+  background: var(--palette-white);
   border-top-right-radius: calc(var(--circle-width) / 2);
 }
 
@@ -44,16 +44,16 @@ a.container:hover {
 }
 
 .site-section-description h2 {
-  font-size: var(--xxl);
+  font-size: var(--typography-xxl);
   margin-bottom: 0.5rem;
 }
 
 .site-section-description p {
-  font-size: var(--ml);
-  font-weight: var(--light);
+  font-size: var(--typography-ml);
+  font-weight: var(--typography-light);
 }
 
-@media (--large-screen) {
+@media (--breakpoint-lg) {
   a.container {
     width: 80%;
     margin-bottom: 3rem;
@@ -75,7 +75,7 @@ a.container:hover {
   }
 
   .site-section-description h2 {
-    font-size: var(--xxxl);
+    font-size: var(--typography-xxxl);
     margin-bottom: 0.5rem;
   }
 

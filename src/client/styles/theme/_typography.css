@@ -1,18 +1,18 @@
 :root {
-  --sans: "Source Sans Pro", sans-serif;
+  --typography-sans: "Source Sans Pro", sans-serif;
 
-  --light: 300;
-  --normal: 400;
-  --bold: 700;
+  --typography-light: 300;
+  --typography-normal: 400;
+  --typography-bold: 700;
 
-  --xs: 0.5rem;
-  --sm: 0.75rem;
-  --md: 1rem;
-  --ml: 1.125rem;
-  --lg: 1.25rem;
-  --xl: 1.5rem;
-  --xxl: 2rem;
-  --xxxl: 2.5rem;
-  --jb: 3rem;
-  --xjb: 5rem;
+  --typography-xs: 0.5rem;
+  --typography-sm: 0.75rem;
+  --typography-md: 1rem;
+  --typography-ml: 1.125rem;
+  --typography-lg: 1.25rem;
+  --typography-xl: 1.5rem;
+  --typography-xxl: 2rem;
+  --typography-xxxl: 2.5rem;
+  --typography-jb: 3rem;
+  --typography-xjb: 5rem;
 }
