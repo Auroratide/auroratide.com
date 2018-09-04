@@ -34,5 +34,13 @@ module.exports = {
     'react/display-name': 0,
     'react/prefer-es6-class': 'error',
     'react/prefer-stateless-function': 'error',
+  },
+  settings: {
+    react: {
+      createClass: "createReactClass",
+      pragma: "React",
+      version: "16.0",
+    },
+    propWrapperFunctions: [ "forbidExtraProps" ]
   }
 };
