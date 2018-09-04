@@ -1,3 +1,5 @@
+@import "./_breakpoints";
+
 :root {
   --typography-sans: "Source Sans Pro", sans-serif;
 
@@ -6,11 +8,29 @@
   --typography-bold: 700;
 
   --typography-md: 1rem;
-  --typography-ml: 1.125rem;
   --typography-lg: 1.25rem;
   --typography-xl: 1.5rem;
   --typography-xxl: 2rem;
   --typography-xxxl: 2.5rem;
   --typography-jb: 3rem;
   --typography-xjb: 5rem;
+
+  --typography-lg-md: 1.125rem;
+
+  --typography-responsive-md: {
+    font-size: var(--typography-md);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-md);
+    }
+  }
+
+  --typography-preset-paragraph: {
+    font-weight: var(--typography-light);
+    text-align: justify;
+
+    @media (--breakpoint-lg) {
+      text-align: left;
+    }
+  }
 }

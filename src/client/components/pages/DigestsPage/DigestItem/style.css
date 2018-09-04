@@ -57,8 +57,8 @@ a.digest-item-container:hover {
 }
 
 .digest-item .summary {
-  font-weight: var(--typography-light);
-  text-align: justify;
+  @apply --typography-responsive-md;
+  @apply --typography-preset-paragraph;
 }
 
 @media (--breakpoint-lg) {
@@ -77,11 +77,6 @@ a.digest-item-container:hover {
 
   .digest-item .title {
     font-size: var(--typography-xl);
-  }
-
-  .digest-item .summary {
-    font-size: var(--typography-ml);
-    text-align: left;
   }
 
   .digest-item .icon {

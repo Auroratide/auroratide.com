@@ -49,8 +49,8 @@ a.container:hover {
 }
 
 .site-section-description p {
-  font-size: var(--typography-ml);
-  font-weight: var(--typography-light);
+  @apply --typography-responsive-md;
+  @apply --typography-preset-paragraph;
 }
 
 @media (--breakpoint-lg) {
