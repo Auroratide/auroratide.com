@@ -29,6 +29,10 @@
   },
   "author": "Timothy Foster",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/Auroratide/auroratide.com",
+    "type": "git"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
