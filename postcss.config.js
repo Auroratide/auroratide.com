@@ -8,6 +8,14 @@ module.exports = {
         path.resolve(__dirname, 'src', 'client', 'components')
       ]
     }),
-    require('postcss-cssnext')
+    require('postcss-apply'),
+    require('postcss-preset-env')({
+      stage: 0,
+      features: {
+        'custom-properties': {
+          preserve: false  // without this, css variables become global and step on each other
+        }
+      }
+    })
   ]
 };
