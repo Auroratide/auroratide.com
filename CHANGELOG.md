@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 (04 Sep 2018)
+
+* Updated multiple dependencies to latest
+* Internal code refactoring
+
 ## 0.4.0 (03 Sep 2018)
 
 * Created the home page
