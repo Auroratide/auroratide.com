@@ -8,6 +8,7 @@
     "icon": "",
     "color": "",
     "summary": "",
-    "created_at": "$DATE$"
+    "created_at": "$DATE$",
+    "source": ""
   }
 }

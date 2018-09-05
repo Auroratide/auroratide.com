@@ -8,6 +8,7 @@
     "icon": "key",
     "color": "aurora-blue",
     "summary": "When rendering a list of things in React, it might be tempting to use the array index as a key, but be warned: It's a trap! Using index can cause unexpected behaviour when reordering elements.  It's generally best to use an id unique to the resource unless you know your list is static.",
-    "created_at": "2018-05-26T16:01:32.394Z"
+    "created_at": "2018-05-26T16:01:32.394Z",
+    "source": "Medium"
   }
 }

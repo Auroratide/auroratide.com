@@ -8,6 +8,7 @@
     "icon": "lock",
     "color": "eventide-black",
     "summary": "Since there isn't a server to attack, static sites might seem inherently secure. However, serving a static site over HTTPS offers many other benefits, including better SEO through Google, protection against man-in-the-middle attacks, and a gain in trust with new browser tech.",
-    "created_at": "2018-06-01T21:08:03.935Z"
+    "created_at": "2018-06-01T21:08:03.935Z",
+    "source": "Bit Balloon"
   }
 }
