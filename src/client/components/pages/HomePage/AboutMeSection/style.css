@@ -6,16 +6,10 @@
 }
 
 .about-me-section h2 {
-  font-size: var(--typography-xxl);
+  @apply --typography-responsive-jb;
 }
 
 .about-me-section p {
   @apply --typography-responsive-md;
   @apply --typography-preset-paragraph;
-}
-
-@media (--breakpoint-lg) {
-  .about-me-section h2 {
-    font-size: var(--typography-jb);
-  }
 }

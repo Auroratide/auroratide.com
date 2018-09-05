@@ -44,7 +44,7 @@ a.container:hover {
 }
 
 .site-section-description h2 {
-  font-size: var(--typography-xxl);
+  font-size: var(--typography-jb);
   margin-bottom: 0.5rem;
 }
 
@@ -75,7 +75,7 @@ a.container:hover {
   }
 
   .site-section-description h2 {
-    font-size: var(--typography-xxxl);
+    font-size: calc(var(--typography-jb) * 1.25);
     margin-bottom: 0.5rem;
   }
 

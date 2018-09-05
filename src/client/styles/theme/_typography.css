@@ -10,18 +10,52 @@
   --typography-md: 1rem;
   --typography-lg: 1.25rem;
   --typography-xl: 1.5rem;
-  --typography-xxl: 2rem;
-  --typography-xxxl: 2.5rem;
-  --typography-jb: 3rem;
-  --typography-xjb: 5rem;
+  --typography-jb: 2rem;
+  --typography-xj: 3rem;
 
   --typography-lg-md: 1.125rem;
+  --typography-lg-lg: 1.5rem;
+  --typography-lg-xl: 2rem;
+  --typography-lg-jb: 3rem;
+  --typography-lg-xj: 5rem;
 
   --typography-responsive-md: {
     font-size: var(--typography-md);
 
     @media (--breakpoint-lg) {
       font-size: var(--typography-lg-md);
+    }
+  }
+
+  --typography-responsive-lg: {
+    font-size: var(--typography-lg);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-lg);
+    }
+  }
+
+  --typography-responsive-xl: {
+    font-size: var(--typography-xl);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-xl);
+    }
+  }
+
+  --typography-responsive-jb: {
+    font-size: var(--typography-jb);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-jb);
+    }
+  }
+
+  --typography-responsive-xj: {
+    font-size: var(--typography-xj);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-xj);
     }
   }
 

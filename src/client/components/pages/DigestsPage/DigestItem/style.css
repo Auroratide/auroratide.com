@@ -42,7 +42,8 @@ a.digest-item-container:hover {
 }
 
 .digest-item .title {
-  font-size: var(--typography-lg);
+  @apply --typography-responsive-lg;
+
   margin-bottom: 0.5rem;
 }
 
@@ -73,10 +74,6 @@ a.digest-item-container:hover {
 
   .digest-item .content {
     padding: 0.75rem calc(var(--circle-width-large) + 1rem) 0.75rem 0.75rem;
-  }
-
-  .digest-item .title {
-    font-size: var(--typography-xl);
   }
 
   .digest-item .icon {
