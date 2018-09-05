@@ -62,6 +62,17 @@ a.digest-item-container:hover {
   @apply --typography-preset-paragraph;
 }
 
+.digest-item .read-more {
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.digest-item .chevron {
+  margin-right: 0.25rem;
+}
+
 @media (--breakpoint-lg) {
   a.digest-item-container {
     margin-bottom: 2rem;

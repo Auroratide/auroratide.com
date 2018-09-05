@@ -9,5 +9,6 @@ export default zaha({
   summary: is.string(),
   icon: is.string(),
   color: is.oneOf(Colors.list()),
-  link: is.string()
+  link: is.string(),
+  source: is.string()
 });

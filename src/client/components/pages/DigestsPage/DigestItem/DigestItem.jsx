@@ -3,6 +3,7 @@ import PropTypes from 'Client/utils/prop-types';
 import classnames from 'classnames';
 import CircledIcon from 'Client/components/core/CircledIcon';
 import Link from 'Client/components/core/Link';
+import Icon from 'Client/components/core/Icon';
 import styles from './style';
 
 const DigestItem = ({ digest }) =>
@@ -17,6 +18,9 @@ const DigestItem = ({ digest }) =>
           <span className={styles.category}>{digest.category}</span>
         </div>
         <p className={styles.summary}>{digest.summary}</p>
+        <div className={styles['read-more']}>
+          <Icon icon='chevron-right' className={styles.chevron} /><span>{`Read original at ${digest.source}`}</span>
+        </div>
       </div>
     </article>
   </Link>;

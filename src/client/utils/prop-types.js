@@ -19,7 +19,8 @@ const digest = PropTypes.shape({
   summary: PropTypes.string,
   icon: PropTypes.string,
   color: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
+  source: PropTypes.string
 });
 
 const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);

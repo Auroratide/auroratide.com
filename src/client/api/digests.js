@@ -8,7 +8,8 @@ const mapDigest = raw => ( {
   summary: raw.summary,
   icon: raw.icon,
   color: raw.color,
-  link: raw.link
+  link: raw.link,
+  source: raw.source
 } );
 
 export const getAll = () => req.get('/digests/index.json')
