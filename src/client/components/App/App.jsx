@@ -10,7 +10,6 @@ const App = () =>
   <Switch>
     <Route exact path='/' component={HomePage} />
     <Page>
-      <Route exact path='/' component={HomePage} />
       <Route exact path='/digests' component={DigestsPage} />
       <Route path='*' component={PageNotFound} />
     </Page>
