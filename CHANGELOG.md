@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 (05 Sep 2018)
+
+* Added source to digest items and API
+
 ## 0.4.1 (04 Sep 2018)
 
 * Updated multiple dependencies to latest
