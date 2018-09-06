@@ -18,9 +18,9 @@ const DigestItem = ({ digest }) =>
           <span className={styles.category}>{digest.category}</span>
         </div>
         <p className={styles.summary}>{digest.summary}</p>
-        <div className={styles['read-more']}>
+        <small className={styles['read-more']}>
           <Icon icon='chevron-right' className={styles.chevron} /><span>{`Read original at ${digest.source}`}</span>
-        </div>
+        </small>
       </div>
     </article>
   </Link>;

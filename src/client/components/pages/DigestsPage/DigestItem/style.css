@@ -60,6 +60,7 @@ a.digest-item-container:hover {
 .digest-item .summary {
   @apply --typography-responsive-md;
   @apply --typography-preset-paragraph;
+  margin-bottom: 0.75rem;
 }
 
 .digest-item .read-more {
@@ -67,6 +68,7 @@ a.digest-item-container:hover {
   display: flex;
   align-items: center;
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .digest-item .chevron {
@@ -89,5 +91,9 @@ a.digest-item-container:hover {
 
   .digest-item .icon {
     font-size: calc(var(--circle-width-large) / 2.25);
+  }
+
+  .digest-item .read-more {
+    margin-bottom: 0;
   }
 }
