@@ -9,6 +9,7 @@ import store from './store';
 
 import './styles/normalize';
 import './styles/global';
+import './styles/noscript';
 
 import App from 'Client/components/App';
 

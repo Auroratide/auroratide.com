@@ -24,6 +24,9 @@
     "color-hex-length": "long",
     "font-family-name-quotes": "always-unless-keyword",
     "font-weight-notation": "numeric",
-    "string-quotes": "double"
+    "string-quotes": "double",
+    "selector-pseudo-class-no-unknown": [ true, {
+      "ignorePseudoClasses": ["global"]
+    } ]
   }
 }
