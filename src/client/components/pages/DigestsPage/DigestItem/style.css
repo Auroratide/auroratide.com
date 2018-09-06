@@ -60,6 +60,7 @@ a.digest-item-container:hover {
 .digest-item .summary {
   @apply --typography-responsive-md;
   @apply --typography-preset-paragraph;
+
   margin-bottom: 0.75rem;
 }
 

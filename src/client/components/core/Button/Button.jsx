@@ -4,15 +4,27 @@ import classnames from 'classnames';
 
 import styles from './style';
 
-const Button = ({ tag, className, outline, children, ...props }) =>
-  React.createElement(tag, {
-    className: classnames(styles.button, { [styles.outline]: outline }, className),
-    ...props
-  }, children);
+const Button = ({
+  tag,
+  className,
+  outline,
+  primary,
+  children,
+  ...props
+}) => React.createElement(tag, {
+  className: classnames(
+    styles.button,
+    { [styles.outline]: outline },
+    { [styles.primary]: primary },
+    className
+  ),
+  ...props
+}, children);
 
 Button.propTypes = {
   tag: PropTypes.tag,
   className: PropTypes.string,
+  primary: PropTypes.bool,
   outline: PropTypes.bool,
   children: PropTypes.node
 };

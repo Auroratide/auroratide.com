@@ -27,3 +27,8 @@
 .button.outline:hover {
   opacity: 1;
 }
+
+.button.primary {
+  color: var(--palette-white);
+  background: var(--palette-primary);
+}
