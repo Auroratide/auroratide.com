@@ -6,6 +6,8 @@ import LogoLink from './LogoLink';
 import NavLink from './NavLink';
 import Hamburger from './Hamburger';
 import Accordion from 'Client/components/core/Accordion';
+import functions from 'Client/utils/functions';
+import scroll from 'Client/utils/scroll';
 
 import styles from './style';
 
@@ -13,11 +15,11 @@ const TopBar = ({ accordionState }) =>
   <nav className={styles['top-bar']}>
     <Container className={styles.container}>
       <div className={styles['main-links']}>
-        <LogoLink onClick={accordionState.collapse} />
-        <Hamburger className={styles.hamburger} onClick={accordionState.toggle} active={accordionState.expanded} />
+        <LogoLink onClick={functions.series(accordionState.collapse, scroll.toTop)} />
+        <Hamburger className={styles.hamburger} onClick={functions.series(accordionState.toggle, scroll.toTop)} active={accordionState.expanded} />
       </div>
       <Accordion state={accordionState} className={styles['nav-links']}>
-        <NavLink name='Digests' to={Links.Auroratide.DIGESTS} onClick={accordionState.collapse} />
+        <NavLink name='Digests' to={Links.Auroratide.DIGESTS} onClick={functions.series(accordionState.collapse, scroll.toTop)} />
       </Accordion>
     </Container>
   </nav>;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import { renderIfElse } from 'Client/utils/render-if';
+import scroll from 'Client/utils/scroll';
 import classnames from 'classnames';
 
 const isExternal = link => /http/.test(link);
@@ -19,6 +20,10 @@ Link.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string,
   children: PropTypes.node
+};
+
+Link.defaultProps = {
+  onClick: scroll.toTop
 };
 
 export default Link;
