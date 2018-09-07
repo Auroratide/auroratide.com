@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 (06 Sep 2018)
+
+* Added fallback pages and legal page
+
 ## 0.4.2 (05 Sep 2018)
 
 * Added source to digest items and API
