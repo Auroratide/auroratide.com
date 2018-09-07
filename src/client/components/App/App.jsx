@@ -10,11 +10,11 @@ import PageNotFound from 'Client/components/pages/PageNotFound';
 import GenericErrorPage from 'Client/components/pages/GenericErrorPage';
 
 const App = () =>
-  <ErrorBoundary fallback={<GenericErrorPage />}>
+  <ErrorBoundary fallback={GenericErrorPage}>
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Page>
-        <ErrorBoundary fallback={<GenericErrorPage />}>
+        <ErrorBoundary fallback={GenericErrorPage}>
           <Switch>
             <Route exact path='/digests' component={DigestsPage} />
             <Route exact path='/legal' component={LegalPage} />

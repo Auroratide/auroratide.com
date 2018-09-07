@@ -7,7 +7,7 @@ describe('ErrorBoundary Behaviour', () => {
   let wrapper;
 
   const errorBoundary = () => mount(
-    <ErrorBoundary fallback={<Fallback />}>
+    <ErrorBoundary fallback={Fallback}>
       <Normal />
     </ErrorBoundary>
   );

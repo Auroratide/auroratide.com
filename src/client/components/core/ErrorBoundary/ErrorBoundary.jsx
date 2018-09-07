@@ -10,14 +10,15 @@ class ErrorBoundary extends React.Component {
 
   render() {
     const hasError = this.props.status.hasError;
-    return renderIfElse(hasError, () => this.props.fallback)
-      .elseRender(() => this.props.children);
+    return renderIfElse(hasError, () =>
+      React.createElement(this.props.fallback)
+    ).elseRender(() => this.props.children);
   }
 }
 
 ErrorBoundary.propTypes = {
   status: PropTypes.instanceOf(State).isRequired,
-  fallback: PropTypes.node,
+  fallback: PropTypes.component,
   children: PropTypes.node
 };
 
