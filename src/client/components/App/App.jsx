@@ -5,6 +5,7 @@ import ErrorBoundary from 'Client/components/core/ErrorBoundary';
 import Page from 'Client/components/layout/Page';
 import HomePage from 'Client/components/pages/HomePage';
 import DigestsPage from 'Client/components/pages/DigestsPage';
+import LegalPage from 'Client/components/pages/LegalPage';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import GenericErrorPage from 'Client/components/pages/GenericErrorPage';
 
@@ -16,6 +17,7 @@ const App = () =>
         <ErrorBoundary fallback={<GenericErrorPage />}>
           <Switch>
             <Route exact path='/digests' component={DigestsPage} />
+            <Route exact path='/legal' component={LegalPage} />
             <Route path='*' component={PageNotFound} />
           </Switch>
         </ErrorBoundary>

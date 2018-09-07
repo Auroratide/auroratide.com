@@ -1,0 +1,6 @@
+@import "theme";
+
+.paragraph {
+  @apply --typography-responsive-md;
+  @apply --typography-preset-paragraph;
+}

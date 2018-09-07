@@ -18,6 +18,7 @@ const Footer = () =>
       <div className={styles['nav-links']}>
         <NavLink name='Home' to={Links.Auroratide.HOME} />
         <NavLink name='Digests' to={Links.Auroratide.DIGESTS} />
+        <NavLink name='Legal' to={Links.Auroratide.LEGAL} />
       </div>
       <License />
     </Container>

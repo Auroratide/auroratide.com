@@ -1,7 +1,7 @@
 @import "theme";
 
 .content-area {
-  padding: 1rem;
+  padding: 1rem 1rem 2rem;
 }
 
 .content-area.white {
@@ -10,6 +10,6 @@
 
 @media (--breakpoint-lg) {
   .content-area {
-    padding: 2rem;
+    padding: 2rem 2rem 4rem;
   }
 }
