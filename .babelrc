@@ -8,7 +8,7 @@
   "env": {
     "test": {
       "plugins": [
-        ["babel-plugin-webpack-alias"]
+        ["babel-plugin-webpack-alias", { "config": "./webpack/dev.config.js" }]
       ]
     }
   }
