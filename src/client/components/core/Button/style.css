@@ -24,11 +24,15 @@
   opacity: 0.875;
 }
 
-.button.outline:hover {
+.button.outline:active, .button.outline:focus {
   opacity: 1;
 }
 
 .button.primary {
   color: var(--palette-white);
   background: var(--palette-primary);
+}
+
+.button.primary:active, .button.primary:focus {
+  background: var(--palette-primary-dark);
 }
