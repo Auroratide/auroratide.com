@@ -12,7 +12,10 @@
   --palette-eventide-black: #303038;
   --palette-autumn-red: #BE2C38;
 
+  --palette-aurora-blue-dark: #336AA5;
+
   --palette-primary: var(--palette-aurora-blue);
+  --palette-primary-dark: var(--palette-aurora-blue-dark);
   --palette-secondary: var(--palette-deep-blue);
 
   --palette-github: #333333;
