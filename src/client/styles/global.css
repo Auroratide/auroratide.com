@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+a:hover {
   color: var(--palette-primary-dark);
   text-decoration: none;
 }
