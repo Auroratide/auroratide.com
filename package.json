@@ -25,6 +25,7 @@
     "test:unit": "NODE_ENV=test jest test/unit",
     "test:behavioural": "NODE_ENV=test jest test/behavioural",
     "test:functional": "NODE_ENV=test jest test/functional",
+    "test:ui": "NODE_ENV=test testcafe firefox test/ui/**/*.spec.js --app 'npm start' --app-init-delay 1000",
     "test:watch": "NODE_ENV=test jest test/ --watch",
     "components:create": "node scripts/components/create",
     "digests:create": "node scripts/digests/create"
