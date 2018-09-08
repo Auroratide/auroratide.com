@@ -1,20 +1,21 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const __root = path.resolve(__dirname, '..');
+
 module.exports = {
   name: 'client',
-  mode: 'development',
-  entry: path.join(__dirname, 'src', 'client', 'client.jsx'),
+  entry: path.join(__root, 'src', 'client', 'client.jsx'),
   output: {
     filename: 'client.js',
-    path: path.join(__dirname, 'public')
+    path: path.join(__root, 'public')
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
     alias: {
-      Client: path.resolve(__dirname, 'src', 'client'),
-      Content: path.resolve(__dirname, 'src', 'content'),
-      Test: path.resolve(__dirname, 'test')
+      Client: path.resolve(__root, 'src', 'client'),
+      Content: path.resolve(__root, 'src', 'content'),
+      Test: path.resolve(__root, 'test')
     }
   },
   module: {
