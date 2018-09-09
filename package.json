@@ -21,7 +21,7 @@
     "lint:js": "eslint '{src,test}/**/*.{js,jsx}'",
     "lint:css": "stylelint 'src/**/*.css'",
     "test": "npm-run-all lint test:all",
-    "test:all": "npm-run-all test:unit test:behavioural test:functional",
+    "test:all": "npm-run-all test:unit test:behavioural test:functional test:ui",
     "test:unit": "NODE_ENV=test jest test/unit",
     "test:behavioural": "NODE_ENV=test jest test/behavioural",
     "test:functional": "NODE_ENV=test jest test/functional",
