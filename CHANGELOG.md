@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 (10 Sep 2018)
+
+* Made internal links scroll to the top when clicked
+* Document title is now dynamic depending on landed page
+* Adjusted link and button behaviour when hovered and clicked
+
 ## 0.5.0 (06 Sep 2018)
 
 * Added fallback pages and legal page
