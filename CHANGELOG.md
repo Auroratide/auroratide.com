@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (13 Sep 2018)
+
+* Site released to public
+
 ## 0.5.1 (10 Sep 2018)
 
 * Made internal links scroll to the top when clicked
