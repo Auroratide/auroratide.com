@@ -10,4 +10,9 @@ export default class ResponseBuilder extends Base {
     this.schema.status = is(200);
     return this;
   }
+
+  withNotFound() {
+    this.schema.status = is(404);
+    return this;
+  }
 }
