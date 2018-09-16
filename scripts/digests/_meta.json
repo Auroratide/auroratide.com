@@ -1,9 +1,10 @@
 {
-  "next_id": "5",
+  "next_id": "6",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
     "3": "five-reasons-you-want-https-for-your-static-site",
-    "4": "the-problem-with-learning-styles"
+    "4": "the-problem-with-learning-styles",
+    "5": "the-secret-to-better-code-reviews"
   }
 }
