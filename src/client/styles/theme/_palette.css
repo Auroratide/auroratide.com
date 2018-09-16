@@ -11,6 +11,7 @@
   --palette-fable-lavender: #9D77DD;
   --palette-eventide-black: #303038;
   --palette-autumn-red: #BE2C38;
+  --palette-aella-green: #5EBF36;
 
   --palette-aurora-blue-dark: #336AA5;
 
@@ -38,6 +39,10 @@
     &.color-autumn-red {
       background: var(--palette-autumn-red);
     }
+
+    &.color-aella-green {
+      background: var(--palette-aella-green);
+    }
   }
 
   --palette-swap-border-color: {
@@ -55,6 +60,10 @@
 
     &.color-autumn-red {
       border-color: var(--palette-autumn-red);
+    }
+
+    &.color-aella-green {
+      border-color: var(--palette-aella-green);
     }
   }
 }
