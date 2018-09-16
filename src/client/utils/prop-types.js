@@ -10,6 +10,13 @@ const routerLocation = PropTypes.shape({
   state: PropTypes.object
 });
 
+const routerMatch = PropTypes.shape({
+  params: PropTypes.object,
+  isExact: PropTypes.bool,
+  path: PropTypes.string,
+  url: PropTypes.string
+});
+
 const color = PropTypes.oneOf(Colors.list());
 
 const digest = PropTypes.shape({
@@ -29,6 +36,7 @@ const tag = PropTypes.oneOfType([PropTypes.string, component]);
 
 export default {
   routerLocation,
+  routerMatch,
   color,
   digest,
   component,

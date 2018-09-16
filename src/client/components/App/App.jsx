@@ -5,6 +5,7 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 
 import Page from 'Client/components/layout/Page';
 import HomePage from 'Client/components/pages/HomePage';
+import PostsRouter from 'Client/components/pages/PostsRouter';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 import LegalPage from 'Client/components/pages/LegalPage';
 import PageNotFound from 'Client/components/pages/PageNotFound';
@@ -18,6 +19,7 @@ const App = () =>
         <Page>
           <ErrorBoundary fallback={GenericErrorPage}>
             <Switch>
+              <Route path='/posts' component={PostsRouter} />
               <Route exact path='/digests' component={DigestsPage} />
               <Route exact path='/legal' component={LegalPage} />
               <Route path='*' component={PageNotFound} />
