@@ -4,9 +4,8 @@
   "description": "Timothy Foster's humble website",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s -n -l 3000 public",
-    "start:dev": "serve -s -n -l 3000 -d public",
-    "start:watch": "npm run build && npm-run-all --parallel build:webpack:watch start:dev",
+    "start": "serve -l 3000",
+    "start:watch": "npm run build && npm-run-all --parallel build:webpack:watch start",
     "ci": "npm-run-all test:unit test:behavioural build:prod",
     "build": "npm-run-all build:webpack build:html build:assets build:digests",
     "build:prod": "npm-run-all build:webpack:prod build:html build:assets build:digests",
