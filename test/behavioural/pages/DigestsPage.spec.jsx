@@ -29,6 +29,8 @@ describe('DigestsPage Behaviour', () => {
       });
   });
 
+  afterEach(() => jest.restoreAllMocks());
+
   it('should render the digests from the API', async () => {
     const expectedDigest = new DigestBuilder()
       .withId('1')

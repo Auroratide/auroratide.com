@@ -7,14 +7,17 @@ class Then {
   }
 
   reply = (status, data) => {
-    req[this.options.method] = jest.fn(async (url) => {
+    jest.spyOn(req, this.options.method).mockImplementation(async url => {
       if(url === this.options.url) {
         return new ResponseBuilder()
           .withStatus(status)
           .withData(data)
           .build();
       } else {
-        return null;
+        throw new ResponseBuilder()
+          .withStatus(500)
+          .withData({ error: 'URL is not known by http stubber' })
+          .build();
       }
     });
   }
