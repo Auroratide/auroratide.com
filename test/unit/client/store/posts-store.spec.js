@@ -52,7 +52,7 @@ describe('PostsStore', () => {
 
       const retrievedPost = store.getPost(id);
 
-      expect(retrievedPost).toBe(null);
+      expect(retrievedPost).toBeFalsy();
     });
   });
 });

@@ -14,6 +14,6 @@ export default class PostsStore {
   }
 
   getPost(id) {
-    return this.posts[id] || null;
+    return this.posts[id];
   }
 }
