@@ -16,7 +16,7 @@ class Then {
       } else {
         throw new ResponseBuilder()
           .withStatus(500)
-          .withData({ error: 'URL is not known by http stubber' })
+          .withData({ error: `URL (${url}) is not known by http stubber` })
           .build();
       }
     });
