@@ -1,0 +1,30 @@
+@import "theme";
+
+.title-area {
+  @apply --palette-swap-background;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 16rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  @apply --typography-responsive-jb;
+
+  color: var(--palette-white);
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.333);
+  width: 100%;
+}
+
+.icon {
+  font-size: 24rem;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.333);
+  align-self: center;
+}

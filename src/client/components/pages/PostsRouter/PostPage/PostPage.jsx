@@ -4,6 +4,7 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
+import TitleArea from './TitleArea';
 import { renderIf } from 'Client/utils/render-if';
 
 import styles from './style';
@@ -23,8 +24,9 @@ class PostPage extends React.Component {
     return renderIf(post, () =>
       <DocumentTitle title='Post'>
         <Container className={styles['post-page']}>
-          <ContentArea>
-            <p>{post.title}</p>
+          <TitleArea title={post.title} color={post.color} icon={post.icon} />
+          <ContentArea white>
+            <p>Some content is here.</p>
           </ContentArea>
         </Container>
       </DocumentTitle>

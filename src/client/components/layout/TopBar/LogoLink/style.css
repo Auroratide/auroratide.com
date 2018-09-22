@@ -6,6 +6,7 @@
   display: block;
   width: var(--circle-width);
   height: var(--circle-width);
+  z-index: 2;
 }
 
 .logo-link .logo {

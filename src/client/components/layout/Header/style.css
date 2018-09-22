@@ -1,6 +1,6 @@
 @import "theme";
 
-header {
+.header {
   background: var(--palette-secondary);
   color: var(--palette-white);
 }
