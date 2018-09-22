@@ -16,10 +16,19 @@ const ensureFolderExists = (folder) => mkdirp.sync(folder);
 
 const savePost = (publicPath, post) => fs.writeFileSync(path.join(publicPath, `${post.id}.json`), JSON.stringify(post));
 
+const stripOffContent = posts => posts.map(post => {
+  const { content, ...rest } = post;
+  return rest;
+});
+
+const savePostsList = (publicPath, posts) => fs.writeFileSync(path.join(publicPath, 'index.json'), JSON.stringify({ posts }));
+
 module.exports = (postsPath, publicPath) => {
   const postFiles = getListOfPostFiles(postsPath);
   const posts = postFiles.map(file => parsePost(path.join(postsPath, file)));
   sortByPublishedAt(posts);
   ensureFolderExists(publicPath);
   posts.forEach(post => savePost(publicPath, post));
+
+  savePostsList(publicPath, stripOffContent(posts));
 };
