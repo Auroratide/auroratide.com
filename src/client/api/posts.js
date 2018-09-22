@@ -7,6 +7,7 @@ const map = raw => ( {
   summary: raw.summary,
   icon: raw.icon,
   color: raw.color,
+  publishedAt: raw.published_at,
   content: raw.content
 } );
 

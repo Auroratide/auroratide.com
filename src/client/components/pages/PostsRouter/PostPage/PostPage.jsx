@@ -4,6 +4,7 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
+import DateDisplay from 'Client/components/core/DateDisplay';
 import TitleArea from './TitleArea';
 import { renderIf } from 'Client/utils/render-if';
 
@@ -26,7 +27,8 @@ class PostPage extends React.Component {
         <Container.article className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
-            <div>{JSON.stringify(post.content)}</div>
+            <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
+            <p>{JSON.stringify(post.content)}</p>
           </ContentArea>
         </Container.article>
       </DocumentTitle>

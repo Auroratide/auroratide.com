@@ -7,6 +7,6 @@ export default zaha({
   summary: is.string(),
   icon: is.string(),
   color: is.string(),
-  published_at: is.string(),
+  published_at: is.datestring(),
   content: is.object()
 });
