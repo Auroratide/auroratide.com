@@ -5,8 +5,9 @@ import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
 import DateDisplay from 'Client/components/core/DateDisplay';
+import PageNotFound from 'Client/components/pages/PageNotFound';
 import TitleArea from './TitleArea';
-import { renderIf } from 'Client/utils/render-if';
+import { renderIfElse } from 'Client/utils/render-if';
 
 import styles from './style';
 
@@ -22,7 +23,7 @@ class PostPage extends React.Component {
   render() {
     const post = this.props.postsStore.getPost(this.getPostId());
 
-    return renderIf(post, () =>
+    return renderIfElse(post, () =>
       <DocumentTitle title='Post'>
         <Container.article className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
@@ -32,6 +33,8 @@ class PostPage extends React.Component {
           </ContentArea>
         </Container.article>
       </DocumentTitle>
+    ).elseRender(() =>
+      <PageNotFound />
     );
   }
 }
