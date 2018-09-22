@@ -23,12 +23,12 @@ class PostPage extends React.Component {
 
     return renderIf(post, () =>
       <DocumentTitle title='Post'>
-        <Container className={styles['post-page']}>
+        <Container.article className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
             <div>{JSON.stringify(post.content)}</div>
           </ContentArea>
-        </Container>
+        </Container.article>
       </DocumentTitle>
     );
   }
