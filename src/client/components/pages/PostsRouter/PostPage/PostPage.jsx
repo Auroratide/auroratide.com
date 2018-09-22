@@ -24,7 +24,7 @@ class PostPage extends React.Component {
     const post = this.props.postsStore.getPost(this.getPostId());
 
     return renderIfElse(post, () =>
-      <DocumentTitle title='Post'>
+      <DocumentTitle title={post.title}>
         <Container.article className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
