@@ -1,0 +1,24 @@
+{
+  "post": {
+    "id": "another-post",
+    "title": "Another Post",
+    "category": "Sample",
+    "icon": "lock",
+    "color": "aella-green",
+    "published_at": "2018-09-22T00:00:00Z",
+    "summary": "The summary is an unstyled blurb of a few sentences effectively advertising the post. This is different from my tagline approach from before, as this can give readers reason to either read or ignore the post.",
+    "content": [ {
+      "c": "p",
+      "d": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar nulla at interdum scelerisque. Aenean quis lorem odio. Etiam augue dui, convallis vitae ultricies et, aliquam vel justo. Suspendisse odio elit, euismod at efficitur pharetra, finibus eu nisl."
+    }, {
+      "c": "p",
+      "d": ["Morbi in justo sit amet nisl pulvinar eleifend mollis in ", {
+        "c": "Link",
+        "d": "velit",
+        "p": {
+          "to": "/digests"
+        }
+      }, ". Vestibulum tristique quam quis pharetra luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."]
+    } ]
+  }
+}
