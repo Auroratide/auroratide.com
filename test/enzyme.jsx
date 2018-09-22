@@ -9,15 +9,9 @@ configure({ adapter: new Adapter() });
 
 export * from 'enzyme';
 
-export const mountWithRouter = component => mount(<MemoryRouter>{component}</MemoryRouter>);
-
-export const mountWithStore = component => mount(
-  <Provider store={new RootStore()}>
-    <MemoryRouter>
-      {component}
-    </MemoryRouter>
-  </Provider>
-);
+export const withAppContext = () => {
+  return new MountContext();
+};
 
 export const withInitialRoute = route => {
   const context = new MountContext();
@@ -25,6 +19,10 @@ export const withInitialRoute = route => {
 };
 
 class MountContext {
+  constructor() {
+    this.route = '/';
+  }
+
   withInitialRoute(route) {
     this.route = route;
     return this;

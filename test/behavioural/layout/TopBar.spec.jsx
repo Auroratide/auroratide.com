@@ -1,11 +1,11 @@
 import React from 'react';
-import { mountWithRouter } from 'Test/enzyme';
+import { withAppContext } from 'Test/enzyme';
 
 import TopBar from 'Client/components/layout/TopBar';
 
 describe('TopBar Behaviour', () => {
   let wrapper;
-  const topBar = () => mountWithRouter(<TopBar />);
+  const topBar = () => withAppContext().mount(<TopBar />);
 
   const clickHamburger = () => wrapper.find('.main-links > .hamburger').simulate('click');
   const clickNavLink = () => wrapper.find('.nav-links .nav-link').at(0).simulate('click');

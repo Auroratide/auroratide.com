@@ -1,5 +1,5 @@
 import React from 'react';
-import { mountWithStore } from 'Test/enzyme';
+import { withAppContext } from 'Test/enzyme';
 import http from 'Test/utils/mock-http';
 import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 import DigestBuilder from 'Test/utils/builders/DigestBuilder';
@@ -11,7 +11,7 @@ import DigestsPage from 'Client/components/pages/DigestsPage';
 
 describe('DigestsPage Behaviour', () => {
   let digestBuilder;
-  const page = () => mountWithStore(<DigestsPage />);
+  const page = () => withAppContext().mount(<DigestsPage />);
 
   beforeEach(() => {
     digestBuilder = new DigestDataBuilder()
