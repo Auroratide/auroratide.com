@@ -26,7 +26,7 @@ class PostPage extends React.Component {
         <Container className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
-            <p>Some content is here.</p>
+            <div>{JSON.stringify(post.content)}</div>
           </ContentArea>
         </Container>
       </DocumentTitle>
