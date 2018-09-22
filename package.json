@@ -7,7 +7,7 @@
     "start": "serve -l 3000",
     "start:watch": "npm run build && npm-run-all --parallel build:webpack:watch start",
     "ci": "npm-run-all test:unit test:behavioural build:prod",
-    "build": "npm-run-all build:webpack build:html build:assets build:digests",
+    "build": "npm-run-all build:webpack build:html build:assets build:digests build:posts",
     "build:prod": "npm-run-all build:webpack:prod build:html build:assets build:digests",
     "build:webpack": "webpack --config webpack/dev.config.js",
     "build:webpack:watch": "webpack --config webpack/dev.config.js --watch",
