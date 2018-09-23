@@ -4,7 +4,8 @@ const colors = {
   AURORA_BLUE: color('aurora-blue'),
   FABLE_LAVENDER: color('fable-lavender'),
   EVENTIDE_BLACK: color('eventide-black'),
-  AUTUMN_RED: color('autumn-red')
+  AUTUMN_RED: color('autumn-red'),
+  AELLA_GREEN: color('aella-green')
 };
 
 export default {

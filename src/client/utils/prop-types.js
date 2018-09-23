@@ -30,6 +30,17 @@ const digest = PropTypes.shape({
   source: PropTypes.string
 });
 
+const post = PropTypes.shape({
+  id: PropTypes.string,
+  title: PropTypes.string,
+  category: PropTypes.string,
+  summary: PropTypes.string,
+  icon: PropTypes.string,
+  color: PropTypes.string,
+  publishedAt: PropTypes.string,
+  content: PropTypes.object
+});
+
 const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);
 
 const tag = PropTypes.oneOfType([PropTypes.string, component]);
@@ -39,6 +50,7 @@ export default {
   routerMatch,
   color,
   digest,
+  post,
   component,
   tag,
   ...PropTypes

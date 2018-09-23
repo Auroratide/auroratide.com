@@ -4,6 +4,7 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
+import PostItem from './PostItem';
 
 class PostsListPage extends React.Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class PostsListPage extends React.Component {
     return <DocumentTitle title='Posts'>
       <Container>
         <ContentArea>
-          {this.props.postsStore.getPostsList().map(post => <p key={post.id}>{post.title}</p>)}
+          {this.props.postsStore.getPostsList().map(post => <PostItem post={post} key={post.id} />)}
         </ContentArea>
       </Container>
     </DocumentTitle>;
