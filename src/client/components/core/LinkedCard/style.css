@@ -1,0 +1,67 @@
+@import "theme";
+
+:root {
+  --circle-width: 3.5rem;
+  --circle-width-large: 6.5rem;
+}
+
+a.linked-card {
+  @apply --palette-swap-border-color;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--palette-off-black);
+  border-left-width: 0;
+  border-left-style: solid;
+  transition: var(--transition-short) border-left-width, var(--transition-short) width;
+}
+
+a.linked-card:last-child {
+  margin-bottom: 0;
+}
+
+a.linked-card:hover {
+  border-left-width: 0.5rem;
+  width: calc(100% + 0.5rem);
+}
+
+.card {
+  background: var(--palette-white);
+  padding: 0.25rem;
+  border-top-right-radius: calc(var(--circle-width) / 2);
+}
+
+.card .icon {
+  font-size: calc(var(--circle-width) / 2.25);
+  float: right;
+}
+
+.card .content {
+  padding: 0.25rem;
+}
+
+.card .title {
+  @apply --typography-responsive-lg;
+
+  margin-bottom: 0.5rem;
+}
+
+@media (--breakpoint-lg) {
+  a.linked-card {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background: var(--palette-white);
+    border-top-right-radius: calc(var(--circle-width-large) / 2);
+  }
+
+  .card .content {
+    padding: 0.75rem calc(var(--circle-width-large) + 1rem) 0.75rem 0.75rem;
+  }
+
+  .card .icon {
+    font-size: calc(var(--circle-width-large) / 2.25);
+  }
+}
