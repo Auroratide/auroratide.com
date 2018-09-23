@@ -18,9 +18,9 @@ const LinkedCard = ({ to, icon, color, title, children }) =>
   </Link>;
 
 LinkedCard.propTypes = {
-  to: PropTypes.string,
-  icon: PropTypes.string,
-  color: PropTypes.string,
+  to: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.color.isRequired,
   title: PropTypes.string,
   children: PropTypes.node
 };

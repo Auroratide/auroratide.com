@@ -1,4 +1,5 @@
 import zaha, { is } from 'zaha';
+import Colors from 'Client/config/colors';
 
 const Base =  zaha({
   id: is.string(),
@@ -6,7 +7,7 @@ const Base =  zaha({
   category: is.string(),
   summary: is.string(),
   icon: is.string(),
-  color: is.string(),
+  color: is.oneOf(Colors.list()),
   published_at: is.datestring(),
   content: is.object()
 });

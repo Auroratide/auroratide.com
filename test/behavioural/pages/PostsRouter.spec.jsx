@@ -18,6 +18,7 @@ describe('PostsRouter Behaviour', () => {
       const post = new PostDataBuilder()
         .withId(id)
         .withTitle('The Title')
+        .withIcon('bars')
         .build();
   
       http
@@ -42,12 +43,14 @@ describe('PostsRouter Behaviour', () => {
         .withId('newer')
         .withTitle('Newer Post')
         .withPublished_at('2018-09-20T00:00:00Z')
+        .withIcon('bars')
         .build();
 
       const older = new PostDataBuilder()
         .withId('older')
         .withTitle('Older Post')
         .withPublished_at('2018-09-19T00:00:00Z')
+        .withIcon('bars')
         .build();
   
       http
