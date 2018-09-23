@@ -1,10 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const mkdirp = require('mkdirp');
-
-const getListOfPostFiles = (path) => fs.readdirSync(path);
-
-const parsePost = (path) => JSON.parse(fs.readFileSync(path, 'utf-8')).post;
+const fs = require('../fs');
 
 const sortByPublishedAt = (postsList) => postsList.sort((lhs, rhs) => {
   const lhsDate = new Date(lhs.published_at).getTime();
@@ -12,23 +6,14 @@ const sortByPublishedAt = (postsList) => postsList.sort((lhs, rhs) => {
   return rhsDate - lhsDate;
 });
 
-const ensureFolderExists = (folder) => mkdirp.sync(folder);
-
-const savePost = (publicPath, post) => fs.writeFileSync(path.join(publicPath, `${post.id}.json`), JSON.stringify(post));
-
 const stripOffContent = posts => posts.map(post => {
   const { content, ...rest } = post; // eslint-disable-line
   return rest;
 });
 
-const savePostsList = (publicPath, posts) => fs.writeFileSync(path.join(publicPath, 'index.json'), JSON.stringify({ posts }));
-
-module.exports = (postsPath, publicPath) => {
-  const postFiles = getListOfPostFiles(postsPath);
-  const posts = postFiles.map(file => parsePost(path.join(postsPath, file)));
+module.exports = async (postsPath, publicPath) => {
+  const posts = await fs.parseAllInDir(postsPath).then(raw => raw.map(r => r.post));
   sortByPublishedAt(posts);
-  ensureFolderExists(publicPath);
-  posts.forEach(post => savePost(publicPath, post));
-
-  savePostsList(publicPath, stripOffContent(posts));
+  await fs.saveAsJson(publicPath, 'index', { posts: stripOffContent(posts) });
+  await Promise.all(posts.map(async post => await fs.saveAsJson(publicPath, post.id, post)));
 };
