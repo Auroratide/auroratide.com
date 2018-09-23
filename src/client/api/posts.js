@@ -14,3 +14,7 @@ const map = raw => ( {
 export const get = (id) => req.get(`/posts/${id}.json`)
   .then(res => res.data)
   .then(map);
+
+export const getAll = () => req.get('/posts/index.json')
+  .then(res => res.data)
+  .then(data => data.posts.map(map));
