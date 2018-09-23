@@ -12,7 +12,7 @@ describe('Build Posts Functional', () => {
   let newer;
   let older;
 
-  beforeEach(done => {
+  beforeEach(() => {
     newer = new PostDataBuilder()
       .withId('newer-id')
       .withPublished_at('2018-05-27T00:00:00Z')
@@ -23,11 +23,10 @@ describe('Build Posts Functional', () => {
       .withPublished_at('2018-05-26T00:00:00Z')
       .build();
 
-    mkdirp(TMP_DIR, () => {
-      fs.writeFileSync(path.join(TMP_DIR, 'newer.json'), JSON.stringify({ post: newer }));
-      fs.writeFileSync(path.join(TMP_DIR, 'older.json'), JSON.stringify({ post: older }));
-      done();
-    });
+    mkdirp.sync(path.join(TMP_DIR, 'newer'));
+    mkdirp.sync(path.join(TMP_DIR, 'older'));
+    fs.writeFileSync(path.join(TMP_DIR, 'newer', 'meta.json'), JSON.stringify({ post: newer }));
+    fs.writeFileSync(path.join(TMP_DIR, 'older', 'meta.json'), JSON.stringify({ post: older }));
   });
   
   it('should write the posts into a single array in the index.json file', async done => {

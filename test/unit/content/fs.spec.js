@@ -40,4 +40,26 @@ describe('fs', () => {
       expect(file).toContain('"id":"3"');
     });
   });
+
+  describe('parseAllInDirAsContent', () => {
+    beforeEach(done => {
+      rimraf.sync(DIR);
+
+      mkdirp(DIR, () => {
+        mkdirp.sync(path.join(DIR, 'file-1'));
+        mkdirp.sync(path.join(DIR, 'file-2'));
+        realFs.writeFileSync(path.join(DIR, 'file-1', 'meta.json'), JSON.stringify({ id: '1' }));
+        realFs.writeFileSync(path.join(DIR, 'file-2', 'meta.json'), JSON.stringify({ id: '2' }));
+        done();
+      });
+    });
+
+    it('should parse each file in the directory as Json', async () => {
+      const objects = await fs.parseAllInDirAsContent(DIR);
+
+      expect(objects).toHaveLength(2);
+      expect(objects.map(o => o.id)).toContain('1');
+      expect(objects.map(o => o.id)).toContain('2');
+    });
+  });
 });

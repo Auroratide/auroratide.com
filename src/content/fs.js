@@ -24,7 +24,20 @@ const saveAsJson = (dir, name, obj) => {
   });
 };
 
+const parseAllInDirAsContent = dir => {
+  return new Promise((resolve, reject) => fs.readdir(dir, (err, files) => {
+    err ? reject(err) : resolve(files);
+  })).then(files => {
+    return Promise.all(files.map(file => {
+      return new Promise((resolve, reject) => fs.readFile(path.join(dir, file, 'meta.json'), 'utf-8', (err, obj) => {
+        err ? reject(err) : resolve(JSON.parse(obj));
+      }));
+    }));
+  });
+};
+
 module.exports = {
   parseAllInDir,
-  saveAsJson
+  saveAsJson,
+  parseAllInDirAsContent
 };
