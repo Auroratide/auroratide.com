@@ -17,7 +17,7 @@ const ensureFolderExists = (folder) => mkdirp.sync(folder);
 const savePost = (publicPath, post) => fs.writeFileSync(path.join(publicPath, `${post.id}.json`), JSON.stringify(post));
 
 const stripOffContent = posts => posts.map(post => {
-  const { content, ...rest } = post;
+  const { content, ...rest } = post; // eslint-disable-line
   return rest;
 });
 
