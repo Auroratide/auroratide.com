@@ -1,0 +1,12 @@
+{
+  "post": {
+    "id": "$SLUG$",
+    "title": "",
+    "category": "",
+    "icon": "",
+    "color": "",
+    "summary": "",
+    "published_at": ""
+  },
+  "created_at": "$DATE$"
+}

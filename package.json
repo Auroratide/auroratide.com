@@ -29,7 +29,8 @@
     "test:ui:watch": "NODE_ENV=test testcafe 'chrome:emulation:device=nexus 7' test/ui/**/*.spec.js --app 'npm start' --app-init-delay 1000",
     "test:watch": "NODE_ENV=test jest test/ --watch",
     "components:create": "node scripts/components/create",
-    "digests:create": "node scripts/digests/create"
+    "digests:create": "node scripts/digests/create",
+    "posts:create": "node scripts/posts/create"
   },
   "author": "Timothy Foster",
   "license": "ISC",
