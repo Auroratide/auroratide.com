@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
+const parse = require('./md-parser');
 
 const parseAllInDir = dir => {
   return new Promise((resolve, reject) => fs.readdir(dir, (err, files) => {
@@ -31,7 +32,11 @@ const parseAllInDirAsContent = dir => {
     return Promise.all(files.map(file => {
       return new Promise((resolve, reject) => fs.readFile(path.join(dir, file, 'meta.json'), 'utf-8', (err, obj) => {
         err ? reject(err) : resolve(JSON.parse(obj));
-      }));
+      })).then(obj => {
+        return new Promise((resolve, reject) => fs.readFile(path.join(dir, file, 'content.md'), 'utf-8', (err, content) => {
+          err ? reject(err) : resolve({ content: parse(content), ...obj });
+        }));
+      });
     }));
   });
 };

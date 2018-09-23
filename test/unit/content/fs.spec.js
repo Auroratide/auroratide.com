@@ -48,8 +48,13 @@ describe('fs', () => {
       mkdirp(DIR, () => {
         mkdirp.sync(path.join(DIR, 'file-1'));
         mkdirp.sync(path.join(DIR, 'file-2'));
+
         realFs.writeFileSync(path.join(DIR, 'file-1', 'meta.json'), JSON.stringify({ id: '1' }));
         realFs.writeFileSync(path.join(DIR, 'file-2', 'meta.json'), JSON.stringify({ id: '2' }));
+
+        realFs.writeFileSync(path.join(DIR, 'file-1', 'content.md'), 'Content');
+        realFs.writeFileSync(path.join(DIR, 'file-2', 'content.md'), 'Content');
+
         done();
       });
     });
@@ -60,6 +65,14 @@ describe('fs', () => {
       expect(objects).toHaveLength(2);
       expect(objects.map(o => o.id)).toContain('1');
       expect(objects.map(o => o.id)).toContain('2');
+    });
+
+    it('should parse the content into the content field', async () => {
+      const objects = await fs.parseAllInDirAsContent(DIR);
+
+      expect(objects).toHaveLength(2);
+      expect(objects[0].content).toBeDefined();
+      expect(objects[1].content).toBeDefined();
     });
   });
 });

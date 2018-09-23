@@ -27,6 +27,8 @@ describe('Build Posts Functional', () => {
     mkdirp.sync(path.join(TMP_DIR, 'older'));
     fs.writeFileSync(path.join(TMP_DIR, 'newer', 'meta.json'), JSON.stringify(newer));
     fs.writeFileSync(path.join(TMP_DIR, 'older', 'meta.json'), JSON.stringify(older));
+    fs.writeFileSync(path.join(TMP_DIR, 'newer', 'content.md'), 'Content');
+    fs.writeFileSync(path.join(TMP_DIR, 'older', 'content.md'), 'Content');
   });
   
   it('should write the posts into a single array in the index.json file', async done => {
