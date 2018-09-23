@@ -1,10 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const mkdirp = require('mkdirp');
-
-const getListOfDigestFiles = (path) => fs.readdirSync(path);
-
-const parseDigest = (path) => JSON.parse(fs.readFileSync(path, 'utf-8')).digest;
+const fs = require('../fs');
 
 const sortByCreatedAt = (digestsList) => digestsList.sort((lhs, rhs) => {
   const lhsDate = new Date(lhs.created_at).getTime();
@@ -12,14 +6,8 @@ const sortByCreatedAt = (digestsList) => digestsList.sort((lhs, rhs) => {
   return rhsDate - lhsDate;
 });
 
-const ensureFolderExists = (folder) => mkdirp.sync(folder);
-
-const saveDigests = (path, digestsObject) => fs.writeFileSync(path, JSON.stringify(digestsObject));
-
-module.exports = (digestsPath, publicPath) => {
-  const digestFiles = getListOfDigestFiles(digestsPath);
-  const digests = digestFiles.map(file => parseDigest(path.join(digestsPath, file)));
+module.exports = async (digestsPath, publicPath) => {
+  const digests = await fs.parseAllInDir(digestsPath).then(raw => raw.map(r => r.digest));
   sortByCreatedAt(digests);
-  ensureFolderExists(publicPath);
-  saveDigests(path.join(publicPath, 'index.json'), { digests });
+  await fs.saveAsJson(publicPath, 'index', { digests });
 };

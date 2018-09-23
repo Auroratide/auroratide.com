@@ -11,7 +11,7 @@ describe('Build Digests Functional', () => {
 
   let newerDigest;
   let olderDigest;
-  
+
   beforeEach(done => {
     newerDigest = new DigestDataBuilder()
       .withCreated_at('2018-05-27T00:00:00Z')
@@ -28,12 +28,12 @@ describe('Build Digests Functional', () => {
     });
   });
   
-  it('should write the digests into a single array in the index.json file', done => {
+  it('should write the digests into a single array in the index.json file', async done => {
     const expectedObject = {
       digests: [ newerDigest, olderDigest ]
     };
 
-    build(TMP_DIR, TMP_DIR);
+    await build(TMP_DIR, TMP_DIR);
 
     fs.readFile(path.join(TMP_DIR, 'index.json'), (err, data) => {
       expect(JSON.parse(data)).toEqual(expectedObject);
