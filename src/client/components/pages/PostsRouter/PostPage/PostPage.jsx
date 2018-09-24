@@ -30,7 +30,7 @@ class PostPage extends React.Component {
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
             <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
-            <RconRenderer rcon={post.content} />
+            <RconRenderer rcon={post.content || []} />
           </ContentArea>
         </Container.article>
       </DocumentTitle>
