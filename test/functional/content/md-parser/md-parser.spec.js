@@ -20,7 +20,13 @@ describe('MD Parser', () => {
       }, ' text.']
     }, {
       c: 'p',
-      d: 'Paragraph 2'
+      d: ['This is ', {
+        c: 'em',
+        d: {
+          c: 'strong',
+          d: 'bold and italicized'
+        }
+      }, ' text.']
     } ]);
   });
 });

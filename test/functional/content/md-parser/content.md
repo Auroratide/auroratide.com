@@ -2,4 +2,4 @@
 
 This is a _sentence_ with **bold** text.
 
-Paragraph 2
+This is _**bold and italicized**_ text.
