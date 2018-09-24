@@ -24,6 +24,7 @@ a.linked-card:last-child {
 a.linked-card:hover {
   border-left-width: 0.5rem;
   width: calc(100% + 0.5rem);
+  color: initial;
 }
 
 .card {
