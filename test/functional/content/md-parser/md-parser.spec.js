@@ -28,6 +28,18 @@ describe('MD Parser', () => {
         }
       }, ' text.']
     }, {
+      c: 'blockquote',
+      d: [ {
+        c: 'p',
+        d: ['This block quote has ', {
+          c: 'strong',
+          d: 'multiple'
+        }, ' paragraphs.']
+      }, {
+        c: 'p',
+        d: 'Using the symbol to do that.'
+      } ]
+    }, {
       c: 'h2',
       d: 'Lists'
     }, {

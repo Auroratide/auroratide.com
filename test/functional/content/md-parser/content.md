@@ -4,6 +4,10 @@ This is a _sentence_ with **bold** text.
 
 This is _**bold and italicized**_ text.
 
+> This block quote has **multiple** paragraphs.
+>
+> Using the symbol to do that.
+
 ## Lists
 
 * Item 1
