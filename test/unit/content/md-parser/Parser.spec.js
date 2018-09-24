@@ -9,9 +9,9 @@ describe('Parser', () => {
 
   it('should return rcon for a single match', () => {
     const parser = new Parser('a', [ A ]);
-    expect(parser.parse()).toEqual([ {
+    expect(parser.parse()).toEqual({
       c: 'a'
-    } ]);
+    });
   });
 
   it('should return rcon for multiple matches', () => {
@@ -24,6 +24,11 @@ describe('Parser', () => {
     const c = 'a';
     const parser = new Parser('aba', [ A, B ]);
     expect(parser.parse()).toEqual([{ c }, { c }]);
+  });
+
+  it('should concatenate consecutive strings', () => {
+    const parser = new Parser('ccc', [ C ]);
+    expect(parser.parse()).toEqual('ccc');
   });
 
   class A extends Rule {
@@ -43,6 +48,16 @@ describe('Parser', () => {
 
     produce() {
       return null;
+    }
+  }
+
+  class C extends Rule {
+    constructor() {
+      super(/^c/);
+    }
+
+    produce() {
+      return 'c';
     }
   }
 });

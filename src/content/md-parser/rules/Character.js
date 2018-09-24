@@ -2,10 +2,10 @@ const Rule = require('./Rule');
 
 module.exports = class Character extends Rule {
   constructor() {
-    super(/^(.|\n|\r)/);
+    super(/^./);
   }
 
   produce() {
-    return null;
+    return this.match[0];
   }
 };

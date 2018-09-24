@@ -11,7 +11,13 @@ describe('MD Parser', () => {
       d: 'Some Heading'
     }, {
       c: 'p',
-      d: 'Paragraph 1'
+      d: ['This is a ', {
+        c: 'em',
+        d: 'sentence'
+      }, ' with ', {
+        c: 'strong',
+        d: 'bold'
+      }, ' text.']
     }, {
       c: 'p',
       d: 'Paragraph 2'

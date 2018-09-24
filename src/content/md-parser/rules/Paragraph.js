@@ -1,4 +1,10 @@
 const Rule = require('./Rule');
+const Emphasis = require('./Emphasis');
+const Strong = require('./Strong');
+const Character = require('./Character');
+const Parser = require('../Parser');
+
+const inline = [ Emphasis, Strong, Character ];
 
 module.exports = class Paragraph extends Rule {
   constructor() {
@@ -8,7 +14,7 @@ module.exports = class Paragraph extends Rule {
   produce() {
     return {
       c: 'p',
-      d: this.match[1]
+      d: new Parser(this.match[1], inline).parse()
     };
   }
 };

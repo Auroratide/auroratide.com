@@ -10,19 +10,14 @@ describe('Character rule', () => {
   describe('matches', () => {
     it('should match any character', () => {
       expect(rule.matches('$')).toBeTruthy();
-    });
-
-    it('should match whitespace', () => {
       expect(rule.matches(' ')).toBeTruthy();
-      expect(rule.matches('\t')).toBeTruthy();
-      expect(rule.matches('\n')).toBeTruthy();
-      expect(rule.matches('\r')).toBeTruthy();
     });
   });
 
   describe('produce', () => {
-    it('should return null', () => {
-      expect(rule.produce()).toBe(null);
+    it('should return the chracter', () => {
+      rule.matches('t');
+      expect(rule.produce()).toBe('t');
     });
   });
 });

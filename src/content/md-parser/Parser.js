@@ -5,7 +5,7 @@ module.exports = class Parser {
   }
 
   parse() {
-    const rcon = [];
+    let rcon = [];
 
     while(this.next.length > 0) {
       const production = this.nextToken();
@@ -13,7 +13,8 @@ module.exports = class Parser {
         rcon.push(production);
     }
 
-    return rcon;
+    rcon = this.flattenStrings(rcon);
+    return rcon.length === 1 ? rcon[0] : rcon;
   }
 
   nextToken() {
@@ -26,5 +27,17 @@ module.exports = class Parser {
     }
 
     throw new Error('Could not parse remaining text');
+  }
+
+  flattenStrings(rcon) {
+    const flattenedRcon = [];
+    rcon.forEach(elem => {
+      if(typeof elem === 'string' && flattenedRcon.length > 0 && typeof flattenedRcon[flattenedRcon.length - 1] === 'string')
+        flattenedRcon[flattenedRcon.length - 1] = flattenedRcon[flattenedRcon.length - 1] + elem;
+      else
+        flattenedRcon.push(elem);
+    });
+
+    return flattenedRcon;
   }
 };
