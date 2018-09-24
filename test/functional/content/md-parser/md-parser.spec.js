@@ -42,6 +42,15 @@ describe('MD Parser', () => {
         c: 'li',
         d: 'Item 3'
       } ]
+    }, {
+      c: 'ol',
+      d: [ {
+        c: 'li',
+        d: 'Item 1'
+      }, {
+        c: 'li',
+        d: 'Item 2'
+      } ]
     } ]);
   });
 });

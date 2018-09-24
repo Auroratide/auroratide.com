@@ -9,3 +9,6 @@ This is _**bold and italicized**_ text.
 * Item 1
 * Item 2
 * Item 3
+
+0. Item 1
+0. Item 2
