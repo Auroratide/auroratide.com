@@ -60,6 +60,15 @@ describe('MD Parser', () => {
         c: 'li',
         d: 'Item 2'
       } ]
+    }, {
+      c: 'h2',
+      d: 'Images and Links'
+    }, {
+      c: 'img',
+      p: {
+        alt: 'Text',
+        src: '/img/url.png'
+      }
     } ]);
   });
 });

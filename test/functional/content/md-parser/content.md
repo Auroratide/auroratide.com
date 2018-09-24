@@ -14,3 +14,7 @@ This is _**bold and italicized**_ text.
 
 0. Item 1
 0. Item 2
+
+## Images and Links
+
+![Text](/img/url.png)
