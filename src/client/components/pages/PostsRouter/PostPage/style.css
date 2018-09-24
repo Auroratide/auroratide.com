@@ -1,9 +1,5 @@
 @import "theme";
 
-.post-page p {
-  @apply --typography-preset-paragraph;
-}
-
 .date {
   @apply --typography-responsive-md;
   @apply --typography-preset-paragraph;

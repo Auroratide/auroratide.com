@@ -1,0 +1,22 @@
+@import "theme";
+
+.standard-typography p,
+.standard-typography ul,
+.standard-typography ol {
+  @apply --typography-responsive-md;
+  @apply --typography-preset-paragraph;
+}
+
+.standard-typography blockquote {
+  margin-left: 0;
+  padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+  border-left: 0.375rem solid var(--palette-grey);
+}
+
+.standard-typography blockquote p {
+  font-size: 1.125em;
+}
+
+.standard-typography blockquote p:last-child {
+  margin-bottom: 0;
+}
