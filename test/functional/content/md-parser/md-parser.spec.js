@@ -27,6 +27,21 @@ describe('MD Parser', () => {
           d: 'bold and italicized'
         }
       }, ' text.']
+    }, {
+      c: 'h2',
+      d: 'Lists'
+    }, {
+      c: 'ul',
+      d: [ {
+        c: 'li',
+        d: 'Item 1'
+      }, {
+        c: 'li',
+        d: 'Item 2'
+      }, {
+        c: 'li',
+        d: 'Item 3'
+      } ]
     } ]);
   });
 });
