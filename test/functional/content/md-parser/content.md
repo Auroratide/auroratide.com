@@ -8,6 +8,8 @@ This is _**bold and italicized**_ text.
 
 * Item 1
 * Item 2
+  0. SubItem 1
+  0. SubItem 2
 * Item 3
 
 0. Item 1
