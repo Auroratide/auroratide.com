@@ -69,6 +69,18 @@ describe('MD Parser', () => {
         alt: 'Text',
         src: '/img/url.png'
       }
+    }, {
+      c: 'p',
+      d: ['This paragraph has a ', {
+        c: 'strong',
+        d: {
+          c: 'Link',
+          d: 'bold link',
+          p: {
+            to: '/posts'
+          }
+        }
+      }, '!']
     } ]);
   });
 });

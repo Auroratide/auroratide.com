@@ -18,3 +18,5 @@ This is _**bold and italicized**_ text.
 ## Images and Links
 
 ![Text](/img/url.png)
+
+This paragraph has a **[bold link](/posts)**!
