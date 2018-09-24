@@ -9,7 +9,7 @@ const Base =  zaha({
   icon: is.string(),
   color: is.oneOf(Colors.list()),
   published_at: is.datestring(),
-  content: is.object()
+  content: is.array()
 });
 
 export default class PostsDataBuilder extends Base {

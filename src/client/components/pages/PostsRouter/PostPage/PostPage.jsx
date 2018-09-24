@@ -6,6 +6,7 @@ import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
 import DateDisplay from 'Client/components/core/DateDisplay';
 import PageNotFound from 'Client/components/pages/PageNotFound';
+import RconRenderer from 'Client/components/core/RconRenderer';
 import TitleArea from './TitleArea';
 import { renderIfElse } from 'Client/utils/render-if';
 
@@ -29,7 +30,7 @@ class PostPage extends React.Component {
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white>
             <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
-            <p>{JSON.stringify(post.content)}</p>
+            <RconRenderer rcon={post.content} />
           </ContentArea>
         </Container.article>
       </DocumentTitle>

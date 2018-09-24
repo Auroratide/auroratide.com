@@ -19,6 +19,17 @@ const routerMatch = PropTypes.shape({
 
 const color = PropTypes.oneOf(Colors.list());
 
+const rcon = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number,
+  PropTypes.array,
+  PropTypes.shape({
+    c: PropTypes.string,
+    d: PropTypes.any,
+    p: PropTypes.object
+  })
+]);
+
 const digest = PropTypes.shape({
   title: PropTypes.string,
   by: PropTypes.string,
@@ -38,7 +49,7 @@ const post = PropTypes.shape({
   icon: PropTypes.string,
   color: PropTypes.string,
   publishedAt: PropTypes.string,
-  content: PropTypes.object
+  content: rcon
 });
 
 const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);
@@ -49,6 +60,7 @@ export default {
   routerLocation,
   routerMatch,
   color,
+  rcon,
   digest,
   post,
   component,
