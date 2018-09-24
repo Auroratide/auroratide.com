@@ -14,7 +14,7 @@ This is _**bold and italicized**_ text.
 * Item 2
   0. SubItem 1
   0. SubItem 2
-* Item 3
+* Item 3 with **bold** text
 
 0. Item 1
 0. Item 2

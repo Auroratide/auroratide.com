@@ -9,7 +9,7 @@ const Parser = require('../Parser');
 
 class Emphasis extends Rule {
   constructor() {
-    super(/^_(.*)_/);
+    super(/^_([^_]*)_/);
     this.subrules = [ Link, Strong, Character ];
   }
 
@@ -23,7 +23,7 @@ class Emphasis extends Rule {
 
 class Strong extends Rule {
   constructor() {
-    super(/^\*\*(.*)\*\*/);
+    super(/^\*\*([^*]*)\*\*/);
     this.subrules = [ Link, Emphasis, Character ];
   }
 

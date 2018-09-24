@@ -2,7 +2,7 @@ const Rule = require('./Rule');
 
 module.exports = class InlineCode extends Rule {
   constructor() {
-    super(/^`(.*)`/);
+    super(/^`([^`]*)`/);
   }
 
   produce() {

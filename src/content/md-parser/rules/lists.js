@@ -2,6 +2,11 @@ const Rule = require('./Rule');
 const Parser = require('../Parser');
 const ListItem = require('./ListItem');
 const Ignore = require('./Ignore');
+const Character = require('./Character');
+const Emphasis = require('./Emphasis');
+const InlineCode = require('./InlineCode');
+const Link = require('./Link');
+const Strong = require('./Strong');
 
 class UnorderedList extends Rule {
   constructor() {
@@ -38,7 +43,7 @@ class NestedList extends Rule {
     return {
       c: 'li',
       d: [
-        this.match[1],
+        new Parser(this.match[1], [ Link, InlineCode, Emphasis, Strong, Character ]).parse(),
         new Parser(this.deindent(this.match[2]), [ UnorderedList, OrderedList, Ignore ]).parse()
       ]
     };

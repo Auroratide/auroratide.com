@@ -64,7 +64,10 @@ describe('MD Parser', () => {
         } ]
       }, {
         c: 'li',
-        d: 'Item 3'
+        d: ['Item 3 with ', {
+          c: 'strong',
+          d: 'bold'
+        }, ' text' ]
       } ]
     }, {
       c: 'ol',
