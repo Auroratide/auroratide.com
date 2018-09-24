@@ -37,7 +37,10 @@ describe('MD Parser', () => {
         }, ' paragraphs.']
       }, {
         c: 'p',
-        d: 'Using the symbol to do that.'
+        d: ['Using the ', {
+          c: 'code',
+          d: 'symbol'
+        }, ' to do that.' ]
       } ]
     }, {
       c: 'h2',
