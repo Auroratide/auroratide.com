@@ -11,7 +11,8 @@ import {
   faTwitter,
   faLinkedinIn,
   faGithubAlt,
-  faReact
+  faReact,
+  faMicrosoft
 } from '@fortawesome/free-brands-svg-icons';
 
 export default {
@@ -25,5 +26,6 @@ export default {
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
-  'react': faReact
+  'react': faReact,
+  'microsoft': faMicrosoft
 };
