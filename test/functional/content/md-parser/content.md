@@ -24,3 +24,9 @@ This is _**bold and italicized**_ text.
 ![Text](/img/url.png)
 
 This paragraph has a **[bold link](/posts)**!
+
+## Code Blocks
+
+```javascript
+const x = 5;
+```

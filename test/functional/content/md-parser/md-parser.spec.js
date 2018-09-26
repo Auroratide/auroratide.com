@@ -99,6 +99,15 @@ describe('MD Parser', () => {
           }
         }
       }, '!']
+    }, {
+      c: 'h2',
+      d: 'Code Blocks'
+    }, {
+      c: 'CodeBlock',
+      d: 'const x = 5;',
+      p: {
+        language: 'javascript'
+      }
     } ]);
   });
 });
