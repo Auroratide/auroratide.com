@@ -2,11 +2,13 @@
 
 :root {
   --typography-sans: "Source Sans Pro", sans-serif;
+  --typography-code: "Source Code Pro", monospace;
 
   --typography-light: 300;
   --typography-normal: 400;
   --typography-bold: 700;
 
+  --typography-sm: 0.875rem;
   --typography-md: 1rem;
   --typography-lg: 1.25rem;
   --typography-xl: 1.5rem;
