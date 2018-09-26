@@ -14,7 +14,8 @@ module.exports = {
       features: {
         'custom-properties': {
           preserve: false  // without this, css variables become global and step on each other
-        }
+        },
+        'color-mod-function': {}
       }
     })
   ]
