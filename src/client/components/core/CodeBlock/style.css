@@ -1,0 +1,9 @@
+@import "theme";
+
+:root {
+  --code-green: #008800;
+}
+
+.code-block :global(.comment) {
+  color: var(--code-green);
+}
