@@ -2,7 +2,7 @@ const Rule = require('./Rule');
 
 module.exports = class CodeBlock extends Rule {
   constructor() {
-    super(/^```([a-z]*)\r?\n((?:.|\r?\n)*)\r?\n```/);
+    super(/^```([a-z]*)\r?\n((?:(?!```).|\r?\n)*)\r?\n```/);
   }
 
   produce() {
