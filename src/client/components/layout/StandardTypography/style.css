@@ -20,3 +20,10 @@
 .standard-typography blockquote p:last-child {
   margin-bottom: 0;
 }
+
+/* :not(pre) prevents code blocks from being unintentionally styled */
+.standard-typography :not(pre) code {
+  background-color: var(--palette-off-white);
+  border-radius: 0.25rem;
+  padding: 0 0.333em;
+}

@@ -27,3 +27,8 @@ button {
 p {
   line-height: 1.5em;
 }
+
+code {
+  font-family: var(--typography-code);
+  font-size: 0.875em;
+}
