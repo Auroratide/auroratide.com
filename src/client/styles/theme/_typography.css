@@ -8,18 +8,27 @@
   --typography-normal: 400;
   --typography-bold: 700;
 
-  --typography-sm: 0.875rem;
+  --typography-sm: 0.75rem;
   --typography-md: 1rem;
   --typography-lg: 1.25rem;
   --typography-xl: 1.5rem;
   --typography-jb: 2rem;
   --typography-xj: 3rem;
 
+  --typography-lg-sm: 0.875rem;
   --typography-lg-md: 1.0625rem;
   --typography-lg-lg: 1.5rem;
   --typography-lg-xl: 2rem;
   --typography-lg-jb: 3rem;
   --typography-lg-xj: 5rem;
+
+  --typography-responsive-sm: {
+    font-size: var(--typography-sm);
+
+    @media (--breakpoint-lg) {
+      font-size: var(--typography-lg-sm);
+    }
+  }
 
   --typography-responsive-md: {
     font-size: var(--typography-md);
