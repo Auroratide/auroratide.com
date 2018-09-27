@@ -1,6 +1,7 @@
 @import "theme";
 
 :root {
+  --code-black: #000000;
   --code-blue: #0060FF;
   --code-deep-blue: #1518FF;
   --code-teal: #0080AA;
@@ -55,4 +56,40 @@
 
 .code-block :global(.function) {
   font-weight: var(--typography-bold);
+}
+
+.code-block :global(.attr-name) {
+  color: var(--code-deep-blue);
+}
+
+.code-block :global(.attr-value) {
+  color: var(--code-red);
+}
+
+.code-block :global(.doctype) {
+  color: var(--code-yellow);
+}
+
+.code-block :global(.selector) {
+  color: var(--code-teal);
+}
+
+.code-block :global(.rule) {
+  color: var(--code-blue);
+}
+
+.code-block :global(.pseudo-class) {
+  font-weight: var(--typography-bold);
+}
+
+.code-block :global(.property) {
+  color: var(--code-deep-blue);
+}
+
+.code-block :global(.tag) > :global(.tag) {
+  color: var(--code-teal);
+}
+
+.code-block :global(.tag) > :global(.punctuation) {
+  color: var(--code-black);
 }
