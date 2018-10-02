@@ -4,6 +4,7 @@ const UnorderedList = require('./rules/UnorderedList');
 const OrderedList = require('./rules/OrderedList');
 const Image = require('./rules/Image');
 const CodeBlock = require('./rules/CodeBlock');
+const InfoBlock = require('./rules/InfoBlock');
 const Blockquote = require('./rules/Blockquote');
 const Paragraph = require('./rules/Paragraph');
 const Ignore = require('./rules/Ignore');
@@ -14,6 +15,7 @@ const rules = [
   OrderedList,
   Image,
   CodeBlock,
+  InfoBlock,
   Blockquote,
   Paragraph,
   Ignore

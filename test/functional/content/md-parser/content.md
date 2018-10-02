@@ -8,6 +8,10 @@ This is _**bold and italicized**_ text.
 >
 > Using the `symbol` to do that.
 
+,,,
+Some kind of _info_ block.
+,,,
+
 ## Lists
 
 * Item 1

@@ -43,6 +43,15 @@ describe('MD Parser', () => {
         }, ' to do that.' ]
       } ]
     }, {
+      c: 'InfoBlock',
+      d: {
+        c: 'p',
+        d: ['Some kind of ', {
+          c: 'em',
+          d: 'info'
+        }, ' block.']
+      }
+    }, {
       c: 'h2',
       d: 'Lists'
     }, {
