@@ -1,9 +1,0 @@
-{
-  "id": "another-post",
-  "title": "Another Post",
-  "category": "Sample",
-  "icon": "lock",
-  "color": "aella-green",
-  "published_at": "2018-09-22T00:00:00Z",
-  "summary": "The summary is an unstyled blurb of a few sentences effectively advertising the post. This is different from my tagline approach from before, as this can give readers reason to either read or ignore the post."
-}
