@@ -9,6 +9,7 @@ import PageNotFound from 'Client/components/pages/PageNotFound';
 import RconRenderer from 'Client/components/core/RconRenderer';
 import StandardTypography from 'Client/components/layout/StandardTypography';
 import TitleArea from './TitleArea';
+import ShareButtons from './ShareButtons';
 import { renderIfElse } from 'Client/utils/render-if';
 
 import styles from './style';
@@ -29,7 +30,8 @@ class PostPage extends React.Component {
       <DocumentTitle title={post.title}>
         <Container.article className={styles['post-page']}>
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
-          <ContentArea white>
+          <ContentArea white className={styles.content}>
+            <ShareButtons post={post} />
             <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
             <StandardTypography>
               <RconRenderer rcon={post.content || []} />

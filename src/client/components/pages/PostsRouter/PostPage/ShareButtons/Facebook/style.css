@@ -1,0 +1,16 @@
+@import "theme";
+
+.facebook {
+  color: var(--palette-white);
+  background: var(--palette-facebook);
+}
+
+.facebook:active, .facebook:focus {
+  background: color-mod(var(--palette-facebook) shade(25%));
+}
+
+.facebook:hover,
+.facebook:focus,
+.facebook:active {
+  color: var(--palette-white);
+}

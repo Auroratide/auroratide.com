@@ -1,5 +1,9 @@
 @import "theme";
 
+.content {
+  position: relative;
+}
+
 .date {
   @apply --typography-responsive-md;
   @apply --typography-preset-paragraph;

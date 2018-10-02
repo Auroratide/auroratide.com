@@ -1,0 +1,22 @@
+@import "theme";
+
+.buttons {
+  @apply --typography-responsive-md;
+
+  position: absolute;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.button {
+  @apply --typography-responsive-md;
+
+  border: 0.125rem solid var(--palette-white);
+}
+
+.spacing {
+  display: inline-block;
+  margin: 0 0.5rem;
+}

@@ -1,6 +1,8 @@
 const Auroratide = {
+  BASE: 'https://auroratide.com',
   HOME: '/',
   DIGESTS: '/digests',
+  POSTS: '/posts',
   LEGAL: '/legal'
 };
 
