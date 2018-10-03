@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 (03 Oct 2018)
+
+* Added posts to the site, a way for my to write my own articles
+
 ## 1.0.0 (13 Sep 2018)
 
 * Site released to public
