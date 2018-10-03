@@ -7,7 +7,8 @@ import {
   faNewspaper,
   faPenAlt,
   faTh,
-  faFolder
+  faFolder,
+  faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -28,6 +29,7 @@ export default {
   'pen-alt': faPenAlt,
   'th': faTh,
   'folder': faFolder,
+  'pencil': faPencilAlt,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,

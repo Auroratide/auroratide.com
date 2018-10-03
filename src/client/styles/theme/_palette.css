@@ -8,6 +8,7 @@
 
   --palette-deep-blue: #001533;
   --palette-aurora-blue: #448DDD;
+  --palette-aurora-green: #41AAB7;
   --palette-fable-lavender: #9D77DD;
   --palette-eventide-black: #303038;
   --palette-autumn-red: #BE2C38;
@@ -27,6 +28,10 @@
   --palette-swap-background: {
     &.color-aurora-blue {
       background: var(--palette-aurora-blue);
+    }
+
+    &.color-aurora-green {
+      background: var(--palette-aurora-green);
     }
 
     &.color-fable-lavender {
@@ -49,6 +54,10 @@
   --palette-swap-border-color: {
     &.color-aurora-blue {
       border-color: var(--palette-aurora-blue);
+    }
+
+    &.color-aurora-green {
+      border-color: var(--palette-aurora-green);
     }
 
     &.color-fable-lavender {

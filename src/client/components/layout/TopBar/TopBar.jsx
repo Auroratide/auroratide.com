@@ -19,6 +19,7 @@ const TopBar = ({ accordionState }) =>
         <Hamburger className={styles.hamburger} onClick={accordionState.toggle} active={accordionState.expanded} />
       </div>
       <Accordion state={accordionState} className={styles['nav-links']}>
+        <NavLink name='Posts' to={Links.Auroratide.POSTS} onClick={functions.series(accordionState.collapse, scroll.toTop)} />
         <NavLink name='Digests' to={Links.Auroratide.DIGESTS} onClick={functions.series(accordionState.collapse, scroll.toTop)} />
       </Accordion>
     </Container>

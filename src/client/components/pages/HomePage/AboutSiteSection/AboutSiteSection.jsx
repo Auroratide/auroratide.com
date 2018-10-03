@@ -11,8 +11,14 @@ const AboutSiteSection = () =>
       <h1>I write about technology and storytelling.</h1>
       <div className={styles['site-section-descriptions']}>
         <SiteSectionDescription
-          to={Links.Auroratide.DIGESTS}
+          to={Links.Auroratide.POSTS}
           color={Colors.AURORA_BLUE.name}
+          icon='pencil'
+          title='Posts'
+          description="See what I have to say about software development, programming, storywriting, and much more." />
+        <SiteSectionDescription
+          to={Links.Auroratide.DIGESTS}
+          color={Colors.AURORA_GREEN.name}
           icon='newspaper'
           title='Digests'
           description="People all over the world are writing stuff. Digests are summaries of things I've read and found interesting or insightful." />
