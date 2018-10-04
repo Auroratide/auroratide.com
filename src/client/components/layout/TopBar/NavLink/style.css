@@ -1,12 +1,12 @@
 @import "theme";
 
-@mixin palette-theme .nav-link, border-right-color {
+.nav-link {
   display: flex;
   flex: 0 0 5rem;
   align-items: center;
   justify-content: flex-end;
   font-size: var(--typography-lg);
-  border-right: 0 solid;
+  border-right: 0 solid var(--palette-primary);
   padding-right: 1.5rem;
   transition:
     var(--transition-short) border-right-width,
@@ -21,10 +21,10 @@
 }
 
 @media (--breakpoint-lg) {
-  @mixin palette-theme .nav-link, border-bottom-color {
+  .nav-link {
     flex: 0 0 8rem;
     justify-content: center;
-    border-bottom: 0 solid;
+    border-bottom: 0 solid var(--palette-primary);
     padding-top: 0;
     padding-right: 0;
     transition:

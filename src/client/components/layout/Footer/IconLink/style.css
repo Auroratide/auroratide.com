@@ -5,7 +5,7 @@
   --border-thickness: 0.4rem;
 }
 
-a.icon-link {
+.icon-link {
   position: relative;
   flex: 0 0 7rem;
   padding: 1.5rem 0;
@@ -14,11 +14,11 @@ a.icon-link {
   z-index: 1;
 }
 
-a.icon-link:hover {
+.icon-link:hover {
   color: var(--palette-white);
 }
 
-a.icon-link::before {
+.icon-link::before {
   position: absolute;
   top: calc(50% - var(--circle-width) / 2);
   left: calc(50% - var(--circle-width) / 2);
@@ -32,6 +32,6 @@ a.icon-link::before {
   transition: var(--transition-short) border-width;
 }
 
-a.icon-link:hover::before {
+.icon-link:hover::before {
   border-width: var(--border-thickness / 2);
 }

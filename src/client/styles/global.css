@@ -6,11 +6,13 @@ body {
   color: var(--palette-off-black);
 }
 
-@mixin palette-theme a, color {
+a {
+  color: var(--palette-primary);
   text-decoration: none;
 }
 
-@mixin palette-theme-dark a:hover, color {
+a:hover {
+  color: var(--palette-primary-dark);
   text-decoration: none;
 }
 
