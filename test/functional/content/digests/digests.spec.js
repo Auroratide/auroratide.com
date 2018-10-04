@@ -9,28 +9,27 @@ describe('Build Digests Functional', () => {
 
   const TMP_DIR = path.join(__dirname, 'tmp');
 
-  let newerDigest;
-  let olderDigest;
+  let newer;
+  let older;
 
-  beforeEach(done => {
-    newerDigest = new DigestDataBuilder()
+  beforeEach(() => {
+    newer = new DigestDataBuilder()
       .withCreated_at('2018-05-27T00:00:00Z')
       .build();
 
-    olderDigest = new DigestDataBuilder()
+    older = new DigestDataBuilder()
       .withCreated_at('2018-05-26T00:00:00Z')
       .build();
 
-    mkdirp(TMP_DIR, () => {
-      fs.writeFileSync(path.join(TMP_DIR, 'newer.json'), JSON.stringify({ digest: newerDigest }));
-      fs.writeFileSync(path.join(TMP_DIR, 'older.json'), JSON.stringify({ digest: olderDigest }));
-      done();
-    });
+    mkdirp.sync(path.join(TMP_DIR, 'newer'));
+    mkdirp.sync(path.join(TMP_DIR, 'older'));
+    fs.writeFileSync(path.join(TMP_DIR, 'newer', 'meta.json'), JSON.stringify(newer));
+    fs.writeFileSync(path.join(TMP_DIR, 'older', 'meta.json'), JSON.stringify(older));
   });
   
   it('should write the digests into a single array in the index.json file', async done => {
     const expectedObject = {
-      digests: [ newerDigest, olderDigest ]
+      digests: [ newer, older ]
     };
 
     await build(TMP_DIR, TMP_DIR);

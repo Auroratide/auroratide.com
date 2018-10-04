@@ -1,0 +1,12 @@
+{
+  "id": "5",
+  "title": "The Secret To Better Code Reviews",
+  "by": "Thomas Abend",
+  "category": "Software Development",
+  "link": "https://medium.com/disney-streaming/the-secret-to-better-code-reviews-c14c7884b9ac",
+  "icon": "pen-alt",
+  "color": "aella-green",
+  "summary": "Developers naturally review pull requests in question-answer format. However, many of these \"questions\" require a code revision rather than a verbal answer. Pull requests can be made more productive by using questions only when an explanation from the developer is needed.",
+  "created_at": "2018-09-16T04:12:58.549Z",
+  "source": "Medium"
+}

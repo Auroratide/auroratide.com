@@ -74,5 +74,15 @@ describe('fs', () => {
       expect(objects[0].content).toBeDefined();
       expect(objects[1].content).toBeDefined();
     });
+
+    it('should not parse content if the content file is missing', async () => {
+      mkdirp.sync(path.join(DIR, 'file-3'));
+      realFs.writeFileSync(path.join(DIR, 'file-3', 'meta.json'), JSON.stringify({ id: '3' }));
+
+      const objects = await fs.parseAllInDirAsContent(DIR);
+
+      expect(objects).toHaveLength(3);
+      expect(objects[2].content).toBeUndefined();
+    });
   });
 });

@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const mkdirp = require('mkdirp');
 const { exec } = require('child_process');
 const program = require('commander');
 
@@ -20,8 +21,8 @@ if(!slug) {
 
 const ENCODING = { encoding: 'utf-8' };
 const META_PATH = path.join(__dirname, '_meta.json');
-const TEMPLATE_PATH = path.join(__dirname, 'templates', 'digest.json');
-const DIGEST_PATH = path.join('content', 'digests', `${slug}.json`);
+const TEMPLATE_PATH = path.join(__dirname, 'templates', 'meta.json');
+const DIGEST_PATH = path.join('content', 'digests', slug);
 
 if(fs.existsSync(DIGEST_PATH)) {
   console.error('ERROR: Digest with this name already exists');
@@ -40,7 +41,8 @@ const replaceNames = content => content
 
 const digestContent = replaceNames(digestTemplate);
 
-fs.writeFileSync(path.join(DIGEST_PATH), digestContent);
+mkdirp.sync(DIGEST_PATH);
+fs.writeFileSync(path.join(DIGEST_PATH, 'meta.json'), digestContent);
 
 if(!fs.existsSync(DIGEST_PATH)) {
   console.error('ERROR: Digest failed to save');
@@ -55,4 +57,4 @@ fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2));
 
 console.log(`Digest ${slug} created successfully!`);
 
-exec(`open ${DIGEST_PATH}`);
+exec(`open ${DIGEST_PATH}/meta.json`);

@@ -1,0 +1,12 @@
+{
+  "id": "6",
+  "title": "The .NET Framework is Done!",
+  "by": "Andy Watt",
+  "category": "Software Development",
+  "link": "https://medium.com/@andy.watt83/the-net-framework-is-done-8aec3bbae12d",
+  "icon": "microsoft",
+  "color": "aurora-blue",
+  "summary": "Though the original .NET Framework has been going strong for nearly 20 years, .NET Core has rapidly grown to be more of a spiritual successor than a simple non-Windows option. .NET Framework will see continued support for a long time, but new projects are looking to .NET Core as a platform of choice.",
+  "created_at": "2018-09-25T21:45:30.342Z",
+  "source": "Medium"
+}

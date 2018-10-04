@@ -3,6 +3,18 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const parse = require('./md-parser');
 
+const readdir = dir => new Promise((resolve, reject) => fs.readdir(dir, (err, data) => {
+  err ? reject(err) : resolve(data);
+}));
+
+const readFile = file => new Promise((resolve, reject) => fs.readFile(file, 'utf-8', (err, data) => {
+  err ? reject(err) : resolve(data);
+}));
+
+const exists = file => new Promise(resolve => fs.access(file, fs.constants.F_OK, err => {
+  err ? resolve(false) : resolve(true);
+}));
+
 const parseAllInDir = dir => {
   return new Promise((resolve, reject) => fs.readdir(dir, (err, files) => {
     err ? reject(err) : resolve(files);
@@ -25,20 +37,16 @@ const saveAsJson = (dir, name, obj) => {
   });
 };
 
-const parseAllInDirAsContent = dir => {
-  return new Promise((resolve, reject) => fs.readdir(dir, (err, files) => {
-    err ? reject(err) : resolve(files);
-  })).then(files => {
-    return Promise.all(files.map(file => {
-      return new Promise((resolve, reject) => fs.readFile(path.join(dir, file, 'meta.json'), 'utf-8', (err, obj) => {
-        err ? reject(err) : resolve(JSON.parse(obj));
-      })).then(obj => {
-        return new Promise((resolve, reject) => fs.readFile(path.join(dir, file, 'content.md'), 'utf-8', (err, content) => {
-          err ? reject(err) : resolve({ content: parse(content), ...obj });
-        }));
-      });
-    }));
-  });
+const parseAllInDirAsContent = async dir => {
+  const entries = await readdir(dir);
+  return Promise.all(entries.map(async entry => {
+    const obj = JSON.parse(await readFile(path.join(dir, entry, 'meta.json')));
+    const contentPath = path.join(dir, entry, 'content.md');
+    if(await exists(contentPath))
+      return { content: parse(await readFile(contentPath)), ...obj };
+    else
+      return obj;
+  }));
 };
 
 module.exports = {
