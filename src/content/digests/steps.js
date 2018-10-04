@@ -7,7 +7,7 @@ const sortByCreatedAt = (digestsList) => digestsList.sort((lhs, rhs) => {
 });
 
 module.exports = async (digestsPath, publicPath) => {
-  const digests = await fs.parseAllInDirAsContent(digestsPath);
+  const digests = await fs.parseAllInDir(digestsPath);
   sortByCreatedAt(digests);
   await fs.saveAsJson(publicPath, 'index', { digests });
 };

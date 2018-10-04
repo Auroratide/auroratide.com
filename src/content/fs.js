@@ -15,18 +15,6 @@ const exists = file => new Promise(resolve => fs.access(file, fs.constants.F_OK,
   err ? resolve(false) : resolve(true);
 }));
 
-const parseAllInDir = dir => {
-  return new Promise((resolve, reject) => fs.readdir(dir, (err, files) => {
-    err ? reject(err) : resolve(files);
-  })).then(files => {
-    return Promise.all(files.map(file => {
-      return new Promise((resolve, reject) => fs.readFile(path.join(dir, file), 'utf-8', (err, obj) => {
-        err ? reject(err) : resolve(JSON.parse(obj));
-      }));
-    }));
-  });
-};
-
 const saveAsJson = (dir, name, obj) => {
   return new Promise((resolve, reject) => mkdirp(dir, err => {
     err ? reject(err) : resolve();
@@ -37,7 +25,7 @@ const saveAsJson = (dir, name, obj) => {
   });
 };
 
-const parseAllInDirAsContent = async dir => {
+const parseAllInDir = async dir => {
   const entries = await readdir(dir);
   return Promise.all(entries.map(async entry => {
     const obj = JSON.parse(await readFile(path.join(dir, entry, 'meta.json')));
@@ -50,7 +38,6 @@ const parseAllInDirAsContent = async dir => {
 };
 
 module.exports = {
-  parseAllInDir,
   saveAsJson,
-  parseAllInDirAsContent
+  parseAllInDir
 };

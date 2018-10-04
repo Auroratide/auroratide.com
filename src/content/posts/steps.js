@@ -12,7 +12,7 @@ const stripOffContent = posts => posts.map(post => {
 });
 
 module.exports = async (postsPath, publicPath) => {
-  const posts = await fs.parseAllInDirAsContent(postsPath);
+  const posts = await fs.parseAllInDir(postsPath);
   sortByPublishedAt(posts);
   await fs.saveAsJson(publicPath, 'index', { posts: stripOffContent(posts) });
   await Promise.all(posts.map(async post => await fs.saveAsJson(publicPath, post.id, post)));

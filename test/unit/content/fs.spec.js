@@ -17,16 +17,6 @@ describe('fs', () => {
 
   afterEach(done => rimraf(DIR, done));
 
-  describe('parseAllInDir', () => {
-    it('should parse each file in the directory as Json', async () => {
-      const objects = await fs.parseAllInDir(DIR);
-
-      expect(objects).toHaveLength(2);
-      expect(objects.map(o => o.id)).toContain('1');
-      expect(objects.map(o => o.id)).toContain('2');
-    });
-  });
-
   describe('saveAsJson', () => {
     const TMP = path.join(__dirname, 'tmp');
 
@@ -41,7 +31,7 @@ describe('fs', () => {
     });
   });
 
-  describe('parseAllInDirAsContent', () => {
+  describe('parseAllInDir', () => {
     beforeEach(done => {
       rimraf.sync(DIR);
 
@@ -60,7 +50,7 @@ describe('fs', () => {
     });
 
     it('should parse each file in the directory as Json', async () => {
-      const objects = await fs.parseAllInDirAsContent(DIR);
+      const objects = await fs.parseAllInDir(DIR);
 
       expect(objects).toHaveLength(2);
       expect(objects.map(o => o.id)).toContain('1');
@@ -68,7 +58,7 @@ describe('fs', () => {
     });
 
     it('should parse the content into the content field', async () => {
-      const objects = await fs.parseAllInDirAsContent(DIR);
+      const objects = await fs.parseAllInDir(DIR);
 
       expect(objects).toHaveLength(2);
       expect(objects[0].content).toBeDefined();
@@ -79,7 +69,7 @@ describe('fs', () => {
       mkdirp.sync(path.join(DIR, 'file-3'));
       realFs.writeFileSync(path.join(DIR, 'file-3', 'meta.json'), JSON.stringify({ id: '3' }));
 
-      const objects = await fs.parseAllInDirAsContent(DIR);
+      const objects = await fs.parseAllInDir(DIR);
 
       expect(objects).toHaveLength(3);
       expect(objects[2].content).toBeUndefined();
