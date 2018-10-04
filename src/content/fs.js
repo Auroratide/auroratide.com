@@ -15,14 +15,17 @@ const exists = file => new Promise(resolve => fs.access(file, fs.constants.F_OK,
   err ? resolve(false) : resolve(true);
 }));
 
-const saveAsJson = (dir, name, obj) => {
-  return new Promise((resolve, reject) => mkdirp(dir, err => {
-    err ? reject(err) : resolve();
-  })).then(() => {
-    return new Promise((resolve, reject) => fs.writeFile(path.join(dir, `${name}.json`), JSON.stringify(obj), err => {
-      err ? reject(err) : resolve();
-    }));
-  });
+const ensureDirExists = dir => new Promise((resolve, reject) => mkdirp(dir, err => {
+  err ? reject(err) : resolve();
+}));
+
+const writeFile = (file, data) => new Promise((resolve, reject) => fs.writeFile(file, data, err => {
+  err ? reject(err) : resolve();
+}));
+
+const saveAsJson = async (dir, name, obj) => {
+  await ensureDirExists(dir);
+  return writeFile(path.join(dir, `${name}.json`), JSON.stringify(obj));
 };
 
 const parseAllInDir = async dir => {
