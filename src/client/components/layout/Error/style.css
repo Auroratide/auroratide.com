@@ -12,14 +12,14 @@
 }
 
 .subtitle {
-  @apply --typography-responsive-xl;
+  @mixin typography-responsive xl;
 
   opacity: 0.5;
   margin-bottom: 2rem;
 }
 
 .content {
-  @apply --typography-responsive-md;
+  @mixin typography-responsive md;
 
   font-weight: var(--typography-light);
   max-width: 44rem;

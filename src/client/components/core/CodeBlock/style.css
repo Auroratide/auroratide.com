@@ -12,7 +12,7 @@
 }
 
 .code-block {
-  @apply --typography-responsive-sm;
+  @mixin typography-responsive sm;
 
   display: block;
   border: 0.0625rem solid color-mod(var(--palette-primary) alpha(25%));

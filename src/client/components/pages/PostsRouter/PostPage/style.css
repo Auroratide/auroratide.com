@@ -5,8 +5,8 @@
 }
 
 .date {
-  @apply --typography-responsive-md;
-  @apply --typography-preset-paragraph;
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
 
   display: block;
   margin-bottom: 1rem;

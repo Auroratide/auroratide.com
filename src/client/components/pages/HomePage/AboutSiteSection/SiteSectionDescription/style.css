@@ -49,8 +49,8 @@ a.container:hover {
 }
 
 .site-section-description p {
-  @apply --typography-responsive-md;
-  @apply --typography-preset-paragraph;
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
 
   margin-bottom: 0;
   line-height: 1.5em;

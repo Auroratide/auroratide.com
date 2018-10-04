@@ -6,10 +6,10 @@
 }
 
 .about-me-section h2 {
-  @apply --typography-responsive-jb;
+  @mixin typography-responsive jb;
 }
 
 .about-me-section p {
-  @apply --typography-responsive-md;
-  @apply --typography-preset-paragraph;
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
 }

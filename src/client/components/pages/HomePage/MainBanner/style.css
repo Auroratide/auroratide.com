@@ -21,7 +21,7 @@
 }
 
 .main-banner .text h1 {
-  @apply --typography-responsive-xj;
+  @mixin typography-responsive xj;
 
   letter-spacing: 0.125rem;
   margin-bottom: 1rem;
@@ -29,7 +29,7 @@
 }
 
 .main-banner .text .subtitle {
-  @apply --typography-responsive-xl;
+  @mixin typography-responsive xl;
 
   display: flex;
   justify-content: space-between;
@@ -47,7 +47,7 @@
 }
 
 .main-banner .text .link {
-  @apply --typography-responsive-xl;
+  @mixin typography-responsive xl;
 }
 
 .main-banner .text .link:hover {

@@ -43,7 +43,7 @@ a.linked-card:hover {
 }
 
 .card .title {
-  @apply --typography-responsive-lg;
+  @mixin typography-responsive lg;
 
   margin-bottom: 0.5rem;
 }

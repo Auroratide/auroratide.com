@@ -5,7 +5,7 @@
 }
 
 .about-site-section h1 {
-  @apply --typography-responsive-jb;
+  @mixin typography-responsive jb;
 
   text-align: center;
   color: var(--palette-dark-grey);

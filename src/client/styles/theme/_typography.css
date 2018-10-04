@@ -21,63 +21,23 @@
   --typography-lg-xl: 2rem;
   --typography-lg-jb: 3rem;
   --typography-lg-xj: 5rem;
+}
 
-  --typography-responsive-sm: {
-    font-size: var(--typography-sm);
+@define-mixin typography-responsive $size {
+  font-size: var(--typography-$size);
 
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-sm);
-    }
+  @media (--breakpoint-lg) {
+    font-size: var(--typography-lg-$size);
   }
+}
 
-  --typography-responsive-md: {
-    font-size: var(--typography-md);
+@define-mixin typography-preset-paragraph {
+  font-weight: var(--typography-light);
+  text-align: justify;
+  line-height: 1.72em;
+  margin-bottom: 1.5em;
 
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-md);
-    }
-  }
-
-  --typography-responsive-lg: {
-    font-size: var(--typography-lg);
-
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-lg);
-    }
-  }
-
-  --typography-responsive-xl: {
-    font-size: var(--typography-xl);
-
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-xl);
-    }
-  }
-
-  --typography-responsive-jb: {
-    font-size: var(--typography-jb);
-
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-jb);
-    }
-  }
-
-  --typography-responsive-xj: {
-    font-size: var(--typography-xj);
-
-    @media (--breakpoint-lg) {
-      font-size: var(--typography-lg-xj);
-    }
-  }
-
-  --typography-preset-paragraph: {
-    font-weight: var(--typography-light);
-    text-align: justify;
-    line-height: 1.72em;
-    margin-bottom: 1.5em;
-
-    @media (--breakpoint-lg) {
-      text-align: left;
-    }
+  @media (--breakpoint-lg) {
+    text-align: left;
   }
 }

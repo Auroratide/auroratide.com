@@ -11,8 +11,8 @@
 }
 
 .summary {
-  @apply --typography-responsive-md;
-  @apply --typography-preset-paragraph;
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
 
   margin-bottom: 0.75rem;
 }

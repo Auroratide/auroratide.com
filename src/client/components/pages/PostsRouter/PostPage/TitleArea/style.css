@@ -12,7 +12,7 @@
 }
 
 .title {
-  @apply --typography-responsive-jb;
+  @mixin typography-responsive jb;
 
   color: var(--palette-white);
   text-align: center;

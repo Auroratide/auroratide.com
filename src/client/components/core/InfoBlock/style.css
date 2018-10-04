@@ -10,7 +10,7 @@
 }
 
 .info-block.override p {
-  @apply --typography-responsive-sm;
+  @mixin typography-responsive sm;
 
   margin-bottom: 0.75rem;
 }

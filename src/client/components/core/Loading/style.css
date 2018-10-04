@@ -20,7 +20,7 @@
 }
 
 .icon {
-  @apply --typography-responsive-xj;
+  @mixin typography-responsive xj;
 
   animation: spin 1280ms;
   animation-timing-function: ease-in-out;
@@ -29,7 +29,7 @@
 }
 
 .text {
-  @apply --typography-responsive-lg;
+  @mixin typography-responsive lg;
 
   font-style: italic;
 }

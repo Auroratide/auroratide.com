@@ -3,8 +3,8 @@
 .standard-typography p,
 .standard-typography ul,
 .standard-typography ol {
-  @apply --typography-responsive-md;
-  @apply --typography-preset-paragraph;
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
 }
 
 .standard-typography blockquote {

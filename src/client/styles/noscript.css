@@ -12,14 +12,14 @@ noscript :global(.title) {
 }
 
 noscript :global(.subtitle) {
-  @apply --typography-responsive-xl;
+  @mixin typography-responsive xl;
 
   opacity: 0.5;
   margin-bottom: 2rem;
 }
 
 noscript :global(.text) {
-  @apply --typography-responsive-md;
+  @mixin typography-responsive md;
 
   font-weight: var(--typography-light);
   max-width: 44rem;

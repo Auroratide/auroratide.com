@@ -5,5 +5,5 @@
 }
 
 .button {
-  @apply --typography-responsive-lg;
+  @mixin typography-responsive lg;
 }
