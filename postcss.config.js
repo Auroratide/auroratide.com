@@ -9,7 +9,6 @@ module.exports = {
       ]
     }),
     require('postcss-mixins'),
-    require('postcss-apply'),
     require('postcss-preset-env')({
       stage: 0,
       features: {
