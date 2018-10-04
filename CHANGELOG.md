@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 (04 Oct 2018)
+
+* Added loading indicator to digests page to show when digests are coming from the API
+* Site theme now changes color according to which section of the site the viewer is on
+
 ## 1.1.0 (03 Oct 2018)
 
 * Added posts to the site, a way for my to write my own articles
