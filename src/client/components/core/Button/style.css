@@ -28,11 +28,9 @@
   opacity: 1;
 }
 
-.button.primary {
+@mixin palette-theme .button.primary, background {
   color: var(--palette-white);
-  background: var(--palette-primary);
 }
 
-.button.primary:active, .button.primary:focus {
-  background: var(--palette-primary-dark);
-}
+@mixin palette-theme-dark .button.primary:active, background;
+@mixin palette-theme-dark .button.primary:focus, background;

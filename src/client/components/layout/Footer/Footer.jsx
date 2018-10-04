@@ -8,7 +8,7 @@ import License from './License';
 import styles from './style';
 
 const Footer = () =>
-  <footer>
+  <footer className={styles.footer}>
     <Container>
       <div className={styles['icon-links']}>
         <IconLink icon='linked-in' className={styles['linked-in']} to={Links.Social.LINKED_IN} />
