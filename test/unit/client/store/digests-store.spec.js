@@ -2,11 +2,13 @@ import * as api from 'Client/api/digests';
 import DigestsStore from 'Client/store/digests-store';
 
 describe('DigestsStore', () => {
+
+  afterEach(() => jest.restoreAllMocks());
+
   describe('refreshDigests', () => {
     it('should update the digests list with the digests from the api', async () => {
       const digests = ['D1', 'D2'];
-      api.getAll = jest.fn();
-      api.getAll.mockResolvedValue(digests);
+      jest.spyOn(api, 'getAll').mockResolvedValue(digests);
 
       const store = new DigestsStore();
       await store.refreshDigests();
@@ -16,8 +18,7 @@ describe('DigestsStore', () => {
 
     it('should not update the list of digests when the api fails', async () => {
       const digests = ['D1', 'D2'];
-      api.getAll = jest.fn();
-      api.getAll.mockRejectedValue();
+      jest.spyOn(api, 'getAll').mockRejectedValue();
 
       const store = new DigestsStore();
       store.digests = digests;
