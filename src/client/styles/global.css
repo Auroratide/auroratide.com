@@ -6,13 +6,18 @@ body {
   color: var(--palette-off-black);
 }
 
-@mixin palette-theme a, color {
+a {
   text-decoration: none;
 }
 
-@mixin palette-theme-dark a:hover, color {
+a:hover {
   text-decoration: none;
 }
+
+@mixin palette-theme a[class=""], color;
+@mixin palette-theme a:not([class]), color;
+@mixin palette-theme-dark a[class=""]:hover, color;
+@mixin palette-theme-dark a:not([class]):hover, color;
 
 button {
   background: none;
