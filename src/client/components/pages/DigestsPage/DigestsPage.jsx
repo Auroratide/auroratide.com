@@ -5,6 +5,8 @@ import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import DigestItem from './DigestItem';
 import DigestsStore from 'Client/store/digests-store';
+import Loading from 'Client/components/core/Loading';
+import { renderIfElse } from 'Client/utils/render-if';
 
 class DigestsPage extends React.Component {
 
@@ -14,13 +16,18 @@ class DigestsPage extends React.Component {
 
   render() {
     const { digestsStore } = this.props;
-    return <DocumentTitle title='Digests'>
-      <Container>
-        <ContentArea>
-          {digestsStore.digests.map(digest => <DigestItem digest={digest} key={digest.id} />)}
-        </ContentArea>
-      </Container>
-    </DocumentTitle>;
+    const shouldShowLoading = digestsStore.isEmpty && digestsStore.isRefreshing;
+    return renderIfElse(shouldShowLoading, () =>
+      <Loading text='Fetching digests...' />
+    ).elseRender(() =>
+      <DocumentTitle title='Digests'>
+        <Container>
+          <ContentArea>
+            {digestsStore.digests.map(digest => <DigestItem digest={digest} key={digest.id} />)}
+          </ContentArea>
+        </Container>
+      </DocumentTitle>
+    );
   }
 
 }

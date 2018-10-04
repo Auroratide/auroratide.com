@@ -5,6 +5,7 @@ import DigestDataBuilder from 'Test/utils/builders/DigestDataBuilder';
 import DigestBuilder from 'Test/utils/builders/DigestBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import Colors from 'Client/config/colors';
+import Loading from 'Client/components/core/Loading';
 
 import DigestItem from 'Client/components/pages/DigestsPage/DigestItem';
 import DigestsPage from 'Client/components/pages/DigestsPage';
@@ -31,7 +32,7 @@ describe('DigestsPage Behaviour', () => {
 
   afterEach(() => jest.restoreAllMocks());
 
-  it('should render the digests from the API', async () => {
+  it('should render the digests from the API and show a loading indicator while waiting', async () => {
     const expectedDigest = new DigestBuilder()
       .withId('1')
       .withTitle('The Title')
@@ -40,9 +41,12 @@ describe('DigestsPage Behaviour', () => {
       .build();
 
     const wrapper = page();
+    expect(wrapper.find(Loading).exists()).toBe(true);
+
     await allActionsToComplete();
     wrapper.update();
 
+    expect(wrapper.find(Loading).exists()).toBe(false);
     expect(wrapper.find(DigestItem).at(0).props().digest).toEqual(expectedDigest);
   });
 
