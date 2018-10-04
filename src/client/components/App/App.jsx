@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'Client/utils/prop-types';
 import { Switch, Route } from 'react-router-dom';
 import ErrorBoundary from 'Client/components/core/ErrorBoundary';
 import DocumentTitle from 'Client/components/layout/DocumentTitle';
+import Links from 'Client/config/links';
+import Colors from 'Client/config/colors';
 
 import Page from 'Client/components/layout/Page';
 import HomePage from 'Client/components/pages/HomePage';
@@ -11,12 +14,22 @@ import LegalPage from 'Client/components/pages/LegalPage';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import GenericErrorPage from 'Client/components/pages/GenericErrorPage';
 
-const App = () =>
+const getTheme = pathname => {
+  if(pathname && pathname.indexOf(Links.Auroratide.POSTS) === 0) {
+    return Colors.AURORA_BLUE.name;
+  } else if(pathname && pathname.indexOf(Links.Auroratide.DIGESTS) === 0) {
+    return Colors.AURORA_GREEN.name;
+  } else {
+    return Colors.AURORA_BLUE.name;
+  }
+};
+
+const App = ({ location }) =>
   <ErrorBoundary fallback={GenericErrorPage}>
     <DocumentTitle>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Page>
+        <Page theme={location && getTheme(location.pathname)}>
           <ErrorBoundary fallback={GenericErrorPage}>
             <Switch>
               <Route path='/posts' component={PostsRouter} />
@@ -29,5 +42,9 @@ const App = () =>
       </Switch>
     </DocumentTitle>
   </ErrorBoundary>;
+
+App.propTypes = {
+  location: PropTypes.routerLocation
+};
 
 export default App;

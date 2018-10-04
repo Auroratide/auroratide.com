@@ -1,42 +1,42 @@
 @import "theme";
 
-footer {
+footer.footer {
   color: var(--palette-off-white);
   background: var(--palette-secondary);
   padding: 3rem 0;
   text-align: center;
 }
 
-footer a {
+footer.footer .nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+footer.footer .nav-links a {
   color: var(--palette-grey);
 }
 
-footer a:hover {
+footer.footer .nav-links a:hover {
   color: var(--palette-white);
 }
 
-footer .nav-links {
+footer.footer .icon-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-footer .icon-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-footer .icon-links .linked-in::before {
+footer.footer .icon-links .linked-in::before {
   background: var(--palette-linked-in);
 }
 
-footer .icon-links .twitter::before {
+footer.footer .icon-links .twitter::before {
   background: var(--palette-twitter);
 }
 
-footer .icon-links .github::before {
+footer.footer .icon-links .github::before {
   background: var(--palette-github);
 }

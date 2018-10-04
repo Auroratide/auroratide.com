@@ -17,7 +17,7 @@
   color: var(--palette-white);
 }
 
-.hamburger::before {
+@mixin palette-theme .hamburger::before, background {
   position: absolute;
   top: calc(50% - var(--hamburger-circle-width) / 2);
   left: calc(50% - var(--hamburger-circle-width) / 2);
@@ -27,7 +27,6 @@
   border-radius: 50%;
   content: "";
   display: block;
-  background: var(--palette-primary);
   z-index: -1;
   transition: var(--transition-short) border-width;
 }

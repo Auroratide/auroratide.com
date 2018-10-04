@@ -1,8 +1,7 @@
 @import "theme";
 
-.logo {
+@mixin palette-theme .logo, background {
   overflow: visible;
-  background: var(--palette-primary);
   border-radius: 50%;
 }
 

@@ -14,16 +14,45 @@
   --palette-autumn-red: #BE2C38;
   --palette-aella-green: #5EBF36;
 
-  --palette-aurora-blue-dark: #336AA5;
-
   --palette-primary: var(--palette-aurora-blue);
-  --palette-primary-dark: var(--palette-aurora-blue-dark);
   --palette-secondary: var(--palette-deep-blue);
 
   --palette-github: #333333;
   --palette-linked-in: #0077B5;
   --palette-twitter: #29AAE1;
   --palette-facebook: #3B5998;
+}
+
+@define-mixin palette-theme $selector, $prop {
+  $selector {
+    $(prop): var(--palette-primary);
+
+    @mixin-content;
+  }
+
+  :global(.theme-aurora-blue) $selector {
+    $(prop): var(--palette-aurora-blue);
+  }
+
+  :global(.theme-aurora-green) $selector {
+    $(prop): var(--palette-aurora-green);
+  }
+}
+
+@define-mixin palette-theme-dark $selector, $prop {
+  $selector {
+    $(prop): color-mod(var(--palette-primary) shade(25%));
+
+    @mixin-content;
+  }
+
+  :global(.theme-aurora-blue) $selector {
+    $(prop): color-mod(var(--palette-aurora-blue) shade(25%));
+  }
+
+  :global(.theme-aurora-green) $selector {
+    $(prop): color-mod(var(--palette-aurora-green) shade(25%));
+  }
 }
 
 @define-mixin palette-color-swap $prop {
