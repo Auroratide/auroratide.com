@@ -1,7 +1,7 @@
 @import "theme";
 
 .circled-icon {
-  @apply --palette-swap-background;
+  @mixin palette-color-swap background;
 
   width: 2.25em;
   height: 2.25em;

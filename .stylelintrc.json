@@ -27,6 +27,9 @@
     "string-quotes": "double",
     "selector-pseudo-class-no-unknown": [ true, {
       "ignorePseudoClasses": ["global"]
+    } ],
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": ["define-mixin", "mixin"]
     } ]
   }
 }

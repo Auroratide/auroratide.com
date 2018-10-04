@@ -8,6 +8,7 @@ module.exports = {
         path.resolve(__dirname, 'src', 'client', 'components')
       ]
     }),
+    require('postcss-mixins'),
     require('postcss-apply'),
     require('postcss-preset-env')({
       stage: 0,

@@ -6,7 +6,7 @@
 }
 
 a.linked-card {
-  @apply --palette-swap-border-color;
+  @mixin palette-color-swap border-color;
 
   display: block;
   width: 100%;
