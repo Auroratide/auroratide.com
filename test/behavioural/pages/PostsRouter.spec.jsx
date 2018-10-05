@@ -3,6 +3,7 @@ import { withInitialRoute } from 'Test/enzyme';
 import http from 'Test/utils/mock-http';
 import PostDataBuilder from 'Test/utils/builders/PostDataBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
+import Loading from 'Client/components/core/Loading';
 
 import PostsRouter from 'Client/components/pages/PostsRouter';
 
@@ -62,9 +63,12 @@ describe('PostsRouter Behaviour', () => {
 
     it('should render each post onto the page', async () => {
       const wrapper = page();
+      expect(wrapper.find(Loading).exists()).toBe(true);
+
       await allActionsToComplete();
       wrapper.update();
 
+      expect(wrapper.find(Loading).exists()).toBe(false);
       expect(wrapper.text()).toContain('Newer Post');
       expect(wrapper.text()).toContain('Older Post');
     });

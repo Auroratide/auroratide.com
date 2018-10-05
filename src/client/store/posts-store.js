@@ -1,7 +1,8 @@
-import { observable } from 'mobx';
+import { observable, computed } from 'mobx';
 import { get, getAll } from 'Client/api/posts';
 
 export default class PostsStore {
+  @observable isRefreshing = false;
   @observable posts = {};
 
   constructor(root) {
@@ -14,10 +15,16 @@ export default class PostsStore {
   }
 
   async refreshPostsList() {
+    this.isRefreshing = true;
     (await getAll()).forEach(post => {
       if(!this.posts[post.id])
         this.posts[post.id] = post;
     });
+    this.isRefreshing = false;
+  }
+
+  @computed get isEmpty() {
+    return Object.keys(this.posts).length === 0;
   }
 
   getPost(id) {
