@@ -1,0 +1,17 @@
+@import "theme";
+
+:root {
+  --dot-size: 2rem;
+}
+
+.dots {
+  display: grid;
+  grid-template: repeat(3, var(--dot-size)) / repeat(3, var(--dot-size));
+  grid-gap: var(--dot-size) var(--dot-size);
+  justify-content: center;
+}
+
+.dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+}

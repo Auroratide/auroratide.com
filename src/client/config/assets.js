@@ -12,7 +12,13 @@ const Images = {
   DOTS_LINE_BOTTOM: '/assets/dots-line-bottom.png'
 };
 
+const ConnectNineDots = {
+  DOT: '/assets/connect-nine-dots_dot.png',
+  LINE: '/assets/connect-nine-dots_line.png'
+};
+
 export default {
   Logo,
-  Images
+  Images,
+  ConnectNineDots
 };
