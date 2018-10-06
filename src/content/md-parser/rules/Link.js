@@ -2,7 +2,7 @@ const Rule = require('./Rule');
 
 module.exports = class Link extends Rule {
   constructor() {
-    super(/^\[([^\]]*)\]\(([^)]*)\)/);
+    super(/^\[([^\]]*)\]\((\*?)([^)]*)\)/);
   }
 
   produce() {
@@ -10,7 +10,8 @@ module.exports = class Link extends Rule {
       c: 'Link',
       d: this.match[1],
       p: {
-        to: this.match[2]
+        to: this.match[3],
+        newTab: this.match[2] ? true : false
       }
     };
   }

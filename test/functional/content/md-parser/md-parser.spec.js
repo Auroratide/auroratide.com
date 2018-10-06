@@ -104,7 +104,8 @@ describe('MD Parser', () => {
           c: 'Link',
           d: 'bold link',
           p: {
-            to: '/posts'
+            to: '/posts',
+            newTab: false
           }
         }
       }, '!']

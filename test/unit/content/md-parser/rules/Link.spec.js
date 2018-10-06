@@ -10,6 +10,7 @@ describe('Link rule', () => {
   describe('matches', () => {
     it('should match links', () => {
       expect(rule.matches('[text](/url)')).toBeTruthy();
+      expect(rule.matches('[text](*/url)')).toBeTruthy();
     });
 
     it('should not match non-links', () => {
@@ -25,7 +26,21 @@ describe('Link rule', () => {
         c: 'Link',
         d: 'text',
         p: {
-          to: '/url'
+          to: '/url',
+          newTab: false
+        }
+      });
+    });
+
+    it('should set newTab when specified', () => {
+      rule.matches('[text](*/url)');
+      
+      expect(rule.produce()).toEqual({
+        c: 'Link',
+        d: 'text',
+        p: {
+          to: '/url',
+          newTab: true
         }
       });
     });
