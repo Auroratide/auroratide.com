@@ -104,7 +104,7 @@ Notice that this strategy mitigates all of the problems we had when attempting s
 
 As an added bonus, look at the Header subcomponent. Because our component is now a folder, we can _put subcomponents in the folder too_! This makes it super obvious that the Header is meant _only_ for ClosableAlert and not for other components.
 
-Want to see this in action? Check out the **[Auroral Laboratory](https://github.com/Auroratide/auroral-laboratory/tree/master/folderized-react-components)** for a sample project!
+Want to see this in action? Check out the **[Auroral Laboratory](*https://github.com/Auroratide/auroral-laboratory/tree/master/folderized-react-components)** for a sample project!
 
 ## Summary
 

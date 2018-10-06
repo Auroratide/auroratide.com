@@ -23,7 +23,7 @@ class Emphasis extends Rule {
 
 class Strong extends Rule {
   constructor() {
-    super(/^\*\*([^*]*)\*\*/);
+    super(/^\*\*(.*?)\*\*/);
     this.subrules = [ Link, Emphasis, Character ];
   }
 

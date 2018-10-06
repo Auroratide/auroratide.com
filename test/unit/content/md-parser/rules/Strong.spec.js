@@ -9,7 +9,7 @@ describe('Strong rule', () => {
 
   describe('matches', () => {
     it('should match strong', () => {
-      expect(rule.matches('**Some text**')).toBeTruthy();
+      expect(rule.matches('**Some * text**')).toBeTruthy();
     });
 
     it('should not match non-strong', () => {
