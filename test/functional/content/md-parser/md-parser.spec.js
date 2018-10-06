@@ -118,6 +118,14 @@ describe('MD Parser', () => {
       p: {
         language: 'javascript'
       }
+    }, {
+      c: 'h2',
+      d: 'Components'
+    }, {
+      c: 'Widget',
+      p: {
+        width: '500'
+      }
     } ]);
   });
 });

@@ -2,6 +2,7 @@ const Parser = require('./Parser');
 const Heading = require('./rules/Heading');
 const UnorderedList = require('./rules/UnorderedList');
 const OrderedList = require('./rules/OrderedList');
+const Component = require('./rules/Component');
 const Image = require('./rules/Image');
 const CodeBlock = require('./rules/CodeBlock');
 const InfoBlock = require('./rules/InfoBlock');
@@ -13,6 +14,7 @@ const rules = [
   Heading,
   UnorderedList,
   OrderedList,
+  Component,
   Image,
   CodeBlock,
   InfoBlock,
