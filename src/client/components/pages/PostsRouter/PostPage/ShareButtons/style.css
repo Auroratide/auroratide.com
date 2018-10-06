@@ -16,6 +16,10 @@
   border: 0.125rem solid var(--palette-white);
 }
 
+.button svg {
+  min-width: 1em;
+}
+
 .spacing {
   display: inline-block;
   margin: 0 0.5rem;
