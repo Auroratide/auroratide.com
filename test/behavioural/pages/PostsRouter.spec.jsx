@@ -29,9 +29,12 @@ describe('PostsRouter Behaviour', () => {
   
     it('should render the post from the API', async () => {
       const wrapper = page();
+      expect(wrapper.find(Loading).exists()).toBe(true);
+
       await allActionsToComplete();
       wrapper.update();
   
+      expect(wrapper.find(Loading).exists()).toBe(false);
       expect(wrapper.text()).toContain('The Title');
     });
   });

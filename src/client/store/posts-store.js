@@ -10,8 +10,11 @@ export default class PostsStore {
   }
 
   async refreshPostDetails(id) {
-    if(!this.posts[id] || !this.posts[id].content)
+    if(!this.posts[id] || !this.posts[id].content) {
+      this.isRefreshing = true;
       this.posts[id] = await get(id);
+      this.isRefreshing = false;
+    }
   }
 
   async refreshPostsList() {

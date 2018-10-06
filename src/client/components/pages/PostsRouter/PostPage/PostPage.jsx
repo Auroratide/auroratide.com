@@ -8,6 +8,7 @@ import DateDisplay from 'Client/components/core/DateDisplay';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import RconRenderer from 'Client/components/core/RconRenderer';
 import StandardTypography from 'Client/components/layout/StandardTypography';
+import Loading from 'Client/components/core/Loading';
 import TitleArea from './TitleArea';
 import ShareButtons from './ShareButtons';
 import { renderIfElse } from 'Client/utils/render-if';
@@ -33,15 +34,21 @@ class PostPage extends React.Component {
           <ContentArea white className={styles.content}>
             <ShareButtons post={post} />
             <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
-            <StandardTypography>
-              <RconRenderer rcon={post.content || []} />
-            </StandardTypography>
+            {renderIfElse(!post.content && this.props.postsStore.isRefreshing, () =>
+              <Loading text='Fetching content...' />
+            ).elseRender(() =>
+              <StandardTypography>
+                <RconRenderer rcon={post.content || []} />
+              </StandardTypography>
+            )}
           </ContentArea>
         </Container.article>
       </DocumentTitle>
+    ).elseRender(() => renderIfElse(this.props.postsStore.isRefreshing, () =>
+      <Loading text='Fetching post...' />
     ).elseRender(() =>
       <PageNotFound />
-    );
+    ));
   }
 }
 
