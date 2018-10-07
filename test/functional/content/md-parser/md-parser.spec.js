@@ -126,6 +126,17 @@ describe('MD Parser', () => {
       p: {
         width: '500'
       }
+    }, {
+      c: 'hr'
+    }, {
+      c: 'HorizontalFlex',
+      d: [ {
+        c: 'p',
+        d: 'Some text.'
+      }, {
+        c: 'p',
+        d: 'More text.'
+      } ]
     } ]);
   });
 });

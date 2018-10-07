@@ -4,6 +4,7 @@ const colors = {
   AURORA_BLUE: color('aurora-blue'),
   AURORA_GREEN: color('aurora-green'),
   FABLE_LAVENDER: color('fable-lavender'),
+  FABLE_PINK: color('fable-pink'),
   EVENTIDE_BLACK: color('eventide-black'),
   AUTUMN_RED: color('autumn-red'),
   AELLA_GREEN: color('aella-green')

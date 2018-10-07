@@ -76,3 +76,9 @@ Paragraph 1
 Paragraph 2
 ,,,
 ```
+
+## Horizontal Rule
+
+```
+---------
+```

@@ -9,7 +9,9 @@
   opacity: 0.75;
 }
 
-.info-block.override p {
+.info-block.override p,
+.info-block.override ul,
+.info-block.override ol {
   @mixin typography-responsive sm;
 
   margin-bottom: 0.75rem;

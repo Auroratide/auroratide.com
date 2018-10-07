@@ -38,3 +38,11 @@ const x = 5;
 ## Components
 
 <Widget width="500" />
+
+---------------------
+
+<->
+Some text.
+
+More text.
+<->

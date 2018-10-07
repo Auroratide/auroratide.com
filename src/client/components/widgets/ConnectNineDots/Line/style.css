@@ -2,6 +2,6 @@
 
 .line {
   position: absolute;
-  transform-origin: top left;
-  height: 0.667rem;
+  transform-origin: center left;
+  height: 0.625rem;
 }

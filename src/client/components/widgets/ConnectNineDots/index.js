@@ -3,7 +3,7 @@ import State from './state';
 import ConnectNineDots from './ConnectNineDots';
 
 const storeToProps = () => ( {
-  state: new State()
+  state: new State(4)
 } );
 
 export default inject(storeToProps)(observer(ConnectNineDots));

@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import library from './library';
 
-const Icon = ({ icon, className }) =>
-  <FontAwesomeIcon icon={library[icon]} className={classnames(className)} />;
+const Icon = ({ icon, className, style }) =>
+  <FontAwesomeIcon icon={library[icon]} className={classnames(className)} style={style} />;
 
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  style: PropTypes.object
 };
 
 export default Icon;

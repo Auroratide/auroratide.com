@@ -9,7 +9,9 @@ import {
   faTh,
   faFolder,
   faPencilAlt,
-  faHourglassHalf
+  faHourglassHalf,
+  faEllipsisH,
+  faCrosshairs
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -32,6 +34,8 @@ export default {
   'folder': faFolder,
   'pencil': faPencilAlt,
   'hourglass-half': faHourglassHalf,
+  'ellipsis-h': faEllipsisH,
+  'crosshairs': faCrosshairs,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
