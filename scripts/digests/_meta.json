@@ -1,5 +1,5 @@
 {
-  "next_id": "8",
+  "next_id": "9",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -7,6 +7,7 @@
     "4": "the-problem-with-learning-styles",
     "5": "the-secret-to-better-code-reviews",
     "6": "the-net-framework-is-done",
-    "7": "grid-vs-flexbox-which-should-you-choose"
+    "7": "grid-vs-flexbox-which-should-you-choose",
+    "8": "the-five-mentors-every-software-developer-needs-and-how-to-find-them"
   }
 }
