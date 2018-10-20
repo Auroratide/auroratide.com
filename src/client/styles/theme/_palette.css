@@ -13,6 +13,7 @@
   --palette-fable-pink: #FB6BB5;
   --palette-eventide-black: #303038;
   --palette-autumn-red: #BE2C38;
+  --palette-autumn-orange: #D88F30;
   --palette-aella-green: #5EBF36;
 
   --palette-primary: var(--palette-aurora-blue);
@@ -82,6 +83,10 @@
 
   &.color-autumn-red {
     $(prop): var(--palette-autumn-red);
+  }
+
+  &.color-autumn-orange {
+    $(prop): var(--palette-autumn-orange);
   }
 
   &.color-aella-green {
