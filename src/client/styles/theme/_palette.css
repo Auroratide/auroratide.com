@@ -12,6 +12,7 @@
   --palette-fable-lavender: #9D77DD;
   --palette-fable-pink: #FB6BB5;
   --palette-eventide-black: #303038;
+  --palette-winter-grey: #ABB7BD;
   --palette-autumn-red: #BE2C38;
   --palette-autumn-orange: #D88F30;
   --palette-aella-green: #5EBF36;
@@ -79,6 +80,10 @@
 
   &.color-eventide-black {
     $(prop): var(--palette-eventide-black);
+  }
+
+  &.color-winter-grey {
+    $(prop): var(--palette-winter-grey);
   }
 
   &.color-autumn-red {

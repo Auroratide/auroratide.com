@@ -1,0 +1,12 @@
+{
+  "id": "10",
+  "title": "Secretly console first: A better approach to multi-platform game UI design",
+  "by": "David Sinclair",
+  "category": "Game Development",
+  "link": "http://www.gamasutra.com/view/news/328311/Secretly_console_first_A_better_approach_to_multiplatform_game_UI_design.php",
+  "icon": "tv",
+  "color": "winter-grey",
+  "summary": "Web development is often done mobile-first, but what about games? If your game is supposed to be multi-platform, it's best to take a \"secretly-console-first\" approach. This paradigm acknowledges contraints inherent to consoles while considering the preferred ways PC gamers interact with the UI.",
+  "created_at": "2018-10-22T22:41:11.617Z",
+  "source": "Gamasutra"
+}
