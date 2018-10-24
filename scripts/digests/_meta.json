@@ -1,5 +1,5 @@
 {
-  "next_id": "11",
+  "next_id": "12",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -10,6 +10,7 @@
     "7": "grid-vs-flexbox-which-should-you-choose",
     "8": "the-five-mentors-every-software-developer-needs-and-how-to-find-them",
     "9": "responsible-computer-science-challenge",
-    "10": "secretly-console-first-a-better-approach-to-multi-platform-game-ui-design"
+    "10": "secretly-console-first-a-better-approach-to-multi-platform-game-ui-design",
+    "11": "5-star-design-how-ratings-influence-behaviour"
   }
 }
