@@ -11,6 +11,7 @@ import StandardTypography from 'Client/components/layout/StandardTypography';
 import Loading from 'Client/components/core/Loading';
 import TitleArea from './TitleArea';
 import ShareButtons from './ShareButtons';
+import Comments from './Comments';
 import { renderIfElse } from 'Client/utils/render-if';
 
 import styles from './style';
@@ -41,6 +42,7 @@ class PostPage extends React.Component {
                 <RconRenderer rcon={post.content || []} />
               </StandardTypography>
             )}
+            <Comments slug={post.id} />
           </ContentArea>
         </Container.article>
       </DocumentTitle>
