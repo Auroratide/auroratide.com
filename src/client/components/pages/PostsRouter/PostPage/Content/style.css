@@ -1,0 +1,9 @@
+@import "theme";
+
+.date {
+  @mixin typography-responsive md;
+  @mixin typography-preset-paragraph;
+
+  display: block;
+  margin-bottom: 1rem;
+}

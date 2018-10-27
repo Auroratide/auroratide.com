@@ -4,12 +4,10 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
-import DateDisplay from 'Client/components/core/DateDisplay';
 import PageNotFound from 'Client/components/pages/PageNotFound';
-import RconRenderer from 'Client/components/core/RconRenderer';
-import StandardTypography from 'Client/components/layout/StandardTypography';
 import Loading from 'Client/components/core/Loading';
 import TitleArea from './TitleArea';
+import Content from './Content';
 import ShareButtons from './ShareButtons';
 import Comments from './Comments';
 import { renderIfElse } from 'Client/utils/render-if';
@@ -34,13 +32,10 @@ class PostPage extends React.Component {
           <TitleArea title={post.title} color={post.color} icon={post.icon} />
           <ContentArea white className={styles.content}>
             <ShareButtons post={post} />
-            <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
             {renderIfElse(!post.content && this.props.postsStore.isRefreshing, () =>
               <Loading text='Fetching content...' />
             ).elseRender(() =>
-              <StandardTypography>
-                <RconRenderer rcon={post.content || []} />
-              </StandardTypography>
+              <Content post={post} />
             )}
             <Comments slug={post.id} />
           </ContentArea>
