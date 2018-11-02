@@ -1,5 +1,5 @@
 {
-  "next_id": "12",
+  "next_id": "13",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -11,6 +11,7 @@
     "8": "the-five-mentors-every-software-developer-needs-and-how-to-find-them",
     "9": "responsible-computer-science-challenge",
     "10": "secretly-console-first-a-better-approach-to-multi-platform-game-ui-design",
-    "11": "5-star-design-how-ratings-influence-behaviour"
+    "11": "5-star-design-how-ratings-influence-behaviour",
+    "12": "systemic-games-a-design-philosophy"
   }
 }

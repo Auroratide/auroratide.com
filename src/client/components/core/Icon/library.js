@@ -15,7 +15,8 @@ import {
   faHandsHelping,
   faGavel,
   faTv,
-  faStar
+  faStar,
+  faLink
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -44,6 +45,7 @@ export default {
   'gavel': faGavel,
   'tv': faTv,
   'star': faStar,
+  'link': faLink,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
