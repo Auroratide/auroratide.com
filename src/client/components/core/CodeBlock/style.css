@@ -24,6 +24,24 @@
   background-size: 3em 3em;
 }
 
+.code-block.success {
+  border: 0.0625rem solid color-mod(var(--palette-success) alpha(25%));
+  border-left: 0.375rem solid var(--palette-success);
+  background-image: linear-gradient(transparent 50%, color-mod(var(--palette-success) alpha(4%)) 50%);
+}
+
+.code-block.warning {
+  border: 0.0625rem solid color-mod(var(--palette-warning) alpha(25%));
+  border-left: 0.375rem solid var(--palette-warning);
+  background-image: linear-gradient(transparent 50%, color-mod(var(--palette-warning) alpha(4%)) 50%);
+}
+
+.code-block.danger {
+  border: 0.0625rem solid color-mod(var(--palette-danger) alpha(25%));
+  border-left: 0.375rem solid var(--palette-danger);
+  background-image: linear-gradient(transparent 50%, color-mod(var(--palette-danger) alpha(4%)) 50%);
+}
+
 @media (--breakpoint-lg) {
   .code-block {
     padding-left: 2rem;

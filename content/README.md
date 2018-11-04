@@ -67,6 +67,24 @@ code here
 ```. (ignore period)
 ```
 
+```
++```language
+Success
+```. (ignore period)
+```
+
+```
+~```language
+Warning
+```. (ignore period)
+```
+
+```
+-```language
+Danger
+```. (ignore period)
+```
+
 ## Info Block
 
 ```

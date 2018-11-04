@@ -128,6 +128,13 @@ describe('MD Parser', () => {
         language: 'javascript'
       }
     }, {
+      c: 'CodeBlock',
+      d: 'const x = 5;',
+      p: {
+        language: 'javascript',
+        warning: true
+      }
+    }, {
       c: 'h2',
       d: 'Components'
     }, {

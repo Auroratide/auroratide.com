@@ -39,6 +39,10 @@ This paragraph has a **[bold link](/posts)**!
 const x = 5;
 ```
 
+~```javascript
+const x = 5;
+```
+
 ## Components
 
 <Widget width="500" />
