@@ -77,6 +77,17 @@ Paragraph 2
 ,,,
 ```
 
+## Flex
+
+**Horizontal Flexbox**
+```
+<->
+A paragraph.
+
+Another paragraph.
+<->
+```
+
 ## Horizontal Rule
 
 ```
