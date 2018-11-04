@@ -1,0 +1,10 @@
+{
+  "id": "two-ways-to-test-react-components",
+  "title": "Two Ways to Test React Components",
+  "category": "React",
+  "icon": "hand-pointer",
+  "color": "aurora-blue",
+  "summary": "It is not always clear what in React components should be tested or where those tests should go. I find that thinking of two types of tests, render tests and behavior tests, helps in figuring out what should be tested and how. Furthermore, having these two testing types encourages proper separation of presentation and state.",
+  "published_at": "2018-11-04T04:30:00.000Z",
+  "created_at": "2018-11-04T04:06:14.811Z"
+}
