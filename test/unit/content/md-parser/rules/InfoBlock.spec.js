@@ -12,6 +12,18 @@ describe('InfoBlock rule', () => {
       expect(rule.matches(',,,\ntext\n,,,')).toBeTruthy();
     });
 
+    it('should match success info blocks', () => {
+      expect(rule.matches('+,,,\ntext\n,,,')).toBeTruthy();
+    });
+
+    it('should match warning info blocks', () => {
+      expect(rule.matches('~,,,\ntext\n,,,')).toBeTruthy();
+    });
+
+    it('should match danger info blocks', () => {
+      expect(rule.matches('-,,,\ntext\n,,,')).toBeTruthy();
+    });
+
     it('should not match non info blocks', () => {
       expect(rule.matches('Some text')).toBeFalsy();
     });
@@ -26,6 +38,51 @@ describe('InfoBlock rule', () => {
         d: {
           c: 'p',
           d: 'text'
+        }
+      });
+    });
+
+    it('should produce rcon for success info blocks', () => {
+      rule.matches('+,,,\ntext\n,,,');
+      
+      expect(rule.produce()).toEqual({
+        c: 'InfoBlock',
+        d: {
+          c: 'p',
+          d: 'text'
+        },
+        p: {
+          success: true
+        }
+      });
+    });
+
+    it('should produce rcon for warning info blocks', () => {
+      rule.matches('~,,,\ntext\n,,,');
+      
+      expect(rule.produce()).toEqual({
+        c: 'InfoBlock',
+        d: {
+          c: 'p',
+          d: 'text'
+        },
+        p: {
+          warning: true
+        }
+      });
+    });
+
+    it('should produce rcon for danger info blocks', () => {
+      rule.matches('-,,,\ntext\n,,,');
+      
+      expect(rule.produce()).toEqual({
+        c: 'InfoBlock',
+        d: {
+          c: 'p',
+          d: 'text'
+        },
+        p: {
+          danger: true
         }
       });
     });

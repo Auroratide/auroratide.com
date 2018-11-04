@@ -52,6 +52,15 @@ describe('MD Parser', () => {
         }, ' block.']
       }
     }, {
+      c: 'InfoBlock',
+      d: {
+        c: 'p',
+        d: 'A success info block'
+      },
+      p: {
+        success: true
+      }
+    }, {
       c: 'h2',
       d: 'Lists'
     }, {

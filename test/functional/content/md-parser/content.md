@@ -12,6 +12,10 @@ This is _**bold and italicized**_ text.
 Some kind of _info_ block.
 ,,,
 
++,,,
+A success info block
+,,,
+
 ## Lists
 
 * Item 1

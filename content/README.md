@@ -75,6 +75,18 @@ Paragraph 1
 
 Paragraph 2
 ,,,
+
++,,,
+Success
+,,,
+
+~,,,
+Warning
+,,,
+
+-,,,
+Danger
+,,,
 ```
 
 ## Flex
