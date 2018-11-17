@@ -1,5 +1,5 @@
 {
-  "next_id": "14",
+  "next_id": "15",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -13,6 +13,7 @@
     "10": "secretly-console-first-a-better-approach-to-multi-platform-game-ui-design",
     "11": "5-star-design-how-ratings-influence-behaviour",
     "12": "systemic-games-a-design-philosophy",
-    "13": "the-vulnerable-world-hypothesis"
+    "13": "the-vulnerable-world-hypothesis",
+    "14": "copyright-and-emoji"
   }
 }

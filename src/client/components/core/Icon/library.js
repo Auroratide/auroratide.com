@@ -18,7 +18,8 @@ import {
   faStar,
   faLink,
   faHandPointer,
-  faVial
+  faVial,
+  faSmileWink
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -50,6 +51,7 @@ export default {
   'link': faLink,
   'hand-pointer': faHandPointer,
   'vial': faVial,
+  'smile-wink': faSmileWink,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
