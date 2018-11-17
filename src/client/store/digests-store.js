@@ -1,11 +1,12 @@
 import { observable, computed } from 'mobx';
 import { getAll } from 'Client/api/digests';
+import RefreshableStore from './refreshable-store';
 
-export default class DigestsStore {
+export default class DigestsStore extends RefreshableStore {
   @observable digests = [];
-  @observable isRefreshing = false;
 
   constructor(root) {
+    super();
     this.root = root;
   }
 
@@ -14,8 +15,6 @@ export default class DigestsStore {
   }
 
   async refreshDigests() {
-    this.isRefreshing = true;
-    this.digests = await getAll();
-    this.isRefreshing = false;
+    this.digests = await this.withRefresh(() => getAll());
   }
 }
