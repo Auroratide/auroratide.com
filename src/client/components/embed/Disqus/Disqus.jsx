@@ -1,19 +1,33 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 
+const initializeDisqus = (url, identifier) => {
+  window.disqus_config = function () {
+    this.page.url = url;
+    this.page.identifier = identifier;
+  };
+
+  const s = document.createElement('script');
+  s.src = 'https://auroratide.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (document.head || document.body).appendChild(s);
+};
+
 class Disqus extends React.Component {
   componentDidMount() {
     const { url, id } = this.props;
 
-    window.disqus_config = function () {
-      this.page.url = url;
-      this.page.identifier = id;
-    };
-
-    const s = document.createElement('script');
-    s.src = 'https://auroratide.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (document.head || document.body).appendChild(s);
+    if(!window.DISQUS) {
+      initializeDisqus(url, id);
+    } else {
+      window.DISQUS.reset({
+        reload: true,
+        config () {  
+          this.page.url = url;
+          this.page.identifier = id;  
+        }
+      });
+    }
   }
 
   render() {
