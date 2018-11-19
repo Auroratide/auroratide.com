@@ -9,7 +9,7 @@ import PostsRouter from 'Client/components/pages/PostsRouter';
 
 describe('PostsRouter Behaviour', () => {
 
-  afterEach(() => jest.restoreAllMocks());
+  afterEach(() => http.reset());
 
   describe('Single Post', () => {
     const id = 'the-post';
@@ -25,6 +25,10 @@ describe('PostsRouter Behaviour', () => {
       http
         .when.get(`/posts/${id}.json`)
         .then.reply(200, post);
+
+      http
+        .when.get('/posts/index.json')
+        .then.reply(200, { posts: [post] });
     });
   
     it('should render the post from the API', async () => {

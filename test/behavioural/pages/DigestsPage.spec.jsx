@@ -30,7 +30,7 @@ describe('DigestsPage Behaviour', () => {
       });
   });
 
-  afterEach(() => jest.restoreAllMocks());
+  afterEach(() => http.reset());
 
   it('should render the digests from the API and show a loading indicator while waiting', async () => {
     const expectedDigest = new DigestBuilder()

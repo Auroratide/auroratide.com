@@ -17,6 +17,7 @@ import styles from './style';
 class PostPage extends React.Component {
   componentDidMount() {
     this.props.postsStore.refreshPostDetails(this.getPostId());
+    this.props.postsStore.refreshPostsList();
   }
 
   getPostId = () => {

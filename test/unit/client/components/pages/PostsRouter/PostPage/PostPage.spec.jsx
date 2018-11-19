@@ -28,6 +28,13 @@ describe('<PostPage />', () => {
   
       expect(refreshPostDetails).toHaveBeenCalledWith(id);
     });
+
+    it('should refresh the posts list on mount', () => {
+      const refreshPostsList = jest.spyOn(store, 'refreshPostsList').mockResolvedValue();
+      shallow(<PostPage match={match} postsStore={store} />);
+  
+      expect(refreshPostsList).toHaveBeenCalled();
+    });
   });
 
   describe('rendering', () => {
