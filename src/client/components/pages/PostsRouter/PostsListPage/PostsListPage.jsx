@@ -22,7 +22,10 @@ class PostsListPage extends React.Component {
       <DocumentTitle title='Posts'>
         <Container>
           <ContentArea>
-            {postsStore.getPostsList().map(post => <PostItem post={post} key={post.id} />)}
+            {postsStore
+              .getPostsList()
+              .sort(PostsStore.sorter().byPublishedDate)
+              .map(post => <PostItem post={post} key={post.id} />)}
           </ContentArea>
         </Container>
       </DocumentTitle>

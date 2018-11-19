@@ -34,8 +34,12 @@ export default class PostsStore extends RefreshableStore {
   }
 
   getPostsList() {
-    return Object.values(this.posts).sort((lhs, rhs) => {
-      return new Date(rhs.publishedAt) - new Date(lhs.publishedAt);
-    });
+    return Object.values(this.posts);
+  }
+
+  static sorter() {
+    return {
+      byPublishedDate: (lhs, rhs) => new Date(rhs.publishedAt) - new Date(lhs.publishedAt)
+    };
   }
 }

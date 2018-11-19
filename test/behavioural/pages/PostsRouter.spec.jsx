@@ -60,11 +60,11 @@ describe('PostsRouter Behaviour', () => {
       http
         .when.get('/posts/index.json')
         .then.reply(200, {
-          posts: [newer, older]
+          posts: [older, newer]
         });
     });
 
-    it('should render each post onto the page', async () => {
+    it('should render each post onto the page in sorted order', async () => {
       const wrapper = page();
       expect(wrapper.find(Loading).exists()).toBe(true);
 
@@ -72,8 +72,7 @@ describe('PostsRouter Behaviour', () => {
       wrapper.update();
 
       expect(wrapper.find(Loading).exists()).toBe(false);
-      expect(wrapper.text()).toContain('Newer Post');
-      expect(wrapper.text()).toContain('Older Post');
+      expect(wrapper.text()).toEqual(expect.stringMatching(/Newer Post.*Older Post/));
     });
   });
 });

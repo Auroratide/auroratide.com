@@ -107,7 +107,7 @@ describe('PostsStore', () => {
       expect(store.getPostsList()).toHaveLength(0);
     });
 
-    it('should return the list of all posts sorted in order by publish date', () => {
+    it('should return the list of all posts', () => {
       const newer = new PostBuilder().withId('newer').withPublishedAt('2018-09-22T00:00:00Z').build();
       const older = new PostBuilder().withId('older').withPublishedAt('2018-09-21T00:00:00Z').build();
       const store = new PostsStore();
@@ -117,8 +117,25 @@ describe('PostsStore', () => {
       const posts = store.getPostsList();
 
       expect(posts).toHaveLength(2);
-      expect(posts[0]).toEqual(newer);
-      expect(posts[1]).toEqual(older);
+      expect(posts).toContainEqual(newer);
+      expect(posts).toContainEqual(older);
+    });
+  });
+
+  describe('sorter', () => {
+    describe('byPublishedDate', () => {
+      it('should sort by date published in descending order', () => {
+        const newer = new PostBuilder().withId('newer').withPublishedAt('2018-09-23T00:00:00Z').build();
+        const middle = new PostBuilder().withId('middle').withPublishedAt('2018-09-22T00:00:00Z').build();
+        const older = new PostBuilder().withId('older').withPublishedAt('2018-09-21T00:00:00Z').build();
+        const posts = [middle, older, newer];
+
+        const sorted = posts.sort(PostsStore.sorter().byPublishedDate);
+
+        expect(sorted[0]).toEqual(newer);
+        expect(sorted[1]).toEqual(middle);
+        expect(sorted[2]).toEqual(older);
+      });
     });
   });
 });
