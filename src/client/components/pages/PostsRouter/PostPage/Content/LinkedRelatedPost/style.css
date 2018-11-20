@@ -22,8 +22,7 @@
 }
 
 .icon {
-  @mixin typography-responsive xj;
-
+  font-size: var(--typography-lg-xj);
   position: absolute;
   right: 0.5rem;
   top: -0.25rem;
