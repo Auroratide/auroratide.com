@@ -13,6 +13,16 @@ const initializeDisqus = (url, identifier) => {
   (document.head || document.body).appendChild(s);
 };
 
+const resetDisqus = (url, identifier) => {
+  window.DISQUS.reset({
+    reload: true,
+    config () {  
+      this.page.url = url;
+      this.page.identifier = identifier;  
+    }
+  });
+};
+
 class Disqus extends React.Component {
   componentDidMount() {
     const { url, id } = this.props;
@@ -20,14 +30,14 @@ class Disqus extends React.Component {
     if(!window.DISQUS) {
       initializeDisqus(url, id);
     } else {
-      window.DISQUS.reset({
-        reload: true,
-        config () {  
-          this.page.url = url;
-          this.page.identifier = id;  
-        }
-      });
+      resetDisqus(url, id);
     }
+  }
+
+  componentDidUpdate() {
+    const { url, id } = this.props;
+    if(window.DISQUS)
+      resetDisqus(url, id);
   }
 
   render() {
