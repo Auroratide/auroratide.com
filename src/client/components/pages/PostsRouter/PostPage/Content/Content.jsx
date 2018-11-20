@@ -3,19 +3,31 @@ import PropTypes from 'Client/utils/prop-types';
 import DateDisplay from 'Client/components/core/DateDisplay';
 import StandardTypography from 'Client/components/layout/StandardTypography';
 import RconRenderer from 'Client/components/core/RconRenderer';
+import LinkedRelatedPost from './LinkedRelatedPost';
 
 import styles from './style';
 
-const Content = ({ post }) =>
-  <div>
-    <DateDisplay className={styles.date} date={new Date(post.publishedAt)} />
-    <StandardTypography>
-      <RconRenderer rcon={post.content || []} />
-    </StandardTypography>
+const Content = ({ post, similarPosts }) =>
+  <div className={styles.content}>
+    <div className={styles['content-area']}>
+      <DateDisplay className={styles['minor-title']} date={new Date(post.publishedAt)} />
+      <StandardTypography>
+        <RconRenderer rcon={post.content || []} />
+      </StandardTypography>
+    </div>
+    <aside className={styles.sidebar}>
+      <span className={styles['minor-title']}>{post.category}</span>
+      {similarPosts.map(post => <LinkedRelatedPost post={post} key={post.id} />)}
+    </aside>
   </div>;
 
 Content.propTypes = {
-  post: PropTypes.post.isRequired
+  post: PropTypes.post.isRequired,
+  similarPosts: PropTypes.arrayOf(PropTypes.post)
+};
+
+Content.defaultProps = {
+  similarPosts: []
 };
 
 export default Content;

@@ -20,6 +20,21 @@ describe('PostsRouter Behaviour', () => {
         .withId(id)
         .withTitle('The Title')
         .withIcon('bars')
+        .withCategory('cat')
+        .build();
+
+      const similarPost = new PostDataBuilder()
+        .withId('similar')
+        .withTitle('Similar')
+        .withIcon('bars')
+        .withCategory('cat')
+        .build();
+
+      const dissimilarPost = new PostDataBuilder()
+        .withId('dissimilar')
+        .withTitle('Dissimilar')
+        .withIcon('bars')
+        .withCategory('dog')
         .build();
   
       http
@@ -28,7 +43,7 @@ describe('PostsRouter Behaviour', () => {
 
       http
         .when.get('/posts/index.json')
-        .then.reply(200, { posts: [post] });
+        .then.reply(200, { posts: [post, similarPost, dissimilarPost] });
     });
   
     it('should render the post from the API', async () => {
@@ -40,6 +55,16 @@ describe('PostsRouter Behaviour', () => {
   
       expect(wrapper.find(Loading).exists()).toBe(false);
       expect(wrapper.text()).toContain('The Title');
+    });
+
+    it('should render similar posts', async () => {
+      const wrapper = page();
+
+      await allActionsToComplete();
+      wrapper.update();
+  
+      expect(wrapper.text()).toContain('Similar');
+      expect(wrapper.text()).not.toContain('Dissimilar');
     });
   });
 

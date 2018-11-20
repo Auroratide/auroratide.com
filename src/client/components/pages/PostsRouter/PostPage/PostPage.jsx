@@ -26,7 +26,12 @@ class PostPage extends React.Component {
 
   render() {
     const post = this.props.postsStore.getPost(this.getPostId());
-
+    const similarPosts = post ? this.props.postsStore.getPostsList()
+      .filter(PostsStore.filter().without(post.id))
+      .filter(PostsStore.filter().withCategory(post.category))
+      .sort(PostsStore.sorter().byPublishedDate)
+      .filter(PostsStore.filter().top(5)) : [];
+    
     return renderIfElse(post, () =>
       <DocumentTitle title={post.title}>
         <Container.article className={styles['post-page']}>
@@ -36,7 +41,7 @@ class PostPage extends React.Component {
             {renderIfElse(!post.content && this.props.postsStore.isRefreshing, () =>
               <Loading text='Fetching content...' />
             ).elseRender(() =>
-              <Content post={post} />
+              <Content post={post} similarPosts={similarPosts} />
             )}
             <Comments slug={post.id} />
           </ContentArea>

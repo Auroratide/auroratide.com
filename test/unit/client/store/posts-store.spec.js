@@ -138,4 +138,51 @@ describe('PostsStore', () => {
       });
     });
   });
+
+  describe('filter', () => {
+    describe('withCategory', () => {
+      it('should return only posts of the given category', () => {
+        const cat = new PostBuilder().withId('cat').withCategory('cat').build();
+        const lion = new PostBuilder().withId('lion').withCategory('cat').build();
+        const dog = new PostBuilder().withId('dog').withCategory('dog').build();
+        const posts = [cat, lion, dog];
+
+        const filtered = posts.filter(PostsStore.filter().withCategory('cat'));
+
+        expect(filtered).toContain(cat);
+        expect(filtered).toContain(lion);
+        expect(filtered).not.toContain(dog);
+      });
+    });
+
+    describe('without', () => {
+      it('should return all posts without the given id', () => {
+        const cat = new PostBuilder().withId('cat').build();
+        const lion = new PostBuilder().withId('lion').build();
+        const dog = new PostBuilder().withId('dog').build();
+        const posts = [cat, lion, dog];
+
+        const filtered = posts.filter(PostsStore.filter().without('dog'));
+
+        expect(filtered).toContain(cat);
+        expect(filtered).toContain(lion);
+        expect(filtered).not.toContain(dog);
+      });
+    });
+
+    describe('top', () => {
+      it('should return only the top n posts', () => {
+        const cat = new PostBuilder().withId('cat').build();
+        const lion = new PostBuilder().withId('lion').build();
+        const dog = new PostBuilder().withId('dog').build();
+        const posts = [cat, lion, dog];
+
+        const filtered = posts.filter(PostsStore.filter().top(2));
+
+        expect(filtered).toContain(cat);
+        expect(filtered).toContain(lion);
+        expect(filtered).not.toContain(dog);
+      });
+    });
+  });
 });

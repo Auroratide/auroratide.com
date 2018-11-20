@@ -1,9 +1,31 @@
 @import "theme";
 
-.date {
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.minor-title {
   @mixin typography-responsive md;
   @mixin typography-preset-paragraph;
 
   display: block;
   margin-bottom: 1rem;
+}
+
+@media (--breakpoint-lg) {
+  .content {
+    flex-direction: row;
+    margin: 0 -0.5rem;
+  }
+
+  .content-area {
+    flex: 3;
+    padding: 0 0.5rem;
+  }
+
+  .sidebar {
+    flex: 1;
+    padding: 0 0.5rem;
+  }
 }
