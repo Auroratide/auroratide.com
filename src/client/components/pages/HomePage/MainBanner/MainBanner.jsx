@@ -1,5 +1,5 @@
 import React from 'react';
-import Links from 'Client/config/links';
+import { UrlBuilder } from 'Client/config/links';
 import Container from 'Client/components/core/Container';
 import Button from 'Client/components/core/Button';
 import Link from 'Client/components/core/Link';
@@ -16,7 +16,7 @@ const MainBanner = () =>
           <span>Coder</span><span>Teacher</span><span>Dreamer</span>
         </div>
         <div className={styles['link-container']}>
-          <Button tag={Link} to={Links.Auroratide.POSTS} className={styles.link} outline>
+          <Button tag={Link} to={new UrlBuilder().posts()} className={styles.link} outline>
             What am I up to?
           </Button>
         </div>

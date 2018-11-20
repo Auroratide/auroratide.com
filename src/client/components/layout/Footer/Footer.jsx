@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'Client/components/core/Container';
-import Links from 'Client/config/links';
+import Links, { UrlBuilder } from 'Client/config/links';
 import NavLink from './NavLink';
 import IconLink from './IconLink';
 import License from './License';
@@ -16,10 +16,10 @@ const Footer = () =>
         <IconLink icon='github-alt' className={styles.github} to={Links.Social.GITHUB} />
       </div>
       <div className={styles['nav-links']}>
-        <NavLink name='Home' to={Links.Auroratide.HOME} />
-        <NavLink name='Posts' to={Links.Auroratide.POSTS} />
-        <NavLink name='Digests' to={Links.Auroratide.DIGESTS} />
-        <NavLink name='Legal' to={Links.Auroratide.LEGAL} />
+        <NavLink name='Home' to={new UrlBuilder().home()} />
+        <NavLink name='Posts' to={new UrlBuilder().posts()} />
+        <NavLink name='Digests' to={new UrlBuilder().digests()} />
+        <NavLink name='Legal' to={new UrlBuilder().legal()} />
       </div>
       <License />
     </Container>

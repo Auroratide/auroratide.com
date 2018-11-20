@@ -28,13 +28,13 @@ const App = ({ location }) =>
   <ErrorBoundary fallback={GenericErrorPage}>
     <DocumentTitle>
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path={Links.Auroratide.HOME} component={HomePage} />
         <Page theme={location && getTheme(location.pathname)}>
           <ErrorBoundary fallback={GenericErrorPage}>
             <Switch>
-              <Route path='/posts' component={PostsRouter} />
-              <Route exact path='/digests' component={DigestsPage} />
-              <Route exact path='/legal' component={LegalPage} />
+              <Route path={Links.Auroratide.POSTS} component={PostsRouter} />
+              <Route exact path={Links.Auroratide.DIGESTS} component={DigestsPage} />
+              <Route exact path={Links.Auroratide.LEGAL} component={LegalPage} />
               <Route path='*' component={PageNotFound} />
             </Switch>
           </ErrorBoundary>

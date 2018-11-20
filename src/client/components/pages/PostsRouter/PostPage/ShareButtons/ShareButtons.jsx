@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
-import Links from 'Client/config/links';
+import { UrlBuilder } from 'Client/config/links';
 import Facebook from './Facebook';
 import Twitter from './Twitter';
 
 import styles from './style';
 
-const url = post => `${Links.Auroratide.BASE}${Links.Auroratide.POSTS}/${post.id}`;
+const url = post => new UrlBuilder().withBase().post(post.id);
 
 const ShareButtons = ({ post }) =>
   <div className={styles.buttons}>

@@ -1,12 +1,12 @@
 import React from 'react';
-import Links from 'Client/config/links';
+import { UrlBuilder } from 'Client/config/links';
 import Disqus from 'Client/components/embed/Disqus';
 import PropTypes from 'Client/utils/prop-types';
 
 const Comments = ({ slug }) =>
   <section>
     <h2>Comments</h2>
-    <Disqus url={`${Links.Auroratide.BASE}${Links.Auroratide.POSTS}/${slug}`} id={slug} />
+    <Disqus url={new UrlBuilder().withBase().post(slug)} id={slug} />
   </section>;
 
 Comments.propTypes = {

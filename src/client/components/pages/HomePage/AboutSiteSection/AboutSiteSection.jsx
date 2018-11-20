@@ -1,5 +1,5 @@
 import React from 'react';
-import Links from 'Client/config/links';
+import { UrlBuilder } from 'Client/config/links';
 import Colors from 'Client/config/colors';
 import Container from 'Client/components/core/Container';
 import SiteSectionDescription from './SiteSectionDescription';
@@ -11,13 +11,13 @@ const AboutSiteSection = () =>
       <h1>I write about technology and storytelling.</h1>
       <div className={styles['site-section-descriptions']}>
         <SiteSectionDescription
-          to={Links.Auroratide.POSTS}
+          to={new UrlBuilder().posts()}
           color={Colors.AURORA_BLUE.name}
           icon='pencil'
           title='Posts'
           description="See what I have to say about software development, programming, storywriting, and much more." />
         <SiteSectionDescription
-          to={Links.Auroratide.DIGESTS}
+          to={new UrlBuilder().digests()}
           color={Colors.AURORA_GREEN.name}
           icon='newspaper'
           title='Digests'
