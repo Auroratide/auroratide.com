@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'Client/components/core/Link';
-import { shallow } from 'Test/enzyme';
+import { shallow, mount } from 'Test/enzyme';
 
 import RconRenderer from 'Client/components/core/RconRenderer';
 
@@ -89,7 +89,7 @@ describe('<RconRenderer />', () => {
         d: 'P2'
       } ];
 
-      const wrapper = shallow(<RconRenderer rcon={rcon} />);
+      const wrapper = mount(<RconRenderer rcon={rcon} />);
 
       expect(wrapper.contains(<p>P1</p>)).toBe(true);
       expect(wrapper.contains(<p>P2</p>)).toBe(true);

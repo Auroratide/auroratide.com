@@ -4,7 +4,7 @@ import library from './library';
 
 const RconRenderer = ({ rcon }) => {
   if(Array.isArray(rcon)) {
-    return rcon.map(elem => RconRenderer({ rcon: elem }));
+    return rcon.map((elem, i) => <RconRenderer rcon={elem} key={i} />);
   } else if(rcon.c) {
     const component = library[rcon.c] ? library[rcon.c] : rcon.c;
 
