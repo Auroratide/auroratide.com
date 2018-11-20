@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 (20 Nov 2018)
+
+* Added loading indicator to post pages to show when posts are coming from the API
+* Allow commenting on posts
+* Various enhancements to the markdown parser
+* Can now see posts related to the post being currently read
+
 ## 1.1.1 (04 Oct 2018)
 
 * Added loading indicator to digests page to show when digests are coming from the API
