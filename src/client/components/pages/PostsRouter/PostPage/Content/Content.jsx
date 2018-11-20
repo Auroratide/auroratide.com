@@ -16,7 +16,7 @@ const Content = ({ post, similarPosts }) =>
       </StandardTypography>
     </div>
     <aside className={styles.sidebar}>
-      <span className={styles['minor-title']}>{post.category}</span>
+      <h2 className={styles['more-title']}>More on {post.category}</h2>
       {similarPosts.map(post => <LinkedRelatedPost post={post} key={post.id} />)}
     </aside>
   </div>;

@@ -13,6 +13,10 @@
   margin-bottom: 1rem;
 }
 
+.sidebar {
+  margin-bottom: 2rem;
+}
+
 @media (--breakpoint-lg) {
   .content {
     flex-direction: row;
@@ -27,5 +31,13 @@
   .sidebar {
     flex: 1;
     padding: 0 0.5rem;
+  }
+
+  .more-title {
+    @mixin typography-responsive md;
+    @mixin typography-preset-paragraph;
+
+    display: block;
+    margin-bottom: 1rem;
   }
 }
