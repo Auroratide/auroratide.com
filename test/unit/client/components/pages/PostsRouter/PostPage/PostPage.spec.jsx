@@ -32,8 +32,50 @@ describe('<PostPage />', () => {
     it('should refresh the posts list on mount', () => {
       const refreshPostsList = jest.spyOn(store, 'refreshPostsList').mockResolvedValue();
       shallow(<PostPage match={match} postsStore={store} />);
-  
+      
       expect(refreshPostsList).toHaveBeenCalled();
+    });
+  });
+  
+  describe('updating', () => {
+    let refreshPostDetails;
+    let wrapper;
+
+    const update = () => wrapper.setProps();
+
+    beforeEach(() => {
+      refreshPostDetails = jest.spyOn(store, 'refreshPostDetails').mockResolvedValue();
+      jest.spyOn(store, 'refreshPostsList').mockResolvedValue();
+      store.posts[id] = new PostBuilder().withContent(undefined).build();
+      wrapper = shallow(<PostPage match={match} postsStore={store} />);
+      refreshPostDetails.mockClear();
+    });
+    
+    it('should refresh post details when the post does not have content', () => {
+      update();
+  
+      expect(refreshPostDetails).toHaveBeenCalledWith(id);
+    });
+
+    it('should not refresh post details when API is already refreshing', () => {
+      store.isRefreshing = true;
+      update();
+
+      expect(refreshPostDetails).not.toHaveBeenCalled();
+    });
+
+    it('should not refresh post details when content already exists', () => {
+      store.posts[id] = new PostBuilder().withContent('Hey').build();
+      update();
+
+      expect(refreshPostDetails).not.toHaveBeenCalled();
+    });
+
+    it('should not refresh post details when post is undefined', () => {
+      store.posts[id] = undefined;
+      update();
+
+      expect(refreshPostDetails).not.toHaveBeenCalled();
     });
   });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { MemoryRouter, Route } from 'react-router-dom';
+import { MemoryRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import { RootStore } from 'Client/store';
 
@@ -32,7 +32,10 @@ class MountContext {
     return mount(
       <Provider store={new RootStore()}>
         <MemoryRouter initialEntries={[this.route]} initialIndex={0}>
-          <Route path='' render={() => component} />
+          <Switch>
+            <Route path='/posts' render={() => component} />
+            <Route path='' render={() => component} />
+          </Switch>
         </MemoryRouter>
       </Provider>
     );

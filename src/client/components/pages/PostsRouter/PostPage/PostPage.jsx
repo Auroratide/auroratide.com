@@ -20,6 +20,13 @@ class PostPage extends React.Component {
     this.props.postsStore.refreshPostsList();
   }
 
+  componentDidUpdate() {
+    const store = this.props.postsStore;
+    const post = store.getPost(this.getPostId());
+    if(!store.isRefreshing && post && !post.content)
+      store.refreshPostDetails(this.getPostId());
+  }
+
   getPostId = () => {
     return this.props.match.params.id;
   }
