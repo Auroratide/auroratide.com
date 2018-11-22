@@ -3,11 +3,13 @@ import HorizontalFlex from 'Client/components/core/HorizontalFlex';
 import InfoBlock from 'Client/components/core/InfoBlock';
 import Link from 'Client/components/core/Link';
 import ConnectNineDots from 'Client/components/widgets/ConnectNineDots';
+import StegoBody from 'Client/components/widgets/StegoBody';
 
 export default {
   CodeBlock,
   HorizontalFlex,
   InfoBlock,
   Link,
-  ConnectNineDots
+  ConnectNineDots,
+  StegoBody
 };
