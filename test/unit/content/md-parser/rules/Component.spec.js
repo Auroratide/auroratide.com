@@ -12,8 +12,20 @@ describe('Component rule', () => {
       expect(rule.matches('<Widget prop="value" />')).toBeTruthy();
     });
 
+    it('should match components with children', () => {
+      expect(rule.matches('<WidgetName>child</WidgetName>')).toBeTruthy();
+    });
+
     it('should not match non components', () => {
       expect(rule.matches('Some text')).toBeFalsy();
+    });
+
+    it('should not match components with non-matching end tag', () => {
+      expect(rule.matches('<WidgetName>child</OtherName>')).toBeFalsy();
+    });
+
+    it('should not match components without end tag', () => {
+      expect(rule.matches('<WidgetName>child')).toBeFalsy();
     });
   });
 
@@ -47,6 +59,19 @@ describe('Component rule', () => {
           width: '10',
           height: '20'
         }
+      });
+    });
+
+    it('should produce rcon for components with children', () => {
+      rule.matches('<Widget>child</Widget>');
+
+      expect(rule.produce()).toEqual({
+        c: 'Widget',
+        d: {
+          c: 'p',
+          d: 'child'
+        },
+        p: {}
       });
     });
   });

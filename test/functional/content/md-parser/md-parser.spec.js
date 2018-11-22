@@ -143,6 +143,18 @@ describe('MD Parser', () => {
         width: '500'
       }
     }, {
+      c: 'AnotherWidget',
+      d: {
+        c: 'p',
+        d: ['This is ', {
+          c: 'strong',
+          d: 'bold'
+        }, ' text.']
+      },
+      p: {
+        height: '50'
+      }
+    }, {
       c: 'hr'
     }, {
       c: 'HorizontalFlex',

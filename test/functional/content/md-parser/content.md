@@ -47,6 +47,10 @@ const x = 5;
 
 <Widget width="500" />
 
+<AnotherWidget height="50">
+This is **bold** text.
+</AnotherWidget>
+
 ---------------------
 
 <->
