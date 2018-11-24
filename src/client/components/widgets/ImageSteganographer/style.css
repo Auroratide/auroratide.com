@@ -1,0 +1,23 @@
+@import "theme";
+
+.image-steganographer canvas {
+  display: none;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  max-height: 20rem;
+}
+
+.button-area {
+  text-align: center;
+}
