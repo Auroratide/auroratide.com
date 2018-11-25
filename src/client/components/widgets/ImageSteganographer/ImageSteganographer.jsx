@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import State from './state';
 import debounce from 'Client/utils/debounce';
+import FileUploader from 'Client/components/core/FileUploader';
 import Textarea from 'Client/components/core/Textarea';
+import ImageContainer from './ImageContainer';
 import styles from './style';
 
 class ImageSteganographer extends React.Component {
@@ -26,19 +28,15 @@ class ImageSteganographer extends React.Component {
 
     return <div className={styles['image-steganographer']}>
       <div className={styles.images}>
-        <div className={styles['image-container']}>
-          <strong>Original</strong>
-          <img src={state.originalBase64} />
-          <input type='file' onChange={this.handleFileUpload} />
-        </div>
-        <div className={styles['image-container']}>
-          <strong>Modified</strong>
-          <img src={state.modifiedBase64} />
+        <ImageContainer title='Original' base64={state.originalBase64}>
+          <FileUploader text='Select File' onChange={this.handleFileUpload} />
+        </ImageContainer>
+        <ImageContainer title='Modified' base64={state.modifiedBase64}>
           <Textarea
             state={state.textState}
             placeholder='Type in the text you want to embed!'
             onChange={this.handleTextChange} />
-        </div>
+        </ImageContainer>
       </div>
       <canvas ref={elem => this.canvas = elem}></canvas>
     </div>;
