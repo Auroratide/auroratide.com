@@ -10,4 +10,4 @@
   transition: border-color var(--transition-short);
 }
 
-@mixin palette-theme .textarea:focus, border-color {}
+@mixin palette-theme .textarea:focus, border-color;

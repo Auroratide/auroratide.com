@@ -24,9 +24,9 @@ describe('ImageSteganographer Behaviour', () => {
 
   let wrapper;
 
-  const uploadFile = (name) => wrapper.find('input[type="file"]').simulate('change', {
+  const uploadFile = (file) => wrapper.find('input[type="file"]').simulate('change', {
     target: {
-      files: [name]
+      files: [file]
     }
   });
 
@@ -72,5 +72,19 @@ describe('ImageSteganographer Behaviour', () => {
     wrapper.update();
 
     expect(getModifiedImage().props().src).toContain('1320112011103030');
+  });
+
+  it('should report an error when an error occurs uploading the file', async () => {
+    global.createImageBitmap.mockResolvedValue(ORIGINAL_IMAGE);
+    canvas.toDataURL.mockImplementation(() => {
+      throw new Error();
+    });
+
+    uploadFile('name.png');
+
+    await allActionsToComplete();
+    wrapper.update();
+
+    expect(wrapper.text()).toContain('Unfortunately');
   });
 });
