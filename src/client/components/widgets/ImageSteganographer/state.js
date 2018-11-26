@@ -34,6 +34,7 @@ export default class State {
   applySteganography() {
     this.startProcess();
     const message = this.text;
+    this.context.drawImage(this.originalImage, 0, 0);
     const imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
     const data = imageData.data;
     let i = 0;

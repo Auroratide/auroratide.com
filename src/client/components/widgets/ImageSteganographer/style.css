@@ -21,6 +21,7 @@
 
 .image-steganographer.pending > :not(.loading) {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .loading {

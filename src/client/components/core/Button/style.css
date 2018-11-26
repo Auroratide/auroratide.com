@@ -9,6 +9,7 @@
     var(--transition-short) padding-right,
     var(--transition-short) margin-left,
     var(--transition-short) margin-right;
+  cursor: pointer;
 }
 
 .button:hover {
