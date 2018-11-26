@@ -49,7 +49,7 @@ class ImageSteganographer extends React.Component {
             <img src={state.base64} alt='Steganography Image' />
           </div>
           <div className={styles.actions}>
-            <FileUploader text='Select File' onChange={this.handleFileUpload} />
+            <FileUploader secondary text='Select File' onChange={this.handleFileUpload} />
             <Button primary className={styles.decode} onClick={this.handleDecode}>
               <Icon icon='angle-double-right' /> Decode Text <Icon icon='angle-double-right' />
             </Button>

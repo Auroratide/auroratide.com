@@ -9,6 +9,7 @@ const Button = ({
   className,
   outline,
   primary,
+  secondary,
   children,
   ...props
 }) => React.createElement(tag, {
@@ -16,6 +17,7 @@ const Button = ({
     styles.button,
     { [styles.outline]: outline },
     { [styles.primary]: primary },
+    { [styles.secondary]: secondary },
     className
   ),
   ...props
@@ -25,6 +27,7 @@ Button.propTypes = {
   tag: PropTypes.tag,
   className: PropTypes.string,
   primary: PropTypes.bool,
+  secondary: PropTypes.bool,
   outline: PropTypes.bool,
   children: PropTypes.node
 };
