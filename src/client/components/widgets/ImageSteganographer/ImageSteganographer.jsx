@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import State from './state';
-import debounce from 'Client/utils/debounce';
 import { renderIf } from 'Client/utils/render-if';
 import FileUploader from 'Client/components/core/FileUploader';
 import Textarea from 'Client/components/core/Textarea';
 import Loading from 'Client/components/core/Loading';
-import ImageContainer from './ImageContainer';
+import Button from 'Client/components/core/Button';
 
 import classnames from 'classnames';
 import styles from './style';
@@ -28,7 +27,7 @@ class ImageSteganographer extends React.Component {
     .then(data => this.props.state.updateImage(data))
     .catch(() => this.props.state.processFailed('Unfortunately, the image could not be processed.'));
 
-  handleTextChange = debounce.event(() => this.props.state.applySteganography(), 500);
+  handleEncode = () => this.props.state.applySteganography();
 
   render() {
     const { state } = this.props;
@@ -37,17 +36,30 @@ class ImageSteganographer extends React.Component {
       {renderIf(state.status === 'pending', () =>
         <Loading className={styles.loading} text='Processing image...' />
       )}
-      <div className={styles.images}>
-        <ImageContainer title='Original' base64={state.originalBase64}>
-          <FileUploader text='Select File' onChange={this.handleFileUpload} />
-        </ImageContainer>
-        <ImageContainer title='Modified' base64={state.modifiedBase64}>
+
+      <div className={styles['interactive-elements']}>
+        <div className={styles['interactive-element']}>
+          <strong>Image</strong>
+          <div className={styles['image-container']}>
+            <img src={state.base64} alt='Steganography Image' />
+          </div>
+          <div className={styles.actions}>
+            <FileUploader text='Select File' onChange={this.handleFileUpload} />
+            <Button primary>Decode Text</Button>
+          </div>
+        </div>
+
+        <div className={styles['interactive-element']}>
+          <strong>Text</strong>
           <Textarea
             state={state.textState}
-            placeholder='Type in the text you want to embed!'
-            onChange={this.handleTextChange} />
-        </ImageContainer>
+            placeholder='Type in the text you want to embed!' />
+          <div className={styles.actions}>
+            <Button primary className={styles.encode} onClick={this.handleEncode}>Encode into Image</Button>
+          </div>
+        </div>
       </div>
+
       <div className={styles.message}>
         {state.error}
       </div>

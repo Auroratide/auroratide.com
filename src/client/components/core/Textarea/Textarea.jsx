@@ -21,7 +21,8 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
-  state: new State()
+  state: new State(),
+  onChange: () => {}
 };
 
 export default Textarea;

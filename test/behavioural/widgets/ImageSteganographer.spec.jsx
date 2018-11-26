@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'Test/enzyme';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
-import wait from 'Client/utils/wait';
 import Textarea from 'Client/components/core/Textarea';
 
 import ImageSteganographer from 'Client/components/widgets/ImageSteganographer';
@@ -36,8 +35,9 @@ describe('ImageSteganographer Behaviour', () => {
     }
   });
 
-  const getOriginalImage = () => wrapper.find('img').at(0);
-  const getModifiedImage = () => wrapper.find('img').at(1);
+  const encodeIntoImage = () => wrapper.find('button.encode').simulate('click');
+
+  const getImageSrc = () => wrapper.find('img').props().src;
 
   beforeEach(() => {
     global.createImageBitmap = jest.fn();
@@ -64,14 +64,12 @@ describe('ImageSteganographer Behaviour', () => {
     await allActionsToComplete();
     wrapper.update();
 
-    expect(getOriginalImage().props().src).toEqual('0000000000000000');
+    expect(getImageSrc()).toEqual('0000000000000000');
 
     changeText('yes');
+    encodeIntoImage();
 
-    await wait.for(501); // debounce
-    wrapper.update();
-
-    expect(getModifiedImage().props().src).toContain('1320112011103030');
+    expect(getImageSrc()).toContain('1320112011103030');
   });
 
   it('should report an error when an error occurs uploading the file', async () => {

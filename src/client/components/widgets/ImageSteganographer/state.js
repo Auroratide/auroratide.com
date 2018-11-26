@@ -4,10 +4,10 @@ import Textarea from 'Client/components/core/Textarea';
 export default class State {
   canvas;
   textState = new Textarea.State('Steganography is awesome!');
+  originalImage;
   @observable status = '';
   @observable error = '';
-  @observable originalBase64;
-  @observable modifiedBase64;
+  @observable base64;
 
   initCanvas(canvas) {
     this.canvas = canvas;
@@ -23,13 +23,12 @@ export default class State {
 
   updateImage(image) {
     this.startProcess();
+    this.originalImage = image;
     this.canvas.width = image.width;
     this.canvas.height = image.height;
     this.context.drawImage(image, 0, 0);
-    this.originalBase64 = this.canvas.toDataURL();
+    this.base64 = this.canvas.toDataURL();
     this.processSucceeded();
-
-    this.applySteganography();
   }
 
   applySteganography() {
@@ -54,9 +53,9 @@ export default class State {
     });
 
     this.context.putImageData(imageData, 0, 0);
-    this.modifiedBase64 = this.canvas.toDataURL();
+    this.base64 = this.canvas.toDataURL();
 
-    if(i >= data.length) {
+    if(i > data.length) {
       this.processFailed('Unfortunately, the length of the message exceeded the number of bytes available in the image.');
     } else {
       this.processSucceeded();
