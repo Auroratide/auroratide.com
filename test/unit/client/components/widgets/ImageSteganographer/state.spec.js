@@ -54,4 +54,39 @@ describe('ImageSteganographer State', () => {
       expect(state.error).not.toEqual('');
     });
   });
+
+  describe('decodeFromImage', () => {
+    it('should decode the message from the image and stop at the first nonnormal character', () => {
+      const _ = 0;
+      jest.spyOn(context, 'getImageData').mockReturnValue({
+        data: [
+          1, 3, 0, _,
+          0, 1, 2, _,
+          2, 1, 0, _,
+          1, 2, 0, _
+        ]
+      });
+
+      state.decodeFromImage();
+
+      expect(state.text).toEqual('pi');
+    });
+
+    it('should set the error message when no letters could be determined', () => {
+      const _ = 0;
+      jest.spyOn(context, 'getImageData').mockReturnValue({
+        data: [
+          0, 0, 0, _,
+          1, _, _, _,
+          _, _, _, _,
+          _, _, _, _
+        ]
+      });
+
+      state.decodeFromImage();
+
+      expect(state.text).toEqual('');
+      expect(state.error).not.toEqual('');
+    });
+  });
 });

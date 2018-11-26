@@ -18,7 +18,10 @@ class ImageSteganographer extends React.Component {
     state.initCanvas(this.canvas);
 
     const initialImage = new Image();
-    initialImage.onload = () => state.updateImage(initialImage);
+    initialImage.onload = () => {
+      state.updateImage(initialImage);
+      state.applySteganography();
+    };
     initialImage.src = '/assets/logo/logo_0192.png';
   }
 
@@ -29,6 +32,7 @@ class ImageSteganographer extends React.Component {
     .catch(() => this.props.state.processFailed('Unfortunately, the image could not be processed.'));
 
   handleEncode = () => this.props.state.applySteganography();
+  handleDecode = () => this.props.state.decodeFromImage();
 
   render() {
     const { state } = this.props;
@@ -46,7 +50,7 @@ class ImageSteganographer extends React.Component {
           </div>
           <div className={styles.actions}>
             <FileUploader text='Select File' onChange={this.handleFileUpload} />
-            <Button primary className={styles.decode}>
+            <Button primary className={styles.decode} onClick={this.handleDecode}>
               <Icon icon='angle-double-right' /> Decode Text <Icon icon='angle-double-right' />
             </Button>
           </div>

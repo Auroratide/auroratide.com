@@ -17,6 +17,17 @@ describe('ImageSteganographer Behaviour', () => {
     ]
   };
 
+  const STEGOED_IMAGE = {
+    width: 2,
+    height: 2,
+    data: [
+      1, 2, 3, 0,
+      2, 1, 2, 0,
+      3, 3, 0, 0,
+      0, 0, 0, 0
+    ]
+  };
+
   let canvas;
   let context;
   let currentImage;
@@ -37,7 +48,11 @@ describe('ImageSteganographer Behaviour', () => {
 
   const encodeIntoImage = () => wrapper.find('button.encode').simulate('click');
 
+  const decodeFromImage = () => wrapper.find('button.decode').simulate('click');
+
   const getImageSrc = () => wrapper.find('img').props().src;
+
+  const getTextareaText = () => wrapper.find('textarea').instance().value;
 
   beforeEach(() => {
     global.createImageBitmap = jest.fn();
@@ -69,7 +84,19 @@ describe('ImageSteganographer Behaviour', () => {
     changeText('yes');
     encodeIntoImage();
 
-    expect(getImageSrc()).toContain('1320112011103030');
+    expect(getImageSrc()).toEqual('1320112011103030');
+  });
+
+  it('should decode an image which already has stego text in it', async () => {
+    global.createImageBitmap.mockResolvedValue(STEGOED_IMAGE);
+
+    uploadFile('name.png');
+    await allActionsToComplete();
+    wrapper.update();
+
+    decodeFromImage();
+
+    expect(getTextareaText()).toEqual('no');
   });
 
   it('should report an error when an error occurs uploading the file', async () => {

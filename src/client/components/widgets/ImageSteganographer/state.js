@@ -62,6 +62,38 @@ export default class State {
     }
   }
 
+  decodeFromImage() {
+    this.startProcess();
+    const imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
+    const data = imageData.data;
+    let message = '';
+    let i = 0;
+    const increment = () => i += i % 4 === 2 ? 2 : 1;
+    const next = () => {
+      const couple = data[i] & 0x03;
+      increment();
+      return couple;
+    };
+
+    while(i < data.length) {
+      const code = (next() << 6) |
+                   (next() << 4) |
+                   (next() << 2) |
+                   (next());
+      if(9 <= code && code <= 13 || 32 <= code && code <= 126)
+        message += String.fromCharCode(code);
+      else
+        break;
+    }
+
+    this.textState.text = message;
+
+    if(message.length === 0)
+      this.processFailed('Unfortunately, no message could be found in the image');
+    else
+      this.processSucceeded();
+  }
+
   startProcess() {
     this.status = 'pending';
     this.error = '';
