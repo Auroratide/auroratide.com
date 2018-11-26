@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 import State from './state';
+import classnames from 'classnames';
 import styles from './style';
 
-const Textarea = ({ state, placeholder, onChange }) =>
+const Textarea = ({ state, placeholder, className, onChange }) =>
   <textarea
-    className={styles.textarea}
+    className={classnames(styles.textarea, className)}
     placeholder={placeholder}
     onChange={e => {
       state.text = e.target.value;
@@ -17,6 +18,7 @@ const Textarea = ({ state, placeholder, onChange }) =>
 Textarea.propTypes = {
   state: PropTypes.instanceOf(State),
   placeholder: PropTypes.string,
+  className: PropTypes.string,
   onChange: PropTypes.func
 };
 

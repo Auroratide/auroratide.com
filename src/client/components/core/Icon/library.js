@@ -19,7 +19,9 @@ import {
   faLink,
   faHandPointer,
   faVial,
-  faSmileWink
+  faSmileWink,
+  faAngleDoubleLeft,
+  faAngleDoubleRight
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -52,6 +54,8 @@ export default {
   'hand-pointer': faHandPointer,
   'vial': faVial,
   'smile-wink': faSmileWink,
+  'angle-double-left': faAngleDoubleLeft,
+  'angle-double-right': faAngleDoubleRight,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,

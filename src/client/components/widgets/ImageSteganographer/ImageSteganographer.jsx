@@ -6,6 +6,7 @@ import FileUploader from 'Client/components/core/FileUploader';
 import Textarea from 'Client/components/core/Textarea';
 import Loading from 'Client/components/core/Loading';
 import Button from 'Client/components/core/Button';
+import Icon from 'Client/components/core/Icon';
 
 import classnames from 'classnames';
 import styles from './style';
@@ -45,7 +46,9 @@ class ImageSteganographer extends React.Component {
           </div>
           <div className={styles.actions}>
             <FileUploader text='Select File' onChange={this.handleFileUpload} />
-            <Button primary>Decode Text</Button>
+            <Button primary className={styles.decode}>
+              <Icon icon='angle-double-right' /> Decode Text <Icon icon='angle-double-right' />
+            </Button>
           </div>
         </div>
 
@@ -53,9 +56,12 @@ class ImageSteganographer extends React.Component {
           <strong>Text</strong>
           <Textarea
             state={state.textState}
+            className={styles.textarea}
             placeholder='Type in the text you want to embed!' />
           <div className={styles.actions}>
-            <Button primary className={styles.encode} onClick={this.handleEncode}>Encode into Image</Button>
+            <Button primary className={styles.encode} onClick={this.handleEncode}>
+              <Icon icon='angle-double-left' /> Encode into Image <Icon icon='angle-double-left' />
+            </Button>
           </div>
         </div>
       </div>

@@ -60,9 +60,19 @@
   max-height: 100%;
 }
 
+.textarea {
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
 .actions {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
+}
+
+.encode, .decode {
+  font-size: var(--typography-md);
 }
 
 .message {
