@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import State from './state';
 import debounce from 'Client/utils/debounce';
+import { renderIf } from 'Client/utils/render-if';
 import FileUploader from 'Client/components/core/FileUploader';
 import Textarea from 'Client/components/core/Textarea';
+import Loading from 'Client/components/core/Loading';
 import ImageContainer from './ImageContainer';
 
 import classnames from 'classnames';
@@ -32,6 +34,9 @@ class ImageSteganographer extends React.Component {
     const { state } = this.props;
 
     return <div className={classnames(styles['image-steganographer'], styles[state.status])}>
+      {renderIf(state.status === 'pending', () =>
+        <Loading className={styles.loading} text='Processing image...' />
+      )}
       <div className={styles.images}>
         <ImageContainer title='Original' base64={state.originalBase64}>
           <FileUploader text='Select File' onChange={this.handleFileUpload} />

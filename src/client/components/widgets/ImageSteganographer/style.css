@@ -1,6 +1,7 @@
 @import "theme";
 
 .image-steganographer {
+  position: relative;
   margin-bottom: 2rem;
   padding: 0.5rem;
   border: 0.25rem solid var(--palette-grey);
@@ -16,6 +17,16 @@
 
 .image-steganographer canvas {
   display: none;
+}
+
+.image-steganographer.pending > :not(.loading) {
+  opacity: 0.5;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .images {
