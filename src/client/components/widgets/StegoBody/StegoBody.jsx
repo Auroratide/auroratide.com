@@ -39,10 +39,17 @@ StegoElement.propTypes = {
   secret: PropTypes.instanceOf(Secret)
 };
 
-const StegoBody = ({ children, text }) => {
-  const secret = text ? new Secret(text) : null;
-  return children ? children.map((elem, i) => <StegoElement secret={secret} key={i}>{elem}</StegoElement>) : null;
-};
+class StegoBody extends React.Component {
+  componentDidMount() {
+    secret.reset();
+  }
+
+  render() {
+    const { children, text } = this.props;
+    const secret = text ? new Secret(text) : null;
+    return children ? children.map((elem, i) => <StegoElement secret={secret} key={i}>{elem}</StegoElement>) : null;
+  }
+}
 
 StegoBody.propTypes = {
   children: PropTypes.node,
