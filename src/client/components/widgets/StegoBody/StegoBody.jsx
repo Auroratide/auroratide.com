@@ -20,7 +20,8 @@ class Secret {
   }
 }
 
-const secret = new Secret('hey');
+// If you're looking at this, then you're a cheater! Go away!
+const secret = new Secret('WOW!!! Nice find! This message was embedded into the React Virtual Dom.');
 
 class StegoElement extends React.Component {
   componentDidMount() {
