@@ -2,9 +2,9 @@
   "id": "steganography",
   "title": "Steganography",
   "category": "Security",
-  "icon": "lock",
+  "icon": "image",
   "color": "autumn-orange",
-  "summary": "No summary.",
-  "published_at": "2018-11-22T04:57:37.149Z",
+  "summary": "Using cryptography, you can scramble your message so that nobody except the recipient can read it. Nice and secure! But what if we made it so that nobody except the recipient even knew the message existed in the first place? That's steganography! See how you can steganographically embed secret messages into images by reading on.",
+  "published_at": "2018-11-26T05:30:00.000Z",
   "created_at": "2018-11-22T04:57:37.149Z"
 }
