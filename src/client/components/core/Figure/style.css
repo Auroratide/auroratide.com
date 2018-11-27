@@ -1,0 +1,29 @@
+@import "theme";
+
+.figure {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.figure img {
+  margin-bottom: 0.5rem;
+}
+
+.figure.sm img {
+  max-height: 5rem;
+}
+
+.figure.md img {
+  max-height: 10rem;
+}
+
+.figure.lg img {
+  max-height: 15rem;
+}
+
+.figure figcaption {
+  @mixin typography-responsive sm;
+
+  font-weight: var(--typography-light);
+  opacity: 0.75;
+}

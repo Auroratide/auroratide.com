@@ -123,3 +123,9 @@ Another paragraph.
 ```
 ---------
 ```
+
+## Colored Text
+
+```
+##13DE45|my text##
+```

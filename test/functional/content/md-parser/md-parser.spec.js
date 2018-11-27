@@ -61,6 +61,15 @@ describe('MD Parser', () => {
         success: true
       }
     }, {
+      c: 'p',
+      d: ['This text has ', {
+        c: 'ColoredText',
+        d: 'colored text',
+        p: {
+          color: '#456789'
+        }
+      }, ' in it.']
+    }, {
       c: 'h2',
       d: 'Lists'
     }, {

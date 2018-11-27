@@ -16,6 +16,8 @@ Some kind of _info_ block.
 A success info block
 ,,,
 
+This text has ##456789|colored text## in it.
+
 ## Lists
 
 * Item 1

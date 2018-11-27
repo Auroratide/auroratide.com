@@ -1,5 +1,6 @@
 const Rule = require('./Rule');
 const Link = require('./Link');
+const ColoredText = require('./ColoredText');
 const Character = require('./Character');
 const Parser = require('../Parser');
 
@@ -10,7 +11,7 @@ const Parser = require('../Parser');
 class Emphasis extends Rule {
   constructor() {
     super(/^_([^_]*)_/);
-    this.subrules = [ Link, Strong, Character ];
+    this.subrules = [ Link, Strong, ColoredText, Character ];
   }
 
   produce() {
@@ -24,7 +25,7 @@ class Emphasis extends Rule {
 class Strong extends Rule {
   constructor() {
     super(/^\*\*(.*?)\*\*/);
-    this.subrules = [ Link, Emphasis, Character ];
+    this.subrules = [ Link, Emphasis, ColoredText, Character ];
   }
 
   produce() {
