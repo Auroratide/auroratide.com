@@ -49,7 +49,7 @@ This just gives a high-level overview of the methodology behind image steganogra
 
 ## Try it yourself!
 
-Below is a little widget I made for creating your own steganographic images! Simple select a picture from your computer, write up a secret message, then click on the button that says "Encode into Image". Your picture will be modified to contain the image, and you can share it with friends.
+Below is a little widget I made for creating your own steganographic images! Simply select a picture from your computer, write up a secret message, then click on the button that says "Encode into Image". Your picture will be modified to contain the image, and you can share it with friends.
 
 You can also use this tool to find if images have a secret message already. Try using the tool to find the secret in Sullivan's note!
 
