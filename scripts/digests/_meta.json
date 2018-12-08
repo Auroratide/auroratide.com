@@ -1,5 +1,5 @@
 {
-  "next_id": "15",
+  "next_id": "16",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -14,6 +14,7 @@
     "11": "5-star-design-how-ratings-influence-behaviour",
     "12": "systemic-games-a-design-philosophy",
     "13": "the-vulnerable-world-hypothesis",
-    "14": "copyright-and-emoji"
+    "14": "copyright-and-emoji",
+    "15": "continuous-improvement-in-a-safe-environment"
   }
 }
