@@ -31,7 +31,8 @@ import {
   faGithubAlt,
   faReact,
   faMicrosoft,
-  faFacebookF
+  faFacebookF,
+  faAdobe
 } from '@fortawesome/free-brands-svg-icons';
 
 export default {
@@ -65,5 +66,6 @@ export default {
   'github-alt': faGithubAlt,
   'react': faReact,
   'microsoft': faMicrosoft,
-  'facebook': faFacebookF
+  'facebook': faFacebookF,
+  'adobe': faAdobe
 };

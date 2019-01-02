@@ -1,5 +1,5 @@
 {
-  "next_id": "16",
+  "next_id": "17",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -15,6 +15,7 @@
     "12": "systemic-games-a-design-philosophy",
     "13": "the-vulnerable-world-hypothesis",
     "14": "copyright-and-emoji",
-    "15": "continuous-improvement-in-a-safe-environment"
+    "15": "continuous-improvement-in-a-safe-environment",
+    "16": "how-we-saved-flash-s-gaming-legacy"
   }
 }
