@@ -23,7 +23,8 @@ import {
   faAngleDoubleLeft,
   faAngleDoubleRight,
   faImage,
-  faUndoAlt
+  faUndoAlt,
+  faPalette
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -61,6 +62,7 @@ export default {
   'angle-double-right': faAngleDoubleRight,
   'image': faImage,
   'undo': faUndoAlt,
+  'palette': faPalette,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
