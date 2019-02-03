@@ -79,7 +79,10 @@ describe('MD Parser', () => {
         d: 'Item 1'
       }, {
         c: 'li',
-        d: ['Item 2', {
+        d: [{
+          c: 'p',
+          d: 'Item 2'
+        }, {
           c: 'ol',
           d: [ {
             c: 'li',
@@ -109,10 +112,13 @@ describe('MD Parser', () => {
       c: 'h2',
       d: 'Images and Links'
     }, {
-      c: 'img',
-      p: {
-        alt: 'Text',
-        src: '/img/url.png'
+      c: 'p',
+      d: {
+        c: 'img',
+        p: {
+          alt: 'Text',
+          src: '/img/url.png'
+        }
       }
     }, {
       c: 'p',

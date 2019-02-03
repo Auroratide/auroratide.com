@@ -1,32 +1,15 @@
-const Parser = require('./Parser');
-const Heading = require('./rules/Heading');
-const HorizontalFlex = require('./rules/HorizontalFlex');
-const UnorderedList = require('./rules/UnorderedList');
-const OrderedList = require('./rules/OrderedList');
-const Component = require('./rules/Component');
-const Image = require('./rules/Image');
-const CodeBlock = require('./rules/CodeBlock');
+const { Parser } = require('md-reactor/parsing');
 const InfoBlock = require('./rules/InfoBlock');
-const Blockquote = require('./rules/Blockquote');
-const HorizontalRule = require('./rules/HorizontalRule');
-const Paragraph = require('./rules/Paragraph');
-const Ignore = require('./rules/Ignore');
+const HorizontalFlex = require('./rules/HorizontalFlex');
+const CodeBlock = require('./rules/CodeBlock');
+const StegoBody = require('./rules/StegoBody');
 
-const rules = [
-  Heading,
-  HorizontalFlex,
-  UnorderedList,
-  OrderedList,
-  Component,
-  Image,
-  CodeBlock,
-  InfoBlock,
-  Blockquote,
-  HorizontalRule,
-  Paragraph,
-  Ignore
-];
+const Link = require('./rules/Link');
+const ColoredText = require('./rules/ColoredText');
 
 module.exports = input => {
-  return new Parser(input, rules).parse();
+  return Parser
+    .withBlockRules([ HorizontalFlex, InfoBlock, CodeBlock, StegoBody ])
+    .withInlineRules([ Link, ColoredText ])
+    .parse(input);
 };

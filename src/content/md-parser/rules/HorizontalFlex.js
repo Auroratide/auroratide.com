@@ -1,33 +1,18 @@
-const Rule = require('./Rule');
-const UnorderedList = require('./UnorderedList');
-const OrderedList = require('./OrderedList');
-const Component = require('./Component');
-const Image = require('./Image');
-const CodeBlock = require('./CodeBlock');
-const InfoBlock = require('./InfoBlock');
-const Paragraph = require('./Paragraph');
-const Ignore = require('./Ignore');
-const Parser = require('../Parser');
+const { Rule, ProductionBuilder } = require('md-reactor/parsing');
 
 module.exports = class HorizontalFlex extends Rule {
-  constructor() {
-    super(/^<->\r?\n((?:.|\r?\n)*?)\r?\n<->/);
-    this.subrules = [
-      UnorderedList,
-      OrderedList,
-      Component,
-      Image,
-      CodeBlock,
-      InfoBlock,
-      Paragraph,
-      Ignore
-    ];
+  constructor(context) {
+    super(/^<->\r?\n((?:.|\r?\n)*?)\r?\n<->/, context);
+  }
+
+  content() {
+    return this.match[1];
   }
 
   produce() {
-    return {
-      c: 'HorizontalFlex',
-      d: new Parser(this.match[1], this.subrules).parse()
-    };
+    return new ProductionBuilder()
+      .component('HorizontalFlex')
+      .children(this.context.asBlock.parse(this.content()))
+      .build();
   }
 };

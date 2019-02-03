@@ -1,10 +1,11 @@
+import MockContext from './MockContext';
 import ColoredText from 'Content/md-parser/rules/ColoredText';
 
 describe('ColoredText rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new ColoredText();
+    rule = new ColoredText(new MockContext());
   });
 
   describe('matches', () => {

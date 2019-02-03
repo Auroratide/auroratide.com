@@ -1,18 +1,30 @@
-const Rule = require('./Rule');
+const { Rule, ProductionBuilder } = require('md-reactor/parsing');
 
 module.exports = class Link extends Rule {
-  constructor() {
-    super(/^\[([^\]]*)\]\((\*?)([^)]*)\)/);
+  constructor(context) {
+    super(/^\[([^\]]*)\]\((\*?)([^)]*)\)/, context);
+  }
+
+  text() {
+    return this.match[1];
+  }
+
+  href() {
+    return this.match[3];
+  }
+
+  isExternal() {
+    return this.match[2] ? true : false;
   }
 
   produce() {
-    return {
-      c: 'Link',
-      d: this.match[1],
-      p: {
-        to: this.match[3],
-        newTab: this.match[2] ? true : false
-      }
-    };
+    return new ProductionBuilder()
+      .component('Link')
+      .children(this.text())
+      .props({
+        to: this.href(),
+        newTab: this.isExternal()
+      })
+      .build();
   }
 };

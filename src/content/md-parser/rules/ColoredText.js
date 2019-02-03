@@ -1,17 +1,25 @@
-const Rule = require('./Rule');
+const { Rule, ProductionBuilder } = require('md-reactor/parsing');
 
 module.exports = class ColoredText extends Rule {
-  constructor() {
-    super(/^##([0-9a-fA-F]{6})\|(.*?)##/);
+  constructor(context) {
+    super(/^##([0-9a-fA-F]{6})\|(.*?)##/, context);
+  }
+
+  color() {
+    return `#${this.match[1]}`;
+  }
+
+  text() {
+    return this.match[2];
   }
 
   produce() {
-    return {
-      c: 'ColoredText',
-      d: this.match[2],
-      p: {
-        color: '#' + this.match[1]
-      }
-    };
+    return new ProductionBuilder()
+      .component('ColoredText')
+      .children(this.text())
+      .props({
+        color: this.color()
+      })
+      .build();
   }
 };

@@ -22,12 +22,12 @@ This text has ##456789|colored text## in it.
 
 * Item 1
 * Item 2
-  0. SubItem 1
-  0. SubItem 2
+  1. SubItem 1
+  2. SubItem 2
 * Item 3 with **bold** text
 
-0. Item 1
-0. Item 2
+1. Item 1
+2. Item 2
 
 ## Images and Links
 
@@ -50,7 +50,7 @@ const x = 5;
 <Widget width="500" />
 
 <AnotherWidget height="50">
-This is **bold** text.
+  <p>This is <strong>bold</strong> text.</p>
 </AnotherWidget>
 
 ---------------------

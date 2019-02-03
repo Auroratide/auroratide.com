@@ -1,33 +1,34 @@
-const Rule = require('./Rule');
+const { Rule, ProductionBuilder } = require('md-reactor/parsing');
 
 module.exports = class CodeBlock extends Rule {
-  constructor() {
-    super(/^(\+|~|-)?```([a-z]*)\r?\n((?:(?!```).|\r?\n)*)\r?\n```/);
+  constructor(context) {
+    super(/^(\+|~|-)?```([a-z]*)\r?\n((?:(?!```).|\r?\n)*)\r?\n```/, context);
   }
 
-  produce() {
-    let p;
-    if(this.match[1] || this.match[2]) {
-      p = this.match[2] ? {
-        language: this.match[2]
-      } : undefined;
-
-      p = p ? Object.assign(p, this.getType(this.match[1])) : this.getType(this.match[1]);
-    }
-
-    return {
-      c: 'CodeBlock',
-      d: this.match[3],
-      p
-    };
+  code() {
+    return this.match[3];
   }
 
-  getType(char) {
-    switch(char) {
+  language() {
+    return this.match[2];
+  }
+
+  type() {
+    switch(this.match[1]) {
       case '+': return { success: true };
       case '-': return { danger: true };
       case '~': return { warning: true };
-      default: return undefined;
+      default: return {};
     }
+  }
+
+  produce() {
+    return new ProductionBuilder()
+      .component('CodeBlock')
+      .children(this.code())
+      .props(Object.assign({}, this.type(), {
+        language: this.language()
+      }))
+      .build();
   }
 };

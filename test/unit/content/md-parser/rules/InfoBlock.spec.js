@@ -1,10 +1,11 @@
+import MockContext from './MockContext';
 import InfoBlock from 'Content/md-parser/rules/InfoBlock';
 
 describe('InfoBlock rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new InfoBlock();
+    rule = new InfoBlock(new MockContext());
   });
 
   describe('matches', () => {
@@ -35,10 +36,7 @@ describe('InfoBlock rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'InfoBlock',
-        d: {
-          c: 'p',
-          d: 'text'
-        }
+        d: 'text'
       });
     });
 
@@ -47,10 +45,7 @@ describe('InfoBlock rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'InfoBlock',
-        d: {
-          c: 'p',
-          d: 'text'
-        },
+        d: 'text',
         p: {
           success: true
         }
@@ -62,10 +57,7 @@ describe('InfoBlock rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'InfoBlock',
-        d: {
-          c: 'p',
-          d: 'text'
-        },
+        d: 'text',
         p: {
           warning: true
         }
@@ -77,10 +69,7 @@ describe('InfoBlock rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'InfoBlock',
-        d: {
-          c: 'p',
-          d: 'text'
-        },
+        d: 'text',
         p: {
           danger: true
         }

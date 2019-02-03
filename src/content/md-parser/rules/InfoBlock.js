@@ -1,30 +1,28 @@
-const Rule = require('./Rule');
-const UnorderedList = require('./UnorderedList');
-const OrderedList = require('./OrderedList');
-const Paragraph = require('./Paragraph');
-const Ignore = require('./Ignore');
-const Parser = require('../Parser');
+const { Rule, ProductionBuilder } = require('md-reactor/parsing');
 
-module.exports = class CodeBlock extends Rule {
-  constructor() {
-    super(/^(\+|-|~)?,,,\r?\n((?:(?!,,,).|\r?\n)*)\r?\n,,,/);
-    this.subrules = [ UnorderedList, OrderedList, Paragraph, Ignore ];
+module.exports = class InfoBlock extends Rule {
+  constructor(context) {
+    super(/^(\+|-|~)?,,,\r?\n((?:(?!,,,).|\r?\n)*)\r?\n,,,/, context);
   }
 
-  produce() {
-    return {
-      c: 'InfoBlock',
-      d: new Parser(this.match[2], this.subrules).parse(),
-      p: this.getType(this.match[1])
-    };
+  content() {
+    return this.match[2];
   }
 
-  getType(char) {
-    switch(char) {
+  type() {
+    switch(this.match[1]) {
       case '+': return { success: true };
       case '-': return { danger: true };
       case '~': return { warning: true };
       default: return undefined;
     }
+  }
+
+  produce() {
+    return new ProductionBuilder()
+      .component('InfoBlock')
+      .props(this.type())
+      .children(this.context.asBlock.parse(this.content()))
+      .build();
   }
 };

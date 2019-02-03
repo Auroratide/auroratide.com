@@ -1,27 +1,13 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
+import { Renderer } from 'md-reactor/rendering';
 import library from './library';
 
-const RconRenderer = ({ rcon, key }) => {
-  if(Array.isArray(rcon)) {
-    return rcon.map((elem, i) => RconRenderer({ rcon: elem, key: i }));
-  } else if(rcon.c) {
-    const component = library[rcon.c] ? library[rcon.c] : rcon.c;
-    const props = Object.assign({ key }, rcon.p);
-
-    if(rcon.d) {
-      return React.createElement(component, props, RconRenderer({ rcon: rcon.d }));
-    } else {
-      return React.createElement(component, props);
-    }
-  } else {
-    return rcon;
-  }
-};
+const RconRenderer = ({ rcon }) =>
+  <Renderer value={rcon} library={library} />;
 
 RconRenderer.propTypes = {
-  rcon: PropTypes.rcon.isRequired,
-  key: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  rcon: PropTypes.rcon.isRequired
 };
 
 export default RconRenderer;

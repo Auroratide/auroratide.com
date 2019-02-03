@@ -47,7 +47,10 @@ describe('CodeBlock rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'CodeBlock',
-        d: 'const c = 5;'
+        d: 'const c = 5;',
+        p: {
+          language: ''
+        }
       });
     });
 
@@ -58,7 +61,8 @@ describe('CodeBlock rule', () => {
         c: 'CodeBlock',
         d: 'const c = 5;',
         p: {
-          success: true
+          success: true,
+          language: ''
         }
       });
     });
@@ -70,7 +74,8 @@ describe('CodeBlock rule', () => {
         c: 'CodeBlock',
         d: 'const c = 5;',
         p: {
-          warning: true
+          warning: true,
+          language: ''
         }
       });
     });
@@ -82,7 +87,8 @@ describe('CodeBlock rule', () => {
         c: 'CodeBlock',
         d: 'const c = 5;',
         p: {
-          danger: true
+          danger: true,
+          language: ''
         }
       });
     });

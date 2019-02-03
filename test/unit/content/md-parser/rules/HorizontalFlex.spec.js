@@ -1,10 +1,11 @@
+import MockContext from './MockContext';
 import HorizontalFlex from 'Content/md-parser/rules/HorizontalFlex';
 
 describe('HorizontalFlex rule', () => {
   let rule;
 
   beforeEach(() => {
-    rule = new HorizontalFlex();
+    rule = new HorizontalFlex(new MockContext());
   });
 
   describe('matches', () => {
@@ -23,10 +24,7 @@ describe('HorizontalFlex rule', () => {
       
       expect(rule.produce()).toEqual({
         c: 'HorizontalFlex',
-        d: {
-          c: 'p',
-          d: 'Stuff'
-        }
+        d: 'Stuff'
       });
     });
   });
