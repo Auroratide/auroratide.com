@@ -48,7 +48,7 @@
     "debounce": "^1.2.0",
     "flatted": "^2.0.0",
     "intersection-observer": "^0.5.0",
-    "md-reactor": "^0.1.0",
+    "md-reactor": "^0.2.0",
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.5",
     "prop-types": "^15.6.2",
