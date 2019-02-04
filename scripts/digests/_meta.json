@@ -1,5 +1,5 @@
 {
-  "next_id": "18",
+  "next_id": "19",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -17,6 +17,7 @@
     "14": "copyright-and-emoji",
     "15": "continuous-improvement-in-a-safe-environment",
     "16": "how-we-saved-flash-s-gaming-legacy",
-    "17": "19-predictions-for-design-in-2019"
+    "17": "19-predictions-for-design-in-2019",
+    "18": "your-digital-identity-has-three-layers"
   }
 }
