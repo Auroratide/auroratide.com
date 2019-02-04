@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
 import DateDisplay from 'Client/components/core/DateDisplay';
-import StandardTypography from 'Client/components/layout/StandardTypography';
 import RconRenderer from 'Client/components/core/RconRenderer';
 import LinkedRelatedPost from './LinkedRelatedPost';
 
@@ -11,9 +10,7 @@ const Content = ({ post, similarPosts }) =>
   <div className={styles.content}>
     <div className={styles['content-area']}>
       <DateDisplay className={styles['minor-title']} date={new Date(post.publishedAt)} />
-      <StandardTypography>
-        <RconRenderer rcon={post.content || []} />
-      </StandardTypography>
+      <RconRenderer rcon={post.content || []} />
     </div>
     <aside className={styles.sidebar}>
       <h2 className={styles['more-title']}>More on {post.category}</h2>
