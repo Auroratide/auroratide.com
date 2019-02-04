@@ -12,7 +12,55 @@
   force = false
 
 [[redirects]]
-  from = "/*"
+  from = "/legal"
   to = "/index.html"
   status = 200
+  force = false
+
+[[redirects]]
+  from = "/digests"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/connecting-dots-and-unassuming-assumptions"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/folderized-react-components"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/steganography"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/three-types-of-effective-feedback"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/two-ways-to-test-react-components"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
   force = false
