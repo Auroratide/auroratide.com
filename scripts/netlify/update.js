@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
-let netlify = fs.readFileSync(path.join(__dirname, 'templates', 'template.toml'), 'utf-8');
+const netlify = fs.readFileSync(path.join(__dirname, 'templates', 'template.toml'), 'utf-8');
 
+let redirects = '';
 const addRoute = route =>
-  netlify += `
+  redirects += `
 [[redirects]]
   from = "/${route}"
   to = "/index.html"
@@ -23,4 +24,4 @@ config.resources.forEach(resource => {
   });
 });
 
-fs.writeFileSync(path.join(__dirname, '..', '..', 'netlify.toml'), netlify);
+fs.writeFileSync(path.join(__dirname, '..', '..', 'netlify.toml'), netlify.replace('$REDIRECTS$', redirects));

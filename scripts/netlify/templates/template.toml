@@ -10,7 +10,7 @@
   to = "/index.html"
   status = 404
   force = false
-
+$REDIRECTS$
 [[redirects]]
   from = "/*"
   to = "/index.html"
