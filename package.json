@@ -30,7 +30,10 @@
     "test:watch": "NODE_ENV=test jest test/ --watch",
     "components:create": "node scripts/components/create",
     "digests:create": "node scripts/digests/create",
-    "posts:create": "node scripts/posts/create"
+    "posts:create": "npm run _posts:create",
+    "_posts:create": "node scripts/posts/create",
+    "post_posts:create": "npm run netlify:update",
+    "netlify:update": "node scripts/netlify/update"
   },
   "author": "Timothy Foster",
   "license": "ISC",
