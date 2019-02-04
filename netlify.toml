@@ -12,6 +12,12 @@
   force = false
 
 [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+  force = false
+
+[[redirects]]
   from = "/legal"
   to = "/index.html"
   status = 200
@@ -57,10 +63,4 @@
   from = "/posts/two-ways-to-test-react-components"
   to = "/index.html"
   status = 200
-  force = false
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404
   force = false

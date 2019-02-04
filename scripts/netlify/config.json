@@ -1,0 +1,4 @@
+{
+  "routes": ["legal", "digests", "posts"],
+  "resources": ["posts"]
+}
