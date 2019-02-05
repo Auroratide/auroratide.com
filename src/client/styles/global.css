@@ -57,7 +57,7 @@ code {
 
 /* :not(pre) prevents code blocks from being unintentionally styled */
 :not(pre) code {
-  background-color: var(--palette-off-white);
+  background-color: var(--palette-white);
   border-radius: 0.25rem;
   padding: 0 0.333em;
 }
