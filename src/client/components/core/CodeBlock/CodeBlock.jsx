@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter/dist/prism-light';
+import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/prism-light';
 import prism from 'react-syntax-highlighter/dist/styles/prism/prism';
 import classnames from 'classnames';
 import languages from './languages';
 import styles from './style';
 
 for(const [name, language] of Object.entries(languages)) {
-  SyntaxHighlighter.registerLanguage(name, language);
+  registerLanguage(name, language);
 }
 
 const CodeBlock = ({ language, children, success, warning, danger }) =>
