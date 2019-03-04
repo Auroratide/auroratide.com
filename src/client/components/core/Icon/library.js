@@ -26,6 +26,7 @@ import { faUndoAlt } from '@fortawesome/free-solid-svg-icons/faUndoAlt';
 import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette';
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup';
 import { faCube } from '@fortawesome/free-solid-svg-icons/faCube';
+import { faUserCog } from '@fortawesome/free-solid-svg-icons/faUserCog';
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
@@ -64,6 +65,7 @@ export default {
   'palette': faPalette,
   'layer-group': faLayerGroup,
   'cube': faCube,
+  'user-cog': faUserCog,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,

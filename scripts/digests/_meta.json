@@ -1,5 +1,5 @@
 {
-  "next_id": "20",
+  "next_id": "21",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -19,6 +19,7 @@
     "16": "how-we-saved-flash-s-gaming-legacy",
     "17": "19-predictions-for-design-in-2019",
     "18": "your-digital-identity-has-three-layers",
-    "19": "how-can-we-design-an-intelligent-recommendation-engine"
+    "19": "how-can-we-design-an-intelligent-recommendation-engine",
+    "20": "treat-devops-stories-like-user-stories"
   }
 }
