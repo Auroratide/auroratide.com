@@ -1,8 +1,7 @@
 import req from 'Client/api/req';
-import { get } from 'Client/api/posts';
+import { get, getAll } from 'Client/api/posts';
 import ResponseBuilder from 'Test/utils/builders/ResponseBuilder';
 import PostDataBuilder from 'Test/utils/builders/PostDataBuilder';
-import { getAll } from 'Client/api/digests';
 
 describe('Posts API', () => {
 
@@ -37,7 +36,7 @@ describe('Posts API', () => {
     it('should return empty list when there are no posts', async () => {
       const response = new ResponseBuilder()
         .withOk()
-        .withData({ digests: [] })
+        .withData({ posts: [] })
         .build();
       jest.spyOn(req, 'get').mockResolvedValue(response);
 
@@ -49,7 +48,7 @@ describe('Posts API', () => {
     it('should return the list of posts from the api', async () => {
       const response = new ResponseBuilder()
         .withOk()
-        .withData({ digests: [
+        .withData({ posts: [
           new PostDataBuilder().withTitle('Title 1').withoutContent().build(),
           new PostDataBuilder().withTitle('Title 2').withoutContent().build()
         ] })
