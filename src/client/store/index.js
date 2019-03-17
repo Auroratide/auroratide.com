@@ -1,10 +1,11 @@
 import DigestsStore from './digests-store';
-import PostsStore from './posts-store';
+import ResourceStore from './resource-store';
+import * as PostsApi from 'Client/api/posts';
 
 export class RootStore {
   constructor() {
     this.digests = new DigestsStore(this);
-    this.posts = new PostsStore(this);
+    this.posts = new ResourceStore(this, PostsApi);
   }
 }
 

@@ -4,13 +4,14 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
+import ResourceStore from 'Client/store/resource-store';
 import PostItem from './PostItem';
 import Loading from 'Client/components/core/Loading';
 import { renderIfElse } from 'Client/utils/render-if';
 
 class PostsListPage extends React.Component {
   componentDidMount() {
-    this.props.postsStore.refreshPostsList();
+    this.props.postsStore.refreshList();
   }
 
   render() {
@@ -23,7 +24,7 @@ class PostsListPage extends React.Component {
         <Container>
           <ContentArea>
             {postsStore
-              .getPostsList()
+              .list()
               .sort(PostsStore.sorter().byPublishedDate)
               .map(post => <PostItem post={post} key={post.id} />)}
           </ContentArea>
@@ -34,7 +35,7 @@ class PostsListPage extends React.Component {
 }
 
 PostsListPage.propTypes = {
-  postsStore: PropTypes.instanceOf(PostsStore).isRequired
+  postsStore: PropTypes.instanceOf(ResourceStore).isRequired
 };
 
 export default PostsListPage;

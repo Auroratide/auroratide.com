@@ -6,7 +6,7 @@ import Loading from 'Client/components/core/Loading';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import TitleArea from 'Client/components/pages/PostsRouter/PostPage/TitleArea';
 
-import PostsStore from 'Client/store/posts-store';
+import ResourceStore from 'Client/store/resource-store';
 import PostPage from 'Client/components/pages/PostsRouter/PostPage/PostPage';
 
 describe('<PostPage />', () => {
@@ -14,88 +14,89 @@ describe('<PostPage />', () => {
   let store;
   let match;
 
+  let refreshDetails;
+  let refreshList;
+
   beforeEach(() => {
-    store = new PostsStore();
+    store = new ResourceStore();
     match = new RouterMatchBuilder().withParams({ id }).build();
+
+    refreshDetails = jest.spyOn(store, 'refreshDetails').mockResolvedValue();
+    refreshList = jest.spyOn(store, 'refreshList').mockResolvedValue();
   });
 
   afterEach(() => jest.restoreAllMocks());
 
   describe('mounting', () => {
     it('should refresh the needed post on mount', () => {
-      const refreshPostDetails = jest.spyOn(store, 'refreshPostDetails').mockResolvedValue();
       shallow(<PostPage match={match} postsStore={store} />);
   
-      expect(refreshPostDetails).toHaveBeenCalledWith(id);
+      expect(refreshDetails).toHaveBeenCalledWith(id);
     });
 
     it('should refresh the posts list on mount', () => {
-      const refreshPostsList = jest.spyOn(store, 'refreshPostsList').mockResolvedValue();
       shallow(<PostPage match={match} postsStore={store} />);
       
-      expect(refreshPostsList).toHaveBeenCalled();
+      expect(refreshList).toHaveBeenCalled();
     });
   });
   
   describe('updating', () => {
-    let refreshPostDetails;
     let wrapper;
 
     const update = () => wrapper.setProps();
 
     beforeEach(() => {
-      refreshPostDetails = jest.spyOn(store, 'refreshPostDetails').mockResolvedValue();
-      jest.spyOn(store, 'refreshPostsList').mockResolvedValue();
-      store.posts[id] = new PostBuilder().withContent(undefined).build();
+      store.elements[id] = new PostBuilder().withContent(undefined).build();
       wrapper = shallow(<PostPage match={match} postsStore={store} />);
-      refreshPostDetails.mockClear();
+      refreshDetails.mockClear();
     });
     
     it('should refresh post details when the post does not have content', () => {
       update();
   
-      expect(refreshPostDetails).toHaveBeenCalledWith(id);
+      expect(refreshDetails).toHaveBeenCalledWith(id);
     });
 
     it('should not refresh post details when API is already refreshing', () => {
       store.isRefreshing = true;
       update();
 
-      expect(refreshPostDetails).not.toHaveBeenCalled();
+      expect(refreshDetails).not.toHaveBeenCalled();
     });
 
     it('should not refresh post details when content already exists', () => {
-      store.posts[id] = new PostBuilder().withContent('Hey').build();
+      store.elements[id] = new PostBuilder().withContent('Hey').build();
       update();
 
-      expect(refreshPostDetails).not.toHaveBeenCalled();
+      expect(refreshDetails).not.toHaveBeenCalled();
     });
 
     it('should not refresh post details when post is undefined', () => {
-      store.posts[id] = undefined;
+      store.elements[id] = undefined;
       update();
 
-      expect(refreshPostDetails).not.toHaveBeenCalled();
+      expect(refreshDetails).not.toHaveBeenCalled();
     });
   });
 
   describe('rendering', () => {
     it('should render the post', () => {
-      store.posts[id] = new PostBuilder().build();
+      store.elements[id] = new PostBuilder().build();
       const wrapper = shallow(<PostPage match={match} postsStore={store} />);
   
       expect(wrapper.find(TitleArea).exists()).toBe(true);
     });
 
     it('should render the post even when the post does not yet have content', () => {
-      store.posts[id] = new PostBuilder().withContent(undefined).build();
+      store.elements[id] = new PostBuilder().withContent(undefined).build();
       const wrapper = shallow(<PostPage match={match} postsStore={store} />);
   
       expect(wrapper.find(TitleArea).exists()).toBe(true);
     });
 
     it('should render basic information and a loading indicator when the post is only partially loaded', () => {
-      store.posts[id] = new PostBuilder().withContent(undefined).build();
+      store.elements[id] = new PostBuilder().withContent(undefined).build();
       store.isRefreshing = true;
       const wrapper = shallow(<PostPage match={match} postsStore={store} />);
   

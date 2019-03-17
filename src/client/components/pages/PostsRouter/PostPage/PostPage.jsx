@@ -4,6 +4,7 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
+import ResourceStore from 'Client/store/resource-store';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import Loading from 'Client/components/core/Loading';
 import TitleArea from './TitleArea';
@@ -16,15 +17,15 @@ import styles from './style';
 
 class PostPage extends React.Component {
   componentDidMount() {
-    this.props.postsStore.refreshPostDetails(this.getPostId());
-    this.props.postsStore.refreshPostsList();
+    this.props.postsStore.refreshDetails(this.getPostId());
+    this.props.postsStore.refreshList();
   }
 
   componentDidUpdate() {
     const store = this.props.postsStore;
-    const post = store.getPost(this.getPostId());
+    const post = store.get(this.getPostId());
     if(!store.isRefreshing && post && !post.content)
-      store.refreshPostDetails(this.getPostId());
+      store.refreshDetails(this.getPostId());
   }
 
   getPostId = () => {
@@ -32,8 +33,8 @@ class PostPage extends React.Component {
   }
 
   render() {
-    const post = this.props.postsStore.getPost(this.getPostId());
-    const similarPosts = post ? this.props.postsStore.getPostsList()
+    const post = this.props.postsStore.get(this.getPostId());
+    const similarPosts = post ? this.props.postsStore.list()
       .filter(PostsStore.filter().without(post.id))
       .filter(PostsStore.filter().withCategory(post.category))
       .sort(PostsStore.sorter().byPublishedDate)
@@ -64,7 +65,7 @@ class PostPage extends React.Component {
 
 PostPage.propTypes = {
   match: PropTypes.routerMatch.isRequired,
-  postsStore: PropTypes.instanceOf(PostsStore).isRequired
+  postsStore: PropTypes.instanceOf(ResourceStore).isRequired
 };
 
 export default PostPage;
