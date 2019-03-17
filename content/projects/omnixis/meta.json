@@ -1,0 +1,12 @@
+{
+  "id": "omnixis",
+  "title": "Omnixis",
+  "category": "Game",
+  "image": "/assets/projects/omnixis/banner.png",
+  "date": "2016-04-18T00:00:00.000Z",
+  "date_range": "Apr 2016",
+  "links": [ {
+    "title": "Play!",
+    "href": "http://auroratide.github.io/Omnixis/"
+  } ]
+}

@@ -11,10 +11,6 @@ const readFile = file => new Promise((resolve, reject) => fs.readFile(file, 'utf
   err ? reject(err) : resolve(data);
 }));
 
-const exists = file => new Promise(resolve => fs.access(file, fs.constants.F_OK, err => {
-  err ? resolve(false) : resolve(true);
-}));
-
 const ensureDirExists = dir => new Promise((resolve, reject) => mkdirp(dir, err => {
   err ? reject(err) : resolve();
 }));
@@ -31,12 +27,20 @@ const saveAsJson = async (dir, name, obj) => {
 const parseAllInDir = async dir => {
   const entries = await readdir(dir);
   return Promise.all(entries.map(async entry => {
-    const obj = JSON.parse(await readFile(path.join(dir, entry, 'meta.json')));
-    const contentPath = path.join(dir, entry, 'content.md');
-    if(await exists(contentPath))
-      return { content: parse(await readFile(contentPath)), ...obj };
-    else
-      return obj;
+    const entryPath = path.join(dir, entry);
+    let obj = JSON.parse(await readFile(path.join(entryPath, 'meta.json')));
+
+    const files = await readdir(entryPath);
+    for(const file of files) {
+      const match = file.match(/^([a-z0-9_]+)\.md$/);
+
+      if(match) {
+        const fieldName = match[1];
+        obj = { [fieldName]: parse(await readFile(path.join(entryPath, file))), ...obj };
+      }
+    }
+
+    return obj;
   }));
 };
 

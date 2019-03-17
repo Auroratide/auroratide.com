@@ -65,6 +65,16 @@ describe('fs', () => {
       expect(objects[1].content).toBeDefined();
     });
 
+    it('should parse any md file into a field', async () => {
+      realFs.writeFileSync(path.join(DIR, 'file-1', 'summary.md'), 'Summary');
+
+      const objects = await fs.parseAllInDir(DIR);
+
+      expect(objects).toHaveLength(2);
+      expect(objects[0].content).toBeDefined();
+      expect(objects[0].summary).toBeDefined();
+    });
+
     it('should not parse content if the content file is missing', async () => {
       mkdirp.sync(path.join(DIR, 'file-3'));
       realFs.writeFileSync(path.join(DIR, 'file-3', 'meta.json'), JSON.stringify({ id: '3' }));
