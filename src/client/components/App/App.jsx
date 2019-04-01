@@ -11,6 +11,7 @@ import HomePage from 'Client/components/pages/HomePage';
 import PostsRouter from 'Client/components/pages/PostsRouter';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 import LegalPage from 'Client/components/pages/LegalPage';
+import WhodokuPage from 'Client/components/pages/WhodokuPage';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 import GenericErrorPage from 'Client/components/pages/GenericErrorPage';
 
@@ -35,6 +36,7 @@ const App = ({ location }) =>
               <Route path={Links.Auroratide.POSTS} component={PostsRouter} />
               <Route exact path={Links.Auroratide.DIGESTS} component={DigestsPage} />
               <Route exact path={Links.Auroratide.LEGAL} component={LegalPage} />
+              <Route exact path={Links.Auroratide.WHODOKU} component={WhodokuPage} />
               <Route path='*' component={PageNotFound} />
             </Switch>
           </ErrorBoundary>

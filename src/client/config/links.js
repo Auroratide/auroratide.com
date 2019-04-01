@@ -3,7 +3,8 @@ const Auroratide = {
   HOME: '/',
   DIGESTS: '/digests',
   POSTS: '/posts',
-  LEGAL: '/legal'
+  LEGAL: '/legal',
+  WHODOKU: '/whodoku'
 };
 
 const Social = {
