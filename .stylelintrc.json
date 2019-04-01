@@ -6,7 +6,7 @@
     "custom-property-empty-line-before": null,
     "color-named": "never",
     "number-max-precision": 4,
-    "unit-whitelist": ["em", "rem", "%", "vw", "vh", "deg", "ms", "s"],
+    "unit-whitelist": ["em", "rem", "%", "vw", "vh", "deg", "ms", "s", "fr", "vmin", "vmax"],
     "shorthand-property-no-redundant-values": true,
     "value-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
