@@ -6,7 +6,7 @@
   justify-content: center;
   border-top: 0.125rem solid var(--palette-dark-grey);
   border-left: 0.125rem solid var(--palette-dark-grey);
-  padding: 5%;
+  padding: 7.5%;
 }
 
 .square:nth-child(9n) {
@@ -29,8 +29,9 @@
 
 .square img {
   width: 100%;
+  box-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.25);
 }
 
 .square.cannot-edit {
-  background: var(--palette-off-black);
+  background: var(--palette-med-grey);
 }
