@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { renderIf } from 'Client/utils/render-if';
+import State from './state';
+
 import styles from './style';
 
-const Square = ({ value, onClick }) =>
+const Square = ({ state, onClick }) =>
   <div className={styles.square} onClick={onClick}>
-    {renderIf(value, () => <img src={`/assets/whodoku/${value}.png`} alt={value} />)}
+    {renderIf(state.value, () => <img src={`/assets/whodoku/${state.value}.png`} alt={state.value} />)}
   </div>;
 
 Square.propTypes = {
-  value: PropTypes.number,
+  state: PropTypes.instanceOf(State).isRequired,
   onClick: PropTypes.func
 };
 

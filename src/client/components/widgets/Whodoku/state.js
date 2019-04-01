@@ -1,10 +1,11 @@
 import { observable } from 'mobx';
+import sudoku from './sudoku';
+import Square from './Square';
 
 export default class State {
-  @observable board = new Array(81).fill(null);
+  @observable board = [];
 
-  increment(position) {
-    if(++this.board[position] > 9)
-      this.board[position] = null;
+  newPuzzle() {
+    this.board = sudoku.newPuzzle().map(value => new Square.State(value));
   }
 }
