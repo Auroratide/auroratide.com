@@ -30,3 +30,7 @@
 .square img {
   width: 100%;
 }
+
+.square.cannot-edit {
+  background: var(--palette-off-black);
+}
