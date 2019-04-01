@@ -1,5 +1,10 @@
 @import "theme";
 
 .whodoku {
-  
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  width: 80vmin;
+  height: 80vmin;
+  margin: 2rem auto;
 }

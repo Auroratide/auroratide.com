@@ -1,0 +1,27 @@
+@import "theme";
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.125rem solid var(--palette-dark-grey);
+  border-left: 0.125rem solid var(--palette-dark-grey);
+}
+
+.square:nth-child(9n) {
+  border-right: 0.125rem solid var(--palette-dark-grey);
+}
+
+.square:nth-last-child(-n + 9) {
+  border-bottom: 0.125rem solid var(--palette-dark-grey);
+}
+
+.square:nth-child(9n + 4),
+.square:nth-child(9n + 7) {
+  border-left-width: 0.25rem;
+}
+
+.square:nth-child(n + 28):not(:nth-child(n + 37)),
+.square:nth-child(n + 55):not(:nth-child(n + 64)) {
+  border-top-width: 0.25rem;
+}
