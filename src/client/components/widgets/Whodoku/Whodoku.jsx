@@ -7,7 +7,9 @@ import styles from './style';
 
 const Whodoku = ({ state }) =>
   <div className={styles.whodoku}>
-    {state.board.map((value, i) => <Square value={value} key={i} />)}
+    {state.board.map((value, i) =>
+      <Square value={value} key={i} onClick={() => state.increment(i)} />
+    )}
   </div>;
 
 Whodoku.propTypes = {
