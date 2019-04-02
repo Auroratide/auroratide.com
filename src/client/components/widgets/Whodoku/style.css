@@ -2,6 +2,7 @@
 
 .whodoku {
   margin: 3rem 0;
+  position: relative;
 }
 
 .board {
@@ -13,6 +14,10 @@
   margin: 0 auto 3rem;
 }
 
+.board.solved {
+  opacity: 0.15;
+}
+
 .buttons {
   display: flex;
   justify-content: space-evenly;
@@ -20,4 +25,13 @@
 
 .button {
   @mixin typography-responsive md;
+}
+
+.solved-text {
+  @mixin typography-responsive xj;
+
+  position: absolute;
+  top: 6rem;
+  width: 100%;
+  text-align: center;
 }
