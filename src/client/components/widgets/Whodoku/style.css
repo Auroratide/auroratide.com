@@ -1,7 +1,7 @@
 @import "theme";
 
 .whodoku {
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   position: relative;
 }
 
@@ -12,10 +12,11 @@
   width: 80vmin;
   height: 80vmin;
   margin: 0 auto 3rem;
+  user-select: none;
 }
 
 .board.solved {
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 .buttons {
@@ -30,6 +31,7 @@
 .solved-text {
   @mixin typography-responsive xj;
 
+  background: var(--palette-grey);
   position: absolute;
   top: 6rem;
   width: 100%;
