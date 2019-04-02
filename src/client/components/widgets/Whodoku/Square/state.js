@@ -9,6 +9,11 @@ export default class State {
     this.canBeEdited = value ? false : true;
   }
 
+  reset() {
+    if(this.canBeEdited)
+      this.value = null;
+  }
+
   increment() {
     if(++this.value > 9)
       this.value = null;

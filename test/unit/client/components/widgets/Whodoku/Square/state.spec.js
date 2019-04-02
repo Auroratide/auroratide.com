@@ -32,4 +32,23 @@ describe('Whodoku Square state', () => {
       expect(state.value).toBeNull();
     });
   });
+
+  describe('reset', () => {
+    it('should reset the square value to null', () => {
+      state.value = 6;
+
+      state.reset();
+
+      expect(state.value).toBeNull();
+    });
+
+    it('should not reset the square value if the square cannot be edited', () => {
+      state.value = 6;
+      state.canBeEdited = false;
+
+      state.reset();
+
+      expect(state.value).toEqual(6);
+    });
+  });
 });
