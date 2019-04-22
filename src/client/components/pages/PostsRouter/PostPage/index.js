@@ -1,6 +1,6 @@
-import { observer } from 'mobx-react';
-import { withRouter } from 'react-router-dom';
-import container from './container';
+import withId from './with-id';
 import PostPage from './PostPage';
 
-export default withRouter(container(observer(PostPage)));
+import withResourceItem from 'Client/components/core/with-resource-item';
+
+export default withId(withResourceItem(store => store.posts)(PostPage));

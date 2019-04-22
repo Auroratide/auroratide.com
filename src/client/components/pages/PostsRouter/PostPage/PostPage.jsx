@@ -5,7 +5,6 @@ import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
 import ResourceStore from 'Client/store/resource-store';
-import PageNotFound from 'Client/components/pages/PageNotFound';
 import Loading from 'Client/components/core/Loading';
 import TitleArea from './TitleArea';
 import Content from './Content';
@@ -17,55 +16,37 @@ import styles from './style';
 
 class PostPage extends React.Component {
   componentDidMount() {
-    this.props.postsStore.refreshDetails(this.getPostId());
-    this.props.postsStore.refreshList();
-  }
-
-  componentDidUpdate() {
-    const store = this.props.postsStore;
-    const post = store.get(this.getPostId());
-    if(!store.isRefreshing && post && !post.content)
-      store.refreshDetails(this.getPostId());
-  }
-
-  getPostId = () => {
-    return this.props.match.params.id;
+    this.props.store.refreshList();
   }
 
   render() {
-    const post = this.props.postsStore.get(this.getPostId());
-    const similarPosts = post ? this.props.postsStore.list()
-      .filter(PostsStore.filter().without(post.id))
-      .filter(PostsStore.filter().withCategory(post.category))
+    const item = this.props.item;
+    const similarPosts = item ? this.props.store.list()
+      .filter(PostsStore.filter().without(item.id))
+      .filter(PostsStore.filter().withCategory(item.category))
       .sort(PostsStore.sorter().byPublishedDate)
       .filter(PostsStore.filter().top(5)) : [];
     
-    return renderIfElse(post, () =>
-      <DocumentTitle title={post.title}>
-        <Container.article className={styles['post-page']}>
-          <TitleArea title={post.title} color={post.color} icon={post.icon} />
-          <ContentArea white className={styles.content}>
-            <ShareButtons post={post} />
-            {renderIfElse(!post.content && this.props.postsStore.isRefreshing, () =>
-              <Loading text='Fetching content...' />
-            ).elseRender(() =>
-              <Content post={post} similarPosts={similarPosts} />
-            )}
-            <Comments slug={post.id} />
-          </ContentArea>
-        </Container.article>
-      </DocumentTitle>
-    ).elseRender(() => renderIfElse(this.props.postsStore.isRefreshing, () =>
-      <Loading text='Fetching post...' />
-    ).elseRender(() =>
-      <PageNotFound />
-    ));
+    return <DocumentTitle title={item.title}>
+      <Container.article className={styles['post-page']}>
+        <TitleArea title={item.title} color={item.color} icon={item.icon} />
+        <ContentArea white className={styles.content}>
+          <ShareButtons post={item} />
+          {renderIfElse(!item.content && this.props.store.isRefreshing, () =>
+            <Loading text='Fetching content...' />
+          ).elseRender(() =>
+            <Content post={item} similarPosts={similarPosts} />
+          )}
+          <Comments slug={item.id} />
+        </ContentArea>
+      </Container.article>
+    </DocumentTitle>;
   }
 }
 
 PostPage.propTypes = {
-  match: PropTypes.routerMatch.isRequired,
-  postsStore: PropTypes.instanceOf(ResourceStore).isRequired
+  item: PropTypes.post.isRequired,
+  store: PropTypes.instanceOf(ResourceStore).isRequired
 };
 
 export default PostPage;
