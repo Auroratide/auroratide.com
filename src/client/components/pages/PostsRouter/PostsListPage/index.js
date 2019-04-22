@@ -1,5 +1,4 @@
-import { observer } from 'mobx-react';
-import container from './container';
+import withResourceList from 'Client/components/core/with-resource-list';
 import PostsListPage from './PostsListPage';
 
-export default container(observer(PostsListPage));
+export default withResourceList(store => store.posts)(PostsListPage);
