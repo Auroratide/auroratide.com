@@ -9,28 +9,54 @@ describe('Build Projects Functional', () => {
 
   const TMP_DIR = path.join(__dirname, 'tmp');
 
-  let project;
+  let older;
+  let newer;
 
   beforeEach(() => {
-    project = new ProjectDataBuilder()
-      .withId('project-id')
-      .withDate('2018-05-27T00:00:00Z')
-      .build();
+    older = createProject('older', '2018-05-27T00:00:00Z');
+    newer = createProject('newer', '2018-05-28T00:00:00Z');
+  });
 
-    mkdirp.sync(path.join(TMP_DIR, 'project'));
-    fs.writeFileSync(path.join(TMP_DIR, 'project', 'meta.json'), JSON.stringify(project));
-    fs.writeFileSync(path.join(TMP_DIR, 'project', 'content.md'), 'Content');
-    fs.writeFileSync(path.join(TMP_DIR, 'project', 'summary.md'), 'Summary');
+  it('should write the projects into a single array in the index.json file', async done => {
+    const strip = project => {
+      const { content, summary, links, ...rest } = project; // eslint-disable-line
+      return rest;
+    };
+
+    const expectedObject = {
+      projects: [ strip(newer), strip(older) ]
+    };
+
+    await build(TMP_DIR, TMP_DIR);
+
+    fs.readFile(path.join(TMP_DIR, 'index.json'), (err, data) => {
+      expect(JSON.parse(data)).toEqual(expectedObject);
+      done();
+    });
   });
 
   it('should write a file for each project', async done => {
     await build(TMP_DIR, TMP_DIR);
 
-    fs.readFile(path.join(TMP_DIR, 'project-id.json'), (err, data) => {
-      expect(JSON.parse(data)).toEqual(project);
+    fs.readFile(path.join(TMP_DIR, 'older.json'), (err, data) => {
+      expect(JSON.parse(data)).toEqual(older);
       done();
     });
   });
 
   afterEach(done => rimraf(TMP_DIR, done));
+
+  const createProject = (id, date) => {
+    const project = new ProjectDataBuilder()
+      .withId(id)
+      .withDate(date)
+      .build();
+
+    mkdirp.sync(path.join(TMP_DIR, id));
+    fs.writeFileSync(path.join(TMP_DIR, id, 'meta.json'), JSON.stringify(project));
+    fs.writeFileSync(path.join(TMP_DIR, id, 'content.md'), 'Content');
+    fs.writeFileSync(path.join(TMP_DIR, id, 'summary.md'), 'Summary');
+
+    return project;
+  };
 });
