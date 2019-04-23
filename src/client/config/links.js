@@ -3,6 +3,7 @@ const Auroratide = {
   HOME: '/',
   DIGESTS: '/digests',
   POSTS: '/posts',
+  PROJECTS: '/projects',
   LEGAL: '/legal',
   WHODOKU: '/whodoku'
 };
