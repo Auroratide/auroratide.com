@@ -12,7 +12,7 @@ const DownloadButtons = ({ links }) =>
   </div>;
 
 DownloadButtons.propTypes = {
-  links: PropTypes.project.links
+  links: PropTypes.arrayOf(PropTypes.projectDownloadLink)
 };
 
 DownloadButtons.defaultProps = {
