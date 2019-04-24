@@ -1,0 +1,1 @@
+Chase Hamilton is a philosophical genius with a passion for debate. Wanting to see others succeed in high school debate, Chase has taken upon himself the mantle of of being a private coach. So, Chase needed a site which could showcase his credibility and portray him as a genuine person. This is the result.
