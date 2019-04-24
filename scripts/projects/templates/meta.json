@@ -3,10 +3,14 @@
   "title": "",
   "category": "",
   "image": "",
-  "date": "$DATE",
+  "date": "$DATE$",
   "date_range": "",
   "links": [ {
     "title": "",
     "href": ""
+  } ],
+  "gallery": [ {
+    "image": "",
+    "caption": ""
   } ]
 }
