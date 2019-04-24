@@ -8,6 +8,11 @@ const link = raw => ( {
   href: raw.href
 } );
 
+const galleryImage = raw => ( {
+  image: raw.image,
+  caption: raw.caption
+} );
+
 const map = raw => ( {
   id: raw.id,
   title: raw.title,
@@ -16,6 +21,7 @@ const map = raw => ( {
   date: raw.date,
   dateRange: raw.date_range,
   links: raw.links ? raw.links.map(link) : [],
+  gallery: raw.gallery ? raw.gallery.map(galleryImage) : [],
   summary: raw.summary,
   content: raw.content
 } );
