@@ -51,6 +51,14 @@ export class UrlBuilder {
     return `${this.url}${Auroratide.POSTS}/${id}`;
   }
 
+  projects() {
+    return `${this.url}${Auroratide.PROJECTS}`;
+  }
+
+  project(id) {
+    return `${this.url}${Auroratide.PROJECTS}/${id}`;
+  }
+
   legal() {
     return `${this.url}${Auroratide.LEGAL}`;
   }

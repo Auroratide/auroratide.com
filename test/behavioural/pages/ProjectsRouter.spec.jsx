@@ -39,4 +39,39 @@ describe('ProjectsRouter Behaviour', () => {
       expect(wrapper.text()).toContain('The Title');
     });
   });
+
+  describe('Projects List', () => {
+    const page = () => withInitialRoute('').mount(<ProjectsRouter />);
+
+    beforeEach(() => {
+      const newer = new ProjectDataBuilder()
+        .withId('newer')
+        .withTitle('Newer Post')
+        .withDate('2018-09-20T00:00:00Z')
+        .build();
+
+      const older = new ProjectDataBuilder()
+        .withId('older')
+        .withTitle('Older Post')
+        .withDate('2018-09-19T00:00:00Z')
+        .build();
+  
+      http
+        .when.get('/projects/index.json')
+        .then.reply(200, {
+          projects: [newer, older]
+        });
+    });
+
+    it('should render each post onto the page in sorted order', async () => {
+      const wrapper = page();
+      expect(wrapper.find(Loading).exists()).toBe(true);
+
+      await allActionsToComplete();
+      wrapper.update();
+
+      expect(wrapper.find(Loading).exists()).toBe(false);
+      expect(wrapper.text()).toEqual(expect.stringMatching(/Newer Post.*Older Post/));
+    });
+  });
 });

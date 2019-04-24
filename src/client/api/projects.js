@@ -12,7 +12,7 @@ const map = raw => ( {
   image: raw.image,
   date: raw.date,
   dateRange: raw.date_range,
-  links: raw.links.map(link),
+  links: raw.links ? raw.links.map(link) : [],
   summary: raw.summary,
   content: raw.content
 } );
@@ -20,3 +20,7 @@ const map = raw => ( {
 export const get = (id) => req.get(`/projects/${id}.json`)
   .then(res => res.data)
   .then(map);
+
+export const getAll = () => req.get('/projects/index.json')
+  .then(res => res.data)
+  .then(data => data.projects.map(map));
