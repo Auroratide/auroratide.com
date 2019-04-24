@@ -34,6 +34,8 @@
     "posts:create": "npm run _posts:create",
     "_posts:create": "node scripts/posts/create",
     "post_posts:create": "npm run netlify:update",
+    "projects:create": "node scripts/projects/create",
+    "postprojects:create": "npm run netlify:update",
     "netlify:update": "node scripts/netlify/update"
   },
   "author": "Timothy Foster",

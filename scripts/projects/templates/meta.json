@@ -1,0 +1,12 @@
+{
+  "id": "$SLUG$",
+  "title": "",
+  "category": "",
+  "image": "",
+  "date": "$DATE",
+  "date_range": "",
+  "links": [ {
+    "title": "",
+    "href": ""
+  } ]
+}
