@@ -6,12 +6,14 @@ import ContentArea from 'Client/components/layout/ContentArea';
 import ResourceStore from 'Client/store/resource-store';
 import ProjectItem from './ProjectItem';
 
+import styles from './style';
+
 const ProjectsListPage = ({ store }) =>
   <DocumentTitle title='Projects'>
     <Container>
-      <ContentArea>{store
+      <ContentArea className={styles.items}>{store
         .list()
-        .map(project => <ProjectItem project={project} key={project.id} />)
+        .map(project => <ProjectItem className={styles.item} project={project} key={project.id} />)
       }</ContentArea>
     </Container>
   </DocumentTitle>;

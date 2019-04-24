@@ -1,1 +1,44 @@
 @import "theme";
+
+@mixin palette-theme .project-item, border-bottom-color {
+  display: block;
+  background-color: var(--palette-black);
+  margin-top: 0;
+  color: var(--palette-off-black);
+  border-bottom-width: 0;
+  border-bottom-style: solid;
+  transition: var(--transition-short) border-bottom-width, var(--transition-short) margin-top;
+}
+
+.project-item:hover {
+  border-bottom-width: 0.5rem;
+  margin-top: -0.5rem;
+  color: initial;
+}
+
+.image {
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.text-area {
+  background: var(--palette-white);
+  padding: 1rem;
+}
+
+.title {
+  @mixin typography-responsive lg;
+
+  margin-bottom: 0.5rem;
+}
+
+.byline {
+  opacity: 0.5;
+}
+
+.bullet {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
