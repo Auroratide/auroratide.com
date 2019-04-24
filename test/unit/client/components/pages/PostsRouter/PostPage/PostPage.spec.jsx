@@ -9,20 +9,16 @@ import PostPage from 'Client/components/pages/PostsRouter/PostPage/PostPage';
 
 describe('<PostPage />', () => {
   let store;
+  let refreshList;
 
   beforeEach(() => {
     store = new ResourceStore();
+    refreshList = jest.spyOn(store, 'refreshList').mockResolvedValue();
   });
   
   afterEach(() => jest.restoreAllMocks());
   
   describe('mounting', () => {
-    let refreshList;
-    
-    beforeEach(() => {
-      refreshList = jest.spyOn(store, 'refreshList').mockResolvedValue();
-    });
-
     it('should refresh the posts list on mount', () => {
       shallow(<PostPage item={new PostBuilder().build()} store={store} />);
       

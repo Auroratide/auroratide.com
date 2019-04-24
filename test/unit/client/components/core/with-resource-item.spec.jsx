@@ -9,12 +9,15 @@ describe('with-resource-item', () => {
   const id = 'id';
   const item = { id };
   let store;
+  let refreshDetails;
+
   const WithResourceItem = withResourceItem(() =>
     <aside>Hi</aside>
   );
 
   beforeEach(() => {
     store = new ResourceStore(null, null);
+    refreshDetails = jest.spyOn(store, 'refreshDetails').mockImplementation(() => {});
   });
 
   describe('rendering', () => {
@@ -43,13 +46,12 @@ describe('with-resource-item', () => {
 
   describe('updating', () => {
     let wrapper;
-    let refreshDetails;
 
     const update = () => wrapper.setProps();
 
     beforeEach(() => {
       wrapper = shallow(<WithResourceItem id={id} store={store} />);
-      refreshDetails = jest.spyOn(store, 'refreshDetails');
+      refreshDetails.mockClear();
     });
 
     afterEach(() => jest.restoreAllMocks());
