@@ -21,6 +21,20 @@ describe('UrlBuilder', () => {
     });
   });
 
+  describe('apiFor', () => {
+    it('should append the api suffix to the url for list link', () => {
+      const url = builder.apiFor().posts();
+
+      expect(url).toEqual(Links.Auroratide.POSTS + '/index.json');
+    });
+
+    it('should append the api suffix to the url for id link', () => {
+      const url = builder.apiFor().post('id');
+
+      expect(url).toEqual(Links.Auroratide.POSTS + '/id.json');
+    });
+  });
+
   describe('posts', () => {
     it('should go to the posts path', () => {
       const url = builder.posts();

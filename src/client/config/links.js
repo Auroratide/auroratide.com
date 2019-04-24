@@ -26,12 +26,20 @@ export default {
 };
 
 export class UrlBuilder {
+  static API_SUFFIX = '.json';
+
   constructor() {
     this.url = '';
+    this.api = false;
   }
 
   withBase() {
     this.url = Auroratide.BASE;
+    return this;
+  }
+
+  apiFor() {
+    this.api = true;
     return this;
   }
 
@@ -40,23 +48,23 @@ export class UrlBuilder {
   }
 
   digests() {
-    return `${this.url}${Auroratide.DIGESTS}`;
+    return `${this.url}${Auroratide.DIGESTS}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`;
   }
 
   posts() {
-    return `${this.url}${Auroratide.POSTS}`;
+    return `${this.url}${Auroratide.POSTS}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`;
   }
 
   post(id) {
-    return `${this.url}${Auroratide.POSTS}/${id}`;
+    return `${this.url}${Auroratide.POSTS}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`;
   }
 
   projects() {
-    return `${this.url}${Auroratide.PROJECTS}`;
+    return `${this.url}${Auroratide.PROJECTS}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`;
   }
 
   project(id) {
-    return `${this.url}${Auroratide.PROJECTS}/${id}`;
+    return `${this.url}${Auroratide.PROJECTS}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`;
   }
 
   legal() {

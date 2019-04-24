@@ -1,4 +1,7 @@
 import req from './req';
+import { UrlBuilder } from 'Client/config/links';
+
+const url = new UrlBuilder().apiFor();
 
 const link = raw => ( {
   title: raw.title,
@@ -17,10 +20,10 @@ const map = raw => ( {
   content: raw.content
 } );
 
-export const get = (id) => req.get(`/projects/${id}.json`)
+export const get = (id) => req.get(url.project(id))
   .then(res => res.data)
   .then(map);
 
-export const getAll = () => req.get('/projects/index.json')
+export const getAll = () => req.get(url.projects())
   .then(res => res.data)
   .then(data => data.projects.map(map));

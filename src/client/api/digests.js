@@ -1,4 +1,7 @@
 import req from './req';
+import { UrlBuilder } from 'Client/config/links';
+
+const url = new UrlBuilder().apiFor();
 
 const mapDigest = raw => ( {
   id: raw.id,
@@ -12,6 +15,6 @@ const mapDigest = raw => ( {
   source: raw.source
 } );
 
-export const getAll = () => req.get('/digests/index.json')
+export const getAll = () => req.get(url.digests())
   .then(res => res.data)
   .then(data => data.digests.map(mapDigest));
