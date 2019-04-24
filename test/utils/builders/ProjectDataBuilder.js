@@ -12,6 +12,10 @@ const Base =  zaha({
   links: is.arrayOf(is.object({
     title: is.string(),
     href: is.string()
+  })),
+  gallery: is.arrayOf(is.object({
+    image: is.string(),
+    title: is.string()
   }))
 });
 

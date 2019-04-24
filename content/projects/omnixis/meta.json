@@ -8,5 +8,12 @@
   "links": [ {
     "title": "Play!",
     "href": "http://auroratide.github.io/Omnixis/"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/omnixis/title.png",
+    "caption": "The game keeps a highscore like an arcade game"
+  }, {
+    "image": "/assets/projects/omnixis/gameplay.png",
+    "caption": "Don't let the blocks get to the edges!"
   } ]
 }

@@ -19,7 +19,7 @@ describe('Build Projects Functional', () => {
 
   it('should write the projects into a single array in the index.json file', async done => {
     const strip = project => {
-      const { content, summary, links, ...rest } = project; // eslint-disable-line
+      const { content, summary, links, gallery, ...rest } = project; // eslint-disable-line
       return rest;
     };
 

@@ -8,7 +8,7 @@ const sortByDate = (postsList) => postsList.sort((lhs, rhs) => {
 
 const strip = items => items.map(item => {
   const {
-    content, summary, links, // eslint-disable-line
+    content, summary, links, gallery, // eslint-disable-line
     ...rest
   } = item;
   return rest;
