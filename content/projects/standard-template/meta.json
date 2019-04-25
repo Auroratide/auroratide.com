@@ -1,0 +1,19 @@
+{
+  "id": "standard-template",
+  "title": "Standard Template",
+  "category": "Website",
+  "image": "/assets/projects/standard-template/banner.png",
+  "date": "2014-08-01T00:00:00.000Z",
+  "date_range": "Aug 2014",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://standard-template.wikidot.com/"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/standard-template/notebook.png",
+    "caption": "The Notebook allows users to easily maintain a webbook"
+  }, {
+    "image": "/assets/projects/standard-template/blog.png",
+    "caption": "The Blog Template provides a ready-to-use blog"
+  } ]
+}

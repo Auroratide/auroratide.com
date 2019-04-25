@@ -1,0 +1,1 @@
+The Standard Template is Wikidot's first Bootstrap-enabled template site. It provides basic pages and facilities to help others get started on their new projects. Wikidot users can hence clone the site and modify it in order to fit their needs. I made templates for notebook, blog, and generic sites.

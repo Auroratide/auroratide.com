@@ -114,6 +114,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/standard-template"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/projects/tamu-peer-teachers"
   to = "/index.html"
   status = 200
