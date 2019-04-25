@@ -1,0 +1,24 @@
+{
+  "id": "code-highlight",
+  "title": "code.highlight()",
+  "category": "Tool",
+  "image": "/assets/projects/code-highlight/banner.png",
+  "date": "2015-01-01T00:00:00.000Z",
+  "date_range": "Jan 2015",
+  "links": [ {
+    "title": "Try it!",
+    "href": "http://newprogrammer.wdfiles.com/local--files/system%3Acode-highlight/codehighlight.html"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Ardeol/newprogrammer.codehighlight",
+    "icon": "github-alt",
+    "color": "github"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/code-highlight/input.png",
+    "caption": "Custom types can be checked"
+  }, {
+    "image": "/assets/projects/code-highlight/output.png",
+    "caption": "code.highlight() can output HTML code"
+  } ]
+}
