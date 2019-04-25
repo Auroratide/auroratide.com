@@ -120,6 +120,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/minesweeper"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/projects/nonupo"
   to = "/index.html"
   status = 200
