@@ -1,0 +1,1 @@
+The TI-Basic Developer is a repository for information regarding the TI-Basic programming language on TI's graphic calculators. The website contains multiple encyclopedic entries of techniques, documentation of all available functions, and an archive for programs developed by users.
