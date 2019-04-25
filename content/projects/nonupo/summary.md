@@ -1,0 +1,1 @@
+Nonupo is my first major project using an object-oriented language: ActionScript 3. That's right. Nonupo is a Flash game. Made back when Flash was still cool, the game was invented when a friend challenged me to make a game using only paper, pencil, and a 10-sided die. The result? A challenging, brainy game with an unforgiving AI capable of being humans, including myself.

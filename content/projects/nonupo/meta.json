@@ -1,0 +1,19 @@
+{
+  "id": "nonupo",
+  "title": "Nonupo",
+  "category": "Game",
+  "image": "/assets/projects/nonupo/banner.png",
+  "date": "2013-01-00T00:00:00.000Z",
+  "date_range": "Jan - Mar 2013",
+  "links": [ {
+    "title": "Play!",
+    "href": "http://publicvar.wikidot.com/flashdemo:nonupo"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/nonupo/gameplay.png",
+    "caption": "Performing a roll has a sweet little animation"
+  }, {
+    "image": "/assets/projects/nonupo/menu.png",
+    "caption": "Choose between five difficulty levels"
+  } ]
+}
