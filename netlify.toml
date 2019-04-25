@@ -72,6 +72,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/castle-crew-conundrum"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/projects/chase-hamilton"
   to = "/index.html"
   status = 200

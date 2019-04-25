@@ -1,0 +1,19 @@
+{
+  "id": "castle-crew-conundrum",
+  "title": "Castle Crew Conundrum",
+  "category": "Game",
+  "image": "/assets/projects/castle-crew-conundrum/banner.png",
+  "date": "2015-12-01T00:00:00.000Z",
+  "date_range": "Dec 2015",
+  "links": [ {
+    "title": "Play!",
+    "href": "https://www.scirra.com/arcade/multiplayer-games/castle-crew-conundrum-4202"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/castle-crew-conundrum/menu.png",
+    "caption": "There are six characters operating the silly castle"
+  }, {
+    "image": "/assets/projects/castle-crew-conundrum/gameplay.png",
+    "caption": "Launch golem corpses at live golems!"
+  } ]
+}
