@@ -1,0 +1,19 @@
+{
+  "id": "tagd-igda",
+  "title": "TAGD IGDA",
+  "category": "Website",
+  "image": "/assets/projects/tagd-igda/banner.png",
+  "date": "2013-08-01T00:00:00.000Z",
+  "date_range": "2013 - 2016",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://tagd.wikidot.com/"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/tagd-igda/games.png",
+    "caption": "Games made by TAGD's members are showcased on the site"
+  }, {
+    "image": "/assets/projects/tagd-igda/calendar.png",
+    "caption": "A calendar ensures members know exactly what is happening when"
+  } ]
+}
