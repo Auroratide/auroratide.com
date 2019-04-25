@@ -10,6 +10,7 @@ const Content = ({ project }) =>
     <div className={styles.main}>
       <span className={styles['minor-title']}>{project.dateRange}</span>
       <RconRenderer rcon={project.summary || []} />
+      <hr />
       <RconRenderer rcon={project.content || []} />
     </div>
     <aside className={styles.sidebar}>
