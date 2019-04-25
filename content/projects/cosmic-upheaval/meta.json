@@ -1,0 +1,21 @@
+{
+  "id": "cosmic-upheaval",
+  "title": "Cosmic Upheaval",
+  "category": "Game",
+  "image": "/assets/projects/cosmic-upheaval/banner.png",
+  "date": "2013-03-01T00:00:00.000Z",
+  "date_range": "Mar 2013",
+  "links": [ {
+    "title": "Windows",
+    "href": "https://drive.google.com/open?id=1QZSL1xAll9P5mQiU_RgiKWg3fHIC3yZ-",
+    "icon": "windows",
+    "color": "windows"
+  } ],
+  "gallery": [ {
+    "image": "/assets/projects/cosmic-upheaval/gameplay.png",
+    "caption": "White dwarf stars make an appearance"
+  }, {
+    "image": "/assets/projects/cosmic-upheaval/boss.png",
+    "caption": "Some of the bosses are somewhat menacing"
+  } ]
+}
