@@ -2,7 +2,7 @@
   "id": "$SLUG$",
   "title": "",
   "category": "",
-  "image": "",
+  "image": "/assets/projects/$SLUG$/banner.png",
   "date": "$DATE$",
   "date_range": "",
   "links": [ {
@@ -10,7 +10,7 @@
     "href": ""
   } ],
   "gallery": [ {
-    "image": "",
+    "image": "/assets/projects/$SLUG$/???",
     "caption": ""
   } ]
 }
