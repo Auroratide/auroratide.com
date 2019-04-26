@@ -1,10 +1,18 @@
 @import "theme";
 
+.item {
+  margin-bottom: 1rem;
+}
+
 @media (--breakpoint-lg) {
   .items {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+  }
+
+  .item {
+    margin: 0;
   }
 
   .item:nth-child(5n+1),

@@ -17,7 +17,7 @@
 }
 
 .image {
-  height: 10rem;
+  height: 12rem;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -26,6 +26,7 @@
 .text-area {
   background: var(--palette-white);
   padding: 1rem;
+  box-shadow: 0 0.1875rem 0.25rem -0.1875rem rgba(0, 0, 0, 0.1) inset;
 }
 
 .title {
