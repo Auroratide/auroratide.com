@@ -1,5 +1,5 @@
 {
-  "next_id": "22",
+  "next_id": "23",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -21,6 +21,7 @@
     "18": "your-digital-identity-has-three-layers",
     "19": "how-can-we-design-an-intelligent-recommendation-engine",
     "20": "treat-devops-stories-like-user-stories",
-    "21": "stop-using-so-many-divs"
+    "21": "stop-using-so-many-divs",
+    "22": "test-commit-revert"
   }
 }
