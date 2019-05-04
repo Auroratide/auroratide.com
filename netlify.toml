@@ -198,6 +198,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/xest"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
