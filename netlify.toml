@@ -108,6 +108,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/crazy-cab"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/projects/genetic-pong"
   to = "/index.html"
   status = 200
