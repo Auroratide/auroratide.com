@@ -126,6 +126,12 @@
   force = false
 
 [[redirects]]
+  from = "/projects/md-reactor"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/projects/minesweeper"
   to = "/index.html"
   status = 200

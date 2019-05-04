@@ -1,0 +1,5 @@
+**md-reactor** was created to solve a very particular problem. Namely, I wanted to write and store my posts in markdown notation for portability, expressiveness, and aesthetic, but I didn't necessarily want the client computer to be doing all the heavy lifting actually parsing that text. Since my website is static, I have the ability to pre-parse all my markdown into object-trees that can be sent directly for browsers to render.
+
+Additionally, I wanted to be able to inject my own syntax into the parser, which is why I ended up making my own. md-reactor is, in fact, fully customizable, allowing developers to inject their own parser and renderer rules if desired.
+
+Maybe the funniest part about this project is that I've written [a different parser](/projects/code-highlight) in the past. I'm not sure why I always find myself writing parsers!
