@@ -5,7 +5,9 @@ const url = new UrlBuilder().apiFor();
 
 const link = raw => ( {
   title: raw.title,
-  href: raw.href
+  href: raw.href,
+  icon: raw.icon,
+  color: raw.color
 } );
 
 const galleryImage = raw => ( {

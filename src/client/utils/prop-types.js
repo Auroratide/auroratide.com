@@ -54,7 +54,9 @@ const post = PropTypes.shape({
 
 const projectDownloadLink = PropTypes.shape({
   title: PropTypes.string,
-  href: PropTypes.string
+  href: PropTypes.string,
+  icon: PropTypes.string,
+  color: PropTypes.color
 });
 
 const project = PropTypes.shape({

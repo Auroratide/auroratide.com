@@ -9,7 +9,10 @@ const colors = {
   EVENTIDE_BLACK: color('eventide-black'),
   AUTUMN_RED: color('autumn-red'),
   AUTUMN_ORANGE: color('autumn-orange'),
-  AELLA_GREEN: color('aella-green')
+  AELLA_GREEN: color('aella-green'),
+  GITHUB: color('github'),
+  WINDOWS: color('windows'),
+  ANDROID: color('android')
 };
 
 export default {

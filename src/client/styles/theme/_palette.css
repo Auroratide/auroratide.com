@@ -30,6 +30,8 @@
   --palette-linked-in: #0077B5;
   --palette-twitter: #29AAE1;
   --palette-facebook: #3B5998;
+  --palette-windows: #1DAEEC;
+  --palette-android: #A4C639;
 }
 
 @define-mixin palette-theme $selector, $prop {
@@ -115,5 +117,17 @@
 
   &.color-aella-green {
     $(prop): var(--palette-aella-green);
+  }
+
+  &.color-github {
+    $(prop): var(--palette-github);
+  }
+
+  &.color-windows {
+    $(prop): var(--palette-windows);
+  }
+
+  &.color-android {
+    $(prop): var(--palette-android);
   }
 }

@@ -37,6 +37,9 @@ import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
 import { faMicrosoft } from '@fortawesome/free-brands-svg-icons/faMicrosoft';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faAdobe } from '@fortawesome/free-brands-svg-icons/faAdobe';
+import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows';
+import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 
 export default {
   'bars': faBars,
@@ -76,5 +79,8 @@ export default {
   'react': faReact,
   'microsoft': faMicrosoft,
   'facebook': faFacebookF,
-  'adobe': faAdobe
+  'adobe': faAdobe,
+  'windows': faWindows,
+  'android': faAndroid,
+  'github': faGithub
 };
