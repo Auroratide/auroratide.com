@@ -45,3 +45,9 @@
 .button.secondary:focus {
   background: color-mod(var(--palette-aurora-green) shade(25%));
 }
+
+.button.primary, .button.secondary,
+.button.primary:active, .button.primary:focus,
+.button.secondary:active, .button.secondary:focus {
+  @mixin palette-color-swap background-color;
+}

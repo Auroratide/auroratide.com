@@ -8,7 +8,7 @@ import styles from './style';
 
 const DownloadButtons = ({ links }) =>
   <div className={styles.buttons}>
-    {links.map(link => <Button primary newTab tag={Link} to={link.href} className={styles.button} key={link.title}>
+    {links.map(link => <Button primary newTab tag={Link} to={link.href} color={link.color} className={styles.button} key={link.title}>
       {link.title}{renderIf(link.icon, () => <Icon icon={link.icon} className={styles.icon} />)}
     </Button>)}
   </div>;
