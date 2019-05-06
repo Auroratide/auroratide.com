@@ -10,13 +10,17 @@
   text-align: center;
 }
 
+.spacing {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
 .button {
   @mixin typography-responsive md;
 
   display: inline-flex;
   align-items: center;
   border: 0.125rem solid var(--palette-white);
-  margin: 0 0.5rem;
 }
 
 .icon {
