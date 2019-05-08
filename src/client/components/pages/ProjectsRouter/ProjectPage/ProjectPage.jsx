@@ -7,16 +7,22 @@ import TitleArea from './TitleArea';
 import Content from './Content';
 import DownloadButtons from './DownloadButtons';
 import ResourceStore from 'Client/store/resource-store';
+import Loading from 'Client/components/core/Loading';
+import { renderIfElse } from 'Client/utils/render-if';
 
 import styles from './style';
 
-const ProjectPage = ({ item }) =>
+const ProjectPage = ({ item, store }) =>
   <DocumentTitle title={item.title}>
     <Container.article>
       <TitleArea title={item.title} image={item.image} />
       <ContentArea white className={styles.content}>
         <DownloadButtons links={item.links} />
-        <Content project={item} />
+        {renderIfElse(!item.content && store.isRefreshing, () =>
+          <Loading text='Fetching content...' />
+        ).elseRender(() =>
+          <Content project={item} />
+        )}
       </ContentArea>
     </Container.article>
   </DocumentTitle>;
