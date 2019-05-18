@@ -1,6 +1,6 @@
 @import "theme";
 
-@mixin palette-theme .project-item, border-bottom-color {
+@mixin palette-theme .portfolio-item, border-bottom-color {
   display: block;
   background-color: var(--palette-black);
   margin-top: 0;
@@ -10,7 +10,7 @@
   transition: var(--transition-short) border-bottom-width, var(--transition-short) margin-top;
 }
 
-.project-item:hover {
+.portfolio-item:hover {
   border-bottom-width: 0.5rem;
   margin-top: -0.5rem;
   color: initial;

@@ -9,7 +9,7 @@ import Colors from 'Client/config/colors';
 import Page from 'Client/components/layout/Page';
 import HomePage from 'Client/components/pages/HomePage';
 import PostsRouter from 'Client/components/pages/PostsRouter';
-import ProjectsRouter from 'Client/components/pages/ProjectsRouter';
+import PortfolioRouter from 'Client/components/pages/PortfolioRouter';
 import DigestsPage from 'Client/components/pages/DigestsPage';
 import LegalPage from 'Client/components/pages/LegalPage';
 import WhodokuPage from 'Client/components/pages/WhodokuPage';
@@ -35,7 +35,7 @@ const App = ({ location }) =>
           <ErrorBoundary fallback={GenericErrorPage}>
             <Switch>
               <Route path={Links.Auroratide.POSTS} component={PostsRouter} />
-              <Route path={Links.Auroratide.PORTFOLIO} component={ProjectsRouter} />
+              <Route path={Links.Auroratide.PORTFOLIO} component={PortfolioRouter} />
               <Route exact path={Links.Auroratide.DIGESTS} component={DigestsPage} />
               <Route exact path={Links.Auroratide.LEGAL} component={LegalPage} />
               <Route exact path={Links.Auroratide.WHODOKU} component={WhodokuPage} />

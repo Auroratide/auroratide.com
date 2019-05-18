@@ -1,20 +1,20 @@
 import React from 'react';
 import { withInitialRoute } from 'Test/enzyme';
 import http from 'Test/utils/mock-http';
-import ProjectDataBuilder from 'Test/utils/builders/ProjectDataBuilder';
+import ProjectDataBuilder from 'Test/utils/builders/PortfolioItemDataBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import { UrlBuilder } from 'Client/config/links';
 import Loading from 'Client/components/core/Loading';
 
-import ProjectsRouter from 'Client/components/pages/ProjectsRouter';
+import PortfolioRouter from 'Client/components/pages/PortfolioRouter';
 
-describe('ProjectsRouter Behaviour', () => {
+describe('PortfolioRouter Behaviour', () => {
 
   afterEach(() => http.reset());
 
   describe('Single Project', () => {
     const id = 'the-id';
-    const page = () => withInitialRoute(new UrlBuilder().portfolioItem(id)).mount(<ProjectsRouter />);
+    const page = () => withInitialRoute(new UrlBuilder().portfolioItem(id)).mount(<PortfolioRouter />);
   
     beforeEach(() => {
       const resource = new ProjectDataBuilder()
@@ -42,7 +42,7 @@ describe('ProjectsRouter Behaviour', () => {
   });
 
   describe('Projects List', () => {
-    const page = () => withInitialRoute('').mount(<ProjectsRouter />);
+    const page = () => withInitialRoute('').mount(<PortfolioRouter />);
 
     beforeEach(() => {
       const newer = new ProjectDataBuilder()

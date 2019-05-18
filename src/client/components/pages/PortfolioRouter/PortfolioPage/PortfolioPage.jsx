@@ -4,22 +4,22 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import ResourceStore from 'Client/store/resource-store';
-import ProjectItem from './ProjectItem';
+import PortfolioItem from './PortfolioItem';
 
 import styles from './style';
 
-const ProjectsListPage = ({ store }) =>
+const PortfolioPage = ({ store }) =>
   <DocumentTitle title='Projects'>
     <Container>
       <ContentArea className={styles.items}>{store
         .list()
-        .map(project => <ProjectItem className={styles.item} project={project} key={project.id} />)
+        .map(project => <PortfolioItem className={styles.item} project={project} key={project.id} />)
       }</ContentArea>
     </Container>
   </DocumentTitle>;
 
-ProjectsListPage.propTypes = {
+PortfolioPage.propTypes = {
   store: PropTypes.instanceOf(ResourceStore).isRequired
 };
 
-export default ProjectsListPage;
+export default PortfolioPage;

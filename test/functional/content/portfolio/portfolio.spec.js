@@ -3,7 +3,7 @@ import path from 'path';
 import mkdirp from 'mkdirp';
 import rimraf from 'rimraf';
 import build from 'Content/portfolio/steps';
-import ProjectDataBuilder from 'Test/utils/builders/ProjectDataBuilder';
+import ProjectDataBuilder from 'Test/utils/builders/PortfolioItemDataBuilder';
 
 describe('Build Portfolio Functional', () => {
 

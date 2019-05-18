@@ -22,7 +22,7 @@ const Base =  zaha({
   }))
 });
 
-export default class PostsDataBuilder extends Base {
+export default class extends Base {
   withoutContent() {
     this.schema.content = is(undefined);
     return this;

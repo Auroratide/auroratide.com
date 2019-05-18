@@ -6,8 +6,8 @@ import classnames from 'classnames';
 
 import styles from './style';
 
-const ProjectItem = ({ project, className }) =>
-  <Link to={new UrlBuilder().portfolioItem(project.id)} title={project.title} className={classnames(styles['project-item'], className)}>
+const PortfolioItem = ({ project, className }) =>
+  <Link to={new UrlBuilder().portfolioItem(project.id)} title={project.title} className={classnames(styles['portfolio-item'], className)}>
     <article>
       <div className={styles.image} style={{ backgroundImage: `url(${project.image})`}} />
       <div className={styles['text-area']}>
@@ -21,9 +21,9 @@ const ProjectItem = ({ project, className }) =>
     </article>
   </Link>;
 
-ProjectItem.propTypes = {
+PortfolioItem.propTypes = {
   project: PropTypes.project.isRequired,
   className: PropTypes.string
 };
 
-export default ProjectItem;
+export default PortfolioItem;

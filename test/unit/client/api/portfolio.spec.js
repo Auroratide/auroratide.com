@@ -1,7 +1,7 @@
 import req from 'Client/api/req';
 import { get, getAll } from 'Client/api/portfolio';
 import ResponseBuilder from 'Test/utils/builders/ResponseBuilder';
-import ProjectDataBuilder from 'Test/utils/builders/ProjectDataBuilder';
+import PortfolioItemBuilder from 'Test/utils/builders/PortfolioItemDataBuilder';
 
 describe('Portfolio API', () => {
 
@@ -11,7 +11,7 @@ describe('Portfolio API', () => {
     it('should return the project when it exists', async () => {
       const response = new ResponseBuilder()
         .withOk()
-        .withData(new ProjectDataBuilder().withTitle('Title').build())
+        .withData(new PortfolioItemBuilder().withTitle('Title').build())
         .build();
       jest.spyOn(req, 'get').mockResolvedValue(response);
 
@@ -49,8 +49,8 @@ describe('Portfolio API', () => {
       const response = new ResponseBuilder()
         .withOk()
         .withData({ portfolio: [
-          new ProjectDataBuilder().withTitle('Title 1').withoutContent().build(),
-          new ProjectDataBuilder().withTitle('Title 2').withoutContent().build()
+          new PortfolioItemBuilder().withTitle('Title 1').withoutContent().build(),
+          new PortfolioItemBuilder().withTitle('Title 2').withoutContent().build()
         ] })
         .build();
       jest.spyOn(req, 'get').mockResolvedValue(response);
