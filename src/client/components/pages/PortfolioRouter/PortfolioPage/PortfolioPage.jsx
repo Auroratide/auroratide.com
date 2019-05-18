@@ -9,7 +9,7 @@ import PortfolioItem from './PortfolioItem';
 import styles from './style';
 
 const PortfolioPage = ({ store }) =>
-  <DocumentTitle title='Projects'>
+  <DocumentTitle title='Portfolio'>
     <Container>
       <ContentArea className={styles.items}>{store
         .list()
