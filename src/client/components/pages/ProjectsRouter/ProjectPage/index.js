@@ -3,4 +3,4 @@ import ProjectPage from './ProjectPage';
 
 import withResourceItem from 'Client/components/core/with-resource-item';
 
-export default withId(withResourceItem(store => store.projects)(ProjectPage));
+export default withId(withResourceItem(store => store.portfolio)(ProjectPage));

@@ -35,7 +35,7 @@ const App = ({ location }) =>
           <ErrorBoundary fallback={GenericErrorPage}>
             <Switch>
               <Route path={Links.Auroratide.POSTS} component={PostsRouter} />
-              <Route path={Links.Auroratide.PROJECTS} component={ProjectsRouter} />
+              <Route path={Links.Auroratide.PORTFOLIO} component={ProjectsRouter} />
               <Route exact path={Links.Auroratide.DIGESTS} component={DigestsPage} />
               <Route exact path={Links.Auroratide.LEGAL} component={LegalPage} />
               <Route exact path={Links.Auroratide.WHODOKU} component={WhodokuPage} />

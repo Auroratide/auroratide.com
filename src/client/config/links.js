@@ -3,7 +3,7 @@ const Auroratide = {
   HOME: '/',
   DIGESTS: '/digests',
   POSTS: '/posts',
-  PROJECTS: '/projects',
+  PORTFOLIO: '/portfolio',
   LEGAL: '/legal',
   WHODOKU: '/whodoku'
 };
@@ -59,12 +59,12 @@ export class UrlBuilder {
     return `${this.url}${Auroratide.POSTS}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`;
   }
 
-  projects() {
-    return `${this.url}${Auroratide.PROJECTS}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`;
+  portfolio() {
+    return `${this.url}${Auroratide.PORTFOLIO}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`;
   }
 
-  project(id) {
-    return `${this.url}${Auroratide.PROJECTS}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`;
+  portfolioItem(id) {
+    return `${this.url}${Auroratide.PORTFOLIO}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`;
   }
 
   legal() {

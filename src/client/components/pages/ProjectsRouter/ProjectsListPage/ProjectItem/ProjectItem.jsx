@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import styles from './style';
 
 const ProjectItem = ({ project, className }) =>
-  <Link to={new UrlBuilder().project(project.id)} title={project.title} className={classnames(styles['project-item'], className)}>
+  <Link to={new UrlBuilder().portfolioItem(project.id)} title={project.title} className={classnames(styles['project-item'], className)}>
     <article>
       <div className={styles.image} style={{ backgroundImage: `url(${project.image})`}} />
       <div className={styles['text-area']}>

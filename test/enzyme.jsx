@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import { MemoryRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import { RootStore } from 'Client/store';
+import { UrlBuilder } from 'Client/config/links';
 
 configure({ adapter: new Adapter() });
 
@@ -33,8 +34,8 @@ class MountContext {
       <Provider store={new RootStore()}>
         <MemoryRouter initialEntries={[this.route]} initialIndex={0}>
           <Switch>
-            <Route path='/posts' render={() => component} />
-            <Route path='/projects' render={() => component} />
+            <Route path={new UrlBuilder().posts()} render={() => component} />
+            <Route path={new UrlBuilder().portfolio()} render={() => component} />
             <Route path='' render={() => component} />
           </Switch>
         </MemoryRouter>

@@ -1,0 +1,24 @@
+{
+  "id": "omnixis",
+  "title": "Omnixis",
+  "category": "Game",
+  "image": "/assets/portfolio/omnixis/banner.png",
+  "date": "2016-04-18T00:00:00.000Z",
+  "date_range": "Apr 2016",
+  "links": [ {
+    "title": "Play!",
+    "href": "http://auroratide.github.io/Omnixis/"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Auroratide/Omnixis",
+    "icon": "github",
+    "color": "github"
+  } ],
+  "gallery": [ {
+    "image": "/assets/portfolio/omnixis/title.png",
+    "caption": "The game keeps a highscore like an arcade game"
+  }, {
+    "image": "/assets/portfolio/omnixis/gameplay.png",
+    "caption": "Don't let the blocks get to the edges!"
+  } ]
+}
