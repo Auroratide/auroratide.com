@@ -32,6 +32,7 @@
   --palette-facebook: #3B5998;
   --palette-windows: #1DAEEC;
   --palette-android: #A4C639;
+  --palette-adobe: #E61A23;
 }
 
 @define-mixin palette-theme $selector, $prop {
@@ -137,5 +138,9 @@
 
   &.color-android {
     $(prop): var(--palette-android);
+  }
+
+  &.color-adobe {
+    $(prop): var(--palette-adobe);
   }
 }
