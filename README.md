@@ -35,8 +35,21 @@ This creates a component file and a respective test file. The test file will con
 
 If the `--styled` option is provided, a CSS file will also be created for the component.
 
+## Create a Post
+
+```
+npm run posts:create -- name
+```
+
+
 ## Create a Digest
 
 ```
-npm run digests:create -- name-of-digest
+npm run digests:create -- name
+```
+
+## Create a Portfolio Item
+
+```
+npm run portfolio:create -- name
 ```

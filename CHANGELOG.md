@@ -1,13 +1,26 @@
 # Changelog
 
-## 1.1.2 (20 Nov 2018)
+## 1.2.0 (18 May 2019)
+
+* Added my portfolio of projects dating back to 2008
+
+### 1.1.4 (17 Mar 2019)
+
+* Missing pages now return 404 on the browser
+* Significantly decreased asset size to improve loading times
+
+### 1.1.3 (04 Feb 2019)
+
+* Added favicon to the site
+
+### 1.1.2 (20 Nov 2018)
 
 * Added loading indicator to post pages to show when posts are coming from the API
 * Allow commenting on posts
 * Various enhancements to the markdown parser
 * Can now see posts related to the post being currently read
 
-## 1.1.1 (04 Oct 2018)
+### 1.1.1 (04 Oct 2018)
 
 * Added loading indicator to digests page to show when digests are coming from the API
 * Site theme now changes color according to which section of the site the viewer is on
@@ -20,7 +33,7 @@
 
 * Site released to public
 
-## 0.5.1 (10 Sep 2018)
+### 0.5.1 (10 Sep 2018)
 
 * Made internal links scroll to the top when clicked
 * Document title is now dynamic depending on landed page
@@ -30,11 +43,11 @@
 
 * Added fallback pages and legal page
 
-## 0.4.2 (05 Sep 2018)
+### 0.4.2 (05 Sep 2018)
 
 * Added source to digest items and API
 
-## 0.4.1 (04 Sep 2018)
+### 0.4.1 (04 Sep 2018)
 
 * Updated multiple dependencies to latest
 * Internal code refactoring
