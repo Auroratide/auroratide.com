@@ -21,6 +21,8 @@ const getTheme = pathname => {
     return Colors.AURORA_BLUE.name;
   } else if(pathname && pathname.indexOf(Links.Auroratide.DIGESTS) === 0) {
     return Colors.AURORA_GREEN.name;
+  } else if(pathname && pathname.indexOf(Links.Auroratide.PORTFOLIO) === 0) {
+    return Colors.FABLE_LAVENDER.name;
   } else {
     return Colors.AURORA_BLUE.name;
   }

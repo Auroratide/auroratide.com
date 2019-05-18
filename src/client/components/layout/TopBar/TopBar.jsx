@@ -27,6 +27,10 @@ const TopBar = ({ accordionState }) =>
           name='Digests'
           to={new UrlBuilder().digests()}
           onClick={functions.series(accordionState.collapse, scroll.toTop)} />
+        <NavLink
+          name='Portfolio'
+          to={new UrlBuilder().portfolio()}
+          onClick={functions.series(accordionState.collapse, scroll.toTop)} />
       </Accordion>
     </Container>
   </nav>;

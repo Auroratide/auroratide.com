@@ -19,6 +19,7 @@ const Footer = () =>
         <NavLink name='Home' to={new UrlBuilder().home()} />
         <NavLink name='Posts' to={new UrlBuilder().posts()} />
         <NavLink name='Digests' to={new UrlBuilder().digests()} />
+        <NavLink name='Portfolio' to={new UrlBuilder().portfolio()} />
         <NavLink name='Legal' to={new UrlBuilder().legal()} />
       </div>
       <License />

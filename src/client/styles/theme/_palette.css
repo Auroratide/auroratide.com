@@ -49,6 +49,10 @@
     $(prop): var(--palette-aurora-green);
   }
 
+  :global(.theme-fable-lavender) $selector {
+    $(prop): var(--palette-fable-lavender);
+  }
+
   $selector.success {
     $(prop): var(--palette-success);
   }
@@ -75,6 +79,10 @@
 
   :global(.theme-aurora-green) $selector {
     $(prop): color-mod(var(--palette-aurora-green) shade(25%));
+  }
+
+  :global(.theme-fable-lavender) $selector {
+    $(prop): color-mod(var(--palette-fable-lavender) shade(25%));
   }
 }
 
