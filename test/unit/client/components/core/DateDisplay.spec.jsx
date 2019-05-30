@@ -10,4 +10,11 @@ describe('<DateDisplay />', () => {
 
     expect(wrapper.text()).toContain('Saturday, 22 Sep 2018');
   });
+
+  it('should not render if date is invalid', () => {
+    const date = new Date('');
+    const wrapper = shallow(<DateDisplay date={date} />);
+
+    expect(wrapper.text()).toEqual('');
+  });
 });
