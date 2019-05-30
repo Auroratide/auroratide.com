@@ -31,6 +31,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons/faCode';
 import { faCheckDouble } from '@fortawesome/free-solid-svg-icons/faCheckDouble';
 import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer';
 import { faCompressArrowsAlt } from '@fortawesome/free-solid-svg-icons/faCompressArrowsAlt';
+import { faRobot } from '@fortawesome/free-solid-svg-icons/faRobot';
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
@@ -77,6 +78,7 @@ export default {
   'check-double': faCheckDouble,
   'hammer': faHammer,
   'compress-arrows-alt': faCompressArrowsAlt,
+  'robot': faRobot,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,
