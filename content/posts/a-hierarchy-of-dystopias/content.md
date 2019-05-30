@@ -1,8 +1,8 @@
 A **dystopia** is a society where something, somehow, is just _wrong_. Often when we think of dystopias, we think of corrupt governments, or of specific examples like George Orwell's _1984_, or Suzanne Collins's _The Hunger Games_. They are worlds that are just believable enough to be plausible, a chilling reminder of what life could be like if society is not careful.
 
-Y'know, sometimes it's fun to think of all the ways a society can go wrong...
+Y'know, sometimes it's fun to think of all the ways a society can go wrong! Below I have a list of five interesting dystopian scenarios, forming a sort of hierarchy where each differs from the last. It's possible that as you read them, these five categories might become familiar...
 
-### No Essentials
+### 1) No Essentials
 
 > _The faucets do not work. The shelves of stores are empty. You live in a world where people scramble for scraps in a raw battle of survival._
 
@@ -16,7 +16,7 @@ In a world lacking bare survival essentials, society collapses as individuals st
 From that last example, we see scarcity dystopias do not need to devolve into a post-apocalyptic type of world.
 ,,,
 
-### No Safety
+### 2) No Safety
 
 > _You stare at the houses on the street as you drive by, some in shambles from having been looted. As you run a stop sign, you quietly wonder whether your home is still intact. Is there a law if it's not enforced?_
 
@@ -28,7 +28,7 @@ Imagine if safety in any one of these categories cannot be guaranteed, as in the
 * The world is in the middle of a pandemic of a deadly disease, and it is impossible to know what, or who, is infected.
 * Due to war, the country's military has collapsed, and its people must live in the constant occupation of a hostile nation.
 
-### No Intimacy
+### 3) No Intimacy
 
 > _Restaurants no longer have tables. They have individual booths where you can order and pay for food without needing to interact with any staff member. It's a nice way to avoid all those awkward conversations with strangers._
 
@@ -40,7 +40,7 @@ What if we denied that very interaction between people?
 * Ethically speaking, parents cannot be trusted to raise their children in a way optimal for society, and so the government seizes all newborns to receive standardized education from birth.
 * In an effort to eliminate stratification, a school has banned all extracurricular groups and disallows all communication except for within the classroom setting.
 
-### No Prestige
+### 4) No Prestige
 
 > _The National Library, lined wall to wall with books of various sorts. A foreigner, you've always been interested in the literature of other countries. But as you peruse the selection, a pattern catches your eye: none of the books have authors._
 
@@ -55,7 +55,7 @@ So what if it were impossible to determine that worth?
 That last one might not be considered a "dystopia" by some! As we get to these higher-level areas, the lines become blurred.
 ,,,
 
-### No Identity
+### 5) No Identity
 
 > _You've waited for this day for so long, the day you finally get assigned a career! Silently you hope to be assigned as an author, but you know that whatever is chosen will be the best fit both for your skills and for society's needs._
 
