@@ -1,7 +1,7 @@
 import zaha, { is } from 'zaha';
 import Colors from 'Client/config/colors';
 
-export default zaha({
+export default class extends (zaha({
   id: is.string(),
   title: is.string(),
   category: is.string(),
@@ -10,4 +10,9 @@ export default zaha({
   color: is.oneOf(Colors.list()),
   publishedAt: is.string(),
   content: is.array()
-});
+})) {
+  withoutPublished() {
+    this.schema.publishedAt = is('');
+    return this;
+  }
+}

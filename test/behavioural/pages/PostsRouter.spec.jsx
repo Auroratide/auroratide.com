@@ -112,15 +112,22 @@ describe('PostsRouter Behaviour', () => {
         .withPublished_at('2018-09-19T00:00:00Z')
         .withIcon('bars')
         .build();
+
+      const unpublished = new PostDataBuilder()
+        .withId('unpublished')
+        .withTitle('Unpublished')
+        .withUnpublished()
+        .withIcon('bars')
+        .build();
   
       http
         .when.get('/posts/index.json')
         .then.reply(200, {
-          posts: [older, newer]
+          posts: [older, newer, unpublished]
         });
     });
 
-    it('should render each post onto the page in sorted order', async () => {
+    it('should render each published post onto the page in sorted order', async () => {
       const wrapper = page();
       expect(wrapper.find(Loading).exists()).toBe(true);
 

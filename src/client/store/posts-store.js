@@ -16,7 +16,8 @@ export default class PostsStore extends ResourceStore {
     return {
       withCategory: category => post => post.category === category,
       without: id => post => post.id !== id,
-      top: n => (_, index) => index < n
+      top: n => (_, index) => index < n,
+      published: () => post => post.publishedAt && post.publishedAt !== ''
     };
   }
 }

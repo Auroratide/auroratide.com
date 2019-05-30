@@ -12,6 +12,7 @@ const PostsListPage = ({ store }) =>
     <Container>
       <ContentArea>{store
         .list()
+        .filter(PostsStore.filter().published())
         .sort(PostsStore.sorter().byPublishedDate)
         .map(post => <PostItem post={post} key={post.id} />)
       }</ContentArea>

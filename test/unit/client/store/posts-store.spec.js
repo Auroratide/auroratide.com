@@ -64,5 +64,18 @@ describe('PostsStore', () => {
         expect(filtered).not.toContain(dog);
       });
     });
+
+    describe('published', () => {
+      it('should return only posts with a published date', () => {
+        const published = new PostBuilder().withId('published').build();
+        const unpublished = new PostBuilder().withId('unpublished').withoutPublished().build();
+        const posts = [published, unpublished];
+
+        const filtered = posts.filter(PostsStore.filter().published());
+
+        expect(filtered).toContain(published);
+        expect(filtered).not.toContain(unpublished);
+      });
+    });
   });
 });

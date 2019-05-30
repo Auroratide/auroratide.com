@@ -17,4 +17,9 @@ export default class PostsDataBuilder extends Base {
     this.schema.content = is(undefined);
     return this;
   }
+
+  withUnpublished() {
+    this.schema.published_at = is('');
+    return this;
+  }
 }
