@@ -1,0 +1,30 @@
+@import "theme";
+
+.maslows-hierarchy-of-needs {
+  margin-bottom: 1.5rem;
+}
+
+.self-actualization {
+  clip-path: polygon(26% 0, 100% 0, 100% 100%, 21% 100%);
+  background-color: var(--palette-autumn-red);
+}
+
+.esteem {
+  clip-path: polygon(20.75% 0, 100% 0, 100% 100%, 15.75% 100%);
+  background-color: var(--palette-autumn-orange);
+}
+
+.belonging {
+  clip-path: polygon(15.5% 0, 100% 0, 100% 100%, 10.5% 100%);
+  background-color: var(--palette-livian-yellow);
+}
+
+.safety {
+  clip-path: polygon(10.25% 0, 100% 0, 100% 100%, 5.25% 100%);
+  background-color: var(--palette-aella-green);
+}
+
+.physiological {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: var(--palette-aurora-blue);
+}

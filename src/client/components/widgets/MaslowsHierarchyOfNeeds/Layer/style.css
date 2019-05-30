@@ -1,0 +1,19 @@
+@import "theme";
+
+.layer {
+  margin-bottom: 0.25rem;
+  padding: 0.25rem 0.25rem 0.5rem calc(26% + 0.25rem);
+  color: var(--palette-white);
+}
+
+.layer strong {
+  @mixin typography-responsive lg;
+
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.layer p {
+  text-align: left;
+  line-height: 1;
+}

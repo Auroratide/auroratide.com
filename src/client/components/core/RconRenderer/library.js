@@ -8,6 +8,7 @@ import MajorPoint from 'Client/components/core/MajorPoint';
 import ConnectNineDots from 'Client/components/widgets/ConnectNineDots';
 import StegoBody from 'Client/components/widgets/StegoBody';
 import ImageSteganographer from 'Client/components/widgets/ImageSteganographer';
+import MaslowsHierarchyOfNeeds from 'Client/components/widgets/MaslowsHierarchyOfNeeds';
 
 export default {
   CodeBlock,
@@ -19,5 +20,6 @@ export default {
   MajorPoint,
   ConnectNineDots,
   StegoBody,
-  ImageSteganographer
+  ImageSteganographer,
+  MaslowsHierarchyOfNeeds
 };

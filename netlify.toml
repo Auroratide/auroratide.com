@@ -36,7 +36,13 @@
   force = false
 
 [[redirects]]
-  from = "/projects"
+  from = "/portfolio"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/a-hierarchy-of-dystopias"
   to = "/index.html"
   status = 200
   force = false
@@ -72,133 +78,133 @@
   force = false
 
 [[redirects]]
-  from = "/projects/bloody-mess"
+  from = "/portfolio/bloody-mess"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/candemonium"
+  from = "/portfolio/candemonium"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/castle-crew-conundrum"
+  from = "/portfolio/castle-crew-conundrum"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/chase-hamilton"
+  from = "/portfolio/chase-hamilton"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/code-highlight"
+  from = "/portfolio/code-highlight"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/cosmic-upheaval"
+  from = "/portfolio/cosmic-upheaval"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/crazy-cab"
+  from = "/portfolio/crazy-cab"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/genetic-pong"
+  from = "/portfolio/genetic-pong"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/inews-network"
+  from = "/portfolio/inews-network"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/md-reactor"
+  from = "/portfolio/md-reactor"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/minesweeper"
+  from = "/portfolio/minesweeper"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/nbehave"
+  from = "/portfolio/nbehave"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/nonupo"
+  from = "/portfolio/nonupo"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/omnixis"
+  from = "/portfolio/omnixis"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/pt-database-app"
+  from = "/portfolio/pt-database-app"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/standard-template"
+  from = "/portfolio/standard-template"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/tagd-igda"
+  from = "/portfolio/tagd-igda"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/tamu-peer-teachers"
+  from = "/portfolio/tamu-peer-teachers"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/thesaurus-initiative"
+  from = "/portfolio/thesaurus-initiative"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/ti-basic-developer"
+  from = "/portfolio/ti-basic-developer"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/vsts-monitor"
+  from = "/portfolio/vsts-monitor"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/projects/xest"
+  from = "/portfolio/xest"
   to = "/index.html"
   status = 200
   force = false
