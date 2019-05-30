@@ -90,10 +90,16 @@ A society where any one such fundamental human need is intentionally suppressed 
 
 <MajorPoint text="A dystopia is a society where there is near-universal incongruity between some need and its provision." />
 
-Using this definition and Maslow's model, we can brainstorm and worldbuild many different _kinds_ of dystopian worlds. People need food and water, so maybe it's a world where those things are scarce. People need personal growth, so maybe it's a world where this is suppressed. All the different dystopias at the beginning of this article were generated in this way.
+Using this definition and Maslow's model, we can brainstorm and worldbuild many different _kinds_ of dystopian worlds. People need food and water, so maybe it's a world where those things are scarce. People need personal growth, so maybe it's a world where this is suppressed. In a step-by-step process:
+
+1. Think of a need that people have, perhaps using the hierarchy of needs above
+2. Devise a scenario that removes one or more of those needs
+3. Imagine the consequences of a world under that scenario
+
+All the different dystopias at the beginning of this article were generated in this way.
 
 ---------------
 
-In the end, the whole point of this exercise is to expand what we think of as dystopian and serve as an engine for generating some unique worlds. Creativity can be as simple as applying Maslow's Hierarchy of Needs to dystopias, applying one concept to a seemingly unrelated concept.
+In the end, the whole point of this exercise is to expand what we think of as dystopian and serve as an engine for generating some unique worlds. Try coming up with a dystopia of your own! Creativity can be as simple as applying Maslow's Hierarchy of Needs to dystopias, applying one concept to a seemingly unrelated concept.
 
 Anyway, happy worldbuilding!
