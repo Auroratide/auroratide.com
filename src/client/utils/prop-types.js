@@ -52,6 +52,11 @@ const post = PropTypes.shape({
   content: rcon
 });
 
+const gallery = PropTypes.arrayOf(PropTypes.shape({
+  image: PropTypes.string,
+  caption: PropTypes.string
+}));
+
 const projectDownloadLink = PropTypes.shape({
   title: PropTypes.string,
   href: PropTypes.string,
@@ -68,7 +73,8 @@ const project = PropTypes.shape({
   dateRange: PropTypes.string,
   summary: rcon,
   content: rcon,
-  links: PropTypes.arrayOf(projectDownloadLink)
+  links: PropTypes.arrayOf(projectDownloadLink),
+  gallery
 });
 
 const component = PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Component)]);
@@ -82,6 +88,7 @@ export default {
   rcon,
   digest,
   post,
+  gallery,
   projectDownloadLink,
   project,
   component,

@@ -1,6 +1,8 @@
 @import "theme";
 
-.title-area {
+.header {
+  @mixin palette-color-swap background;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -19,6 +21,17 @@
   text-align: center;
   position: relative;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.667);
+  background-color: rgba(0, 0, 0, 0.333);
   width: 100%;
+}
+
+.with-image .title {
+  background-color: rgba(0, 0, 0, 0.667);
+}
+
+.icon {
+  font-size: 24rem;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.333);
+  align-self: center;
 }

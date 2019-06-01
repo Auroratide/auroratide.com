@@ -1,0 +1,13 @@
+@import "theme";
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (--breakpoint-lg) {
+  .body {
+    flex-direction: row;
+    margin: 0 -0.5rem;
+  }
+}

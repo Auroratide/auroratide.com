@@ -1,0 +1,26 @@
+@import "theme";
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 -0.5rem;
+}
+
+.image {
+  margin: 0 0.5rem 2rem;
+}
+
+@media (--breakpoint-lg) {
+  .gallery {
+    margin: 0;
+  }
+
+  .image {
+    margin: 0 0 2rem;
+  }
+
+  .image img {
+    width: 100%;
+  }
+}

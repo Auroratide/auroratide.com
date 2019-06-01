@@ -1,5 +1,9 @@
 @import "theme";
 
 .content {
-  position: relative;
+  flex: 7;
+}
+
+.aside {
+  flex: 3;
 }

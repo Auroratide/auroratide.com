@@ -1,37 +1,30 @@
 import React from 'react';
 import PropTypes from 'Client/utils/prop-types';
-import Figure from 'Client/components/core/Figure';
 import RconRenderer from 'Client/components/core/RconRenderer';
+import Loading from 'Client/components/core/Loading';
+import { Content as ArticleContent } from 'Client/components/layout/Article';
+import { renderIfElse } from 'Client/utils/render-if';
 
 import styles from './style';
 
-const Content = ({ project }) =>
-  <div className={styles.content}>
-    <div className={styles.main}>
-      <span className={styles['minor-title']}>{project.dateRange}</span>
-      <RconRenderer rcon={project.summary || []} />
-      <hr />
-      <RconRenderer rcon={project.content || []} />
-    </div>
-    <aside className={styles.sidebar}>
-      <h2 className={styles['more-title']}>Some Pics</h2>
-      <div className={styles.gallery}>
-        {project.gallery.map(img =>
-          <Figure
-            className={styles.image}
-            src={img.image}
-            key={img.image}
-            alt={img.caption}
-            caption={img.caption}
-            size='lg'
-          />
-        )}
-      </div>
-    </aside>
-  </div>;
+const Content = ({ item, isRefreshing, className }) =>
+  <ArticleContent className={className}>
+    {renderIfElse(!item.content && isRefreshing, () =>
+      <Loading text='Fetching content...' />
+    ).elseRender(() =>
+      <React.Fragment>
+        <span className={styles['minor-title']}>{item.dateRange}</span>
+        <RconRenderer rcon={item.summary || []} />
+        <hr />
+        <RconRenderer rcon={item.content || []} />
+      </React.Fragment>
+    )}
+  </ArticleContent>;
 
 Content.propTypes = {
-  project: PropTypes.project.isRequired
+  item: PropTypes.project.isRequired,
+  isRefreshing: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default Content;

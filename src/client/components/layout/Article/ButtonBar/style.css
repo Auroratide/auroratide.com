@@ -1,0 +1,11 @@
+@import "theme";
+
+.bar {
+  @mixin typography-responsive md;
+
+  position: absolute;
+  top: calc(16rem - 0.75em);
+  left: 0;
+  right: 0;
+  text-align: center;
+}

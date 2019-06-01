@@ -7,13 +7,13 @@ import { renderIf } from 'Client/utils/render-if';
 import styles from './style';
 
 const DownloadButtons = ({ links }) =>
-  <div className={styles.buttons}>
+  <React.Fragment>
     {links.map(link => <span className={styles.spacing} key={link.title}>
       <Button primary newTab tag={Link} to={link.href} color={link.color} className={styles.button}>
         {link.title}{renderIf(link.icon, () => <Icon icon={link.icon} className={styles.icon} />)}
       </Button>
     </span>)}
-  </div>;
+  </React.Fragment>;
 
 DownloadButtons.propTypes = {
   links: PropTypes.arrayOf(PropTypes.projectDownloadLink)

@@ -1,15 +1,5 @@
 @import "theme";
 
-.buttons {
-  @mixin typography-responsive md;
-
-  position: absolute;
-  top: -0.75em;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
 .spacing {
   display: inline-block;
   margin: 0 0.5rem;

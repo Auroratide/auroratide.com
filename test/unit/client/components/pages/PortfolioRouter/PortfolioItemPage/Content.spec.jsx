@@ -6,6 +6,6 @@ import Content from 'Client/components/pages/PortfolioRouter/PortfolioItemPage/C
 
 describe('<Content />', () => {
   it('should render', () => {
-    expect(shallow(<Content project={new ProjectBuilder().build()} />)).toHaveLength(1);
+    expect(shallow(<Content item={new ProjectBuilder().build()} />)).toHaveLength(1);
   });
 });

@@ -1,66 +1,9 @@
 @import "theme";
 
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
 .minor-title {
   @mixin typography-responsive md;
   @mixin typography-preset-paragraph;
 
   display: block;
   margin-bottom: 1rem;
-}
-
-.main {
-  margin-bottom: 2rem;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 -0.5rem;
-}
-
-.image {
-  margin: 0 0.5rem 2rem;
-}
-
-@media (--breakpoint-lg) {
-  .content {
-    flex-direction: row;
-    margin: 0 -0.5rem;
-  }
-
-  .main {
-    flex: 7;
-    padding: 0 0.5rem;
-  }
-
-  .sidebar {
-    flex: 3;
-    padding: 0 0.5rem;
-  }
-
-  .more-title {
-    @mixin typography-responsive md;
-    @mixin typography-preset-paragraph;
-
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .gallery {
-    margin: 0;
-  }
-
-  .image {
-    margin: 0 0 2rem;
-  }
-
-  .image img {
-    width: 100%;
-  }
 }
