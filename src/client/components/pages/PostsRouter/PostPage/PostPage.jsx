@@ -48,13 +48,13 @@ class PostPage extends React.Component {
               <React.Fragment>
                 <DateDisplay className={styles['minor-title']} date={new Date(item.publishedAt)} />
                 <RconRenderer rcon={item.content || []} />
-                <Comments slug={item.id} />
               </React.Fragment>
             )}
           </Content>
           <Aside title={`More on ${item.category}`}>
             <RelatedPosts posts={similarPosts} />
           </Aside>
+          <Comments slug={item.id} />
         </Body>
       </Article>
     </DocumentTitle>;

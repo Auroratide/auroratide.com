@@ -21,9 +21,9 @@ const ProjectPage = ({ item, store }) =>
       <ButtonBar>
         <DownloadButtons links={item.links} />
       </ButtonBar>
-      <Body>
-        <Content item={item} isRefreshing={store.isRefreshing} className={styles.content} />
-        <Aside title='Some Pics' className={styles.aside}>
+      <Body className={styles.body}>
+        <Content item={item} isRefreshing={store.isRefreshing} />
+        <Aside title='Some Pics'>
           <Gallery images={item.gallery} />
         </Aside>
       </Body>

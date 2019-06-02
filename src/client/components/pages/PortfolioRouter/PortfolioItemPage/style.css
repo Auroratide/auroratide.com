@@ -1,9 +1,5 @@
 @import "theme";
 
-.content {
-  flex: 7;
-}
-
-.aside {
-  flex: 3;
+.body {
+  grid-template-columns: 7fr 3fr;
 }
