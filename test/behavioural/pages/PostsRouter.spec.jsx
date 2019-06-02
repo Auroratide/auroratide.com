@@ -4,7 +4,7 @@ import http from 'Test/utils/mock-http';
 import PostDataBuilder from 'Test/utils/builders/PostDataBuilder';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import Loading from 'Client/components/core/Loading';
-import LinkedRelatedPost from 'Client/components/pages/PostsRouter/PostPage/Content/LinkedRelatedPost';
+import LinkedRelatedPost from 'Client/components/pages/PostsRouter/PostPage/RelatedPosts/LinkedRelatedPost';
 
 import PostsRouter from 'Client/components/pages/PostsRouter';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'Test/enzyme';
 import PostBuilder from 'Test/utils/builders/PostBuilder';
 import Loading from 'Client/components/core/Loading';
-import TitleArea from 'Client/components/pages/PostsRouter/PostPage/TitleArea';
+import Article from 'Client/components/layout/Article';
 
 import ResourceStore from 'Client/store/resource-store';
 import PostPage from 'Client/components/pages/PostsRouter/PostPage/PostPage';
@@ -31,14 +31,14 @@ describe('<PostPage />', () => {
       const item = new PostBuilder().build();
       const wrapper = shallow(<PostPage item={item} store={store} />);
   
-      expect(wrapper.find(TitleArea).exists()).toBe(true);
+      expect(wrapper.find(Article).exists()).toBe(true);
     });
 
     it('should render the post even when the post does not yet have content', () => {
       const item = new PostBuilder().withContent(undefined).build();
       const wrapper = shallow(<PostPage item={item} store={store} />);
   
-      expect(wrapper.find(TitleArea).exists()).toBe(true);
+      expect(wrapper.find(Article).exists()).toBe(true);
     });
 
     it('should render basic information and a loading indicator when the post is only partially loaded', () => {
@@ -46,7 +46,7 @@ describe('<PostPage />', () => {
       store.isRefreshing = true;
       const wrapper = shallow(<PostPage item={item} store={store} />);
   
-      expect(wrapper.find(TitleArea).exists()).toBe(true);
+      expect(wrapper.find(Article).exists()).toBe(true);
       expect(wrapper.find(Loading).exists()).toBe(true);
     });
   });

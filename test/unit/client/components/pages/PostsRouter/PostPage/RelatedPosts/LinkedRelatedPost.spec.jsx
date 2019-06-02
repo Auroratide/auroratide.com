@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'Test/enzyme';
 import PostBuilder from 'Test/utils/builders/PostBuilder';
 
-import LinkedRelatedPost from 'Client/components/pages/PostsRouter/PostPage/Content/LinkedRelatedPost';
+import LinkedRelatedPost from 'Client/components/pages/PostsRouter/PostPage/RelatedPosts/LinkedRelatedPost';
 
 describe('<LinkedRelatedPost />', () => {
   it('should render', () => {
