@@ -1,0 +1,12 @@
+{
+  "id": "26",
+  "title": "\"currentColor\", the first CSS variable",
+  "by": "Ken Bellows",
+  "category": "CSS",
+  "link": "https://dev.to/kenbellows/currentcolor-the-first-css-variable-12dl",
+  "icon": "palette",
+  "color": "fable-lavender",
+  "summary": "I did not actually know about this CSS feature until I read this article! But apparently CSS has a keyword called currentColor which knows the current color value of the element. Seems useful for keeping internal elements in a component a consistent, though dynamic, color.",
+  "created_at": "2019-06-03T21:53:26.772Z",
+  "source": "Dev"
+}

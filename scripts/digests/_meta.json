@@ -1,5 +1,5 @@
 {
-  "next_id": "26",
+  "next_id": "27",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -25,6 +25,7 @@
     "22": "test-commit-revert",
     "23": "understanding-micro-frontends",
     "24": "artificial-intelligence-and-intelligent-empowerment",
-    "25": "react-functional-or-class-components"
+    "25": "react-functional-or-class-components",
+    "26": "currentcolor-the-first-css-variable"
   }
 }
