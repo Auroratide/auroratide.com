@@ -1,8 +1,3 @@
-import { observer } from 'mobx-react';
-import Accordion from './Accordion';
-import State from './state';
-
-const component = observer(Accordion);
-component.State = State;
-
-export default component;
+export { default } from './Accordion';
+export { default as useAccordion } from './use-accordion';
+export { default as withAccordion } from './with-accordion';

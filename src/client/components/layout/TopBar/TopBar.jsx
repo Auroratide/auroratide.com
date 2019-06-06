@@ -11,32 +11,36 @@ import scroll from 'Client/utils/scroll';
 
 import styles from './style';
 
-const TopBar = ({ accordionState }) =>
+const TopBar = ({ accordion }) =>
   <nav className={styles['top-bar']}>
     <Container className={styles.container}>
       <div className={styles['main-links']}>
-        <LogoLink onClick={functions.series(accordionState.collapse, scroll.toTop)} />
-        <Hamburger className={styles.hamburger} onClick={accordionState.toggle} active={accordionState.expanded} />
+        <LogoLink onClick={functions.series(accordion.collapse, scroll.toTop)} />
+        <Hamburger className={styles.hamburger} onClick={accordion.toggle} active={accordion.expanded} />
       </div>
-      <Accordion state={accordionState} className={styles['nav-links']}>
+      <Accordion expanded={accordion.expanded} className={styles['nav-links']}>
         <NavLink
           name='Posts'
           to={new UrlBuilder().posts()}
-          onClick={functions.series(accordionState.collapse, scroll.toTop)} />
+          onClick={functions.series(accordion.collapse, scroll.toTop)} />
         <NavLink
           name='Digests'
           to={new UrlBuilder().digests()}
-          onClick={functions.series(accordionState.collapse, scroll.toTop)} />
+          onClick={functions.series(accordion.collapse, scroll.toTop)} />
         <NavLink
           name='Portfolio'
           to={new UrlBuilder().portfolio()}
-          onClick={functions.series(accordionState.collapse, scroll.toTop)} />
+          onClick={functions.series(accordion.collapse, scroll.toTop)} />
       </Accordion>
     </Container>
   </nav>;
 
 TopBar.propTypes = {
-  accordionState: PropTypes.instanceOf(Accordion.State).isRequired
+  accordion: PropTypes.shape({
+    expanded: PropTypes.bool,
+    collapse: PropTypes.func,
+    toggle: PropTypes.func
+  }).isRequired
 };
 
 export default TopBar;

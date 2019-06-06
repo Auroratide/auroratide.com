@@ -1,6 +1,5 @@
-import { observer } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import { withAccordion } from 'Client/components/core/Accordion';
 import TopBar from './TopBar';
-import container from './container';
 
-export default withRouter(container(observer(TopBar)));
+export default withRouter(withAccordion(TopBar));
