@@ -4,13 +4,12 @@ import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
 import PostsStore from 'Client/store/posts-store';
-import ResourceStore from 'Client/store/resource-store';
 import PostItem from './PostItem';
 
-const PostsListPage = ({ store }) =>
+const PostsListPage = ({ resource }) =>
   <DocumentTitle title='Posts'>
     <Container>
-      <ContentArea>{store
+      <ContentArea>{resource
         .list()
         .filter(PostsStore.filter().published())
         .sort(PostsStore.sorter().byPublishedDate)
@@ -20,7 +19,9 @@ const PostsListPage = ({ store }) =>
   </DocumentTitle>;
 
 PostsListPage.propTypes = {
-  store: PropTypes.instanceOf(ResourceStore).isRequired
+  resource: PropTypes.shape({
+    list: PropTypes.func
+  })
 };
 
 export default PostsListPage;
