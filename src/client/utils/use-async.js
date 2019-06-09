@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default (fn) => {
-  const [ waiting, setWaiting ] = useState(false);
+  const [ waiting, setWaiting ] = useState(true);
 
   useEffect(() => {
     setWaiting(true);

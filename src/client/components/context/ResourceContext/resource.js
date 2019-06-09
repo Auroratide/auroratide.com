@@ -9,9 +9,15 @@ export default class {
     this.updateItem = item => dispatch(update(item));
   }
 
+  refreshOne = async id => {
+    this.updateItem(await this.api.get(id));
+  }
+
   refreshList = async () => {
     this.addItems(await this.api.getAll());
   }
 
-  list = () =>  Object.values(this.state);
+  item = id => this.state[id];
+
+  list = () => Object.values(this.state);
 }
