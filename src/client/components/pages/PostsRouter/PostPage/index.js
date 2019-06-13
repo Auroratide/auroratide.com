@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import useAsync from 'Client/utils/use-async';
+import React from 'react';
+import useAsync from '@auroratide/use-async';
 import { renderIfElse } from 'Client/utils/render-if';
 import Loading from 'Client/components/core/Loading';
 import PageNotFound from 'Client/components/pages/PageNotFound';
@@ -8,13 +8,10 @@ import PostPage from './PostPage';
 import PostsContext from 'Client/components/context/PostsContext';
 
 const PostPageWithLoader = ({ resource, id, ...props }) => {
-  const refreshingItem = useAsync(() => resource.refreshOne(id));
-  useAsync(resource.refreshList);
-
-  useEffect(() => {
-    if(!refreshingItem)
-      resource.refreshOne(id);
-  }, [id]);
+  const { waiting: refreshingItem } = useAsync(resource.refreshOne)
+    .withArgs(id)
+    .andCall();
+  useAsync(resource.refreshList).andCall();
 
   const item = resource.item(id);
 
