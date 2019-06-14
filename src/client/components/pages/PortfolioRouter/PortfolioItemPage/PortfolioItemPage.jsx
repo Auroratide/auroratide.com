@@ -3,7 +3,6 @@ import PropTypes from 'Client/utils/prop-types';
 import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Content from './Content';
 import DownloadButtons from './DownloadButtons';
-import ResourceStore from 'Client/store/resource-store';
 import Gallery from './Gallery';
 import Article, {
   Header,
@@ -14,7 +13,7 @@ import Article, {
 
 import styles from './style';
 
-const ProjectPage = ({ item, store }) =>
+const ProjectPage = ({ item, isRefreshing }) =>
   <DocumentTitle title={item.title}>
     <Article>
       <Header title={item.title} image={item.image} />
@@ -22,7 +21,7 @@ const ProjectPage = ({ item, store }) =>
         <DownloadButtons links={item.links} />
       </ButtonBar>
       <Body className={styles.body}>
-        <Content item={item} isRefreshing={store.isRefreshing} />
+        <Content item={item} isRefreshing={isRefreshing} />
         <Aside title='Some Pics'>
           <Gallery images={item.gallery} />
         </Aside>
@@ -32,7 +31,7 @@ const ProjectPage = ({ item, store }) =>
 
 ProjectPage.propTypes = {
   item: PropTypes.project.isRequired,
-  store: PropTypes.instanceOf(ResourceStore).isRequired
+  isRefreshing: PropTypes.bool
 };
 
 export default ProjectPage;
