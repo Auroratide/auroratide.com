@@ -5,10 +5,13 @@ import Loading from 'Client/components/core/Loading';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import PostDataBuilder from 'Test/utils/builders/PostDataBuilder';
 import withResourceList from 'Client/components/core/with-resource-list';
+import PostsContext from 'Client/components/context/PostsContext';
 
 describe('with-resource-list behaviour', () => {
-  const WithResourceList = withResourceList(store => store.posts)(({ store }) =>
-    <p>{!store.isEmpty ? store.list()[0].title : 'None'}</p>
+  const WithResourceList = PostsContext.withProvider(
+    withResourceList(PostsContext)(({ list }) =>
+      <p>{list.length !== 0 ? list[0].title : 'None'}</p>
+    )
   );
 
   beforeEach(() => {
