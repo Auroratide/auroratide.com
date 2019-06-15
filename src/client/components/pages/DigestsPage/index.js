@@ -1,5 +1,5 @@
-import { observer } from 'mobx-react';
-import container from './container';
 import DigestsPage from './DigestsPage';
+import DigestsContext from 'Client/components/context/DigestsContext';
+import withResourceList from 'Client/components/core/with-resource-list';
 
-export default container(observer(DigestsPage));
+export default DigestsContext.withProvider(withResourceList(DigestsContext)(DigestsPage));
