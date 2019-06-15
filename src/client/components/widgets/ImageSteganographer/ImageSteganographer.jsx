@@ -59,7 +59,8 @@ class ImageSteganographer extends React.Component {
         <div className={styles['interactive-element']}>
           <strong>Text</strong>
           <Textarea
-            state={state.textState}
+            text={state.textState.text}
+            onChange={state.textState.setText}
             className={styles.textarea}
             placeholder='Type in the text you want to embed!' />
           <div className={styles.actions}>

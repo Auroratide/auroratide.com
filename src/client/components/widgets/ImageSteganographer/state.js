@@ -1,9 +1,20 @@
 import { observable, computed } from 'mobx';
-import Textarea from 'Client/components/core/Textarea';
+
+class Textarea {
+  @observable text;
+
+  constructor(text) {
+    this.text = text;
+  }
+
+  setText = text => {
+    this.text = text;
+  }
+}
 
 export default class State {
   canvas;
-  textState = new Textarea.State('Steganography is awesome!');
+  textState = new Textarea('Steganography is awesome!');
   originalImage;
   @observable status = '';
   @observable error = '';

@@ -5,6 +5,6 @@ import Textarea from 'Client/components/core/Textarea';
 
 describe('<Textarea />', () => {
   it('should render', () => {
-    expect(shallow(<Textarea state={new Textarea.State('hi')}/>)).toHaveLength(1);
+    expect(shallow(<Textarea />)).toHaveLength(1);
   });
 });
