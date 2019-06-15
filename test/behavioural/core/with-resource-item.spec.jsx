@@ -5,11 +5,14 @@ import Loading from 'Client/components/core/Loading';
 import { allActionsToComplete } from 'Test/behavioural/helpers';
 import PostDataBuilder from 'Test/utils/builders/PostDataBuilder';
 import withResourceItem from 'Client/components/core/with-resource-item';
+import PostsContext from 'Client/components/context/PostsContext';
 
 describe('with-resource-item behaviour', () => {
   const id = 'id';
-  const WithResourceItem = withResourceItem(store => store.posts)(({ item }) =>
-    <p>{item.title}</p>
+  const WithResourceItem = PostsContext.withProvider(
+    withResourceItem(PostsContext)(({ item }) =>
+      <p>{item.title}</p>
+    )
   );
 
   beforeEach(() => {

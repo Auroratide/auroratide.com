@@ -1,7 +1,5 @@
-import { observer } from 'mobx-react';
-import connect from './connect';
 import withResourceItem from './with-resource-item';
 
-export default getStore =>
+export default context =>
   Component =>
-    connect(getStore)(observer(withResourceItem(observer(Component))));
+    context.withResource(withResourceItem(Component));
