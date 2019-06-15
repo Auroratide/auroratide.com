@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'Client/utils/prop-types';
+import React, { useState, useRef } from 'react';
 import State from './state';
 import Dots from './Dots';
 import Line from './Line';
@@ -7,12 +6,17 @@ import LastClicked from './LastClicked';
 import Button from 'Client/components/core/Button';
 import { renderIf } from 'Client/utils/render-if';
 import classnames from 'classnames';
+import useArray from './use-array';
 
 import styles from './style';
 
-class ConnectNineDots extends React.Component {
-  handleClick = e => {
-    const state = this.props.state;
+const ConnectNineDots = () => {
+  const points = useArray();
+  const [ state ] = useState(new State(points, 4));
+  const dots = useRef();
+  const lines = useRef();
+
+  const handleClick = e => {
     if(state.atLimit) {
       state.reset();
     } else {
@@ -21,30 +25,19 @@ class ConnectNineDots extends React.Component {
     }
   };
 
-  isSuccess = () => {
-    return this.dots && this.lines &&
-      this.props.state.intersectsAllCircles(this.dots.getCirclesRelativeTo(this.lines));
-  }
+  const isSuccess = dots.current && lines.current &&
+    state.intersectsAllCircles(dots.current.getCirclesRelativeTo(lines.current));
 
-  render() {
-    const { state } = this.props;
-    const isSuccess = this.isSuccess();
-
-    return <div className={styles['connect-nine-dots']}>
-      <div className={classnames(styles['game-area'], { [styles.success]: isSuccess }, { [styles.danger]: !isSuccess && state.atLimit })}>
-        <Dots ref={elem => this.dots = elem} />
-        <div className={styles.lines} onClick={this.handleClick} ref={elem => this.lines = elem}>
-          {state.lines.map((line, i) => <Line line={line} key={i} />)}
-        </div>
-        {renderIf(state.lastPoint && !state.atLimit, () => <LastClicked point={state.lastPoint} />)}
+  return <div className={styles['connect-nine-dots']}>
+    <div className={classnames(styles['game-area'], { [styles.success]: isSuccess }, { [styles.danger]: !isSuccess && state.atLimit })}>
+      <Dots ref={dots} />
+      <div className={styles.lines} onClick={handleClick} ref={lines}>
+        {state.lines.map((line, i) => <Line line={line} key={i} />)}
       </div>
-      <Button primary className={styles.reset} onClick={() => state.reset()}>Restart</Button>
-    </div>;
-  }
-}
-
-ConnectNineDots.propTypes = {
-  state: PropTypes.instanceOf(State).isRequired
+      {renderIf(state.lastPoint && !state.atLimit, () => <LastClicked point={state.lastPoint} />)}
+    </div>
+    <Button primary className={styles.reset} onClick={() => state.reset()}>Restart</Button>
+  </div>;
 };
 
 export default ConnectNineDots;

@@ -1,11 +1,9 @@
-import { observable, computed } from 'mobx';
 import Point from './geometry/point';
 import Line from './geometry/line';
 
 export default class State {
-  @observable points = [];
-
-  constructor(lineLimit = 999) {
+  constructor(points, lineLimit = 999) {
+    this.points = points;
     this.lineLimit = lineLimit;
   }
 
@@ -16,7 +14,7 @@ export default class State {
   }
 
   reset() {
-    this.points = [];
+    this.points.clear();
   }
 
   intersectsAllCircles(circles) {
@@ -24,20 +22,20 @@ export default class State {
     return circles.every(circle => lines.some(line => circle.intersects(line)));
   }
 
-  @computed get lines() {
+  get lines() {
     const lines = [];
     for(let i = 0; i < this.points.length - 1; ++i) {
-      lines.push(Line.fromEndpoints(this.points[i], this.points[i + 1]));
+      lines.push(Line.fromEndpoints(this.points.get(i), this.points.get(i + 1)));
     }
 
     return lines;
   }
 
-  @computed get lastPoint() {
-    return this.points[this.points.length - 1];
+  get lastPoint() {
+    return this.points.get(this.points.length - 1);
   }
 
-  @computed get atLimit() {
+  get atLimit() {
     return this.points.length >= this.lineLimit + 1;
   }
 }

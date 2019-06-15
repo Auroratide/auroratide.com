@@ -1,21 +1,22 @@
 import State from 'Client/components/widgets/ConnectNineDots/state';
 import Circle from 'Client/components/widgets/ConnectNineDots/geometry/circle';
 import Point from 'Client/components/widgets/ConnectNineDots/geometry/point';
+import { ObservableArray } from 'Client/components/widgets/ConnectNineDots/use-array';
 
 describe('ConnectNineDots state', () => {
   describe('record', () => {
     it('should remember the most recently recorded points, in order', () => {
-      const state = new State();
+      const state = new State(new ObservableArray([], () => {}));
 
       state.record(1, 2);
       state.record(3, 4);
 
-      expect(state.points[0]).toEqual({ x: 1, y: 2 });
-      expect(state.points[1]).toEqual({ x: 3, y: 4 });
+      expect(state.points.get(0)).toEqual({ x: 1, y: 2 });
+      expect(state.points.get(1)).toEqual({ x: 3, y: 4 });
     });
 
     it('should not allow any more points to be recorded when the line limit has been reached', () => {
-      const state = new State(1);
+      const state = new State(new ObservableArray([], () => {}), 1);
 
       state.record(1, 2);
       state.record(3, 4);
@@ -27,8 +28,7 @@ describe('ConnectNineDots state', () => {
 
   describe('reset', () => {
     it('should clear the array of points', () => {
-      const state = new State();
-      state.points = [{ x: 1, y: 2 }, { x: 3, y: 4 }];
+      const state = new State(new ObservableArray([{ x: 1, y: 2 }, { x: 3, y: 4 }], () => {}));
 
       state.reset();
 
@@ -41,7 +41,7 @@ describe('ConnectNineDots state', () => {
     let circles;
 
     beforeEach(() => {
-      state = new State();
+      state = new State(new ObservableArray([], () => {}));
       circles = [
         new Circle(new Point(5, 5), 1),
         new Circle(new Point(10, 10), 1)
@@ -81,7 +81,7 @@ describe('ConnectNineDots state', () => {
     let state;
 
     beforeEach(() => {
-      state = new State();
+      state = new State(new ObservableArray([], () => {}));
     });
 
     it('should return empty list when there are 0 or 1 recorded points', () => {
@@ -114,7 +114,7 @@ describe('ConnectNineDots state', () => {
     let state;
 
     beforeEach(() => {
-      state = new State();
+      state = new State(new ObservableArray([], () => {}));
     });
 
     it('should return nothing when there is no last point', () => {
