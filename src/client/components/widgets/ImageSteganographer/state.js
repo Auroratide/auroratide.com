@@ -1,24 +1,13 @@
-import { observable, computed } from 'mobx';
-
-class Textarea {
-  @observable text;
-
-  constructor(text) {
-    this.text = text;
-  }
-
-  setText = text => {
-    this.text = text;
-  }
-}
-
 export default class State {
   canvas;
-  textState = new Textarea('Steganography is awesome!');
   originalImage;
-  @observable status = '';
-  @observable error = '';
-  @observable base64;
+
+  constructor(text, status, error, base64) {
+    this.text = text;
+    this.status = status;
+    this.error = error;
+    this.base64 = base64;
+  }
 
   initCanvas(canvas) {
     this.canvas = canvas;
@@ -28,23 +17,19 @@ export default class State {
     return this.canvas.getContext('2d');
   }
 
-  @computed get text() {
-    return this.textState.text;
-  }
-
-  updateImage(image) {
+  updateImage = (image) => {
     this.startProcess();
     this.originalImage = image;
     this.canvas.width = image.width;
     this.canvas.height = image.height;
     this.context.drawImage(image, 0, 0);
-    this.base64 = this.canvas.toDataURL();
+    this.base64.set(this.canvas.toDataURL());
     this.processSucceeded();
   }
 
-  applySteganography() {
+  applySteganography = () => {
     this.startProcess();
-    const message = this.text;
+    const message = this.text.get();
     this.context.drawImage(this.originalImage, 0, 0);
     const imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
     const data = imageData.data;
@@ -65,7 +50,7 @@ export default class State {
     });
 
     this.context.putImageData(imageData, 0, 0);
-    this.base64 = this.canvas.toDataURL();
+    this.base64.set(this.canvas.toDataURL());
 
     if(i > data.length) {
       this.processFailed('Unfortunately, the length of the message exceeded the number of bytes available in the image.');
@@ -74,7 +59,7 @@ export default class State {
     }
   }
 
-  decodeFromImage() {
+  decodeFromImage = () => {
     this.startProcess();
     const imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
     const data = imageData.data;
@@ -98,7 +83,7 @@ export default class State {
         break;
     }
 
-    this.textState.text = message;
+    this.text.set(message);
 
     if(message.length === 0)
       this.processFailed('Unfortunately, no message could be found in the image');
@@ -106,17 +91,17 @@ export default class State {
       this.processSucceeded();
   }
 
-  startProcess() {
-    this.status = 'pending';
-    this.error = '';
+  startProcess = () => {
+    this.status.set('pending');
+    this.error.set('');
   }
 
-  processSucceeded() {
-    this.status = 'success';
+  processSucceeded = () => {
+    this.status.set('success');
   }
 
-  processFailed(message) {
-    this.status = 'failure';
-    this.error = message;
+  processFailed = (message) => {
+    this.status.set('failure');
+    this.error.set(message);
   }
 }

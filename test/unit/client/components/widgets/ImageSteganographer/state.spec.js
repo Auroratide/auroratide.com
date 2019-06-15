@@ -1,4 +1,5 @@
 import State from 'Client/components/widgets/ImageSteganographer/state';
+import { Text } from 'Client/components/widgets/ImageSteganographer/use-text';
 
 describe('ImageSteganographer State', () => {
   let state;
@@ -12,7 +13,7 @@ describe('ImageSteganographer State', () => {
     canvas.width = 2;
     canvas.height = 2;
 
-    state = new State();
+    state = new State(new Text(''), new Text(''), new Text(''), new Text(''));
     state.initCanvas(canvas);
   });
 
@@ -22,7 +23,7 @@ describe('ImageSteganographer State', () => {
     const _ = undefined; // implementation detail of jest-canvas-mock
 
     it('should embed the message into the two least significant bits of the colors in the image data', () => {
-      state.textState.text = 'hi';
+      state.text.set('hi');
       jest.spyOn(context, 'putImageData');
 
       state.applySteganography();
@@ -38,7 +39,7 @@ describe('ImageSteganographer State', () => {
     });
 
     it('should set failure message when the message size exceeds the number of available bytes in the image', () => {
-      state.textState.text = 'hiih';
+      state.text.set('hiih');
       jest.spyOn(context, 'putImageData');
 
       state.applySteganography();
@@ -51,7 +52,7 @@ describe('ImageSteganographer State', () => {
           2, 2, 1, _
         ]
       }), 0, 0);
-      expect(state.error).not.toEqual('');
+      expect(state.error.get()).not.toEqual('');
     });
   });
 
@@ -69,7 +70,7 @@ describe('ImageSteganographer State', () => {
 
       state.decodeFromImage();
 
-      expect(state.text).toEqual('pi');
+      expect(state.text.get()).toEqual('pi');
     });
 
     it('should set the error message when no letters could be determined', () => {
@@ -85,8 +86,8 @@ describe('ImageSteganographer State', () => {
 
       state.decodeFromImage();
 
-      expect(state.text).toEqual('');
-      expect(state.error).not.toEqual('');
+      expect(state.text.get()).toEqual('');
+      expect(state.error.get()).not.toEqual('');
     });
   });
 });

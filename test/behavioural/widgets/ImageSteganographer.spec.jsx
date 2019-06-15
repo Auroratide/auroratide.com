@@ -58,7 +58,7 @@ describe('ImageSteganographer Behaviour', () => {
     global.createImageBitmap = jest.fn();
 
     wrapper = mount(<ImageSteganographer />);
-    canvas = wrapper.find('ImageSteganographer').instance().canvas;
+    canvas = wrapper.find('canvas').instance();
     context = canvas.getContext('2d');
     canvas.getContext = jest.fn(() => context);
     context.drawImage = jest.fn(img => currentImage = img);
