@@ -17,7 +17,7 @@ describe('<DigestsPage />', () => {
     expect(page()).toHaveLength(1);
   });
 
-  it('should render each digest from the store', () => {
+  it('should render each digest from the store, sorted', () => {
     list = [
       new DigestBuilder().withId('1').build(),
       new DigestBuilder().withId('2').build(),
@@ -26,8 +26,8 @@ describe('<DigestsPage />', () => {
 
     const wrapper = page();
     expect(wrapper.find(DigestItem)).toHaveLength(3);
-    expect(wrapper.find(DigestItem).at(0).key()).toEqual('1');
+    expect(wrapper.find(DigestItem).at(0).key()).toEqual('3');
     expect(wrapper.find(DigestItem).at(1).key()).toEqual('2');
-    expect(wrapper.find(DigestItem).at(2).key()).toEqual('3');
+    expect(wrapper.find(DigestItem).at(2).key()).toEqual('1');
   });
 });

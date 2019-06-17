@@ -34,7 +34,7 @@ describe('DigestsPage Behaviour', () => {
 
   it('should render the digests from the API and show a loading indicator while waiting', async () => {
     const expectedDigest = new DigestBuilder()
-      .withId('1')
+      .withId('2')
       .withTitle('The Title')
       .withColor(Colors.AURORA_BLUE.name)
       .withIcon('bars')
@@ -55,8 +55,8 @@ describe('DigestsPage Behaviour', () => {
     await allActionsToComplete();
     wrapper.update();
 
-    expect(wrapper.find(DigestItem).at(0).key()).toEqual('1');
-    expect(wrapper.find(DigestItem).at(1).key()).toEqual('2');
+    expect(wrapper.find(DigestItem).at(0).key()).toEqual('2');
+    expect(wrapper.find(DigestItem).at(1).key()).toEqual('1');
   });
 
 });
