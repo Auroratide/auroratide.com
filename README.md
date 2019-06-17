@@ -7,7 +7,6 @@ Welcome to the source code of my website! I have open-sourced the code for your 
 **auroratide.com** demonstrates use of the following technologies:
 
 * React
-* MobX
 * Babel Transpilation
 * Webpack
 * CSS Modules
