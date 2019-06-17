@@ -1,7 +1,7 @@
-import PostsStore from 'Client/store/posts-store';
+import { filter, sorter } from 'Client/components/context/PostsContext';
 import PostBuilder from 'Test/utils/builders/PostBuilder';
 
-describe('PostsStore', () => {
+describe('PostsContext', () => {
   describe('sorter', () => {
     describe('byPublishedDate', () => {
       it('should sort by date published in descending order', () => {
@@ -10,7 +10,7 @@ describe('PostsStore', () => {
         const older = new PostBuilder().withId('older').withPublishedAt('2018-09-21T00:00:00Z').build();
         const posts = [middle, older, newer];
 
-        const sorted = posts.sort(PostsStore.sorter().byPublishedDate);
+        const sorted = posts.sort(sorter.byPublishedDate);
 
         expect(sorted[0]).toEqual(newer);
         expect(sorted[1]).toEqual(middle);
@@ -27,7 +27,7 @@ describe('PostsStore', () => {
         const dog = new PostBuilder().withId('dog').withCategory('dog').build();
         const posts = [cat, lion, dog];
 
-        const filtered = posts.filter(PostsStore.filter().withCategory('cat'));
+        const filtered = posts.filter(filter.withCategory('cat'));
 
         expect(filtered).toContain(cat);
         expect(filtered).toContain(lion);
@@ -42,7 +42,7 @@ describe('PostsStore', () => {
         const dog = new PostBuilder().withId('dog').build();
         const posts = [cat, lion, dog];
 
-        const filtered = posts.filter(PostsStore.filter().without('dog'));
+        const filtered = posts.filter(filter.without('dog'));
 
         expect(filtered).toContain(cat);
         expect(filtered).toContain(lion);
@@ -57,7 +57,7 @@ describe('PostsStore', () => {
         const dog = new PostBuilder().withId('dog').build();
         const posts = [cat, lion, dog];
 
-        const filtered = posts.filter(PostsStore.filter().top(2));
+        const filtered = posts.filter(filter.top(2));
 
         expect(filtered).toContain(cat);
         expect(filtered).toContain(lion);
@@ -71,7 +71,7 @@ describe('PostsStore', () => {
         const unpublished = new PostBuilder().withId('unpublished').withoutPublished().build();
         const posts = [published, unpublished];
 
-        const filtered = posts.filter(PostsStore.filter().published());
+        const filtered = posts.filter(filter.published());
 
         expect(filtered).toContain(published);
         expect(filtered).not.toContain(unpublished);

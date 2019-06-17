@@ -3,7 +3,7 @@ import PropTypes from 'Client/utils/prop-types';
 import DocumentTitle from 'Client/components/layout/DocumentTitle';
 import Container from 'Client/components/core/Container';
 import ContentArea from 'Client/components/layout/ContentArea';
-import PostsStore from 'Client/store/posts-store';
+import { sorter, filter } from 'Client/components/context/PostsContext';
 import PostItem from './PostItem';
 
 const PostsListPage = ({ resource }) =>
@@ -11,8 +11,8 @@ const PostsListPage = ({ resource }) =>
     <Container>
       <ContentArea>{resource
         .list()
-        .filter(PostsStore.filter().published())
-        .sort(PostsStore.sorter().byPublishedDate)
+        .filter(filter.published())
+        .sort(sorter.byPublishedDate)
         .map(post => <PostItem post={post} key={post.id} />)
       }</ContentArea>
     </Container>
