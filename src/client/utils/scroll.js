@@ -1,6 +1,6 @@
-import wait from 'Client/utils/wait';
+import wait from '@auroratide/wait';
 
-export const toTop = () => wait.for(1).then(() => window.scroll( {
+export const toTop = () => wait.for(1).milliseconds().then(() => window.scroll( {
   top: 0,
   left: 0,
   behavior: 'smooth'

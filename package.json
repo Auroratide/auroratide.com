@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@auroratide/use-async": "^0.1.0",
+    "@auroratide/wait": "^0.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
