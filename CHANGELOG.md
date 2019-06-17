@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.1 (17 Jun 2019)
+
+* Basically just code refactoring
+ * Refactored MobX out of the codebase
+ * Consolidated posts and portfolio components
+
 ## 1.2.0 (18 May 2019)
 
 * Added my portfolio of projects dating back to 2008
