@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { renderIf } from 'Client/utils/render-if';
-import State from './state';
 import classnames from 'classnames';
 
 import styles from './style';
 
-const Square = ({ state, onClick }) =>
+const Square = ({ value, canBeEdited, onClick }) =>
   <div
-    className={classnames(styles.square, { [styles['cannot-edit']]: !state.canBeEdited })}
-    onClick={state.canBeEdited ? onClick : null}
+    className={classnames(styles.square, { [styles['cannot-edit']]: !canBeEdited })}
+    onClick={canBeEdited ? onClick : null}
   >
-    {renderIf(state.value, () => <img src={`/assets/whodoku/${state.value}.png`} alt={state.value} />)}
+    {renderIf(value, () => <img src={`/assets/whodoku/${value}.png`} alt={value} />)}
   </div>;
 
 Square.propTypes = {
-  state: PropTypes.instanceOf(State).isRequired,
+  value: PropTypes.number,
+  canBeEdited: PropTypes.bool,
   onClick: PropTypes.func
 };
 

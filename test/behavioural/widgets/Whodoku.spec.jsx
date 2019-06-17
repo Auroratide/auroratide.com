@@ -8,18 +8,24 @@ describe('Whodoku Behaviour', () => {
   let wrapper;
 
   const firstEditableSquare = () => wrapper.find('.whodoku .square:not(.cannot-edit)').at(0);
+  const square = (n) => wrapper.find('.whodoku .square').at(n);
   const click = (square) => square.simulate('click');
   const hasImage = (square, n) => square.find('img').props().src.includes(`${n}.png`);
   const imageFor = square => square.find('img').props().src;
-  const solve = state => {
+  const solve = wrapper => {
+    const board = wrapper.find('Whodoku').props().state.board;
     const solvedPuzzle = sudoku
-      .solvepuzzle(state.board
-        .map(square => square.value ? square.value - 1 : null)
+      .solvepuzzle(board
+        .map(square => square ? square - 1 : null)
       ).map(n => n + 1);
 
-    state.board.forEach((square, i) => square.value = solvedPuzzle[i]);
-    state.checkForWin();
-    wrapper.update();
+    solvedPuzzle.forEach((correctValue, i) => {
+      let board = wrapper.find('Whodoku').props().state.board;
+      while(board[i] !== correctValue) {
+        click(square(i));
+        board = wrapper.find('Whodoku').props().state.board;
+      }
+    });
   };
 
   beforeEach(() => {
@@ -37,11 +43,9 @@ describe('Whodoku Behaviour', () => {
   });
 
   it('should declare when the board has been solved and prevent further editing', () => {
-    const state = wrapper.find('Whodoku').props().state;
-    
     expect(wrapper.find('.solved-text')).toHaveLength(0);
 
-    solve(state);
+    solve(wrapper);
     expect(wrapper.find('.solved-text')).toHaveLength(1);
 
     const imageBefore = imageFor(firstEditableSquare());
