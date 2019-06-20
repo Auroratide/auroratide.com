@@ -1,0 +1,12 @@
+{
+  "id": "28",
+  "title": "Why I'm using react-testing-library instead of Enzyme",
+  "by": "Antoine Lehurt",
+  "category": "React",
+  "link": "https://blog.kewah.com/2019/testing-react-using-testing-library/",
+  "icon": "hand-pointer",
+  "color": "aurora-blue",
+  "summary": "There are many ways to test React components, but two popular ways are by either using Enzyme or React Testing Library. I've used Enzyme for a long time, but have started taking a big liking to React Testing Library after the installation of React Hooks. Lehurt's article explains why better than I can.",
+  "created_at": "2019-06-20T20:31:39.138Z",
+  "source": "Antoine Lehurt's Blog"
+}
