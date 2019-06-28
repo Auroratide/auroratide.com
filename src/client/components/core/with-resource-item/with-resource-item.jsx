@@ -5,7 +5,7 @@ import Loading from 'Client/components/core/Loading';
 import PageNotFound from 'Client/components/pages/PageNotFound';
 
 export default Component => ({ resource, id, ...props }) => {
-  const { waiting: refreshingItem } = useAsync(resource.refreshOne)
+  const { waiting: refreshingItem, error } = useAsync(resource.refreshOne)
     .withArgs(id)
     .andCall();
 
@@ -13,9 +13,9 @@ export default Component => ({ resource, id, ...props }) => {
 
   return renderIfElse(item, () =>
     <Component item={item} resource={resource} id={id} isRefreshing={refreshingItem} {...props} />
-  ).elseRender(() => renderIfElse(refreshingItem, () =>
-    <Loading text='Fetching...' />
-  ).elseRender(() =>
+  ).elseRender(() => renderIfElse(error, () =>
     <PageNotFound />
+  ).elseRender(() =>
+    <Loading text='Fetching...' />
   ));
 };

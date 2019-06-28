@@ -9,6 +9,7 @@ import PostsContext from 'Client/components/context/PostsContext';
 
 describe('with-resource-item behaviour', () => {
   const id = 'id';
+  const missingId = 'missing';
   const WithResourceItem = PostsContext.withProvider(
     withResourceItem(PostsContext)(({ item }) =>
       <p>{item.title}</p>
@@ -26,6 +27,10 @@ describe('with-resource-item behaviour', () => {
     http
       .when.get(`/posts/${id}.json`)
       .then.reply(200, post);
+
+    http  
+      .when.get(`/posts/${missingId}.json`)
+      .then.reply(404);
   });
 
   afterEach(() => http.reset());
@@ -39,5 +44,13 @@ describe('with-resource-item behaviour', () => {
 
     expect(wrapper.find(Loading).exists()).toBe(false);
     expect(wrapper.text()).toContain('The Title');
+  });
+
+  it('should show page not found when the resource cannot be found', async () => {
+    const wrapper = withAppContext().mount(<WithResourceItem id={missingId} />);
+    await allActionsToComplete();
+    wrapper.update();
+
+    expect(wrapper.text()).toContain('Uh oh!');
   });
 });
