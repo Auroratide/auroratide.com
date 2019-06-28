@@ -26,9 +26,10 @@ const PostPage = ({ resource, id, isRefreshing }) => {
   const similarPosts = item ? resource.list()
     .filter(filter.without(item.id))
     .filter(filter.withCategory(item.category))
+    .filter(filter.published())
     .sort(sorter.byPublishedDate)
     .filter(filter.top(5)) : [];
-  
+
   const isPublished = !!item.publishedAt;
 
   return <DocumentTitle title={item.title}>

@@ -38,6 +38,9 @@ describe('PostsRouter Behaviour', () => {
 
       const unpublishedPost = new PostDataBuilder()
         .withId('unpublished')
+        .withTitle('Unpublished')
+        .withCategory('cat')
+        .withIcon('bars')
         .withUnpublished();
   
       http
@@ -45,7 +48,8 @@ describe('PostsRouter Behaviour', () => {
         .then.reply(200, { posts: [
           post.build(),
           similarPost.build(),
-          dissimilarPost.build()]
+          dissimilarPost.build(),
+          unpublishedPost.build()]
         });
 
       http
@@ -108,6 +112,15 @@ describe('PostsRouter Behaviour', () => {
       wrapper.update();
 
       expect(wrapper.text()).toContain('Not Published');
+    });
+
+    it('should not show unpublished posts in the related posts column', async () => {
+      const wrapper = page();
+
+      await allActionsToComplete();
+      wrapper.update();
+  
+      expect(wrapper.text()).not.toContain('Unpublished');
     });
   });
 
