@@ -9,6 +9,7 @@ import RconRenderer from 'Client/components/core/RconRenderer';
 import Comments from './Comments';
 import { renderIfElse } from 'Client/utils/render-if';
 import { filter, sorter } from 'Client/components/context/PostsContext';
+import classnames from 'classnames';
 
 import Article, {
   Header,
@@ -27,6 +28,8 @@ const PostPage = ({ resource, id, isRefreshing }) => {
     .filter(filter.withCategory(item.category))
     .sort(sorter.byPublishedDate)
     .filter(filter.top(5)) : [];
+  
+  const isPublished = !!item.publishedAt;
 
   return <DocumentTitle title={item.title}>
     <Article>
@@ -39,10 +42,14 @@ const PostPage = ({ resource, id, isRefreshing }) => {
           {renderIfElse(!item.content && isRefreshing, () =>
             <Loading text='Fetching content...' />
           ).elseRender(() =>
-            <React.Fragment>
-              <DateDisplay className={styles['minor-title']} date={new Date(item.publishedAt)} />
+            <>
+              {renderIfElse(isPublished, () =>
+                <DateDisplay className={styles['minor-title']} date={new Date(item.publishedAt)} />
+              ).elseRender(() =>
+                <span className={classnames(styles['minor-title'], styles.warning)}>Not Published</span>
+              )}
               <RconRenderer rcon={item.content || []} />
-            </React.Fragment>
+            </>
           )}
         </Content>
         <Aside title={`More on ${item.category}`}>

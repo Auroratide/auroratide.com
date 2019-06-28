@@ -13,12 +13,12 @@ describe('PostsRouter Behaviour', () => {
   afterEach(() => http.reset());
 
   describe('Single Post', () => {
-    const id = 'the-post';
-    const page = () => withInitialRoute(`/posts/${id}`).mount(<PostsRouter />);
+    const ID = 'the-post';
+    const page = (id = ID) => withInitialRoute(`/posts/${id}`).mount(<PostsRouter />);
   
     beforeEach(() => {
       const post = new PostDataBuilder()
-        .withId(id)
+        .withId(ID)
         .withTitle('The Title')
         .withIcon('bars')
         .withCategory('cat');
@@ -35,6 +35,10 @@ describe('PostsRouter Behaviour', () => {
         .withTitle('Dissimilar')
         .withIcon('bars')
         .withCategory('dog');
+
+      const unpublishedPost = new PostDataBuilder()
+        .withId('unpublished')
+        .withUnpublished();
   
       http
         .when.get('/posts/index.json')
@@ -45,12 +49,16 @@ describe('PostsRouter Behaviour', () => {
         });
 
       http
-        .when.get(`/posts/${id}.json`)
+        .when.get(`/posts/${ID}.json`)
         .then.reply(200, post.withContent('First Post').build());
 
       http
         .when.get('/posts/similar.json')
         .then.reply(200, similarPost.withContent('Second Post').build());
+
+      http
+        .when.get('/posts/unpublished.json')
+        .then.reply(200, unpublishedPost.withContent('Unpublished').build());
 
       window.scroll = jest.fn();
     });
@@ -92,6 +100,14 @@ describe('PostsRouter Behaviour', () => {
 
       expect(wrapper.text()).not.toContain('First Post');
       expect(wrapper.text()).toContain('Second Post');
+    });
+
+    it('should indicate when the viewed post is unpublished', async () => {
+      const wrapper = page('unpublished');
+      await allActionsToComplete();
+      wrapper.update();
+
+      expect(wrapper.text()).toContain('Not Published');
     });
   });
 
