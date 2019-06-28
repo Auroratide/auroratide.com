@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.2.2 (28 Jun 2019)
+
+* Bug fixes (janky behaviour when loading post pages)
+* Remove commenting and sharing functionality for unpublished items
+
 ### 1.2.1 (17 Jun 2019)
 
 * Basically just code refactoring
