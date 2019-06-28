@@ -60,6 +60,8 @@ All right, code time.
 
 ~~Let's say you want a super simple component that increments a number~~ Just kidding, that example's overused. Let's say you want a completely different component that upon a button press _decrements_ a number instead. By 2, because why not.
 
+<Decrementor />
+
 ```js
 const Decrementor = () => {};
 ```

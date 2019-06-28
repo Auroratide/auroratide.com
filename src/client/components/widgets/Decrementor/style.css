@@ -1,0 +1,12 @@
+@import "theme";
+
+.decrementor {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.number {
+  @mixin typography-responsive lg;
+
+  margin-bottom: 0.5em;
+}

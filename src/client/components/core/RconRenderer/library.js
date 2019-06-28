@@ -9,6 +9,7 @@ import ConnectNineDots from 'Client/components/widgets/ConnectNineDots';
 import StegoBody from 'Client/components/widgets/StegoBody';
 import ImageSteganographer from 'Client/components/widgets/ImageSteganographer';
 import MaslowsHierarchyOfNeeds from 'Client/components/widgets/MaslowsHierarchyOfNeeds';
+import Decrementor from 'Client/components/widgets/Decrementor';
 
 export default {
   CodeBlock,
@@ -21,5 +22,6 @@ export default {
   ConnectNineDots,
   StegoBody,
   ImageSteganographer,
-  MaslowsHierarchyOfNeeds
+  MaslowsHierarchyOfNeeds,
+  Decrementor
 };

@@ -4,6 +4,7 @@
   display: inline-block;
   border-radius: 1em;
   padding: 0.25em 1.5em;
+  font-size: 1rem;
   transition:
     var(--transition-short) padding-left,
     var(--transition-short) padding-right,
