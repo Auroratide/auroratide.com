@@ -13,7 +13,7 @@ Upon reflection, I wanted to share what I learnt as a result of my refactoring e
 Let's take a look at what that means, how to make it work, and why we should follow it as much as we can! Oh yeah, and if you're patient enough, I have an obligatory sample Github repo to share which demonstrates this principle as well. Yay! Code!
 
 ,,,
-Note: This is by no means a new, revolutionary principle. Developers everywhere, React and beyond, have been echoing these words for years. See Kent C. Dodds's article [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) for an example. However, it can be difficult to know whether we've strayed into testing implementation, which is why I wanted to write about the what, how, and why of nicely testing React components.
+Note: This is by no means a new, revolutionary principle. Developers everywhere, React and beyond, have been echoing these words for years. See Kent C. Dodds's article [Testing Implementation Details](*https://kentcdodds.com/blog/testing-implementation-details) for an example. However, it can be difficult to know whether we've strayed into testing implementation, which is why I wanted to write about the what, how, and why of nicely testing React components.
 ,,,
 
 ## What's the principle?
@@ -78,7 +78,7 @@ To answer our questions...
 1. The user can press a button.
 2. When they do, a number on the screen goes down by 2.
 
-That's a test right there! To write it in code, let's use [React Testing Library](https://github.com/testing-library/react-testing-library), though you can achieve the same kind of test with Enzyme as well:
+That's a test right there! To write it in code, let's use [React Testing Library](*https://github.com/testing-library/react-testing-library), though you can achieve the same kind of test with Enzyme as well:
 
 ```js
 import React from 'react';
@@ -114,7 +114,7 @@ Actually, that's the nice thing about the React Testing Library. Unlike Enzyme, 
 
 Now that we have a test, we can write a nice little component like so:
 
-```js
++```js
 import React, { useState } from 'react';
 
 const Decrementor = ({ initialValue }) => {
@@ -132,7 +132,7 @@ export default Decrementor;
 
 We decided to use hooks because, y'know, they're the new thing and all, but we didn't have to. Nicely, the following implementation using a MobX class also passes:
 
-```js
++```js
 import React, { useState } from 'react';
 import { decorate, observable, action } from 'mobx';
 import { observer } from 'mobx-react-lite';
