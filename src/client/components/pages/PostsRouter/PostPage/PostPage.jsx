@@ -7,7 +7,7 @@ import RelatedPosts from './RelatedPosts';
 import DateDisplay from 'Client/components/core/DateDisplay';
 import RconRenderer from 'Client/components/core/RconRenderer';
 import Comments from './Comments';
-import { renderIfElse } from 'Client/utils/render-if';
+import { renderIfElse, renderIf } from 'Client/utils/render-if';
 import { filter, sorter } from 'Client/components/context/PostsContext';
 import classnames from 'classnames';
 
@@ -35,9 +35,11 @@ const PostPage = ({ resource, id, isRefreshing }) => {
   return <DocumentTitle title={item.title}>
     <Article>
       <Header title={item.title} color={item.color} icon={item.icon} />
-      <ButtonBar>
-        <ShareButtons post={item} />
-      </ButtonBar>
+      {renderIf(isPublished, () =>
+        <ButtonBar>
+          <ShareButtons post={item} />
+        </ButtonBar>
+      )}
       <Body>
         <Content>
           {renderIfElse(!item.content && isRefreshing, () =>
@@ -56,7 +58,9 @@ const PostPage = ({ resource, id, isRefreshing }) => {
         <Aside title={`More on ${item.category}`}>
           <RelatedPosts posts={similarPosts} />
         </Aside>
-        <Comments slug={item.id} />
+        {renderIf(isPublished, () =>
+          <Comments slug={item.id} />
+        )}
       </Body>
     </Article>
   </DocumentTitle>;
