@@ -7,7 +7,7 @@ export default Component => ({ resource, ...props }) => {
   const { waiting: refreshing } = useAsync(resource.refreshList).andCall();
   const list = resource.list();
   
-  return renderIfElse(refreshing, () =>
+  return renderIfElse(refreshing && list.length === 0, () =>
     <Loading text='Fetching...' />
   ).elseRender(() =>
     <Component resource={resource} list={list} {...props} />
