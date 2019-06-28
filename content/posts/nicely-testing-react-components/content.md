@@ -168,11 +168,11 @@ Even though the state management paradigm is completely different, the test pass
 
 Pretty neat, right?
 
-We can summarize what we've learnt like so:
+We can summarize the key points like so:
 
 * Adopt the paradigm of a **real user** using your component to drive how the test reads.
 * Only expose the component's **surface** in the test's actions and assertions. Deliberately ask yourself what knobs a user can manipulate and what the user should visibly see.
-* **Refrain from digging** into the component's state and directly manipulating values. There's no guarantee what you're doing is achievable from a user's point of view.
+* **Refrain from digging** into the component's state and directly manipulating values. Otherwise, there's no guarantee what you're doing is achievable from a user's point of view.
 
 And a bonus tip:
 
@@ -193,9 +193,9 @@ In other words, we write automated tests because...
 * ...they provide confidence our code works
 * ...and save us a lot of time.
 
-Unfortunately, many of us have probably experienced times when our tests failed to meet one or both of those value propositions. If tests fail when they shouldn't, then we stop having confidence, and if we have to babysit such broken tests, then we end up wasting the time we hoped to be saving.
+Unfortunately, many of us (myself included) have probably experienced times when our tests failed to meet one or both of those value propositions. If tests fail when they shouldn't, then we stop having confidence, and if we have to babysit such broken tests, then we end up wasting the time we hoped to be saving.
 
-UI components are particularly volatile, so it's doubly important that we avoid any pitfalls if we can help it. This means testing _exactly_ the things we care about, because anything extraneous means more code to maintain. And when you really think about it, the primary thing we care about as product developers is that the user can do the thing the product was built for.
+UI components are particularly volatile, so it's doubly important that we avoid any pitfalls if we can help it. This means testing _exactly_ the things we care about, because anything extraneous means more code to maintain. And when you really think about it, as product developers the primary thing we care about is that the user can do the thing the product was built for.
 
 Test what the component does, not how it works. By doing so, your tests will be more reliable, less brittle, and closer to reality, thereby providing confidence and saving time.
 
@@ -205,12 +205,12 @@ As an experiment, I decided to try my hand at implementing the classic Tic Tac T
 
 The catch? _The exact same set of tests must pass for each version of the Tic Tac Toe component._
 
-**[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**! The readme has more details in it.
+**[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**! The readme has more details in it. Or you can play the game with yourself below if that's your fancy.
 
 <ReactTacToe />
 
 -,,,
-By the way, I also tried to do this with web components, just to prove that the tests will pass even without React. Unfortunately, I hit a dead end when I realized JSDom doesn't support custom elements yet. If you're feeling adventurous, feel free to make a pull request proving this can indeed be done!
+By the way, I also tried to do this with web components, just to prove that the tests will pass even without React. Unfortunately, I hit a dead end when I realized JSDOM doesn't support custom elements yet. If you're feeling adventurous, feel free to make a pull request proving this can indeed be done!
 ,,,
 
 ## Closing Thoughts
