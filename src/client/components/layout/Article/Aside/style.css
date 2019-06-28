@@ -14,5 +14,6 @@
     @mixin typography-preset-paragraph;
 
     margin-bottom: 1rem;
+    font-style: italic;
   }
 }

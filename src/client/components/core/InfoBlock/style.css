@@ -15,6 +15,7 @@
   @mixin typography-responsive sm;
 
   margin-bottom: 0.75rem;
+  font-weight: var(--typography-normal);
 }
 
 .info-block > p:last-child {
