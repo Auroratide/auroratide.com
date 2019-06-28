@@ -1,0 +1,32 @@
+@import "theme";
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 40vmin;
+  height: 40vmin;
+  margin: 0 auto 2rem;
+  user-select: none;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8vmin;
+}
+
+.tile:nth-child(3n - 1) {
+  border-left: 0.25rem solid var(--palette-off-black);
+  border-right: 0.25rem solid var(--palette-off-black);
+}
+
+.tile:nth-child(n + 4):not(:nth-child(n + 7)) {
+  border-top: 0.25rem solid var(--palette-off-black);
+  border-bottom: 0.25rem solid var(--palette-off-black);
+}
+
+.tile.highlight {
+  color: var(--palette-success);
+}

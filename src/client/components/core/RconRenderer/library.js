@@ -10,6 +10,7 @@ import StegoBody from 'Client/components/widgets/StegoBody';
 import ImageSteganographer from 'Client/components/widgets/ImageSteganographer';
 import MaslowsHierarchyOfNeeds from 'Client/components/widgets/MaslowsHierarchyOfNeeds';
 import Decrementor from 'Client/components/widgets/Decrementor';
+import ReactTacToe from 'Client/components/widgets/ReactTacToe';
 
 export default {
   CodeBlock,
@@ -23,5 +24,6 @@ export default {
   StegoBody,
   ImageSteganographer,
   MaslowsHierarchyOfNeeds,
-  Decrementor
+  Decrementor,
+  ReactTacToe
 };

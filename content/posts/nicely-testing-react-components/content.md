@@ -207,6 +207,8 @@ The catch? _The exact same set of tests must pass for each version of the Tic Ta
 
 **[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**! The readme has more details in it.
 
+<ReactTacToe />
+
 -,,,
 By the way, I also tried to do this with web components, just to prove that the tests will pass even without React. Unfortunately, I hit a dead end when I realized JSDom doesn't support custom elements yet. If you're feeling adventurous, feel free to make a pull request proving this can indeed be done!
 ,,,

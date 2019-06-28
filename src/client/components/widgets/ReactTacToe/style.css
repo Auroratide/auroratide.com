@@ -1,0 +1,11 @@
+@import "theme";
+
+.react-tac-toe {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  text-align: center;
+}
