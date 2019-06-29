@@ -1,4 +1,4 @@
-So I guess hooks are the new hip thing in the React ecosphere. And I gotta admit, they're pretty terse and rather nifty, so nifty in fact that I decided to try my hand at refactoring my entire website into using hooks and React's context api rather than MobX. Y'know, for practice and stuff.
+So I guess [hooks](*https://reactjs.org/docs/hooks-intro.html) are the new hip thing in the React ecosphere. And I gotta admit, they're pretty terse and rather nifty, so nifty in fact that I decided to try my hand at refactoring my entire website into using hooks and React's context api rather than MobX. Y'know, for practice and stuff.
 
 Now, I _could_ talk about all the things I had to change (...it was a lot), but first I want to talk about the things I _didn't_ change. Somewhat to my surprise, as I was performing state management surgery, I barely needed to change the tests. And yet, the tests were properly failing when the components were broken and passing when they was working.
 
@@ -22,13 +22,13 @@ Note: This is by no means a new, revolutionary principle. Developers everywhere,
 
 Ok, those are some fancy words, but what do they really _mean_?
 
-To help gain an intuition for what this principle means, let's substitute the word "component" with some common nouns...
+To help gain an intuition for what this principle means, let's leave the realm of programming and instead substitute the word "component" with some common nouns...
 
 * Test what your **keyboard** does, not how it works.
 * Test what your **coffee machine** does, not how it works.
 * Test what your **faucet** does, not how it works.
 
-<Figure src="/assets/posts/nicely-testing-react-components/faucet.png" alt="Faucet" caption="Photo by Sasikan Ulevik on Unsplash" size="md" />
+<Figure src="/assets/posts/nicely-testing-react-components/faucet.png" alt="Faucet" caption="A faucet, photo by Sasikan Ulevik on Unsplash" size="md" />
 
 Think for a moment how you would go about testing whether your faucet works and does what is intended. Well, when you turn the knob, water is supposed to come out of the tubey thing. So if it were me, I'd turn the knob, then see if water comes out (and not some other gross fluid).
 
@@ -132,7 +132,7 @@ const Decrementor = ({ initialValue }) => {
 export default Decrementor;
 ```
 
-We decided to use hooks because, y'know, they're the new thing and all, but we didn't have to. Nicely, the following implementation using a MobX class also passes:
+We decided to use hooks because, y'know, they're the new thing and all, but we didn't have to. Nicely, the following implementation using a MobX class also passes despite being _completely different_:
 
 +```js
 import React, { useState } from 'react';
