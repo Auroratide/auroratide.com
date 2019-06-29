@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'Client/components/core/Container';
 import Links, { UrlBuilder } from 'Client/config/links';
+import Link from 'Client/components/core/Link';
 import NavLink from './NavLink';
 import IconLink from './IconLink';
 import License from './License';
@@ -22,6 +23,7 @@ const Footer = () =>
         <NavLink name='Portfolio' to={new UrlBuilder().portfolio()} />
         <NavLink name='Legal' to={new UrlBuilder().legal()} />
       </div>
+      <p className={styles.source}><Link to={Links.External.SOURCE} newTab>This website is open source!</Link></p>
       <License />
     </Container>
   </footer>;

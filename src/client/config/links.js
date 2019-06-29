@@ -16,7 +16,8 @@ const Social = {
 
 const External = {
   THOUGHTWORKS: 'https://www.thoughtworks.com/',
-  OMNIXIS: 'http://auroratide.github.io/Omnixis/'
+  OMNIXIS: 'http://auroratide.github.io/Omnixis/',
+  SOURCE: 'https://github.com/Auroratide/auroratide.com'
 };
 
 export default {
