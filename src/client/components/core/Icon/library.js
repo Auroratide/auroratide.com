@@ -34,6 +34,7 @@ import { faCompressArrowsAlt } from '@fortawesome/free-solid-svg-icons/faCompres
 import { faRobot } from '@fortawesome/free-solid-svg-icons/faRobot';
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile';
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare';
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
@@ -83,6 +84,7 @@ export default {
   'robot': faRobot,
   'mobile': faMobile,
   'shower': faShower,
+  'check-square': faCheckSquare,
   'twitter': faTwitter,
   'linked-in': faLinkedinIn,
   'github-alt': faGithubAlt,

@@ -1,5 +1,5 @@
 {
-  "next_id": "29",
+  "next_id": "30",
   "digests": {
     "1": "index-as-key-is-an-antipattern",
     "2": "8-react-conditional-rendering-methods",
@@ -28,6 +28,7 @@
     "25": "react-functional-or-class-components",
     "26": "currentcolor-the-first-css-variable",
     "27": "seriously-though-what-is-a-progressive-web-app",
-    "28": "why-im-using-react-testing-library"
+    "28": "why-im-using-react-testing-library",
+    "29": "programmer-test-principles"
   }
 }
