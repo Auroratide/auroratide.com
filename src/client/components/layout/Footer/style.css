@@ -1,47 +1,47 @@
 @import "theme";
 
-footer.footer {
+.footer {
   color: var(--palette-off-white);
   background: var(--palette-secondary);
   padding: 3rem 0;
   text-align: center;
 }
 
-footer.footer .nav-links {
+.footer .nav-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-footer.footer a {
+.footer .source a {
   color: var(--palette-grey);
 }
 
-footer.footer a:hover {
+.footer .source a:hover {
   color: var(--palette-white);
 }
 
-footer.footer .source {
+.footer .source {
   text-align: center;
   font-style: italic;
 }
 
-footer.footer .icon-links {
+.footer .icon-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-footer.footer .icon-links .linked-in::before {
+.footer .icon-links .linked-in::before {
   background: var(--palette-linked-in);
 }
 
-footer.footer .icon-links .twitter::before {
+.footer .icon-links .twitter::before {
   background: var(--palette-twitter);
 }
 
-footer.footer .icon-links .github::before {
+.footer .icon-links .github::before {
   background: var(--palette-github);
 }

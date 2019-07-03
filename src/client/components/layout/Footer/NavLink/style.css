@@ -2,4 +2,9 @@
 
 .nav-link {
   flex: 0 0 5rem;
+  color: var(--palette-grey);
+}
+
+.nav-link:hover {
+  color: var(--palette-white);
 }
