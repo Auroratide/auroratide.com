@@ -60,13 +60,13 @@
   force = false
 
 [[redirects]]
-  from = "/posts/steganography"
+  from = "/posts/nicely-testing-react-components"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/posts/nicely-testing-react-components"
+  from = "/posts/steganography"
   to = "/index.html"
   status = 200
   force = false
@@ -121,6 +121,12 @@
 
 [[redirects]]
   from = "/portfolio/crazy-cab"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/portfolio/dampfire"
   to = "/index.html"
   status = 200
   force = false
