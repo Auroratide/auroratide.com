@@ -1,1 +1,0 @@
-Xest is a kind of all-in-one testing library for the Haxe programming language. You can think of it as the Haxe equivalent of Jest for Javascript (and yes, the name is a deliberate rip-off). It will feature a test runner, mocking and stubbing, and assertions.
