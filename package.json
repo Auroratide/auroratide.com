@@ -1,0 +1,19 @@
+{
+  "name": "auroratide.com",
+  "version": "2.0.0",
+  "description": "Timothy Foster's humble website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Auroratide/auroratide.com.git"
+  },
+  "author": "Timothy Foster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Auroratide/auroratide.com/issues"
+  },
+  "homepage": "https://github.com/Auroratide/auroratide.com#readme"
+}
