@@ -5,13 +5,15 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
+import sveltePreprocess from 'svelte-preprocess'
+import typescript from '@rollup/plugin-typescript'
 
 const production = !process.env.ROLLUP_WATCH
 const clientSrc = path.resolve(__dirname, 'src', 'client')
 const clientOut = path.resolve(__dirname, 'public', 'build')
 
 export default {
-    input: path.join(clientSrc, 'main.js'),
+    input: path.join(clientSrc, 'main.ts'),
     output: {
         sourcemap: true,
         format: 'iife',
@@ -21,6 +23,7 @@ export default {
     plugins: [
         // Compile svelte program
         svelte({
+            preprocess: sveltePreprocess(),
             compilerOptions: {
                 dev: !production
             }
@@ -37,6 +40,10 @@ export default {
             dedupe: ['svelte'],
         }),
         commonjs(),
+        typescript({
+            sourceMap: !production,
+            inlineSources: !production
+        }),
 
         // Refresh browser when changes occur in public
         !production && livereload('public'),
