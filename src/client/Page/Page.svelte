@@ -2,9 +2,7 @@
     Header
 </header>
 <main>
-    <p>Main</p>
-    <side-text><p>Hello Side text!</p></side-text>
-    <image-steganographer />
+    <slot></slot>
 </main>
 <footer>
     Footer
