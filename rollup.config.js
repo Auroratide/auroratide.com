@@ -10,9 +10,10 @@ import typescript from '@rollup/plugin-typescript'
 
 const production = !process.env.ROLLUP_WATCH
 const clientSrc = path.resolve(__dirname, 'src', 'client')
+const componentsSrc = path.resolve(__dirname, 'src', 'components')
 const clientOut = path.resolve(__dirname, 'public', 'build')
 
-export default {
+export default [ {
     input: path.join(clientSrc, 'main.ts'),
     output: {
         sourcemap: true,
@@ -54,4 +55,42 @@ export default {
     watch: {
         clearScreen: false
     }
-}
+}, {
+    input: path.join(componentsSrc, 'index.ts'),
+    output: {
+        sourcemap: true,
+        format: 'iife',
+        name: 'components',
+        file: path.join(clientOut, 'components.js'),
+    },
+    plugins: [
+        // Compile svelte program
+        svelte({
+            preprocess: sveltePreprocess(),
+            compilerOptions: {
+                dev: !production,
+                customElement: true,
+            }
+        }),
+
+        // Resolve dependencies
+        resolve({
+            browser: true,
+            dedupe: ['svelte'],
+        }),
+        commonjs(),
+        typescript({
+            sourceMap: !production,
+            inlineSources: !production
+        }),
+
+        // Refresh browser when changes occur in public
+        !production && livereload('public'),
+
+        // Minify for production
+        production && terser()
+    ],
+    watch: {
+        clearScreen: false
+    }
+} ]

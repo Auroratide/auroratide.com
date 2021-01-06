@@ -2,7 +2,8 @@
     Header
 </header>
 <main>
-    Main
+    <p>Main</p>
+    <side-text><p>Hello Side text!</p></side-text>
 </main>
 <footer>
     Footer
