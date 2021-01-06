@@ -4,6 +4,7 @@
 <main>
     <p>Main</p>
     <side-text><p>Hello Side text!</p></side-text>
+    <image-steganographer />
 </main>
 <footer>
     Footer

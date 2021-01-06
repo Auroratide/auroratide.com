@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   preset: 'ts-jest',
   transform: {
@@ -5,7 +7,5 @@ module.exports = {
       preprocess: true
     }]
   },
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect'
-  ]
+  setupFilesAfterEnv: [ path.join(__dirname, 'src', 'testing', 'setup.ts') ],
 };

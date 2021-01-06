@@ -1,1 +1,2 @@
+import './ImageSteganographer'
 import './SideText'
