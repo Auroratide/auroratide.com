@@ -1,0 +1,14 @@
+@import url('/styles/normalize.css');
+@import url('/styles/palette.css');
+@import url('/styles/typography.css');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+html {
+    font-family: var(--typography-sans);
+    background-color: var(--palette-grey);
+    color: var(--palette-off-black);
+}
