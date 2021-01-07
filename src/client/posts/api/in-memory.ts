@@ -3,17 +3,30 @@ import type { Post } from '../types'
 
 export default class InMemory implements PostsApi {
     private items: Post[]
+    private promises: Promise<Post | Post[]>[]
 
     constructor(initial: Post[]) {
         this.items = initial
+        this.promises = []
     }
 
-    public async one(id: string): Promise<Post> {
+    // for example, await act(() => api.finishAll())
+    public finishAll() {
+        return Promise.all(this.promises)
+    }
+
+    public one(id: string): Promise<Post> {
         const item = this.items.find(item => item.id === id)
-        return item ? item : null
+        const promise = Promise.resolve(item ? item : null)
+        this.promises.push(promise)
+
+        return promise
     }
 
-    public async list(): Promise<Post[]> {
-        return this.items
+    public list(): Promise<Post[]> {
+        const promise = Promise.resolve(this.items)
+        this.promises.push(promise)
+
+        return promise
     }
 }
