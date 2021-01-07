@@ -1,8 +1,9 @@
 <script lang="ts">
     import { Page } from './Page'
-    import { PostPage } from './PostPage'
+    import { PostPage } from './posts/PostPage'
+    import { PostList } from './posts/PostList'
 </script>
 
 <Page>
-    <PostPage />
+    <!-- <PostList /> -->
 </Page>
