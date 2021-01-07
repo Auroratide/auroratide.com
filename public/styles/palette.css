@@ -1,11 +1,13 @@
 :root {
-    --palette-black: #000000;
-    --palette-off-black: #333333;
-    --palette-dark-grey: #707070;
-    --palette-med-grey: #AFAFAF;
-    --palette-grey: #DDDDDD;
-    --palette-off-white: #F7F7F7;
-    --palette-white: #FFFFFF;
+    --palette-greyscale-000: #000000;
+    --palette-greyscale-010: #333333;
+    --palette-greyscale-025: #707070;
+    --palette-greyscale-050: #afafaf;
+    --palette-greyscale-075: #dddddd;
+    --palette-greyscale-090: #f7f7f7;
+    --palette-greyscale-100: #ffffff;
+
+    --palette-shade-033: rgba(0, 0, 0, 0.333);
   
     --palette-deep-blue: #001533;
     --palette-aurora-blue: #448DDD;

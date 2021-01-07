@@ -1,14 +1,67 @@
 @import url('/styles/normalize.css');
 @import url('/styles/palette.css');
 @import url('/styles/typography.css');
+@import url('/styles/spacing.css');
 
-*, ::after, ::before {
-    box-sizing: border-box;
-    margin-top: 0;
-}
-
+/* Page-level Items
+   ========================================================================== */
 html {
     font-family: var(--typography-sans);
-    background-color: var(--palette-grey);
-    color: var(--palette-off-black);
+    background-color: var(--palette-greyscale-075);
+    color: var(--palette-greyscale-010);
+}
+
+body {
+    font-size: var(--typography-md);
+}
+
+/* Headings
+   ========================================================================== */
+h1 { font-size: var(--typography-jb); }
+h2, h3, h4, h5, h6 {
+    font-weight: var(--typography-bold);
+}
+h2 { font-size: var(--typography-lg); }
+h3, h4 { font-size: var(--typography-md); }
+h5, h6 { font-size: var(--typography-sm); }
+h4, h5, h6 { font-style: italic; }
+
+/* Text Items
+   ========================================================================== */
+p, ul, ol {
+    font-weight: var(--typography-light);
+    text-align: justify;
+    line-height: 1.72em;
+    margin-bottom: var(--spacing-xl);
+}
+
+strong {
+    font-weight: var(--typography-bold);
+}
+
+blockquote {
+    margin-left: 0;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+    border-left: var(--border-lg) solid var(--palette-greyscale-075);
+    font-style: italic;
+}
+
+blockquote p {
+    font-size: 106.25%;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Large Screens
+   ========================================================================== */
+@media screen and (min-width: 75rem) {
+    body {
+        font-size: 112.5%;
+    }
+
+    p {
+        text-align: left;
+    }
 }
