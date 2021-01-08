@@ -5,8 +5,8 @@ export type Post = {
     readonly icon: string
     readonly color: string
     readonly summary: string
-    readonly published_at: string
-    readonly created_at: string
+    readonly publishedAt: Date
+    readonly createdAt: Date
     readonly content?: string
 }
 

@@ -1,6 +1,8 @@
 <script lang="ts">
     import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
+    import { Header } from './Header'
+    import { DateDisplay } from './DateDisplay'
 
     export let api: PostsApi = new FetchApi(fetch.bind(window))
     export let id: string
@@ -12,12 +14,10 @@
     <p>...waiting</p>
 {:then item}
     <article class="article" style={`--article-color: var(--palette-${item.color});`}>
-        <header class="title">
-            <vector-icon class="icon" icon={item.icon}></vector-icon>
-            <h1>{item.title}</h1>
-        </header>
+        <Header title={item.title} icon={item.icon} />
         <div class="body">
             <section class="content">
+                <DateDisplay date={item.publishedAt} />
                 {@html item.content}
             </section>
             <aside>
@@ -31,34 +31,6 @@
     .article {
         max-width: 75rem;
         margin: 0 auto;
-    }
-
-    .title {
-        position: relative;
-        height: 16em;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background: var(--article-color);
-        overflow: hidden;
-    }
-
-    .title h1 {
-        position: relative;
-        width: 100%;
-        padding: 1em;
-        color: var(--palette-greyscale-100);
-        text-align: center;
-        background: var(--palette-shade-033);
-        margin: 0;
-    }
-    
-    .title .icon {
-        position: absolute;
-        height: 1em;
-        color: var(--palette-shade-033);
-        font-size: 24em;
-        align-self: center;
     }
 
     .body {

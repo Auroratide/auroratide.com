@@ -13,8 +13,8 @@ export class PostForge {
             icon: 'apple',
             color: 'red',
             summary: 'A summary',
-            published_at: '2021-01-01T00:00:00.000Z',
-            created_at: '2021-01-01T00:00:00.000Z',
+            publishedAt: new Date('2021-01-01T00:00:00.000Z'),
+            createdAt: new Date('2021-01-01T00:00:00.000Z'),
             content: '<p>Content</p>',
         }
     }
