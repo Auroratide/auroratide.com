@@ -31,6 +31,11 @@
 </svg>
 
 <style>
+    :host {
+        display: inline-block;
+        height: 1em;
+    }
+
     .vector-icon {
         width: 1em;
         height: 1em;

@@ -31,7 +31,6 @@
     
     vector-icon {
         position: absolute;
-        height: 1em;
         color: var(--palette-shade-033);
         font-size: 24em;
         align-self: center;

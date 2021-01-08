@@ -3,6 +3,7 @@
     import { FetchApi } from '../api'
     import { Header } from './Header'
     import { DateDisplay } from './DateDisplay'
+    import { Loading } from '../../Loading'
 
     export let api: PostsApi = new FetchApi(fetch.bind(window))
     export let id: string
@@ -11,7 +12,7 @@
 </script>
 
 {#await promise}
-    <p>...waiting</p>
+    <Loading text="Finding post..." />
 {:then item}
     <article class="article" style={`--article-color: var(--palette-${item.color});`}>
         <Header title={item.title} icon={item.icon} />
