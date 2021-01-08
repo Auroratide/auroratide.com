@@ -76,7 +76,7 @@ For example, as social beings we have a need to feel like we belong, to have fri
 
 Maslow's original model categorizes five kinds of needs, organized neatly in the pyramid below, where needs at the bottom should be satisfied before the needs at the top:
 
-<maslows-hierarchy-of-needs></<maslows-hierarchy-of-needs>
+<maslows-hierarchy-of-needs></maslows-hierarchy-of-needs>
 
 Today, we know the hierarchy is not a strict pyramid. In fact, our needs overlap through the layers in a dynamic sort of way. That said, the general trend Maslow's model suggests tends to resonate with people which is why it has become so popular over the years even among non-psychologists such as myself.
 
