@@ -26,7 +26,7 @@ h3, h4 { font-size: var(--typography-md); }
 h5, h6 { font-size: var(--typography-sm); }
 h4, h5, h6 { font-style: italic; }
 
-/* Text Items
+/* Content
    ========================================================================== */
 p, ul, ol {
     font-weight: var(--typography-light);
@@ -52,6 +52,12 @@ blockquote p {
 
 blockquote p:last-child {
     margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-top: var(--border-sm) solid var(--palette-greyscale-075);
+    margin: 0 var(--spacing-md) var(--spacing-xl);
 }
 
 /* Custom Elements
