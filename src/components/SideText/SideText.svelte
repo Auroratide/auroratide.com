@@ -15,26 +15,29 @@
 </small>
 
 <style>
+    :host {
+        display: block;
+    }
+
     small {
         display: block;
-        margin-left: 0;
-        margin-bottom: var(--spacing-xl);
-        padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
-        border-left: var(--border-lg) solid;
+        margin: 0;
+        padding: 0.25em 0.5em 0.25em 1.5em;
+        border-left: 0.375rem solid;
         font-style: italic;
-        font-weight: var(--typography-normal);
-        border-left-color: var(--theme-primary);
+        font-weight: normal;
+        border-left-color: var(--skin-color-info);
     }
 
     small.warning {
-        border-left-color: var(--theme-warning);
+        border-left-color: var(--skin-color-warning);
     }
 
     small.success {
-        border-left-color: var(--theme-success);
+        border-left-color: var(--skin-color-success);
     }
 
     small.danger {
-        border-left-color: var(--theme-danger);
+        border-left-color: var(--skin-color-danger);
     }
 </style>

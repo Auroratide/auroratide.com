@@ -1,29 +1,30 @@
 @import url('/styles/normalize.css');
 @import url('/styles/palette.css');
 @import url('/styles/typography.css');
-@import url('/styles/spacing.css');
+@import url('/styles/sizing.css');
+@import url('/styles/skin.css');
 
 /* Page-level Items
    ========================================================================== */
 html {
-    font-family: var(--typography-sans);
-    background-color: var(--palette-greyscale-075);
-    color: var(--palette-greyscale-010);
+    font-family: var(--skin-font-text);
+    background-color: var(--skin-color-bg);
+    color: var(--skin-color-text);
 }
 
 body {
-    font-size: var(--typography-md);
+    font-size: var(--sizing-font-sm);
 }
 
 /* Headings
    ========================================================================== */
-h1 { font-size: var(--typography-jb); }
+h1 { font-size: var(--sizing-font-xl); }
 h2, h3, h4, h5, h6 {
     font-weight: var(--typography-bold);
 }
-h2 { font-size: var(--typography-lg); }
-h3, h4 { font-size: var(--typography-md); }
-h5, h6 { font-size: var(--typography-sm); }
+h2 { font-size: var(--sizing-font-md); }
+h3, h4 { font-size: var(--sizing-font-sm); }
+h5, h6 { font-size: var(--sizing-font-xs); }
 h4, h5, h6 { font-style: italic; }
 
 /* Content
@@ -32,17 +33,21 @@ p, ul, ol {
     font-weight: var(--typography-light);
     text-align: justify;
     line-height: 1.72em;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--sizing-spacing-p);
 }
 
 strong {
     font-weight: var(--typography-bold);
 }
 
+small {
+    font-size: var(--sizing-font-xs);
+}
+
 blockquote {
     margin-left: 0;
-    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
-    border-left: var(--border-lg) solid var(--palette-greyscale-075);
+    padding: var(--sizing-spacing-xs) var(--sizing-spacing-sm) var(--sizing-spacing-xs) var(--sizing-spacing-lg);
+    border-left: var(--sizing-border-md) solid var(--skin-color-bg);
     font-style: italic;
 }
 
@@ -56,13 +61,17 @@ blockquote p:last-child {
 
 hr {
     border: none;
-    border-top: var(--border-sm) solid var(--palette-greyscale-075);
-    margin: 0 var(--spacing-md) var(--spacing-xl);
+    border-top: var(--sizing-border-xs) solid var(--skin-color-bg);
+    margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
 }
 
 /* Custom Elements
    ========================================================================== */
 /* These styles are needed when needing to customize slotted elements */
+side-text {
+    margin-bottom: var(--sizing-spacing-p);
+}
+
 side-text p {
     font-weight: normal;
 }
@@ -74,10 +83,6 @@ side-text p:last-child {
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 75rem) {
-    body {
-        font-size: 112.5%;
-    }
-
     p {
         text-align: left;
     }

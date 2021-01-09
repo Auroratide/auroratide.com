@@ -25,20 +25,20 @@
 
 <style>
     figure {
-        margin: 0 0 var(--spacing-xl) 0;
+        margin: 0;
     }
 
     .layer {
-        margin-bottom: var(--spacing-sm);
-        padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md) calc(26% + var(--spacing-sm));
-        color: var(--palette-greyscale-100);
+        margin-bottom: 0.25em;
+        padding: 0.25em 0.25em 0.5em calc(26% + 0.25em);
+        color: #ffffff;
     }
 
     .layer strong {
         display: block;
-        font-size: var(--typography-xl);
-        margin-bottom: var(--spacing-sm);
-        font-weight: var(--typography-bold);
+        font-size: 1.5em;
+        margin-bottom: 0.25em;
+        font-weight: 700;
     }
 
     .layer p {
@@ -49,26 +49,26 @@
 
     .self-actualization {
         clip-path: polygon(26% 0, 100% 0, 100% 100%, 21% 100%);
-        background-color: var(--palette-autumn-red);
+        background-color: var(--maslow-color-selfactualization);
     }
 
     .esteem {
         clip-path: polygon(20.75% 0, 100% 0, 100% 100%, 15.75% 100%);
-        background-color: var(--palette-autumn-orange);
+        background-color: var(--maslow-color-esteem);
     }
 
     .belonging {
         clip-path: polygon(15.5% 0, 100% 0, 100% 100%, 10.5% 100%);
-        background-color: var(--palette-livian-yellow);
+        background-color: var(--maslow-color-belonging);
     }
 
     .safety {
         clip-path: polygon(10.25% 0, 100% 0, 100% 100%, 5.25% 100%);
-        background-color: var(--palette-aella-green);
+        background-color: var(--maslow-color-safety);
     }
 
     .physiological {
         clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
-        background-color: var(--palette-aurora-blue);
+        background-color: var(--maslow-color-physiological);
     }
 </style>

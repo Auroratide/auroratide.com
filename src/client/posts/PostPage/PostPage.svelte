@@ -33,8 +33,14 @@
 
 <style>
     .body {
-        background: var(--palette-greyscale-100);
+        background: var(--skin-color-content);
         display: flex;
-        padding: var(--spacing-jb);
+        padding: var(--sizing-spacing-md);
+    }
+
+    @media screen and (min-width: 75rem) {
+        .body {
+            padding: var(--sizing-spacing-xl)
+        }
     }
 </style>

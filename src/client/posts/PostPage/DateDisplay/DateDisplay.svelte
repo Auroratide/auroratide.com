@@ -15,3 +15,11 @@
 {#if isValid(date)}
     <time datetime={date.toISOString()}>{format(date)}</time>
 {/if}
+
+<style>
+    time {
+        display: block;
+        font-weight: var(--typography-light);
+        margin-bottom: var(--sizing-spacing-p);
+    }
+</style>

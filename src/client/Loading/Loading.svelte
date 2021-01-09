@@ -25,7 +25,7 @@
 
     .loading {
         text-align: center;
-        padding: var(--spacing-xj) 0;
+        padding: calc(2 * var(--sizing-spacing-xl)) 0;
         animation: fade 2048ms;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -33,7 +33,7 @@
 
     .icon {
         font-size: 5em;
-        margin-bottom: var(--spacing-md);
+        margin-bottom: var(--sizing-spacing-sm);
         animation: spin 1280ms;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;

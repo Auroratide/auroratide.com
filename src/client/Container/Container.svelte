@@ -4,7 +4,7 @@
 
 <style>
     .container {
-        max-width: 75em;
+        max-width: var(--sizing-breakpoint);
         margin: 0 auto;
     }
 </style>
