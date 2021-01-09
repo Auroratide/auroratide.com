@@ -1,6 +1,5 @@
 <script lang="ts">
     export let date: Date
-    let formatted: string
 
     const weekday = (date: Date) => ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()]
     const day = (date: Date) => date.getUTCDate().toString().padStart(2, '0')

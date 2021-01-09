@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { Container } from '@/client/Container'
+    import { Loading } from '@/client/Loading'
+
     import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
-    import { Header } from './Header'
-    import { Container } from '../../Container'
     import { DateDisplay } from './DateDisplay'
-    import { Loading } from '../../Loading'
+    import { Header } from './Header'
 
     export let api: PostsApi = new FetchApi(fetch.bind(window))
     export let id: string

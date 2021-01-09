@@ -1,7 +1,7 @@
 import { PostPage } from '.'
 import { InMemoryApi } from '../api'
 import { PostForge } from '../testing/PostForge'
-import { component } from '../../../testing/component'
+import { component } from '@/testing/component'
 import { screen, act } from '@testing-library/svelte'
 import type { Post } from '../types'
 

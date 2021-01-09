@@ -1,5 +1,5 @@
 import { DateDisplay } from '.'
-import { component } from '../../../../testing/component'
+import { component } from '@/testing/component'
 import { screen } from '@testing-library/svelte'
 
 describe('DateDisplay', () => {

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { IconName } from '../../components/VectorIcon'
+    import { IconName } from '@/components/VectorIcon/IconName'
 
     export let text: string = null
 </script>

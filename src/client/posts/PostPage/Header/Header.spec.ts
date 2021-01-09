@@ -1,5 +1,5 @@
 import { Header } from '.'
-import { component } from '../../../../testing/component'
+import { component } from '@/testing/component'
 
 describe('Header', () => {
     test('rendering', () => {

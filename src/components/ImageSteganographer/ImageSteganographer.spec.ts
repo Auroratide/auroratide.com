@@ -1,5 +1,5 @@
 import { ImageSteganographer } from '.'
-import { component } from '../../testing/component'
+import { component } from '@/testing/component'
 import { screen, fireEvent } from '@testing-library/svelte'
 import { fakeCanvas } from './fake-canvas'
 

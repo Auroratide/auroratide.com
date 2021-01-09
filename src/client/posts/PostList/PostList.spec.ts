@@ -1,6 +1,6 @@
 import { PostList } from '.'
 import { InMemoryApi } from '../api'
-import { component } from '../../../testing/component'
+import { component } from '@/testing/component'
 
 describe('PostList', () => {
     test('rendering', () => {

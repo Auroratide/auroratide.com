@@ -1,6 +1,6 @@
 import { SideText } from '.'
 import { screen } from '@testing-library/svelte'
-import { component } from '../../testing/component'
+import { component } from '@/testing/component'
 import '@testing-library/jest-dom'
 
 describe('SideText', () => {
