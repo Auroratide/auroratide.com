@@ -8,18 +8,36 @@ describe('SideText', () => {
         expect(() => component(SideText).render()).not.toThrow()
     })
 
-    test('specified with info', () => {
-        component(SideText)
-            .prop('info', true)
-            .slot('Info')
-            .render()
-
-        expect(screen.getByText('Info')).toHaveClass('info')
-    })
-
     test('specified with warning', () => {
         component(SideText)
             .prop('warning', true)
+            .slot('Info')
+            .render()
+
+        expect(screen.getByText('Info')).toHaveClass('warning')
+    })
+
+    test('specified with success', () => {
+        component(SideText)
+            .prop('success', true)
+            .slot('Info')
+            .render()
+
+        expect(screen.getByText('Info')).toHaveClass('success')
+    })
+
+    test('specified with danger', () => {
+        component(SideText)
+            .prop('danger', true)
+            .slot('Info')
+            .render()
+
+        expect(screen.getByText('Info')).toHaveClass('danger')
+    })
+
+    test('specified with empty string', () => {
+        component(SideText)
+            .prop('warning', '')
             .slot('Info')
             .render()
 

@@ -54,6 +54,17 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 
+/* Custom Elements
+   ========================================================================== */
+/* These styles are needed when needing to customize slotted elements */
+side-text p {
+    font-weight: normal;
+}
+
+side-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 75rem) {

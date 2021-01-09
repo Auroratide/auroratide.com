@@ -1,7 +1,3 @@
-<script lang="ts">
-    export let tag: string
-</script>
-
 <div class="container">
     <slot></slot>
 </div>

@@ -2,6 +2,7 @@
     import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
     import { Header } from './Header'
+    import { Container } from '../../Container'
     import { DateDisplay } from './DateDisplay'
     import { Loading } from '../../Loading'
 
@@ -11,29 +12,26 @@
     let promise = api.one(id)
 </script>
 
-{#await promise}
-    <Loading text="Finding post..." />
-{:then item}
-    <article class="article" style={`--article-color: var(--palette-${item.color});`}>
-        <Header title={item.title} icon={item.icon} />
-        <div class="body">
-            <section class="content">
-                <DateDisplay date={item.publishedAt} />
-                {@html item.content}
-            </section>
-            <aside>
-                <h2>More on {item.category}</h2>
-            </aside>
-        </div>
-    </article>
-{/await}
+<Container>
+    {#await promise}
+        <Loading text="Finding post..." />
+    {:then item}
+        <article style={`--article-color: var(--palette-${item.color});`}>
+            <Header title={item.title} icon={item.icon} />
+            <div class="body">
+                <section class="content">
+                    <DateDisplay date={item.publishedAt} />
+                    {@html item.content}
+                </section>
+                <aside>
+                    <h2>More on {item.category}</h2>
+                </aside>
+            </div>
+        </article>
+    {/await}
+</Container>
 
 <style>
-    .article {
-        max-width: 75rem;
-        margin: 0 auto;
-    }
-
     .body {
         background: var(--palette-greyscale-100);
         display: flex;

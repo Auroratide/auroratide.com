@@ -21,13 +21,6 @@
     --palette-autumn-orange: #D88F30;
     --palette-aella-green: #5EBF36;
   
-    --palette-primary: var(--palette-aurora-blue);
-    --palette-secondary: var(--palette-deep-blue);
-  
-    --palette-success: var(--palette-aella-green);
-    --palette-warning: var(--palette-livian-yellow);
-    --palette-danger: var(--palette-autumn-red);
-  
     --palette-github: #333333;
     --palette-linked-in: #0077B5;
     --palette-twitter: #29AAE1;
@@ -35,4 +28,12 @@
     --palette-windows: #1DAEEC;
     --palette-android: #A4C639;
     --palette-adobe: #E61A23;
+
+    --theme-bg: var(--palette-greyscale-075);
+    --theme-primary: var(--palette-aurora-blue);
+    --theme-secondary: var(--palette-deep-blue);
+  
+    --theme-success: var(--palette-aella-green);
+    --theme-warning: var(--palette-livian-yellow);
+    --theme-danger: var(--palette-autumn-red);
 }
