@@ -1,7 +1,7 @@
 import { ColoredText } from '.'
 import { component } from '@/testing/component'
 
-describe('MajorPoint', () => {
+describe('ColoredText', () => {
     test('rendering', () => {
         expect(() => component(ColoredText)
             .prop('color', '#ffffff')

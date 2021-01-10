@@ -1,3 +1,4 @@
+import './ArticleImage'
 import './ColoredText'
 import './ImageSteganographer'
 import './MajorPoint'
