@@ -22,11 +22,12 @@
     h1 {
         position: relative;
         width: 100%;
-        padding: 1em;
+        padding: var(--sizing-spacing-md);
         color: var(--palette-greyscale-100);
         text-align: center;
         background: var(--palette-shade-033);
         margin: 0;
+        line-height: 1;
     }
     
     vector-icon {
