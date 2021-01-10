@@ -4,7 +4,7 @@
 
     import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
-    import { DateDisplay } from './DateDisplay'
+    import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
 
     export let api: PostsApi = new FetchApi(fetch.bind(window))

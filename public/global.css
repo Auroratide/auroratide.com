@@ -2,6 +2,7 @@
 @import url('/styles/palette.css');
 @import url('/styles/typography.css');
 @import url('/styles/sizing.css');
+@import url('/styles/transitions.css');
 @import url('/styles/skin.css');
 
 /* Page-level Items
@@ -29,6 +30,14 @@ h4, h5, h6 { font-style: italic; }
 
 /* Content
    ========================================================================== */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 p, ul, ol {
     font-weight: var(--typography-light);
     text-align: justify;
