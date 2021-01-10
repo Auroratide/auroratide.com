@@ -27,6 +27,10 @@ h2 { font-size: var(--sizing-font-md); }
 h3, h4 { font-size: var(--sizing-font-sm); }
 h5, h6 { font-size: var(--sizing-font-xs); }
 h4, h5, h6 { font-style: italic; }
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--sizing-spacing-xl);
+    margin-bottom: 0;
+}
 
 /* Content
    ========================================================================== */

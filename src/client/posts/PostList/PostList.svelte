@@ -81,6 +81,7 @@
     .post-item h1 {
         font-size: var(--sizing-font-md);
         font-weight: var(--typography-bold);
+        line-height: 1;
         margin-bottom: var(--sizing-spacing-xs);
     }
 
