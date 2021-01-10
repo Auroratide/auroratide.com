@@ -30,7 +30,7 @@ So, cryptography isn't good enough for Sullivan. He can't just jumble his messag
 
 The goal is to be unattractive. When curious people see something weird, they will want to investigate. But when they just see a regular message, they will pass it off as normal. Had Sullivan used steganography, his officemates would never even suspect he was harboring a secret.
 
-**Crypography changes how the message looks. In steganography, hiding messages in plain sight is the name of the game.**
+<major-point text="Crypography changes how the message looks. In steganography, hiding messages in plain sight is the name of the game."></major-point>
 
 Want to know a secret? The digital PNG image of Sullivan's note above actually has a hidden message embedded into it! Unless you already knew what steganography was, you may never have realized it contained secret text. Such is the power of steganography.
 
@@ -38,7 +38,7 @@ Want to know a secret? The digital PNG image of Sullivan's note above actually h
 
 In the digital world, any media (images, documents, music, etc) could be used to embed messages. Images, like the one above, provide a very illustrative example of steganography (literally). It all centers around one key fact: our eyeballs aren't good enough.
 
-It is very difficult for us to tell the difference between two colors if they differ only very slightly. For example, **##D88F30|this orange##** and **##D88F31|that orange##** are actually different colors according to the computer, but to us they look the same. Therefore, we can change the colors in an image just a tiny bit and it will still look exactly the same to us.
+It is very difficult for us to tell the difference between two colors if they differ only very slightly. For example, **<colored-text color="#d88f30">this orange</colored-text>** and **<colored-text color="#d88f31">that orange</colored-text>** are actually different colors according to the computer, but to us they look the same. Therefore, we can change the colors in an image just a tiny bit and it will still look exactly the same to us.
 
 But the computer knows the difference, and it's in that difference where the secret message lives.
 

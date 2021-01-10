@@ -1,3 +1,4 @@
+import './ColoredText'
 import './ImageSteganographer'
 import './MajorPoint'
 import './MaslowsHierarchyOfNeeds'
