@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Page } from './Page'
+    import { Navigation } from './Navigation'
     import { PostPage } from './posts/PostPage'
     import { PostList } from './posts/PostList'
     import page from 'page'
@@ -17,5 +18,6 @@
 </script>
 
 <Page>
+    <div slot="header"><Navigation /></div>
     <svelte:component this={context.component} {...context.params} />
 </Page>

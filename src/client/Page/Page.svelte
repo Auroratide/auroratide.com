@@ -1,5 +1,5 @@
 <header>
-    Header
+    <slot name="header"></slot>
 </header>
 <main>
     <slot></slot>
@@ -13,8 +13,6 @@
         background: #001533;
         color: #ffffff;
         height: 5.25em;
-        display: flex;
-        align-items: center;
     }
 
     main {
