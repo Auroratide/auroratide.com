@@ -1,7 +1,7 @@
 import { Loading } from '.'
 import { component } from '@/testing/component'
 
-describe('Header', () => {
+describe('Loading', () => {
     test('rendering', () => {
         expect(() => component(Loading)
             .render()

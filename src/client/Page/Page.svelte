@@ -5,14 +5,13 @@
     <slot></slot>
 </main>
 <footer>
-    Footer
+    <slot name="footer"></slot>
 </footer>
 
 <style>
     header {
-        background: #001533;
-        color: #ffffff;
-        height: 5.25em;
+        background: var(--skin-color-bg-secondary);
+        color: var(--skin-color-text-secondary);
     }
 
     main {
@@ -20,10 +19,7 @@
     }
 
     footer {
-        background: #001533;
-        color: #ffffff;
-        height: 5.25em;
-        display: flex;
-        align-items: center;
+        background: var(--skin-color-bg-secondary);
+        color: var(--skin-color-text-secondary);
     }
 </style>
