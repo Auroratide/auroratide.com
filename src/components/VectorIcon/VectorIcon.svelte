@@ -34,6 +34,7 @@
     :host {
         display: inline-block;
         height: 1em;
+        line-height: 1;
     }
 
     .vector-icon {

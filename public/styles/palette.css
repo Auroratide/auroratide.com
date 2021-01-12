@@ -28,6 +28,7 @@
     --palette-windows: #1DAEEC;
     --palette-android: #A4C639;
     --palette-adobe: #E61A23;
+    --palette-stack-overflow: #f48024;
 
     --theme-bg: var(--palette-greyscale-075);
     --theme-primary: var(--palette-aurora-blue);
