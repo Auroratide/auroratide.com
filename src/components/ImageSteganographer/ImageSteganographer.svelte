@@ -74,19 +74,28 @@
     }
 </script>
 
-<div>
-    <label>
-        Select Image <input type="file" on:change={handleUpload} />
-    </label>
-    <button on:click={handleEncode}>Encode</button>
-    <button on:click={handleDecode}>Decode</button>
-    <label for="steganography-message-input">Message</label>
-    <textarea bind:value={message} id="steganography-message-input"></textarea>
-    <img alt="Steganography" src={base64} />
-
+<div class="image-steganographer">
+    <div class="image-area">
+        <img alt="Steganography" src={base64} />
+        <label>
+            Select Image <input type="file" on:change={handleUpload} />
+        </label>
+    </div>
+    <div class="action-area">
+        <button on:click={handleEncode}>Encode</button>
+        <button on:click={handleDecode}>Decode</button>
+    </div>
+    <div class="message-area">
+        <label for="steganography-message-input">Message</label>
+        <textarea bind:value={message} id="steganography-message-input"></textarea>
+    </div>
     <canvas data-testid="canvas" bind:this={canvas}></canvas>
 </div>
 
 <style>
+    .image-steganographer {
+        display: flex;
+    }
+
     canvas { display: none; }
 </style>
