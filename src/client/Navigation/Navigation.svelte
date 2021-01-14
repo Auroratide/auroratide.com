@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Container } from '@/client/Container'
-    import { IconName } from '@/components/VectorIcon/IconName'
+    import { VectorIcon, IconName } from '@/client/components/VectorIcon'
 </script>
 
 <Container>
@@ -11,13 +11,13 @@
         <div class="socials">
             <ul>
                 <li><a href="https://www.linkedin.com/in/timothy-foster-224946120">
-                    <vector-icon icon={IconName.LinkedIn}></vector-icon>
+                    <VectorIcon icon={IconName.LinkedIn}></VectorIcon>
                 </a></li>
                 <li><a href="https://github.com/Auroratide">
-                    <vector-icon icon={IconName.GithubAlt}></vector-icon>
+                    <VectorIcon icon={IconName.GithubAlt}></VectorIcon>
                 </a></li>
                 <li><a href="https://stackoverflow.com/users/6163066/auroratide">
-                    <vector-icon icon={IconName.StackOverflow}></vector-icon>
+                    <VectorIcon icon={IconName.StackOverflow}></VectorIcon>
                 </a></li>
             </ul>
         </div>

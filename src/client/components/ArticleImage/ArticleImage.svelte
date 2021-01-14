@@ -1,5 +1,3 @@
-<svelte:options tag="article-image" />
-
 <script lang="ts">
     import { Size } from './Size'
 
@@ -17,11 +15,16 @@
 </figure>
 
 <style>
+    :host, :global(article-image) {
+        display: block;
+    }
+
     .article-image {
         text-align: center;
     }
 
     .article-image img {
+        margin: 0 0 1em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
 

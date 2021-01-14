@@ -1,6 +1,7 @@
 Imagine the following scenario. You work in an office building and are currently walking by some offices on the way to the coffee machine. As the aroma of freshly ground beans meets your nose, you notice a rather conspicuous note stuck onto Janet's office door. It looks like this:
 
-<article-image src="/assets/posts/steganography/sullivans-note.png" alt="Sullivan's Note" caption="MBTUO JHIUX BTGVO XBOUU PIBWF EJOOF SBHBJ OUPNP SSPXO JHIUT VMMJW BO" size="md"></figure-caption>
+<article-image src="/assets/posts/steganography/sullivans-note.png" alt="Sullivan's Note" caption="MBTUO JHIUX BTGVO XBOUU PIBWF EJOOF SBHBJ OUPNP SSPXO JHIUT VMMJW BO" size="md">
+</article-image>
 
 That's weird. Overly curious, you take a picture of the note so you can decipher it later. At your desk, you quickly realize that by shifting each letter down by 1 alphabetically (so B becomes A, M becomes L, etc), the message comes to read:
 
@@ -30,7 +31,8 @@ So, cryptography isn't good enough for Sullivan. He can't just jumble his messag
 
 The goal is to be unattractive. When curious people see something weird, they will want to investigate. But when they just see a regular message, they will pass it off as normal. Had Sullivan used steganography, his officemates would never even suspect he was harboring a secret.
 
-<major-point text="Crypography changes how the message looks. In steganography, hiding messages in plain sight is the name of the game."></major-point>
+<major-point text="Crypography changes how the message looks. In steganography, hiding messages in plain sight is the name of the game.">
+</major-point>
 
 Want to know a secret? The digital PNG image of Sullivan's note above actually has a hidden message embedded into it! Unless you already knew what steganography was, you may never have realized it contained secret text. Such is the power of steganography.
 
@@ -52,7 +54,8 @@ Below is a little widget I made for creating your own steganographic images! Sim
 
 You can also use this tool to find if images have a secret message already. Try using the tool to find the secret in Sullivan's note!
 
-<image-steganographer></image-steganographer>
+<image-steganographer>
+</image-steganographer>
 
 <side-text warning> 
 <p>To save the image with the embedded note, you need to actually download the image using "Save as". Copying the image and pasting it results in the browser taking some shortcuts and hence ruining the message.</p>

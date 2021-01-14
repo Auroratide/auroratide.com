@@ -4,7 +4,7 @@
 </script>
 
 <header>
-    <vector-icon icon={icon}></vector-icon>
+    <vector-icon icon={icon} />
     <h1>{title}</h1>
 </header>
 
@@ -35,5 +35,6 @@
         color: var(--palette-shade-033);
         font-size: 24em;
         align-self: center;
+        height: 1em;
     }
 </style>

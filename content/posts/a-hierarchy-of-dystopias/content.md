@@ -76,7 +76,8 @@ For example, as social beings we have a need to feel like we belong, to have fri
 
 Maslow's original model categorizes five kinds of needs, organized neatly in the pyramid below, where needs at the bottom should be satisfied before the needs at the top:
 
-<maslows-hierarchy-of-needs></maslows-hierarchy-of-needs>
+<maslows-hierarchy-of-needs>
+</maslows-hierarchy-of-needs>
 
 Today, we know the hierarchy is not a strict pyramid. In fact, our needs overlap through the layers in a dynamic sort of way. That said, the general trend Maslow's model suggests tends to resonate with people which is why it has become so popular over the years even among non-psychologists such as myself.
 
@@ -88,7 +89,8 @@ We might be able to answer that question with another question. Thinking back to
 
 A society where any one such fundamental human need is intentionally suppressed or naturally absent would be pretty bad. In fact, you might even call it dystopian!
 
-<major-point text="A dystopia is a society where there is near-universal incongruity between some need and its provision."></major-point>
+<major-point text="A dystopia is a society where there is near-universal incongruity between some need and its provision.">
+</major-point>
 
 Using this definition and Maslow's model, we can brainstorm and worldbuild many different _kinds_ of dystopian worlds. People need food and water, so maybe it's a world where those things are scarce. People need personal growth, so maybe it's a world where this is suppressed. In a step-by-step process:
 

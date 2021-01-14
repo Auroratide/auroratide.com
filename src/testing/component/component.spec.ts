@@ -1,7 +1,6 @@
 import { component } from '.'
 import { screen } from '@testing-library/svelte'
 import TestComponent from './TestComponent.svelte'
-import '@testing-library/jest-dom'
 
 describe('component builder', () => {
     test('no props', () => {

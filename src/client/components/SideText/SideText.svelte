@@ -1,5 +1,3 @@
-<svelte:options tag="side-text" />
-
 <script lang="ts">
     export let warning: (boolean | '') = false
     export let success: (boolean | '') = false
@@ -15,7 +13,7 @@
 </small>
 
 <style>
-    :host {
+    :host, :global(side-text) {
         display: block;
     }
 
