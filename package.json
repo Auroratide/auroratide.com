@@ -11,7 +11,8 @@
     "build:content": "ts-node src/content/index.ts",
     "clean": "rm -rf public/build public/api",
     "test": "jest",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "components:create": "node scripts/components/create"
   },
   "repository": {
     "type": "git",
