@@ -4,6 +4,8 @@
     import { Footer } from './Footer'
     import { PostPage } from './posts/PostPage'
     import { PostList } from './posts/PostList'
+    import { AboutPage } from './AboutPage'
+    import { LegalPage } from './LegalPage'
     import page from 'page'
 
     let context = {
@@ -14,6 +16,8 @@
     page('/', () => context = { component: PostList, params: {} })
     page('/posts', () => context = { component: PostList, params: {} })
     page('/posts/:id', ({ params }) => context = { component: PostPage, params })
+    page('/about', () => context = { component: AboutPage, params: {} })
+    page('/legal', () => context = { component: LegalPage, params: {} })
 
     page.start()
 </script>
