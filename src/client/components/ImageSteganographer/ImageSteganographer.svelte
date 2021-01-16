@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
+    import { IconName } from '@/client/components/VectorIcon/IconName'
 
     let canvas: HTMLCanvasElement
     let originalImage: ImageBitmap
@@ -73,26 +74,82 @@
 </script>
 
 <div class="image-steganographer">
-    <div class="image-area">
+    <div class="area image-area">
+        <strong class="area-title">Image</strong>
         <img alt="Steganography" src={base64} />
-        <label>
+        <button class="secondary"><label class="image-selector">
             Select Image <input type="file" on:change={handleUpload} />
-        </label>
+        </label></button>
     </div>
-    <div class="action-area">
-        <button on:click={handleEncode}>Encode</button>
-        <button on:click={handleDecode}>Decode</button>
+    <div class="area action-area">
+        <button on:click={handleEncode}>
+            <vector-icon icon={IconName.AngleDoubleUp} />
+            <span>Encode</span>
+            <vector-icon icon={IconName.AngleDoubleUp} />
+        </button>
+        <button on:click={handleDecode}>
+            <vector-icon icon={IconName.AngleDoubleDown} />
+            <span>Decode</span>
+            <vector-icon icon={IconName.AngleDoubleDown} />
+        </button>
     </div>
-    <div class="message-area">
-        <label for="steganography-message-input">Message</label>
+    <div class="area message-area">
+        <strong class="area-title"><label for="steganography-message-input">Message</label></strong>
         <textarea bind:value={message} id="steganography-message-input"></textarea>
     </div>
     <canvas data-testid="canvas" bind:this={canvas}></canvas>
 </div>
 
 <style>
+    :host, :global(image-steganographer) {
+        display: block;
+        margin-bottom: 1.5em;
+    }
+
     .image-steganographer {
         display: flex;
+        flex-direction: column;
+    }
+
+    .area {
+        margin-bottom: 1.5em;
+    }
+
+    .image-area {
+        text-align: center;
+    }
+
+    .image-area img {
+        display: block;
+        margin: 0 auto 0.5em;
+        max-height: 10em;
+    }
+
+    .image-area input {
+        display: none;
+    }
+
+    .image-area .image-selector {
+        cursor: pointer;
+    }
+
+    .action-area {
+        text-align: center;
+    }
+
+    .message-area {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message-area textarea {
+        min-height: 7.5em;
+    }
+
+    .area-title {
+        margin-bottom: 0.5em;
+        display: block;
     }
 
     canvas { display: none; }

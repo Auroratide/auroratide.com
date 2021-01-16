@@ -78,9 +78,61 @@ hr {
     margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
 }
 
+/* Buttons
+   ========================================================================== */
+button {
+    border: none;
+    background: none;
+    display: inline-block;
+    position: relative;
+    color: var(--skin-color-text-secondary);
+    z-index: 2;
+    cursor: pointer;
+    padding: var(--sizing-spacing-xs) var(--sizing-spacing-lg);
+}
+
+button::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: var(--skin-color-primary);
+    border-radius: 1em;
+    transition: left var(--transition-quick), right var(--transition-quick);
+    z-index: -1;
+}
+
+button:hover::before {
+    left: calc(0.333 * var(--sizing-spacing-lg));
+    right: calc(0.333 * var(--sizing-spacing-lg));
+}
+
+button.secondary::before {
+    background: var(--skin-color-secondary);
+}
+
+button vector-icon {
+    vertical-align: -0.125em;
+}
+
+/* Inputs
+   ========================================================================== */
+textarea {
+    border: var(--sizing-border-sm) solid var(--skin-color-bg);
+    border-radius: 0.25em;
+    padding: var(--sizing-spacing-sm);
+    transition: border-color var(--transition-quick);
+}
+
+textarea:focus {
+    border-color: var(--skin-color-primary);
+    outline: none;
+}
+
 /* Custom Elements
    ========================================================================== */
-/* These styles are needed when needing to customize slotted elements */
+/* These styles are needed when customizing slotted elements */
 side-text {
     margin-bottom: var(--sizing-spacing-p);
 }
