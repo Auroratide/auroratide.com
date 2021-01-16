@@ -11,4 +11,5 @@ module.exports = {
     }]
   },
   setupFilesAfterEnv: [ path.join(__dirname, 'src', 'testing', 'setup.ts') ],
+  modulePathIgnorePatterns: ['<rootDir>/scripts'],
 };

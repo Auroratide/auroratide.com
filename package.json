@@ -31,6 +31,7 @@
     "@testing-library/svelte": "^3.0.3",
     "@tsconfig/svelte": "^1.0.10",
     "@types/jest": "^26.0.19",
+    "commander": "^7.0.0",
     "jest": "^26.6.3",
     "jest-canvas-mock": "^2.3.0",
     "mkdirp": "^1.0.4",
