@@ -51,7 +51,7 @@ export type ConnectionOptions = {
 export default function(component: SvelteCustomElement, opts: ConnectionOptions = {
   shadow: false,
   href: null,
-  defaults: {},
+  defaults: null,
 }){
   class Wrapper extends HTMLElement {
     private slotcount: number

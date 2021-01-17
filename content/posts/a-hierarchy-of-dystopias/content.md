@@ -12,7 +12,7 @@ In a world lacking bare survival essentials, society collapses as individuals st
 * A chemical disaster has globally destroyed much of the oxygen in the air, and as a result people cannot engage in strenuous activity without risking their lives.
 * Generations of people engaging constantly with technology since birth have led to restless neural activity, so much so that the majority of people suffer extreme sleep deprivation in a phenomenon scientists don't know how to reverse.
 
-<side-text info>
+<side-text>
 <p>From that last example, we see scarcity dystopias do not need to devolve into a post-apocalyptic type of world.</p>
 </side-text>
 

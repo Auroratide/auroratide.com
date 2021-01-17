@@ -17,7 +17,7 @@ Well, Sullivan wanted to send a message to Janet that only she would understand.
 
 Unfortunately for Sullivan, the trick he used to encrypt his message was extremely bad. A fellow coworker (yourself) was able to figure it out before the day ended! Maybe Sullivan can find a different means of holding "secret" conversations with Janet?
 
-<side-text info>
+<side-text>
 <p>Yeah yeah, he could just send an email. But for Sullivan, that's not creative enough!</p>
 </side-text>
 
@@ -44,7 +44,7 @@ It is very difficult for us to tell the difference between two colors if they di
 
 But the computer knows the difference, and it's in that difference where the secret message lives.
 
-<side-text info>
+<side-text>
 <p>This just gives a high-level overview of the methodology behind image steganography. Perhaps in a future post I will describe how this is implemented in code.</p>
 </side-text>
 

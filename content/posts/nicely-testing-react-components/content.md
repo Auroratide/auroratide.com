@@ -13,7 +13,7 @@ Upon reflection, I wanted to share what I learnt as a result of my refactoring e
 
 Let's take a look at what that means, how to make it work, and why we should follow it as much as we can! Oh yeah, and if you're patient enough, I have an obligatory sample Github repo to share which demonstrates this principle as well. Yay! Code!
 
-<side-text info>
+<side-text>
 <p>Note: This is by no means a new, revolutionary principle. Developers everywhere, React and beyond, have been echoing these words for years. See Kent C. Dodds's article <a href="https://kentcdodds.com/blog/testing-implementation-details">Testing Implementation Details</a> for an example. However, it can be difficult to know whether we've strayed into testing implementation, which is why I wanted to write about the what, how, and why of nicely testing React components.</p>
 </side-text>
 
