@@ -6,6 +6,7 @@ import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDouble
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
 import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
+import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
@@ -19,6 +20,7 @@ export const library = {
     [IconName.HourglassHalf]: faHourglassHalf,
     [IconName.Image]: faImage,
     [IconName.LayerGroup]: faLayerGroup,
+    [IconName.Shower]: faShower,
 
     [IconName.LinkedIn]: faLinkedinIn,
     [IconName.GithubAlt]: faGithubAlt,

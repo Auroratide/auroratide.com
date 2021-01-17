@@ -6,6 +6,7 @@ export const IconName = {
     HourglassHalf: 'hourglass-half',
     Image: 'image',
     LayerGroup: 'layer-group',
+    Shower: 'shower',
 
     LinkedIn: 'linked-in',
     GithubAlt: 'github-alt',
