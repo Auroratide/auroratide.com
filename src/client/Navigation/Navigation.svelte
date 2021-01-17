@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { socials } from '@/client/routes'
     import { Container } from '@/client/Container'
-    import { VectorIcon, IconName } from '@/client/components/VectorIcon'
 </script>
 
 <Container>
@@ -10,15 +10,11 @@
         <div class="subtitle">Coder and Teacher</div>
         <div class="socials">
             <ul>
-                <li><a href="https://www.linkedin.com/in/timothy-foster-224946120">
-                    <VectorIcon icon={IconName.LinkedIn}></VectorIcon>
-                </a></li>
-                <li><a href="https://github.com/Auroratide">
-                    <VectorIcon icon={IconName.GithubAlt}></VectorIcon>
-                </a></li>
-                <li><a href="https://stackoverflow.com/users/6163066/auroratide">
-                    <VectorIcon icon={IconName.StackOverflow}></VectorIcon>
-                </a></li>
+                {#each Object.values(socials) as social}
+                    <li><a href={social.link}>
+                        <vector-icon icon={social.icon}></vector-icon>
+                    </a></li>
+                {/each}
             </ul>
         </div>
         <nav class="nav">
