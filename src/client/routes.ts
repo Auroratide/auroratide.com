@@ -34,11 +34,7 @@ export type Navigation = {
     link: string,
 }
 
-export const navigation: Record<'Home' | 'Posts' | 'About' | 'Legal', Navigation> = {
-    Home: {
-        name: 'Home',
-        link: '/',
-    },
+export const navigation: Record<'Posts' | 'About' | 'Legal', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',

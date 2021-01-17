@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { socials } from '@/client/routes'
+    import { socials, navigation } from '@/client/routes'
     import { Container } from '@/client/Container'
 </script>
 
@@ -19,8 +19,9 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="/posts">Posts</a></li>
-                <li><a href="/about">About</a></li>
+                {#each Object.values(navigation).filter(item => item != navigation.Legal) as item}
+                    <li><a href={item.link}>{item.name}</a></li>
+                {/each}
             </ul>
         </nav>
     </div>
