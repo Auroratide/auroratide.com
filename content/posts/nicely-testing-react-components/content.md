@@ -216,10 +216,7 @@ As an experiment, I decided to try my hand at implementing the classic Tic Tac T
 
 The catch? _The exact same set of tests must pass for each version of the Tic Tac Toe component._
 
-**[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**! The readme has more details in it. Or you can play the game with yourself below if that's your fancy.
-
-<react-tac-toe>
-</react-tac-toe>
+**[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**!
 
 <side-text danger>
 <p>By the way, I also tried to do this with web components, just to prove that the tests will pass even without React. Unfortunately, I hit a dead end when I realized JSDOM doesn't support custom elements yet. If you're feeling adventurous, feel free to make a pull request proving this can indeed be done!</p>
