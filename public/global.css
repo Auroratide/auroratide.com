@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 a {
     text-decoration: none;
+    color: var(--skin-color-primary);
 }
 
 a:hover {
@@ -128,6 +129,77 @@ textarea {
 textarea:focus {
     border-color: var(--skin-color-primary);
     outline: none;
+}
+
+/* Code
+   ========================================================================== */
+code {
+    font-family: var(--skin-font-code);
+    font-size: var(--sizing-font-xs);
+    color: var(--skin-code-default);
+}
+
+pre code {
+    display: block;
+    line-height: 1.5em;
+    border: var(--sizing-border-xs) solid var(--skin-color-primary);
+    border-left-width: var(--sizing-border-md);
+    padding: 0 var(--sizing-spacing-md);
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+}
+
+pre code::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background-image: linear-gradient(transparent 50%, var(--skin-color-primary) 50%);
+    background-size: 3em 3em;
+    opacity: 0.06;
+    z-index: -1;
+}
+
+code .comment {
+    color: var(--skin-code-comment);
+}
+
+code .keyword,
+code .attr-name,
+code .rule,
+code .property {
+    color: var(--skin-code-keyword);
+}
+
+code .number,
+code .boolean {
+    color: var(--skin-code-literal);
+}
+
+code .string,
+code .regex,
+code .attr-value {
+    color: var(--skin-code-string);
+}
+
+code .class-name,
+code .selector,
+code .tag {
+    color: var(--skin-code-name);
+}
+
+code .function,
+code .pseudo-class {
+    font-weight: var(--typography-bold);
+}
+
+code .doctype {
+    color: var(--skin-code-annotation);
+}
+
+code .tag > .punctuation {
+    color: var(--skin-code-default);
 }
 
 /* Custom Elements

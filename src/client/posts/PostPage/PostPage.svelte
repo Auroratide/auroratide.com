@@ -2,6 +2,7 @@
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
     import { Loading } from '@/client/Loading'
+    import { RawRenderer } from '@/client/RawRenderer'
 
     import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
@@ -23,7 +24,7 @@
             <Content>
                 <section class="content">
                     <div class="published"><DateDisplay date={item.publishedAt} /></div>
-                    {@html item.content}
+                    <RawRenderer content={item.content} />
                 </section>
                 <aside slot="sidebar">
                     <h2 class="more-title">More on {item.category}</h2>

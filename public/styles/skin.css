@@ -17,6 +17,14 @@
     --skin-font-text: var(--typography-sans);
     --skin-font-code: var(--typography-code);
 
+    --skin-code-default: var(--palette-greyscale-010);
+    --skin-code-comment: #008800;
+    --skin-code-keyword: #0060FF;
+    --skin-code-literal: #a85f30;
+    --skin-code-name: #0080AA;
+    --skin-code-string:  #a31515;
+    --skin-code-annotation:  #808000;
+
     --maslow-color-selfactualization: var(--palette-autumn-red);
     --maslow-color-esteem: var(--palette-autumn-orange);
     --maslow-color-belonging: var(--palette-livian-yellow);
