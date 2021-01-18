@@ -48,3 +48,36 @@ export const navigation: Record<'Posts' | 'About' | 'Legal', Navigation> = {
         link: '/legal',
     },
 }
+
+export class UrlBuilder {
+    static API_SUFFIX = '.json'
+    private url: string
+    private api: boolean
+
+    constructor() {
+        this.url = ''
+        this.api = false
+    }
+
+    withBase(): UrlBuilder {
+        this.url = 'https://auroratide.com'
+        return this
+    }
+
+    apiFor(): UrlBuilder {
+        this.api = true
+        return this
+    }
+
+    home(): string {
+        return `${this.url}/`
+    }
+
+    posts(): string {
+        return `${this.url}${navigation.Posts.link}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`
+    }
+
+    post(id: string): string {
+        return `${this.url}${navigation.Posts.link}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`
+    }
+}

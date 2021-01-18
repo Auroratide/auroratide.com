@@ -8,6 +8,7 @@
     import { FetchApi } from '../api'
     import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
+    import { Comments } from './Comments'
 
     export let api: PostsApi = new FetchApi(fetch.bind(window))
     export let id: string
@@ -29,6 +30,9 @@
                 <aside slot="sidebar">
                     <h2 class="more-title">More on {item.category}</h2>
                 </aside>
+                <section slot="after">
+                    <Comments id={item.id} />
+                </section>
             </Content>
         </article>
     {/await}
