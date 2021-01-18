@@ -109,6 +109,10 @@ button:hover::before {
     right: calc(0.333 * var(--sizing-spacing-lg));
 }
 
+button:active::before {
+    box-shadow: 0 0 0 1em var(--palette-shade-033) inset;
+}
+
 button.secondary::before {
     background: var(--skin-color-secondary);
 }
