@@ -1,4 +1,5 @@
 import 'prismjs'
+import 'prismjs/components/prism-jsx'
 
 export type Highlighter = {
     highlightAllUnder(element: Element)

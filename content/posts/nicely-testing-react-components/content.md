@@ -65,7 +65,7 @@ All right, code time.
 <decrementor-widget>
 </decrementor-widget>
 
-```js
+```jsx
 const Decrementor = () => {};
 ```
 
@@ -85,7 +85,7 @@ To answer our questions...
 
 That's a test right there! To write it in code, let's use [React Testing Library](*https://github.com/testing-library/react-testing-library), though you can achieve the same kind of test with Enzyme as well:
 
-```js
+```jsx
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import Decrementor from './Decrementor';
@@ -119,7 +119,9 @@ Let's pause to notice a few things:
 
 Now that we have a test, we can write a nice little component like so:
 
-```js
+<sub-theme success>
+
+```jsx
 import React, { useState } from 'react';
 
 const Decrementor = ({ initialValue }) => {
@@ -135,9 +137,13 @@ const Decrementor = ({ initialValue }) => {
 export default Decrementor;
 ```
 
+</sub-theme>
+
 We decided to use hooks because, y'know, they're the new thing and all, but we didn't have to. Nicely, the following implementation using a MobX class also passes despite being _completely different_:
 
-```js
+<sub-theme success>
+
+```jsx
 import React, { useState } from 'react';
 import { decorate, observable, action } from 'mobx';
 import { observer } from 'mobx-react-lite';
@@ -166,6 +172,8 @@ const Decrementor = observer(({ initialValue }) => {
 
 export default Decrementor;
 ```
+
+</sub-theme>
 
 Even though the state management paradigm is completely different, the test passes all the same. That's because the test only concerned itself with the _surface_ of the component. In the end, what the component does is what the user really cares about, not how it works.
 

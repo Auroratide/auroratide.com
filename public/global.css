@@ -161,6 +161,30 @@ pre code::before {
     z-index: -1;
 }
 
+.success > pre code {
+    border-color: var(--skin-color-success);
+}
+
+.success > pre code::before {
+    background-image: linear-gradient(transparent 50%, var(--skin-color-success) 50%);
+}
+
+.warning > pre code {
+    border-color: var(--skin-color-warning);
+}
+
+.warning > pre code::before {
+    background-image: linear-gradient(transparent 50%, var(--skin-color-warning) 50%);
+}
+
+.danger > pre code {
+    border-color: var(--skin-color-danger);
+}
+
+.danger > pre code::before {
+    background-image: linear-gradient(transparent 50%, var(--skin-color-danger) 50%);
+}
+
 code .comment {
     color: var(--skin-code-comment);
 }
@@ -185,7 +209,7 @@ code .attr-value {
 
 code .class-name,
 code .selector,
-code .tag {
+code .tag > .tag {
     color: var(--skin-code-name);
 }
 

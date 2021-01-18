@@ -6,6 +6,7 @@ import { ImageSteganographer } from './ImageSteganographer'
 import { MajorPoint } from './MajorPoint'
 import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
 import { SideText } from './SideText'
+import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
 
 export const register = () => {
@@ -15,5 +16,6 @@ export const register = () => {
     connect(MajorPoint)
     connect(MaslowsHierarchyOfNeeds)
     connect(SideText)
+    connect(SubTheme)
     connect(VectorIcon)
 }
