@@ -21,7 +21,7 @@
             padding: var(--sizing-spacing-xl) calc(var(--sizing-spacing-xl) - var(--sizing-spacing-sm));
         }
 
-        .content.has-sidebar > * {
+        .content.has-sidebar > :global(*) {
             padding: 0 var(--sizing-spacing-sm);
         }
     }
