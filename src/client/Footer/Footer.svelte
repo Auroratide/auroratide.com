@@ -74,7 +74,6 @@
     .nav ul {
         list-style: none;
         padding: 0;
-        margin: 0 calc(-1 * var(--sizing-spacing-md));
         text-align: center;
     }
 

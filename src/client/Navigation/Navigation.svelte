@@ -35,6 +35,7 @@
         grid-template-areas: 
             "logo title socials"
             "logo subtitle nav";
+        overflow: hidden;
     }
 
     .logo {
