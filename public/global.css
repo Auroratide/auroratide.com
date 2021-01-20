@@ -81,7 +81,7 @@ hr {
 
 /* Buttons
    ========================================================================== */
-button {
+button, .as-button {
     border: none;
     background: none;
     display: inline-block;
@@ -92,7 +92,7 @@ button {
     padding: var(--sizing-spacing-xs) var(--sizing-spacing-lg);
 }
 
-button::before {
+button::before, .as-button::before {
     display: inline-block;
     content: '';
     position: absolute;
@@ -104,20 +104,24 @@ button::before {
     z-index: -1;
 }
 
-button:hover::before {
+button:hover, .as-button:hover {
+    text-decoration: none;
+}
+
+button:hover::before, .as-button:hover::before {
     left: calc(0.333 * var(--sizing-spacing-lg));
     right: calc(0.333 * var(--sizing-spacing-lg));
 }
 
-button:active::before {
+button:active::before, .as-button:active::before {
     box-shadow: 0 0 0 1em var(--palette-shade-033) inset;
 }
 
-button.secondary::before {
+button.secondary::before, .as-button.secondary::before {
     background: var(--skin-color-secondary);
 }
 
-button vector-icon {
+button vector-icon, .as-button vector-icon {
     vertical-align: -0.125em;
 }
 

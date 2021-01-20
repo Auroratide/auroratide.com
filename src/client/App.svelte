@@ -6,6 +6,7 @@
     import { PostList } from './posts/PostList'
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
+    import { PageNotFound } from './PageNotFound'
     import page from 'page'
 
     let context = {
@@ -18,6 +19,7 @@
     page('/posts/:id', ({ params }) => context = { component: PostPage, params })
     page('/about', () => context = { component: AboutPage, params: {} })
     page('/legal', () => context = { component: LegalPage, params: {} })
+    page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()
 </script>
