@@ -150,43 +150,23 @@ pre code {
     border-left-width: var(--sizing-border-md);
     padding: 0 var(--sizing-spacing-md);
     overflow: auto;
-    position: relative;
-    z-index: 2;
-}
-
-pre code::before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    background-image: linear-gradient(transparent 50%, var(--skin-color-primary) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-primary), 0.06) 50%);
     background-size: 3em 3em;
-    opacity: 0.06;
-    z-index: -1;
 }
 
 .success > pre code {
     border-color: var(--skin-color-success);
-}
-
-.success > pre code::before {
-    background-image: linear-gradient(transparent 50%, var(--skin-color-success) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-success), 0.06) 50%);
 }
 
 .warning > pre code {
     border-color: var(--skin-color-warning);
-}
-
-.warning > pre code::before {
-    background-image: linear-gradient(transparent 50%, var(--skin-color-warning) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-warning), 0.06) 50%);
 }
 
 .danger > pre code {
     border-color: var(--skin-color-danger);
-}
-
-.danger > pre code::before {
-    background-image: linear-gradient(transparent 50%, var(--skin-color-danger) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-danger), 0.06) 50%);
 }
 
 code .comment {

@@ -7,11 +7,17 @@
     --skin-color-text-secondary: var(--palette-greyscale-100);
 
     --skin-color-primary: var(--palette-aurora-blue);
+    --skin-rgb-primary: var(--palette-rgb-aurora-blue);
     --skin-color-secondary: var(--palette-aurora-green);
+    --skin-rgb-secondary: var(--palette-rgb-aurora-green);
     --skin-color-info: var(--palette-aurora-blue);
+    --skin-rgb-info: var(--palette-rgb-aurora-blue);
     --skin-color-success: var(--palette-aella-green);
+    --skin-rgb-success: var(--palette-rgb-aella-green);
     --skin-color-warning: var(--palette-livian-yellow);
+    --skin-rgb-warning: var(--palette-rgb-livian-yellow);
     --skin-color-danger: var(--palette-autumn-red);
+    --skin-rgb-danger: var(--palette-rgb-autumn-red);
 
     --skin-font-heading: var(--typography-sans);
     --skin-font-text: var(--typography-sans);

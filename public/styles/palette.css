@@ -11,15 +11,20 @@
   
     --palette-deep-blue: #001533;
     --palette-aurora-blue: #448DDD;
+    --palette-rgb-aurora-blue: 68, 141, 221;
     --palette-aurora-green: #41AAB7;
+    --palette-rgb-aurora-green: 65, 170, 183;
     --palette-fable-lavender: #9D77DD;
     --palette-fable-pink: #FB6BB5;
     --palette-livian-yellow: #E6B800;
+    --palette-rgb-livian-yellow: 230, 184, 0;
     --palette-eventide-black: #303038;
     --palette-winter-grey: #ABB7BD;
     --palette-autumn-red: #BE2C38;
+    --palette-rgb-autumn-red: 190, 44, 56;
     --palette-autumn-orange: #D88F30;
     --palette-aella-green: #5EBF36;
+    --palette-rgb-aella-green: 94, 191, 54;
   
     --palette-github: #333333;
     --palette-linked-in: #0077B5;
