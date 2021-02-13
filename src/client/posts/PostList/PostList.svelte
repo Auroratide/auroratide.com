@@ -2,12 +2,13 @@
     import { Container } from '@/client/Container'
     import { Loading } from '@/client/Loading'
 
-    import type { PostsApi } from '../api'
+    import type { ResourceApi } from '@/client/resources'
+    import type { Post } from '../types'
     import { FetchApi } from '../api'
 
     import { DateDisplay } from '../DateDisplay'
 
-    export let api: PostsApi = new FetchApi(fetch.bind(window))
+    export let api: ResourceApi<Post> = new FetchApi(fetch.bind(window))
 
     let promise = api.list()
 </script>

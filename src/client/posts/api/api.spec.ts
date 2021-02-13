@@ -1,9 +1,10 @@
-import { InMemoryApi } from '.'
+import type { Post } from '../types'
+import { InMemoryResourceApi } from '@/client/resources'
 import { PostForge } from '../testing/PostForge'
 
 describe('posts api', () => {
     let forge: PostForge
-    let api: InMemoryApi
+    let api: InMemoryResourceApi<Post>
 
     beforeEach(() => {
         forge = new PostForge()
@@ -12,7 +13,7 @@ describe('posts api', () => {
     describe('single post', () => {
         test('post exists', async () => {
             const items = [forge.create('apple'), forge.create('orange')]
-            api = new InMemoryApi(items)
+            api = new InMemoryResourceApi(items)
     
             const result = await api.one('orange')
     
@@ -21,7 +22,7 @@ describe('posts api', () => {
 
         test('post does not exist', async () => {
             const items = [forge.create('apple'), forge.create('orange')]
-            api = new InMemoryApi(items)
+            api = new InMemoryResourceApi(items)
     
             const result = await api.one('banana')
     
@@ -32,7 +33,7 @@ describe('posts api', () => {
     describe('list of posts', () => {
         test('posts exist', async () => {
             const items = [forge.create('apple'), forge.create('orange')]
-            api = new InMemoryApi(items)
+            api = new InMemoryResourceApi(items)
     
             const result = await api.list()
     

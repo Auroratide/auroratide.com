@@ -3,14 +3,15 @@
     import { Content } from '@/client/Content'
     import { Loading } from '@/client/Loading'
     import { RawRenderer } from '@/client/RawRenderer'
+    import type { ResourceApi } from '@/client/resources'
+    import type { Post } from '../types'
 
-    import type { PostsApi } from '../api'
     import { FetchApi } from '../api'
     import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
     import { Comments } from './Comments'
 
-    export let api: PostsApi = new FetchApi(fetch.bind(window))
+    export let api: ResourceApi<Post> = new FetchApi(fetch.bind(window))
     export let id: string
 
     let promise = api.one(id)
