@@ -1,6 +1,6 @@
-import type { Resource, ResourceApi } from './Resource'
+import type { ResourceItem, ResourceApi } from './Resource'
 
-export abstract class FetchResourceApi<T extends Resource> implements ResourceApi<T> {
+export abstract class FetchResourceApi<T extends ResourceItem> implements ResourceApi<T> {
     private name: string
     private fetch: (input: RequestInfo) => Promise<Response>
 

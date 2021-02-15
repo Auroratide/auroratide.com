@@ -1,14 +1,14 @@
 import App from './App.svelte'
 import { writable } from 'svelte/store'
-import { SvelteResource, InMemoryResourceApi } from './resources'
+import { SvelteStore, InMemoryResourceApi } from './resources'
 import type { Post } from './posts/types'
 import { component } from '@/testing/component'
 
 describe('App', () => {
-    let posts: SvelteResource<Post>
+    let posts: SvelteStore<Post>
 
     beforeEach(() => {
-        posts = new SvelteResource(writable(null), new InMemoryResourceApi([]))
+        posts = new SvelteStore(writable(null), new InMemoryResourceApi([]))
     })
 
     test('rendering', () => {

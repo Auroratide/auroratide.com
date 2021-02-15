@@ -1,6 +1,6 @@
-import type { Resource, ResourceApi } from './Resource'
+import type { ResourceItem, ResourceApi } from './Resource'
 
-export class InMemoryResourceApi<T extends Resource> implements ResourceApi<T> {
+export class InMemoryResourceApi<T extends ResourceItem> implements ResourceApi<T> {
     private items: T[]
     private promises: Promise<T | T[]>[]
 

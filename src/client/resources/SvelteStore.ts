@@ -1,7 +1,7 @@
 import type { Writable } from 'svelte/store'
-import type { Resource, ResourceApi, ResourceStore } from './Resource'
+import type { ResourceItem, ResourceApi, Resource } from './Resource'
 
-export class SvelteResource<T extends Resource> {
+export class SvelteStore<T extends ResourceItem> {
     private store: Writable<T[]>
     private api: ResourceApi<T>
     private pendingList: boolean
@@ -12,7 +12,7 @@ export class SvelteResource<T extends Resource> {
         this.pendingList = false
     }
 
-    public subscribe(f: (resource: ResourceStore<T>) => void): () => void {
+    public subscribe(f: (resource: Resource<T>) => void): () => void {
         return this.store.subscribe((value: T[]) => {
             f({
                 list: (): T[] => {

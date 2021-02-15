@@ -1,16 +1,16 @@
-import type { Resource } from '.'
-import { InMemoryResourceApi, SvelteResource } from '.'
+import type { ResourceItem } from '.'
+import { InMemoryResourceApi, SvelteStore } from '.'
 import { writable } from 'svelte/store'
 
 describe('SvelteResource', () => {
     let unsubscribe = () => {}
-    const item = (n: number): Resource => ({ id: n.toString() })
+    const item = (n: number): ResourceItem => ({ id: n.toString() })
 
     afterEach(unsubscribe)
 
     test('returns items in store', () => {
         const internalStore = writable([item(0), item(1)])
-        const store = new SvelteResource(internalStore, new InMemoryResourceApi([]))
+        const store = new SvelteStore(internalStore, new InMemoryResourceApi([]))
 
         let list = []
         let singleItem = null
@@ -25,13 +25,13 @@ describe('SvelteResource', () => {
     })
 
     describe('initially empty store', () => {
-        let api: InMemoryResourceApi<Resource>
-        let store: SvelteResource<Resource>
+        let api: InMemoryResourceApi<ResourceItem>
+        let store: SvelteStore<ResourceItem>
 
         beforeEach(() => {
             const internalStore = writable(null)
             api = new InMemoryResourceApi([item(0), item(1)])
-            store = new SvelteResource(internalStore, api)
+            store = new SvelteStore(internalStore, api)
         })
 
         test('fetching the list', async () => {

@@ -1,13 +1,13 @@
-export type Resource = {
+export type ResourceItem = {
     id: string
 }
 
-export interface ResourceApi<T extends Resource> {
+export interface ResourceApi<T extends ResourceItem> {
     list(): Promise<T[]>
     one(id: string): Promise<T>
 }
 
-export interface ResourceStore<T extends Resource> {
+export interface Resource<T extends ResourceItem> {
     list(): T[]
     one(id: string): T
 }

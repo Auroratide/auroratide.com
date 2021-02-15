@@ -1,6 +1,6 @@
-import type { Resource, ResourceStore } from './Resource'
+import type { ResourceItem, Resource } from './Resource'
 
-export class InMemoryResource<T extends Resource> implements ResourceStore<T> {
+export class InMemoryResource<T extends ResourceItem> implements Resource<T> {
     private items: T[]
 
     constructor(items: T[]) {

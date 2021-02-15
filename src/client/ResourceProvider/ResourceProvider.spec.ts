@@ -1,14 +1,14 @@
 import { writable } from 'svelte/store'
-import { Resource, InMemoryResourceApi, SvelteResource } from '@/client/resources'
+import { ResourceItem, InMemoryResourceApi, SvelteStore } from '@/client/resources'
 import { ResourceProvider } from '.'
 import SampleComponent from './SampleComponent.svelte'
 import { component } from '@/testing/component'
 import { screen, act } from '@testing-library/svelte'
 
 describe('ResourceProvider', () => {
-    let items: Record<string, Resource>
-    let api: InMemoryResourceApi<Resource>
-    let store: SvelteResource<Resource>
+    let items: Record<string, ResourceItem>
+    let api: InMemoryResourceApi<ResourceItem>
+    let store: SvelteStore<ResourceItem>
 
     beforeEach(() => {
         items = {
@@ -17,7 +17,7 @@ describe('ResourceProvider', () => {
         }
 
         api = new InMemoryResourceApi(Object.values(items))
-        store = new SvelteResource(writable(null), api)
+        store = new SvelteStore(writable(null), api)
     })
 
     test('rendering', async () => {

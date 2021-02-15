@@ -1,9 +1,9 @@
-import type { Resource } from '.'
+import type { ResourceItem } from '.'
 import { InMemoryResourceApi } from '.'
 
 describe('InMemoryResourceApi', () => {
-    const item = (n: number): Resource => ({ id: n.toString() })
-    let api: InMemoryResourceApi<Resource>
+    const item = (n: number): ResourceItem => ({ id: n.toString() })
+    let api: InMemoryResourceApi<ResourceItem>
 
     describe('single post', () => {
         test('post exists', async () => {
