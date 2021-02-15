@@ -1,22 +1,20 @@
 <script lang="ts">
     import { Container } from '@/client/Container'
     import { Loading } from '@/client/Loading'
-
-    import type { ResourceApi } from '@/client/resources'
+    import type { ResourceStore } from '@/client/resources'
     import type { Post } from '../types'
-    import { FetchApi } from '../api'
-
     import { DateDisplay } from '../DateDisplay'
 
-    export let api: ResourceApi<Post> = new FetchApi(fetch.bind(window))
+    export let resource: ResourceStore<Post>
 
-    let promise = api.list()
+    let items: Post[] = null
+    $: items = resource.list()
 </script>
 
 <Container>
-    {#await promise}
-        <Loading text="Finding posts..." />
-    {:then items}
+    {#if items === null}
+        <Loading text="Fetching posts..." />
+    {:else}
         <div class="item-holder">
             {#each items as item}
                 <a class="post-item" href={`/posts/${item.id}`} style={`--article-color: var(--palette-${item.color});`}>
@@ -39,7 +37,7 @@
                 </a>
             {/each}
         </div>
-    {/await}
+    {/if}
 </Container>
 
 <style>

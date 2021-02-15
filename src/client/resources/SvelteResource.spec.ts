@@ -45,5 +45,17 @@ describe('SvelteResource', () => {
     
             expect(list).toEqual([item(0), item(1)])
         })
+
+        test('fetching one item', async () => {
+            let singleItem = null
+    
+            unsubscribe = store.subscribe((resource) => {
+                singleItem = resource.one('0')
+            })
+    
+            await api.finishAll()
+    
+            expect(singleItem).toEqual(item(0))
+        })
     })
 })
