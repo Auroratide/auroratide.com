@@ -6,6 +6,7 @@
     import type { Post } from '../types'
     import { DateDisplay } from '../DateDisplay'
     import { Error } from '@/client/Error'
+    import { UrlBuilder } from '@/client/routes'
 
     export let resource: Resource<Post>
 
@@ -23,7 +24,7 @@
     {:else}
         <div class="item-holder">
             {#each items as item}
-                <a class="post-item" href={`/posts/${item.id}`} style={`--article-color: var(--palette-${item.color});`}>
+                <a class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
                     <article>
                         <section>
                             <h1>{item.title}</h1>
