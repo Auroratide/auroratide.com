@@ -1,4 +1,4 @@
-import PostList from './PostList.svelte'
+import { PostList } from '.'
 import { InMemoryResource } from '@/client/resources'
 import { component } from '@/testing/component'
 import { PostForge } from '../testing/PostForge'

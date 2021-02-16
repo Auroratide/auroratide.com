@@ -1,1 +1,1 @@
-export { default as PostList } from './Wrapped.svelte'
+export { default as PostList } from './PostList.svelte'

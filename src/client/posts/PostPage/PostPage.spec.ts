@@ -1,4 +1,4 @@
-import PostPage from './PostPage.svelte'
+import { PostPage } from '.'
 import { InMemoryResource } from '@/client/resources'
 import { PostForge } from '../testing/PostForge'
 import { component } from '@/testing/component'

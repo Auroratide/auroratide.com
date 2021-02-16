@@ -9,6 +9,7 @@
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
     import { PageNotFound } from './PageNotFound'
+    import { ResourceProvider } from './ResourceProvider'
     import page from 'page'
 
     import type { SvelteComponent } from 'svelte'
@@ -23,9 +24,9 @@
         params: {},
     }
 
-    page('/', () => context = { component: PostList, params: { store: posts } })
-    page('/posts', () => context = { component: PostList, params: { store: posts } })
-    page('/posts/:id', ({ params }) => context = { component: PostPage, params: { store: posts, id: params.id } })
+    page('/', () => context = { component: ResourceProvider, params: { store: posts, component: PostList } })
+    page('/posts', () => context = { component: ResourceProvider, params: { component: PostList, store: posts } })
+    page('/posts/:id', ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
     page('/about', () => context = { component: AboutPage, params: {} })
     page('/legal', () => context = { component: LegalPage, params: {} })
     page('*', () => context = { component: PageNotFound, params: {} })
