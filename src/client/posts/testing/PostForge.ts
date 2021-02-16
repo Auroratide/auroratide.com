@@ -2,6 +2,7 @@ import type { Post } from '../types'
 
 type Options = {
     title?: string,
+    category?: string,
     content?: string,
 }
 
@@ -10,7 +11,7 @@ export class PostForge {
         return {
             id,
             title: options.title ?? id,
-            category: 'Fruit',
+            category: options.category ?? 'Fruit',
             icon: 'apple',
             color: 'red',
             summary: 'A summary',

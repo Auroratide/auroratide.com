@@ -8,6 +8,8 @@
     --palette-greyscale-100: #ffffff;
 
     --palette-shade-033: rgba(0, 0, 0, 0.333);
+    --palette-shade-050: rgba(0, 0, 0, 0.5);
+    --palette-shade-067: rgba(0, 0, 0, 0.667);
   
     --palette-deep-blue: #001533;
     --palette-aurora-blue: #448DDD;

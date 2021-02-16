@@ -14,7 +14,7 @@
 
 <Container>
     {#if items === Pending}
-        <Loading text="Fetching posts..." />
+        <Loading text="Fetching posts..." large />
     {:else if items === Missing}
         <div>Uh oh it is missing</div>
     {:else}

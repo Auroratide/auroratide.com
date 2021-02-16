@@ -6,6 +6,7 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import { PageNotFound } from '@/client/PageNotFound'
+    import { RelatedPost } from './RelatedPost'
 
     import type { Post } from '../types'
 
@@ -17,12 +18,21 @@
     export let resource: Resource<Post>
 
     let item: Maybe<Post> = Pending
-    $: item = resource.one(id)
+    let relatedItems: Maybe<Post[]> = Pending
+    $: {
+        item = resource.one(id)
+        if (item !== Pending && item !== Missing) {
+            relatedItems = resource.list()
+            if (relatedItems !== Pending && relatedItems !== Missing) {
+                relatedItems = relatedItems.filter(i => i.category === (item as Post).category && i.id !== (item as Post).id)
+            }
+        }
+    }
 </script>
 
 <Container>
     {#if item === Pending}
-        <Loading text="Finding post..." />
+        <Loading text="Finding post..." large />
     {:else if item === Missing}
         <PageNotFound />
     {:else}
@@ -35,6 +45,15 @@
                 </section>
                 <aside slot="sidebar">
                     <h2 class="more-title">More on {item.category}</h2>
+                    {#if relatedItems !== Pending && relatedItems !== Missing}
+                        <ul class="related-posts">
+                            {#each relatedItems as relatedItem}
+                                <li><RelatedPost post={relatedItem} /></li>
+                            {/each}
+                        </ul>
+                    {:else}
+                        <Loading text="Finding posts..." />
+                    {/if}
                 </aside>
                 <section slot="after">
                     <Comments id={item.id} />
@@ -48,6 +67,12 @@
     .published {
         margin-bottom: var(--sizing-spacing-p);
         font-weight: var(--typography-light);
+    }
+
+    .related-posts {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     @media screen and (min-width: 75rem) {

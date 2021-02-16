@@ -52,4 +52,24 @@ describe('PostPage', () => {
 
         expect(screen.getByText(/not available/i)).toBeInTheDocument()
     })
+
+
+    test('related posts', async () => {
+        posts = {
+            apple: forge.create('apple', { category: 'fruit' }),
+            orange: forge.create('orange', { category: 'fruit' }),
+            banana: forge.create('banana', { category: 'fruit' }),
+            carrot: forge.create('carrot', { category: 'vegetable' }),
+        }
+        resource = new InMemoryResource(Object.values(posts))
+
+        component(PostPage)
+            .prop('id', posts.apple.id)
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.queryByText(posts.orange.title)).toBeInTheDocument()
+        expect(screen.queryByText(posts.banana.title)).toBeInTheDocument()
+        expect(screen.queryByText(posts.carrot.title)).not.toBeInTheDocument()
+    })
 })
