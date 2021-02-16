@@ -1,1 +1,1 @@
-export { default as PostPage } from './PostPage.svelte'
+export { default as PostPage } from './Wrapped.svelte'

@@ -3,24 +3,28 @@
     import { Content } from '@/client/Content'
     import { Loading } from '@/client/Loading'
     import { RawRenderer } from '@/client/RawRenderer'
-    import type { ResourceApi } from '@/client/resources'
+    import type { Resource, Maybe } from '@/client/resources'
+    import { Pending, Missing } from '@/client/resources'
+
     import type { Post } from '../types'
 
-    import { FetchApi } from '../api'
     import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
     import { Comments } from './Comments'
 
-    export let api: ResourceApi<Post> = new FetchApi(fetch.bind(window))
     export let id: string
+    export let resource: Resource<Post>
 
-    let promise = api.one(id)
+    let item: Maybe<Post> = Pending
+    $: item = resource.one(id)
 </script>
 
 <Container>
-    {#await promise}
+    {#if item === Pending}
         <Loading text="Finding post..." />
-    {:then item}
+    {:else if item === Missing}
+        <div>uh oh missing</div>
+    {:else}
         <article style={`--article-color: var(--palette-${item.color});`}>
             <Header title={item.title} icon={item.icon} />
             <Content>
@@ -36,7 +40,7 @@
                 </section>
             </Content>
         </article>
-    {/await}
+    {/if}
 </Container>
 
 <style>

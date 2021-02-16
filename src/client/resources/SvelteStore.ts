@@ -8,11 +8,13 @@ export class SvelteStore<T extends ResourceItem> {
     private store: Writable<T[]>
     private api: ResourceApi<T>
     private pendingList: boolean
+    private fetchedItems: Set<string>
 
     constructor(store: Writable<T[]>, api: ResourceApi<T>) {
         this.store = store
         this.api = api
         this.pendingList = false
+        this.fetchedItems = new Set()
     }
 
     public subscribe(f: (resource: Resource<T>) => void): () => void {
@@ -32,6 +34,8 @@ export class SvelteStore<T extends ResourceItem> {
                         this.fetchOne(id)
                         return Pending
                     } else {
+                        if (!this.fetchedItems.has(id))
+                            this.fetchOne(id)
                         return value.find(v => v.id === id)
                     }
                 }
@@ -49,7 +53,10 @@ export class SvelteStore<T extends ResourceItem> {
 
     private fetchOne: (id: string) => Promise<void> = (id: string) => {
         return this.api.one(id).then((item: T) => {
-            this.store.update(prev => mergeOne(prev, item))
+            if (item) {
+                this.fetchedItems.add(item.id)
+                this.store.update(prev => mergeOne(prev, item))
+            }
         })
     }
 }

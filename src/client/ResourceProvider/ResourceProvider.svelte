@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { SvelteComponent } from 'svelte'
-    import type { Resource, SvelteResource } from '@/client/resources'
-
-    export let store: SvelteResource<Resource>
-    export let component: SvelteComponent
+    let {
+        store,
+        component,
+        ...restProps
+    } = $$props
 </script>
 
-<svelte:component this={component} resource={$store} />
+<svelte:component this={component} resource={$store} {...restProps} />
