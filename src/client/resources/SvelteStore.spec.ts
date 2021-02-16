@@ -1,4 +1,5 @@
-import type { ResourceItem } from '.'
+import type { ResourceItem, Maybe } from '.'
+import { Pending } from '.'
 import { InMemoryResourceApi, SvelteStore } from '.'
 import { writable } from 'svelte/store'
 
@@ -12,8 +13,8 @@ describe('SvelteResource', () => {
         const internalStore = writable([item(0), item(1)])
         const store = new SvelteStore(internalStore, new InMemoryResourceApi([]))
 
-        let list = []
-        let singleItem = null
+        let list: Maybe<ResourceItem[]> = null
+        let singleItem: Maybe<ResourceItem> = null
 
         unsubscribe = store.subscribe((resource) => {
             list = resource.list()
@@ -35,14 +36,15 @@ describe('SvelteResource', () => {
         })
 
         test('fetching the list', async () => {
-            let list = []
+            let list: Maybe<ResourceItem[]> = null
     
             unsubscribe = store.subscribe((resource) => {
                 list = resource.list()
             })
+
+            expect(list).toEqual(Pending)
     
             await api.finishAll()
-    
             expect(list).toEqual([item(0), item(1)])
         })
 
@@ -52,9 +54,10 @@ describe('SvelteResource', () => {
             unsubscribe = store.subscribe((resource) => {
                 singleItem = resource.one('0')
             })
+
+            expect(singleItem).toEqual(Pending)
     
             await api.finishAll()
-    
             expect(singleItem).toEqual(item(0))
         })
     })

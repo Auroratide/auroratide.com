@@ -1,4 +1,5 @@
 import type { ResourceItem, Resource } from './Resource'
+import { Pending } from './Maybe'
 
 export class InMemoryResource<T extends ResourceItem> implements Resource<T> {
     private items: T[]
@@ -7,6 +8,6 @@ export class InMemoryResource<T extends ResourceItem> implements Resource<T> {
         this.items = items
     }
 
-    list = () => this.items
+    list = () => this.items ?? Pending
     one = (id: string) => this.items.find(i => i.id === id)
 }

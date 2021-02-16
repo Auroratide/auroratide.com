@@ -1,19 +1,22 @@
 <script lang="ts">
     import { Container } from '@/client/Container'
     import { Loading } from '@/client/Loading'
-    import type { ResourceStore } from '@/client/resources'
+    import type { Resource, Maybe } from '@/client/resources'
+    import { Pending, Missing } from '@/client/resources'
     import type { Post } from '../types'
     import { DateDisplay } from '../DateDisplay'
 
-    export let resource: ResourceStore<Post>
+    export let resource: Resource<Post>
 
-    let items: Post[] = null
+    let items: Maybe<Post[]> = Pending
     $: items = resource.list()
 </script>
 
 <Container>
-    {#if items === null}
+    {#if items === Pending}
         <Loading text="Fetching posts..." />
+    {:else if items === Missing}
+        <div>Uh oh it is missing</div>
     {:else}
         <div class="item-holder">
             {#each items as item}

@@ -1,3 +1,5 @@
+import type { Maybe } from './Maybe'
+
 export type ResourceItem = {
     id: string
 }
@@ -8,6 +10,6 @@ export interface ResourceApi<T extends ResourceItem> {
 }
 
 export interface Resource<T extends ResourceItem> {
-    list(): T[]
-    one(id: string): T
+    list(): Maybe<T[]>
+    one(id: string): Maybe<T>
 }

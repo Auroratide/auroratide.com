@@ -1,4 +1,6 @@
 import type { Writable } from 'svelte/store'
+import type { Maybe } from './Maybe'
+import { Pending } from './Maybe'
 import type { ResourceItem, ResourceApi, Resource } from './Resource'
 
 export class SvelteStore<T extends ResourceItem> {
@@ -15,17 +17,18 @@ export class SvelteStore<T extends ResourceItem> {
     public subscribe(f: (resource: Resource<T>) => void): () => void {
         return this.store.subscribe((value: T[]) => {
             f({
-                list: (): T[] => {
+                list: (): Maybe<T[]> => {
                     if (value === null && !this.pendingList) {
                         this.fetchList()
+                        return Pending
+                    } else {
+                        return value
                     }
-
-                    return value
                 },
-                one: (id: string): T => {
+                one: (id: string): Maybe<T> => {
                     if (value === null && !this.pendingList) {
                         this.fetchList()
-                        return null
+                        return Pending
                     } else {
                         return value.find(v => v.id === id)
                     }
