@@ -10,6 +10,7 @@
     import { LegalPage } from './LegalPage'
     import { PageNotFound } from './PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
+    import { navigation } from './routes'
     import page from 'page'
 
     import type { SvelteComponent } from 'svelte'
@@ -25,10 +26,10 @@
     }
 
     page('/', () => context = { component: ResourceProvider, params: { store: posts, component: PostList } })
-    page('/posts', () => context = { component: ResourceProvider, params: { component: PostList, store: posts } })
-    page('/posts/:id', ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
-    page('/about', () => context = { component: AboutPage, params: {} })
-    page('/legal', () => context = { component: LegalPage, params: {} })
+    page(navigation.Posts.link, () => context = { component: ResourceProvider, params: { component: PostList, store: posts } })
+    page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
+    page(navigation.About.link, () => context = { component: AboutPage, params: {} })
+    page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
     page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()
