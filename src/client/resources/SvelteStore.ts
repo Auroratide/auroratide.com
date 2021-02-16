@@ -2,6 +2,7 @@ import type { Writable } from 'svelte/store'
 import type { Maybe } from './Maybe'
 import { Pending } from './Maybe'
 import type { ResourceItem, ResourceApi, Resource } from './Resource'
+import { mergeAll, mergeOne } from './merge'
 
 export class SvelteStore<T extends ResourceItem> {
     private store: Writable<T[]>
@@ -28,6 +29,7 @@ export class SvelteStore<T extends ResourceItem> {
                 one: (id: string): Maybe<T> => {
                     if (value === null && !this.pendingList) {
                         this.fetchList()
+                        this.fetchOne(id)
                         return Pending
                     } else {
                         return value.find(v => v.id === id)
@@ -41,7 +43,13 @@ export class SvelteStore<T extends ResourceItem> {
         this.pendingList = true
         return this.api.list().then((items: T[]) => {
             this.pendingList = false
-            this.store.set(items)
+            this.store.update(prev => mergeAll(prev, items))
+        })
+    }
+
+    private fetchOne: (id: string) => Promise<void> = (id: string) => {
+        return this.api.one(id).then((item: T) => {
+            this.store.update(prev => mergeOne(prev, item))
         })
     }
 }
