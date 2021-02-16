@@ -1,5 +1,5 @@
 import type { Writable } from 'svelte/store'
-import type { Maybe } from './Maybe'
+import { Maybe, Missing } from './Maybe'
 import { Pending } from './Maybe'
 import type { ResourceItem, ResourceApi, Resource } from './Resource'
 import { mergeAll, mergeOne } from './merge'
@@ -36,7 +36,7 @@ export class SvelteStore<T extends ResourceItem> {
                     } else {
                         if (!this.fetchedItems.has(id))
                             this.fetchOne(id)
-                        return value.find(v => v.id === id)
+                        return value.find(v => v.id === id) ?? Missing
                     }
                 }
             })

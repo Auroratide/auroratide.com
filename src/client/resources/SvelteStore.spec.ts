@@ -2,6 +2,7 @@ import type { ResourceItem, Maybe } from '.'
 import { Pending } from '.'
 import { InMemoryResourceApi, SvelteStore } from '.'
 import { writable } from 'svelte/store'
+import { Missing } from './Maybe'
 
 type Item = {
     id: string,
@@ -47,6 +48,21 @@ describe('SvelteResource', () => {
 
             await api.finishAll()
             expect(singleItem).toEqual(item(0, 'new content'))
+        })
+
+        test('item does not exist', async () => {
+            const internalStore = writable([item(0)])
+            const api = new InMemoryResourceApi([item(0, 'new content')])
+            const store = new SvelteStore(internalStore, api)
+    
+            let singleItem: Maybe<ResourceItem> = null
+    
+            unsubscribe = store.subscribe((resource) => {
+                singleItem = resource.one('1')
+            })
+
+            await api.finishAll()
+            expect(singleItem).toEqual(Missing)
         })
     })
 

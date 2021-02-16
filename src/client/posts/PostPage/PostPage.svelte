@@ -5,6 +5,7 @@
     import { RawRenderer } from '@/client/RawRenderer'
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
+    import { PageNotFound } from '@/client/PageNotFound'
 
     import type { Post } from '../types'
 
@@ -23,7 +24,7 @@
     {#if item === Pending}
         <Loading text="Finding post..." />
     {:else if item === Missing}
-        <div>uh oh missing</div>
+        <PageNotFound />
     {:else}
         <article style={`--article-color: var(--palette-${item.color});`}>
             <Header title={item.title} icon={item.icon} />

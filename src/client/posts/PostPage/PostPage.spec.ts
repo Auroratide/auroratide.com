@@ -38,4 +38,18 @@ describe('PostPage', () => {
 
         expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
     })
+
+    test('post not found', () => {
+        posts = {
+            apple: forge.create('apple', { title: 'Apple' })
+        }
+        resource = new InMemoryResource(Object.values(posts))
+
+        component(PostPage)
+            .prop('id', 'orange')
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.getByText(/not available/i)).toBeInTheDocument()
+    })
 })
