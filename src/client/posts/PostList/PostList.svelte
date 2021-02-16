@@ -5,6 +5,7 @@
     import { Pending, Missing } from '@/client/resources'
     import type { Post } from '../types'
     import { DateDisplay } from '../DateDisplay'
+    import { Error } from '@/client/Error'
 
     export let resource: Resource<Post>
 
@@ -16,7 +17,9 @@
     {#if items === Pending}
         <Loading text="Fetching posts..." large />
     {:else if items === Missing}
-        <div>Uh oh it is missing</div>
+        <Error title="Uh oh!" subtitle="Something went horribly wrong.">
+            <p>I recommend you try refreshing the page. If that doesn't fix it, I dunno, guess I need to fix something!</p>
+        </Error>
     {:else}
         <div class="item-holder">
             {#each items as item}
