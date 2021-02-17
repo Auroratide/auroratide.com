@@ -8,6 +8,7 @@
     import { PostList } from './posts/PostList'
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
+    import { WhodokuPage } from './WhodokuPage'
     import { PageNotFound } from './PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
     import { navigation } from './routes'
@@ -30,6 +31,7 @@
     page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
+    page('/whodoku', () => context = { component: WhodokuPage, params: {} })
     page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()

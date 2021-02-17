@@ -9,6 +9,7 @@ import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
 import { SideText } from './SideText'
 import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
+import { WhodokuWidget } from './WhodokuWidget'
 
 export const register = () => {
     connect(ArticleImage)
@@ -20,4 +21,5 @@ export const register = () => {
     connect(SideText)
     connect(SubTheme)
     connect(VectorIcon)
+    connect(WhodokuWidget)
 }
