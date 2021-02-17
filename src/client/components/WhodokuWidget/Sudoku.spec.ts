@@ -3,8 +3,7 @@ import { Sudoku } from './Sudoku'
 describe('Sudoku', () => {
     const N = 0
 
-    // TODO Unskip once you have internet and can install sudoku from npm
-    describe.skip('newPuzzle', () => {
+    describe('newPuzzle', () => {
         test('making a new puzzle', () => {
             const puzzle = Sudoku.newPuzzle()
 
@@ -62,8 +61,7 @@ describe('Sudoku', () => {
             expect(puzzle.isSolved()).toBe(false)
         })
 
-        // TODO Unskip once you have internet and can install sudoku from npm
-        test.skip('puzzle is solved', () => {
+        test('puzzle is solved', () => {
             const board = [1, 2, 3, 4, 5, 6, 7, 8, 9,
                            4, 5, 6, 7, 8, 9, 1, 2, 3,
                            7, 8, 9, 1, 2, 3, 4, 5, 6,

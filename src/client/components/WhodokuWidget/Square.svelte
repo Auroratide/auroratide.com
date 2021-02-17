@@ -1,12 +1,13 @@
 <script lang="ts">
     import { SudokuValue } from './Sudoku'
 
-    export let value: SudokuValue
     export let assetspath: string
+    export let value: SudokuValue
+    export let canEdit: boolean
     export let onClick: () => void
 </script>
 
-<button class="square" title="Sudoku Square" on:click={onClick}>
+<button class="square" title="Sudoku Square" on:click={onClick} disabled={!canEdit}>
     {#if value !== SudokuValue.Empty}
         <img src="{assetspath}/{value}.png" alt={value.toString()} />
     {/if}
@@ -51,5 +52,9 @@
     .square img {
         width: 100%;
         box-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .square[disabled] {
+        background: var(--palette-greyscale-050);
     }
 </style>

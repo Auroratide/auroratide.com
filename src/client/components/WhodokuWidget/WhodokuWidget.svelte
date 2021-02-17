@@ -1,16 +1,17 @@
 <script lang="ts">
     import Square from './Square.svelte'
-    import { Sudoku } from './Sudoku'
+    import { Sudoku, SudokuValue } from './Sudoku'
 
     export let assetspath: string
 
     let puzzle = Sudoku.newPuzzle()
+    let original = new Sudoku([...puzzle.board])
 </script>
 
 <div class="whodoku">
     <div class="board">
         {#each puzzle.board as square, index}
-            <Square value={square} {assetspath} onClick={() => {
+            <Square value={square} canEdit={original.board[index] === SudokuValue.Empty} {assetspath} onClick={() => {
                 puzzle = puzzle.increment(index)
             }} />
         {/each}
