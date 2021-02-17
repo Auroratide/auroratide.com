@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { DocumentTitle } from '@/client/DocumentTitle'
     import { Container } from '@/client/Container'
     import { Loading } from '@/client/Loading'
     import type { Resource, Maybe } from '@/client/resources'
@@ -14,38 +15,40 @@
     $: items = resource.list()
 </script>
 
-<Container>
-    {#if items === Pending}
-        <Loading text="Fetching posts..." large />
-    {:else if items === Missing}
-        <Error title="Uh oh!" subtitle="Something went horribly wrong.">
-            <p>I recommend you try refreshing the page. If that doesn't fix it, I dunno, guess I need to fix something!</p>
-        </Error>
-    {:else}
-        <div class="item-holder">
-            {#each items as item}
-                <a class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
-                    <article>
-                        <section>
-                            <h1>{item.title}</h1>
-                            <div class="byline">
-                                <DateDisplay date={item.publishedAt} />
-                                <span class="bullet">&bull;</span>
-                                <span>{item.category}</span>
-                            </div>
-                            <p class="summary">{item.summary}</p>
-                        </section>
-                        <aside>
-                            <div class="circle">
-                                <vector-icon icon={item.icon}></vector-icon>
-                            </div>
-                        </aside>
-                    </article>
-                </a>
-            {/each}
-        </div>
-    {/if}
-</Container>
+<DocumentTitle title="Posts">
+    <Container>
+        {#if items === Pending}
+            <Loading text="Fetching posts..." large />
+        {:else if items === Missing}
+            <Error title="Uh oh!" subtitle="Something went horribly wrong.">
+                <p>I recommend you try refreshing the page. If that doesn't fix it, I dunno, guess I need to fix something!</p>
+            </Error>
+        {:else}
+            <div class="item-holder">
+                {#each items as item}
+                    <a class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
+                        <article>
+                            <section>
+                                <h1>{item.title}</h1>
+                                <div class="byline">
+                                    <DateDisplay date={item.publishedAt} />
+                                    <span class="bullet">&bull;</span>
+                                    <span>{item.category}</span>
+                                </div>
+                                <p class="summary">{item.summary}</p>
+                            </section>
+                            <aside>
+                                <div class="circle">
+                                    <vector-icon icon={item.icon}></vector-icon>
+                                </div>
+                            </aside>
+                        </article>
+                    </a>
+                {/each}
+            </div>
+        {/if}
+    </Container>
+</DocumentTitle>
 
 <style>
     .item-holder {
