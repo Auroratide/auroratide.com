@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { socials, navigation } from '@/client/routes'
+    import { socials, navigation, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/Container'
 </script>
 
@@ -19,7 +19,7 @@
         </div>
         <nav class="nav">
             <ul>
-                {#each Object.values(navigation).filter(item => item != navigation.Legal) as item}
+                {#each Object.values(navigation).filter(item => item.visibility <= NavVisibility.Visible) as item}
                     <li><a href={item.link}>{item.name}</a></li>
                 {/each}
             </ul>

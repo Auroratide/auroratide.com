@@ -31,7 +31,7 @@
     page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
-    page('/whodoku', () => context = { component: WhodokuPage, params: {} })
+    page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
     page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()

@@ -29,24 +29,39 @@ export const socials: Record<'LinkedIn' | 'Github' | 'StackOverflow', Social> = 
     },
 }
 
+export enum NavVisibility {
+    Visible,
+    Limited,
+    Hidden,
+}
+
 export type Navigation = {
     name: string,
     link: string,
+    visibility: NavVisibility,
 }
 
-export const navigation: Record<'Posts' | 'About' | 'Legal', Navigation> = {
+export const navigation: Record<'Posts' | 'About' | 'Legal' | 'Whodoku', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',
+        visibility: NavVisibility.Visible,
     },
     About: {
         name: 'About',
         link: '/about',
+        visibility: NavVisibility.Visible,
     },
     Legal: {
         name: 'Legal',
         link: '/legal',
+        visibility: NavVisibility.Limited,
     },
+    Whodoku: {
+        name: 'Whodoku',
+        link: '/whodoku',
+        visibility: NavVisibility.Hidden,
+    }
 }
 
 export class UrlBuilder {
