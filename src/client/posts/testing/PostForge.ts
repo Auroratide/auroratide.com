@@ -17,7 +17,7 @@ export class PostForge {
             summary: 'A summary',
             publishedAt: new Date('2021-01-01T00:00:00.000Z'),
             createdAt: new Date('2021-01-01T00:00:00.000Z'),
-            content: options.content ?? '<p>Content</p>',
+            content: options.content === undefined ? '<p>Content</p>' : options.content,
         }
     }
 }

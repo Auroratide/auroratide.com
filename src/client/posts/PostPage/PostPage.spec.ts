@@ -53,6 +53,19 @@ describe('PostPage', () => {
         expect(screen.getByText(/not available/i)).toBeInTheDocument()
     })
 
+    test('post loaded without content initially', () => {
+        posts = {
+            apple: forge.create('apple', { content: null })
+        }
+        resource = new InMemoryResource(Object.values(posts))
+
+        component(PostPage)
+            .prop('id', 'apple')
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.getByText(/fetching\scontent/i)).toBeInTheDocument()
+    })
 
     test('related posts', async () => {
         posts = {

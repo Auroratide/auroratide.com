@@ -45,7 +45,11 @@
                 <Content>
                     <section class="content">
                         <div class="published"><DateDisplay date={item.publishedAt} /></div>
-                        <RawRenderer content={item.content} />
+                        {#if item.content}
+                            <RawRenderer content={item.content} />
+                        {:else}
+                            <Loading text="Fetching content..." />
+                        {/if}
                     </section>
                     <aside slot="sidebar">
                         <h2 class="more-title">More on {item.category}</h2>
