@@ -79,6 +79,10 @@ hr {
     margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
 }
 
+ul, ol {
+    padding-left: 1em;
+}
+
 /* Buttons
    ========================================================================== */
 button, .as-button {
@@ -238,5 +242,9 @@ side-text p:last-child {
 @media screen and (min-width: 75rem) {
     p {
         text-align: left;
+    }
+
+    ul, ol {
+        padding-left: calc(1em + var(--sizing-spacing-lg));
     }
 }
