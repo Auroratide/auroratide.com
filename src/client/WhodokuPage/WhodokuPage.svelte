@@ -15,4 +15,8 @@
     .title, .instructions {
         text-align: center;
     }
+
+    whodoku-widget {
+        margin-bottom: var(--sizing-spacing-xl);
+    }
 </style>

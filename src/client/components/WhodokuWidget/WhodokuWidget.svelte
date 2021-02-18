@@ -4,8 +4,16 @@
 
     export let assetspath: string
 
-    let puzzle = Sudoku.newPuzzle()
-    let original = new Sudoku([...puzzle.board])
+    let puzzle: Sudoku
+    let original: Sudoku
+
+    const reset = () => puzzle = new Sudoku([...original.board])
+    const newPuzzle = () => {
+        puzzle = Sudoku.newPuzzle()
+        original = new Sudoku([...puzzle.board])
+    }
+
+    newPuzzle()
 </script>
 
 <div class="whodoku">
@@ -16,9 +24,17 @@
             }} />
         {/each}
     </div>
+    <div class="options">
+        <button on:click={reset}>Reset</button>
+        <button class="secondary" on:click={newPuzzle}>New Puzzle</button>
+    </div>
 </div>
 
 <style>
+    :host, :global(whodoku-widget) {
+        display: block;
+    }
+
     .board {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -27,5 +43,9 @@
         height: 80vmin;
         margin: 0 auto 3rem;
         user-select: none;
+    }
+
+    .options {
+        text-align: center;
     }
 </style>
