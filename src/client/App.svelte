@@ -12,6 +12,7 @@
     import { PageNotFound } from './PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
     import { navigation } from './routes'
+    import { scroll } from './scroll'
     import page from 'page'
 
     import type { SvelteComponent } from 'svelte'
@@ -26,6 +27,10 @@
         params: {},
     }
 
+    page('*', (_, next) => {
+        scroll.toTop()
+        next()
+    })
     page('/', () => context = { component: ResourceProvider, params: { store: posts, component: PostList } })
     page(navigation.Posts.link, () => context = { component: ResourceProvider, params: { component: PostList, store: posts } })
     page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
