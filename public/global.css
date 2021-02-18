@@ -121,6 +121,10 @@ button.secondary::before, .as-button.secondary::before {
     background: var(--skin-color-secondary);
 }
 
+button[disabled] {
+    cursor: not-allowed;
+}
+
 button vector-icon, .as-button vector-icon {
     vertical-align: -0.125em;
 }
