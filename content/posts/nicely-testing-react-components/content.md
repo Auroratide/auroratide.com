@@ -1,4 +1,4 @@
-So I guess [hooks](*https://reactjs.org/docs/hooks-intro.html) are the new hip thing in the React ecosphere. And I gotta admit, they're pretty terse and rather nifty, so nifty in fact that I decided to try my hand at refactoring my entire website into using hooks and React's context api rather than MobX. Y'know, for practice and stuff.
+So I guess [hooks](https://reactjs.org/docs/hooks-intro.html) are the new hip thing in the React ecosphere. And I gotta admit, they're pretty terse and rather nifty, so nifty in fact that I decided to try my hand at refactoring my entire website into using hooks and React's context api rather than MobX. Y'know, for practice and stuff.
 
 Now, I _could_ talk about all the things I had to change (...it was a lot), but first I want to talk about the things I _didn't_ change. Somewhat to my surprise, as I was performing state management surgery, I barely needed to change the tests. And yet, the tests were properly failing when the components were broken and passing when they was working.
 
@@ -83,7 +83,7 @@ To answer our questions...
 1. The user can press a button.
 2. When they do, a number on the screen goes down by 2.
 
-That's a test right there! To write it in code, let's use [React Testing Library](*https://github.com/testing-library/react-testing-library), though you can achieve the same kind of test with Enzyme as well:
+That's a test right there! To write it in code, let's use [React Testing Library](https://github.com/testing-library/react-testing-library), though you can achieve the same kind of test with Enzyme as well:
 
 ```jsx
 import React from 'react';
@@ -216,7 +216,7 @@ As an experiment, I decided to try my hand at implementing the classic Tic Tac T
 
 The catch? _The exact same set of tests must pass for each version of the Tic Tac Toe component._
 
-**[Click here to go to the Github repo](*https://github.com/Auroratide/react-tac-toe)**!
+**[Click here to go to the Github repo](https://github.com/Auroratide/react-tac-toe)**!
 
 <side-text danger>
 <p>By the way, I also tried to do this with web components, just to prove that the tests will pass even without React. Unfortunately, I hit a dead end when I realized JSDOM doesn't support custom elements yet. If you're feeling adventurous, feel free to make a pull request proving this can indeed be done!</p>
