@@ -1,6 +1,6 @@
 import { ImageSteganographer } from '.'
 import { component } from '@/testing/component'
-import { screen, fireEvent } from '@testing-library/svelte'
+import { screen, fireEvent, act } from '@testing-library/svelte'
 import { fakeCanvas } from './fake-canvas'
 
 describe('ImageSteganographer', () => {
@@ -37,11 +37,11 @@ describe('ImageSteganographer', () => {
     }
 
     const actions = {
-        uploadImage: (file: ImageData) => fireEvent.change(elements.uploadButton, {
+        uploadImage: (file: ImageData) => act(() => fireEvent.change(elements.uploadButton, {
             target: {
                 files: [file]
             }
-        }),
+        })),
         changeMessage: (text: string) => fireEvent.input(elements.messageArea, {
             target: {
                 value: text

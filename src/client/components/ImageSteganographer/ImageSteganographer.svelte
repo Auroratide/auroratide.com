@@ -1,23 +1,23 @@
 <script lang="ts">
     import { onMount } from 'svelte'
+    import { Image } from './Image'
     import { IconName } from '@/client/components/VectorIcon/IconName'
 
     let canvas: HTMLCanvasElement
-    let originalImage: ImageBitmap
+    let image: Image
     let message: string = ''
+
+    let originalImage: ImageBitmap
     let base64: string = ''
+    $: originalImage = image?.bitmap
+    $: base64 = image?.base64
 
     onMount(() => {
-        
+        image = new Image(canvas, null)
     })
 
     const handleUpload = async (e: Event) => {
-        const ctx = canvas.getContext('2d')
-        originalImage = await createImageBitmap((e.target as HTMLInputElement).files[0])
-        canvas.width = originalImage.width
-        canvas.height = originalImage.height
-        ctx.drawImage(originalImage, 0, 0)
-        base64 = canvas.toDataURL()
+        image = await image.upload((e.target as HTMLInputElement).files[0])
     }
 
     const handleEncode = () => {
