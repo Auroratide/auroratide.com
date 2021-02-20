@@ -18,7 +18,11 @@ export class Steganographer {
             setBits(code & 0x03);
         })
 
-        return imageData
+        if (i > data.length) {
+            throw new Error(`Message with length ${i} cannot fit in image of size ${data.length}.`)
+        } else {
+            return imageData
+        }
     }
 
     public decode(imageData: ImageData): string {

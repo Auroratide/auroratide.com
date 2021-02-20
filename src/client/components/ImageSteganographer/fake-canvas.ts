@@ -27,11 +27,16 @@ class CanvasWrapper {
         (ctx.drawImage as jest.Mock).mockImplementation((img: ImageBitmapWithData) => this.current = img.data);
         (ctx.getImageData as jest.Mock).mockImplementation(() => this.current);
         (ctx.putImageData as jest.Mock).mockImplementation((img: ImageData) => this.current = img);
-        (this.canvas.toDataURL as jest.Mock).mockImplementation(() => this.current.data.join(''));
+        (this.canvas.toDataURL as jest.Mock).mockImplementation(() => this.current ? this.current.data.join('') : '');
     }
 }
 
 export const fakeCanvas = (canvas: HTMLCanvasElement): CanvasWrapper => {
-    (createImageBitmap as jest.Mock).mockImplementation((img: ImageData) => new ImageBitmapWithData(img));
+    (createImageBitmap as jest.Mock).mockImplementation((img: ImageData) => {
+        if (img)
+            return new ImageBitmapWithData(img)
+        else
+            throw new Error('Cannot create bitmap image from null')
+    });
     return new CanvasWrapper(canvas)
 }
