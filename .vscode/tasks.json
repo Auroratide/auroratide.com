@@ -1,0 +1,8 @@
+{
+    "version": "2.0.0",
+    "tasks": [ {
+        "label": "Run Tests for Current File",
+        "type": "npm",
+        "script": "test ${file}"
+    } ]
+}
