@@ -1,75 +1,33 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { Image } from './Image'
+    import { Canvas } from './Canvas'
     import { IconName } from '@/client/components/VectorIcon/IconName'
+    import { Steganographer } from './Steganographer'
 
-    let canvas: HTMLCanvasElement
-    let image: Image
+    const steganographer = new Steganographer()
+    let canvasElement: HTMLCanvasElement
+    let canvas: Canvas
     let message: string = ''
 
-    let originalImage: ImageBitmap
     let base64: string = ''
-    $: originalImage = image?.bitmap
-    $: base64 = image?.base64
+    $: base64 = canvas?.base64
 
     onMount(() => {
-        image = new Image(canvas, null)
+        canvas = new Canvas(canvasElement, null)
     })
 
     const handleUpload = async (e: Event) => {
-        image = await image.upload((e.target as HTMLInputElement).files[0])
+        canvas = await canvas.upload((e.target as HTMLInputElement).files[0])
     }
 
     const handleEncode = () => {
-        const ctx = canvas.getContext('2d')
-        ctx.drawImage(originalImage, 0, 0)
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
-        const data = imageData.data
-
-        let i = 0;
-        const increment = () => i += i % 4 === 2 ? 2 : 1;
-        const setBits = (bits) => {
-            if(i < data.length)
-                data[i] = (data[i] & 0xFC) | bits;
-            increment();
-        };
-
-        message.split('').forEach(letter => {
-            const code = letter.charCodeAt(0);
-            setBits(code >> 6);
-            setBits((code >> 4) & 0x03);
-            setBits((code >> 2) & 0x03);
-            setBits(code & 0x03);
-        });
-
-        ctx.putImageData(imageData, 0, 0)
-        base64 = canvas.toDataURL()
+        canvas = canvas.reset()
+        const imageData = steganographer.encode(canvas.imageData, message)
+        canvas = canvas.write(imageData)
     }
 
     const handleDecode = () => {
-        const ctx = canvas.getContext('2d')
-        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
-        let decodedMessage = ''
-        let i = 0;
-        const increment = () => i += i % 4 === 2 ? 2 : 1;
-        const next = () => {
-            const couple = data[i] & 0x03;
-            increment();
-            return couple;
-        };
-
-        while(i < data.length) {
-            const code = (next() << 6) |
-                         (next() << 4) |
-                         (next() << 2) |
-                         (next());
-            if(9 <= code && code <= 13 || 32 <= code && code <= 126)
-                decodedMessage += String.fromCharCode(code);
-            else
-                break;
-        }
-
-        message = decodedMessage
+        message = steganographer.decode(canvas.imageData)
     }
 </script>
 
@@ -97,7 +55,7 @@
         <strong class="area-title"><label for="steganography-message-input">Message</label></strong>
         <textarea bind:value={message} id="steganography-message-input"></textarea>
     </div>
-    <canvas data-testid="canvas" bind:this={canvas}></canvas>
+    <canvas data-testid="canvas" bind:this={canvasElement}></canvas>
 </div>
 
 <style>
