@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Palette } from '@/client/palette'
     import { Avatar } from '@/client/Avatar'
     import { socials, navigation, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/Container'
@@ -6,7 +7,7 @@
 
 <Container>
     <div class="top-bar">
-        <div class="logo"><a href="/"><Avatar /></a></div>
+        <div class="logo"><a href="/"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a></div>
         <div class="title"><h1><a href="/">Auroratide</a></h1></div>
         <div class="subtitle">Coder and Teacher</div>
         <div class="socials">
@@ -43,7 +44,7 @@
 
     .logo {
         grid-area: logo;
-        font-size: 3.5em;
+        font-size: 3.75em;
         align-self: center;
     }
 
@@ -67,6 +68,7 @@
     }
 
     .socials {
+        visibility: hidden; /* Looks better without; leaving here in case I change my mind */
         grid-area: socials;
         align-self: center;
     }
@@ -107,5 +109,31 @@
 
     .nav a {
         color: var(--skin-color-text-secondary);
+    }
+
+    @media screen and (min-width: 75rem) {
+        .top-bar {
+            grid-template-columns: auto 1fr 1fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+                "logo title socials"
+                "logo subtitle nav";
+            column-gap: 1.5em;
+            max-height: 5em;
+            overflow: visible;
+        }
+
+        .logo {
+            font-size: 6em;
+            align-self: start;
+        }
+
+        .nav ul {
+            margin: 0 calc(-1 * var(--sizing-spacing-md));
+        }
+
+        .nav ul li {
+            margin: 0 var(--sizing-spacing-md);
+        }
     }
 </style>

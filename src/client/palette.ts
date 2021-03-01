@@ -1,6 +1,9 @@
 const asVar = (name: string) => `var(--palette-${name})`
 
 export const Palette = {
+    greyscale: {
+        100: asVar('greyscale-100'),
+    },
     colors: {
         DeepBlue: asVar('deep-blue'),
         AuroraBlue: asVar('aurora-blue'),
