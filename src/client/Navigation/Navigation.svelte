@@ -104,10 +104,11 @@
 
     .nav ul li {
         display: inline-block;
-        margin: 0 var(--sizing-spacing-sm);
     }
 
     .nav a {
+        display: inline-block;
+        padding: 0 var(--sizing-spacing-sm);
         color: var(--skin-color-text-secondary);
     }
 
@@ -132,8 +133,8 @@
             margin: 0 calc(-1 * var(--sizing-spacing-md));
         }
 
-        .nav ul li {
-            margin: 0 var(--sizing-spacing-md);
+        .nav ul li a {
+            padding: 0 var(--sizing-spacing-md);
         }
     }
 </style>
