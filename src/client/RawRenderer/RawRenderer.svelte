@@ -1,10 +1,14 @@
 <script lang="ts">
+    import { afterUpdate } from 'svelte'
     import { highlighter } from '@/client/syntax-highlighter'
 
     export let content: string
     let container: HTMLElement
 
-    $: if (container) highlighter.highlightAllUnder(container)
+    afterUpdate(() => {
+        if (content !== null && container)
+            highlighter.highlightAllUnder(container)
+    })
 </script>
 
 <div bind:this={container}>
