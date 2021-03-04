@@ -13,6 +13,7 @@ class Fetch extends FetchResourceApi<Post> {
         icon: data.icon,
         color: data.color,
         summary: data.summary,
+        longSummary: data.long_summary,
         publishedAt: new Date(data.published_at),
         createdAt: new Date(data.created_at),
         content: data.content,

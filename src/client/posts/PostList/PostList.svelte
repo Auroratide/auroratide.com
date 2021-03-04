@@ -35,7 +35,8 @@
                                     <span class="bullet">&bull;</span>
                                     <span>{item.category}</span>
                                 </div>
-                                <p class="summary">{item.summary}</p>
+                                <p class="summary short">{item.summary}</p>
+                                <p class="summary long">{item.longSummary}</p>
                             </section>
                             <aside>
                                 <div class="circle">
@@ -124,6 +125,10 @@
         left: 0.375em;
     }
 
+    .post-item .summary.long {
+        display: none;
+    }
+
     @media screen and (min-width: 75rem) {
         .item-holder {
             padding: var(--sizing-spacing-xl);
@@ -169,6 +174,14 @@
         .post-item aside {
             position: relative;
             font-size: calc(4 * var(--sizing-font-xs));
+        }
+
+        .post-item .summary.short {
+            display: none;
+        }
+
+        .post-item .summary.long {
+            display: block;
         }
     }
 </style>

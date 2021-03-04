@@ -17,6 +17,7 @@ export type Post = {
     readonly icon: string
     readonly color: string
     readonly summary: string
+    readonly longSummary: string
     readonly publishedAt: Date
     readonly createdAt: Date
     readonly content?: string
