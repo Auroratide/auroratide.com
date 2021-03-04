@@ -5,6 +5,7 @@ import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons/faAngleDou
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDoubleUp'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
+import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
 import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
@@ -24,6 +25,7 @@ export const library = {
     [IconName.AngleDoubleUp]: faAngleDoubleUp,
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.EllipsisH]: faEllipsisH,
+    [IconName.Fire]: faFire,
     [IconName.Folder]: faFolder,
     [IconName.HandPointer]: faHandPointer,
     [IconName.HourglassHalf]: faHourglassHalf,

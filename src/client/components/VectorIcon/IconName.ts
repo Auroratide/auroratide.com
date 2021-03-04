@@ -5,6 +5,7 @@ export const IconName = {
     AngleDoubleUp: 'angle-double-up',
     Crosshairs: 'crosshairs',
     EllipsisH: 'ellipsis-h',
+    Fire: 'fire',
     Folder: 'folder',
     HandPointer: 'hand-pointer',
     HourglassHalf: 'hourglass-half',

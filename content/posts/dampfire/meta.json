@@ -1,0 +1,29 @@
+{
+    "id": "dampfire",
+    "title": "Dampfire",
+    "category": "Games I've Made",
+    "icon": "fire",
+    "color": "autumn-orange",
+    "summary": "Dampfire is a tiny game I made for One Game Mechanic Jam where you basically try and protect a campfire from being put out by malicious buckets of water. As the jam's name implies, you were only supposed to have one game mechanic.",
+    "published_at": "2019-12-17T00:00:00.000Z",
+    "created_at": "2019-12-17T00:00:00.000Z",
+    "links": [ {
+        "title": "Play!",
+        "href": "https://auroratide.itch.io/dampfire"
+      }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/Dampfire",
+        "icon": "github",
+        "color": "github"
+      } ],
+      "gallery": [ {
+        "image": "menu.png",
+        "caption": "Made for One Game Mechanic Jam"
+      }, {
+        "image": "gameplay-1.png",
+        "caption": "Protect the fire from the buckets"
+      }, {
+        "image": "gameplay-2.png",
+        "caption": "Don't let the fire get too dim"
+      } ]
+  }
