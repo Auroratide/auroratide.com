@@ -15,6 +15,7 @@
     import { Comments } from './Comments'
     import { RelatedItems } from './RelatedItems'
     import { LinkBar } from './LinkBar'
+    import { Gallery } from './Gallery'
 
     export let id: string
     export let resource: Resource<Post>
@@ -56,6 +57,10 @@
                         {/if}
                     </section>
                     <aside slot="sidebar">
+                        {#if item.gallery}
+                            <h2 class="more-title">Some Pics</h2>
+                            <Gallery id={item.id} gallery={item.gallery} />
+                        {/if}
                         <h2 class="more-title">More on {item.category}</h2>
                         {#if relatedItems !== Pending && relatedItems !== Missing}
                             <RelatedItems items={relatedItems} />
