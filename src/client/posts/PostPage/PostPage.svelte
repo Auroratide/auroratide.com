@@ -7,13 +7,14 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import { PageNotFound } from '@/client/PageNotFound'
-    import { RelatedPost } from './RelatedPost'
 
     import type { Post } from '../types'
 
     import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
     import { Comments } from './Comments'
+    import { RelatedItems } from './RelatedItems'
+    import { LinkBar } from './LinkBar'
 
     export let id: string
     export let resource: Resource<Post>
@@ -43,16 +44,7 @@
             <article class="article" style={`--article-color: var(--palette-${item.color});`}>
                 <Header title={item.title} icon={item.icon} />
                 {#if item.links}
-                    <aside class="link-bar">
-                        {#each item.links as link}
-                            <a class="as-button" href={link.href} style={link.color ? `--btn-color: var(--palette-${link.color});` : ''}>
-                                <span>{link.title}</span>
-                                {#if link.icon}
-                                    <vector-icon icon={link.icon}></vector-icon>
-                                {/if}
-                            </a>
-                        {/each}
-                    </aside>
+                    <LinkBar links={item.links} />
                 {/if}
                 <Content>
                     <section class="content">
@@ -66,11 +58,7 @@
                     <aside slot="sidebar">
                         <h2 class="more-title">More on {item.category}</h2>
                         {#if relatedItems !== Pending && relatedItems !== Missing}
-                            <ul class="related-posts">
-                                {#each relatedItems as relatedItem}
-                                    <li><RelatedPost post={relatedItem} /></li>
-                                {/each}
-                            </ul>
+                            <RelatedItems items={relatedItems} />
                         {:else}
                             <Loading text="Finding posts..." />
                         {/if}
@@ -93,32 +81,6 @@
     .published {
         margin-bottom: var(--sizing-spacing-p);
         font-weight: var(--typography-light);
-    }
-
-    .related-posts {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .link-bar {
-        position: absolute;
-        top: calc(var(--header-height) - 0.75em);
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
-
-    .link-bar a {
-        margin: 0 var(--sizing-spacing-sm);
-    }
-
-    .link-bar a vector-icon {
-        margin-left: var(--sizing-spacing-xs);
-    }
-
-    .link-bar a.as-button::before {
-        border: var(--sizing-border-sm) solid var(--skin-color-content);
     }
 
     @media screen and (min-width: 75rem) {

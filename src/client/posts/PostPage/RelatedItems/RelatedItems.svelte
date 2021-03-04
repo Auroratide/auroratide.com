@@ -1,17 +1,29 @@
 <script lang="ts">
-    import type { Post } from '../../types'
     import { UrlBuilder } from '@/client/routes'
+    import type { Post } from '../../types'
 
-    export let post: Post
+    export let items: Post[]
 </script>
 
-<a class="related-post" style="--item-color: var(--palette-{post.color});" href={new UrlBuilder().post(post.id)}>
-    <vector-icon icon={post.icon} />
-    <span class="title">{post.title}</span>
-</a>
+<ul class="related-items">
+    {#each items as item}
+        <li>
+            <a class="item" style="--item-color: var(--palette-{item.color});" href={new UrlBuilder().post(item.id)}>
+                <vector-icon icon={item.icon} />
+                <span class="title">{item.title}</span>
+            </a>
+        </li>
+    {/each}
+</ul>
 
 <style>
-    .related-post {
+    .related-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item {
         position: relative;
         display: block;
         background: var(--palette-shade-067);
@@ -24,7 +36,7 @@
         line-height: 1.5;
     }
 
-    .related-post vector-icon {
+    .item vector-icon {
         font-size: 4.5em;
         position: absolute;
         right: calc(0.25 * var(--sizing-spacing-sm));
@@ -34,21 +46,21 @@
         transition: color var(--transition-quick);
     }
 
-    .related-post .title {
+    .item .title {
         position: relative;
         font-size: var(--sizing-font-xs);
         font-weight: var(--typography-normal);
         z-index: 2;
     }
 
-    .related-post:hover,
-    .related-post:active {
+    .item:hover,
+    .item:active {
         background: var(--item-color);
         text-decoration: none;
     }
 
-    .related-post:hover vector-icon,
-    .related-post:active vector-icon {
+    .item:hover vector-icon,
+    .item:active vector-icon {
         color: var(--palette-shade-033);
     }
 </style>
