@@ -15,6 +15,7 @@ import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow'
 
@@ -35,6 +36,7 @@ export const library = {
     [IconName.Undo]: faUndo,
 
     [IconName.LinkedIn]: faLinkedinIn,
+    [IconName.Github]: faGithub,
     [IconName.GithubAlt]: faGithubAlt,
     [IconName.StackOverflow]: faStackOverflow,
 }

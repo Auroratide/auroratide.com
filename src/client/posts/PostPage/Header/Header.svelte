@@ -11,7 +11,7 @@
 <style>
     header {
         position: relative;
-        height: 16em;
+        height: var(--header-height);
         display: flex;
         align-items: flex-end;
         justify-content: center;

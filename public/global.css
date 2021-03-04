@@ -86,6 +86,7 @@ ul, ol {
 /* Buttons
    ========================================================================== */
 button, .as-button {
+    --btn-color: var(--skin-color-primary);
     border: none;
     background: none;
     display: inline-block;
@@ -102,7 +103,7 @@ button::before, .as-button::before {
     position: absolute;
     top: 0; bottom: 0;
     left: 0; right: 0;
-    background: var(--skin-color-primary);
+    background: var(--btn-color);
     border-radius: 1em;
     transition: left var(--transition-quick), right var(--transition-quick);
     z-index: -1;
@@ -121,8 +122,8 @@ button:active::before, .as-button:active::before {
     box-shadow: 0 0 0 1em var(--palette-shade-033) inset;
 }
 
-button.secondary::before, .as-button.secondary::before {
-    background: var(--skin-color-secondary);
+button.secondary, .as-button.secondary {
+    --btn-color: var(--skin-color-secondary);
 }
 
 button[disabled] {

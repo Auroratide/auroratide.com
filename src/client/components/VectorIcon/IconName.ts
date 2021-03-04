@@ -15,6 +15,7 @@ export const IconName = {
     Undo: 'undo',
 
     LinkedIn: 'linked-in',
+    Github: 'github',
     GithubAlt: 'github-alt',
     StackOverflow: 'stack-overflow',
 }
