@@ -16,6 +16,8 @@ class Fetch extends FetchResourceApi<Post> {
         publishedAt: new Date(data.published_at),
         createdAt: new Date(data.created_at),
         content: data.content,
+        links: data.links,
+        gallery: data.gallery,
     })
 }
 
