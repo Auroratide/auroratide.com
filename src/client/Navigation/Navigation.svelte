@@ -7,7 +7,7 @@
 
 <Container>
     <div class="top-bar">
-        <div class="logo"><a href="/"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a></div>
+        <div class="logo"><a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a></div>
         <div class="title"><h1><a href="/">Auroratide</a></h1></div>
         <div class="subtitle">Coder and Teacher</div>
         <div class="socials">

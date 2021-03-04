@@ -26,7 +26,7 @@
         {:else}
             <div class="item-holder">
                 {#each items as item}
-                    <a class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
+                    <a aria-label={item.title} class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
                         <article>
                             <section>
                                 <h1>{item.title}</h1>

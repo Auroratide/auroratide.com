@@ -10,7 +10,7 @@
         <div class="socials">
             <ul>
                 {#each Object.values(socials) as social}
-                    <li><a href={social.link} style="background: {social.color};">
+                    <li><a aria-label={social.name} href={social.link} style="background: {social.color};">
                         <vector-icon icon={social.icon}></vector-icon>
                     </a></li>
                 {/each}
