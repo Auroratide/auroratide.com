@@ -40,13 +40,13 @@
     }
 
     .related-post:hover,
-    .related-post:focus {
+    .related-post:active {
         background: var(--item-color);
         text-decoration: none;
     }
 
     .related-post:hover vector-icon,
-    .related-post:focus vector-icon {
+    .related-post:active vector-icon {
         color: var(--palette-shade-033);
     }
 </style>
