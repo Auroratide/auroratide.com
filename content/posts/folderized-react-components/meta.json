@@ -4,7 +4,8 @@
   "category": "React",
   "icon": "folder",
   "color": "fable-lavender",
-  "summary": "A React component can be made of different files, and it can be tempting to organize these files into individual folders based on their type (CSS, state, presentation). However, this approach has some drawbacks that can be avoided if we \"folderize\" the entire React component instead.",
+  "summary": "Many of web developers organize their code based on type (CSS, state, view). However, we can avoid drawbacks if we instead \"folderize\" our React components.",
+  "long_summary": "A React component can be made of different files, and it can be tempting to organize these files into individual folders based on their type (CSS, state, presentation). However, this approach has some drawbacks that can be avoided if we \"folderize\" the entire React component instead.",
   "published_at": "2018-10-02T14:35:54.600Z",
   "created_at": "2018-10-02T14:35:54.600Z"
 }

@@ -4,7 +4,8 @@
     "category": "Games I've Made",
     "icon": "fire",
     "color": "autumn-orange",
-    "summary": "Dampfire is a tiny game I made for One Game Mechanic Jam where you basically try and protect a campfire from being put out by malicious buckets of water. As the jam's name implies, you were only supposed to have one game mechanic.",
+    "summary": "Dampfire is a tiny game I made for One Game Mechanic Jam where you basically try and protect a campfire from being put out by malicious buckets of water.",
+    "long_summary": "Dampfire is a tiny game I made for One Game Mechanic Jam where you basically try and protect a campfire from being put out by malicious buckets of water. As the jam's name implies, you were only supposed to have one game mechanic.",
     "published_at": "2019-12-17T00:00:00.000Z",
     "created_at": "2019-12-17T00:00:00.000Z",
     "links": [ {

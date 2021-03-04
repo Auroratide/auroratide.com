@@ -4,7 +4,8 @@
     "category": "React",
     "icon": "shower",
     "color": "aella-green",
-    "summary": "Testing in React can sometimes feel non-trivial. On the one hand, we want our tests to be comprehensive and accurate. On the other, we don't want to accidentally make our components immune to change. React devs have honed the art of testing components through the years, and I think we can boil down our collective experience into a single, terse principle.",
+    "summary": "Testing in React is a careful balance between comprehensiveness and flexibility. I think our collective experience can boil down to a single, terse principle.",
+    "long_summary": "Testing in React can sometimes feel non-trivial. On the one hand, we want our tests to be comprehensive and accurate. On the other, we don't want to accidentally make our components immune to change. React devs have honed the art of testing components through the years, and I think we can boil down our collective experience into a single, terse principle.",
     "published_at": "2019-06-29T02:20:00.000Z",
     "created_at": "2019-06-27T17:28:48.856Z"
   }
