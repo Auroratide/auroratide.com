@@ -84,6 +84,10 @@ export class UrlBuilder {
         return this
     }
 
+    assets(): AssetUrlBuilder {
+        return new AssetUrlBuilder(this.url)
+    }
+
     home(): string {
         return `${this.url}/`
     }
@@ -94,5 +98,30 @@ export class UrlBuilder {
 
     post(id: string): string {
         return `${this.url}${navigation.Posts.link}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`
+    }
+}
+
+class AssetUrlBuilder {
+    private url: string
+    constructor(url: string) {
+        this.url = `${url}/assets`
+    }
+
+    page(location: string): AssetUrlBuilder {
+        this.url += location
+        return this
+    }
+
+    post(id: string): AssetUrlBuilder {
+        this.url += `/posts/${id}`
+        return this
+    }
+
+    base(): string {
+        return this.url
+    }
+
+    asset(file: string): string {
+        return `${this.url}/${file}`
     }
 }
