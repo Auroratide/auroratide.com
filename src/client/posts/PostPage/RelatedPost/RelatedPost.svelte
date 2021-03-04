@@ -16,7 +16,7 @@
         display: block;
         background: var(--palette-shade-067);
         color: var(--palette-greyscale-100);
-        padding: var(--sizing-spacing-sm);
+        padding: calc(0.75 * var(--sizing-spacing-sm)) var(--sizing-spacing-sm);
         overflow: hidden;
         margin-bottom: var(--sizing-spacing-md);
         transition: background var(--transition-quick);
@@ -25,10 +25,10 @@
     }
 
     .related-post vector-icon {
-        font-size: calc(1.5 * var(--sizing-font-xl));
+        font-size: 4.5em;
         position: absolute;
-        right: var(--sizing-spacing-xs);
-        top: calc(-0.5 * var(--sizing-spacing-xs));
+        right: calc(0.25 * var(--sizing-spacing-sm));
+        top: calc(-0.25 * var(--sizing-spacing-xs));
         color: var(--palette-shade-050);
         z-index: 1;
         transition: color var(--transition-quick);
@@ -36,6 +36,8 @@
 
     .related-post .title {
         position: relative;
+        font-size: var(--sizing-font-xs);
+        font-weight: var(--typography-normal);
         z-index: 2;
     }
 
