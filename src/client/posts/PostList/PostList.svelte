@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { DocumentTitle } from '@/client/DocumentTitle'
+    import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Loading } from '@/client/Loading'
     import type { Resource, Maybe } from '@/client/resources'
@@ -15,7 +15,7 @@
     $: items = resource.list()
 </script>
 
-<DocumentTitle title="Posts">
+<DocumentInfo title="Posts">
     <Container>
         {#if items === Pending}
             <Loading text="Fetching posts..." large />
@@ -48,7 +48,7 @@
             </div>
         {/if}
     </Container>
-</DocumentTitle>
+</DocumentInfo>
 
 <style>
     .item-holder {

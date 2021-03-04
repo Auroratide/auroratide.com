@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { DocumentTitle } from '@/client/DocumentTitle'
+    import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
 </script>
 
 
-<DocumentTitle title="About">
+<DocumentInfo title="About">
     <Container>
         <p>About</p>
     </Container>
-</DocumentTitle>
+</DocumentInfo>

@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { DocumentTitle } from '@/client/DocumentTitle'
+    import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
 </script>
 
-<DocumentTitle title="Legal">
+<DocumentInfo title="Legal">
     <Container>
         <Content>
             <h1>Terms and Conditions</h1>
@@ -14,7 +14,7 @@
             <p>We do not share personal information with third-parties nor do we store information we collect about your visit to this blog for use other than to analyze content performance through the use of cookies, which you can turn off at anytime by modifying your internet browser's settings. We are not responsible for the republishing of the content found on this site on other websites or media without our permission. This privacy policy is subject to change without notice.</p>
         </Content>
     </Container>
-</DocumentTitle>
+</DocumentInfo>
 
 <style>
     h1 {

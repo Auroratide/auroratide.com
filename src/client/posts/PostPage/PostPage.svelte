@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { DocumentTitle } from '@/client/DocumentTitle'
+    import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
     import { Loading } from '@/client/Loading'
@@ -35,7 +35,7 @@
     }
 </script>
 
-<DocumentTitle {title}>
+<DocumentInfo {title}>
     <Container>
         {#if item === Pending}
             <Loading text="Finding post..." large />
@@ -75,7 +75,7 @@
             </article>
         {/if}
     </Container>
-</DocumentTitle>
+</DocumentInfo>
 
 <style>
     .article {

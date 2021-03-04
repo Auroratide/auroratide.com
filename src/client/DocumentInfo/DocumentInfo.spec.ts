@@ -1,9 +1,9 @@
-import { DocumentTitle } from '.'
+import { DocumentInfo } from '.'
 import { component } from '@/testing/component'
 
-describe('DocumentTitle', () => {
+describe('DocumentInfo', () => {
     test('rendering', () => {
-        expect(() => component(DocumentTitle)
+        expect(() => component(DocumentInfo)
             .prop('title', 'hello')
             .render()
         ).not.toThrow()
