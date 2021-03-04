@@ -23,10 +23,12 @@
     let item: Maybe<Post> = Pending
     let relatedItems: Maybe<Post[]> = Pending
     let title: string = ''
+    let description: string = ''
     $: {
         item = resource.one(id)
         if (item !== Pending && item !== Missing) {
             title = item.title
+            description = item.summary
             relatedItems = resource.list()
             if (relatedItems !== Pending && relatedItems !== Missing) {
                 relatedItems = relatedItems.filter(i => i.category === (item as Post).category && i.id !== (item as Post).id)
@@ -35,7 +37,7 @@
     }
 </script>
 
-<DocumentInfo {title}>
+<DocumentInfo {title} {description}>
     <Container>
         {#if item === Pending}
             <Loading text="Finding post..." large />

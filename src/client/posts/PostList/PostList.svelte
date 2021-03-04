@@ -15,7 +15,7 @@
     $: items = resource.list()
 </script>
 
-<DocumentInfo title="Posts">
+<DocumentInfo title="Posts" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         {#if items === Pending}
             <Loading text="Fetching posts..." large />

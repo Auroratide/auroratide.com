@@ -4,7 +4,7 @@
     import { Content } from '@/client/Content'
 </script>
 
-<DocumentInfo title="Legal">
+<DocumentInfo title="Legal" description="Website terms and conditions and privacy policy.">
     <Container>
         <Content>
             <h1>Terms and Conditions</h1>
