@@ -12,7 +12,8 @@
     "clean": "rm -rf public/build public/api",
     "test": "jest",
     "validate": "svelte-check",
-    "components:create": "node scripts/components/create"
+    "components:create": "node scripts/components/create",
+    "posts:create": "node scripts/posts/create"
   },
   "repository": {
     "type": "git",
