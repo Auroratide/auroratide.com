@@ -1,0 +1,18 @@
+{
+    "id": "candemonium",
+    "title": "Candemonium",
+    "category": "Games I've Made",
+    "icon": "candy-cane",
+    "color": "fable-lavender",
+    "summary": "A game I made for a Texas Aggie Game Developers jam. All you have to do is dodge the candies!",
+    "long_summary": "A game I made for a Texas Aggie Game Developers jam. All you have to do is dodge the candies! It's a very simple game made in Adobe Flash, back when that was still something people did.",
+    "published_at": "2013-10-01T00:00:00.000Z",
+    "created_at": "2013-10-01T00:00:00.000Z",
+    "gallery": [ {
+        "image": "candy-corn.png",
+        "caption": "Beware the mighty candy corn"
+      }, {
+        "image": "spiral.png",
+        "caption": "Each level has a unique pattern"
+    } ]
+}

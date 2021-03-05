@@ -1,0 +1,22 @@
+{
+  "id": "nonupo",
+  "title": "Nonupo",
+  "category": "Games I've Made",
+  "icon": "plus",
+  "color": "aurora-blue",
+  "summary": "A mathy game where you and an opponent place numbers on a grid to get the score closest to 0. My first object-oriented project, affectionately made in Flash.",
+  "long_summary": "A mathy game where you and an opponent place numbers on a grid to get the score closest to 0. It was my first object-oriented project, affectionately made in Flash. Somehow back then, I made an AI that's still capable of beating me in this game today. But maybe, that's just because I'm bad at the game...",
+  "published_at": "2013-01-01T00:00:00.000Z",
+  "created_at": "2013-01-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Play!",
+    "href": "http://publicvar.wikidot.com/flashdemo:nonupo"
+  } ],
+  "gallery": [ {
+    "image": "gameplay.png",
+    "caption": "Performing a roll has a sweet little animation"
+  }, {
+    "image": "menu.png",
+    "caption": "Choose between five difficulty levels"
+  } ]
+}

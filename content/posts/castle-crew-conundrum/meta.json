@@ -1,0 +1,22 @@
+{
+  "id": "castle-crew-conundrum",
+  "title": "Castle Crew Conundrum",
+  "category": "Games I've Made",
+  "icon": "chess-rook",
+  "color": "eventide-black",
+  "summary": "Game made for Ludum Dare 34, an online game jam. It's a local multiplayer game, so invite some friends to help defend your castle from some golems!",
+  "long_summary": "Game made for Ludum Dare 34, an online game jam. The theme was \"two buttons\", but we took that to mean \"as many two-button pairs as we want\"... It's a local multiplayer game, so invite some friends to help defend your castle from some golems!",
+  "published_at": "2015-12-01T00:00:00.000Z",
+  "created_at": "2015-12-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Play!",
+    "href": "https://www.scirra.com/arcade/multiplayer-games/castle-crew-conundrum-4202"
+  } ],
+  "gallery": [ {
+    "image": "menu.png",
+    "caption": "There are six characters operating the silly castle"
+  }, {
+    "image": "gameplay.png",
+    "caption": "Launch golem corpses at live golems!"
+  } ]
+}

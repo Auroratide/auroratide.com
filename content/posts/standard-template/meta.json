@@ -1,0 +1,22 @@
+{
+  "id": "standard-template",
+  "title": "Standard Template",
+  "category": "Websites I've Made",
+  "icon": "stamp",
+  "color": "aurora-blue",
+  "summary": "Excited about mobile-first design, I helped Wikidot create their first ever Bootstrap-enabled website template, which has since then become the default site template.",
+  "long_summary": "Excited about mobile-first design, I helped Wikidot create their first ever Bootstrap-enabled website template. By default, users making new websites would have a responsive design out of the box. I've since seen different websites using the Standard Template, though unfortunately Wikidot has not evolved beyond it since.",
+  "published_at": "2014-08-01T00:00:00.000Z",
+  "created_at": "2014-08-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://standard-template.wikidot.com/"
+  } ],
+  "gallery": [ {
+    "image": "notebook.png",
+    "caption": "The Notebook allows users to easily maintain a webbook"
+  }, {
+    "image": "blog.png",
+    "caption": "The Blog Template provides a ready-to-use blog"
+  } ]
+}

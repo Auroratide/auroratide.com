@@ -1,0 +1,22 @@
+{
+  "id": "inews-network",
+  "title": "iNews Network",
+  "category": "Websites I've Made",
+  "icon": "newspaper",
+  "color": "aella-green",
+  "summary": "An online newspaper for my old high school, iSchool High. It's the first website I ever made for a client other than myself.",
+  "long_summary": "An online newspaper for my old high school, iSchool High. It's the first website I ever made for a client other than myself. Unfortunately, the website is not used anymore, but some old memories are still published there!",
+  "published_at": "2010-01-01T00:00:00.000Z",
+  "created_at": "2010-01-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://inews.wikidot.com"
+  } ],
+  "gallery": [ {
+    "image": "article.png",
+    "caption": "The site included reviews and a neat star rating."
+  }, {
+    "image": "editing.png",
+    "caption": "The developer section. It hasn't been used in a long time."
+  } ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ti-basic-developer",
+  "title": "TI-Basic Developer",
+  "category": "Websites I've Made",
+  "icon": "calculator",
+  "color": "eventide-black",
+  "summary": "TI-Basic Developer is a wiki site for programming TI calculators. I had contributed heavily to this site, adding not just content but new functionality.",
+  "long_summary": "TI-Basic Developer is a wiki site for programming TI calculators. I had contributed heavily to this site, adding not just content but new functionality. This website is honestly hugely responsible for making me the programmer that I am today.",
+  "published_at": "2008-06-01T00:00:00.000Z",
+  "created_at": "2008-06-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://tibasicdev.wikidot.com/"
+  } ],
+  "gallery": [ {
+    "image": "archives.png",
+    "caption": "The site hosts a number of games written by various programmers"
+  }, {
+    "image": "tutorials.png",
+    "caption": "Beginner-friendly tutorials are readily available"
+  } ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "omnixis",
+  "title": "Omnixis",
+  "category": "Games I've Made",
+  "icon": "th",
+  "color": "fable-pink",
+  "summary": "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions!",
+  "long_summary": "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions! Somehow, this humble game ranked 23/3000 for most innovative entry.",
+  "published_at": "2016-04-18T00:00:00.000Z",
+  "created_at": "2016-04-18T00:00:00.000Z",
+  "links": [ {
+    "title": "Play!",
+    "href": "http://auroratide.github.io/Omnixis/"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Auroratide/Omnixis",
+    "icon": "github",
+    "color": "github"
+  } ],
+  "gallery": [ {
+    "image": "title.png",
+    "caption": "The game keeps a highscore like an arcade game"
+  }, {
+    "image": "gameplay.png",
+    "caption": "Don't let the blocks get to the edges!"
+  } ]
+}
