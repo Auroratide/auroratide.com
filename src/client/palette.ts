@@ -8,7 +8,7 @@ export const Palette = {
         DeepBlue: asVar('deep-blue'),
         AuroraBlue: asVar('aurora-blue'),
         AuroraGreen: asVar('aurora-green'),
-        FableLavender: asVar('fable-lavendar'),
+        FableLavender: asVar('fable-lavender'),
         FablePink: asVar('fable-pink'),
         LivianYellow: asVar('livian-yellow'),
         EventideBlack: asVar('eventide-black'),
