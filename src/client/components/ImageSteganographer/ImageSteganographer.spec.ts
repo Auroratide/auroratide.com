@@ -57,7 +57,7 @@ describe('ImageSteganographer', () => {
     }
 
     beforeEach(() => {
-        component(ImageSteganographer).render()
+        component(ImageSteganographer).prop('initialimage', '').render()
         fakeCanvas(screen.getByTestId('canvas') as HTMLCanvasElement)
     })
 

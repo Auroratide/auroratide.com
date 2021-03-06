@@ -6,6 +6,8 @@
     import { Status } from './Status'
     import { burst } from './burst'
 
+    export let initialimage: string
+
     const steganographer = new Steganographer()
     let canvasElement: HTMLCanvasElement
     let canvas: Canvas
@@ -30,6 +32,11 @@
 
     onMount(() => {
         canvas = new Canvas(canvasElement, null)
+        const startingImage = new Image()
+        startingImage.onload = async () => {
+            canvas = await canvas.upload(startingImage)
+        }
+        startingImage.src = initialimage
     })
 
     const handleUpload = async (e: Event) => {

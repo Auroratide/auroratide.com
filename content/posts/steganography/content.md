@@ -54,7 +54,7 @@ Below is a little widget I made for creating your own steganographic images! Sim
 
 You can also use this tool to find if images have a secret message already. Try using the tool to find the secret in Sullivan's note!
 
-<image-steganographer>
+<image-steganographer initialimage="/assets/posts/steganography/initial-image.png">
 </image-steganographer>
 
 <side-text warning> 
