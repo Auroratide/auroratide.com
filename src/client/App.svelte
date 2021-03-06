@@ -27,8 +27,12 @@
         params: {},
     }
 
-    page('*', (_, next) => {
-        scroll.toTop()
+    page('*', (ctx, next) => {
+        if (!ctx.state.visited) {
+            scroll.toTop()
+            ctx.state.visited = true
+        }
+
         next()
     })
     page('/', () => context = { component: ResourceProvider, params: { store: posts, component: PostList } })
