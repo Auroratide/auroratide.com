@@ -7,10 +7,14 @@ import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
+import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher'
 import { faChessRook } from '@fortawesome/free-solid-svg-icons/faChessRook'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
+import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
+import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
+import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
 import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
@@ -18,17 +22,20 @@ import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
 import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
+import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 import { faStamp } from '@fortawesome/free-solid-svg-icons/faStamp'
+import { faSuitcaseRolling } from '@fortawesome/free-solid-svg-icons/faSuitcaseRolling'
 import { faSun } from '@fortawesome/free-solid-svg-icons/faSun'
 import { faTableTennis } from '@fortawesome/free-solid-svg-icons/faTableTennis'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons/faTaxi'
 import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
+import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 
@@ -49,10 +56,14 @@ export const library = {
     [IconName.BookOpen]: faBookOpen,
     [IconName.Calculator]: faCalculator,
     [IconName.CandyCane]: faCandyCane,
+    [IconName.ChalkboardTeacher]: faChalkboardTeacher,
     [IconName.ChessRook]: faChessRook,
     [IconName.Code]: faCode,
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.EllipsisH]: faEllipsisH,
+    [IconName.ExchangeAlt]: faExchangeAlt,
+    [IconName.EyeDropper]: faEyeDropper,
+    [IconName.Fingerprint]: faFingerprint,
     [IconName.Fire]: faFire,
     [IconName.Folder]: faFolder,
     [IconName.Gamepad]: faGamepad,
@@ -60,17 +71,20 @@ export const library = {
     [IconName.HospitalAlt]: faHospitalAlt,
     [IconName.HourglassHalf]: faHourglassHalf,
     [IconName.Image]: faImage,
+    [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,
     [IconName.Newspaper]: faNewspaper,
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
     [IconName.Shower]: faShower,
     [IconName.Stamp]: faStamp,
+    [IconName.SuitcaseRolling]: faSuitcaseRolling,
     [IconName.Sun]: faSun,
     [IconName.TableTennis]: faTableTennis,
     [IconName.Taxi]: faTaxi,
     [IconName.Th]: faTh,
     [IconName.TrafficLight]: faTrafficLight,
+    [IconName.TruckMoving]: faTruckMoving,
     [IconName.Undo]: faUndo,
     [IconName.UserTie]: faUserTie,
 

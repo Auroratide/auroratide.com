@@ -21,9 +21,11 @@
 
     .article-image {
         text-align: center;
+        margin: 0 0 1em;
     }
 
     .article-image img {
+        max-width: 100%;
         margin: 0 0 1em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
@@ -38,6 +40,10 @@
 
     .article-image.lg img {
         max-height: 15em;
+    }
+
+    .article-image.fit img {
+        width: 100%;
     }
 
     .article-image figcaption {
