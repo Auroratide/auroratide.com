@@ -39,11 +39,13 @@
         font-size: var(--sizing-font-xs);
         text-align: center;
         opacity: 0.75;
+        line-height: 1.25;
     }
 
     img {
         display: block;
         max-width: 100%;
         max-height: 15em;
+        margin-bottom: var(--sizing-spacing-sm);
     }
 </style>
