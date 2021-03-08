@@ -1,0 +1,23 @@
+{
+  "id": "thesaurus-initiative",
+  "title": "Thesaurus Initiative",
+  "category": "Tools I've Made",
+  "icon": "book-open",
+  "color": "autumn-orange",
+  "summary": "Tired of overusing overused words like \"overuse\"? The Thesaurus Initiative was built to help you recall and remember alternatives!",
+  "long_summary": "Tired of overusing overused words like \"overuse\"? The Thesaurus Initiative was built to help you recall and remember alternatives! It basically uses flashcard learning to strengthen word associations so that you, in theory, wouldn't need a thesaurus ever again.",
+  "published_at": "2013-06-01T00:00:00.000Z",
+  "created_at": "2013-06-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Adobe Air",
+    "href": "https://drive.google.com/open?id=1KXcJCbb1Z6NMoEFR0BoDrYsMH-LV7_8C",
+    "color": "adobe"
+  } ],
+  "gallery": [ {
+    "image": "words.png",
+    "caption": "You can add your own words to learn"
+  }, {
+    "image": "dictionaries.png",
+    "caption": "Multiple dictionaries can be saved"
+  } ]
+}

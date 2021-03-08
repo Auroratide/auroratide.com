@@ -1,0 +1,27 @@
+{
+  "id": "code-highlight",
+  "title": "code.highlight()",
+  "category": "Tools I've Made",
+  "icon": "code",
+  "color": "aurora-green",
+  "summary": "Wikidot allowed you to make code blocks, but the syntax highlighting was very minimal. So I did what any sane coder would do and wrote my own parser!",
+  "long_summary": "Wikidot allowed you to make code blocks, but the syntax highlighting was very minimal. But as a programmer, I care perhaps more than I should about the beauty of code plastered on the screen. So I did what any sane coder would do and wrote my own parser!",
+  "published_at": "2015-01-01T00:00:00.000Z",
+  "created_at": "2015-01-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Try it!",
+    "href": "http://newprogrammer.wdfiles.com/local--files/system%3Acode-highlight/codehighlight.html"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Ardeol/newprogrammer.codehighlight",
+    "icon": "github",
+    "color": "github"
+  } ],
+  "gallery": [ {
+    "image": "input.png",
+    "caption": "Custom types can be checked"
+  }, {
+    "image": "output.png",
+    "caption": "code.highlight() can output HTML code"
+  } ]
+}

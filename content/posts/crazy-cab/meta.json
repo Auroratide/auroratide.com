@@ -1,0 +1,29 @@
+{
+  "id": "crazy-cab",
+  "title": "Crazy Cab",
+  "category": "Games I've Made",
+  "icon": "taxi",
+  "color": "livian-yellow",
+  "summary": "Navigate a rogue taxi on an alien planet and avoid all the rocks! A mobile game made with seven others in Unity for a Thoughtworks game jam.",
+  "long_summary": "Imagine you're a taxi driver, and suddenly you find yourself on an alien planet with no brakes. That's basically what Crazy Cab is! A mobile game made with seven others in Unity for a Thoughtworks game jam.",
+  "published_at": "2018-06-03T00:00:00.000Z",
+  "created_at": "2018-06-03T00:00:00.000Z",
+  "links": [ {
+    "title": "Android",
+    "href": "https://drive.google.com/open?id=1Ju3RKS0cg8SV8c2icombYBpWXKjuWA3n",
+    "icon": "android",
+    "color": "android"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Cabby-Coders/CrazyCab",
+    "icon": "github",
+    "color": "github"
+  } ],
+  "gallery": [ {
+    "image": "gameplay.png",
+    "caption": "Very simple: Just dodge the rocks!"
+  }, {
+    "image": "gameover.png",
+    "caption": "You have to see the game over screen for yourself"
+  } ]
+}

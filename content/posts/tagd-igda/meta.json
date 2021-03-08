@@ -1,0 +1,18 @@
+{
+  "id": "tagd-igda",
+  "title": "TAGD IGDA",
+  "category": "Websites I've Made",
+  "icon": "gamepad",
+  "color": "livian-yellow",
+  "summary": "Use to be the primary website for the Texas Aggie Game Developers. It was a place where people could learn more, keep up to date on events, and play member-made games.",
+  "long_summary": "Use to be the primary website for the Texas Aggie Game Developers, a campus organziation dedicated to making video games. People could come to the site to learn more about the org, keep up to date with events and speakers, or just play games made by members past.",
+  "published_at": "2013-08-01T00:00:00.000Z",
+  "created_at": "2013-08-01T00:00:00.000Z",
+  "gallery": [ {
+    "image": "games.png",
+    "caption": "Games made by TAGD's members are showcased on the site"
+  }, {
+    "image": "calendar.png",
+    "caption": "A calendar ensures members know exactly what is happening when"
+  } ]
+}

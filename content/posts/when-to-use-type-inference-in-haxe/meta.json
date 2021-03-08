@@ -1,0 +1,11 @@
+{
+    "id": "when-to-use-type-inference-in-haxe",
+    "title": "When to use Type Inference in Haxe",
+    "category": "Coding",
+    "icon": "fingerprint",
+    "color": "autumn-orange",
+    "summary": "After using Haxe for a month, I've realized type inference can really simply your code without losing any information.",
+    "long_summary": "Unlike AS3, Haxe has a feature called type inference that allows you to forgo specifying the types of variables or functions. After having used the language for a month, I've come to realize that type inference can really simply your code without losing any information.",
+    "published_at": "2015-01-24T00:40:46.137Z",
+    "created_at": "2015-01-24T00:40:46.137Z"
+}

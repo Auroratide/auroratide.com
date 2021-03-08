@@ -1,0 +1,251 @@
+@import url('/styles/normalize.css');
+@import url('/styles/palette.css');
+@import url('/styles/typography.css');
+@import url('/styles/sizing.css');
+@import url('/styles/transitions.css');
+@import url('/styles/skin.css');
+
+/* Page-level Items
+   ========================================================================== */
+html {
+    font-family: var(--skin-font-text);
+    background-color: var(--skin-color-bg);
+    color: var(--skin-color-text);
+}
+
+body {
+    font-size: var(--sizing-font-sm);
+}
+
+/* Headings
+   ========================================================================== */
+h1 { font-size: var(--sizing-font-xl); }
+h2, h3, h4, h5, h6 {
+    font-weight: var(--typography-bold);
+}
+h2 { font-size: var(--sizing-font-md); }
+h3, h4 { font-size: var(--sizing-font-sm); }
+h5, h6 { font-size: var(--sizing-font-xs); }
+h4, h5, h6 { font-style: italic; }
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--sizing-spacing-xl);
+    margin-bottom: 0;
+}
+
+/* Content
+   ========================================================================== */
+a {
+    text-decoration: none;
+    color: var(--skin-color-primary);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, ul, ol {
+    font-weight: var(--typography-light);
+    text-align: justify;
+    line-height: 1.72em;
+    margin-bottom: var(--sizing-spacing-p);
+}
+
+strong {
+    font-weight: var(--typography-bold);
+}
+
+small {
+    font-size: var(--sizing-font-xs);
+}
+
+blockquote {
+    margin-left: 0;
+    padding: var(--sizing-spacing-xs) var(--sizing-spacing-sm) var(--sizing-spacing-xs) var(--sizing-spacing-lg);
+    border-left: var(--sizing-border-md) solid var(--skin-color-bg);
+    font-style: italic;
+}
+
+blockquote p {
+    font-size: 106.25%;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-top: var(--sizing-border-xs) solid var(--skin-color-bg);
+    margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
+}
+
+ul, ol {
+    padding-left: 1em;
+}
+
+/* Buttons
+   ========================================================================== */
+button, .as-button {
+    --btn-color: var(--skin-color-primary);
+    border: none;
+    background: none;
+    display: inline-block;
+    position: relative;
+    color: var(--skin-color-text-secondary);
+    z-index: 2;
+    cursor: pointer;
+    padding: var(--sizing-spacing-xs) var(--sizing-spacing-lg);
+}
+
+button::before, .as-button::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: var(--btn-color);
+    border-radius: 1em;
+    transition: left var(--transition-quick), right var(--transition-quick);
+    z-index: -1;
+}
+
+button:hover, .as-button:hover {
+    text-decoration: none;
+}
+
+button:hover::before, .as-button:hover::before {
+    left: calc(0.333 * var(--sizing-spacing-lg));
+    right: calc(0.333 * var(--sizing-spacing-lg));
+}
+
+button:active::before, .as-button:active::before {
+    box-shadow: 0 0 0 1em var(--palette-shade-033) inset;
+}
+
+button.secondary, .as-button.secondary {
+    --btn-color: var(--skin-color-secondary);
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}
+
+button vector-icon, .as-button vector-icon {
+    vertical-align: -0.125em;
+}
+
+/* Inputs
+   ========================================================================== */
+textarea {
+    border: var(--sizing-border-sm) solid var(--skin-color-bg);
+    border-radius: 0.25em;
+    padding: var(--sizing-spacing-sm);
+    transition: border-color var(--transition-quick);
+}
+
+textarea:focus {
+    border-color: var(--skin-color-primary);
+    outline: none;
+}
+
+/* Code
+   ========================================================================== */
+code {
+    font-family: var(--skin-font-code);
+    font-size: var(--sizing-font-xs);
+    color: var(--skin-code-default);
+}
+
+pre code {
+    display: block;
+    line-height: 1.5em;
+    border: var(--sizing-border-xs) solid var(--skin-color-primary);
+    border-left-width: var(--sizing-border-md);
+    padding: 0 var(--sizing-spacing-md);
+    overflow: auto;
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-primary), 0.06) 50%);
+    background-size: 3em 3em;
+}
+
+.success > pre code {
+    border-color: var(--skin-color-success);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-success), 0.06) 50%);
+}
+
+.warning > pre code {
+    border-color: var(--skin-color-warning);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-warning), 0.06) 50%);
+}
+
+.danger > pre code {
+    border-color: var(--skin-color-danger);
+    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-danger), 0.06) 50%);
+}
+
+code .comment {
+    color: var(--skin-code-comment);
+}
+
+code .keyword,
+code .attr-name,
+code .rule,
+code .property {
+    color: var(--skin-code-keyword);
+}
+
+code .number,
+code .boolean {
+    color: var(--skin-code-literal);
+}
+
+code .string,
+code .regex,
+code .attr-value {
+    color: var(--skin-code-string);
+}
+
+code .class-name,
+code .selector,
+code .tag > .tag {
+    color: var(--skin-code-name);
+}
+
+code .function,
+code .pseudo-class {
+    font-weight: var(--typography-bold);
+}
+
+code .doctype {
+    color: var(--skin-code-annotation);
+}
+
+code .tag > .punctuation {
+    color: var(--skin-code-default);
+}
+
+/* Custom Elements
+   ========================================================================== */
+/* These styles are needed when customizing slotted elements */
+side-text {
+    margin-bottom: var(--sizing-spacing-p);
+}
+
+side-text p {
+    font-weight: normal;
+}
+
+side-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Large Screens
+   ========================================================================== */
+@media screen and (min-width: 75rem) {
+    p {
+        text-align: left;
+    }
+
+    ul, ol {
+        padding-left: calc(1em + var(--sizing-spacing-lg));
+    }
+}

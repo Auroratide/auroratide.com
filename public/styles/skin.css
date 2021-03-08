@@ -1,0 +1,39 @@
+:root {
+    --skin-color-bg: var(--palette-greyscale-075);
+    --skin-color-content: var(--palette-greyscale-100);
+    --skin-color-text: var(--palette-greyscale-010);
+
+    --skin-color-bg-secondary: var(--palette-deep-blue);
+    --skin-color-text-secondary: var(--palette-greyscale-100);
+
+    --skin-color-primary: var(--palette-aurora-blue);
+    --skin-rgb-primary: var(--palette-rgb-aurora-blue);
+    --skin-color-secondary: var(--palette-aurora-green);
+    --skin-rgb-secondary: var(--palette-rgb-aurora-green);
+    --skin-color-info: var(--palette-aurora-blue);
+    --skin-rgb-info: var(--palette-rgb-aurora-blue);
+    --skin-color-success: var(--palette-aella-green);
+    --skin-rgb-success: var(--palette-rgb-aella-green);
+    --skin-color-warning: var(--palette-livian-yellow);
+    --skin-rgb-warning: var(--palette-rgb-livian-yellow);
+    --skin-color-danger: var(--palette-autumn-red);
+    --skin-rgb-danger: var(--palette-rgb-autumn-red);
+
+    --skin-font-heading: var(--typography-sans);
+    --skin-font-text: var(--typography-sans);
+    --skin-font-code: var(--typography-code);
+
+    --skin-code-default: var(--palette-greyscale-010);
+    --skin-code-comment: #008800;
+    --skin-code-keyword: #0060FF;
+    --skin-code-literal: #a85f30;
+    --skin-code-name: #0080AA;
+    --skin-code-string:  #a31515;
+    --skin-code-annotation:  #808000;
+
+    --maslow-color-selfactualization: var(--palette-autumn-red);
+    --maslow-color-esteem: var(--palette-autumn-orange);
+    --maslow-color-belonging: var(--palette-livian-yellow);
+    --maslow-color-safety: var(--palette-aella-green);
+    --maslow-color-physiological: var(--palette-aurora-blue);
+}

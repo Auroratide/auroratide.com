@@ -1,0 +1,22 @@
+{
+  "id": "chase-hamilton",
+  "title": "Chase Hamilton",
+  "category": "Websites I've Made",
+  "icon": "user-tie",
+  "color": "winter-grey",
+  "summary": "A portfolio website made for a friend of mine. This site was designed to showcase his debate coaching ethos so he could reach debate students nationwide.",
+  "long_summary": "A portfolio website made for a friend of mine. This site was designed to showcase his debate coaching ethos so he could reach debate students nationwide. In the end he coached many students, some becoming finalists.",
+  "published_at": "2016-07-01T00:00:00.000Z",
+  "created_at": "2016-07-01T00:00:00.000Z",
+  "links": [ {
+    "title": "Visit!",
+    "href": "http://chdebate.wikidot.com"
+  } ],
+  "gallery": [ {
+    "image": "testimonials.png",
+    "caption": "The site allows the client to edit individual sections and add new testimonials very easily."
+  }, {
+    "image": "mobile.png",
+    "caption": "And of course, the site is mobily beautiful, as all sites should be."
+  } ]
+}
