@@ -89,7 +89,10 @@ We might be able to answer that question with another question. Thinking back to
 
 A society where any one such fundamental human need is intentionally suppressed or naturally absent would be pretty bad. In fact, you might even call it dystopian!
 
-<major-point text="A dystopia is a society where there is near-universal incongruity between some need and its provision.">
+<major-point>
+
+A dystopia is a society where there is near-universal incongruity between some need and its provision.
+
 </major-point>
 
 Using this definition and Maslow's model, we can brainstorm and worldbuild many different _kinds_ of dystopian worlds. People need food and water, so maybe it's a world where those things are scarce. People need personal growth, so maybe it's a world where this is suppressed. In a step-by-step process:

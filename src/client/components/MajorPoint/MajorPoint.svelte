@@ -1,16 +1,8 @@
-<script lang="ts">
-    export let text: string
-</script>
-
-<p class="major-point"><em>{text}</em></p>
+<slot></slot>
 
 <style>
     :host, :global(major-point) {
         display: block;
-        margin-bottom: 1.5em;
-    }
-
-    .major-point {
         font-size: 1.5em;
         text-align: center;
         padding: 1em 1.5em;
@@ -19,7 +11,7 @@
         line-height: 1.5;
     }
 
-    .major-point em {
-        font-style: normal;
+    :global(major-point p) {
+        text-align: center;
     }
 </style>

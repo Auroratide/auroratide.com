@@ -3,5 +3,5 @@ import Component from './MajorPoint.svelte'
 
 export const MajorPoint = makeCustomElement(Component, {
     name: 'major-point',
-    props: ['text'],
+    props: [],
 })

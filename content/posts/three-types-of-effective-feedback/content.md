@@ -12,7 +12,10 @@ Anyway, this post is not about feedback itself, but about the way feedback is _p
 
 The approach, therefore, is important, and it's why we seek to give _constructive_ feedback rather than _negative_ feedback.
 
-<major-point text="The way we see feedback makes a huge difference on how both we give and receive it.">
+<major-point>
+
+The way we see feedback makes a huge difference on how both we give and receive it.
+
 </major-point>
 
 To me, all forms of feedback are inherently constructive in that the goal is always to build the receiver up. Additionally, I don't think feedback is as black and white as "good" and "bad" feedback. And so I want to propose what I'm calling the three types of effective feedback: **Affirming**, **Adjusting**, and **Advancing** feedback.

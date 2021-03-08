@@ -8,7 +8,10 @@ No time was wasted debugging the tests, and I got to spend more effort doing the
 
 Upon reflection, I wanted to share what I learnt as a result of my refactoring experiment in the form of a single, terse statement (a **hook** if you will):
 
-<major-point text="Test what your component does, not how it works.">
+<major-point>
+
+Test what your component does, not how it works.
+
 </major-point>
 
 Let's take a look at what that means, how to make it work, and why we should follow it as much as we can! Oh yeah, and if you're patient enough, I have an obligatory sample Github repo to share which demonstrates this principle as well. Yay! Code!

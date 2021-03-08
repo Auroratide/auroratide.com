@@ -4,7 +4,7 @@ import { component } from '@/testing/component'
 describe('MajorPoint', () => {
     test('rendering', () => {
         expect(() => component(MajorPoint)
-            .prop('text', 'Some text')
+            .slot('hello')
             .render()
         ).not.toThrow()
     })
