@@ -8,6 +8,7 @@ import { HorizontalFlex } from './HorizontalFlex'
 import { ImageSteganographer } from './ImageSteganographer'
 import { MajorPoint } from './MajorPoint'
 import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
+import { ResponsiveImage } from './ResponsiveImage'
 import { SideText } from './SideText'
 import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
@@ -22,6 +23,7 @@ export const register = () => {
     connect(ImageSteganographer)
     connect(MajorPoint)
     connect(MaslowsHierarchyOfNeeds)
+    connect(ResponsiveImage)
     connect(SideText)
     connect(SubTheme)
     connect(VectorIcon)
