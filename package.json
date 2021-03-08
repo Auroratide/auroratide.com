@@ -13,7 +13,8 @@
     "test": "jest",
     "validate": "svelte-check --ignore scripts",
     "components:create": "node scripts/components/create",
-    "posts:create": "node scripts/posts/create"
+    "posts:create": "node scripts/posts/create",
+    "netlify:update": "node scripts/netlify/update"
   },
   "repository": {
     "type": "git",

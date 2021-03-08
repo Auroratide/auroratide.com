@@ -1,0 +1,4 @@
+{
+  "routes": ["legal", "whodoku", "about", "posts"],
+  "resources": ["posts"]
+}
