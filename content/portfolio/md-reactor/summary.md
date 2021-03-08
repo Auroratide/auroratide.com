@@ -1,1 +1,0 @@
-**md-reactor** is a utility library for parsing and rendering **markdown** in **React** applications. Hence the name! It's basically able to take raw markdown text and convert it into an object tree that a renderer can inject into a React page. This website actually uses it to parse different pages, including the page you're reading right now!

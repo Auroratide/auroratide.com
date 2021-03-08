@@ -1,1 +1,0 @@
-While in college, I was involved with a game development club, and we had a number of contests. This time, we had a weekend to make a game based on the idea of candy, and we had to do it in pairs. Well, my partner (Gary Kluth) and I certainly delivered with this entertaining (literally) bullet-hell game.

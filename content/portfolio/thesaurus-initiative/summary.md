@@ -1,1 +1,0 @@
-The Thesaurus Initiative is able to help you learn new words. Tired of overusing overused words like "overuse"? By creating word associations and using flashcard learning, this little app can stop you from belaboring (overusing) colloquial (common) terms (words).

@@ -1,1 +1,0 @@
-It's the classic pong game! So… what's so interesting about it? In this version of pong, the computer starts off with no knowledge of the game and tries to learn how to play over time. By playing against your computer, you can actually train it to become better and better at pong.

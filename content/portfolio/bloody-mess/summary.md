@@ -1,1 +1,0 @@
-It's honestly a bit of an embarrassment, but this little game was in fact my first experience in using the 3D aspect of Unity3D. Considering neither me nor my friend Brendan Phillips really knew what we were doing, this bloody mess did not come out so bad. The game was made or the University of Advancing Technology's summer game jam, and we made the whole thing in about 12 hours.

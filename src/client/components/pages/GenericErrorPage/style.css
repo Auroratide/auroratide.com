@@ -1,9 +1,0 @@
-@import "theme";
-
-.text {
-  margin-bottom: 3rem;
-}
-
-.button {
-  @mixin typography-responsive lg;
-}

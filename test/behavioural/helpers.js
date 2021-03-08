@@ -1,1 +1,0 @@
-export const allActionsToComplete = () => new Promise(resolve => window.setImmediate(resolve));

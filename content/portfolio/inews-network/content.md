@@ -1,3 +1,0 @@
-The journalism class has since changed, so the site is no longer in use. At the time, though, it supported news, editorials, movie/game reviews, and a school calendar.
-
-I learned quite a bit from developing this site, especially regarding the consulting process. At the time, I simply did what the teacher wanted, but in hindsight, the publishing process the teacher had in mind was very difficult for the students to understand and keep track of. Consulting goes two ways: client to consultant and consultant to client. I don't expect myself to have done any better back then, but at least I can reflect on the experience today.

@@ -1,1 +1,0 @@
-Texas A&M University hires students to help teach computer science to other students. We were called peer teachers, and in order to help students know who was scheduled when, a website was made. During my last year in college, I managed the website and scheduling for all 60+ peer teachers and created software to auto-generate the info you see on the webpage.

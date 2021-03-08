@@ -1,7 +1,0 @@
-@import "theme";
-
-.line {
-  position: absolute;
-  transform-origin: center left;
-  height: 0.625rem;
-}

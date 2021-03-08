@@ -1,9 +1,0 @@
-node_modules/
-public/
-
-# VS Code
-.vscode/
-jsconfig.json
-
-# Mac
-.DS_Store

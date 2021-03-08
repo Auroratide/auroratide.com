@@ -1,1 +1,0 @@
-This port of Minesweeper is my first major program, written for TI calculators. Using pure TI-BASIC, the programming language I started off with, this version of Minesweeper has three difficulty settings, a custom dimension setter, and a way to track high scores.

@@ -1,9 +1,0 @@
-@import "theme";
-
-@media (--breakpoint-lg) {
-  .body {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    margin: 0 -0.5rem;
-  }
-}

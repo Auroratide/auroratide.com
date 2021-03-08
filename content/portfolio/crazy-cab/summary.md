@@ -1,1 +1,0 @@
-I helped organize a small game jam for [ThoughtWorks](https://www.thoughtworks.com/) wherein participants had just 24 hours to create an entire game from scratch. Since there were only eight of us, we all came together to form this: Crazy Cab. It's a mobile game made in Unity where you try and navigate a weird planet of rocks in a taxi without brakes. Simple, but fun!

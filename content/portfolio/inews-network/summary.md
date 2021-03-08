@@ -1,1 +1,0 @@
-The iNews Network was my first major website made for a client. It was designed to be a news website for my high school, iSchool High. At the time I was developing it, I only had about a year of experience. I tried making the publishing process as simple as possible for the writers in the journalism class.

@@ -1,1 +1,0 @@
-**Dampfire** is a very simple game I made for the [One Game Mechanic Jam](https://itch.io/jam/omgjam6), hosted by Games Dev Quest. We were given one week to create a game from scratch with "one game mechanic" around the themes of cards, cartography, or campfire. And indeed, there is just one mechanic: tap buckets to keep them from putting out your campfire!
