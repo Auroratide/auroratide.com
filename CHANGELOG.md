@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.3 (08 Mar 2021)
+
+* Update dependencies
+
 ## 1.2.2 (28 Jun 2019)
 
 * Bug fixes (janky behaviour when loading post pages)
