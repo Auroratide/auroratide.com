@@ -2,6 +2,7 @@ import type { Post } from '../types'
 
 type Options = {
     title?: string,
+    publishedAt?: Date,
     category?: string,
     content?: string,
 }
@@ -16,7 +17,7 @@ export class PostForge {
             color: 'red',
             summary: 'A summary',
             longSummary: 'A long summary',
-            publishedAt: new Date('2021-01-01T00:00:00.000Z'),
+            publishedAt: options.publishedAt === undefined ? new Date('2021-01-01T00:00:00.000Z') : options.publishedAt,
             createdAt: new Date('2021-01-01T00:00:00.000Z'),
             content: options.content === undefined ? '<p>Content</p>' : options.content,
             links: [ {

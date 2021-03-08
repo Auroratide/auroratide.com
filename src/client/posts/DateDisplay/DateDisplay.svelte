@@ -8,7 +8,7 @@
 
     const format = (date: Date) => `${weekday(date)}, ${day(date)} ${month(date)} ${year(date)}`
 
-    const isValid = (date: Date) => !isNaN(date.getTime())
+    const isValid = (date: Date) => date && !isNaN(date.getTime())
 </script>
 
 {#if isValid(date)}

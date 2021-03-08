@@ -38,4 +38,19 @@ describe('PostList', () => {
         expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
         expect(screen.getByText(posts.orange.title)).toBeInTheDocument()
     })
+
+    test('unpublished post', () => {
+        posts = {
+            apple: forge.create('apple', { title: 'Apple' }),
+            orange: forge.create('unpublished', { title: 'Orange', publishedAt: null }),
+        }
+        resource = new InMemoryResource(Object.values(posts))
+
+        component(PostList)
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.queryByText(posts.apple.title)).toBeInTheDocument()
+        expect(screen.queryByText(posts.orange.title)).not.toBeInTheDocument()
+    })
 })
