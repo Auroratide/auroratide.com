@@ -11,7 +11,7 @@
     "build:content": "ts-node src/content/index.ts",
     "clean": "rm -rf public/build public/api",
     "test": "jest",
-    "validate": "svelte-check",
+    "validate": "svelte-check --ignore scripts",
     "components:create": "node scripts/components/create",
     "posts:create": "node scripts/posts/create"
   },

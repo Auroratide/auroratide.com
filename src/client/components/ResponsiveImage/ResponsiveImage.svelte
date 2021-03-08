@@ -19,7 +19,7 @@
         }
     })
 
-    const qualified = (res) => `${src}/${res}.${ext}`
+    const qualified = (res: string) => `${src}/${res}.${ext}`
 </script>
 
 <img class="highres" {alt} loading="lazy" bind:this={highresImg} data-testid="highres"

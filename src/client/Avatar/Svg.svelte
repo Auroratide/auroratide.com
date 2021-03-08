@@ -12,8 +12,6 @@
 <!-- Created using Krita: https://krita.org -->
 <svg xmlns="http://www.w3.org/2000/svg" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:krita="http://krita.org/namespaces/svg/krita"
-    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
     viewBox="0 0 368.64 368.64"
     class="avatar-svg"
     style="position: {absolute ? 'absolute' : 'relative'}; font-size: {size}; top: {absolute ? '50%' : '0'}; left: {absolute ? '50%' : '0'}; transform: {absolute ? 'translate(-50%, -50%)' : 'none'}; z-index: {layer};"
