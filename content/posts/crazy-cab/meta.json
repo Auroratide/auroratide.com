@@ -2,6 +2,7 @@
   "id": "crazy-cab",
   "title": "Crazy Cab",
   "category": "Games I've Made",
+  "tags": ["jam", "team", "unity", "thoughtworks", "android", "mobile", "taxi", "cab", "survival"],
   "icon": "taxi",
   "color": "livian-yellow",
   "summary": "Navigate a rogue taxi on an alien planet and avoid all the rocks! A mobile game made with seven others in Unity for a Thoughtworks game jam.",

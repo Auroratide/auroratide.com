@@ -1,7 +1,8 @@
 {
   "id": "two-ways-to-test-react-components",
   "title": "Two Ways to Test React Components",
-  "category": "React",
+  "category": "Coding",
+  "tags": ["react", "testing", "paradigm", "javascript"],
   "icon": "hand-pointer",
   "color": "aurora-blue",
   "summary": "Framing React component testing in terms of rendering and behaviour can encourage proper separation of presentation and state.",

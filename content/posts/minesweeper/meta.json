@@ -2,6 +2,7 @@
   "id": "minesweeper",
   "title": "Minesweeper",
   "category": "Games I've Made",
+  "tags": ["minesweeper", "calculator", "texas instruments", "basic", "puzzle"],
   "icon": "bomb",
   "color": "winter-grey",
   "summary": "A port of the classic Minesweeper game for the TI-83/4 series of graphing calculators. This was my first ever substantial programming project.",

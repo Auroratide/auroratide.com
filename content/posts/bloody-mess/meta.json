@@ -2,6 +2,7 @@
     "id": "bloody-mess",
     "title": "Bloody Mess",
     "category": "Games I've Made",
+    "tags": ["unity", "jam", "blood", "cartoon", "3d", "hospital", "survival"],
     "icon": "hospital-alt",
     "color": "autumn-red",
     "summary": "A Unity game made for University of Advancing Technology's summer game jam where stay alive by collecting puddles of blood before mops clean you up.",

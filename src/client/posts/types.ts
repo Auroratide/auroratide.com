@@ -14,6 +14,7 @@ export type Post = {
     readonly id: string
     readonly title: string
     readonly category: string
+    readonly tags: string[]
     readonly icon: string
     readonly color: string
     readonly summary: string

@@ -2,6 +2,7 @@
     "id": "solving-the-traveling-salesman",
     "title": "Solving the Traveling Salesman with Radial Segmentation",
     "category": "Coding",
+    "tags": ["cplusplus", "assignment", "college", "algorithm", "np", "analysis"],
     "icon": "suitcase-rolling",
     "color": "fable-pink",
     "summary": "Instead of using the Greedy Algorithm to approximate the Traveling Salesman problem, I attempt an algorithm of my own contrivance.",

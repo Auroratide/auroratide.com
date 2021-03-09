@@ -2,6 +2,7 @@
   "id": "standard-template",
   "title": "Standard Template",
   "category": "Websites I've Made",
+  "tags": ["wikidot", "template", "responsive", "blog", "notebook", "theme", "html", "css"],
   "icon": "stamp",
   "color": "aurora-blue",
   "summary": "Excited about mobile-first design, I helped Wikidot create their first ever Bootstrap-enabled website template, which has since then become the default site template.",

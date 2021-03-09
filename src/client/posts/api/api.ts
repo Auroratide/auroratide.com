@@ -10,6 +10,7 @@ class Fetch extends FetchResourceApi<Post> {
         id: data.id,
         title: data.title,
         category: data.category,
+        tags: data.tags,
         icon: data.icon,
         color: data.color,
         summary: data.summary,

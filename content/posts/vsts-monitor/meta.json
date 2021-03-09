@@ -2,6 +2,7 @@
  "id": "vsts-monitor",
   "title": "VSTS Monitor",
   "category": "Tools I've Made",
+  "tags": ["javascript", "api", "vsts", "azure devops", "pipeline", "build"],
   "icon": "traffic-light",
   "color": "aella-green",
   "summary": "Tool for visualizing the state of a build from VSTS. At the time was used for my team to quickly and immediately know the state of our builds at any time.",

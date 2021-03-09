@@ -2,6 +2,7 @@
     "id": "time-to-learn-haxe",
     "title": "Time To Learn Haxe",
     "category": "Coding",
+    "tags": ["haxe", "flash", "transition", "evolution"],
     "icon": "truck-moving",
     "color": "autumn-red",
     "summary": "Flash is dying. Thankfully, I've found an alternative in Haxe and OpenFL.",

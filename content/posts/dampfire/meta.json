@@ -2,6 +2,7 @@
     "id": "dampfire",
     "title": "Dampfire",
     "category": "Games I've Made",
+    "tags": ["html5", "typescript", "pixi", "survival", "mobile", "jam", "camp", "fire", "light"],
     "icon": "fire",
     "color": "autumn-orange",
     "summary": "Dampfire is a tiny game I made for One Game Mechanic Jam where you basically try and protect a campfire from being put out by malicious buckets of water.",

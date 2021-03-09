@@ -2,6 +2,7 @@
     "id": "as3-to-haxe-conversion",
     "title": "AS3 to Haxe Conversion",
     "category": "Coding",
+    "tags": ["flash", "actionscript", "haxe", "conversion", "guide"],
     "icon": "exchange-alt",
     "color": "fable-lavender",
     "summary": "Let's look at some of the similarities and differences between Haxe and Actionscript 3.",

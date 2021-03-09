@@ -1,7 +1,8 @@
 {
   "id": "folderized-react-components",
   "title": "Folderized React Components",
-  "category": "React",
+  "category": "Coding",
+  "tags": ["react", "tip", "javascript", "organization", "folder", "domain"],
   "icon": "folder",
   "color": "fable-lavender",
   "summary": "Many of web developers organize their code based on type (CSS, state, view). However, we can avoid drawbacks if we instead \"folderize\" our React components.",

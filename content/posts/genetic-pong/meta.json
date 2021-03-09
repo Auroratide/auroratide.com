@@ -2,6 +2,7 @@
   "id": "genetic-pong",
   "title": "Genetic Pong",
   "category": "Games I've Made",
+  "tags": ["haxe", "flixel", "genetic", "algorithm", "pong", "learning", "artificial intelligence"],
   "icon": "table-tennis",
   "color": "eventide-black",
   "summary": "It's the classic pong game, except the AI gets better over time, using something called a Genetic Algorithm. Train the AI and see if you can beat it!",

@@ -1,7 +1,8 @@
 {
     "id": "shannons-maxim-and-steganography",
     "title": "Shannon's Maxim and Steganography",
-    "category": "Security",
+    "category": "Computer Science",
+    "tags": ["security", "steganography", "principle", "cryptography", "hidden", "message"],
     "icon": "key",
     "color": "aurora-green",
     "summary": "\"The enemy knows the system.\" This cryptography principle applies to steganography as well.",

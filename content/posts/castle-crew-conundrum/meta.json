@@ -2,6 +2,7 @@
   "id": "castle-crew-conundrum",
   "title": "Castle Crew Conundrum",
   "category": "Games I've Made",
+  "tags": ["construct", "html5", "multiplayer", "jam", "defense"],
   "icon": "chess-rook",
   "color": "eventide-black",
   "summary": "Game made for Ludum Dare 34, an online game jam. It's a local multiplayer game, so invite some friends to help defend your castle from some golems!",

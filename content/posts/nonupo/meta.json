@@ -2,6 +2,7 @@
   "id": "nonupo",
   "title": "Nonupo",
   "category": "Games I've Made",
+  "tags": ["flash", "actionscript", "artificial intelligence", "puzzle", "math", "multiplayer"],
   "icon": "plus",
   "color": "aurora-blue",
   "summary": "A mathy game where you and an opponent place numbers on a grid to get the score closest to 0. My first object-oriented project, affectionately made in Flash.",

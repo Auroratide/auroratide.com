@@ -1,7 +1,8 @@
 {
     "id": "steganography",
     "title": "Steganography",
-    "category": "Security",
+    "category": "Computer Science",
+    "tags": ["steganography", "security", "interactive", "secret", "hidden", "message"],
     "icon": "image",
     "color": "autumn-orange",
     "summary": "Steganography is the art of obscuring not the message, but the existence of the message. See how you can use this so embed secret messages into images!",

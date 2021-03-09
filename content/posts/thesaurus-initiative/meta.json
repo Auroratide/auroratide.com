@@ -2,6 +2,7 @@
   "id": "thesaurus-initiative",
   "title": "Thesaurus Initiative",
   "category": "Tools I've Made",
+  "tags": ["flash", "air", "actionscript", "thesaurus", "dictionary", "words", "learning", "application"],
   "icon": "book-open",
   "color": "autumn-orange",
   "summary": "Tired of overusing overused words like \"overuse\"? The Thesaurus Initiative was built to help you recall and remember alternatives!",

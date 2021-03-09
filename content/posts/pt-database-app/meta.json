@@ -2,6 +2,7 @@
   "id": "pt-database-app",
   "title": "PT Database App",
   "category": "Tools I've Made",
+  "tags": ["college", "haxe", "application", "desktop", "database", "planner", "organization", "teaching"],
   "icon": "project-diagram",
   "color": "autumn-red",
   "summary": "A small desktop application made to help organize peer teachers at Texas A&M University. I was an aide at the time, and to alleviate the tediosity made this utility.",

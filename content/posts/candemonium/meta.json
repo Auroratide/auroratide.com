@@ -2,6 +2,7 @@
     "id": "candemonium",
     "title": "Candemonium",
     "category": "Games I've Made",
+    "tags": ["flash", "actionscript", "candy", "jam", "bullet hell", "levels"],
     "icon": "candy-cane",
     "color": "fable-lavender",
     "summary": "A game I made for a Texas Aggie Game Developers jam. All you have to do is dodge the candies!",

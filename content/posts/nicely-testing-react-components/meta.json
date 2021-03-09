@@ -1,7 +1,8 @@
 {
     "id": "nicely-testing-react-components",
     "title": "The What, How, and Why of Nicely Testing React Components",
-    "category": "React",
+    "category": "Coding",
+    "tags": ["react", "testing", "frontend", "paradigm", "analogy"],
     "icon": "shower",
     "color": "aella-green",
     "summary": "Testing in React is a careful balance between comprehensiveness and flexibility. I think our collective experience can boil down to a single, terse principle.",

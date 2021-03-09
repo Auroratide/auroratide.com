@@ -13,6 +13,7 @@ export class PostForge {
             id,
             title: options.title ?? id,
             category: options.category ?? 'Fruit',
+            tags: ['apple'],
             icon: 'apple',
             color: 'red',
             summary: 'A summary',

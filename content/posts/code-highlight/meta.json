@@ -2,6 +2,7 @@
   "id": "code-highlight",
   "title": "code.highlight()",
   "category": "Tools I've Made",
+  "tags": ["code", "highlight", "haxe", "parser"],
   "icon": "code",
   "color": "aurora-green",
   "summary": "Wikidot allowed you to make code blocks, but the syntax highlighting was very minimal. So I did what any sane coder would do and wrote my own parser!",

@@ -2,6 +2,7 @@
   "id": "tagd-igda",
   "title": "TAGD IGDA",
   "category": "Websites I've Made",
+  "tags": ["gamedev", "wikidot", "igda", "news", "club", "college", "calendar", "html", "css", "games"],
   "icon": "gamepad",
   "color": "livian-yellow",
   "summary": "Use to be the primary website for the Texas Aggie Game Developers. It was a place where people could learn more, keep up to date on events, and play member-made games.",
