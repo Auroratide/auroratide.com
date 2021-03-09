@@ -31,7 +31,12 @@
             description = item.summary
             relatedItems = resource.list()
             if (relatedItems !== Pending && relatedItems !== Missing) {
-                relatedItems = relatedItems.filter(i => i.category === (item as Post).category && i.id !== (item as Post).id)
+                relatedItems = relatedItems
+                    .filter(i => i.category === (item as Post).category)
+                    .filter(i => i.id !== (item as Post).id)
+                    .filter(i => i.publishedAt)
+                    .slice(0, 5)
+                    .sort(() => 0.5 - Math.random())
             }
         }
     }
