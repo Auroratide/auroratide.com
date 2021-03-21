@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 (21 Mar 2021)
+
+* Touchups on article viewing for better experience
+
 ## 2.0.0 (08 Mar 2021)
 
 * Update everything to Svelte
