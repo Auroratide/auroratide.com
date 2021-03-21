@@ -10,7 +10,7 @@
     {#each gallery as item}
         <li>
             <figure>
-                <img src={new UrlBuilder().assets().post(id).asset(item.image)} alt={item.caption} />
+                <popout-image src={new UrlBuilder().assets().post(id).asset(item.image)} alt={item.caption} />
                 <figcaption>{item.caption}</figcaption>
             </figure>
         </li>
@@ -42,7 +42,7 @@
         line-height: 1.25;
     }
 
-    img {
+    popout-image {
         display: block;
         max-width: 100%;
         max-height: 15em;

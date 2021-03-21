@@ -8,7 +8,7 @@
 </script>
 
 <figure class="article-image {size}">
-    <img src={src} alt={alt} />
+    <popout-image {src} {alt}></popout-image>
     {#if caption}
         <figcaption>{caption}</figcaption>
     {/if}
@@ -24,25 +24,25 @@
         margin: 0 0 1em;
     }
 
-    .article-image img {
+    .article-image popout-image {
         max-width: 100%;
         margin: 0 0 1em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
 
-    .article-image.sm img {
+    .article-image.sm popout-image {
         max-height: 5em;
     }
 
-    .article-image.md img {
+    .article-image.md popout-image {
         max-height: 10em;
     }
 
-    .article-image.lg img {
+    .article-image.lg popout-image {
         max-height: 15em;
     }
 
-    .article-image.fit img {
+    .article-image.fit popout-image {
         width: 100%;
     }
 

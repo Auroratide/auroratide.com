@@ -11,6 +11,7 @@ html {
     font-family: var(--skin-font-text);
     background-color: var(--skin-color-bg);
     color: var(--skin-color-text);
+    overflow-y: scroll; /* So scrollbar is always there */
 }
 
 body {
