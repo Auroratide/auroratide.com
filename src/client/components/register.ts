@@ -3,6 +3,7 @@ import connect from './connect'
 import { ArticleImage } from './ArticleImage'
 import { ColoredText } from './ColoredText'
 import { ConnectNineDots } from './ConnectNineDots'
+import { DateDisplay } from './DateDisplay'
 import { DecrementorWidget } from './DecrementorWidget'
 import { HorizontalFlex } from './HorizontalFlex'
 import { ImageSteganographer } from './ImageSteganographer'
@@ -19,6 +20,7 @@ export const register = () => {
     connect(ArticleImage)
     connect(ColoredText)
     connect(ConnectNineDots)
+    connect(DateDisplay)
     connect(DecrementorWidget)
     connect(HorizontalFlex)
     connect(ImageSteganographer)

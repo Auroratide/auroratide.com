@@ -5,7 +5,6 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import type { Post } from '../types'
-    import { DateDisplay } from '../DateDisplay'
     import { Error } from '@/client/Error'
     import { UrlBuilder } from '@/client/routes'
 
@@ -31,7 +30,7 @@
                             <section>
                                 <h1>{item.title}</h1>
                                 <div class="byline">
-                                    <DateDisplay date={item.publishedAt} />
+                                    <date-display date={item.publishedAt} />
                                     <span class="bullet">&bull;</span>
                                     <span>{item.category}</span>
                                 </div>

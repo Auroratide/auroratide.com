@@ -10,7 +10,6 @@
 
     import type { Post } from '../types'
 
-    import { DateDisplay } from '../DateDisplay'
     import { Header } from './Header'
     import { Comments } from './Comments'
     import { RelatedItems } from './RelatedItems'
@@ -56,7 +55,7 @@
                 {/if}
                 <Content>
                     <section class="content">
-                        <div class="published"><DateDisplay date={item.publishedAt} /></div>
+                        <div class="published"><date-display date={item.publishedAt} /></div>
                         {#if item.content}
                             <RawRenderer content={item.content} />
                         {:else}
