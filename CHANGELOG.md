@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0 (04 Apr 2021)
+
+* Make portfolio its own site section
+
 ## 2.0.1 (21 Mar 2021)
 
 * Touchups on article viewing for better experience
