@@ -41,10 +41,15 @@ export type Navigation = {
     visibility: NavVisibility,
 }
 
-export const navigation: Record<'Posts' | 'About' | 'Legal' | 'Whodoku', Navigation> = {
+export const navigation: Record<'Posts' | 'Portfolio' | 'About' | 'Legal' | 'Whodoku', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',
+        visibility: NavVisibility.Visible,
+    },
+    Portfolio: {
+        name: 'Portfolio',
+        link: '/portfolio',
         visibility: NavVisibility.Visible,
     },
     About: {
@@ -99,6 +104,14 @@ export class UrlBuilder {
     post(id: string): string {
         return `${this.url}${navigation.Posts.link}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`
     }
+
+    portfolio(): string {
+        return `${this.url}${navigation.Portfolio.link}${this.api ? `/index${UrlBuilder.API_SUFFIX}` : ''}`
+    }
+
+    portfolioItem(id: string): string {
+        return `${this.url}${navigation.Portfolio.link}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`
+    }
 }
 
 class AssetUrlBuilder {
@@ -114,6 +127,11 @@ class AssetUrlBuilder {
 
     post(id: string): AssetUrlBuilder {
         this.url += `/posts/${id}`
+        return this
+    }
+
+    portfolioItem(id: string): AssetUrlBuilder {
+        this.url += `/portfolio/${id}`
         return this
     }
 

@@ -1,0 +1,186 @@
+<script lang="ts">
+    import { DocumentInfo } from '@/client/DocumentInfo'
+    import { Container } from '@/client/Container'
+    import { Loading } from '@/client/Loading'
+    import type { Resource, Maybe } from '@/client/resources'
+    import { Pending, Missing } from '@/client/resources'
+    import type { PortfolioItem } from '../types'
+    import { Error } from '@/client/Error'
+    import { UrlBuilder } from '@/client/routes'
+
+    export let resource: Resource<PortfolioItem>
+
+    let items: Maybe<PortfolioItem[]> = Pending
+    $: items = resource.list()
+</script>
+
+<DocumentInfo title="Portfolio" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
+    <Container>
+        {#if items === Pending}
+            <Loading text="Fetching portfolio..." large />
+        {:else if items === Missing}
+            <Error title="Uh oh!" subtitle="Something went horribly wrong.">
+                <p>I recommend you try refreshing the page. If that doesn't fix it, I dunno, guess I need to fix something!</p>
+            </Error>
+        {:else}
+            <div class="item-holder">
+                {#each items.filter(it => it.publishedAt) as item}
+                    <a aria-label={item.title} class="item" href={new UrlBuilder().portfolioItem(item.id)} style="--article-color: var(--palette-{item.color});">
+                        <article>
+                            <section>
+                                <h1>{item.title}</h1>
+                                <div class="byline">
+                                    <date-display date={item.publishedAt} />
+                                    <span class="bullet">&bull;</span>
+                                    <span>{item.category}</span>
+                                </div>
+                                <p class="summary short">{item.summary}</p>
+                                <p class="summary long">{item.longSummary}</p>
+                            </section>
+                            <aside>
+                                <div class="circle">
+                                    <vector-icon icon={item.icon}></vector-icon>
+                                </div>
+                            </aside>
+                        </article>
+                    </a>
+                {/each}
+            </div>
+        {/if}
+    </Container>
+</DocumentInfo>
+
+<style>
+    .item-holder {
+        padding: var(--sizing-spacing-md);
+    }
+
+    .item {
+        display: block;
+        margin: 0 0 var(--sizing-spacing-md);
+        padding: 0;
+    }
+
+    a.item {
+        color: var(--skin-color-text);
+    }
+
+    a.item:hover {
+        text-decoration: none;
+    }
+
+    .item h1 {
+        font-size: var(--sizing-font-md);
+        font-weight: var(--typography-bold);
+        color: var(--palette-greyscale-100);
+        line-height: 1;
+        padding: var(--sizing-spacing-sm) calc(2 * var(--sizing-spacing-xl)) var(--sizing-spacing-sm) var(--sizing-spacing-sm);
+        margin-bottom: var(--sizing-spacing-sm);
+        background: var(--article-color);
+    }
+
+    .item .byline {
+        display: block;
+        opacity: 0.5;
+        margin-bottom: var(--sizing-spacing-sm);
+        font-size: 87.5%;
+        padding-left: var(--sizing-spacing-sm);
+    }
+
+    .item .bullet {
+        display: inline-block;
+        margin: 0 var(--sizing-spacing-xs);
+    }
+
+    .item .summary {
+        padding: 0 var(--sizing-spacing-sm) var(--sizing-spacing-sm) var(--sizing-spacing-sm);
+        margin-bottom: 0;
+    }
+
+    .item article {
+        position: relative;
+        background: var(--skin-color-content);
+    }
+
+    .item aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        font-size: calc(2.25 * var(--sizing-font-xs));
+    }
+
+    .circle {
+        background: var(--article-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25em;
+        height: 2.25em;
+        border-radius: 1.125em;
+        color: var(--palette-greyscale-100);
+        position: relative;
+        bottom: 0.375em;
+        left: 0.375em;
+    }
+
+    .item .summary.long {
+        display: none;
+    }
+
+    @media screen and (min-width: 75rem) {
+        .item-holder {
+            padding: var(--sizing-spacing-xl);
+        }
+
+        .item {
+            margin-bottom: var(--sizing-spacing-xl);
+            border-left: 0 solid var(--article-color);
+            width: 100%;
+            transition: border-left-width var(--transition-quick), width var(--transition-quick);
+        }
+
+        .item:hover {
+            border-left-width: var(--sizing-border-lg);
+            width: calc(100% + var(--sizing-border-lg));
+        }
+        
+        .item article {
+            display: flex;
+            background: var(--skin-color-content);
+        }
+
+        .item article section {
+            flex: 1;
+            padding: var(--sizing-spacing-md);
+        }
+
+        .item h1 {
+            margin-bottom: var(--sizing-spacing-xs);
+            padding: 0;
+            background: none;
+            color: var(--skin-color-text);
+        }
+
+        .item .byline {
+            padding: 0;
+        }
+
+        .item .summary {
+            padding: 0;
+        }
+
+        .item aside {
+            position: relative;
+            font-size: calc(4 * var(--sizing-font-xs));
+        }
+
+        .item .summary.short {
+            display: none;
+        }
+
+        .item .summary.long {
+            display: block;
+        }
+    }
+</style>

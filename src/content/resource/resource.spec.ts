@@ -1,9 +1,10 @@
 import path from 'path'
 import fs from 'fs/promises'
-import { posts } from '.'
+import { resource } from '.'
 import rimraf from 'rimraf'
 
-describe('posts content builder', () => {
+describe('resource content builder', () => {
+    const name = 'posts'
     const contentPath = path.resolve(__dirname, 'testing', 'posts')
     const outputPath = path.resolve(__dirname, 'testing', 'out')
 
@@ -36,7 +37,7 @@ describe('posts content builder', () => {
     }
 
     test('building', async () => {
-        await posts({ contentPath, outputPath })
+        await resource({ name, contentPath, outputPath })
 
         await expectEachFileCreated()
         await expectListIsOrdered()

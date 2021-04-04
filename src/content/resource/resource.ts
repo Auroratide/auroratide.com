@@ -4,6 +4,7 @@ import mkdirp from 'mkdirp'
 import marked from 'marked'
 
 interface Options {
+    name: string
     contentPath: string
     outputPath: string
 }
@@ -24,12 +25,12 @@ const stripOffContent = items => items.map(item => {
     return rest;
 })
 
-export const posts = async (options: Options) => {
+export const resource = async (options: Options) => {
     await mkdirp(options.outputPath)
 
     const items = await parseAll(options.contentPath)
     items.sort((lhs, rhs) => new Date(rhs.published_at).getTime() - new Date(lhs.published_at).getTime())
 
-    await fs.writeFile(path.join(options.outputPath, 'index.json'), JSON.stringify({ posts: stripOffContent(items) }), { encoding: 'utf-8' })
+    await fs.writeFile(path.join(options.outputPath, 'index.json'), JSON.stringify({ [options.name]: stripOffContent(items) }), { encoding: 'utf-8' })
     await Promise.all(items.map(async item => await fs.writeFile(path.join(options.outputPath, `${item.id}.json`), JSON.stringify(item), { encoding: 'utf-8' })))
 }

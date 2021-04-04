@@ -1,0 +1,21 @@
+{
+    "id": "$SLUG$",
+    "title": "",
+    "category": "",
+    "icon": "",
+    "color": "",
+    "summary": "",
+    "long_summary": "",
+    "published_at": "",
+    "created_at": "$DATE$",
+    "links": [ {
+        "title": "",
+        "href": "",
+        "icon": "",
+        "color": ""
+    } ],
+    "gallery": [ {
+        "image": "",
+        "caption": ""
+    } ]
+}
