@@ -1,0 +1,28 @@
+#noscript-error {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+#noscript-error h1 {
+    font-size: 7em;
+    text-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.333);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 0.25em;
+}
+
+#noscript-error h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+#noscript-error .content {
+    margin: 0 auto;
+}
+
+#noscript-error .content p {
+    text-align: center;
+}
