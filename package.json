@@ -5,7 +5,7 @@
   "scripts": {
     "start": "serve -l 3000",
     "ci": "npm-run-all validate test build",
-    "dev": "npm run build:content && npm-run-all --parallel 'build:client -- -w' start",
+    "dev": "npm run build:content && npm-run-all --parallel \"build:client -- -w\" start",
     "build": "npm-run-all build:client build:content",
     "build:client": "rollup -c",
     "build:content": "ts-node src/content/index.ts",
