@@ -18,6 +18,7 @@ export const IconName = {
     Fire: 'fire',
     Folder: 'folder',
     Gamepad: 'gamepad',
+    Gavel: 'gavel',
     HandPointer: 'hand-pointer',
     HospitalAlt: 'hospital-alt',
     HourglassHalf: 'hourglass-half',

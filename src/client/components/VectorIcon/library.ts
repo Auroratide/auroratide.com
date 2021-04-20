@@ -18,6 +18,7 @@ import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
 import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
+import { faGavel } from '@fortawesome/free-solid-svg-icons/faGavel'
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
@@ -67,6 +68,7 @@ export const library = {
     [IconName.Fire]: faFire,
     [IconName.Folder]: faFolder,
     [IconName.Gamepad]: faGamepad,
+    [IconName.Gavel]: faGavel,
     [IconName.HandPointer]: faHandPointer,
     [IconName.HospitalAlt]: faHospitalAlt,
     [IconName.HourglassHalf]: faHourglassHalf,
