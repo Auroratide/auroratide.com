@@ -3,6 +3,7 @@ import './DateDisplay'
 import './DecrementorWidget'
 import './HorizontalFlex'
 import './MaslowsHierarchyOfNeeds'
+import './PopoutImage'
 import './ResponsiveImage'
 import './SideText'
 

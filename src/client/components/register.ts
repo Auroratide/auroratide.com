@@ -4,7 +4,6 @@ import { ArticleImage } from './ArticleImage'
 import { ConnectNineDots } from './ConnectNineDots'
 import { ImageSteganographer } from './ImageSteganographer'
 import { MajorPoint } from './MajorPoint'
-import { PopoutImage } from './PopoutImage'
 import { VectorIcon } from './VectorIcon'
 import { WhodokuWidget } from './WhodokuWidget'
 
@@ -13,7 +12,6 @@ export const register = () => {
     connect(ConnectNineDots)
     connect(ImageSteganographer)
     connect(MajorPoint)
-    connect(PopoutImage)
     connect(VectorIcon)
     connect(WhodokuWidget)
 }

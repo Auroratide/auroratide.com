@@ -241,6 +241,12 @@ side-text p:last-child {
     margin-bottom: 0;
 }
 
+/* Needed since popout-image adds this class to the body */
+.popout-stopscroll {
+    position: fixed;
+    width: 100%;
+}
+
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 75rem) {

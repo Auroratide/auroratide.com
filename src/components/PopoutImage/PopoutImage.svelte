@@ -1,3 +1,5 @@
+<svelte:options tag="popout-image" />
+
 <script lang="ts">
     import { fade } from 'svelte/transition';
 
@@ -27,7 +29,7 @@
 {/if}
 
 <style>
-    :host, :global(popout-image) {
+    :host {
         display: inline-block;
     }
 
@@ -62,10 +64,5 @@
         max-width: 90vw;
         max-height: 90vh;
         object-fit: contain;
-    }
-
-    :global(.popout-stopscroll) {
-        position: fixed;
-        width: 100%;
     }
 </style>
