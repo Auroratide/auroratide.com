@@ -1,0 +1,3 @@
+import './SideText'
+
+export default { }

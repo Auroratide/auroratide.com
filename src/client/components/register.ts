@@ -11,7 +11,6 @@ import { MajorPoint } from './MajorPoint'
 import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
 import { PopoutImage } from './PopoutImage'
 import { ResponsiveImage } from './ResponsiveImage'
-import { SideText } from './SideText'
 import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
 import { WhodokuWidget } from './WhodokuWidget'
@@ -28,7 +27,6 @@ export const register = () => {
     connect(MaslowsHierarchyOfNeeds)
     connect(PopoutImage)
     connect(ResponsiveImage)
-    connect(SideText)
     connect(SubTheme)
     connect(VectorIcon)
     connect(WhodokuWidget)
