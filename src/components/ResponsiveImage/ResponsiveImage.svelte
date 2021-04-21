@@ -1,3 +1,5 @@
+<svelte:options tag="responsive-image" />
+
 <script lang="ts">
     import { onMount } from 'svelte'
     import { fade } from 'svelte/transition'
@@ -33,7 +35,7 @@
 
 
 <style>
-    :host, :global(responsive-image) {
+    :host {
         position: relative;
         display: inline-block;
         overflow: hidden;

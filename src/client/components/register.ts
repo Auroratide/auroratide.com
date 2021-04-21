@@ -8,7 +8,6 @@ import { ImageSteganographer } from './ImageSteganographer'
 import { MajorPoint } from './MajorPoint'
 import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
 import { PopoutImage } from './PopoutImage'
-import { ResponsiveImage } from './ResponsiveImage'
 import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
 import { WhodokuWidget } from './WhodokuWidget'
@@ -22,7 +21,6 @@ export const register = () => {
     connect(MajorPoint)
     connect(MaslowsHierarchyOfNeeds)
     connect(PopoutImage)
-    connect(ResponsiveImage)
     connect(SubTheme)
     connect(VectorIcon)
     connect(WhodokuWidget)
