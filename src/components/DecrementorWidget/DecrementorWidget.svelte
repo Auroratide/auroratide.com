@@ -1,3 +1,5 @@
+<svelte:options tag="decrementor-widget" />
+
 <script lang="ts">
     export let initialvalue: number
     export let increment: number
@@ -7,10 +9,10 @@
 </script>
 
 <div class="value">{value}</div>
-<button on:click={decrement}>Decrement</button>
+<button part="button" on:click={decrement}>Decrement</button>
 
 <style>
-    :host, :global(decrementor-widget) {
+    :host {
         display: block;
         text-align: center;
         margin-bottom: 2em;
