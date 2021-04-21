@@ -1,3 +1,5 @@
+<svelte:options tag="maslows-hierarchy-of-needs" />
+
 <figure>
     <div class="layer self-actualization">
         <strong>Self-Actualization</strong>
@@ -22,7 +24,7 @@
 </figure>
 
 <style>
-    :host, :global(maslows-hierarchy-of-needs) {
+    :host {
         display: block;
         margin-bottom: 1.5em;
     }

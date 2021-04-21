@@ -5,7 +5,6 @@ import { ConnectNineDots } from './ConnectNineDots'
 import { HorizontalFlex } from './HorizontalFlex'
 import { ImageSteganographer } from './ImageSteganographer'
 import { MajorPoint } from './MajorPoint'
-import { MaslowsHierarchyOfNeeds } from './MaslowsHierarchyOfNeeds'
 import { PopoutImage } from './PopoutImage'
 import { SubTheme } from './SubTheme'
 import { VectorIcon } from './VectorIcon'
@@ -17,7 +16,6 @@ export const register = () => {
     connect(HorizontalFlex)
     connect(ImageSteganographer)
     connect(MajorPoint)
-    connect(MaslowsHierarchyOfNeeds)
     connect(PopoutImage)
     connect(SubTheme)
     connect(VectorIcon)
