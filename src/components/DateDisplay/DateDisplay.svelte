@@ -1,3 +1,5 @@
+<svelte:options tag="date-display" />
+
 <script lang="ts">
     export let date: Date
     let forceDate: Date
