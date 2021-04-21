@@ -122,7 +122,7 @@ Let's pause to notice a few things:
 
 Now that we have a test, we can write a nice little component like so:
 
-<sub-theme success>
+<div class="success">
 
 ```jsx
 import React, { useState } from 'react';
@@ -140,11 +140,11 @@ const Decrementor = ({ initialValue }) => {
 export default Decrementor;
 ```
 
-</sub-theme>
+</div>
 
 We decided to use hooks because, y'know, they're the new thing and all, but we didn't have to. Nicely, the following implementation using a MobX class also passes despite being _completely different_:
 
-<sub-theme success>
+<div class="success">
 
 ```jsx
 import React, { useState } from 'react';
@@ -176,7 +176,7 @@ const Decrementor = observer(({ initialValue }) => {
 export default Decrementor;
 ```
 
-</sub-theme>
+</div>
 
 Even though the state management paradigm is completely different, the test passes all the same. That's because the test only concerned itself with the _surface_ of the component. In the end, what the component does is what the user really cares about, not how it works.
 

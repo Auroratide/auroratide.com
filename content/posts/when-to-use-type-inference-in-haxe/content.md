@@ -43,23 +43,23 @@ var grid = makeNumberCube();
 
 Given that, though, there are still some places where I still would prefer to always manually type my fields. Function parameters, for instance, should be typed unless a default value is provided. Haxe is still able to infer the types of the parameters on its own, but leaving out the types dramatically reduces the readability of the function. As the typenames are integral to how a function is used, it is good practice to continue writing them.
 
-<sub-theme danger>
+<div class="danger">
 
 ```haxe
 //  Do the rgb values go from 0-255, or from 0.0-1.0?
 function rgbToHex(r, g, b): String { }
 ```
 
-</sub-theme>
+</div>
 
-<sub-theme success>
+<div class="success">
 
 ```haxe
 //  Now it is obvious from the type that it goes from 0-255
 function rgbToHex(r: Int, g: Int, b: Int): String { }
 ```
 
-</sub-theme>
+</div>
 
 The same is true for a function's return type.
 
@@ -76,7 +76,7 @@ class Ellipse{
 
 The second case for which you need to specify a type if the compiler is guaranteed to infer a type you do not intend. It sounds like this shouldn't happen, but when working with inheritance, it can happen often. Say for instance that you have a Shape class. Both Triangle and Circle extend Shape. Now, let's say that you are making an array of shapes, but you initially fill the array with just Triangles. Later, you attempt to add a Circle:
 
-<sub-theme danger>
+<div class="danger">
 
 ```haxe
 var t1 = new Triangle();
@@ -88,7 +88,7 @@ var a = [t1, t2];
 a.push(c1);
 ```
 
-</sub-theme>
+</div>
 
 This will actually throw a compiler error. Why? Simply, `a` is inferred to be an Array&lt;Triangle&gt;, but we're trying to add a Circle! In this case, you must manually specify that `a` is an Array&lt;Shape&gt;.
 

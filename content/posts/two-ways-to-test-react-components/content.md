@@ -43,7 +43,7 @@ Since components tend to change a lot, we actually want the tests to _reflect_ t
 
 Notice what we're **not** testing for! Render tests do not cover the component's structure or that the class names are correct. Structure is very volatile, so we don't want tests locking that structure in place. In other words, we want to _avoid_ tests that look like this:
 
-<sub-theme danger>
+<div class="danger">
 
 ```jsx
 // Avoid! This test is too opinionated about structure.
@@ -54,11 +54,11 @@ it('renders the title', () => {
 });
 ```
 
-</sub-theme>
+</div>
 
 Instead we want to keep our test more flexible to change:
 
-<sub-theme success>
+<div class="success">
 
 ```jsx
 // Better! We only actually care that the title is somewhere in the component.
@@ -69,7 +69,7 @@ it('renders the title', () => {
 });
 ```
 
-</sub-theme>
+</div>
 
 Rendering is a function, and like all Javascript functions needs to be tested. But we only want to test the _logic_ and not the _structure_ of the component! Remember to keep these tests small and few in order to keep the component flexible.
 
