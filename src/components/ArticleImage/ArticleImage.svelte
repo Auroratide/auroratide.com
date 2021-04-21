@@ -1,3 +1,5 @@
+<svelte:options tag="article-image" />
+
 <script lang="ts">
     import { Size } from './Size'
 
@@ -15,7 +17,7 @@
 </figure>
 
 <style>
-    :host, :global(article-image) {
+    :host {
         display: block;
     }
 

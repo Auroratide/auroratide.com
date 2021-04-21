@@ -1,3 +1,4 @@
+import './ArticleImage'
 import './ColoredText'
 import './DateDisplay'
 import './DecrementorWidget'
