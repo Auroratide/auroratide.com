@@ -1,9 +1,11 @@
+<svelte:options tag="horizontal-flex" />
+
 <div class="horizontal-flex">
     <slot></slot>
 </div>
 
 <style>
-    :host, :global(horizontal-flex) {
+    :host {
         display: block;
     }
 
@@ -13,7 +15,7 @@
         flex-wrap: wrap;
     }
 
-    .horizontal-flex > :global(*) {
+    .horizontal-flex > ::slotted(*) {
         margin: 0 0.5rem 1.5rem;
     }
 </style>
