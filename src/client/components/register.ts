@@ -1,7 +1,6 @@
 import connect from './connect'
 
 import { ArticleImage } from './ArticleImage'
-import { ColoredText } from './ColoredText'
 import { ConnectNineDots } from './ConnectNineDots'
 import { DateDisplay } from './DateDisplay'
 import { DecrementorWidget } from './DecrementorWidget'
@@ -17,7 +16,6 @@ import { WhodokuWidget } from './WhodokuWidget'
 
 export const register = () => {
     connect(ArticleImage)
-    connect(ColoredText)
     connect(ConnectNineDots)
     connect(DateDisplay)
     connect(DecrementorWidget)
