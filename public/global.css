@@ -241,6 +241,10 @@ side-text p:last-child {
     margin-bottom: 0;
 }
 
+major-point p {
+    text-align: center;
+}
+
 /* Needed since popout-image adds this class to the body */
 .popout-stopscroll {
     position: fixed;

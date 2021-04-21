@@ -1,7 +1,11 @@
-<slot></slot>
+<svelte:options tag="major-point" />
+
+<strong class="major-point">
+    <slot></slot>
+</strong>
 
 <style>
-    :host, :global(major-point) {
+    :host {
         display: block;
         font-size: 1.5em;
         text-align: center;
@@ -11,7 +15,12 @@
         line-height: 1.5;
     }
 
-    :global(major-point p) {
+    .major-point {
+        display: block;
+        font-weight: normal;
+    }
+
+    .major-point ::slotted(p) {
         text-align: center;
     }
 </style>
