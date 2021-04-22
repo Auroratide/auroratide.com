@@ -1,5 +1,6 @@
 import './ArticleImage'
 import './ColoredText'
+import './ConnectNineDots'
 import './DateDisplay'
 import './DecrementorWidget'
 import './HorizontalFlex'

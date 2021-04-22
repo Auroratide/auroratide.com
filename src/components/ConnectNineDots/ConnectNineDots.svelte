@@ -1,10 +1,9 @@
+<svelte:options tag="connect-nine-dots" />
+
 <script lang="ts">
     import { LineMaker } from './LineMaker'
     import { Point } from './geometry/Point'
     import { Circle } from './geometry/Circle'
-    import Dot from './Dot.svelte'
-    import Line from './Line.svelte'
-    import LastClicked from './LastClicked.svelte'
 
     export let assetspath: string
 
@@ -36,28 +35,40 @@
     }
 
     const handleReset = () => lineMaker = lineMaker.reset()
+
+    const translation = (angle: Angle) => -50 * Math.cos(angle.radians)
 </script>
 
 <div class="connect-nine-dots">
     <div class="puzzle-area" class:success class:failure={!success && lineMaker.atLimit} data-testid="puzzle-area">
         <div class="dot-area" bind:this={dots}>
             {#each nine as _}
-                <Dot {assetspath} />
+                <img class="dot" src="{assetspath}/dot.png" alt="Dot" />
             {/each}
         </div>
         <div class="line-area" on:click={handleClick} bind:this={lines} data-testid="line-area">
             {#each lineMaker.lines as line}
-                <Line {assetspath} {line} />
+                <img class="line" src="{assetspath}/line.png" alt="Line" style={`
+                    left: ${line.origin.x}px;
+                    top: ${line.origin.y}px;
+                    width: ${line.length}px;
+                    transform: rotate(${line.angle.degrees}deg) translate(0, ${translation(line.angle)}%);
+                `} />
             {/each}
         </div>
         {#if lineMaker.lastPoint && !lineMaker.atLimit}
-            <LastClicked at={lineMaker.lastPoint} />
+            <vector-icon class="last-clicked" title="Last Clicked" icon="crosshairs" style="left: {lineMaker.lastPoint.x}px; top: {lineMaker.lastPoint.y}px;" />
         {/if}
     </div>
-    <button on:click={handleReset}>Reset</button>
+    <button part="button" on:click={handleReset}>Reset</button>
 </div>
 
 <style>
+    :host {
+        display: block;
+        margin-bottom: 1.5em;
+    }
+
     .connect-nine-dots {
         display: flex;
         flex-direction: column;
@@ -90,11 +101,36 @@
         justify-content: center;
     }
 
+    .dot {
+        width: var(--dot-size);
+        height: var(--dot-size);
+    }
+
     .line-area {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+    }
+
+    .line {
+        position: absolute;
+        transform-origin: center left;
+        height: 0.625em;
+    }
+
+    .last-clicked {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: grow-shrink 1024ms;
+        animation-iteration-count: infinite;
+        opacity: 0.667;
+    }
+
+    @keyframes grow-shrink {
+        0% { font-size: 1em; }
+        50% { font-size: 1.5em; }
+        100% { font-size: 1em; }
     }
 </style>
