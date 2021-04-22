@@ -1,3 +1,5 @@
+<svelte:options tag="vector-icon" />
+
 <script lang="ts">
     import { library } from './library'
 
@@ -29,7 +31,7 @@
 </svg>
 
 <style>
-    :host, :global(vector-icon) {
+    :host {
         display: inline-block;
         height: 1em;
         line-height: 1;

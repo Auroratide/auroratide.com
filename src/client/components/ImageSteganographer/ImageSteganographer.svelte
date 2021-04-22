@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import { Canvas } from './Canvas'
-    import { IconName } from '@/client/components/VectorIcon/IconName'
+    import { IconName } from '@/components/VectorIcon/IconName'
     import { Steganographer } from './Steganographer'
     import { Status } from './Status'
     import { burst } from './burst'

@@ -1,4 +1,4 @@
-import { IconName } from './components/VectorIcon/IconName'
+import { IconName } from '@/components/VectorIcon/IconName'
 import { Palette } from './palette'
 
 export type Social = {
