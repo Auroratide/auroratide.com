@@ -1,6 +1,7 @@
 <svelte:options tag="connect-nine-dots" />
 
 <script lang="ts">
+    import type { Angle } from './geometry/Angle'
     import { LineMaker } from './LineMaker'
     import { Point } from './geometry/Point'
     import { Circle } from './geometry/Circle'
