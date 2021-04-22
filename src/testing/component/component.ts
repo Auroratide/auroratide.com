@@ -5,7 +5,7 @@ import type { SvelteComponent } from 'svelte'
 export class SvelteRenderBuilder {
     private _component: typeof SvelteComponent
     private _props: Record<string, any>
-    private _slot?: Node
+    private _slot?: Node[]
 
     constructor(component: typeof SvelteComponent) {
         this._component = component
@@ -19,13 +19,16 @@ export class SvelteRenderBuilder {
     }
 
     slot(element: Element)
+    slot(elements: Element[])
     slot(text: string)
 
     slot(value: any): SvelteRenderBuilder {
         if (typeof value === typeof '') {
-            this._slot = document.createTextNode(value)
-        } else if (value instanceof Element) {
+            this._slot = [ document.createTextNode(value) ]
+        } else if (Array.isArray(value)) {
             this._slot = value
+        } else if (value instanceof Element) {
+            this._slot = [ value ]
         }
 
         return this
@@ -36,7 +39,7 @@ export class SvelteRenderBuilder {
             props: this._slot !== null ? Object.assign({}, this._props, {
                 $$scope: {},
                 $$slots: createSlot({
-                    default: [ this._slot ]
+                    default: this._slot
                 })
             }) : this._props
         })

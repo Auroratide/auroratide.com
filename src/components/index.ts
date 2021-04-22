@@ -10,6 +10,7 @@ import './MaslowsHierarchyOfNeeds'
 import './PopoutImage'
 import './ResponsiveImage'
 import './SideText'
+import './SlideShow'
 import './VectorIcon'
 import './WhodokuWidget'
 
