@@ -64,6 +64,8 @@
         <div class="slides" style="left: -{100 * current}%">
             <slot></slot>
         </div>
+        <button class="prev slide-button" aria-hidden="true" on:click={prev}><vector-icon icon="angle-left" /></button>
+        <button class="next slide-button" aria-hidden="true" on:click={next}><vector-icon icon="angle-right" /></button>
     </div>
     <nav>
         <button part="button" on:click={prev} disabled={!buttonsActive}>Prev</button>
@@ -96,6 +98,38 @@
     nav {
         display: flex;
         justify-content: space-between;
+    }
+
+    .slide-button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        font-size: 2em;
+        width: 20%;
+        opacity: 0.25;
+        border: none;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 1;
+    }
+
+    .slide-button:hover, .slide-button:active {
+        opacity: 0.333;
+    }
+
+    .slide-button:active {
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .slide-button.prev {
+        left: 0;
+        text-align: left;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+    }
+
+    .slide-button.next {
+        right: 0;
+        text-align: right;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
     }
 
     ::slotted(*) {

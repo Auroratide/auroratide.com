@@ -3,6 +3,10 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons/faAngleDoub
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons/faAngleDoubleLeft'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons/faAngleDoubleRight'
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDoubleUp'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons/faAngleDown'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons/faAngleLeft'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons/faAngleUp'
 import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
@@ -53,6 +57,10 @@ export const library = {
     [IconName.AngleDoubleLeft]: faAngleDoubleLeft,
     [IconName.AngleDoubleRight]: faAngleDoubleRight,
     [IconName.AngleDoubleUp]: faAngleDoubleUp,
+    [IconName.AngleDown]: faAngleDown,
+    [IconName.AngleLeft]: faAngleLeft,
+    [IconName.AngleRight]: faAngleRight,
+    [IconName.AngleUp]: faAngleUp,
     [IconName.Bomb]: faBomb,
     [IconName.BookOpen]: faBookOpen,
     [IconName.Calculator]: faCalculator,
