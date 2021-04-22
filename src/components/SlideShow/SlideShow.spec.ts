@@ -1,6 +1,6 @@
 import { SlideShow } from '.'
 import { component } from '@/testing/component'
-import { screen, fireEvent, prettyDOM } from '@testing-library/svelte'
+import { screen, fireEvent } from '@testing-library/svelte'
 import './toBeShowing'
 
 describe('SlideShow', () => {

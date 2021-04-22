@@ -7,6 +7,7 @@
     let container: HTMLElement
     let slides: HTMLElement[]
     let current: number = 0
+    let buttonsActive: boolean = false
 
     const nonNegMod = (n: number, mod: number): number => ((n % mod) + mod) % mod
     const setSlideVisibility = () => {
@@ -16,6 +17,10 @@
 
     const setSlides = (value: HTMLCollection) => {
         slides = Array.from(value) as HTMLElement[]
+        slides.forEach(el => {
+            el.style.maxWidth = width
+            el.style.maxHeight = height
+        })
         setSlideVisibility()
     }
 
@@ -36,10 +41,12 @@
                 
                 waitUntilChildrenExist()
             } else {
-                setSlides(container.children[0].children)
+                setSlides(container.querySelector('.slides').children)
             }
         }
     }
+
+    $: buttonsActive = slides ? true : false
 
     const next = () => {
         current = nonNegMod(current + 1, slides.length)
@@ -52,32 +59,50 @@
     }
 </script>
 
-<figure class="slide-show" style="width: {width}; height: {height};" bind:this={container}>
-    <div class="slides" style="left: -{parseInt(width) * current}px">
-        <slot></slot>
+<figure class="slide-show" style="max-width: {width};" bind:this={container}>
+    <div class="container">
+        <div class="slides" style="left: -{100 * current}%">
+            <slot></slot>
+        </div>
     </div>
+    <nav>
+        <button part="button" on:click={prev} disabled={!buttonsActive}>Prev</button>
+        <button part="button" on:click={next} disabled={!buttonsActive}>Next</button>
+    </nav>
 </figure>
-<button on:click={prev}>Prev</button>
-<button on:click={next}>Next</button>
 
 <style>
     :host {
         display: block;
+        margin-bottom: 1.5em;
     }
 
     .slide-show {
-        position: relative;
         margin: auto;
+    }
+
+    .container {
+        position: relative;
         overflow: hidden;
+        margin-bottom: 0.5em;
     }
 
     .slides {
         position: relative;
         display: flex;
-        transition: left 500ms ease-out;
+        transition: left 400ms ease-out;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
     }
 
     ::slotted(*) {
-        transition: opacity 500ms linear;
+        flex: 1 0 auto;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        transition: opacity 400ms linear;
     }
 </style>
