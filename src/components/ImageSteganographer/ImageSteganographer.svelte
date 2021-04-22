@@ -1,3 +1,5 @@
+<svelte:options tag="image-steganographer" />
+
 <script lang="ts">
     import { onMount } from 'svelte'
     import { Canvas } from './Canvas'
@@ -72,17 +74,17 @@
     <div class="area image-area">
         <strong class="area-title">Image</strong>
         <img alt="Steganography" src={canvas?.base64} />
-        <button class="secondary"><label class="image-selector">
+        <button part="button secondary"><label class="image-selector">
             Select Image <input type="file" on:change={handleUpload} />
         </label></button>
     </div>
     <div class="area action-area">
-        <button on:click={handleEncode}>
+        <button part="button" on:click={handleEncode}>
             <vector-icon icon={IconName.AngleDoubleUp} />
             <span>Encode</span>
             <vector-icon icon={IconName.AngleDoubleUp} />
         </button>
-        <button on:click={handleDecode}>
+        <button part="button" on:click={handleDecode}>
             <vector-icon icon={IconName.AngleDoubleDown} />
             <span>Decode</span>
             <vector-icon icon={IconName.AngleDoubleDown} />
@@ -90,7 +92,7 @@
     </div>
     <div class="area message-area">
         <strong class="area-title"><label for="steganography-message-input">Message</label></strong>
-        <textarea bind:value={message} id="steganography-message-input"></textarea>
+        <textarea part="textarea" bind:value={message} id="steganography-message-input"></textarea>
     </div>
     {#if showFeedback}
         <div in:burst={{duration: 400}} class="feedback {status.type}"></div>
@@ -102,7 +104,7 @@
 </div>
 
 <style>
-    :host, :global(image-steganographer) {
+    :host {
         display: block;
         margin-bottom: 1.5em;
     }
@@ -191,4 +193,8 @@
     }
 
     canvas { display: none; }
+
+    button vector-icon {
+        vertical-align: -0.125em;
+    }
 </style>

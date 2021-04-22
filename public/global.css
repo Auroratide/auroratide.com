@@ -133,20 +133,22 @@ button[disabled] {
     cursor: not-allowed;
 }
 
-button vector-icon, .as-button vector-icon, ::part(button) vector-icon {
+button vector-icon, .as-button vector-icon {
     vertical-align: -0.125em;
 }
 
 /* Inputs
    ========================================================================== */
-textarea {
+textarea, ::part(textarea) {
+    font-family: var(--skin-font-text);
+    font-size: 1em;
     border: var(--sizing-border-sm) solid var(--skin-color-bg);
     border-radius: 0.25em;
     padding: var(--sizing-spacing-sm);
     transition: border-color var(--transition-quick);
 }
 
-textarea:focus {
+textarea:focus, ::part(textarea):focus {
     border-color: var(--skin-color-primary);
     outline: none;
 }
