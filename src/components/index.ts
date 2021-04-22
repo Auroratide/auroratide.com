@@ -8,5 +8,6 @@ import './MaslowsHierarchyOfNeeds'
 import './PopoutImage'
 import './ResponsiveImage'
 import './SideText'
+import './WhodokuWidget'
 
 export default { }

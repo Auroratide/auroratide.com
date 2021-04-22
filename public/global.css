@@ -125,7 +125,7 @@ button:active::before, .as-button:active::before, ::part(button):active::before 
     box-shadow: 0 0 0 1em var(--palette-shade-033) inset;
 }
 
-button.secondary, .as-button.secondary, .secondary::part(button) {
+button.secondary, .as-button.secondary, ::part(button secondary) {
     --btn-color: var(--skin-color-secondary);
 }
 
