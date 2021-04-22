@@ -10,10 +10,6 @@
     let buttonsActive: boolean = false
 
     const nonNegMod = (n: number, mod: number): number => ((n % mod) + mod) % mod
-    const setSlideVisibility = () => {
-        slides.forEach(el => el.style.opacity = '0.5')
-        slides[current].style.opacity = '1'
-    }
 
     const setSlides = (value: HTMLCollection) => {
         slides = Array.from(value) as HTMLElement[]
@@ -21,7 +17,8 @@
             el.style.maxWidth = width
             el.style.maxHeight = height
         })
-        setSlideVisibility()
+
+        current = 0
     }
 
     $: {
@@ -46,17 +43,17 @@
         }
     }
 
+    $: {
+        if (slides) {
+            slides.forEach(el => el.style.opacity = '0.5')
+            slides[current].style.opacity = '1'
+        }
+    }
+
     $: buttonsActive = slides ? true : false
 
-    const next = () => {
-        current = nonNegMod(current + 1, slides.length)
-        setSlideVisibility()
-    }
-
-    const prev = () => {
-        current = nonNegMod(current - 1, slides.length)
-        setSlideVisibility()
-    }
+    const next = () => current = nonNegMod(current + 1, slides.length)
+    const prev = () => current = nonNegMod(current - 1, slides.length)
 </script>
 
 <figure class="slide-show" style="max-width: {width};" bind:this={container}>
@@ -110,6 +107,7 @@
         border: none;
         color: rgba(0, 0, 0, 0.5);
         line-height: 1;
+        cursor: pointer;
     }
 
     .slide-button:hover, .slide-button:active {
