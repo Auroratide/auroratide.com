@@ -8,17 +8,24 @@
     let slides: HTMLElement[]
     let current: number = 0
 
+    const nonNegMod = (n: number, mod: number): number => ((n % mod) + mod) % mod
+    const setSlideVisibility = () => {
+        slides.forEach(el => el.style.opacity = '0.5')
+        slides[current].style.opacity = '1'
+    }
+
     const setSlides = (value: HTMLCollection) => {
         slides = Array.from(value) as HTMLElement[]
-        slides.forEach(el => {
-            el.style.opacity = '0.5'
-        })
-        slides[current].style.opacity = '1'
+        setSlideVisibility()
     }
 
     $: {
         if (container) {
+            // This horrible if statement is necessary since, unfortunately, the test does not
+            // render web components very well; hence, the test is done in vanilla Svelte
             if ((container.parentNode as ShadowRoot).host) {
+                // For some reason, the DOM only registers that children exist after Svelte
+                // has fully finished updating. So, we wait until there are children.
                 const waitUntilChildrenExist = () => {
                     if ((container.parentNode as ShadowRoot).host.children.length > 0) {
                         setSlides((container.parentNode as ShadowRoot).host.children)
@@ -35,19 +42,13 @@
     }
 
     const next = () => {
-        current = (((current + 1) % slides.length) + slides.length) % slides.length
-        slides.forEach(el => {
-            el.style.opacity = '0.5'
-        })
-        slides[current].style.opacity = '1'
+        current = nonNegMod(current + 1, slides.length)
+        setSlideVisibility()
     }
 
     const prev = () => {
-        current = (((current - 1) % slides.length) + slides.length) % slides.length
-        slides.forEach(el => {
-            el.style.opacity = '0.5'
-        })
-        slides[current].style.opacity = '1'
+        current = nonNegMod(current - 1, slides.length)
+        setSlideVisibility()
     }
 </script>
 
