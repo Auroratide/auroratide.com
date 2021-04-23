@@ -52,6 +52,8 @@ import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverf
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
 import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
 
+import { kafka } from './custom/kafka'
+
 export const library = {
     [IconName.AngleDoubleDown]: faAngleDoubleDown,
     [IconName.AngleDoubleLeft]: faAngleDoubleLeft,
@@ -102,6 +104,7 @@ export const library = {
     [IconName.LinkedIn]: faLinkedinIn,
     [IconName.Github]: faGithub,
     [IconName.GithubAlt]: faGithubAlt,
+    [IconName.Kafka]: kafka,
     [IconName.StackOverflow]: faStackOverflow,
     [IconName.Unity]: faUnity,
     [IconName.Windows]: faWindows,

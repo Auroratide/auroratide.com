@@ -12,7 +12,8 @@
     $: {
         iconData = library[icon]
         if (iconData) {
-            viewBox = `0 0 ${iconData.icon[0]} ${iconData.icon[1]}`
+            let offset = iconData.offset ?? [0, 0]
+            viewBox = `${offset[0]} ${offset[1]} ${iconData.icon[0]} ${iconData.icon[1]}`
             path = iconData.icon[4]
         }
     }

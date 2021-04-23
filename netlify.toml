@@ -66,6 +66,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/meet-kafka"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/nicely-testing-react-components"
   to = "/index.html"
   status = 200

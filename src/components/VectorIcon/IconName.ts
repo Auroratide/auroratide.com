@@ -48,6 +48,7 @@ export const IconName = {
     LinkedIn: 'linked-in',
     Github: 'github',
     GithubAlt: 'github-alt',
+    Kafka: 'kafka',
     StackOverflow: 'stack-overflow',
     Unity: 'unity',
     Windows: 'windows',
