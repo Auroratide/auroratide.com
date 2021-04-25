@@ -1,7 +1,7 @@
 <svelte:options tag="popout-image" />
 
 <script lang="ts">
-    import { fade } from './fade'
+    import { fade } from '@auroratide/svelte-custom-element-transitions'
 
     export let src: string
     export let alt: string

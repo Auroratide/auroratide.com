@@ -2,7 +2,7 @@
 
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { fade } from './fade'
+    import { fade } from '@auroratide/svelte-custom-element-transitions'
 
     export let src: string
     export let alt: string

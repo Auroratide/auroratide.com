@@ -58,6 +58,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@auroratide/svelte-custom-element-transitions": "^0.1.1",
     "@auroratide/wait": "^0.2.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
