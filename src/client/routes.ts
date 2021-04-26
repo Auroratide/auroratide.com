@@ -41,7 +41,7 @@ export type Navigation = {
     visibility: NavVisibility,
 }
 
-export const navigation: Record<'Posts' | 'Portfolio' | 'About' | 'Legal' | 'Whodoku', Navigation> = {
+export const navigation: Record<'Posts' | 'Portfolio' | 'About' | 'Legal' | 'Whodoku' | 'Styleguide', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',
@@ -66,7 +66,12 @@ export const navigation: Record<'Posts' | 'Portfolio' | 'About' | 'Legal' | 'Who
         name: 'Whodoku',
         link: '/whodoku',
         visibility: NavVisibility.Hidden,
-    }
+    },
+    Styleguide: {
+        name: 'Styleguide',
+        link: '/styleguide',
+        visibility: NavVisibility.Hidden,
+    },
 }
 
 export class UrlBuilder {

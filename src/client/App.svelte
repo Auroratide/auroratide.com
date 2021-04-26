@@ -14,6 +14,7 @@
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
     import { WhodokuPage } from './WhodokuPage'
+    import { Styleguide } from './Styleguide'
     import { PageNotFound } from './PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
     import { navigation } from './routes'
@@ -49,6 +50,7 @@
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
     page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
+    page(navigation.Styleguide.link, () => context = { component: Styleguide, params: {} })
     page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()
