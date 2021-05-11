@@ -253,6 +253,23 @@ major-point p {
     width: 100%;
 }
 
+/* Needed since shadow styling cannot style the light dom */
+point-compilation ul, point-compilation ol {
+    margin-bottom: 0;
+}
+
+point-compilation .highlight {
+    font-weight: bold;
+}
+
+point-compilation .mute {
+    opacity: 0.33;
+}
+
+point-compilation .hide {
+    display: none;
+}
+
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 75rem) {
