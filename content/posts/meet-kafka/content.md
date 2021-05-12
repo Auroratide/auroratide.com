@@ -106,7 +106,13 @@ That's fine! Kirk has a clever idea.
 
 He can set up _mailboxes_ for different kinds of messages! Casual messages will go into the Casual mailbox, and Business messages will go into the Business mailbox. Carol can then _subscribe_ to only the Casual mailbox and therefore only receive casual messages.
 
-TODO SLIDES FOR HOW THE MAILBOX IDEA WORKS
+<slide-show width="960px" height="540px" mode="fade">
+  <popout-image src="/assets/posts/meet-kafka/topics-01.png" alt="Topics Example Slide 1"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/topics-02.png" alt="Topics Example Slide 2"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/topics-03.png" alt="Topics Example Slide 3"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/topics-04.png" alt="Topics Example Slide 4"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/topics-05.png" alt="Topics Example Slide 5"></popout-image>
+</slide-show>
 
 Notice what this mailbox strategy accomplishes:
 
