@@ -48,7 +48,7 @@
 
     $: {
         if (slides) {
-            slides.forEach(el => el.style.opacity = mode === Mode.Fade ? '0' : '0.5')
+            slides.forEach(el => el.style.opacity = mode === Mode.Fade || mode === Mode.Blink ? '0' : '0.5')
             slides[current].style.opacity = '1'
         }
     }
@@ -145,11 +145,23 @@
         position: absolute;
         top: 0;
         left: 0;
-        transition: opacity 128ms linear;
+        transition: opacity 256ms linear;
     }
 
     /* So the container has size */
     .slide-show.fade ::slotted(*:first-child) {
+        position: static;
+    }
+
+    .slide-show.blink ::slotted(*) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: none;
+    }
+
+    /* So the container has size */
+    .slide-show.blink ::slotted(*:first-child) {
         position: static;
     }
 </style>

@@ -52,7 +52,7 @@ Pat cannot just _walk_ over to Carol because she lives too far away. Instead, ma
 
 So, meet Kirk, the mail guy! His main job is to deliver messages between different people, kind of like so:
 
-<slide-show width="960px" height="540px" mode="fade">
+<slide-show width="960px" height="540px" mode="blink">
   <popout-image src="/assets/posts/meet-kafka/messages-01.png" alt="Message Example Slide 1"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/messages-02.png" alt="Message Example Slide 2"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/messages-03.png" alt="Message Example Slide 3"></popout-image>
@@ -106,7 +106,7 @@ That's fine! Kirk has a clever idea.
 
 He can set up _mailboxes_ for different kinds of messages! Casual messages will go into the Casual mailbox, and Business messages will go into the Business mailbox. Carol can then _subscribe_ to only the Casual mailbox and therefore only receive casual messages.
 
-<slide-show width="960px" height="540px" mode="fade">
+<slide-show width="960px" height="540px" mode="blink">
   <popout-image src="/assets/posts/meet-kafka/topics-01.png" alt="Topics Example Slide 1"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/topics-02.png" alt="Topics Example Slide 2"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/topics-03.png" alt="Topics Example Slide 3"></popout-image>
