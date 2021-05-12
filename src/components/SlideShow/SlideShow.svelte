@@ -1,8 +1,11 @@
 <svelte:options tag="slide-show" />
 
 <script lang="ts">
+    import { Mode } from './Mode'
+
     export let width: string
     export let height: string
+    export let mode: Mode = Mode.Slide
 
     let container: HTMLElement
     let slides: HTMLElement[]
@@ -45,7 +48,7 @@
 
     $: {
         if (slides) {
-            slides.forEach(el => el.style.opacity = '0.5')
+            slides.forEach(el => el.style.opacity = mode === Mode.Fade ? '0' : '0.5')
             slides[current].style.opacity = '1'
         }
     }
@@ -56,7 +59,7 @@
     const prev = () => current = nonNegMod(current - 1, slides.length)
 </script>
 
-<figure class="slide-show" style="max-width: {width};" bind:this={container}>
+<figure class="slide-show {mode}" style="max-width: {width};" bind:this={container}>
     <div class="container">
         <div class="slides" style="left: -{100 * current}%">
             <slot></slot>
@@ -86,7 +89,7 @@
         margin-bottom: 0.5em;
     }
 
-    .slides {
+    .slide-show.slide .slides {
         position: relative;
         display: flex;
         transition: left 400ms ease-out;
@@ -136,5 +139,17 @@
         max-width: 100%;
         object-fit: cover;
         transition: opacity 400ms linear;
+    }
+
+    .slide-show.fade ::slotted(*) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 128ms linear;
+    }
+
+    /* So the container has size */
+    .slide-show.fade ::slotted(*:first-child) {
+        position: static;
     }
 </style>

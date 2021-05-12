@@ -52,7 +52,7 @@ Pat cannot just _walk_ over to Carol because she lives too far away. Instead, ma
 
 So, meet Kirk, the mail guy! His main job is to deliver messages between different people, kind of like so:
 
-<slide-show width="960px" height="540px">
+<slide-show width="960px" height="540px" mode="fade">
   <popout-image src="/assets/posts/meet-kafka/messages-01.png" alt="Message Example Slide 1"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/messages-02.png" alt="Message Example Slide 2"></popout-image>
   <popout-image src="/assets/posts/meet-kafka/messages-03.png" alt="Message Example Slide 3"></popout-image>
