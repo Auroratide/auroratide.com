@@ -26,6 +26,7 @@ export default () => {
         :host {
             display: block;
             margin-bottom: 1.5em;
+            --point-compilation-color: var(--skin-color-primary)
         }
 
         .point-compilation {
@@ -41,11 +42,13 @@ export default () => {
             box-sizing: border-box;
             margin-bottom: -0.75em;
             padding: 0 0.5em;
+            line-height: 1;
             z-index: 2;
         }
     
         header h1 {
             font-size: 1.375em;
+            font-weight: normal;
             margin: 0;
             padding: 0 0.25em;
             line-height: 1;
@@ -56,8 +59,8 @@ export default () => {
         .items {
             position: relative;
             box-sizing: border-box;
-            border-top: 0.25em solid var(--skin-color-primary);
-            border-bottom: 0.25em solid var(--skin-color-primary);
+            border-top: 0.25em solid var(--point-compilation-color);
+            border-bottom: 0.25em solid var(--point-compilation-color);
             padding: 1em 0;
             z-index: 1;
         }
