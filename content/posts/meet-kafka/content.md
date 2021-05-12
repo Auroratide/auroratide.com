@@ -12,11 +12,34 @@
   </ul>
 </point-compilation>
 
+<point-compilation id="carols-and-cathys-problems" title="Carol's and Cathy's Problems" style="--point-compilation-color: #578edf;">
+  <ul slot="items">
+    <li>What if Carol only wants to listen to certain kinds of messages?</li>
+    <li>Carol wants to save time by processing LOTS of messages in parallel.</li>
+    <li>Both Carol AND Cathy want to read the same messages.</li>
+  </ul>
+</point-compilation>
+
 <point-compilation id="kirks-goals" title="Kirk's Goals" style="--point-compilation-color: #694937;">
   <ul slot="items">
     <li>Mediate messages between producers and consumers.</li>
     <li>Allow users to choose what topics matter to them.</li>
     <li>Facilitate scalability through parallel processing.</li>
+    <li>Continue service even in the face of failures and downtime.</li>
+    <li>Support multiple ways of consuming data.</li>
+  </ul>
+</point-compilation>
+
+<point-compilation id="kafkas-goals" title="Kafka's Goals" style="--point-compilation-color: #333333;">
+  <ul slot="items">
+    <li>Mediate messages between producers and consumers.</li>
+    <li>Allow users to choose what topics matter to them.</li>
+    <li>Facilitate scalability through parallel processing.</li>
+    <li>Continue service even in the face of failures and downtime.</li>
+    <li>Support multiple ways of consuming data.</li>
+    <li>Guarantee messages from partitions are processed in proper order.</li>
+    <li>Stream data real-time from producers to consumers.</li>
+    <li>Allow for data to be reprocessed if needed.</li>
   </ul>
 </point-compilation>
 
@@ -135,13 +158,13 @@ Imagine if every time a company introduces a new app with which customers could 
 
 <point-compilation-view using="kirks-goals" highlight="1"></point-compilation-view>
 
-TODO Diagram of Kafka and TOpics
+<article-image src="/assets/posts/meet-kafka/topics-diagram.png" alt="Kafka Topics" caption="Diagram of topics in Kafka" size="lg"></article-image>
 
 ## Partitions
 
 Ok, time to create a _pretty weird_ problem for Kirk. Let's say Carol has somehow learned how to clone herself...
 
-TODO PIC OF MANY CAROLS
+<article-image src="/assets/posts/meet-kafka/many-carols.png" alt="Many Carols" caption="What will Kirk do now?" size="lg"></article-image>
 
 <point-compilation-view using="carols-problems" highlight="1"></point-compilation-view>
 
@@ -163,7 +186,11 @@ Kirk will actually divide the topic into mini-mailboxes. Each member of Team Car
 
 As you might have guessed, these "mini-mailboxes" are what Kafka calls **partitions**.
 
-TODO PIC OF PARTIONS
+<slide-show width="960px" height="540px" mode="blink">
+  <popout-image src="/assets/posts/meet-kafka/partitions-01.png" alt="Partitions Example Slide 1"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/partitions-02.png" alt="Partitions Example Slide 2"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/partitions-03.png" alt="Partitions Example Slide 3"></popout-image>
+</slide-show>
 
 So in this illustration, three events enter the Casual Topic, but are divided evenly across three partitions. Since each Carol is responsible for one partition, each message will be read exactly once, and in parallel.
 
@@ -175,7 +202,7 @@ Partitions are one of Kafka's main mechanisms for facilitating parallel processi
 
 When I was first reading about Kafka partitions, it felt like a somewhat convulted and perplexing solution to the parallel processing problem. Why doesn't Kafka just stuff all the messages into the topic and distribute the messages evenly to the consumers?
 
-TODO PIC OF YELLOW BLUE ENVELOPE THING
+<article-image src="/assets/posts/meet-kafka/no-partitions.png" alt="No Partitions" caption="Without partitions, the yellow event may be delivered before the blue event." size="lg"></article-image>
 
 Recall one of our key words: each envelope is an **event**. Events are _ordered_, and that order matters. If I make a purchase and then cancel my purchase, it doesn't make sense for the system to first process the cancellation and then process the purchase; it would be backwards!
 
@@ -205,7 +232,7 @@ Some key points from this:
 
 Let's say Kirk decides to clone himself using Carol's machine so that each Kirk can be put in charge of one partition.
 
-TODO PIC OF PARTITION MODEL IN RAINBOW MODE OR WHATEVER
+<article-image src="/assets/posts/meet-kafka/no-replicas.png" alt="No Replicas" caption="Each Kirk is responsible for one partition" size="lg"></article-image>
 
 Now that we have Team Kirk and Team Carol, work can truly be done in parallel! But there's a potential problem here. What would happen if one of the Kirk's, say the bottommost, gets fired from his job? He was in charge of the bottom blue partition, which was being read by one of the members of Team Carol. If he is no longer managing that partition, then what happens to all the messages going to that partition?
 
@@ -215,13 +242,85 @@ As someone whose worked in various products, I can tell you that servers just st
 
 </side-text>
 
-TODO PIC OF KIRK CRASHING
+<article-image src="/assets/posts/meet-kafka/kirk-crashes.png" alt="Kirk Crashes" caption="Uh oh! One of the Kirks was fired!" size="lg"></article-image>
 
-Making each partition the responsibility of just one Kirk feels kind of like putting all his eggs in once basket. So perhaps the natural solution is for 
+Well, nobody said a partition _must_ be handled by only one Kirk. What if instead each partition could be owned by more than one Kirk? One Kirk would have the main responsibility over that partition, but another could serve as a backup in the worst case scenario!
 
+<article-image src="/assets/posts/meet-kafka/with-replicas.png" alt="With Replicas" caption="If one Kirk vanishes, a different Kirk can take over." size="lg"></article-image>
+
+Here, the blue (bottommost) partition has a **replica** belonging to the middle Kirk. Replicas are Kafka's solution to resiliency and fault tolerance; even if one Kafka instance shuts down, other instances can take over the data streams without affecting the producers or consumers.
+
+<point-compilation-view using="kirks-goals" highlight="3"></point-compilation-view>
+
+<article-image src="/assets/posts/meet-kafka/replicas.png" alt="Kafka Replicas" caption="Partitions and replicas in Kafka" size="lg"></article-image>
 
 ## Consumer Groups
 
+Well, looks like Pat just got a new coworker! Meet Cathy.
 
+<article-image src="/assets/posts/meet-kafka/cathy.png" alt="Cathy" caption="This is Cathy!" size="md"></article-image>
+
+<point-compilation-view using="carols-and-cathys-problems" highlight="2"></point-compilation-view>
+
+Kirk now needs to ensure that both Carol and Cathy can read the same message. Note that this is different from before where he had to serve multiple Carols. In the Team Carol scenario, collectively the Carols want to read all the message, and yet no two Carols should read the same message. With this new situation, however, both Carol and Cathy want to read the same messages, because they might want to do different things with it.
+
+Let's recall one of our key words: **store**. It turns out, partitions actually persistently store events in them, allowing for events to be processed multiple times by different consumers. Kirk can take advantage of this to serve both Carol and Cathy!
+
+<side-text warning>
+
+This can be different from traditional messaging systems, wherein a message is removed from the queue once it is processed. In Kafka, messages stay in the partition for a set amount of time.
+
+</side-text>
+
+<slide-show width="960px" height="540px" mode="blink">
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Consumer Groups Example Slide 1"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Consumer Groups Example Slide 2"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Consumer Groups Example Slide 3"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Consumer Groups Example Slide 4"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Consumer Groups Example Slide 5"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Consumer Groups Example Slide 6"></popout-image>
+</slide-show>
+
+<side-text>
+
+Events do not need to be stored in Kafka forever; indeed, in the world of big data storing events forever can become expensive! Kafka can be configured to remove messages after a certain amount of time, e.g. 24 hours.
+
+</side-text>
+
+As it turns out, in Kafka terminology, Cathy would be considered a different **consumer group** from Carol. One consumer group represents a set of instances wanting to read topic data in parallel; other consumer groups, then, represent different sets of instances wanting to read from, potentially, the same topics, but may process the data for a different purpose.
+
+The idea of consumer groups, along with partitions, allows Kafka to support different ways of consuming data.
+
+<point-compilation-view using="kirks-goals" highlight="4"></point-compilation-view>
+
+With consumer groups, Kirk can:
+
+* Distribute messages evenly to different members of a single consumer group
+* Broadcast messages to all different consumer groups invested in the topic
+* Or a combination of the two approaches above
+
+<slide-show width="960px" height="540px" mode="blink">
+  <popout-image src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All"></popout-image>
+  <popout-image src="/assets/posts/meet-kafka/combination.png" alt="Combination"></popout-image>
+</slide-show>
+
+Note that in all the above approaches, each consumer group sees all three messages in the topic. Therefore, both Carol and Cathy each see all three messages, though in Carol's case (because she's a cloner) she may divide the work between herself and other clones.
+
+<article-image src="/assets/posts/meet-kafka/consumer-group-summary.png" alt="Consumer Group Summary" caption="How consumer groups work in Kafka" size="lg"></article-image>
+
+## To Summarize
+
+Remember all of Kirk's goals we've been compiling? Turns out, Kafka has those exact same goals, along with a few others worth mentioning! (surprising, I know)
+
+<point-compilation-view using="kafkas-goals"></point-compilation-view>
+
+These goals are why Kafka is designed with topics, partitions, replicas, and consumer groups. Together, these facilities help accomplish the various needs of data engineering and event streaming.
+
+Hopefully this has been helpful in understanding the _why_ behind Kafka's components. Of course, I did not go at all into _how_, practically, you would do any of this! For that, I recommend looking at some of the resources below to continue your Kafka journey.
 
 ## Resources
+
+* [Getting started with Kafka](https://kafka.apache.org/quickstart)
+* [Technical intro to partitions](https://codingharbour.com/apache-kafka/the-introduction-to-kafka-topics-and-partitions/)
+* [On why partitions limit the number of consumers](https://stackoverflow.com/questions/25896109/in-apache-kafka-why-cant-there-be-more-consumer-instances-than-partitions)
