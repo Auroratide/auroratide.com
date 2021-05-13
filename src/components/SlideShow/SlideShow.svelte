@@ -48,8 +48,13 @@
 
     $: {
         if (slides) {
-            slides.forEach(el => el.style.opacity = mode === Mode.Fade || mode === Mode.Blink ? '0' : '0.5')
+            slides.forEach(el => {
+                el.style.opacity = mode === Mode.Fade || mode === Mode.Blink ? '0' : '0.5'
+                el.style.visibility = 'hidden' // so onclick events apply to the right element
+            })
+
             slides[current].style.opacity = '1'
+            slides[current].style.visibility = ''
         }
     }
 
