@@ -47,8 +47,16 @@ a:hover {
 p, ul, ol {
     font-weight: var(--typography-light);
     text-align: justify;
-    line-height: 1.72em;
+    line-height: 1.5em;
     margin-bottom: var(--sizing-spacing-p);
+}
+
+li {
+    margin-bottom: var(--sizing-spacing-sm);
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 strong {
@@ -260,6 +268,7 @@ point-compilation ul, point-compilation ol {
 
 point-compilation .highlight {
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 point-compilation .mute {
