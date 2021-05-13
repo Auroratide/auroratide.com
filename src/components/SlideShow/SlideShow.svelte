@@ -57,6 +57,7 @@
 
     const next = () => current = nonNegMod(current + 1, slides.length)
     const prev = () => current = nonNegMod(current - 1, slides.length)
+    const jumpTo = (n: number) => current = n
 </script>
 
 <figure class="slide-show {mode}" style="max-width: {width};" bind:this={container}>
@@ -72,7 +73,7 @@
         {#if Array.isArray(slides)}
             <ol class="indicator-container">
                 {#each slides as _, i}
-                    <li class:active={current === i}>{i + 1}</li>
+                    <li on:click={() => jumpTo(i)} class:active={current === i} role="button">{i + 1}</li>
                 {/each}
             </ol>
         {/if}
@@ -168,6 +169,7 @@
         opacity: 0.5;
         transition: outline-width 256ms linear, opacity 256ms linear;
         user-select: none;
+        cursor: pointer;
     }
 
     .indicator-container li.active {
