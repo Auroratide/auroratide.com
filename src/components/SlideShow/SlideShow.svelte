@@ -163,18 +163,18 @@
         border-radius: 1.75em;
         background: rgba(var(--skin-rgb-text), 0.25);/*var(--skin-color-bg);*/
         border: 0.1875em solid var(--skin-color-content);
-        outline: 0 solid rgba(var(--skin-rgb-text), 0.25);
+        box-shadow: 0 0 0 0 rgba(var(--skin-rgb-text), 0.25);
         color: rgba(var(--skin-rgb-text), 0.667);
         margin: 0 0.25em;
         opacity: 0.5;
-        transition: outline-width 256ms linear, opacity 256ms linear;
+        transition: opacity 256ms linear, box-shadow 256ms linear;
         user-select: none;
         cursor: pointer;
     }
 
     .indicator-container li.active {
         opacity: 1;
-        outline-width: 0.1875em;
+        box-shadow: 0 0 0 0.1875em rgba(var(--skin-rgb-text), 0.25);
     }
 
     ::slotted(*) {
