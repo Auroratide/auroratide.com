@@ -16,8 +16,13 @@ export default () => {
             <header>
                 <h1 class="title"></h1>
             </header>
-            <div class="items">
-                <slot name="items"></slot>
+            <div class="item-container">
+                <aside class="image">
+                    <slot name="image"></slot>
+                </aside>
+                <div class="items">
+                    <slot name="items"></slot>
+                </div>
             </div>
         </section>
     `
@@ -56,13 +61,31 @@ export default () => {
             display: inline-block;
         }
     
-        .items {
+        .item-container {
             position: relative;
             box-sizing: border-box;
             border-top: 0.25em solid var(--point-compilation-color);
             border-bottom: 0.25em solid var(--point-compilation-color);
             padding: 1em 0;
             z-index: 1;
+        }
+
+        .item-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .image {
+            float: right;
+            max-width: min(6em, 15%);
+            margin-top: -0.75em;
+        }
+
+        .image ::slotted(img) {
+            width: 100%;
+            display: block;
+            padding-left: 0.25em;
         }
     `
 

@@ -3,6 +3,7 @@
     <li>What if Carol lives far away?</li>
     <li>What if Pat has many kinds of messages she wants to send?</li>
   </ul>
+  <img slot="image" src="/assets/posts/meet-kafka/pat.png" alt="Pat" />
 </point-compilation>
 
 <point-compilation id="carols-problems" title="Carol's Problems" style="--point-compilation-color: #bb9d53;">
@@ -10,6 +11,7 @@
     <li>What if Carol only wants to listen to certain kinds of messages?</li>
     <li>Carol wants to save time by processing LOTS of messages in parallel.</li>
   </ul>
+  <img slot="image" src="/assets/posts/meet-kafka/carol.png" alt="Carol" />
 </point-compilation>
 
 <point-compilation id="carols-and-cathys-problems" title="Carol's and Cathy's Problems" style="--point-compilation-color: #578edf;">
@@ -28,6 +30,7 @@
     <li>Continue service even in the face of failures and downtime.</li>
     <li>Support multiple ways of consuming data.</li>
   </ul>
+  <img slot="image" src="/assets/posts/meet-kafka/kirk.png" alt="Kirk" />
 </point-compilation>
 
 <point-compilation id="kafkas-goals" title="Kafka's Goals" style="--point-compilation-color: #333333;">
