@@ -74,7 +74,7 @@ But unfortunately, that will not work! You see, Pat has a pressing problem.
 
 <point-compilation-view using="pats-problems" highlight="0"></point-compilation-view>
 
-Pat cannot just _walk_ over to Carol because she lives too far away. Instead, maybe she hand her message to a mediator of some sort, someone who would be responsible for ensuring Carol receives the message.
+Pat cannot just _walk_ over to Carol because she lives too far away. Instead, maybe she hands her message to a mediator of some sort, someone who would be responsible for ensuring Carol receives the message.
 
 So, meet Kirk, the mail guy! His main job is to deliver messages between different people, kind of like so:
 
@@ -99,7 +99,7 @@ As we continue the analogy, we can learn a lot about Kafka by enumerating Kirk's
 
 Before we go deeper into Analogyland, let's take a quick step back and consider what Kafka really _is_ technologically.
 
-Funnily enough, depending on what you read, you may get seemingly different definitions. At the time I wrote this:
+Funnily enough, depending on what you read, you may rather diverse definitions. At the time I wrote this:
 
 * Wikipedia calls Kafka a <q cite="https://en.wikipedia.org/wiki/Apache_Kafka">software bus using stream processing</q>
 * AWS says Kafka is a <q cite="https://aws.amazon.com/msk/what-is-kafka/">distributed data store</q> for streaming in real-time
@@ -119,7 +119,7 @@ Meanwhile, Carol is just Pat's friend, not a coworker; therefore, Carol only car
 
 <point-compilation-view using="carols-problems" highlight="0"></point-compilation-view>
 
-And to make this more complicated, Pat's messages may not be addressed to any particular person. Rather, her casual messages could be read by any of her friends, and likewise the business messages could be read by any of her coworkers.
+And to make this more complicated, Pat's messages may not be addressed to any particular person. Rather, her casual messages could be read by _any_ of her friends, and likewise the business messages could be read by _any_ of her coworkers.
 
 This seems to make Kirk's job as the mediator a bit more complicated! If Kirk is going to deliver casual messages to Pat's friends, does this mean Kirk now has to know who Pat's friends are?
 
@@ -154,10 +154,7 @@ A key insight is that messages are **stored** in the topics for a while so that 
 
 In Kafka's world, these "mailboxes" are called **topics**. Each topic is essentially an event stream; one topic could be used for customer purchases, a different topic for account creations, and so forth.
 
-TODO REDO THE PARAGRAPHS HERE
-A big benefit of topics is that it facilitates the _decoupling_ of the producers and consumers from each other and from Kafka. Software systems must evolve all the time to meet the ever-shifting demands of the market; systems where the producers have to know their consumers or vice versa are very troublesome to evolve.
-
-Imagine if every time a company introduces a new app with which customers could make purchases that every single downstream system had to accomodate that app. It would be a nightmare! Kafka and topics help avoid
+Rather than talk to the producers directly, consumers **subscribe** to topics in order to process the events within them. A big benefit of this model is that it facilitates the _decoupling_ of the producers and consumers. Since the communication happens via Kafka, the mediator, producers and consumers can evolve independently, and new producers and consumers can be introduced to the system without requiring direct modification of any other system.
 
 <point-compilation-view using="kirks-goals" highlight="1"></point-compilation-view>
 
@@ -183,9 +180,9 @@ Unfortunately, unless something about the topic model changes, what will actuall
 
 </side-text>
 
-This might sound like Carol's own problem, but actually there's a klever trick Kirk can do to help!
+This might sound like Carol's own problem, but actually there's a clever trick Kirk can do to help!
 
-Kirk will actually divide the topic into mini-mailboxes. Each member of Team Carol can then be put in charge of one or more of the mini-mailboxes. When messages enter the topic, they can be divided into the mini-mailboxes so that the work is effectively divided as evenly as possible across the different consumers.
+Kirk will actually divide the topic into mini-mailboxes. Each member of Team Carol can then be put in charge of one or more of the mini-mailboxes. When messages enter the topic, they can be distributed into the mini-mailboxes so that the work is effectively divided as evenly as possible across the different consumers.
 
 As you might have guessed, these "mini-mailboxes" are what Kafka calls **partitions**.
 
@@ -229,7 +226,7 @@ As soon as a partion serves more than one consumer, there's a chance messages ca
 Some key points from this:
 
 * There cannot be more consumers than partitions, meaning that the number of partitions should be chosen carefully to facilitate the desired parallelism. Do note that there can be more partitions than consumers though, since a consumer can pull from multiple partitions without breaking ordering constraints.
-* Order is only guaranteed _within_ a partion, and not across partitions! This means it is important how the events are partitioned as well: any updates I make to an order I placed should go into one partition, but a different person's order updates can go to a different partition since our orders are independent of each other.
+* Order is only guaranteed _within_ a partion, and not across partitions! This means it is important how the events are partitioned as well. For example, any updates I make to an order I placed should go into one partition, but a different person's order updates can go to a different partition since our orders are independent of each other.
 
 ### Replicas
 
@@ -237,11 +234,11 @@ Let's say Kirk decides to clone himself using Carol's machine so that each Kirk 
 
 <article-image src="/assets/posts/meet-kafka/no-replicas.png" alt="No Replicas" caption="Each Kirk is responsible for one partition" size="lg"></article-image>
 
-Now that we have Team Kirk and Team Carol, work can truly be done in parallel! But there's a potential problem here. What would happen if one of the Kirk's, say the bottommost, gets fired from his job? He was in charge of the bottom blue partition, which was being read by one of the members of Team Carol. If he is no longer managing that partition, then what happens to all the messages going to that partition?
+Now that we have Team Kirk and Team Carol, work can truly be done in parallel! But there's a potential problem here. What would happen if one of the Kirk's, say the bottommost, gets sick and can no longer do his job? He was in charge of the bottom blue partition, which was being read by one of the members of Team Carol. If he is no longer managing that partition, then what happens to all the messages going to that partition?
 
 <side-text danger>
 
-As someone whose worked in various products, I can tell you that servers just stop _all the time_, sometimes for seemingly no reason. Fault tolerance is one of our key concerns as software engineers; even in the face of downtime, things should either continue working or recover quickly and safely.
+As someone who has worked in various products, I can tell you that servers just stop _all the time_, sometimes for seemingly no reason. Fault tolerance is one of our key concerns as software engineers; even in the face of downtime, things should either continue working or recover quickly and safely.
 
 </side-text>
 
@@ -251,7 +248,7 @@ Well, nobody said a partition _must_ be handled by only one Kirk. What if instea
 
 <article-image src="/assets/posts/meet-kafka/with-replicas.png" alt="With Replicas" caption="If one Kirk vanishes, a different Kirk can take over." size="lg"></article-image>
 
-Here, the blue (bottommost) partition has a **replica** belonging to the middle Kirk. Replicas are Kafka's solution to resiliency and fault tolerance; even if one Kafka instance shuts down, other instances can take over the data streams without affecting the producers or consumers.
+Here, the blue (bottommost) partition has a **replica** belonging to the middle Kirk. Replicas are Kafka's solution to resiliency and fault tolerance; even if one Kafka instance shuts down, other instances can take over the data streams without affecting the producers or consumers. They serve as backups to partitions, distributed across different Kafka servers (called **brokers**).
 
 <point-compilation-view using="kirks-goals" highlight="3"></point-compilation-view>
 
@@ -265,7 +262,7 @@ Well, looks like Pat just got a new coworker! Meet Cathy.
 
 <point-compilation-view using="carols-and-cathys-problems" highlight="2"></point-compilation-view>
 
-Kirk now needs to ensure that both Carol and Cathy can read the same message. Note that this is different from before where he had to serve multiple Carols. In the Team Carol scenario, collectively the Carols want to read all the message, and yet no two Carols should read the same message. With this new situation, however, both Carol and Cathy want to read the same messages, because they might want to do different things with it.
+Kirk now needs to ensure that both Carol and Cathy can read the same message. Note that this is different from before where he had to serve multiple Carols. In the Team Carol scenario, collectively the Carols want to read all the messages, and yet no two Carols should read the same message. With this new situation, however, both Carol and Cathy want to read the same messages, because they might want to do different things with them.
 
 Let's recall one of our key words: **store**. It turns out, partitions actually persistently store events in them, allowing for events to be processed multiple times by different consumers. Kirk can take advantage of this to serve both Carol and Cathy!
 
@@ -314,7 +311,7 @@ Note that in all the above approaches, each consumer group sees all three messag
 
 ## To Summarize
 
-Remember all of Kirk's goals we've been compiling? Turns out, Kafka has those exact same goals, along with a few others worth mentioning! (surprising, I know)
+Remember all of Kirk's goals we've been compiling? Turns out, Kafka has those exact same goals, along with a few others worth mentioning! <small>(surprising, I know)</small>
 
 <point-compilation-view using="kafkas-goals"></point-compilation-view>
 
