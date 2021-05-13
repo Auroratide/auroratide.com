@@ -69,6 +69,13 @@
     </div>
     <nav>
         <button part="button" on:click={prev} disabled={!buttonsActive}>Prev</button>
+        {#if Array.isArray(slides)}
+            <ol class="indicator-container">
+                {#each slides as _, i}
+                    <li class:active={current === i}>{i + 1}</li>
+                {/each}
+            </ol>
+        {/if}
         <button part="button" on:click={next} disabled={!buttonsActive}>Next</button>
     </nav>
 </figure>
@@ -131,6 +138,41 @@
         right: 0;
         text-align: right;
         background: linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+    }
+
+    .indicator-container {
+        flex: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .indicator-container li {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.626em;
+        flex: 0 0 1.75em;
+        height: 1.75em;
+        border-radius: 1.75em;
+        background: rgba(var(--skin-rgb-text), 0.25);/*var(--skin-color-bg);*/
+        border: 0.1875em solid var(--skin-color-content);
+        outline: 0 solid rgba(var(--skin-rgb-text), 0.25);
+        color: rgba(var(--skin-rgb-text), 0.667);
+        margin: 0 0.25em;
+        opacity: 0.5;
+        transition: outline-width 256ms linear, opacity 256ms linear;
+        user-select: none;
+    }
+
+    .indicator-container li.active {
+        opacity: 1;
+        outline-width: 0.1875em;
     }
 
     ::slotted(*) {
