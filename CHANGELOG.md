@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.1 (13 May 2021)
+
+* Noscript warning message
+* Add `slide-show` component for inline slideshows
+* Add `point-compilation` and `point-compilation-view` components for gradually compiling key points
+* Add `/styleguide` page
+* Improvements to `article-image` and `popout-image`
+
 ## 2.1.0 (04 Apr 2021)
 
 * Make portfolio its own site section
