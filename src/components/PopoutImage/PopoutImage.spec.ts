@@ -23,4 +23,21 @@ describe('PopoutImage', () => {
         await waitForElementToBeRemoved(() => elements.cover)
         expect(elements.cover).not.toBeInTheDocument()
     })
+
+    test('using ESC key', async () => {
+        component(PopoutImage)
+            .prop('src', '/image.png')
+            .prop('alt', 'alternative text')
+            .render()
+
+        expect(elements.cover).not.toBeInTheDocument()
+
+        await fireEvent.click(elements.image)
+        expect(elements.cover).toBeInTheDocument()
+
+        await fireEvent.keyUp(document.body, { key: 'Escape', code: 'Escape' })
+
+        await waitForElementToBeRemoved(() => elements.cover)
+        expect(elements.cover).not.toBeInTheDocument()
+    })
 })

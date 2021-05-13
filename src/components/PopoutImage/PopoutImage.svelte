@@ -12,12 +12,19 @@
         enlarged = true
         document.body.style.top = `-${window.scrollY}px`
         document.body.classList.add('popout-stopscroll')
+        document.body.addEventListener('keyup', escapeListener)
     }
 
     const popin = () => {
         enlarged = false
         document.body.classList.remove('popout-stopscroll')
         window.scrollTo(0, parseInt(document.body.style.top || '0') * -1)
+        document.body.removeEventListener('keyup', escapeListener)
+    }
+
+    const escapeListener = (e: KeyboardEvent) => {
+        if (e.key === 'Escape')
+            popin()
     }
 </script>
 
