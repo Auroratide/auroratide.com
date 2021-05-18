@@ -1,7 +1,7 @@
 {
   "id": "code-highlight",
   "title": "code.highlight()",
-  "category": "Tools I've Made",
+  "category": "tools",
   "tags": ["code", "highlight", "haxe", "parser"],
   "icon": "code",
   "color": "aurora-green",

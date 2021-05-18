@@ -1,7 +1,7 @@
 {
   "id": "nbehave",
   "title": "NBehave",
-  "category": "Tools I've Made",
+  "category": "tools",
   "tags": ["testing", "mocks", "stubs", "library", "unity", "csharp"],
   "icon": "unity",
   "color": "winter-grey",

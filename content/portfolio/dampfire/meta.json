@@ -1,7 +1,7 @@
 {
     "id": "dampfire",
     "title": "Dampfire",
-    "category": "Games I've Made",
+    "category": "games",
     "tags": ["html5", "typescript", "pixi", "survival", "mobile", "jam", "camp", "fire", "light"],
     "icon": "fire",
     "color": "autumn-orange",

@@ -1,7 +1,7 @@
 {
   "id": "omnixis",
   "title": "Omnixis",
-  "category": "Games I've Made",
+  "category": "games",
   "tags": ["tetris", "haxe", "flixel", "jam", "ludum dare", "innovation", "survial"],
   "icon": "th",
   "color": "fable-pink",

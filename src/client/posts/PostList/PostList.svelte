@@ -32,7 +32,7 @@
                                 <div class="byline">
                                     <date-display date={item.publishedAt} />
                                     <span class="bullet">&bull;</span>
-                                    <span>{item.category}</span>
+                                    <span class="category">{item.category}</span>
                                 </div>
                                 <p class="summary short">{item.summary}</p>
                                 <p class="summary long">{item.longSummary}</p>
@@ -126,6 +126,10 @@
 
     .post-item .summary.long {
         display: none;
+    }
+
+    .post-item .category {
+        text-transform: capitalize;
     }
 
     @media screen and (min-width: 75rem) {

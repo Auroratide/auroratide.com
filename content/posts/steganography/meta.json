@@ -1,7 +1,7 @@
 {
     "id": "steganography",
     "title": "Steganography",
-    "category": "Computer Science",
+    "category": "software engineering",
     "tags": ["steganography", "security", "interactive", "secret", "hidden", "message"],
     "icon": "image",
     "color": "autumn-orange",

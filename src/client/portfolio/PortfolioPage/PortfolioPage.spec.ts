@@ -4,6 +4,7 @@ import { PortfolioForge } from '../testing/PortfolioForge'
 import { component } from '@/testing/component'
 import { screen } from '@testing-library/svelte'
 import type { PortfolioItem } from '../types'
+import { Category } from '../category'
 
 describe('PostPage', () => {
     let forge: PortfolioForge
@@ -69,10 +70,10 @@ describe('PostPage', () => {
 
     test('related items', async () => {
         posts = {
-            apple: forge.create('apple', { category: 'fruit' }),
-            orange: forge.create('orange', { category: 'fruit' }),
-            banana: forge.create('banana', { category: 'fruit' }),
-            carrot: forge.create('carrot', { category: 'vegetable' }),
+            apple: forge.create('apple', { category: Category.Games }),
+            orange: forge.create('orange', { category: Category.Games }),
+            banana: forge.create('banana', { category: Category.Games }),
+            carrot: forge.create('carrot', { category: Category.Tools }),
         }
         resource = new InMemoryResource(Object.values(posts))
 

@@ -1,7 +1,7 @@
 {
     "id": "meet-kafka",
     "title": "Meet Kafka",
-    "category": "Coding",
+    "category": "technology",
     "icon": "kafka",
     "tags": ["kafka", "data engineering", "presentation", "architecture"],
     "color": "autumn-orange",

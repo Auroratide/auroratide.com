@@ -1,3 +1,5 @@
+import type { Category } from './category'
+
 export type PostLink = {
     readonly title: string
     readonly href: string
@@ -13,7 +15,7 @@ export type GalleryItem = {
 export type Post = {
     readonly id: string
     readonly title: string
-    readonly category: string
+    readonly category: Category
     readonly tags: string[]
     readonly icon: string
     readonly color: string

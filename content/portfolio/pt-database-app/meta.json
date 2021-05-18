@@ -1,7 +1,7 @@
 {
   "id": "pt-database-app",
   "title": "PT Database App",
-  "category": "Tools I've Made",
+  "category": "tools",
   "tags": ["college", "haxe", "application", "desktop", "database", "planner", "organization", "teaching"],
   "icon": "project-diagram",
   "color": "autumn-red",

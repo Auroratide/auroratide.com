@@ -67,7 +67,7 @@
                             <h2 class="more-title">Some Pics</h2>
                             <Gallery id={item.id} gallery={item.gallery} />
                         {/if}
-                        <h2 class="more-title">More on {item.category}</h2>
+                        <h2 class="more-title">More on <span class="category">{item.category}</span></h2>
                         {#if relatedItems !== Pending && relatedItems !== Missing}
                             <RelatedItems items={relatedItems} />
                         {:else}
@@ -92,6 +92,10 @@
     .published {
         margin-bottom: var(--sizing-spacing-p);
         font-weight: var(--typography-light);
+    }
+
+    .category {
+        text-transform: capitalize;
     }
 
     @media screen and (min-width: 75rem) {

@@ -1,7 +1,7 @@
 {
  "id": "vsts-monitor",
   "title": "VSTS Monitor",
-  "category": "Tools I've Made",
+  "category": "tools",
   "tags": ["javascript", "api", "vsts", "azure devops", "pipeline", "build"],
   "icon": "traffic-light",
   "color": "aella-green",

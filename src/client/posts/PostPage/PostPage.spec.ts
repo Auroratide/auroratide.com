@@ -4,6 +4,7 @@ import { PostForge } from '../testing/PostForge'
 import { component } from '@/testing/component'
 import { screen } from '@testing-library/svelte'
 import type { Post } from '../types'
+import { Category } from '../category'
 
 describe('PostPage', () => {
     let forge: PostForge
@@ -69,10 +70,10 @@ describe('PostPage', () => {
 
     test('related posts', async () => {
         posts = {
-            apple: forge.create('apple', { category: 'fruit' }),
-            orange: forge.create('orange', { category: 'fruit' }),
-            banana: forge.create('banana', { category: 'fruit' }),
-            carrot: forge.create('carrot', { category: 'vegetable' }),
+            apple: forge.create('apple', { category: Category.Career }),
+            orange: forge.create('orange', { category: Category.Career }),
+            banana: forge.create('banana', { category: Category.Career }),
+            carrot: forge.create('carrot', { category: Category.Coding }),
         }
         resource = new InMemoryResource(Object.values(posts))
 

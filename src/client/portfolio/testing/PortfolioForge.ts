@@ -1,9 +1,10 @@
+import { Category } from '../category'
 import type { PortfolioItem } from '../types'
 
 type Options = {
     title?: string,
     publishedAt?: Date,
-    category?: string,
+    category?: Category,
     content?: string,
 }
 
@@ -12,7 +13,7 @@ export class PortfolioForge {
         return {
             id,
             title: options.title ?? id,
-            category: options.category ?? 'Fruit',
+            category: options.category ?? Category.Games,
             tags: ['apple'],
             icon: 'apple',
             color: 'red',
