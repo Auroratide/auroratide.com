@@ -32,11 +32,11 @@
 <style>
     .top-bar {
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: auto auto 1fr;
         grid-template-rows: 1fr auto;
         grid-template-areas: 
-            "title logo socials"
-            "subtitle logo nav";
+            "logo title subtitle"
+            "logo nav nav";
         column-gap: 1em;
         overflow: hidden;
         padding: 0 0.25em;
@@ -65,10 +65,17 @@
         font-size: var(--sizing-font-sm);
         align-self: center;
         font-weight: var(--typography-light);
+        margin-left: calc(-1 * var(--sizing-spacing-sm));
+        opacity: 0.9;
+    }
+
+    .subtitle::before {
+        content: '\2022';
+        margin-right: var(--sizing-spacing-sm);
     }
 
     .socials {
-        visibility: hidden; /* Looks better without; leaving here in case I change my mind */
+        display: none; /* Looks better without; leaving here in case I change my mind */
         grid-area: socials;
         align-self: center;
     }
@@ -99,7 +106,7 @@
         list-style: none;
         padding: 0;
         margin: 0 calc(-1 * var(--sizing-spacing-sm));
-        text-align: right;
+        text-align: left;
     }
 
     .nav ul li {
@@ -129,8 +136,17 @@
             align-self: start;
         }
 
+        .subtitle {
+            margin-left: 0;
+        }
+
+        .subtitle::before {
+            display: none;
+        }
+
         .nav ul {
             margin: 0 calc(-1 * var(--sizing-spacing-md));
+            text-align: right;
         }
 
         .nav ul li a {
