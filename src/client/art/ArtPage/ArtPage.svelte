@@ -1,9 +1,38 @@
 <script lang="ts">
-    import { Error } from '@/client/Error'
-    import { UrlBuilder } from '@/client/routes'
+    import type { ArtItem } from '../types'
+    import type { Resource, Maybe } from '@/client/resources'
+
+    import { DocumentInfo } from '@/client/DocumentInfo'
+    import { Container } from '@/client/Container'
+    import { Loading } from '@/client/Loading'
+    import { PageNotFound } from '@/client/PageNotFound'
+    import { Pending, Missing } from '@/client/resources'
+
+    export let id: string
+    export let resource: Resource<ArtItem>
+
+    let item: Maybe<ArtItem> = Pending
+    let title: string = ''
+    let description: string = ''
+    $: {
+        item = resource.one(id)
+        if (item !== Pending && item !== Missing) {
+            title = item.title
+            description = item.summary
+        }
+    }
 </script>
 
-<Error title="Uh oh!" subtitle="This part of the site is not done yet.">
-    <p>I&apos;m still kinda working on getting the art section of the site up and running. Try using the top navigation bar to find cool, awesome content! Or, click the button below to go back to the home page.</p>
-    <a class="as-button" href={new UrlBuilder().home()}>Home</a>
-</Error>
+<DocumentInfo {title} {description}>
+    <Container>
+        {#if item === Pending}
+            <Loading text="Finding post..." large />
+        {:else if item === Missing}
+            <PageNotFound />
+        {:else}
+            <article class="article" style={`--article-color: var(--palette-${item.color});`}>
+                <h1>{title}</h1>
+            </article>
+        {/if}
+    </Container>
+</DocumentInfo>
