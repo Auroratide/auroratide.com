@@ -1,4 +1,4 @@
 {
   "routes": ["legal", "whodoku", "about", "posts"],
-  "resources": ["posts", "portfolio"]
+  "resources": ["posts", "portfolio", "art"]
 }
