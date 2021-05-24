@@ -7,6 +7,7 @@
     import { Loading } from '@/client/Loading'
     import { PageNotFound } from '@/client/PageNotFound'
     import { Pending, Missing } from '@/client/resources'
+    import { UrlBuilder } from '@/client/routes'
 
     export let id: string
     export let resource: Resource<ArtItem>
@@ -31,8 +32,41 @@
             <PageNotFound />
         {:else}
             <article class="article" style={`--article-color: var(--palette-${item.color});`}>
-                <h1>{title}</h1>
+                <header>
+                    <h1>{title}</h1>
+                </header>
+                <section class="content">
+                    <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
+                </section>
             </article>
         {/if}
     </Container>
 </DocumentInfo>
+
+<style>
+    header {
+        position: relative;
+        /* height: 10em; */
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background: var(--article-color);
+        overflow: hidden;
+        padding-top: var(--sizing-spacing-sm);
+    }
+
+    h1 {
+        position: relative;
+        width: 100%;
+        padding: var(--sizing-spacing-sm);
+        color: var(--palette-greyscale-100);
+        text-align: center;
+        background: var(--palette-shade-033);
+        margin: 0;
+        line-height: 1;
+    }
+
+    .content {
+        text-align: center;
+    }
+</style>
