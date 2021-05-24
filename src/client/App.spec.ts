@@ -5,6 +5,8 @@ import type { Post } from './posts/types'
 import { PostForge } from './posts/testing/PostForge'
 import type { PortfolioItem } from './portfolio/types'
 import { PortfolioForge } from './portfolio/testing/PortfolioForge'
+import type { ArtItem } from './art/types'
+import { ArtForge } from './art/testing/ArtForge'
 import { component } from '@/testing/component'
 import { screen, act, fireEvent } from '@testing-library/svelte'
 
@@ -21,6 +23,13 @@ describe('App', () => {
         items?: Record<string, PortfolioItem>
         api?: InMemoryResourceApi<PortfolioItem>,
         store?: SvelteStore<PortfolioItem>,
+    } = {}
+
+    let art: {
+        forge?: ArtForge
+        items?: Record<string, ArtItem>
+        api?: InMemoryResourceApi<ArtItem>,
+        store?: SvelteStore<ArtItem>,
     } = {}
 
     beforeEach(() => {
@@ -44,16 +53,25 @@ describe('App', () => {
 
         portfolio.api = new InMemoryResourceApi(Object.values(portfolio.items))
         portfolio.store = new SvelteStore(writable(null), portfolio.api)
+
+        art.forge = new ArtForge()
+        art.items = {}
+        art.items.apple = art.forge.create('lime')
+
+        art.api = new InMemoryResourceApi(Object.values(art.items))
+        art.store = new SvelteStore(writable(null), art.api)
     })
 
     test('end to end', async () => {
         component(App)
             .prop('posts', posts.store)
             .prop('portfolio', portfolio.store)
+            .prop('art', art.store)
             .render()
         
         await act(() => posts.api.finishAll())
         await act(() => portfolio.api.finishAll())
+        await act(() => art.api.finishAll())
 
         expect(screen.queryByText('apple')).toBeInTheDocument()
         expect(screen.queryByText('orange')).toBeInTheDocument()

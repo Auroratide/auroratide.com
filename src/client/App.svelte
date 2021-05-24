@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Post } from './posts/types'
     import type { PortfolioItem } from './portfolio/types'
+    import type { ArtItem } from './art/types'
 
     import { Page } from './Page'
     import { Navigation } from './Navigation'
@@ -10,6 +11,7 @@
     import { PostList } from './posts/PostList'
     import { PortfolioPage } from './portfolio/PortfolioPage'
     import { PortfolioList } from './portfolio/PortfolioList'
+    import { ArtPage } from './art/ArtPage'
 
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
@@ -25,6 +27,7 @@
 
     export let posts: SvelteStore<Post>
     export let portfolio: SvelteStore<PortfolioItem>
+    export let art: SvelteStore<ArtItem>
 
     let context: {
         component: typeof SvelteComponent,
@@ -48,6 +51,7 @@
     page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
     page(navigation.Portfolio.link, () => context = { component: ResourceProvider, params: { component: PortfolioList, store: portfolio } })
     page(`${navigation.Portfolio.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PortfolioPage, store: portfolio, id: params.id } })
+    page(`${navigation.Art.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: ArtPage, store: art, id: params.id } })
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
     page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
