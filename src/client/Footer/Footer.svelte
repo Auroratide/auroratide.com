@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { socials, navigation, NavVisibility } from '@/client/routes'
+    import { socials, navigation, external, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/Container'
 
     const currentYear = new Date().getUTCFullYear()
@@ -24,6 +24,7 @@
             </ul>
         </div>
         <small class="license">&copy; {currentYear} Timothy Foster, All Rights Reserved</small>
+        <small class="source">Made with Svelte. Check out the <a href="{external.Source.link}">source code</a>!</small>
     </div>
 </Container>
 
@@ -86,8 +87,26 @@
         color: var(--skin-color-text-secondary);
     }
 
-    .license {
+    .license, .source {
+        display: block;
         font-size: 87.5%;
         font-weight: var(--typography-light);
+    }
+
+    .license {
+        margin-bottom: var(--sizing-spacing-p);
+    }
+
+    .source {
+        opacity: 0.9;
+    }
+
+    .source a {
+        color: var(--skin-color-text-secondary);
+        text-decoration: underline;
+    }
+
+    .source a:hover {
+        text-decoration: none;
     }
 </style>

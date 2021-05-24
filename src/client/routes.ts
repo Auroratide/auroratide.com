@@ -74,6 +74,18 @@ export const navigation: Record<'Posts' | 'Portfolio' | 'About' | 'Legal' | 'Who
     },
 }
 
+export type ExternalReference = {
+    name: string,
+    link: string,
+}
+
+export const external: Record<'Source', ExternalReference> = {
+    Source: {
+        name: 'source',
+        link: 'https://github.com/Auroratide/auroratide.com',
+    },
+}
+
 export class UrlBuilder {
     static API_SUFFIX = '.json'
     private url: string
