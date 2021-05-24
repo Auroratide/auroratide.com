@@ -13,3 +13,9 @@ time('portfolio', () => resource({
     contentPath: path.resolve('content', 'portfolio'),
     outputPath: path.resolve('public', 'api', 'portfolio'),
 }))
+
+time('art', () => resource({
+    name: 'art',
+    contentPath: path.resolve('content', 'art'),
+    outputPath: path.resolve('public', 'api', 'art'),
+}))
