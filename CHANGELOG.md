@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.2 (24 May 2021)
+
+* Adjust format for mobile top bar
+* Add open source link
+* Bugfix for navigating back to the first page visited on the site not retaining scroll position
+
 ## 2.1.1 (13 May 2021)
 
 * Noscript warning message
