@@ -38,6 +38,7 @@
         if (!ctx.state.visited) {
             scroll.toTop()
             ctx.state.visited = true
+            setTimeout(() => ctx.save(), 0)
         }
 
         next()
