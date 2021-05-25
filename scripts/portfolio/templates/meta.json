@@ -3,7 +3,10 @@
     "title": "",
     "category": "",
     "icon": "",
-    "color": "",
+    "color": {
+        "type": "palette",
+        "value": ""
+    },
     "summary": "",
     "long_summary": "",
     "published_at": "",
@@ -12,7 +15,10 @@
         "title": "",
         "href": "",
         "icon": "",
-        "color": ""
+        "color": {
+            "type": "palette",
+            "value": ""
+        }
     } ],
     "gallery": [ {
         "image": "",

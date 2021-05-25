@@ -3,7 +3,10 @@
     "title": "",
     "category": "",
     "image": "",
-    "color": "",
+    "color": {
+        "type": "hex",
+        "value": ""
+    },
     "summary": "",
     "published_at": "",
     "created_at": "$DATE$"

@@ -1,10 +1,11 @@
+import type { Color } from '@/client/color'
 import type { Category } from './category'
 
 export type PostLink = {
     readonly title: string
     readonly href: string
     readonly icon?: string
-    readonly color?: string
+    readonly color?: Color
 }
 
 export type GalleryItem = {
@@ -18,7 +19,7 @@ export type Post = {
     readonly category: Category
     readonly tags: string[]
     readonly icon: string
-    readonly color: string
+    readonly color: Color
     readonly summary: string
     readonly longSummary: string
     readonly publishedAt?: Date

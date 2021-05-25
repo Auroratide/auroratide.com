@@ -1,12 +1,13 @@
 <script lang="ts">
     import type { Link } from '../../types'
+    import * as color from '@/client/color'
 
     export let links: Link[]
 </script>
 
 <aside class="link-bar">
     {#each links as link}
-        <a class="as-button" href={link.href} style={link.color ? `--btn-color: var(--palette-${link.color});` : ''}>
+        <a class="as-button" href={link.href} style={link.color ? `--btn-color: ${color.fromJson(link.color)};` : ''}>
             <span>{link.title}</span>
             {#if link.icon}
                 <vector-icon icon={link.icon}></vector-icon>

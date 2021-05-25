@@ -1,8 +1,10 @@
+import type { Color } from '@/client/color'
+
 export type Link = {
     readonly title: string
     readonly href: string
     readonly icon?: string
-    readonly color?: string
+    readonly color?: Color
 }
 
 export type GalleryItem = {
@@ -16,7 +18,7 @@ export type PortfolioItem = {
     readonly category: string
     readonly tags: string[]
     readonly icon: string
-    readonly color: string
+    readonly color: Color
     readonly summary: string
     readonly longSummary: string
     readonly publishedAt?: Date
