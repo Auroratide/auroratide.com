@@ -45,4 +45,12 @@ describe('color from json', () => {
 
         expect(result).toEqual('rgba(125, 144, 27, 1)')
     })
+
+    describe('backward compatibility', () => {
+        test('palette string', () => {
+            const result = color.fromJson('fable-pink')
+    
+            expect(result).toEqual('var(--palette-fable-pink)')
+        })
+    })
 })
