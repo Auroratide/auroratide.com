@@ -4,6 +4,8 @@
 
     import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
+    import { Content } from '@/client/Content'
+    import { RawRenderer } from '@/client/RawRenderer'
     import { Loading } from '@/client/Loading'
     import { PageNotFound } from '@/client/PageNotFound'
     import { Pending, Missing } from '@/client/resources'
@@ -37,9 +39,19 @@
                 <header>
                     <h1>{title}</h1>
                 </header>
-                <section class="content">
-                    <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
-                </section>
+                <Content>
+                    <section class="content">
+                        <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
+                    </section>
+                    <section slot="sidebar">
+                        <div class="published"><date-display date={item.publishedAt} /></div>
+                        {#if item.content}
+                            <RawRenderer content={item.content} />
+                        {:else}
+                            <Loading text="Fetching content..." />
+                        {/if}
+                    </section>
+                </Content>
             </article>
         {/if}
     </Container>
@@ -70,5 +82,10 @@
 
     .content {
         text-align: center;
+    }
+
+    .published {
+        margin-bottom: var(--sizing-spacing-p);
+        font-weight: var(--typography-light);
     }
 </style>

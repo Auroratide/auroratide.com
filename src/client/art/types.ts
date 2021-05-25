@@ -10,6 +10,7 @@ export type ArtItem = {
     readonly summary: string
     readonly publishedAt?: Date
     readonly createdAt: Date
+    readonly content?: string
 }
 
 export type Art = {

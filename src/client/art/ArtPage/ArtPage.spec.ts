@@ -7,7 +7,7 @@ import type { ArtItem } from '../types'
 
 describe('ArtPage', () => {
     let forge: ArtForge
-    let posts: Record<string, ArtItem>
+    let items: Record<string, ArtItem>
     let resource: InMemoryResource<ArtItem>
 
     beforeEach(() => {
@@ -26,24 +26,24 @@ describe('ArtPage', () => {
     })
 
     test('art now loaded', () => {
-        posts = {
+        items = {
             apple: forge.create('apple', { title: 'Apple' })
         }
-        resource = new InMemoryResource(Object.values(posts))
+        resource = new InMemoryResource(Object.values(items))
 
         component(ArtPage)
-            .prop('id', posts.apple.id)
+            .prop('id', items.apple.id)
             .prop('resource', resource)
             .render()
 
-        expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
+        expect(screen.getByText(items.apple.title)).toBeInTheDocument()
     })
 
     test('post not found', () => {
-        posts = {
+        items = {
             apple: forge.create('apple', { title: 'Apple' })
         }
-        resource = new InMemoryResource(Object.values(posts))
+        resource = new InMemoryResource(Object.values(items))
 
         component(ArtPage)
             .prop('id', 'orange')
@@ -51,5 +51,19 @@ describe('ArtPage', () => {
             .render()
 
         expect(screen.getByText(/not available/i)).toBeInTheDocument()
+    })
+
+    test('art loaded without content initially', () => {
+        items = {
+            apple: forge.create('apple', { content: null })
+        }
+        resource = new InMemoryResource(Object.values(items))
+
+        component(ArtPage)
+            .prop('id', 'apple')
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.getByText(/fetching\scontent/i)).toBeInTheDocument()
     })
 })

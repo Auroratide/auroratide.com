@@ -17,6 +17,7 @@ class Fetch extends FetchResourceApi<ArtItem> {
         longSummary: data.long_summary,
         publishedAt: data.published_at ? new Date(data.published_at) : null,
         createdAt: new Date(data.created_at),
+        content: data.content,
     })
 }
 
