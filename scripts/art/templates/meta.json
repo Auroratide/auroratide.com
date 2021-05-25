@@ -2,6 +2,7 @@
     "id": "$SLUG$",
     "title": "",
     "category": "",
+    "tags": [],
     "image": "",
     "color": {
         "type": "hex",
