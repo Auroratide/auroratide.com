@@ -2,6 +2,7 @@
     "id": "noon",
     "title": "Noon",
     "category": "character",
+    "tags": ["dnd", "female", "cleric"],
     "image": "noon.png",
     "color": {
         "type": "hex",
