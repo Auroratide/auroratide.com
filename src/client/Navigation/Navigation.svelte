@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Palette } from '@/client/palette'
+    import { Palette } from '@/client/color'
     import { Avatar } from '@/client/Avatar'
     import { socials, navigation, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/Container'

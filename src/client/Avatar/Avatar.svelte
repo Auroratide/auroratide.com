@@ -1,6 +1,6 @@
 <script lang="ts">
     import Svg from './Svg.svelte'
-    import { Palette } from '@/client/palette'
+    import { Palette } from '@/client/color'
 
     export let color: string = Palette.colors.AuroraBlue
     export let shadowColor: string = null

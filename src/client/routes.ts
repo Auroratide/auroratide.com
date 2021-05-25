@@ -1,5 +1,5 @@
 import { IconName } from '@/components/VectorIcon/IconName'
-import { Palette } from './palette'
+import { Palette } from '@/client/color'
 
 export type Social = {
     name: string,

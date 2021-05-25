@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Palette } from '@/client/palette'
+    import { Palette } from '@/client/color'
 
     export let circleColor: string = Palette.colors.AuroraBlue
     export let auroraColor: string = Palette.greyscale[100]
