@@ -5,7 +5,7 @@ export type PostLink = {
     readonly title: string
     readonly href: string
     readonly icon?: string
-    readonly color?: Color
+    readonly color?: Color | string
 }
 
 export type GalleryItem = {
@@ -19,7 +19,7 @@ export type Post = {
     readonly category: Category
     readonly tags: string[]
     readonly icon: string
-    readonly color: Color
+    readonly color: Color | string
     readonly summary: string
     readonly longSummary: string
     readonly publishedAt?: Date

@@ -1,5 +1,6 @@
 import { Category } from '../category'
 import type { ArtItem } from '../types'
+import { ColorForge } from '@/client/color/testing/ColorForge'
 
 type Options = {
     title?: string,
@@ -16,7 +17,7 @@ export class ArtForge {
             category: options.category ?? Category.Character,
             tags: ['apple'],
             image: options.image ?? 'image.png',
-            color: 'red',
+            color: new ColorForge().palette('red'),
             summary: 'A summary',
             publishedAt: options.publishedAt === undefined ? new Date('2021-01-01T00:00:00.000Z') : options.publishedAt,
             createdAt: new Date('2021-01-01T00:00:00.000Z'),

@@ -4,7 +4,7 @@ export type Link = {
     readonly title: string
     readonly href: string
     readonly icon?: string
-    readonly color?: Color
+    readonly color?: Color | string
 }
 
 export type GalleryItem = {
@@ -18,7 +18,7 @@ export type PortfolioItem = {
     readonly category: string
     readonly tags: string[]
     readonly icon: string
-    readonly color: Color
+    readonly color: Color | string
     readonly summary: string
     readonly longSummary: string
     readonly publishedAt?: Date
