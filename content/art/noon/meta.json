@@ -3,7 +3,10 @@
     "title": "Noon",
     "category": "character",
     "image": "noon.png",
-    "color": "fable-pink",
+    "color": {
+        "type": "hex",
+        "value": "b486ec"
+    },
     "summary": "",
     "published_at": "2020-02-15T12:00:00.000Z",
     "created_at": "2020-02-15T12:00:00.000Z"
