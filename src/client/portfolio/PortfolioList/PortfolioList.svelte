@@ -8,6 +8,8 @@
     import { Error } from '@/client/Error'
     import { UrlBuilder } from '@/client/routes'
 
+    import * as color from '@/client/color'
+
     export let resource: Resource<PortfolioItem>
 
     let items: Maybe<PortfolioItem[]> = Pending
@@ -25,7 +27,7 @@
         {:else}
             <div class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
-                    <a aria-label={item.title} class="item" href={new UrlBuilder().portfolioItem(item.id)} style="--article-color: var(--palette-{item.color});">
+                    <a aria-label={item.title} class="item" href={new UrlBuilder().portfolioItem(item.id)} style="--article-color: {color.fromJson(item.color)};">
                         <article>
                             <section>
                                 <h1>{item.title}</h1>

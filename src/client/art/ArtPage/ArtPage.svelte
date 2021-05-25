@@ -9,6 +9,8 @@
     import { Pending, Missing } from '@/client/resources'
     import { UrlBuilder } from '@/client/routes'
 
+    import * as color from '@/client/color'
+
     export let id: string
     export let resource: Resource<ArtItem>
 
@@ -31,7 +33,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article" style={`--article-color: var(--palette-${item.color});`}>
+            <article class="article" style="--article-color: {color.fromJson(item.color)};">
                 <header>
                     <h1>{title}</h1>
                 </header>

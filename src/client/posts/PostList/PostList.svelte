@@ -8,6 +8,8 @@
     import { Error } from '@/client/Error'
     import { UrlBuilder } from '@/client/routes'
 
+    import * as color from '@/client/color'
+
     export let resource: Resource<Post>
 
     let items: Maybe<Post[]> = Pending
@@ -25,7 +27,7 @@
         {:else}
             <div class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
-                    <a aria-label={item.title} class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: var(--palette-{item.color});">
+                    <a aria-label={item.title} class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: {color.fromJson(item.color)};">
                         <article>
                             <section>
                                 <h1>{item.title}</h1>

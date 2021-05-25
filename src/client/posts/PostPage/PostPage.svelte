@@ -16,6 +16,8 @@
     import { LinkBar } from './LinkBar'
     import { Gallery } from './Gallery'
 
+    import * as color from '@/client/color'
+
     export let id: string
     export let resource: Resource<Post>
 
@@ -48,7 +50,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article" style={`--article-color: var(--palette-${item.color});`}>
+            <article class="article" style="--article-color: {color.fromJson(item.color)};">
                 <Header title={item.title} icon={item.icon} />
                 {#if item.links}
                     <LinkBar links={item.links} />
