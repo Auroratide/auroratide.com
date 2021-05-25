@@ -39,11 +39,11 @@
                 <header>
                     <h1>{title}</h1>
                 </header>
-                <Content>
-                    <section class="content">
-                        <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
+                <div class="content-container">
+                    <section class="art">
+                        <popout-image class="image" src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
                     </section>
-                    <section slot="sidebar">
+                    <section class="content">
                         <div class="published"><date-display date={item.publishedAt} /></div>
                         {#if item.content}
                             <RawRenderer content={item.content} />
@@ -51,7 +51,7 @@
                             <Loading text="Fetching content..." />
                         {/if}
                     </section>
-                </Content>
+                </div>
             </article>
         {/if}
     </Container>
@@ -60,19 +60,18 @@
 <style>
     header {
         position: relative;
-        /* height: 10em; */
         display: flex;
         align-items: flex-end;
         justify-content: center;
         background: var(--article-color);
         overflow: hidden;
-        padding-top: var(--sizing-spacing-sm);
     }
 
     h1 {
+        font-size: var(--sizing-font-lg);
         position: relative;
         width: 100%;
-        padding: var(--sizing-spacing-sm);
+        padding: var(--sizing-spacing-xs);
         color: var(--palette-greyscale-100);
         text-align: center;
         background: var(--palette-shade-033);
@@ -80,12 +79,39 @@
         line-height: 1;
     }
 
-    .content {
+    .art {
+        background: rgba(0, 0, 0, 0.75);
         text-align: center;
     }
 
+    .image {
+        max-height: 95vh;
+    }
+
     .published {
-        margin-bottom: var(--sizing-spacing-p);
+        margin-bottom: var(--sizing-spacing-md);
         font-weight: var(--typography-light);
+        font-size: var(--sizing-font-xs);
+        text-align: center;
+    }
+
+    .content {
+        background: var(--skin-color-content);
+        padding: var(--sizing-spacing-md);
+    }
+
+    @media screen and (min-width: 75rem) {
+        h1 {
+            padding: var(--sizing-spacing-sm);
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .published {
+            text-align: left;
+        }
     }
 </style>
