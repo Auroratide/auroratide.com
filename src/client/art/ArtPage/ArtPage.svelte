@@ -85,6 +85,7 @@
     }
 
     .image {
+        display: block;
         max-height: 95vh;
     }
 
