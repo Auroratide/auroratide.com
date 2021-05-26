@@ -14,12 +14,20 @@ export default () => {
         }
 
         img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            opacity: 1;
+            max-width: inherit;
+            max-height: inherit;
+            object-fit: contain;
+        }
+
+        .image {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            margin: 0;
-            opacity: 1;
             transition: opacity var(--colorscape-fade-duration, 400ms) linear;
         }
 
@@ -28,7 +36,8 @@ export default () => {
         }
 
         .colorscape {
-            filter: blur(0.5rem);
+            filter: blur(0.25rem);
+            transition: opacity var(--colorscape-fade-duration, 400ms) ease-out;
         }
     `
 
@@ -53,6 +62,7 @@ export default () => {
         connectedCallback() {
             this.imageImg.onload = () => {
                 this.imageImg.classList.remove('hide')
+                this.colorscapeImg.classList.add('hide')
             }
         }
 
