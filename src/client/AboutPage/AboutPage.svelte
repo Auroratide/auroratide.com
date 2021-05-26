@@ -2,6 +2,9 @@
     import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
+
+    import { navigation, UrlBuilder } from '@/client/routes'
+    const assetRoot = new UrlBuilder().assets().page(navigation.About.link)
 </script>
 
 <DocumentInfo title="About" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
@@ -10,7 +13,7 @@
             <Content>
                 <h1 class="greeting">Hi! I'm Timothy.</h1>
                 <h2 class="tagline">Coding is my craft. Teaching is my passion.</h2>
-                <responsive-image class="profile" src="/assets/about/profile" alt="Profile" lowres="124w" medres="720w" highres="1080w"></responsive-image>
+                <img-colorscape class="profile" src="{assetRoot.asset('profile/1080w.png')}" alt="Profile" colorscape="{assetRoot.asset('profile/colorscape.svg')}"></img-colorscape>
                 <p>A long time ago, I had a graphing calculator which came with a bunch of games on it. But one day, a nefarious colleague deleted all those games. Desperate, I sought a manual hoping they could be restored, but I stumbled upon something much better.</p>
                 <p>The games could not be undeleted. Instead, they could be recreated.</p>
                 <p>That's how I discovered programming. Since then, I've dabbled in websites, game development, artificial intelligence, and more. It turns out coding is much like magic.</p>
