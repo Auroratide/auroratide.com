@@ -36,7 +36,6 @@ export default () => {
         }
 
         .colorscape {
-            filter: blur(0.25rem);
             transition: opacity calc(var(--colorscape-fade-duration, 400ms) * 1.5) ease-out;
         }
     `
