@@ -41,7 +41,12 @@
                 </header>
                 <div class="content-container">
                     <section class="art">
-                        <popout-image class="image" src={new UrlBuilder().assets().artItem(id).asset(item.image)} alt={title} />
+                        <img-colorscape
+                            class="image"
+                            src={new UrlBuilder().assets().artItem(id).asset(item.image.original)}
+                            colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}
+                            alt={title}
+                        ></img-colorscape>
                     </section>
                     <section class="content">
                         <div class="published"><date-display date={item.publishedAt} /></div>

@@ -3,7 +3,10 @@
     "title": "",
     "category": "",
     "tags": [],
-    "image": "",
+    "image": {
+        "original": "",
+        "colorscape": "colorscape.svg"
+    },
     "color": {
         "type": "hex",
         "value": ""

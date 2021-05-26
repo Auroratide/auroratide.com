@@ -3,7 +3,10 @@
     "title": "Noon",
     "category": "character",
     "tags": ["dnd", "female", "cleric"],
-    "image": "noon.png",
+    "image": {
+        "original": "noon.png",
+        "colorscape": "colorscape.svg"
+    },
     "color": {
         "type": "hex",
         "value": "b486ec"

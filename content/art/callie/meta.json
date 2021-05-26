@@ -3,7 +3,10 @@
     "title": "Callie",
     "category": "animal",
     "tags": [],
-    "image": "callie.png",
+    "image": {
+        "original": "callie.png",
+        "colorscape": "colorscape.svg"
+    },
     "color": {
         "type": "hex",
         "value": "e1555c"
