@@ -35,7 +35,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article" style="--article-color: {color.fromJson(item.color)};">
+            <article class="article" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
                 <header>
                     <h1>{title}</h1>
                 </header>
@@ -80,7 +80,7 @@
     }
 
     .art {
-        background: rgba(0, 0, 0, 0.75);
+        background: var(--bg-color);
         text-align: center;
     }
 

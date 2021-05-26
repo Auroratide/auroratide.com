@@ -13,6 +13,7 @@ class Fetch extends FetchResourceApi<ArtItem> {
         tags: data.tags,
         image: data.image,
         color: data.color,
+        background: data.background,
         summary: data.summary,
         longSummary: data.long_summary,
         publishedAt: data.published_at ? new Date(data.published_at) : null,

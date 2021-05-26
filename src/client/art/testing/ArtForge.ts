@@ -19,6 +19,7 @@ export class ArtForge {
             tags: ['apple'],
             image: options.image ?? 'image.png',
             color: new ColorForge().palette('red'),
+            background: new ColorForge().hex('000000'),
             summary: 'A summary',
             publishedAt: options.publishedAt === undefined ? new Date('2021-01-01T00:00:00.000Z') : options.publishedAt,
             createdAt: new Date('2021-01-01T00:00:00.000Z'),

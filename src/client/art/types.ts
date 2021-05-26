@@ -7,6 +7,7 @@ export type ArtItem = {
     readonly tags: string[]
     readonly image: string
     readonly color: Color
+    readonly background: Color
     readonly summary: string
     readonly publishedAt?: Date
     readonly createdAt: Date

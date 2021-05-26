@@ -8,6 +8,10 @@
         "type": "hex",
         "value": "e1555c"
     },
+    "background": {
+        "type": "hex",
+        "value": "fdc0cd"
+    },
     "summary": "",
     "published_at": "2019-08-04T12:00:00.000Z",
     "created_at": "2019-08-04T12:00:00.000Z"

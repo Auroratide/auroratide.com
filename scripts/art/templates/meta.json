@@ -8,6 +8,10 @@
         "type": "hex",
         "value": ""
     },
+    "background": {
+        "type": "hex",
+        "value": ""
+    },
     "summary": "",
     "published_at": "",
     "created_at": "$DATE$"

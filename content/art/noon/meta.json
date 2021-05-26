@@ -8,6 +8,10 @@
         "type": "hex",
         "value": "b486ec"
     },
+    "background": {
+        "type": "hex",
+        "value": "333333"
+    },
     "summary": "",
     "published_at": "2020-02-15T12:00:00.000Z",
     "created_at": "2020-02-15T12:00:00.000Z"
