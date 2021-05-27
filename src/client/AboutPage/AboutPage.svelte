@@ -13,7 +13,9 @@
             <Content>
                 <h1 class="greeting">Hi! I'm Timothy.</h1>
                 <h2 class="tagline">Coding is my craft. Teaching is my passion.</h2>
-                <img-colorscape class="profile" src="{assetRoot.asset('profile/1080w.png')}" alt="Profile" colorscape="{assetRoot.asset('profile/colorscape.svg')}"></img-colorscape>
+                <img-colorscape class="profile" colorscape="{assetRoot.asset('profile/colorscape.svg')}">
+                    <img src={assetRoot.asset('profile/1080w.png')} alt="Profile" />
+                </img-colorscape>
                 <p>A long time ago, I had a graphing calculator which came with a bunch of games on it. But one day, a nefarious colleague deleted all those games. Desperate, I sought a manual hoping they could be restored, but I stumbled upon something much better.</p>
                 <p>The games could not be undeleted. Instead, they could be recreated.</p>
                 <p>That's how I discovered programming. Since then, I've dabbled in websites, game development, artificial intelligence, and more. It turns out coding is much like magic.</p>

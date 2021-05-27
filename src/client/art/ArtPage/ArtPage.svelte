@@ -41,12 +41,9 @@
                 </header>
                 <div class="content-container">
                     <section class="art">
-                        <img-colorscape
-                            class="image"
-                            src={new UrlBuilder().assets().artItem(id).asset(item.image.original)}
-                            colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}
-                            alt={title}
-                        ></img-colorscape>
+                        <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
+                            <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title}></popout-image>
+                        </img-colorscape>
                     </section>
                     <section class="content">
                         <div class="published"><date-display date={item.publishedAt} /></div>
@@ -89,7 +86,7 @@
         text-align: center;
     }
 
-    .image {
+    .image, .image > * {
         display: block;
         max-height: 95vh;
     }

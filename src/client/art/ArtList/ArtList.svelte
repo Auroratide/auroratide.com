@@ -32,11 +32,9 @@
                                     <h1>{item.title}</h1>
                                 </header>
                                 <section class="image-container">
-                                    <img-colorscape
-                                        src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)}
-                                        colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}
-                                        alt={item.title}
-                                    ></img-colorscape>
+                                    <img-colorscape colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}>
+                                        <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={items.title} loading="lazy" />
+                                    </img-colorscape>
                                 </section>
                             </article>
                         </a>

@@ -27,9 +27,13 @@
         if (e.key === 'Escape')
             popin()
     }
+
+    const forwardLoad = (e: Event) => {
+        ((e.target as HTMLElement).parentNode as ShadowRoot).host.dispatchEvent(new Event('load'))
+    }
 </script>
 
-<img class="image" {src} {alt} {loading} on:click={popout} />
+<img class="image" {src} {alt} {loading} on:click={popout} on:load={forwardLoad} />
 {#if enlarged}
     <div class="cover" on:click={popin} transition:fade={{duration: 100}} data-testid="popped-out">
         <img {src} {alt} class="popped-out" />

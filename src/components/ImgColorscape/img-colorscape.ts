@@ -1,9 +1,13 @@
 export default () => {
     const name = 'img-colorscape'
+    
+    const IMGLOADED_EVENT = 'imgloaded'
 
     const html = `
-        <img class="colorscape" aria-hidden="true" />
-        <img class="image hide" loading="lazy" />
+        <img class="colorscape" alt="Colorscape" aria-hidden="true" />
+        <div class="image hide">
+            <slot></slot>
+        </div>
     `
 
     const css = `
@@ -13,7 +17,7 @@ export default () => {
             overflow: hidden;
         }
 
-        img {
+        img, ::slotted(*) {
             display: block;
             width: 100%;
             height: 100%;
@@ -28,10 +32,11 @@ export default () => {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
             transition: opacity var(--colorscape-fade-duration, 400ms) linear;
         }
 
-        img.hide {
+        .hide {
             opacity: 0;
         }
 
@@ -59,10 +64,14 @@ export default () => {
         }
 
         connectedCallback() {
-            this.imageImg.onload = () => {
-                this.imageImg.classList.remove('hide')
-                this.colorscapeImg.classList.add('hide')
-            }
+            this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
+        }
+
+        reveal = (e: Event) => {
+            this.imageImg.classList.remove('hide')
+            this.colorscapeImg.classList.add('hide')
+            this.shadowRoot.host.removeEventListener(IMGLOADED_EVENT, this.reveal)
+            e.stopPropagation()
         }
 
         static get observedAttributes() {
@@ -70,20 +79,26 @@ export default () => {
         }
 
         attributeChangedCallback() {
-            this.imageImg.src = this.src
-            this.imageImg.alt = this.alt
-
             this.colorscapeImg.src = this.colorscape
-            this.colorscapeImg.alt = this.alt
         }
-
-        get src() { return this.getAttribute('src') }
-        set src(value: string) { this.setAttribute('src', value) }
-
-        get alt() { return this.getAttribute('alt') }
-        set alt(value: string) { this.setAttribute('alt', value) }
 
         get colorscape() { return this.getAttribute('colorscape') }
         set colorscape(value: string) { this.setAttribute('colorscape', value) }
     })
+
+    /**
+     * <img-colorscape> assumes the slotted element emits a 'load' event
+     * The load event is then used to dispatch the imgloaded event in order to
+     * reveal the actual image over the colorscape
+     */
+    document.body.addEventListener('load', (e: Event) => {
+        if (e.target instanceof HTMLElement) {
+            let curParent = e.target.parentNode
+            while (curParent !== null && curParent.nodeName.toUpperCase() !== 'IMG-COLORSCAPE') {
+                curParent = curParent.parentNode
+            }
+
+            curParent?.dispatchEvent(new Event(IMGLOADED_EVENT))
+        }
+    }, true)
 }
