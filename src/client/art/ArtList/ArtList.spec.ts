@@ -35,7 +35,7 @@ describe('ArtList', () => {
             .prop('resource', resource)
             .render()
 
-        expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
-        expect(screen.getByText(posts.orange.title)).toBeInTheDocument()
+        expect(screen.queryByAltText(posts.apple.title)).toBeInTheDocument()
+        expect(screen.queryByAltText(posts.orange.title)).toBeInTheDocument()
     })
 })
