@@ -39,28 +39,36 @@
                 <header>
                     <h1>{title}</h1>
                 </header>
-                <div class="content-container">
-                    <section class="art">
-                        <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
-                            <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title}></popout-image>
-                        </img-colorscape>
-                    </section>
-                    <section class="content">
-                        <div class="published"><date-display date={item.publishedAt} /></div>
-                        {#if item.content}
-                            <RawRenderer content={item.content} />
-                        {:else}
-                            <Loading text="Fetching content..." />
-                        {/if}
-                    </section>
-                </div>
+                <section class="art">
+                    <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
+                        <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title}></popout-image>
+                    </img-colorscape>
+                </section>
+                <section class="content">
+                    <div class="published"><date-display date={item.publishedAt} /></div>
+                    {#if item.content}
+                        <RawRenderer content={item.content} />
+                    {:else}
+                        <Loading text="Fetching content..." />
+                    {/if}
+                </section>
             </article>
         {/if}
     </Container>
 </DocumentInfo>
 
 <style>
+    .article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "image"
+            "content";
+    }
+
     header {
+        grid-area: header;
         position: relative;
         display: flex;
         align-items: flex-end;
@@ -82,6 +90,7 @@
     }
 
     .art {
+        grid-area: image;
         background: var(--bg-color);
         text-align: center;
     }
@@ -99,6 +108,7 @@
     }
 
     .content {
+        grid-area: content;
         background: var(--skin-color-content);
         padding: var(--sizing-spacing-md);
     }
@@ -108,9 +118,11 @@
             padding: var(--sizing-spacing-sm);
         }
 
-        .content-container {
-            display: grid;
+        .article {
             grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "header header"
+                "image content";
         }
 
         .published {
