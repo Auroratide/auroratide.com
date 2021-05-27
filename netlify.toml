@@ -276,6 +276,12 @@
   force = false
 
 [[redirects]]
+  from = "/art/fable"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/art/noon"
   to = "/index.html"
   status = 200
