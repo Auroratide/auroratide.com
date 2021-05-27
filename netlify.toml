@@ -30,6 +30,12 @@
   force = false
 
 [[redirects]]
+  from = "/styleguide"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts"
   to = "/index.html"
   status = 200
