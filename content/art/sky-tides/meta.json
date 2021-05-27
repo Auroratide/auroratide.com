@@ -11,6 +11,10 @@
         "original": "cover.png",
         "colorscape": "cover.svg"
     },
+    "dimensions": {
+        "width": 1920,
+        "height": 1080
+    },
     "color": {
         "type": "hex",
         "value": "1aa24e"

@@ -11,6 +11,10 @@
         "original": "cover.png",
         "colorscape": "cover.svg"
     },
+    "dimensions": {
+        "width": 0,
+        "height": 0
+    },
     "color": {
         "type": "hex",
         "value": ""

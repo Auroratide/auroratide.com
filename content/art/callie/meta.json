@@ -11,6 +11,10 @@
         "original": "cover.png",
         "colorscape": "colorscape.svg"
     },
+    "dimensions": {
+        "width": 750,
+        "height": 750
+    },
     "color": {
         "type": "hex",
         "value": "e1555c"
