@@ -7,6 +7,10 @@
         "original": "sky-tides.png",
         "colorscape": "colorscape.svg"
     },
+    "cover": {
+        "original": "cover.png",
+        "colorscape": "cover.svg"
+    },
     "color": {
         "type": "hex",
         "value": "1aa24e"

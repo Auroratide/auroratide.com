@@ -32,7 +32,11 @@
                                     <h1>{item.title}</h1>
                                 </header>
                                 <section class="image-container">
-                                    <img src={new UrlBuilder().assets().artItem(item.id).asset(item.image.original)} alt={item.title} />
+                                    <img-colorscape
+                                        src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)}
+                                        colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}
+                                        alt={item.title}
+                                    ></img-colorscape>
                                 </section>
                             </article>
                         </a>
@@ -103,7 +107,7 @@
         left: 0;
     }
 
-    .item img {
+    .item img-colorscape {
         width: 100%;
         height: 100%;
         object-fit: cover;

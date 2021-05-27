@@ -21,6 +21,10 @@ export class ArtForge {
                 original: 'image.png',
                 colorscape: 'colorscape.svg'
             },
+            cover: options.image ?? {
+                original: 'cover.png',
+                colorscape: 'cover.svg'
+            },
             color: new ColorForge().palette('red'),
             background: new ColorForge().hex('000000'),
             summary: 'A summary',

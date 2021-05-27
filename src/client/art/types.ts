@@ -11,6 +11,7 @@ export type ArtItem = {
     readonly category: string
     readonly tags: string[]
     readonly image: ImageSet
+    readonly cover: ImageSet
     readonly color: Color
     readonly background: Color
     readonly summary: string

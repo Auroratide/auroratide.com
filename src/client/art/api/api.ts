@@ -12,6 +12,7 @@ class Fetch extends FetchResourceApi<ArtItem> {
         category: data.category,
         tags: data.tags,
         image: data.image,
+        cover: data.cover,
         color: data.color,
         background: data.background,
         summary: data.summary,
