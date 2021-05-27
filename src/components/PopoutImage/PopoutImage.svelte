@@ -5,6 +5,7 @@
 
     export let src: string
     export let alt: string
+    export let loading: string = 'eager'
 
     let enlarged: boolean = false
 
@@ -28,7 +29,7 @@
     }
 </script>
 
-<img class="image" {src} {alt} on:click={popout} />
+<img class="image" {src} {alt} {loading} on:click={popout} />
 {#if enlarged}
     <div class="cover" on:click={popin} transition:fade={{duration: 100}} data-testid="popped-out">
         <img {src} {alt} class="popped-out" />
