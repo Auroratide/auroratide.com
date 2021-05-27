@@ -4,7 +4,6 @@
 
     import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
-    import { Content } from '@/client/Content'
     import { RawRenderer } from '@/client/RawRenderer'
     import { Loading } from '@/client/Loading'
     import { PageNotFound } from '@/client/PageNotFound'

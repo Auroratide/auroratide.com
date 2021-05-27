@@ -33,7 +33,7 @@
                                 </header>
                                 <section class="image-container">
                                     <img-colorscape colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}>
-                                        <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={items.title} loading="lazy" />
+                                        <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={item.title} loading="lazy" />
                                     </img-colorscape>
                                 </section>
                             </article>
