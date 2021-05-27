@@ -42,6 +42,12 @@
   force = false
 
 [[redirects]]
+  from = "/art"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/a-hierarchy-of-dystopias"
   to = "/index.html"
   status = 200

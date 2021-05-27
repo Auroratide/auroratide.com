@@ -12,6 +12,7 @@
     import { PortfolioPage } from './portfolio/PortfolioPage'
     import { PortfolioList } from './portfolio/PortfolioList'
     import { ArtPage } from './art/ArtPage'
+    import { ArtList } from './art/ArtList'
 
     import { AboutPage } from './AboutPage'
     import { LegalPage } from './LegalPage'
@@ -47,15 +48,21 @@
         next()
     })
     page('/', () => context = { component: ResourceProvider, params: { store: posts, component: PostList } })
+
     page(navigation.Posts.link, () => context = { component: ResourceProvider, params: { component: PostList, store: posts } })
     page(`${navigation.Posts.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PostPage, store: posts, id: params.id } })
+
     page(navigation.Portfolio.link, () => context = { component: ResourceProvider, params: { component: PortfolioList, store: portfolio } })
     page(`${navigation.Portfolio.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: PortfolioPage, store: portfolio, id: params.id } })
+
+    page(navigation.Art.link, () => context = { component: ResourceProvider, params: { component: ArtList, store: art } })
     page(`${navigation.Art.link}/:id`, ({ params }) => context = { component: ResourceProvider, params: { component: ArtPage, store: art, id: params.id } })
+
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
     page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
     page(navigation.Styleguide.link, () => context = { component: Styleguide, params: {} })
+    
     page('*', () => context = { component: PageNotFound, params: {} })
 
     page.start()
