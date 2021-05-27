@@ -5,7 +5,7 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import type { Post } from '../types'
-    import { Error } from '@/client/Error'
+    import { CatastrophicError } from '@/client/CatastrophicError'
     import { UrlBuilder } from '@/client/routes'
 
     import * as color from '@/client/color'
@@ -21,9 +21,7 @@
         {#if items === Pending}
             <Loading text="Fetching posts..." large />
         {:else if items === Missing}
-            <Error title="Uh oh!" subtitle="Something went horribly wrong.">
-                <p>I recommend you try refreshing the page. If that doesn't fix it, I dunno, guess I need to fix something!</p>
-            </Error>
+            <CatastrophicError />
         {:else}
             <div class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
