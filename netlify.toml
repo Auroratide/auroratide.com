@@ -270,6 +270,12 @@
   force = false
 
 [[redirects]]
+  from = "/art/sky-tides"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
