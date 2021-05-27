@@ -19,11 +19,21 @@
     let item: Maybe<ArtItem> = Pending
     let title: string = ''
     let description: string = ''
+    let ratioClassification: string = ''
     $: {
         item = resource.one(id)
         if (item !== Pending && item !== Missing) {
             title = item.title
             description = item.summary
+
+            const d = item.dimensions
+            if (d.width / d.height >= 16 / 10) {
+                ratioClassification = 'horizontal'
+            } else if (d.width / d.height <= 10 / 16) {
+                ratioClassification = 'vertical'
+            } else {
+                ratioClassification = 'square'
+            }
         }
     }
 </script>
@@ -35,7 +45,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
+            <article class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
                 <header>
                     <h1>{title}</h1>
                 </header>
@@ -123,6 +133,14 @@
             grid-template-areas:
                 "header header"
                 "image content";
+        }
+
+        .article.horizontal {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "image"
+                "content";
         }
 
         .published {
