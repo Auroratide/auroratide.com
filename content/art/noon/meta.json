@@ -1,8 +1,8 @@
 {
     "id": "noon",
-    "title": "Noon",
+    "title": "Noon Averiel",
     "category": "character",
-    "tags": ["dnd", "female", "cleric"],
+    "tags": ["dnd", "female", "cleric", "human", "robes", "staff"],
     "image": {
         "original": "noon.png",
         "colorscape": "colorscape.svg"
@@ -23,7 +23,7 @@
         "type": "hex",
         "value": "333333"
     },
-    "summary": "",
+    "summary": "A light domain human cleric for a D&D campaign I am in. She is essentially a sun gun nun.",
     "published_at": "2020-02-15T12:00:00.000Z",
     "created_at": "2020-02-15T12:00:00.000Z"
 }
