@@ -300,6 +300,12 @@
   force = false
 
 [[redirects]]
+  from = "/art/fable-pixelart"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/art/marscraft"
   to = "/index.html"
   status = 200
