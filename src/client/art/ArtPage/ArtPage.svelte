@@ -94,6 +94,7 @@
 
 <style>
     .article {
+        --article-padding: var(--sizing-spacing-md);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -146,13 +147,13 @@
     .content {
         grid-area: content;
         background: var(--skin-color-content);
-        padding: var(--sizing-spacing-md);
+        padding: var(--article-padding) var(--article-padding) 0;
     }
 
     .related-items {
         grid-area: related-items;
         background: var(--skin-color-content);
-        padding: var(--sizing-spacing-md);
+        padding: 0 var(--article-padding) var(--article-padding);
     }
 
     .related-items ul {
@@ -176,6 +177,10 @@
     .related-items ul > li::before {
         content: '';
         padding-bottom: 100%;
+    }
+
+    .more-title {
+        text-transform: capitalize;
     }
 
     @media screen and (min-width: 75rem) {
