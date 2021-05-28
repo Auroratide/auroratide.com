@@ -2,7 +2,7 @@
     "id": "fable",
     "title": "Fable",
     "category": "character",
-    "tags": ["female"],
+    "tags": ["female", "hat", "skirt", "teen", "concept"],
     "image": {
         "original": "fable.png",
         "colorscape": "colorscape.svg"
@@ -23,7 +23,7 @@
         "type": "hex",
         "value": "333333"
     },
-    "summary": "",
+    "summary": "Fable is a magical hacker in a game a friend and I sporadically develop.",
     "published_at": "2019-01-16T12:00:00.000Z",
     "created_at": "2019-01-16T12:00:00.000Z"
 }
