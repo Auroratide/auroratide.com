@@ -1,0 +1,29 @@
+{
+    "id": "esprie",
+    "title": "Esprie",
+    "category": "character",
+    "tags": ["female", "lancer", "sword", "armor"],
+    "image": {
+        "original": "esprie.png",
+        "colorscape": "colorscape.svg"
+    },
+    "cover": {
+        "original": "cover.png",
+        "colorscape": "cover.svg"
+    },
+    "dimensions": {
+        "width": 708,
+        "height": 1584
+    },
+    "color": {
+        "type": "hex",
+        "value": "aa6f8a"
+    },
+    "background": {
+        "type": "hex",
+        "value": "333333"
+    },
+    "summary": "A mech pilot I play in the Lancer TTRPG. She likes bringing a knife to a gun fight.",
+    "published_at": "2021-05-22T12:00:00.000Z",
+    "created_at": "2021-05-22T12:00:00.000Z"
+}
