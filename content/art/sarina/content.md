@@ -1,0 +1,3 @@
+Sarina was a recruitable character for a Fire Emblem game me and a fellow geek were devising back in college. She lives in a country divided by a feudal system. In her past, Sarina's village had been forcefully occupied by an oppressive lord, and her people compelled to farm infertile fields. For each of her friends that passed in the fields, she made a new cut on her left arm, a grim reminder of the revenge she seeks.
+
+Fire Emblem has a tradition of putting a recruitable myrmidon in the early chapters, a tradition which Sarina was meant to fill. However, we also had an underlying theme of being merciful to foes, and Sarina, through conversations with the main character over time, would have been some measure of that mercy.
