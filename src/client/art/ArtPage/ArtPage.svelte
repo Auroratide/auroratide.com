@@ -9,6 +9,7 @@
     import { PageNotFound } from '@/client/PageNotFound'
     import { Pending, Missing } from '@/client/resources'
     import { UrlBuilder } from '@/client/routes'
+    import { ArtCoverLink } from '../ArtCoverLink'
 
     import * as color from '@/client/color'
 
@@ -16,6 +17,7 @@
     export let resource: Resource<ArtItem>
 
     let item: Maybe<ArtItem> = Pending
+    let relatedItems: Maybe<ArtItem[]> = Pending
     let title: string = ''
     let description: string = ''
     let ratioClassification: string = ''
@@ -32,6 +34,16 @@
                 ratioClassification = 'vertical'
             } else {
                 ratioClassification = 'square'
+            }
+
+            relatedItems = resource.list()
+            if (relatedItems !== Pending && relatedItems !== Missing) {
+                relatedItems = relatedItems
+                    .filter(i => i.category === (item as ArtItem).category)
+                    .filter(i => i.id !== (item as ArtItem).id)
+                    .filter(i => i.publishedAt)
+                    .slice(0, 4)
+                    .sort(() => 0.5 - Math.random())
             }
         }
     }
@@ -61,6 +73,20 @@
                         <Loading text="Fetching content..." />
                     {/if}
                 </section>
+                <section class="related-items">
+                    {#if relatedItems !== Missing && relatedItems !== Pending}
+                        <h2 class="more-title">More {item.category} Art</h2>
+                        <ul>
+                            {#each relatedItems as relatedItem}
+                                <li>
+                                    <ArtCoverLink item={relatedItem} />
+                                </li>
+                            {/each}
+                        </ul>
+                    {:else}
+                        <Loading text="Finding art..." />
+                    {/if}
+                </section>
             </article>
         {/if}
     </Container>
@@ -73,7 +99,8 @@
         grid-template-areas:
             "header"
             "image"
-            "content";
+            "content"
+            "related-items";
     }
 
     header {
@@ -122,6 +149,35 @@
         padding: var(--sizing-spacing-md);
     }
 
+    .related-items {
+        grid-area: related-items;
+        background: var(--skin-color-content);
+        padding: var(--sizing-spacing-md);
+    }
+
+    .related-items ul {
+        --gap-size: 2.5%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(25% - var(--gap-size)), 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: var(--gap-size);
+        padding: 0;
+    }
+
+    .related-items ul > li {
+        display: grid;
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        font-size: 0.625em;
+    }
+
+    .related-items ul > li::before {
+        content: '';
+        padding-bottom: 100%;
+    }
+
     @media screen and (min-width: 75rem) {
         h1 {
             padding: var(--sizing-spacing-sm);
@@ -129,9 +185,11 @@
 
         .article {
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto 1fr;
             grid-template-areas:
                 "header header"
-                "image content";
+                "image content"
+                "image related-items";
         }
 
         .article.horizontal {
@@ -139,7 +197,8 @@
             grid-template-areas:
                 "header"
                 "image"
-                "content";
+                "content"
+                "related-items";
         }
 
         .published {

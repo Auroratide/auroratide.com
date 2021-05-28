@@ -1,6 +1,7 @@
 import { ArtPage } from '.'
 import { InMemoryResource } from '@/client/resources'
 import { ArtForge } from '../testing/ArtForge'
+import { Category } from '../category'
 import { component } from '@/testing/component'
 import { screen } from '@testing-library/svelte'
 import type { ArtItem } from '../types'
@@ -65,5 +66,24 @@ describe('ArtPage', () => {
             .render()
 
         expect(screen.getByText(/fetching\scontent/i)).toBeInTheDocument()
+    })
+
+    test('related items', async () => {
+        items = {
+            parie: forge.create('parie', { category: Category.Character }),
+            ling: forge.create('ling', { category: Category.Character }),
+            cay: forge.create('cay', { category: Category.Character }),
+            dog: forge.create('dog', { category: Category.Animal }),
+        }
+        resource = new InMemoryResource(Object.values(items))
+
+        component(ArtPage)
+            .prop('id', items.parie.id)
+            .prop('resource', resource)
+            .render()
+
+        expect(screen.queryByText(items.ling.title)).toBeInTheDocument()
+        expect(screen.queryByText(items.cay.title)).toBeInTheDocument()
+        expect(screen.queryByText(items.dog.title)).not.toBeInTheDocument()
     })
 })
