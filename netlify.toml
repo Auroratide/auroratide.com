@@ -270,6 +270,12 @@
   force = false
 
 [[redirects]]
+  from = "/art/aurora-sci-fi"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/art/callie"
   to = "/index.html"
   status = 200
