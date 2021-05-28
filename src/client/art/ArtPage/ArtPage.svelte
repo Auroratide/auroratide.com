@@ -10,6 +10,7 @@
     import { Pending, Missing } from '@/client/resources'
     import { UrlBuilder } from '@/client/routes'
     import { ArtCoverLink } from '../ArtCoverLink'
+    import { disqus } from '@/client/embed/disqus'
 
     import * as color from '@/client/color'
 
@@ -87,6 +88,13 @@
                         <Loading text="Finding art..." />
                     {/if}
                 </section>
+                <section class="comments">
+                    <h2>Comments</h2>
+                    <div use:disqus={{
+                        url: new UrlBuilder().withBase().artItem(id),
+                        id: id,
+                    }}></div>
+                </section>
             </article>
         {/if}
     </Container>
@@ -101,7 +109,8 @@
             "header"
             "image"
             "content"
-            "related-items";
+            "related-items"
+            "comments";
     }
 
     header {
@@ -183,6 +192,14 @@
         text-transform: capitalize;
     }
 
+    .comments {
+        grid-area: comments;
+        background: var(--skin-color-content);
+        padding: var(--article-padding);
+        border-top: var(--sizing-border-md) solid var(--article-color);
+        box-shadow: 0 2em 0.5em -2em var(--palette-shade-033) inset;
+    }
+
     @media screen and (min-width: 75rem) {
         h1 {
             padding: var(--sizing-spacing-sm);
@@ -190,11 +207,12 @@
 
         .article {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto 1fr;
+            grid-template-rows: auto auto 1fr auto;
             grid-template-areas:
                 "header header"
                 "image content"
-                "image related-items";
+                "image related-items"
+                "comments comments";
         }
 
         .article.horizontal {
@@ -203,7 +221,8 @@
                 "header"
                 "image"
                 "content"
-                "related-items";
+                "related-items"
+                "comments";
         }
 
         .published {
