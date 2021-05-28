@@ -1,0 +1,29 @@
+{
+    "id": "aella",
+    "title": "Aella",
+    "category": "character",
+    "tags": ["hand drawn", "female", "fire emblem", "archery", "leaves"],
+    "image": {
+        "original": "aella.png",
+        "colorscape": "colorscape.svg"
+    },
+    "cover": {
+        "original": "cover.png",
+        "colorscape": "cover.svg"
+    },
+    "dimensions": {
+        "width": 1200,
+        "height": 1790
+    },
+    "color": {
+        "type": "palette",
+        "value": "aella-green"
+    },
+    "background": {
+        "type": "hex",
+        "value": "e5e5e5"
+    },
+    "summary": "Aella was a main protagonist for a Fire Emblem game a friend and I were theorizing. She's a descendant of the great Wind Sage.",
+    "published_at": "2016-02-03T12:00:00.000Z",
+    "created_at": "2016-02-03T12:00:00.000Z"
+}
