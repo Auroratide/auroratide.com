@@ -33,11 +33,12 @@
 
 <style>
     .item-list {
+        --gap-size: var(--sizing-spacing-md);
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(max(25%, 10em) - var(--gap-size)), 1fr));
         grid-auto-rows: 1fr;
-        grid-gap: var(--sizing-spacing-md);
+        grid-gap: var(--gap-size);
         padding: var(--sizing-spacing-md);
     }
 
