@@ -55,7 +55,7 @@ export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal
     Art: {
         name: 'Art',
         link: '/art',
-        visibility: NavVisibility.Hidden,
+        visibility: NavVisibility.Visible,
     },
     About: {
         name: 'About',
