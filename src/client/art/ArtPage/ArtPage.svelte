@@ -22,6 +22,7 @@
     let title: string = ''
     let description: string = ''
     let ratioClassification: string = ''
+    let pixelart: boolean = false
     $: {
         item = resource.one(id)
         if (item !== Pending && item !== Missing) {
@@ -46,6 +47,8 @@
                     .slice(0, 4)
                     .sort(() => 0.5 - Math.random())
             }
+
+            pixelart = item.tags.includes('pixelart')
         }
     }
 </script>
@@ -61,7 +64,7 @@
                 <header>
                     <h1>{title}</h1>
                 </header>
-                <section class="art">
+                <section class="art" class:pixelart data-testid="art-section">
                     <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
                         <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title}></popout-image>
                     </img-colorscape>
@@ -139,6 +142,11 @@
         grid-area: image;
         background: var(--bg-color);
         text-align: center;
+    }
+
+    .art.pixelart {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
     }
 
     .image, .image > * {

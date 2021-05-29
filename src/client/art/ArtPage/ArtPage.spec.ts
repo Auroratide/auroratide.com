@@ -86,4 +86,18 @@ describe('ArtPage', () => {
         expect(screen.queryByText(items.cay.title)).toBeInTheDocument()
         expect(screen.queryByText(items.dog.title)).not.toBeInTheDocument()
     })
+
+    test('is pixelart', async () => {
+        items = {
+            parie: forge.create('parie', { tags: ['pixelart'] }),
+        }
+        resource = new InMemoryResource(Object.values(items))
+
+        component(ArtPage)
+            .prop('id', items.parie.id)
+            .prop('resource', resource)
+            .render()
+
+        expect(getComputedStyle(screen.getByTestId('art-section')).imageRendering).toEqual('crisp-edges')
+    })
 })

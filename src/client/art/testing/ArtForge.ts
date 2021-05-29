@@ -8,6 +8,7 @@ type Options = {
     publishedAt?: Date,
     category?: Category,
     content?: string,
+    tags?: string[],
 }
 
 export class ArtForge {
@@ -16,7 +17,7 @@ export class ArtForge {
             id,
             title: options.title ?? id,
             category: options.category ?? Category.Character,
-            tags: ['apple'],
+            tags: options.tags ?? ['apple'],
             image: options.image ?? {
                 original: 'image.png',
                 colorscape: 'colorscape.svg'
