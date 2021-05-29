@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0 (28 May 2021)
+
+* Add art section
+
 ## 2.1.2 (24 May 2021)
 
 * Adjust format for mobile top bar
