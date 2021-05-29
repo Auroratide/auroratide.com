@@ -79,14 +79,16 @@
                 </section>
                 <section class="related-items">
                     {#if relatedItems !== Missing && relatedItems !== Pending}
-                        <h2 class="more-title">More {item.category} Art</h2>
-                        <ul>
-                            {#each relatedItems as relatedItem}
-                                <li>
-                                    <ArtCoverLink item={relatedItem} />
-                                </li>
-                            {/each}
-                        </ul>
+                        {#if relatedItems.length > 0}
+                            <h2 class="more-title">More {item.category} Art</h2>
+                            <ul>
+                                {#each relatedItems as relatedItem}
+                                    <li>
+                                        <ArtCoverLink item={relatedItem} />
+                                    </li>
+                                {/each}
+                            </ul>
+                        {/if}
                     {:else}
                         <Loading text="Finding art..." />
                     {/if}
