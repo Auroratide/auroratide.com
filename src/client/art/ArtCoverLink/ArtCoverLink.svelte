@@ -4,6 +4,7 @@
     import * as color from '@/client/color'
 
     export let item: ArtItem
+    const pixelart = item.tags.includes('pixelart')
 </script>
 
 <a aria-label={item.title} class="item-link" href={new UrlBuilder().artItem(item.id)} style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)};">
@@ -11,7 +12,7 @@
         <header class="item-title">
             <h1>{item.title}</h1>
         </header>
-        <section class="image-container">
+        <section class="image-container" class:pixelart data-testid="art-section">
             <img-colorscape colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}>
                 <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={item.title} loading="lazy" />
             </img-colorscape>
@@ -33,6 +34,11 @@
         width: 100%;
         height: 100%;
         background: var(--bg-color);
+    }
+
+    .image-container.pixelart {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
     }
 
     .item-title {
