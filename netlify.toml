@@ -90,6 +90,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/my-art-posted"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/nicely-testing-react-components"
   to = "/index.html"
   status = 200

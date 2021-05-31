@@ -30,6 +30,7 @@ import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
+import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
@@ -86,6 +87,7 @@ export const library = {
     [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,
     [IconName.Newspaper]: faNewspaper,
+    [IconName.PaintBrush]: faPaintBrush,
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
     [IconName.Shower]: faShower,

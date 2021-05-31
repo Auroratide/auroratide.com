@@ -30,6 +30,7 @@ export const IconName = {
     Key: 'key',
     LayerGroup: 'layer-group',
     Newspaper: 'newspaper',
+    PaintBrush: 'paint-brush',
     Plus: 'plus',
     ProjectDiagram: 'project-diagram',
     Shower: 'shower',

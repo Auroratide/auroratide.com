@@ -22,4 +22,7 @@ export enum Category {
 
     // For descriptions of software engineering tools; includes programming languages
     Technology = 'technology',
+
+    // For updates about my life, the website, etc.
+    PersonalUpdates = 'personal updates',
 }
