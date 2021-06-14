@@ -240,6 +240,12 @@
   force = false
 
 [[redirects]]
+  from = "/portfolio/peggle-juggle"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/portfolio/pt-database-app"
   to = "/index.html"
   status = 200

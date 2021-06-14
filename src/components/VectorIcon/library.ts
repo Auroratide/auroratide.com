@@ -40,12 +40,14 @@ import { faSun } from '@fortawesome/free-solid-svg-icons/faSun'
 import { faTableTennis } from '@fortawesome/free-solid-svg-icons/faTableTennis'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons/faTaxi'
 import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
+import { faThumbtack } from '@fortawesome/free-solid-svg-icons/faThumbtack'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
 import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
+import { faItchIo } from '@fortawesome/free-brands-svg-icons/faItchIo'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
@@ -97,12 +99,14 @@ export const library = {
     [IconName.TableTennis]: faTableTennis,
     [IconName.Taxi]: faTaxi,
     [IconName.Th]: faTh,
+    [IconName.Thumbtack]: faThumbtack,
     [IconName.TrafficLight]: faTrafficLight,
     [IconName.TruckMoving]: faTruckMoving,
     [IconName.Undo]: faUndo,
     [IconName.UserTie]: faUserTie,
 
     [IconName.Android]: faAndroid,
+    [IconName.ItchIo]: faItchIo,
     [IconName.LinkedIn]: faLinkedinIn,
     [IconName.Github]: faGithub,
     [IconName.GithubAlt]: faGithubAlt,

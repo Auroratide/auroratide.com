@@ -19,6 +19,7 @@ export const Palette = {
     },
     brands: {
         Github: asVar('github'),
+        ItchIo: asVar('itch-io'),
         LinkedIn: asVar('linked-in'),
         Twitter: asVar('twitter'),
         Facebook: asVar('facebook'),
