@@ -84,6 +84,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/kotlin-coroutines-and-structured-concurrency"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/meet-kafka"
   to = "/index.html"
   status = 200

@@ -23,6 +23,7 @@ export const IconName = {
     Folder: 'folder',
     Gamepad: 'gamepad',
     Gavel: 'gavel',
+    GripLinesVertical: 'grip-lines-vertical',
     HandPointer: 'hand-pointer',
     HospitalAlt: 'hospital-alt',
     HourglassHalf: 'hourglass-half',
