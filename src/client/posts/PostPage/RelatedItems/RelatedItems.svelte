@@ -2,13 +2,15 @@
     import { UrlBuilder } from '@/client/routes'
     import type { Post } from '../../types'
 
+    import * as color from '@/client/color'
+
     export let items: Post[]
 </script>
 
 <ul class="related-items">
     {#each items as item}
         <li>
-            <a class="item" style="--item-color: var(--palette-{item.color});" href={new UrlBuilder().post(item.id)}>
+            <a class="item" style="--item-color: {color.fromJson(item.color)};" href={new UrlBuilder().post(item.id)}>
                 <vector-icon icon={item.icon} />
                 <span class="title">{item.title}</span>
             </a>
