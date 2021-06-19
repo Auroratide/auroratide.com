@@ -10,6 +10,6 @@
     },
     "summary": "Let's dive into how understanding structured concurrency is key to understanding Kotlin coroutines and scope.",
     "long_summary": "Kotlin handles concurrent programming using a paradigm called structured concurrency and a mechanism called coroutines. To me, these things felt very different from other languages, so I want to talk about how understanding structured concurrency helped me know how to write Kotlin coroutines.",
-    "published_at": "",
+    "published_at": "2020-02-24T12:00:00.000Z",
     "created_at": "2020-02-24T12:00:00.000Z"
 }
