@@ -1,6 +1,6 @@
 {
-    "id": "kotlin-coroutines-and-structured-concurrency",
-    "title": "Kotlin Coroutines and Structured Concurrency",
+    "id": "understanding-kotlin-coroutines",
+    "title": "Understanding Kotlin Coroutines with Structured Concurrency",
     "category": "software engineering",
     "icon": "grip-lines-vertical",
     "tags": ["kotlin", "coroutines", "concurrency", "parallelism", "history", "paradigm", "threads", "recipes"],

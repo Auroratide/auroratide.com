@@ -47,7 +47,7 @@ To clarify the distinction, let's think of a yummy pot of stew. To make that ste
 
 These steps are _tasks_ needed to cook our stew. It's the _cooks_ who actually perform these tasks, and there could be one cook, two cooks, or even a dozen cooks coordinating who does what.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/cooks-and-food.png" alt="Threads and Coroutines" caption="Threads are cooks, and coroutines are recipe steps" size="fit">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/cooks-and-food.png" alt="Threads and Coroutines" caption="Threads are cooks, and coroutines are recipe steps" size="fit">
 </article-image>
 
 As such, the recipe steps are **coroutines**, things that need to happen, and the cooks are **threads**, the things actually executing the code. There is not necessarily a one-to-one correspondence between coroutines and threads.
@@ -72,7 +72,7 @@ Back to the analogy of cooking stew, let's say you need to cut carrots and brown
 
 Meanwhile, consider boiling potatoes while cutting the carrots. Boiling potatoes requires a lot of waiting; instead of waiting all that time, it is more productive to cut the carrots while the potatoes boil, and then eventually come back to the potatoes when it is ready. Only one cook is needed here: they _suspend_ the task of boiling potatoes and in the meantime cut some carrots. This is an example of concurrency.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/concurrency-vs-parallelism.png" alt="Concurrency vs Parallelism" caption="Tasks happening in parallel vs concurrently" size="fit">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/concurrency-vs-parallelism.png" alt="Concurrency vs Parallelism" caption="Tasks happening in parallel vs concurrently" size="fit">
 </article-image>
 
 So, **coroutines** are just ways to break down a big task into different tasks that can be performed concurrently, in parallel, or perhaps both. It is a design philosophy rather than an implementation.
@@ -158,12 +158,12 @@ The ?'s in the code are irrelevant for understanding the example.
 
 One of the things that stands out about this program is its use of `goto` statements. Some `goto` statements are used for branching into different parts of the code, and some are used for going backwards and redoing previous code. To help understand what's happening, maybe we could draw some arrows for our eyes to follow.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/small-spaghetti.png" alt="Goto Arrows" caption="Following the flow of the goto statements" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/small-spaghetti.png" alt="Goto Arrows" caption="Following the flow of the goto statements" size="lg">
 </article-image>
 
 Even for a program as small as this, the overlapping arrows make it look rather intimidating! Now, imagine a much larger program with hundreds, nay thousands, of lines of code using `goto` statements in a similar way. If we try to draw all the arrows for _that_, what does it end up looking like?
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/spaghetti.png" alt="Spaghetti" caption="The origin of the term Spaghetti Code" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/spaghetti.png" alt="Spaghetti" caption="The origin of the term Spaghetti Code" size="lg">
 </article-image>
 
 Turns out, this is where the term "spaghetti code" originally comes from! When a code's flow is controlled primarily by `goto` statements, it becomes nearly impossible to follow and difficult to change. Like spaghetti, every noodle of code drags other pieces with it.
@@ -189,7 +189,7 @@ Zooming in on Step 2, we know we need to boil the potatoes, but it appears that 
 
 In other words, Step 2 above is a _two-way jump_. First you jump to page 24, and when you are done instinctively jump back to Step 3. And the most interesting thing about this is that's the _natural_ way to follow these instructions; you'd jump back to the stew recipe even if I didn't tell you to.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/page-24.png" alt="Page 24" caption="Following the recipe" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/page-24.png" alt="Page 24" caption="Following the recipe" size="lg">
 </article-image>
 
 The two-way jump happens to be incredibly useful for understanding recipes because it means if you already know how to boil the potatoes _the right way_ (maybe you've done it before), then you don't need to jump to page 24 to understand the overall recipe. You can create an **abstraction**: to understand generally how to make stew, you don't need to know the details of boiling the potatoes.
@@ -215,7 +215,7 @@ Furthermore, if I want to reuse the code at `Lbl A`, it can be jumped to from mu
 
 In order to know what this code will do, I absolutely have to know what's happening at `Lbl A`. And if my code is constructed entirely of `goto` statements, that's why it becomes a ball of spaghetti: the only way to know how the program will behave is to know the _entire_ codebase at once.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/goto-diagram.png" alt="Goto Diagram" caption="Goto leaves the flow with no promise of coming back" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/goto-diagram.png" alt="Goto Diagram" caption="Goto leaves the flow with no promise of coming back" size="lg">
 </article-image>
 
 And this is why **structured programming** was proposed.
@@ -267,12 +267,12 @@ It turns out structured programming is _just regular code_ nowadays! These two p
 
 Just like with `goto`, we can create diagrams for each of the important control structures.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/control-structures.png" alt="Control Structures" caption="Diagrams for if, while, and functions" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/control-structures.png" alt="Control Structures" caption="Diagrams for if, while, and functions" size="lg">
 </article-image>
 
 As we can see, they each do something slightly different. However, the key insight is what they have in common: for each of the major control structures, there's one arrow coming in the top and one arrow exiting the bottom! Each structure can be thought of as an **opaque box** with exactly one way in and one way out.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/opaque-control-structures.png" alt="Opaque Control Structures" caption="Diagrams for if, while, and functions as opaque boxes" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/opaque-control-structures.png" alt="Opaque Control Structures" caption="Diagrams for if, while, and functions as opaque boxes" size="lg">
 </article-image>
 
 This property sounds a lot like a _two-way jump_, and that enables us to create abstractions for our code. No matter how complex the program is, it can always be decomposed into a series of opaque boxes going from top to bottom, meaning:
@@ -361,7 +361,7 @@ As it turns out, the main issue here is the `GlobalScope.launch`. The part of th
 
 You could picture it kind of like this:
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/globalscope-diagram.png" alt="GlobalScope Diagram" caption="GlobalScope creates a coroutine attached to nothing" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/globalscope-diagram.png" alt="GlobalScope Diagram" caption="GlobalScope creates a coroutine attached to nothing" size="lg">
 </article-image>
 
 In Kotlin, `GlobalScope.launch` is the concurrent equivalent of `goto`! And just like `goto`, it can undermine the power of our abstractions, like in the above where we couldn't know that `snarkyPrintLn()` continued executing code after we thought it was done.
@@ -388,19 +388,19 @@ Let's recall what about structured programming made it "structured":
 
 With `GlobalScope.launch`, we end up in a situation where a coroutine is created with no guarantee about when it completes, effectively meaning an extra arrow leaves the box. If instead we force the main arrow to wait until the coroutine finishes, then we end up with a model that looks like this:
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/unstructured-vs-structured.png" alt="Unstructured and Structured Concurrency" caption="Unstructured concurrency has two arrows escaping the opaque box" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/unstructured-vs-structured.png" alt="Unstructured and Structured Concurrency" caption="Unstructured concurrency has two arrows escaping the opaque box" size="lg">
 </article-image>
 
 And if you have multiple coroutines:
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/structured-concurrency.png" alt="Structured Concurrency" caption="Coroutines in a context join together" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/structured-concurrency.png" alt="Structured Concurrency" caption="Coroutines in a context join together" size="lg">
 </article-image>
 
 **All coroutines created within a context must complete before the program moves on.** That's the core essence of structured concurrency.
 
 It turns out this one principle enforces a hierarchical structure in coroutines. If a coroutine needs to create sub-coroutines for itself, that's completely fine. Just like how you can nest `if` statements together and understand how that branches, coroutines can be nested as well. The top-most coroutines depend not just on their children completing, but their children's children as well.
 
-<article-image src="/assets/posts/kotlin-coroutines-and-structured-concurrency/concurrency-hierarchy.png" alt="Concurrency Hierarchy" caption="Coroutines nest, just like control structures" size="lg">
+<article-image src="/assets/posts/understanding-kotlin-coroutines/concurrency-hierarchy.png" alt="Concurrency Hierarchy" caption="Coroutines nest, just like control structures" size="lg">
 </article-image>
 
 ### Finally, Understanding Scope

@@ -84,12 +84,6 @@
   force = false
 
 [[redirects]]
-  from = "/posts/kotlin-coroutines-and-structured-concurrency"
-  to = "/index.html"
-  status = 200
-  force = false
-
-[[redirects]]
   from = "/posts/meet-kafka"
   to = "/index.html"
   status = 200
@@ -145,6 +139,12 @@
 
 [[redirects]]
   from = "/posts/two-ways-to-test-react-components"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/understanding-kotlin-coroutines"
   to = "/index.html"
   status = 200
   force = false
