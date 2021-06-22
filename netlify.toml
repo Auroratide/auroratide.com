@@ -54,6 +54,12 @@
   force = false
 
 [[redirects]]
+  from = "/portfolio/peggle-juggle"
+  to = "/portfolio/rubber-juggle"
+  status = 301
+  force = false
+
+[[redirects]]
   from = "/posts/a-hierarchy-of-dystopias"
   to = "/index.html"
   status = 200
@@ -246,13 +252,13 @@
   force = false
 
 [[redirects]]
-  from = "/portfolio/peggle-juggle"
+  from = "/portfolio/pt-database-app"
   to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/portfolio/pt-database-app"
+  from = "/portfolio/rubber-juggle"
   to = "/index.html"
   status = 200
   force = false

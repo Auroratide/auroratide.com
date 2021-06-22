@@ -14,7 +14,18 @@ const addRoute = route =>
   force = false
 `;
 
+const addRename = (from, to) =>
+  redirects += `
+[[redirects]]
+  from = "/${from}"
+  to = "/${to}"
+  status = 301
+  force = false
+`;
+
 config.routes.forEach(route => addRoute(route));
+
+config.renames.forEach(rename => addRename(rename.from, rename.to));
 
 const contentRoot = path.join(__dirname, '..', '..', 'content');
 config.resources.forEach(resource => {

@@ -1,6 +1,6 @@
 {
-    "id": "peggle-juggle",
-    "title": "Peggle Juggle",
+    "id": "rubber-juggle",
+    "title": "Rubber Juggle",
     "category": "games",
     "tags": ["html5", "typescript", "pixi", "survival", "mobile", "jam", "balloons", "pegs", "connections"],
     "icon": "thumbtack",
@@ -8,13 +8,13 @@
         "type": "palette",
         "value": "autumn-red"
     },
-    "summary": "Peggle Juggle is a minigame for the annual GMTK Game Jam where you try and keep balloons corralled as long as possible.",
-    "long_summary": "Peggle Juggle is a minigame made for the annual GMTK Game Jam. The goal is to keep balloons corralled in your pegboard by joining pegs with rubber bands. How high a score can you get?",
+    "summary": "Rubber Juggle is a minigame for the annual GMTK Game Jam where you try and keep balloons corralled as long as possible.",
+    "long_summary": "Rubber Juggle is a minigame made for the annual GMTK Game Jam. The goal is to keep balloons corralled in your pegboard by joining pegs with rubber bands. How high a score can you get?",
     "published_at": "2021-06-13T18:00:00.000Z",
     "created_at": "2021-06-14T13:36:52.802Z",
     "links": [ {
         "title": "Play!",
-        "href": "https://auroratide.itch.io/peggle-juggle",
+        "href": "https://auroratide.itch.io/rubber-juggle",
         "icon": "itch-io",
         "color": {
             "type": "palette",
@@ -22,7 +22,7 @@
         }
     }, {
         "title": "Source",
-        "href": "https://github.com/Auroratide/peggle-juggle",
+        "href": "https://github.com/Auroratide/rubber-juggle",
         "icon": "github",
         "color": {
             "type": "palette",
