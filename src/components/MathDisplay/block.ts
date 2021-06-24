@@ -7,6 +7,7 @@ const html = `
 const css = `
     :host {
         display: block;
+        overflow: auto;
     }
 `
 
