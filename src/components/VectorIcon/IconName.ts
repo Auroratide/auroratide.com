@@ -33,6 +33,8 @@ export const IconName = {
     LayerGroup: 'layer-group',
     Newspaper: 'newspaper',
     PaintBrush: 'paint-brush',
+    Pause: 'pause',
+    Play: 'play',
     Plus: 'plus',
     ProjectDiagram: 'project-diagram',
     Shower: 'shower',

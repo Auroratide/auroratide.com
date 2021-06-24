@@ -3,7 +3,7 @@ import type { BalloonElement } from '@/components/RubberJuggle/balloon'
 import type { PegElement } from '@/components/RubberJuggle/peg'
 
 const html = `
-    <sliding-demo>
+    <sliding-demo autoplay>
         <horizontal-flex>
             <rubber-juggle-pegboard width="6" height="4" assetpath="/assets/components/rubber-juggle">
                 <rubber-juggle-peg label="a" x="0" y="2"></rubber-juggle-peg>
