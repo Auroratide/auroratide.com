@@ -109,7 +109,6 @@ export default () => {
 
         onFullyReady() {
             this.setPointVisibility()
-            console.log(this.show)
             if (!this.show)
                 (this.shadowRoot.host as HTMLElement).style.display = 'none'
             else
