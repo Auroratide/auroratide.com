@@ -2,8 +2,10 @@ const html = `
     <figure>
         <slot></slot>
         <div class="controls">
-            <button class="play" aria-label="play"><vector-icon icon="play"></vector-icon></button>
-            <button class="pause" aria-label="pause"><vector-icon icon="pause" disabled></vector-icon></button>
+            <button class="play-pause" aria-label="play">
+                <vector-icon class="play" icon="play"></vector-icon>
+                <vector-icon class="pause" icon="pause"></vector-icon>
+            </button>
             <div class="slider">
                 <label for="slider">Time</label>
                 <input id="slider" type="range" min="0" max="1" step="0.005" value="0" />
@@ -64,7 +66,7 @@ const css = `
     }
 
     .controls button vector-icon {
-        filter: drop-shadow(0.125em 0.125em 0.125em rgba(0, 0, 0, 0.25))
+        filter: drop-shadow(0.125em 0.125em 0.125em rgba(0, 0, 0, 0.25));
     }
 
     .controls button:hover:not([disabled]) {
@@ -86,12 +88,20 @@ const css = `
         left: -0.125em;
     }
 
-    .controls button.play {
-        background: var(--skin-color-primary);
+    .playing .controls button.play-pause {
+        background: var(--skin-color-danger);
     }
 
-    .controls button.pause {
-        background: var(--skin-color-secondary);
+    .paused .controls button.play-pause {
+        background: var(--skin-color-success);
+    }
+
+    .playing .controls button.play-pause vector-icon.play {
+        display: none;
+    }
+
+    .paused .controls button.play-pause vector-icon.pause {
+        display: none;
     }
 
     .controls button[disabled] {
@@ -146,8 +156,7 @@ export class SlidingDemoElement extends HTMLElement {
         
         this.input.onmousedown = this.pause
         this.input.ontouchstart = this.pause
-        this.playButton.onclick = this.play
-        this.pauseButton.onclick = this.pause
+        this.playPauseButton.onclick = this.toggle
     }
 
     connectedCallback() {
@@ -158,19 +167,31 @@ export class SlidingDemoElement extends HTMLElement {
     }
 
     pause = () => {
-        this.pauseButton.disabled = true
-        this.playButton.disabled = false
-        clearTimeout(this.timeoutId)
-        this.playing = false
+        if (this.playing) {
+            this.playPauseButton.setAttribute('aria-label', 'play')
+            this.figure.classList.remove('playing')
+            this.figure.classList.add('paused')
+            clearTimeout(this.timeoutId)
+            this.playing = false
+        }
     }
 
     play = () => {
         if (!this.playing) {
-            this.pauseButton.disabled = false
-            this.playButton.disabled = true
+            this.playPauseButton.setAttribute('aria-label', 'pause')
+            this.figure.classList.add('playing')
+            this.figure.classList.remove('paused')
             clearTimeout(this.timeoutId)
             this.playing = true
             requestAnimationFrame(this.tick)
+        }
+    }
+
+    toggle = () => {
+        if (this.playing) {
+            this.pause()
+        } else {
+            this.play()
         }
     }
 
@@ -221,8 +242,9 @@ export class SlidingDemoElement extends HTMLElement {
         }
     }
 
-    get playButton() { return this.shadowRoot.querySelector('button.play') as HTMLButtonElement }
-    get pauseButton() { return this.shadowRoot.querySelector('button.pause') as HTMLButtonElement }
+    get playPauseButton() { return this.shadowRoot.querySelector('button.play-pause') as HTMLButtonElement }
+
+    get figure() { return this.shadowRoot.querySelector('figure') }
 }
 
 export default () => {
