@@ -17,7 +17,7 @@
 
         .content.has-sidebar {
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
             padding: var(--sizing-spacing-xl) calc(var(--sizing-spacing-xl) - var(--sizing-spacing-sm));
         }
 
