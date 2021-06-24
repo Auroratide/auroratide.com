@@ -2,12 +2,12 @@ const html = `
     <figure>
         <slot></slot>
         <div class="controls">
+            <button class="play" aria-label="play"><vector-icon icon="play"></vector-icon></button>
+            <button class="pause" aria-label="pause"><vector-icon icon="pause" disabled></vector-icon></button>
             <div class="slider">
                 <label for="slider">Time</label>
                 <input id="slider" type="range" min="0" max="1" step="0.005" value="0" />
             </div>
-            <button class="play" aria-label="play"><vector-icon icon="play"></vector-icon></button>
-            <button class="pause" aria-label="pause"><vector-icon icon="pause" disabled></vector-icon></button>
         </div>
         <figcaption></figcaption>
     </figure>
@@ -48,7 +48,7 @@ const css = `
         justify-content: center;
         border: none;
         cursor: pointer;
-        margin-left: 0.5em;
+        margin-right: 0.5em;
         box-shadow: 0.125em 0.125em 0.125em 0 rgba(0, 0, 0, 0.25);
         position: relative;
     }
