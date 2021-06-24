@@ -12,6 +12,7 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher'
+import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck'
 import { faChessRook } from '@fortawesome/free-solid-svg-icons/faChessRook'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
@@ -42,6 +43,7 @@ import { faTableTennis } from '@fortawesome/free-solid-svg-icons/faTableTennis'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons/faTaxi'
 import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
 import { faThumbtack } from '@fortawesome/free-solid-svg-icons/faThumbtack'
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
 import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
@@ -72,6 +74,7 @@ export const library = {
     [IconName.Calculator]: faCalculator,
     [IconName.CandyCane]: faCandyCane,
     [IconName.ChalkboardTeacher]: faChalkboardTeacher,
+    [IconName.Check]: faCheck,
     [IconName.ChessRook]: faChessRook,
     [IconName.Code]: faCode,
     [IconName.Crosshairs]: faCrosshairs,
@@ -102,6 +105,7 @@ export const library = {
     [IconName.Taxi]: faTaxi,
     [IconName.Th]: faTh,
     [IconName.Thumbtack]: faThumbtack,
+    [IconName.Times]: faTimes,
     [IconName.TrafficLight]: faTrafficLight,
     [IconName.TruckMoving]: faTruckMoving,
     [IconName.Undo]: faUndo,
