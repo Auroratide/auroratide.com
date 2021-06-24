@@ -1,8 +1,8 @@
 const html = `
     <figure>
         <slot></slot>
+        <input class="slider" type="range" min="0" max="1" step="0.01" value="0" />
         <figcaption></figcaption>
-        <input type="range" min="0" max="1" step="0.01" value="0" />
     </figure>
 `
 
@@ -10,16 +10,30 @@ const css = `
     :host {
         display: block;
     }
+
+    figure {
+        margin: 0;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 87.5%;
+        opacity: 0.75;
+    }
+
+    .slider {
+        display: block;
+        width: 100%;
+    }
 `
 
 const template = document.createElement('template')
 template.innerHTML = `<style>${css}</style>${html}`
 
-export class SlidingDemo extends HTMLElement {
+export class SlidingDemoElement extends HTMLElement {
     static elementName = 'sliding-demo'
 
-    imageImg: HTMLImageElement
-    colorscapeImg: HTMLImageElement
+    onslide: (t: number, host: SlidingDemoElement) => void
 
     constructor() {
         super()
@@ -31,20 +45,22 @@ export class SlidingDemo extends HTMLElement {
 
     connectedCallback() {
         const input = this.shadowRoot.querySelector('input')
-        const fn = this.onslide.split('.').reduce((o, n) => o[n], window)
-        input.oninput = () => fn(input.value, this.shadowRoot.host)
+        input.oninput = () => this.onslide(parseFloat(input.value), this)
+    }
 
+    static get observedAttributes(): string[] {
+        return ['caption']
+    }
+
+    attributeChangedCallback() {
         const figcaption = this.shadowRoot.querySelector('figcaption')
         figcaption.innerText = this.caption
     }
 
     get caption() { return this.getAttribute('caption') }
     set caption(value: string) { this.setAttribute('caption', value) }
-
-    get onslide() { return this.getAttribute('onslide') }
-    set onslide(value: string) { this.setAttribute('onslide', value) }
 }
 
 export default () => {
-    window.customElements.define(SlidingDemo.elementName, SlidingDemo)
+    window.customElements.define(SlidingDemoElement.elementName, SlidingDemoElement)
 }
