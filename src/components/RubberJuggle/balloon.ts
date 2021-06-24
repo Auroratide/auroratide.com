@@ -22,7 +22,7 @@ const css = `
 const template = document.createElement('template')
 template.innerHTML = `<style>${css}</style>${html}`
 
-class BalloonElement extends PegboardEntity {
+export class BalloonElement extends PegboardEntity {
     static elementName = 'rubber-juggle-balloon'
 
     imageImg: HTMLImageElement
