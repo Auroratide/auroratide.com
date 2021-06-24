@@ -2,7 +2,8 @@ const html = `
     <figure>
         <slot></slot>
         <div class="controls">
-            <input class="slider" type="range" min="0" max="1" step="0.005" value="0" />
+            <label class="slider-label" for="slider">Time</label>
+            <input id="slider" class="slider" type="range" min="0" max="1" step="0.005" value="0" />
             <button class="play" aria-label="play"><vector-icon icon="play"></vector-icon></button>
             <button class="pause" aria-label="pause"><vector-icon icon="pause" disabled></vector-icon></button>
         </div>
@@ -33,6 +34,7 @@ const css = `
         display: flex;
         width: 100%;
         align-items: center;
+        position: relative;
     }
 
     .controls button {
@@ -98,6 +100,16 @@ const css = `
 
     .slider {
         flex: 1;
+    }
+
+    .slider-label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 75%;
+        transform: translate(0, calc(-50% - 1em));
+        line-height: 1;
+        font-style: italic;
     }
 `
 
