@@ -18,4 +18,6 @@ import './SlidingDemo'
 import './VectorIcon'
 import './WhodokuWidget'
 
+import './pages/posts/the-bounce-of-rubber-juggle'
+
 export default { }
