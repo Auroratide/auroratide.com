@@ -14,6 +14,7 @@ import './PopoutImage'
 import './RubberJuggle'
 import './SideText'
 import './SlideShow'
+import './SlidingDemo'
 import './VectorIcon'
 import './WhodokuWidget'
 
