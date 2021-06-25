@@ -279,6 +279,17 @@ point-compilation .hide {
     display: none;
 }
 
+/* Needed since these are light-dom elements */
+math-block {
+    display: block;
+    overflow: auto;
+}
+
+math-inline {
+    display: inline;
+    padding: 0 var(--sizing-spacing-xs);
+}
+
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 75rem) {
