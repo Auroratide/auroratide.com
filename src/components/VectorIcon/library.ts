@@ -31,6 +31,7 @@ import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHa
 import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
+import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
@@ -95,6 +96,7 @@ export const library = {
     [IconName.Image]: faImage,
     [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,
+    [IconName.LevelUpAlt]: faLevelUpAlt,
     [IconName.Newspaper]: faNewspaper,
     [IconName.PaintBrush]: faPaintBrush,
     [IconName.Pause]: faPause,

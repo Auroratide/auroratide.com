@@ -132,6 +132,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/the-bounce-of-rubber-juggle"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/three-types-of-effective-feedback"
   to = "/index.html"
   status = 200

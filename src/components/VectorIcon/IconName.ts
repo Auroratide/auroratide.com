@@ -31,6 +31,7 @@ export const IconName = {
     Image: 'image',
     Key: 'key',
     LayerGroup: 'layer-group',
+    LevelUpAlt: 'level-up-alt',
     Newspaper: 'newspaper',
     PaintBrush: 'paint-brush',
     Pause: 'pause',
