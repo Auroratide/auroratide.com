@@ -17,8 +17,8 @@
     const setSlides = (value: HTMLCollection) => {
         slides = Array.from(value) as HTMLElement[]
         slides.forEach(el => {
-            el.style.maxWidth = width
-            el.style.maxHeight = height
+            el.style.maxWidth = `min(100%, ${width})`
+            el.style.maxHeight = `min(100%, ${height})`
         })
 
         current = 0
