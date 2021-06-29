@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.1 (29 Jun 2021)
+
+* Bugfix for incorrect article colors appearing in related lists
+* Bugfix for article image being too long in some browsers
+* Added `sliding-demo` and `math-*` components
+
 ## 2.2.0 (28 May 2021)
 
 * Add art section
