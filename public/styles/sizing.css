@@ -1,6 +1,8 @@
 :root {
     --sizing-breakpoint: 75rem;
 
+    --sizing-unit: 0.0625em;
+
     --sizing-spacing-xs: 0.25em;
     --sizing-spacing-sm: 0.5em;
     --sizing-spacing-md: 1em;

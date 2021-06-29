@@ -167,6 +167,9 @@ code {
     font-family: var(--skin-font-code);
     font-size: var(--sizing-font-xs);
     color: var(--skin-code-default);
+    background: rgba(var(--skin-rgb-bg), 0.5);
+    border-radius: var(--sizing-spacing-xs);
+    padding: var(--sizing-unit) var(--sizing-spacing-xs);
 }
 
 pre code {
@@ -176,8 +179,10 @@ pre code {
     border-left-width: var(--sizing-border-md);
     padding: 0 var(--sizing-spacing-md);
     overflow: auto;
+    background: none;
     background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-primary), 0.06) 50%);
     background-size: 3em 3em;
+    border-radius: 0;
 }
 
 .success > pre code {
