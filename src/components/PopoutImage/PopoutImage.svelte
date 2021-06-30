@@ -47,6 +47,8 @@
 
     .image {
         display: block;
+        width: 100%;
+        height: 100%;
         max-width: inherit;
         max-height: inherit;
         object-fit: contain;
