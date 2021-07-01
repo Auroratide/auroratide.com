@@ -260,12 +260,6 @@ major-point p {
     text-align: center;
 }
 
-/* Needed since popout-image adds this class to the body */
-.popout-stopscroll {
-    position: fixed;
-    width: 100%;
-}
-
 /* Needed since shadow styling cannot style the light dom */
 point-compilation ul, point-compilation ol {
     margin-bottom: 0;
