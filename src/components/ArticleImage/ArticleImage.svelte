@@ -10,7 +10,9 @@
 </script>
 
 <figure class="article-image {size}">
-    <popout-image {src} {alt}></popout-image>
+    <img-popout>
+        <img {src} {alt} />
+    </img-popout>
     {#if caption}
         <figcaption>{caption}</figcaption>
     {/if}
@@ -26,25 +28,25 @@
         margin: 0 0 1em;
     }
 
-    .article-image popout-image {
+    .article-image img:not([slot="popped-out"]) {
         max-width: 100%;
         margin: 0 0 0.25em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
 
-    .article-image.sm popout-image {
+    .article-image.sm img:not([slot="popped-out"]) {
         max-height: 5em;
     }
 
-    .article-image.md popout-image {
+    .article-image.md img:not([slot="popped-out"]) {
         max-height: 10em;
     }
 
-    .article-image.lg popout-image {
+    .article-image.lg img:not([slot="popped-out"]) {
         max-height: 15em;
     }
 
-    .article-image.fit popout-image {
+    .article-image.fit img:not([slot="popped-out"]) {
         width: 100%;
     }
 
