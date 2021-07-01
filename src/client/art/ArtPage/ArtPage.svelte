@@ -66,7 +66,9 @@
                 </header>
                 <section class="art" class:pixelart data-testid="art-section">
                     <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
-                        <popout-image src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title}></popout-image>
+                        <img-popout>
+                            <img src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title} />
+                        </img-popout>
                     </img-colorscape>
                 </section>
                 <section class="content">
@@ -151,9 +153,15 @@
         image-rendering: crisp-edges;
     }
 
-    .image, .image > * {
+    .image, .image img:not([slot="popped-out"]) {
         display: block;
         max-height: 95vh;
+    }
+
+    .image img:not([slot="popped-out"]) {
+        width: 100%;
+        margin: auto;
+        object-fit: contain;
     }
 
     .published {

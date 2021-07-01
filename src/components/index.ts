@@ -1,3 +1,5 @@
+import '@auroratide/img-popout'
+
 import './ArticleImage'
 import './ColoredText'
 import './ConnectNineDots'

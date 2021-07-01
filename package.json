@@ -60,6 +60,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@auroratide/img-popout": "^0.1.2",
     "@auroratide/svelte-custom-element-transitions": "^0.1.1",
     "@auroratide/wait": "^0.2.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
