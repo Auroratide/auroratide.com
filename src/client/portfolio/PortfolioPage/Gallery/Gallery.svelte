@@ -10,7 +10,9 @@
     {#each gallery as item}
         <li>
             <figure>
-                <popout-image src={new UrlBuilder().assets().portfolioItem(id).asset(item.image)} alt={item.caption} />
+                <img-popout>
+                    <img src={new UrlBuilder().assets().portfolioItem(id).asset(item.image)} alt={item.caption} />
+                </img-popout>
                 <figcaption>{item.caption}</figcaption>
             </figure>
         </li>
