@@ -43,11 +43,4 @@
         opacity: 0.75;
         line-height: 1.25;
     }
-
-    popout-image {
-        display: block;
-        max-width: 100%;
-        max-height: 15em;
-        margin-bottom: var(--sizing-spacing-sm);
-    }
 </style>
