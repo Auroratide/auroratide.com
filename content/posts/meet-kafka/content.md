@@ -79,10 +79,18 @@ Pat cannot just _walk_ over to Carol because she lives too far away. Instead, ma
 So, meet Kirk, the mail guy! His main job is to deliver messages between different people, kind of like so:
 
 <slide-show width="960px" height="540px" mode="blink">
-  <popout-image src="/assets/posts/meet-kafka/messages-01.png" alt="Message Example Slide 1"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/messages-02.png" alt="Message Example Slide 2"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/messages-03.png" alt="Message Example Slide 3"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/messages-04.png" alt="Message Example Slide 4"></popout-image>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/messages-01.png" alt="Message Example Slide 1" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/messages-02.png" alt="Message Example Slide 2" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/messages-03.png" alt="Message Example Slide 3" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/messages-04.png" alt="Message Example Slide 4" />
+  </img-popout>
 </slide-show>
 
 Turns out, this is a useful way of thinking about what Kafka can do! In this analogy:
@@ -133,11 +141,21 @@ That's fine! Kirk has a clever idea.
 He can set up _mailboxes_ for different kinds of messages! Casual messages will go into the Casual mailbox, and Business messages will go into the Business mailbox. Carol can then _subscribe_ to only the Casual mailbox and therefore only receive casual messages.
 
 <slide-show width="960px" height="540px" mode="blink">
-  <popout-image src="/assets/posts/meet-kafka/topics-01.png" alt="Topics Example Slide 1"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/topics-02.png" alt="Topics Example Slide 2"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/topics-03.png" alt="Topics Example Slide 3"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/topics-04.png" alt="Topics Example Slide 4"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/topics-05.png" alt="Topics Example Slide 5"></popout-image>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/topics-01.png" alt="Topics Example Slide 1" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/topics-02.png" alt="Topics Example Slide 2" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/topics-03.png" alt="Topics Example Slide 3" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/topics-04.png" alt="Topics Example Slide 4" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/topics-05.png" alt="Topics Example Slide 5" />
+  </img-popout>
 </slide-show>
 
 Notice what this mailbox strategy accomplishes:
@@ -187,9 +205,15 @@ Kirk will actually divide the topic into mini-mailboxes. Each member of Team Car
 As you might have guessed, these "mini-mailboxes" are what Kafka calls **partitions**.
 
 <slide-show width="960px" height="540px" mode="blink">
-  <popout-image src="/assets/posts/meet-kafka/partitions-01.png" alt="Partitions Example Slide 1"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/partitions-02.png" alt="Partitions Example Slide 2"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/partitions-03.png" alt="Partitions Example Slide 3"></popout-image>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/partitions-01.png" alt="Partitions Example Slide 1" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/partitions-02.png" alt="Partitions Example Slide 2" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/partitions-03.png" alt="Partitions Example Slide 3" />
+  </img-popout>
 </slide-show>
 
 So in this illustration, three events enter the Casual Topic, but are divided evenly across three partitions. Since each Carol is responsible for one partition, each message will be read exactly once, and in parallel.
@@ -273,12 +297,24 @@ This can be different from traditional messaging systems, wherein a message is r
 </side-text>
 
 <slide-show width="960px" height="540px" mode="blink">
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Consumer Groups Example Slide 1"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Consumer Groups Example Slide 2"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Consumer Groups Example Slide 3"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Consumer Groups Example Slide 4"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Consumer Groups Example Slide 5"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Consumer Groups Example Slide 6"></popout-image>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Consumer Groups Example Slide 1" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Consumer Groups Example Slide 2" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Consumer Groups Example Slide 3" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Consumer Groups Example Slide 4" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Consumer Groups Example Slide 5" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Consumer Groups Example Slide 6" />
+  </img-popout>
 </slide-show>
 
 <side-text>
@@ -300,9 +336,15 @@ With consumer groups, Kirk can:
 * Or a combination of the two approaches above
 
 <slide-show width="960px" height="540px" mode="blink">
-  <popout-image src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All"></popout-image>
-  <popout-image src="/assets/posts/meet-kafka/combination.png" alt="Combination"></popout-image>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All" />
+  </img-popout>
+  <img-popout>
+    <img src="/assets/posts/meet-kafka/combination.png" alt="Combination" />
+  </img-popout>
 </slide-show>
 
 Note that in all the above approaches, each consumer group sees all three messages in the topic. Therefore, both Carol and Cathy each see all three messages, though in Carol's case (because she's a cloner) she may divide the work between herself and other clones.
