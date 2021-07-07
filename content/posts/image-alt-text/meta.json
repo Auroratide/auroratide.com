@@ -1,0 +1,15 @@
+{
+    "id": "image-alt-text",
+    "title": "Image Alt Text, the Way the Spec Intended It",
+    "category": "software engineering",
+    "icon": "tty",
+    "tags": ["web", "images", "accessibility", "screenreaders", "html", "spec"],
+    "color": {
+        "type": "palette",
+        "value": "winter-grey"
+    },
+    "summary": "",
+    "long_summary": "",
+    "published_at": "",
+    "created_at": "2021-07-06T20:47:03.193Z"
+}
