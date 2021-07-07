@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.2 (07 Jul 2021)
+
+* Replace `popout-img` with new `img-popout` component
+
 ## 2.2.1 (29 Jun 2021)
 
 * Bugfix for incorrect article colors appearing in related lists
