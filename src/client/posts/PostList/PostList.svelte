@@ -23,29 +23,31 @@
         {:else if items === Missing}
             <CatastrophicError />
         {:else}
-            <div class="item-holder">
+            <ul class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
-                    <a aria-label={item.title} class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: {color.fromJson(item.color)};">
-                        <article>
-                            <section>
-                                <h1>{item.title}</h1>
-                                <div class="byline">
-                                    <date-display date={item.publishedAt} />
-                                    <span class="bullet">&bull;</span>
-                                    <span class="category">{item.category}</span>
-                                </div>
-                                <p class="summary short">{item.summary}</p>
-                                <p class="summary long">{item.longSummary}</p>
-                            </section>
-                            <aside>
-                                <div class="circle">
-                                    <vector-icon icon={item.icon}></vector-icon>
-                                </div>
-                            </aside>
-                        </article>
-                    </a>
+                    <li>
+                        <a aria-label={item.title} class="post-item" href={new UrlBuilder().post(item.id)} style="--article-color: {color.fromJson(item.color)};">
+                            <article>
+                                <section>
+                                    <h1>{item.title}</h1>
+                                    <div class="byline">
+                                        <date-display date={item.publishedAt} />
+                                        <span class="bullet">&bull;</span>
+                                        <span class="category">{item.category}</span>
+                                    </div>
+                                    <p class="summary short">{item.summary}</p>
+                                    <p class="summary long">{item.longSummary}</p>
+                                </section>
+                                <aside>
+                                    <div class="circle">
+                                        <vector-icon icon={item.icon}></vector-icon>
+                                    </div>
+                                </aside>
+                            </article>
+                        </a>
+                    </li>
                 {/each}
-            </div>
+            </ul>
         {/if}
     </Container>
 </DocumentInfo>
@@ -53,6 +55,12 @@
 <style>
     .item-holder {
         padding: var(--sizing-spacing-md);
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .item-holder li {
+        margin-bottom: 0;
     }
 
     .post-item {
