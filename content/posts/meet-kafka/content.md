@@ -62,13 +62,13 @@ My goal is to create a mental model for _why_ Kafka is designed the way it is, w
 
 To start, meet Pat and Carol!
 
-<article-image src="/assets/posts/meet-kafka/pat-and-carol.png" alt="Pat and Carol" caption="Pat and Carol" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/pat-and-carol.png" alt="Pat has a black hat, and Carol has a flower bow." caption="Pat and Carol" size="lg"></article-image>
 
 Pat and Carol are friends who often exchange messages with each other. Let's say Pat has a message that she wants Carol to read. How can she get that message to Carol?
 
 Well, one thing she might try is simply walk over to Carol and hand over the message in person.
 
-<article-image src="/assets/posts/meet-kafka/pat-hands-message.png" alt="Pat hands message" caption="Pat hands the message directly to Carol" size="md"></article-image>
+<article-image src="/assets/posts/meet-kafka/pat-hands-message.png" alt="Pat hands an envelope to Carol" caption="Pat hands the message directly to Carol" size="md"></article-image>
 
 But unfortunately, that will not work! You see, Pat has a pressing problem.
 
@@ -80,16 +80,16 @@ So, meet Kirk, the mail guy! His main job is to deliver messages between differe
 
 <slide-show width="960px" height="540px" mode="blink">
   <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-01.png" alt="Message Example Slide 1" />
+    <img src="/assets/posts/meet-kafka/messages-01.png" alt="Pat says, 'Hey Kirk here's a message!'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-02.png" alt="Message Example Slide 2" />
+    <img src="/assets/posts/meet-kafka/messages-02.png" alt="Kirk says, 'Thanks Pat, I'll hold onto this.'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-03.png" alt="Message Example Slide 3" />
+    <img src="/assets/posts/meet-kafka/messages-03.png" alt="Carol asks, 'Hey Kirk, got a message for me yet?'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-04.png" alt="Message Example Slide 4" />
+    <img src="/assets/posts/meet-kafka/messages-04.png" alt="Kirk replies, 'Sure do! Here's a copy.'" />
   </img-popout>
 </slide-show>
 
@@ -142,19 +142,19 @@ He can set up _mailboxes_ for different kinds of messages! Casual messages will 
 
 <slide-show width="960px" height="540px" mode="blink">
   <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-01.png" alt="Topics Example Slide 1" />
+    <img src="/assets/posts/meet-kafka/topics-01.png" alt="Pat says, 'Hey Kirk, here's some messages!' One envelope is white, and the other is pink." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-02.png" alt="Topics Example Slide 2" />
+    <img src="/assets/posts/meet-kafka/topics-02.png" alt="Kirk is confused." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-03.png" alt="Topics Example Slide 3" />
+    <img src="/assets/posts/meet-kafka/topics-03.png" alt="Two boxes appear below Kirk. One is white, and the other is pink." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-04.png" alt="Topics Example Slide 4" />
+    <img src="/assets/posts/meet-kafka/topics-04.png" alt="The white message goes into the white box, and the pink messages go into the pink box." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-05.png" alt="Topics Example Slide 5" />
+    <img src="/assets/posts/meet-kafka/topics-05.png" alt="Carol accepts a message from the white box." />
   </img-popout>
 </slide-show>
 
@@ -176,13 +176,13 @@ Rather than talk to the producers directly, consumers **subscribe** to topics in
 
 <point-compilation-view using="kirks-goals" highlight="1"></point-compilation-view>
 
-<article-image src="/assets/posts/meet-kafka/topics-diagram.png" alt="Kafka Topics" caption="Diagram of topics in Kafka" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/topics-diagram.png" title="Kafka Topics" alt="Pat is a producer, Kirk is Kafka, and Carol is a consumer. Boxes underneath Kirk represent topics." caption="Diagram of topics in Kafka" size="lg"></article-image>
 
 ## Partitions
 
 Ok, time to create a _pretty weird_ problem for Kirk. Let's say Carol has somehow learned how to clone herself...
 
-<article-image src="/assets/posts/meet-kafka/many-carols.png" alt="Many Carols" caption="What will Kirk do now?" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/many-carols.png" alt="There are five Carols now, and Kirk is visibly shocked." caption="What will Kirk do now?" size="lg"></article-image>
 
 <point-compilation-view using="carols-problems" highlight="1"></point-compilation-view>
 
@@ -206,13 +206,13 @@ As you might have guessed, these "mini-mailboxes" are what Kafka calls **partiti
 
 <slide-show width="960px" height="540px" mode="blink">
   <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-01.png" alt="Partitions Example Slide 1" />
+    <img src="/assets/posts/meet-kafka/partitions-01.png" alt="Kirk is on the left with three Carols on the right. Between them is a white box labeled 'Casual Topic'." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-02.png" alt="Partitions Example Slide 2" />
+    <img src="/assets/posts/meet-kafka/partitions-02.png" alt="The white box now contains three smaller boxes, with each box pointing to one of the three Carols." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-03.png" alt="Partitions Example Slide 3" />
+    <img src="/assets/posts/meet-kafka/partitions-03.png" alt="Kirk puts his three messages into the casual topic, with one message going into each of the three inner-boxes." />
   </img-popout>
 </slide-show>
 
@@ -226,7 +226,7 @@ Partitions are one of Kafka's main mechanisms for facilitating parallel processi
 
 When I was first reading about Kafka partitions, it felt like a somewhat convulted and perplexing solution to the parallel processing problem. Why doesn't Kafka just stuff all the messages into the topic and distribute the messages evenly to the consumers?
 
-<article-image src="/assets/posts/meet-kafka/no-partitions.png" alt="No Partitions" caption="Without partitions, the yellow event may be delivered before the blue event." size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/no-partitions.png" alt="A white box delivers messages to three Carols. The box currently contains a blue message in front, followed by a yellow image." caption="Without partitions, the yellow event may be delivered before the blue event." size="lg"></article-image>
 
 Recall one of our key words: each envelope is an **event**. Events are _ordered_, and that order matters. If I make a purchase and then cancel my purchase, it doesn't make sense for the system to first process the cancellation and then process the purchase; it would be backwards!
 
@@ -256,7 +256,7 @@ Some key points from this:
 
 Let's say Kirk decides to clone himself using Carol's machine so that each Kirk can be put in charge of one partition.
 
-<article-image src="/assets/posts/meet-kafka/no-replicas.png" alt="No Replicas" caption="Each Kirk is responsible for one partition" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/no-replicas.png" alt="Three Kirks are on the left, and three Carols on the right. In between is a topic divided into three partitions, colored red, green, and blue." caption="Each Kirk is responsible for one partition" size="lg"></article-image>
 
 Now that we have Team Kirk and Team Carol, work can truly be done in parallel! But there's a potential problem here. What would happen if one of the Kirk's, say the bottommost, gets sick and can no longer do his job? He was in charge of the bottom blue partition, which was being read by one of the members of Team Carol. If he is no longer managing that partition, then what happens to all the messages going to that partition?
 
@@ -266,23 +266,23 @@ As someone who has worked in various products, I can tell you that servers just 
 
 </side-text>
 
-<article-image src="/assets/posts/meet-kafka/kirk-crashes.png" alt="Kirk Crashes" caption="Uh oh! One of the Kirks was fired!" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/kirk-crashes.png" alt="The bottommost Kirk is gone, with a red X drawn across the blue partition. The Carol who was reading from the blue partition is confused." caption="Uh oh! One of the Kirks was fired!" size="lg"></article-image>
 
 Well, nobody said a partition _must_ be handled by only one Kirk. What if instead each partition could be owned by more than one Kirk? One Kirk would have the main responsibility over that partition, but another could serve as a backup in the worst case scenario!
 
-<article-image src="/assets/posts/meet-kafka/with-replicas.png" alt="With Replicas" caption="If one Kirk vanishes, a different Kirk can take over." size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/with-replicas.png" alt="The bottommost Kirk is gone, but this time, a small version of the blue partition is underneath the green partition. The bottommost Carol receives messages from the small blue partition." caption="If one Kirk vanishes, a different Kirk can take over." size="lg"></article-image>
 
 Here, the blue (bottommost) partition has a **replica** belonging to the middle Kirk. Replicas are Kafka's solution to resiliency and fault tolerance; even if one Kafka instance shuts down, other instances can take over the data streams without affecting the producers or consumers. They serve as backups to partitions, distributed across different Kafka servers (called **brokers**).
 
 <point-compilation-view using="kirks-goals" highlight="3"></point-compilation-view>
 
-<article-image src="/assets/posts/meet-kafka/replicas.png" alt="Kafka Replicas" caption="Partitions and replicas in Kafka" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/replicas.png" alt="A topic is divided into partitions. Smaller partitions under the main ones represent replicas." caption="Partitions and replicas in Kafka" size="lg"></article-image>
 
 ## Consumer Groups
 
 Well, looks like Pat just got a new coworker! Meet Cathy.
 
-<article-image src="/assets/posts/meet-kafka/cathy.png" alt="Cathy" caption="This is Cathy!" size="md"></article-image>
+<article-image src="/assets/posts/meet-kafka/cathy.png" alt="Cathy, who has long blue hair." caption="This is Cathy!" size="md"></article-image>
 
 <point-compilation-view using="carols-and-cathys-problems" highlight="2"></point-compilation-view>
 
@@ -298,22 +298,22 @@ This can be different from traditional messaging systems, wherein a message is r
 
 <slide-show width="960px" height="540px" mode="blink">
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Consumer Groups Example Slide 1" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Cathy is with Carol on the right. Pat says, 'Hey Kirk, here's a message!'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Consumer Groups Example Slide 2" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Kirk says, 'Thanks, Pat!'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Consumer Groups Example Slide 3" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Carol asks, 'Got a message for me?'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Consumer Groups Example Slide 4" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Kirk responds, 'Yep! Here's a copy.'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Consumer Groups Example Slide 5" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Cathy asks, 'What about me?'" />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Consumer Groups Example Slide 6" />
+    <img src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Kirk replies, 'Don't worry, got you covered!' In the end, both Carol and Cathy have received the same message from Pat." />
   </img-popout>
 </slide-show>
 
@@ -337,19 +337,19 @@ With consumer groups, Kirk can:
 
 <slide-show width="960px" height="540px" mode="blink">
   <img-popout>
-    <img src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly" />
+    <img src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly: Two partitions each have messages. There are two Carols; one of them receives message from the first partition, and the other receives messages from the other partition." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All" />
+    <img src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All: Two partitions each have messages. There is one Carol and one Cathy; both Carol and Cathy each receive all the messages from both partitions." />
   </img-popout>
   <img-popout>
-    <img src="/assets/posts/meet-kafka/combination.png" alt="Combination" />
+    <img src="/assets/posts/meet-kafka/combination.png" alt="Combination: Two partitions each have messages. There are two Carols and one Cathy; the first Carol receives the first partition messages, the second Carol receives the second partition messages, and Cathy receives all the messages." />
   </img-popout>
 </slide-show>
 
 Note that in all the above approaches, each consumer group sees all three messages in the topic. Therefore, both Carol and Cathy each see all three messages, though in Carol's case (because she's a cloner) she may divide the work between herself and other clones.
 
-<article-image src="/assets/posts/meet-kafka/consumer-group-summary.png" alt="Consumer Group Summary" caption="How consumer groups work in Kafka" size="lg"></article-image>
+<article-image src="/assets/posts/meet-kafka/consumer-group-summary.png" alt="Cathy and Carol represent different consumer groups, depicted by being in different boxes." caption="How consumer groups work in Kafka" size="lg"></article-image>
 
 ## To Summarize
 
