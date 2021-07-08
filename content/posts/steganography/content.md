@@ -1,6 +1,6 @@
 Imagine the following scenario. You work in an office building and are currently walking by some offices on the way to the coffee machine. As the aroma of freshly ground beans meets your nose, you notice a rather conspicuous note stuck onto Janet's office door. It looks like this:
 
-<article-image src="/assets/posts/steganography/sullivans-note.png" alt="Sullivan's Note" caption="MBTUO JHIUX BTGVO XBOUU PIBWF EJOOF SBHBJ OUPNP SSPXO JHIUT VMMJW BO" size="md">
+<article-image src="/assets/posts/steganography/sullivans-note.png" alt="A note card with random letters" caption="MBTUO JHIUX BTGVO XBOUU PIBWF EJOOF SBHBJ OUPNP SSPXO JHIUT VMMJW BO" size="md">
 </article-image>
 
 That's weird. Overly curious, you take a picture of the note so you can decipher it later. At your desk, you quickly realize that by shifting each letter down by 1 alphabetically (so B becomes A, M becomes L, etc), the message comes to read:
