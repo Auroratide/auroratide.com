@@ -33,6 +33,7 @@ export class ArtForge {
             color: new ColorForge().palette('red'),
             background: new ColorForge().hex('000000'),
             summary: 'A summary',
+            alt: 'alt',
             publishedAt: options.publishedAt === undefined ? new Date('2021-01-01T00:00:00.000Z') : options.publishedAt,
             createdAt: new Date('2021-01-01T00:00:00.000Z'),
             content: options.content === undefined ? '<p>Content</p>' : options.content,

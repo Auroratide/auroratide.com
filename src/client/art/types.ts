@@ -21,6 +21,7 @@ export type ArtItem = {
     readonly color: Color
     readonly background: Color
     readonly summary: string
+    readonly alt: string
     readonly publishedAt?: Date
     readonly createdAt: Date
     readonly content?: string

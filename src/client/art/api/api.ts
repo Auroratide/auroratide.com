@@ -17,6 +17,7 @@ class Fetch extends FetchResourceApi<ArtItem> {
         color: data.color,
         background: data.background,
         summary: data.summary,
+        alt: data.alt,
         longSummary: data.long_summary,
         publishedAt: data.published_at ? new Date(data.published_at) : null,
         createdAt: new Date(data.created_at),

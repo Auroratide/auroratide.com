@@ -67,7 +67,7 @@
                 <section class="art" class:pixelart data-testid="art-section">
                     <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
                         <img-popout>
-                            <img src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={title} />
+                            <img src={new UrlBuilder().assets().artItem(id).asset(item.image.original)} alt={item.alt} />
                         </img-popout>
                     </img-colorscape>
                 </section>

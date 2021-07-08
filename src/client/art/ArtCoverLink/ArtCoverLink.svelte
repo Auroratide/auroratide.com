@@ -14,7 +14,7 @@
         </header>
         <section class="image-container" class:pixelart data-testid="art-section">
             <img-colorscape colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.cover.colorscape)}>
-                <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={item.title} loading="lazy" />
+                <img src={new UrlBuilder().assets().artItem(item.id).asset(item.cover.original)} alt={item.alt} loading="lazy" />
             </img-colorscape>
         </section>
     </article>
