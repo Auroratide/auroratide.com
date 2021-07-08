@@ -8,7 +8,7 @@ Interestingly, it has to do with the lighting of the image. The brain ascertains
 
 In a brief experiment, we can actually see this merely by changing the image's brightness.
 
-<article-image src="/assets/posts/the-blue-and-gold-dress/dresses.png" alt="Dresses" caption="Darkening the image makes it blue and black, whereas lightening it makes it gold and white." size="lg">
+<article-image src="/assets/posts/the-blue-and-gold-dress/dresses.png" alt="A series of images depicting the same dress, with some darkened and others brightened." caption="Darkening the image makes it blue and black, whereas lightening it makes it gold and white." size="lg">
 </article-image>
 
 So what about the people who see blue and gold? To help explain this, I actually went to inspect the RGB values of the image itself to see what the computer thinks the colors are. Interestingly, the blue/white patches are seen as a bluish grey, and the black/gold patches are a very impure yellow. Below are two boxes indicating the colors without any context:
