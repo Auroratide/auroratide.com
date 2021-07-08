@@ -99,9 +99,9 @@ A common trap is to do both ideation and evaluation simultaneously, judging idea
 Deferring judgement enhances creativity.
 
 <horizontal-flex>
-<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-1.png" alt="Ideation Antipattern" caption="A common antipattern is to ideate and evaluate at the same time." size="fit" style="flex: 1;">
+<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-1.png" alt="A gavel is about to crush some ideas" caption="A common antipattern is to ideate and evaluate at the same time." size="fit" style="flex: 1;">
 </article-image>
-<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-2.png" alt="Ideation and Evaluation" caption="Ideation and evaluation should be distinct exercises!" size="fit" style="flex: 1;">
+<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-2.png" alt="Ideas are separated far from the gavel" caption="Ideation and evaluation should be distinct exercises!" size="fit" style="flex: 1;">
 </article-image>
 </horizontal-flex>
 
@@ -123,7 +123,7 @@ By judging ideas **later**, we give our **crazy** ideas time to become **plausib
 
 I like to imagine provocations as bridges, taking us from one island of solutions to another.
 
-<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/provocations.png" alt="Provocations" caption="Provocations build a bridge from one idea space to another." size="lg">
+<article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/provocations.png" alt="A star shape connects some squares on the left with circles on the right." caption="Provocations build a bridge from one idea space to another." size="lg">
 </article-image>
 
 <side-text>
