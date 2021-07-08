@@ -12,7 +12,7 @@ Last week, I participated in the annual [GMTK Game Jam](https://itch.io/jam/gmtk
 
 **[Rubber Juggle](/portfolio/rubber-juggle)**, a minigame where the goal is to keep balloons on screen for as long as possible! You do that by rubber-banding pegs on a pegboard that the balloons bounce off of, like below.
 
-<article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="Bounce Animation" size="lg">
+<article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="Animated image of a balloon bouncing off a rubber band." size="lg">
 </article-image>
 
 That bounce may look fairly innoculous, but it turns out to be slightly tricky to code (especially for me who hadn't touched any linear algebra in years)! The bounce mechanic was the core of Rubber Juggle, so I spent most of my time during the jam coding it to work well and feel good.
@@ -160,9 +160,9 @@ Pictorially, it can be easy to pick out in which scenarios a bounce should happe
 Redrawing the exact same three scenarios above but using only our domain representation, we get this:
 
 <horizontal-flex>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-01.png" alt="Not colliding" size="fit"></article-image>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-02.png" alt="Just colliding" size="fit"></article-image>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-03.png" alt="Definitely colliding" size="fit"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-01.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle and brown line do not intersect. The distance between them is labeled d." size="fit"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-02.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle barely touches the brown line." size="fit"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-03.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is on top of the brown line." size="fit"></article-image>
 </horizontal-flex>
 
 * `(x, y)` represents the balloon's position, which in our code is `balloon.position`
@@ -243,13 +243,13 @@ A collision is clearly being detected when it shouldn't be! In fact, it's almost
 
 As it turns out, that's because there _is_ an infinite line stretching the entire span of the band, mathematically speaking. The formula used above helps find the distance from a point to a _line_ defined by two other points; in math, lines are infinitely long, meaning our formula for collision detection treats the band as infinitely long too.
 
-<article-image src="/assets/posts/the-bounce-of-rubber-juggle/infinite-line.png" alt="Infinite Line" size="lg" caption="At the moment, the band stretches infinitely in both directions"></article-image>
+<article-image src="/assets/posts/the-bounce-of-rubber-juggle/infinite-line.png" alt="Two pegs connected with a rubber band and a ballon are lined up on a pegboard. A thick dashed line is drawn across all of them." size="lg" caption="At the moment, the band internally stretches infinitely in both directions"></article-image>
 
 What we really want is the distance from a point to a line _segment_. Knowing this, we can add a couple more diagrams to our scenarios above:
 
 <horizontal-flex>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-04.png" alt="Not crossing" size="lg"></article-image>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-05.png" alt="Crossing" size="lg"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-04.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is above one of the red circles. The distance between them is labeled d." size="lg"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-05.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is lined up with the brown line, but not going through it. The distance between them is labeled d." size="lg"></article-image>
 </horizontal-flex>
 
 Finding this version of `d` will be far more accurate for collision detection.
@@ -492,8 +492,8 @@ As before, I like to think of the problem pictorially before analyizing possible
 In this case, the simplest way to represent the bounce is with a symmetrical reflection; in physics, this is known as **[specular reflection](https://en.wikipedia.org/wiki/Specular_reflection)**. If we compare a typical diagram for specular reflection against the diagram created by our simulated bounce, we can see the similarity:
 
 <horizontal-flex>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce-physics.png" alt="Bounce Reflection" size="lg" caption="Bounce Reflection"></article-image>
-    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/reflection.png" alt="Specular Reflection" size="lg" caption="Specular Reflection" cite="https://commons.wikimedia.org/wiki/File:Reflection_angles.svg"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce-physics.png" alt="A blue circle's path bouncing off a brown line is drawn, with a dashed line bisecting the angle formed." size="lg" caption="Bounce Reflection"></article-image>
+    <article-image src="/assets/posts/the-bounce-of-rubber-juggle/reflection.png" alt="Two line segments QO and OP depect reflection on a mirror. A line bisects the angle formed." size="lg" caption="Specular Reflection" cite="https://commons.wikimedia.org/wiki/File:Reflection_angles.svg"></article-image>
 </horizontal-flex>
 
 So that's great and all, but how the heck do we actually _code_ this?
@@ -509,7 +509,7 @@ Our goal is to find <math-inline tex="\vec{v}_f"></math-inline>, the new velocit
 
 The variable <math-inline tex="\hat{r}"></math-inline> represents the direction of the rubber band's surface. This is essentially a vector created by sticking the rubber band onto a plane and drawing an arrow from one peg to the other.
 
-<article-image src="/assets/posts/the-bounce-of-rubber-juggle/draw-vector.png" alt="Draw Surface Vector" size="lg" caption="This vector equals the difference between the position vectors of each peg">
+<article-image src="/assets/posts/the-bounce-of-rubber-juggle/draw-vector.png" alt="Two pegs are drawn on a grid with one on the origin. A vector arrow is drawn from the origin to the other peg." size="lg" caption="This vector equals the difference between the position vectors of each peg">
 </article-image>
 
 We can actually add this to our model of `RubberBand` with a descriptive function:
