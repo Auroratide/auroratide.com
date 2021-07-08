@@ -21,9 +21,9 @@ If you've never seen this 9-dots puzzle before, it can be frustrating at first.
 Let's try a few strategies here...
 
 <horizontal-flex>
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-1.png" alt="Attempt 1" />
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-2.png" alt="Attempt 2" />
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-3.png" alt="Attempt 3" />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-1.png" alt="An attempt drawing the four lines through the outer dots, but leaving the middle dot unmarked." />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-2.png" alt="An attempt drawing lines through the diagonals, but leaving two dots unmarked." />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-3.png" alt="An attempt mixing horizontal and diagonal lines, but leaving two dots unmarked." />
 </horizontal-flex>
 
 Darn! None of these patterns work. No matter what we do, it feels like we need _five_ lines, not four.
@@ -53,7 +53,7 @@ Let's pick apart our assumptions one bit at a time.
 The nine dots are arranged in a 3x3 box. However, **do our lines need to stay inside of this box?** What if we allow the lines to go a little outside the confines of the grid...
 
 <horizontal-flex>
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/solution.png" alt="Solution" />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/solution.png" alt="The solution, showing all nine dots connected by allowing the lines to go beyond the confines of the dots." />
 </horizontal-flex>
 
 Ah ha! And just like that, we can connect 9 dots with 4 connected lines. We just needed to think outside the box.
@@ -69,7 +69,7 @@ Cool, the puzzle is solved! We're done now, right? Perhaps, but we made an awful
 Usually this problem is given on a piece of paper. However, **does the paper need to be flat?** What if we curl the paper up and use the third dimension to our advantage? We can curl the paper into a spiral tube and draw a single line that wraps around the tube, intersecting all nine dots:
 
 <horizontal-flex>
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/3d.png" alt="3D" />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/3d.png" alt="The dots are on a tube of paper, with a single line connecting all the dots by going around the tube." />
 </horizontal-flex>
 
 Wait, you mean this puzzle can be solved with _just one line_? Indeed! We just needed to think beyond two dimensions.
@@ -85,7 +85,7 @@ We're not done yet though! Is there at least one more assumption we can tackle?
 Why constrain ourselves to a particular tool? **Do we need to use a pencil?** What if we use a paintbrush instead...
 
 <horizontal-flex>
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/brush.png" alt="Paintbrush" />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/brush.png" alt="All nine dots have a single, wide stroke crossing them all." />
 </horizontal-flex>
 
 Perhaps this is not a solution intended by the original author of the 9-dots puzzle, but it definitely meets the original criteria of "connect all 9 dots with 4 connected strokes". It's easy to make the assumption that we must use thin lines to solve the puzzle because, frankly, the puzzle is too easy if we allow a giant, thick line.
@@ -103,7 +103,7 @@ What we have here is an example of **perceptual blockers** to creative problem s
 The 9-dots puzzle is a perfect example. The nine dots are arranged in a box. That box creates an invisible barrier, and this makes people think the lines must be contained within the barrier.
 
 <horizontal-flex>
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/perceptual-blocker.png" alt="Perceptual Blocker" />
+    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/perceptual-blocker.png" alt="" />
 </horizontal-flex>
 
 Now, this page presents the puzzle with an actual visible barrier for the simple reason that the interactive area needed to be clearly defined. However, this time the _dots themselves_ may have been a perceptual blocker. People like to click on objects rather than whitespace, so it is more tempting to only ever click on the dots. Yet to solve the puzzle, you must click on the whitespace!
