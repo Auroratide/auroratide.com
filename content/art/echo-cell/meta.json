@@ -23,7 +23,8 @@
         "type": "hex",
         "value": "ffffff"
     },
-    "summary": "Cartidge cover I made for a local game jam. It's deliberately titleless, to make the cover appear enigmatic.",
+    "summary": "Cartridge cover I made for a local game jam. It's deliberately titleless, to make the cover appear enigmatic.",
+    "alt": "A titleless cartridge with an ominous, glowing red square on a black background.",
     "published_at": "2018-04-08T12:00:00.000Z",
     "created_at": "2018-04-08T12:00:00.000Z"
 }
