@@ -14,7 +14,7 @@
                 <h1 class="greeting">Hi! I'm Timothy.</h1>
                 <h2 class="tagline">Coding is my craft. Teaching is my passion.</h2>
                 <img-colorscape class="profile" colorscape="{assetRoot.asset('profile/colorscape.svg')}">
-                    <img src={assetRoot.asset('profile/1080w.png')} alt="Profile" />
+                    <img src={assetRoot.asset('profile/1080w.png')} alt="" />
                 </img-colorscape>
                 <p>A long time ago, I had a graphing calculator which came with a bunch of games on it. But one day, a nefarious colleague deleted all those games. Desperate, I sought a manual hoping they could be restored, but I stumbled upon something much better.</p>
                 <p>The games could not be undeleted. Instead, they could be recreated.</p>
