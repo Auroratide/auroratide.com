@@ -7,6 +7,7 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import { PageNotFound } from '@/client/PageNotFound'
+    import { UrlBuilder } from '@/client/routes'
 
     import type { PortfolioItem } from '../types'
 
@@ -14,7 +15,7 @@
     import { Comments } from './Comments'
     import { RelatedItems } from './RelatedItems'
     import { LinkBar } from './LinkBar'
-    import { Gallery } from './Gallery'
+    import { Gallery } from '@/client/Gallery'
 
     import * as color from '@/client/color'
 
@@ -67,7 +68,7 @@
                     <aside slot="sidebar">
                         {#if item.gallery}
                             <h2 class="more-title">Some Pics</h2>
-                            <Gallery id={item.id} gallery={item.gallery} />
+                            <Gallery root={new UrlBuilder().assets().portfolioItem(item.id)} gallery={item.gallery} />
                         {/if}
                         <h2 class="more-title">More on <span class="category">{item.category}</span> I've Made</h2>
                         {#if relatedItems !== Pending && relatedItems !== Missing}

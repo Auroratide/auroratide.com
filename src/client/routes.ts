@@ -144,7 +144,7 @@ export class UrlBuilder {
     }
 }
 
-class AssetUrlBuilder {
+export class AssetUrlBuilder {
     private url: string
     constructor(url: string) {
         this.url = `${url}/assets`

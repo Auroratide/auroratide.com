@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { UrlBuilder } from '@/client/routes'
-    import type { GalleryItem } from '../../types'
+    import type { AssetUrlBuilder } from '@/client/routes'
+    import type { GalleryItem } from './types'
 
-    export let id: string
-    export let gallery: GalleryItem[]
+    export let root: AssetUrlBuilder
+    export let gallery: GalleryItem[]    
 </script>
 
 <ul class="gallery">
@@ -11,7 +11,7 @@
         <li>
             <figure>
                 <img-popout>
-                    <img src={new UrlBuilder().assets().portfolioItem(id).asset(item.image)} alt={item.caption} />
+                    <img src={root.asset(item.image)} alt={item.caption} />
                 </img-popout>
                 <figcaption>{item.caption}</figcaption>
             </figure>
