@@ -11,6 +11,7 @@
     import { UrlBuilder } from '@/client/routes'
     import { ArtCoverLink } from '../ArtCoverLink'
     import { disqus } from '@/client/embed/disqus'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     import * as color from '@/client/color'
 
@@ -61,9 +62,11 @@
             <PageNotFound />
         {:else}
             <article class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
-                <header>
-                    <h1>{title}</h1>
-                </header>
+                <FocusOnMe>
+                    <header>
+                        <h1>{title}</h1>
+                    </header>
+                </FocusOnMe>
                 <section class="art" class:pixelart data-testid="art-section">
                     <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
                         <img-popout>

@@ -2,6 +2,7 @@
     import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     import { navigation, UrlBuilder } from '@/client/routes'
     const assetRoot = new UrlBuilder().assets().page(navigation.About.link)
@@ -11,7 +12,7 @@
     <Container>
         <article class="page">
             <Content>
-                <h1 class="greeting">Hi! I'm Timothy.</h1>
+                <FocusOnMe><h1 class="greeting">Hi! I'm Timothy.</h1></FocusOnMe>
                 <h2 class="tagline">Coding is my craft. Teaching is my passion.</h2>
                 <img-colorscape class="profile" colorscape="{assetRoot.asset('profile/colorscape.svg')}">
                     <img src={assetRoot.asset('profile/1080w.png')} alt="" />

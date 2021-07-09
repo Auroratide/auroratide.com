@@ -2,6 +2,7 @@
     import { DocumentInfo } from '@/client/DocumentInfo'
     import { Container } from '@/client/Container'
     import { Content } from '@/client/Content'
+    import { FocusOnMe } from '@/client/FocusOnMe'
     import { Palette } from './Palette'
     import { Shade } from './Shade'
 </script>
@@ -10,7 +11,7 @@
     <Container>
         <Content>
             <article class="styleguide">
-                <h1>Styleguide</h1>
+                <FocusOnMe><h1>Styleguide</h1></FocusOnMe>
                 <section class="palettes">
                     <Palette name="Aurora Blue">
                         <Shade hex={0x448DDD} />

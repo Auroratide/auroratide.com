@@ -8,6 +8,7 @@
     import { Pending, Missing } from '@/client/resources'
     import { PageNotFound } from '@/client/PageNotFound'
     import { UrlBuilder } from '@/client/routes'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     import type { PortfolioItem } from '../types'
 
@@ -52,7 +53,9 @@
             <PageNotFound />
         {:else}
             <article class="article" style="--article-color: {color.fromJson(item.color)};">
-                <Header title={item.title} icon={item.icon} />
+                <FocusOnMe>
+                    <Header title={item.title} icon={item.icon} />
+                </FocusOnMe>
                 {#if item.links}
                     <LinkBar links={item.links} />
                 {/if}

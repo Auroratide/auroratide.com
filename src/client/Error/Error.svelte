@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Container } from '@/client/Container'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     export let title: string
     export let subtitle: string
@@ -7,7 +8,9 @@
 
 <Container>
     <div class="error">
-        <h1>{title}</h1>
+        <FocusOnMe>
+            <h1>{title}</h1>
+        </FocusOnMe>
         <h2>{subtitle}</h2>
         <div class="content">
             <slot></slot>
