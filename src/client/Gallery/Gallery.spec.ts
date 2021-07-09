@@ -7,6 +7,7 @@ describe('Gallery', () => {
         const root = new AssetUrlBuilder('')
         const item = {
             image: 'hello.png',
+            alt: 'a waving hand',
             caption: 'Hello!',
         }
 

@@ -11,7 +11,7 @@
         <li>
             <figure>
                 <img-popout>
-                    <img src={root.asset(item.image)} alt={item.caption} />
+                    <img src={root.asset(item.image)} alt={item.alt} />
                 </img-popout>
                 <figcaption>{item.caption}</figcaption>
             </figure>
