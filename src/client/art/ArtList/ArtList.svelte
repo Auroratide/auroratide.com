@@ -6,6 +6,8 @@
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
     import type { ArtItem } from '../types'
+    import { SrOnly } from '@/client/SrOnly'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     import { ArtCoverLink } from '../ArtCoverLink'
 
@@ -22,6 +24,9 @@
         {:else if items === Missing}
             <CatastrophicError />
         {:else}
+            <SrOnly><FocusOnMe>
+                <h1>My Art List</h1>
+            </FocusOnMe></SrOnly>
             <ul class="item-list">
                 {#each items.filter(it => it.publishedAt) as item}
                     <li><ArtCoverLink {item} /></li>

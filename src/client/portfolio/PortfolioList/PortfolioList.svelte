@@ -8,6 +8,8 @@
     import { CatastrophicError } from '@/client/CatastrophicError'
     import { UrlBuilder } from '@/client/routes'
     import { ArticleCard } from '@/client/ArticleCard'
+    import { SrOnly } from '@/client/SrOnly'
+    import { FocusOnMe } from '@/client/FocusOnMe'
 
     export let resource: Resource<PortfolioItem>
 
@@ -22,6 +24,9 @@
         {:else if items === Missing}
             <CatastrophicError />
         {:else}
+            <SrOnly><FocusOnMe>
+                <h1>My Portfolio List</h1>
+            </FocusOnMe></SrOnly>
             <ul class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
                     <li>
