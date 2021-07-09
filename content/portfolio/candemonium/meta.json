@@ -11,9 +11,11 @@
     "created_at": "2013-10-01T00:00:00.000Z",
     "gallery": [ {
         "image": "candy-corn.png",
+        "alt": "A cute star avoiding candy corn coming down straight lines toward it.",
         "caption": "Beware the mighty candy corn"
       }, {
         "image": "spiral.png",
+        "alt": "A cute star avoiding an assortment of candy coming at it in circular waves.",
         "caption": "Each level has a unique pattern"
     } ]
 }

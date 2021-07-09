@@ -20,12 +20,15 @@
       } ],
       "gallery": [ {
         "image": "menu.png",
+        "alt": "Title screen depicting a campfire.",
         "caption": "Made for One Game Mechanic Jam"
       }, {
         "image": "gameplay-1.png",
+        "alt": "A fire in the middle with some water buckets around it.",
         "caption": "Protect the fire from the buckets"
       }, {
         "image": "gameplay-2.png",
+        "alt": "A fire in the middle, but the edges of the screen are very dark.",
         "caption": "Don't let the fire get too dim"
       } ]
   }

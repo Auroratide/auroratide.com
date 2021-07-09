@@ -17,9 +17,11 @@
   } ],
   "gallery": [ {
     "image": "gameplay.png",
+    "alt": "A few stars on a stary background, some of them being white dwarves.",
     "caption": "White dwarf stars make an appearance"
   }, {
     "image": "boss.png",
+    "alt": "A couple of large, blue stars, with one of them spewing matter everywhere.",
     "caption": "Some of the bosses are somewhat menacing"
   } ]
 }

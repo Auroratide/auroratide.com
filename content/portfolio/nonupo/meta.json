@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "gameplay.png",
+    "alt": "A screenshot of a 6-by-6 grid with most cells empty, but some have numbers and operators.",
     "caption": "Performing a roll has a sweet little animation"
   }, {
     "image": "menu.png",
+    "alt": "A screenshot of a dialog showing how to make a new player.",
     "caption": "Choose between five difficulty levels"
   } ]
 }

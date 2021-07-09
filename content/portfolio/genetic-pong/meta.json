@@ -20,9 +20,11 @@
   } ],
   "gallery": [ {
     "image": "gameplay.png",
+    "alt": "Two paddles playing pong.",
     "caption": "At first, the genetic AI does pretty poorly, but it gets better!"
   }, {
     "image": "menu.png",
+    "alt": "The player menu, with an assortment of AI options for each paddle.",
     "caption": "Train the AI against yourself or other Pong-specific AI"
   } ]
 }

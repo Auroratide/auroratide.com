@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "article.png",
+    "alt": "Screenshot of an article on the news site.",
     "caption": "The site included reviews and a neat star rating."
   }, {
     "image": "editing.png",
+    "alt": "Screenshot of the developer and editor section of the site.",
     "caption": "The developer section. It hasn't been used in a long time."
   } ]
 }

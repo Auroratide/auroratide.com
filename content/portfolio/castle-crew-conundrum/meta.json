@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "menu.png",
+    "alt": "A green stick figure operating crane controls.",
     "caption": "There are six characters operating the silly castle"
   }, {
     "image": "gameplay.png",
+    "alt": "Many different stick figures in a factory operating different machinery.",
     "caption": "Launch golem corpses at live golems!"
   } ]
 }

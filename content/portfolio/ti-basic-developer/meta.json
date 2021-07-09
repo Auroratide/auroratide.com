@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "archives.png",
+    "alt": "Screenshot showing calculator games available for download.",
     "caption": "The site hosts a number of games written by various programmers"
   }, {
     "image": "tutorials.png",
+    "alt": "Screenshot showing lists of tutorials.",
     "caption": "Beginner-friendly tutorials are readily available"
   } ]
 }

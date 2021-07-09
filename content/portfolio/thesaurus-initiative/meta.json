@@ -16,9 +16,11 @@
   } ],
   "gallery": [ {
     "image": "words.png",
+    "alt": "An interface for adding words to a dictionary, with a big box for entering synonyms.",
     "caption": "You can add your own words to learn"
   }, {
     "image": "dictionaries.png",
+    "alt": "Interface showing different dictionaries.",
     "caption": "Multiple dictionaries can be saved"
   } ]
 }

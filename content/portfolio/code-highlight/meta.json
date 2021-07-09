@@ -20,9 +20,11 @@
   } ],
   "gallery": [ {
     "image": "input.png",
+    "alt": "Screenshot of the UI, depicting a code box on the left and class names on the right.",
     "caption": "Custom types can be checked"
   }, {
     "image": "output.png",
+    "alt": "Screenshot of the output in HTML.",
     "caption": "code.highlight() can output HTML code"
   } ]
 }

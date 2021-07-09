@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "notebook.png",
+    "alt": "Screenshot of the front page of the notebook template.",
     "caption": "The Notebook allows users to easily maintain a webbook"
   }, {
     "image": "blog.png",
+    "alt": "Screenshot of the front page of the blog template.",
     "caption": "The Blog Template provides a ready-to-use blog"
   } ]
 }

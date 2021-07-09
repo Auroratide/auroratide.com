@@ -15,6 +15,7 @@
   } ],
   "gallery": [ {
     "image": "gameplay.png",
+    "alt": "A bunch of numbers in arranged in a grid with some empty space, and a smiley face on the sidebar.",
     "caption": "This basic interface goes a long way"
   } ]
 }

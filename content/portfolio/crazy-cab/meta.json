@@ -22,9 +22,11 @@
   } ],
   "gallery": [ {
     "image": "gameplay.png",
+    "alt": "A lone taxi on an alien world, with pillars of rock scattered around.",
     "caption": "Very simple: Just dodge the rocks!"
   }, {
     "image": "gameover.png",
+    "alt": "The game over screen, with what appears to be an explosion.",
     "caption": "You have to see the game over screen for yourself"
   } ]
 }

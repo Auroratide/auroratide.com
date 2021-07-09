@@ -17,6 +17,7 @@
   } ],
   "gallery": [ {
     "image": "test.png",
+    "alt": "Screenshot of an example test using NBehave features.",
     "caption": "A sample test showing how NBehave works"
   } ]
 }

@@ -17,9 +17,11 @@
   } ],
   "gallery": [ {
     "image": "list.png",
+    "alt": "A list view of students and their schedules.",
     "caption": "A list of all the current schedules can be quickly compiled"
   }, {
     "image": "manager.png",
+    "alt": "An interface for assigning students to classes.",
     "caption": "Managers can add students to courses or courses to students"
   } ]
 }

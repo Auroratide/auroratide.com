@@ -17,12 +17,15 @@
   } ],
   "gallery": [ {
     "image": "running.png",
+    "alt": "Two pipelines, with one of them currently running Journey Tests.",
     "caption": "Looks like we're running some tests..."
   }, {
     "image": "failure.png",
+    "alt": "A big red box outlines that one of the tests failed.",
     "caption": "Failures are a super obvious red"
   }, {
     "image": "vsts.png",
+    "alt": "Screenshot of the native VSTS monitor, showing just a small red X for a failed build.",
     "caption": "The old VSTS monitor looks thin by comparison"
   } ]
 }

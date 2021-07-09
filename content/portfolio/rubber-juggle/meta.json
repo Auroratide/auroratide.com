@@ -31,9 +31,11 @@
     } ],
     "gallery": [ {
         "image": "screenshot-menu.png",
+        "alt": "The title screen.",
         "caption": "Made for GMTK Game Jam"
     }, {
         "image": "screenshot-gameplay.png",
+        "alt": "A couple balloons on a pegboard, kept within by rubber bands wrapped around pegs.",
         "caption": "Keep balloons in with rubber bands"
     } ]
 }

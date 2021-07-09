@@ -15,9 +15,11 @@
   } ],
   "gallery": [ {
     "image": "testimonials.png",
+    "alt": "A screenshot of a page on student testimonials.",
     "caption": "The site allows the client to edit individual sections and add new testimonials very easily."
   }, {
     "image": "mobile.png",
+    "alt": "A screenshot of what the website looks like on a phone.",
     "caption": "And of course, the site is mobily beautiful, as all sites should be."
   } ]
 }

@@ -17,9 +17,11 @@
       } ],
     "gallery": [ {
         "image": "collection.png",
+        "alt": "A thin red cylinder with cartoony eyes on the floor, staring at an other red cylinder.",
         "caption": "Go around and collect the little blood puddles"
       }, {
         "image": "run.png",
+        "alt": "A thin red cylinder with cartoony eyes fleeing from an angry mop.",
         "caption": "Run from those pesky mops!"
       } ]
 }

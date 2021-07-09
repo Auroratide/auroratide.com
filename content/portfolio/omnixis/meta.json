@@ -20,9 +20,11 @@
   } ],
   "gallery": [ {
     "image": "title.png",
+    "alt": "The title screen.",
     "caption": "The game keeps a highscore like an arcade game"
   }, {
     "image": "gameplay.png",
+    "alt": "A bunch of connected Tetris blocks spanning in all directions haphazardly.",
     "caption": "Don't let the blocks get to the edges!"
   } ]
 }
