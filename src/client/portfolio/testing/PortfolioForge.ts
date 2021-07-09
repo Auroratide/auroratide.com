@@ -1,5 +1,6 @@
 import { Category } from '../category'
 import type { PortfolioItem } from '../types'
+import { GalleryItemForge } from '@/client/Gallery/testing/GalleryItemForge'
 
 type Options = {
     title?: string,
@@ -26,10 +27,7 @@ export class PortfolioForge {
                 title: 'Link',
                 href: 'https://auroratide.com',
             } ],
-            gallery: [ {
-                image: 'stuff.png',
-                caption: 'Some caption',
-            } ],
+            gallery: [ new GalleryItemForge().create() ],
         }
     }
 }
