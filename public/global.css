@@ -145,6 +145,10 @@ button vector-icon, .as-button vector-icon {
     vertical-align: -0.125em;
 }
 
+a.as-button {
+    text-decoration: none;
+}
+
 /* Inputs
    ========================================================================== */
 textarea, ::part(textarea) {
