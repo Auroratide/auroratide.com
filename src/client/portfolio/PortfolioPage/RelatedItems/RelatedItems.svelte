@@ -24,6 +24,10 @@
         margin: 0;
         padding: 0;
     }
+    
+    .related-items a {
+        text-decoration: none;
+    }
 
     .item {
         position: relative;

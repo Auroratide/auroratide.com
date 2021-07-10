@@ -42,6 +42,14 @@
         padding: 0 0.25em;
     }
 
+    .top-bar a {
+        text-decoration: none;
+    }
+
+    .top-bar a:hover, .top-bar a:focus {
+        text-decoration: underline;
+    }
+
     .logo {
         grid-area: logo;
         font-size: 3.75em;

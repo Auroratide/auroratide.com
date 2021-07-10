@@ -85,6 +85,11 @@
 
     .nav a {
         color: var(--skin-color-text-secondary);
+        text-decoration: none;
+    }
+
+    .nav a:hover, .nav a:focus {
+        text-decoration: underline;
     }
 
     .license, .source {
