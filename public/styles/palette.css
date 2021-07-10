@@ -1,6 +1,6 @@
 :root {
     --palette-greyscale-000: #000000;
-    --palette-greyscale-010: #333333;
+    --palette-greyscale-010: #282828;
     --palette-greyscale-025: #707070;
     --palette-greyscale-050: #afafaf;
     --palette-greyscale-075: #dddddd;
@@ -16,15 +16,16 @@
   
     --palette-deep-blue: #001533;
     --palette-aurora-blue: #448DDD;
+    --palette-aurora-blue-text: #2575CB;
     --palette-rgb-aurora-blue: 68, 141, 221;
     --palette-aurora-green: #41AAB7;
     --palette-rgb-aurora-green: 65, 170, 183;
     --palette-fable-lavender: #9D77DD;
     --palette-fable-pink: #FB6BB5;
-    --palette-livian-yellow: #E6B800;
-    --palette-rgb-livian-yellow: 230, 184, 0;
+    --palette-livian-yellow: #D6AB00;
+    --palette-rgb-livian-yellow: 214, 171, 0;
     --palette-eventide-black: #303038;
-    --palette-winter-grey: #ABB7BD;
+    --palette-winter-grey: #A6B3B9;
     --palette-autumn-red: #BE2C38;
     --palette-rgb-autumn-red: 190, 44, 56;
     --palette-autumn-orange: #D88F30;
