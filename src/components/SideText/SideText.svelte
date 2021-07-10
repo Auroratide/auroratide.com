@@ -27,17 +27,21 @@
         font-style: italic;
         font-weight: normal;
         border-left-color: var(--skin-color-info);
+        background: rgba(var(--skin-rgb-info), 0.06);
     }
 
     small.warning {
         border-left-color: var(--skin-color-warning);
+        background: rgba(var(--skin-rgb-warning), 0.06);
     }
 
     small.success {
         border-left-color: var(--skin-color-success);
+        background: rgba(var(--skin-rgb-success), 0.06);
     }
 
     small.danger {
         border-left-color: var(--skin-color-danger);
+        background: rgba(var(--skin-rgb-danger), 0.06);
     }
 </style>
