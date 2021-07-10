@@ -62,11 +62,11 @@
             <PageNotFound />
         {:else}
             <article class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
-                <FocusOnMe>
-                    <header>
+                <header>
+                    <FocusOnMe>
                         <h1>{title}</h1>
-                    </header>
-                </FocusOnMe>
+                    </FocusOnMe>
+                </header>
                 <section class="art" class:pixelart data-testid="art-section">
                     <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(id).asset(item.image.colorscape)}>
                         <img-popout>
@@ -131,6 +131,10 @@
         justify-content: center;
         background: var(--article-color);
         overflow: hidden;
+    }
+
+    header > :global(*) {
+        width: 100%;
     }
 
     h1 {
