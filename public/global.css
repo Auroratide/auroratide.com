@@ -72,6 +72,7 @@ blockquote {
     padding: var(--sizing-spacing-xs) var(--sizing-spacing-sm) var(--sizing-spacing-xs) var(--sizing-spacing-lg);
     border-left: var(--sizing-border-md) solid var(--skin-color-bg);
     font-style: italic;
+    background: rgba(var(--skin-rgb-bg), 0.12);
 }
 
 blockquote p {
