@@ -35,6 +35,7 @@ import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
+import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
@@ -45,6 +46,7 @@ import { faSun } from '@fortawesome/free-solid-svg-icons/faSun'
 import { faTableTennis } from '@fortawesome/free-solid-svg-icons/faTableTennis'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons/faTaxi'
 import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
+import { faTty } from '@fortawesome/free-solid-svg-icons/faTty'
 import { faThumbtack } from '@fortawesome/free-solid-svg-icons/faThumbtack'
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
@@ -57,6 +59,7 @@ import { faItchIo } from '@fortawesome/free-brands-svg-icons/faItchIo'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow'
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
 import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
@@ -100,6 +103,7 @@ export const library = {
     [IconName.Newspaper]: faNewspaper,
     [IconName.PaintBrush]: faPaintBrush,
     [IconName.Pause]: faPause,
+    [IconName.Phone]: faPhone,
     [IconName.Play]: faPlay,
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
@@ -110,6 +114,7 @@ export const library = {
     [IconName.TableTennis]: faTableTennis,
     [IconName.Taxi]: faTaxi,
     [IconName.Th]: faTh,
+    [IconName.Tty]: faTty,
     [IconName.Thumbtack]: faThumbtack,
     [IconName.Times]: faTimes,
     [IconName.TrafficLight]: faTrafficLight,
@@ -122,6 +127,7 @@ export const library = {
     [IconName.LinkedIn]: faLinkedinIn,
     [IconName.Github]: faGithub,
     [IconName.GithubAlt]: faGithubAlt,
+    [IconName.Html5]: faHtml5,
     [IconName.Kafka]: kafka,
     [IconName.StackOverflow]: faStackOverflow,
     [IconName.Unity]: faUnity,
