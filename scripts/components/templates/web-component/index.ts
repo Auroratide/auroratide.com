@@ -1,1 +1,5 @@
-export { default as $NAME$ } from './$NAME$.svelte'
+import { default as $NAME$ } from './$KEBAB_NAME$'
+
+$NAME$()
+
+export { $NAME$ }
