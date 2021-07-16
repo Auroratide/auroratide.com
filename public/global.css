@@ -90,7 +90,7 @@ hr {
     margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
 }
 
-ul, ol {
+ul, ol, icon-ul {
     padding-left: 1em;
 }
 
@@ -306,7 +306,7 @@ img-popout img:not([slot="popped-out"]) {
         text-align: left;
     }
 
-    ul, ol {
+    ul, ol, icon-ul {
         padding-left: calc(1em + var(--sizing-spacing-lg));
     }
 }
