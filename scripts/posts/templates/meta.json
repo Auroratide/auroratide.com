@@ -23,6 +23,7 @@
     } ],
     "gallery": [ {
         "image": "",
+        "alt": "",
         "caption": ""
     } ]
 }
