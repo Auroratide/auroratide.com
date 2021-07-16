@@ -150,17 +150,15 @@ Empty alt text is different from **no** alt text! You should always define alt t
 
 ## All as the Spec Intended
 
-So it turns out, I learned most of this by reading the [HTML specification](https://html.spec.whatwg.org/multipage/images.html#alt) provided by WHATWG.
+So it turns out, I learned most of this by reading the [HTML Living Standard](https://html.spec.whatwg.org/multipage/images.html#alt), a specification provided by <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr>.
 
-The **specification** is essentially the HTML rulebook. Browsers implement the standards defined by the spec. In a sense, since it is the HTML rulebook and web developers work in HTML, it's also the web developer rulebook.
+The **specification** is essentially the HTML rulebook. Browsers implement the standards defined by the spec. In a sense, since it is the HTML rulebook and web developers work in HTML, it's also the web developer rulebook. Despite that, I hadn't actually taken time to read it until recently in my career. Besides the notion that the word "specification" is scary, the document is also understandably technical and dense.
+
+_Or so I thought_. In fact, the spec is written to be very readable and thorough! It details the semantic intent of HTML tags and attributes with scenarios and examples, in similar fashion to how I'd expect an article _summarizing_ the spec to be written.
 
 <icon-divider icon="html5"></icon-divider>
 
-Despite that, I hadn't actually taken time to read it until recently in my career. Besides the notion that the word "specification" is scary, it's also understandably technical and dense.
-
-Or so I thought. In fact, the spec is written to be very readable and thorough! It details the semantic intent of HTML tags and attributes with scenarios and examples, in similar fashion to how I'd expect an article _summarizing_ the spec to be written.
-
-The mantra of "alt text is a _replacement_, not a description" is almost a direct quote from the spec:
+The principle of "alt text is a _replacement_, not a description" is almost a direct quote from the spec:
 
 <blockquote cite="https://html.spec.whatwg.org/multipage/images.html">
 
@@ -180,7 +178,7 @@ So this idea of treating alt text as a replacement is not a new way of thinking 
 
 <side-text warning>
 
-Admittedly, the spec is a bit advanced for beginners! My intent is to shatter the myth that the spec is reserved for experts. In WHATWG's own words, having a <q cite="https://html.spec.whatwg.org/multipage/introduction.html">passing familiarity with web technologies</q> can be enough.
+Admittedly, the spec is a bit advanced for beginners! My intent is to dispel the myth that the spec is reserved for experts. In WHATWG's own words, having a <q cite="https://html.spec.whatwg.org/multipage/introduction.html">passing familiarity with web technologies</q> can be enough.
 
 </side-text>
 
