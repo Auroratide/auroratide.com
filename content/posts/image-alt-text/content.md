@@ -68,6 +68,12 @@ Tourism to Purpiter is expected to take off within the next decade.
 
 Much better! In the absence of the image, the alt text leaves us with a decent mental illustration of what should have been there.
 
+<side-text>
+
+Iodine is actually safe for humans. Perhaps it's toxic to Jenna's species though!
+
+</side-text>
+
 ### Why does this matter?
 
 So, maybe it's rather rare for images to just be missing. That said, image alt text serves two very important audiences.
@@ -81,7 +87,7 @@ Earlier, I had mentioned **accessibility**. Websites are used by both people who
 
 In all cases, the hope is that the alt text is able to convey as much of the original image as needed. This is why I've started to think of it as a _replacement_, as its purpose is literally to replace the image under some circumstances.
 
-<side-text>
+<side-text success>
 
 I highly recommend experimenting with screen readers if you work in the web!
 
