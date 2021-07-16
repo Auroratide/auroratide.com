@@ -1,6 +1,6 @@
 For years, I had been writing the wrong alt text for my images.
 
-Those familiar with HTML and creating web content have probably used the `alt` attribute for the `img` tag. It's short for "alternate", letting creators specify a <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img">text description of the image</q> just in case the image doesn't load or can't be seen. 
+<abbr title="Hypertext Markup Language">HTML</abbr>, the language in which websites are written, allows developers to define **alt text** for images. It's short for "alternate", letting creators specify a <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img">text description of the image</q> just in case the image doesn't load or can't be seen. 
 
 Here's a pretty example:
 
