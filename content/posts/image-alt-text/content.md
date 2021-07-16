@@ -74,17 +74,18 @@ So, maybe it's rather rare for images to just be missing. That said, image alt t
 
 Earlier, I had mentioned **accessibility**. Websites are used by both people who can see and people who cannot; as developers, our goal is to make websites _accessible_ to all groups of people, regardless of ability.
 
-How would someone with vision impairment "see" a picture? **Screen readers** are assistive tools that can read the contents of a web page out loud; when it runs into an image, it will read that image's alt text.
+<icon-ul>
+    <icon-li icon="low-vision"><p>How would someone with vision impairment "see" a picture? <strong>Screen readers</strong> are assistive tools that can read the contents of a web page out loud; when it runs into an image, it will read that image's alt text.</p></icon-li>
+    <icon-li icon="mobile"><p>Additionally, for users with <strong>low internet bandwidth</strong>, a large image might take some time to download. As a result, the alt text may be shown in the meantime.</p></icon-li>
+</icon-ul>
+
+In all these cases, the hope is that the alt text is able to convey as much of the original image as needed. This is why I've started to think of it as a _replacement_, as its purpose is literally to replace the image under some circumstances.
 
 <side-text>
 
 I highly recommend experimenting with screen readers if you work in the web.
 
 </side-text>
-
-Additionally, for users with **low internet bandwidth**, a large image might take some time to download. As a result, the alt text may be shown in the meantime.
-
-In all these cases, the hope is that the alt text is able to convey as much of the original image as needed. This is why I've started to think of it as a _replacement_, as its purpose is literally to replace the image under some circumstances.
 
 ### The Secret Technique
 

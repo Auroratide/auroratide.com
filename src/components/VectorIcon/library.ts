@@ -32,6 +32,8 @@ import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
+import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
+import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
@@ -100,6 +102,8 @@ export const library = {
     [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,
     [IconName.LevelUpAlt]: faLevelUpAlt,
+    [IconName.LowVision]: faLowVision,
+    [IconName.Mobile]: faMobile,
     [IconName.Newspaper]: faNewspaper,
     [IconName.PaintBrush]: faPaintBrush,
     [IconName.Pause]: faPause,
