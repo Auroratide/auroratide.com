@@ -2,7 +2,7 @@ For years, I had been writing the wrong alt text for my images.
 
 Those familiar with HTML and creating web content have probably used the `alt` attribute for the `img` tag. It's short for "alternate", letting creators specify a <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img">text description of the image</q> just in case the image doesn't load or can't be seen. 
 
-Here's a possibly pretty example:
+Here's a pretty example:
 
 <article-image src="/assets/posts/image-alt-text/purpiter.png" alt="Purple and pink clouds swirl about a planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance." size="lg"></article-image>
 
@@ -10,7 +10,7 @@ What alt text should be used for this?
 
 I use to think something like "Alien World", or perhaps "A purple planet in space" were good; after all, they describe what the image is. However, after doing a deep dive into **accessibility** practices, I've come to learn that descriptions like these are not incredibly useful.
 
-So, what _does_ make for good and useful alternative text? There's a number of tips and antipatterns I've collected perusing the web, but actually I've found that a single, concise principle encompasses them all:
+So, what _does_ make for good and useful alternative text? There's a number of tips and antipatterns I've discovered perusing the web, but actually I've found that a single, concise principle encompasses them all:
 
 <major-point>
 
@@ -36,7 +36,7 @@ Tourism to Purpiter is expected to take off within the next decade.
 
 </blockquote>
 
-Happy with the article, Jenna decides to publish it to an online interplanetary tourism guide. But when submitting the article, something went wrong! Somehow, the image of Purpiter became corrupted while uploading, meaning it will not show up in the article. Oof.
+Happy with the article, Jenna decides to publish it to an online interplanetary tourism guide. But when submitting the article, something goes wrong! Somehow, the image of Purpiter is corrupted while uploading, meaning it will not show up in the article. Oof.
 
 Instead, the **alt text** will appear. Let's say she used the alt text from the intro, "Alien World". Here's how the article would appear:
 
@@ -52,9 +52,9 @@ Tourism to Purpiter is expected to take off within the next decade.
 
 That's not very useful, especially for a website about space tourism!
 
-Although the phrase "Alien World" in some sense _describes_ Purpiter, it does not adequately _replace_ the image in the article. Even "a purple planet in space", though more descriptive, does not get everything across we wanted by using an image.
+Although the phrase "Alien World" in some sense _describes_ Purpiter, it does not adequately _replace_ the image in the article. Even "a purple planet in space", though more descriptive, does not get everything across Jenna wanted by using an image.
 
-We want the alt text to serve as a **replacement**, so let's use it to convey the details of Purpiter that make it distinct and interesting.
+She wants the alt text to serve as a **replacement**, so she needs to use it to convey the details of Purpiter that make it distinct and interesting.
 
 <blockquote>
 
@@ -75,15 +75,15 @@ So, maybe it's rather rare for images to just be missing. That said, image alt t
 Earlier, I had mentioned **accessibility**. Websites are used by both people who can see and people who cannot; as developers, our goal is to make websites _accessible_ to all groups of people, regardless of ability.
 
 <icon-ul>
-    <icon-li icon="low-vision"><p>How would someone with vision impairment "see" a picture? <strong>Screen readers</strong> are assistive tools that can read the contents of a web page out loud; when it runs into an image, it will read that image's alt text.</p></icon-li>
+    <icon-li icon="low-vision"><p>How would someone with vision impairment "see" a picture? <strong>Screen readers</strong> are assistive tools that can read the contents of a web page out loud; when it encounters an image, it will read that image's alt text.</p></icon-li>
     <icon-li icon="mobile"><p>Additionally, for users with <strong>low internet bandwidth</strong>, a large image might take some time to download. As a result, the alt text may be shown in the meantime.</p></icon-li>
 </icon-ul>
 
-In all these cases, the hope is that the alt text is able to convey as much of the original image as needed. This is why I've started to think of it as a _replacement_, as its purpose is literally to replace the image under some circumstances.
+In all cases, the hope is that the alt text is able to convey as much of the original image as needed. This is why I've started to think of it as a _replacement_, as its purpose is literally to replace the image under some circumstances.
 
 <side-text>
 
-I highly recommend experimenting with screen readers if you work in the web.
+I highly recommend experimenting with screen readers if you work in the web!
 
 </side-text>
 
@@ -95,7 +95,7 @@ When you reach the image, **how would you describe it over the phone**?
 
 <icon-divider icon="phone" aria-hidden="true"></icon-divider>
 
-This thought experiment happens to be an incredibly useful technique for thinking about alt text. In a way, it's simulating what a screen reader would say.
+This thought experiment happens to be an incredibly useful technique for writing alt text. In a way, it's simulating what a screen reader would say.
 
 ## Intent is Important
 
@@ -108,9 +108,9 @@ Since alt text is a replacement, it's possible for the same image to have differ
 
 In an article about the artist's depiction of the planet, the focus is not necessarily on the fact that the planet is purple or has a blue ring. Hence, whilst the alt text from before is very descriptive, it wouldn't be a suitable _replacement_.
 
-<icon-divider icon="paint-brush"></icon-divider>
+The intent is different. It's probably more important to highlight how the picture was drawn so the reader understands what is actually being criticized.
 
-The intent is different. It's probably more important to bring up how the picture was drawn so the reader understands what is actually being criticized.
+<icon-divider icon="paint-brush"></icon-divider>
 
 Here's an example excerpt with the alt text in bold:
 
@@ -126,7 +126,7 @@ Because of the simplicity of the coloring, he fails to convey the swirling natur
 
 ### Decorative Images
 
-Sometimes, images serve more as a visual enhancement. That is, they provide user a break from the wordiness of a lengthy article but do not actually contribute to the article's content.
+Sometimes, images serve entirely as visual enhancement. That is, they provide a break from the wordiness of a lengthy article but do not actually contribute to the article's content.
 
 In this case, the image could be replaced with nothing without impacting the core information. And so, the right alt text to use is just an **empty string**, signaling the image is decorative.
 
