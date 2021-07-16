@@ -360,6 +360,12 @@
   force = false
 
 [[redirects]]
+  from = "/art/purpiter"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/art/sarina"
   to = "/index.html"
   status = 200
