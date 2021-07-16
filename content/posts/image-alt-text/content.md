@@ -92,7 +92,7 @@ Imagine for a moment that you are talking with a friend over the phone <small>(I
 
 When you reach the image, **how would you describe it over the phone**?
 
-<p style="text-align: center;" aria-hidden="true"><vector-icon icon="phone" style="font-size: 2em;"></vector-icon></p>
+<icon-divider icon="phone" aria-hidden="true"></icon-divider>
 
 This thought experiment happens to be an incredibly useful technique for thinking about alt text. In a way, it's simulating what a screen reader would say.
 
@@ -107,7 +107,7 @@ Since alt text is a replacement, it's possible for the same image to have differ
 
 In an article about the artist's depiction of the planet, the focus is not necessarily on the fact that the planet is purple or has a blue ring. Hence, whilst the alt text from before is very descriptive, it wouldn't be a suitable _replacement_.
 
-<p style="text-align: center;" aria-hidden="true"><vector-icon icon="paint-brush" style="font-size: 2em;"></vector-icon></p>
+<icon-divider icon="paint-brush"></icon-divider>
 
 The intent is different. It's probably more important to bring up how the picture was drawn so the reader understands what is actually being criticized.
 
@@ -153,7 +153,7 @@ So it turns out, I learned most of this by reading the [HTML specification](http
 
 The **specification** is essentially the HTML rulebook. Browsers implement the standards defined by the spec. In a sense, since it is the HTML rulebook and web developers work in HTML, it's also the web developer rulebook.
 
-<p style="text-align: center;" aria-hidden="true"><vector-icon icon="html5" style="font-size: 2em;"></vector-icon></p>
+<icon-divider icon="html5"></icon-divider>
 
 Despite that, I hadn't actually taken time to read it until recently in my career. Besides the notion that the word "specification" is scary, it's also understandably technical and dense.
 
