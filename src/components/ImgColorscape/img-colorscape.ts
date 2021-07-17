@@ -81,7 +81,7 @@ export default () => {
         }
 
         static get observedAttributes() {
-            return ['src', 'alt', 'colorscape']
+            return ['colorscape']
         }
 
         attributeChangedCallback() {
