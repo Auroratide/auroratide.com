@@ -67,6 +67,12 @@ export default () => {
             this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
         }
 
+        hide = () => {
+            this.imageImg.classList.add('hide')
+            this.colorscapeImg.classList.remove('hide')
+            this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
+        }
+
         reveal = (e: Event) => {
             this.imageImg.classList.remove('hide')
             this.colorscapeImg.classList.add('hide')
@@ -80,6 +86,7 @@ export default () => {
 
         attributeChangedCallback() {
             this.colorscapeImg.src = this.colorscape
+            this.hide()
         }
 
         get colorscape() { return this.getAttribute('colorscape') }
