@@ -18,6 +18,7 @@ export const Palette = {
         AellaGreen: asVar('aella-green'),
     },
     brands: {
+        Dev: asVar('dev'),
         Github: asVar('github'),
         ItchIo: asVar('itch-io'),
         LinkedIn: asVar('linked-in'),

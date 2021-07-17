@@ -57,6 +57,7 @@ export const IconName = {
     UserTie: 'user-tie',
 
     Android: 'android',
+    Dev: 'dev',
     ItchIo: 'itch-io',
     LinkedIn: 'linked-in',
     Github: 'github',

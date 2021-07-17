@@ -8,7 +8,7 @@ export type Social = {
     link: string,
 }
 
-export const socials: Record<'LinkedIn' | 'Github' | 'StackOverflow', Social> = {
+export const socials: Record<'LinkedIn' | 'Github' | 'StackOverflow' | 'Dev', Social> = {
     LinkedIn: {
         name: 'Linked In',
         icon: IconName.LinkedIn,
@@ -26,6 +26,12 @@ export const socials: Record<'LinkedIn' | 'Github' | 'StackOverflow', Social> = 
         icon: IconName.StackOverflow,
         color: Palette.brands.StackOverflow,
         link: 'https://stackoverflow.com/users/6163066/auroratide',
+    },
+    Dev: {
+        name: 'Dev',
+        icon: IconName.Dev,
+        color: Palette.brands.Dev,
+        link: 'https://dev.to/auroratide',
     },
 }
 

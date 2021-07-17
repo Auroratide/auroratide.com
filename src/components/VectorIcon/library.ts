@@ -57,6 +57,7 @@ import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
+import { faDev } from '@fortawesome/free-brands-svg-icons/faDev'
 import { faItchIo } from '@fortawesome/free-brands-svg-icons/faItchIo'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
@@ -127,6 +128,7 @@ export const library = {
     [IconName.UserTie]: faUserTie,
 
     [IconName.Android]: faAndroid,
+    [IconName.Dev]: faDev,
     [IconName.ItchIo]: faItchIo,
     [IconName.LinkedIn]: faLinkedinIn,
     [IconName.Github]: faGithub,
