@@ -1,10 +1,10 @@
-<header>
+<header aria-label="Site Header">
     <slot name="header"></slot>
 </header>
-<main>
+<main aria-label="Site Content">
     <slot></slot>
 </main>
-<footer>
+<footer aria-label="Site Footer">
     <slot name="footer"></slot>
 </footer>
 
