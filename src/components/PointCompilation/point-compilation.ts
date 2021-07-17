@@ -12,19 +12,17 @@ export default () => {
     const name = 'point-compilation'
 
     const html = `
-        <section class="point-compilation">
-            <header>
-                <h1 class="title"></h1>
-            </header>
+        <figure class="point-compilation">
+            <figcaption class="title"></figcaption>
             <div class="item-container">
-                <aside class="image">
+                <div class="image">
                     <slot name="image"></slot>
-                </aside>
+                </div>
                 <div class="items">
                     <slot name="items"></slot>
                 </div>
             </div>
-        </section>
+        </figure>
     `
 
     const css = `
@@ -36,29 +34,26 @@ export default () => {
 
         .point-compilation {
             position: relative;
+            padding-top: 0.667em;
+            margin: 0;
         }
     
         .point-compilation.show {
             display: block;
         }
     
-        header {
-            position: relative;
+        .title {
             box-sizing: border-box;
-            margin-bottom: -0.75em;
-            padding: 0 0.5em;
-            line-height: 1;
-            z-index: 2;
-        }
-    
-        header h1 {
-            font-size: 1.375em;
-            font-weight: normal;
-            margin: 0;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0.333em;
             padding: 0 0.25em;
             line-height: 1;
+            font-size: 1.375em;
+            font-weight: normal;
             background-color: var(--skin-color-content);
-            display: inline-block;
+            z-index: 2;
         }
     
         .item-container {
