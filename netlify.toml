@@ -234,6 +234,12 @@
   force = false
 
 [[redirects]]
+  from = "/portfolio/img-popout"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/portfolio/inews-network"
   to = "/index.html"
   status = 200

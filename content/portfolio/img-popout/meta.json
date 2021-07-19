@@ -1,0 +1,44 @@
+{
+    "id": "img-popout",
+    "title": "img-popout Web Component",
+    "category": "components",
+    "tags": ["web component", "custom element", "images", "dialog", "zoom"],
+    "icon": "search-plus",
+    "color": {
+        "type": "palette",
+        "value": "aurora-green"
+    },
+    "summary": "This is a web component that lets users zoom in on an image.",
+    "long_summary": "This is a web component that lets users zoom in on an image, built to be generic, customizable, and accessible. It's the first public component I made.",
+    "published_at": "2021-07-19T18:29:33.483Z",
+    "created_at": "2021-07-19T18:29:33.483Z",
+    "links": [ {
+        "title": "Install",
+        "href": "https://www.npmjs.com/package/@auroratide/img-popout",
+        "icon": "npm",
+        "color": {
+            "type": "palette",
+            "value": "npm"
+        }
+    }, {
+        "title": "Demo",
+        "href": "https://auroratide.github.io/img-popout",
+        "color": {
+            "type": "palette",
+            "value": "aurora-blue"
+        }
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/img-popout",
+        "icon": "github-alt",
+        "color": {
+            "type": "palette",
+            "value": "github"
+        }
+    } ],
+    "gallery": [ {
+        "image": "demo.webp",
+        "alt": "When the user clicks on an image, it grows to occupy most of the screen while darkening the content behind it. Clicking the image again shrinks it back where it was originally.",
+        "caption": "Animation of the component in practice"
+    } ]
+}

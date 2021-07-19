@@ -41,6 +41,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
+import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 import { faStamp } from '@fortawesome/free-solid-svg-icons/faStamp'
 import { faSuitcaseRolling } from '@fortawesome/free-solid-svg-icons/faSuitcaseRolling'
@@ -63,6 +64,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5'
+import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow'
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
 import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
@@ -112,6 +114,7 @@ export const library = {
     [IconName.Play]: faPlay,
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
+    [IconName.SearchPlus]: faSearchPlus,
     [IconName.Shower]: faShower,
     [IconName.Stamp]: faStamp,
     [IconName.SuitcaseRolling]: faSuitcaseRolling,
@@ -135,6 +138,7 @@ export const library = {
     [IconName.GithubAlt]: faGithubAlt,
     [IconName.Html5]: faHtml5,
     [IconName.Kafka]: kafka,
+    [IconName.Npm]: faNpm,
     [IconName.StackOverflow]: faStackOverflow,
     [IconName.Unity]: faUnity,
     [IconName.Windows]: faWindows,
