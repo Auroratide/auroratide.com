@@ -17,22 +17,22 @@
 
 <DocumentInfo title="Sandbox" description="A page for me to test things">
     <Container>
-        <FocusOnMe>
-            <Content>
+        <Content>
+            <FocusOnMe>
                 <h1>Sandbox</h1>
-                {#await content}
-                    <Loading large text="Fetching content..." />
-                {:then value}
-                    {#if loaded}
-                        <side-text success>Everything has loaded!</side-text>
-                    {:else}
-                        <Loading text="Waiting for page to fully load..." />
-                    {/if}
-                    <RawRenderer content={value.content} />
-                    <img src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="" on:load={load} />
-                {/await}
-            </Content>
-        </FocusOnMe>
+            </FocusOnMe>
+            {#await content}
+                <Loading large text="Fetching content..." />
+            {:then value}
+                {#if loaded}
+                    <side-text success>Everything has loaded!</side-text>
+                {:else}
+                    <Loading text="Waiting for page to fully load..." />
+                {/if}
+                <RawRenderer content={value.content} />
+                <img src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="" on:load={load} />
+            {/await}
+        </Content>
     </Container>
 </DocumentInfo>
 
