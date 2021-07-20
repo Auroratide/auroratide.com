@@ -1,6 +1,6 @@
 <script lang="ts">
     import { socials, navigation, external, NavVisibility } from '@/client/routes'
-    import { Container } from '@/client/Container'
+    import { Container } from '@/client/layout/Container'
 
     const currentYear = new Date().getUTCFullYear()
 </script>

@@ -3,9 +3,9 @@
     import type { PortfolioItem } from './pages/portfolio/types'
     import type { ArtItem } from './pages/art/types'
 
-    import { Page } from './Page'
-    import { Navigation } from './Navigation'
-    import { Footer } from './Footer'
+    import { Page } from './layout/Page'
+    import { Navigation } from './layout/Navigation'
+    import { Footer } from './layout/Footer'
 
     import { PostPage } from './pages/posts/PostPage'
     import { PostList } from './pages/posts/PostList'

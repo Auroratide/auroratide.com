@@ -2,8 +2,8 @@
     import type { ArtItem } from '../types'
     import type { Resource, Maybe } from '@/client/resources'
 
-    import { DocumentInfo } from '@/client/DocumentInfo'
-    import { Container } from '@/client/Container'
+    import { DocumentInfo } from '@/client/layout/DocumentInfo'
+    import { Container } from '@/client/layout/Container'
     import { RawRenderer } from '@/client/RawRenderer'
     import { Loading } from '@/client/Loading'
     import { PageNotFound } from '@/client/pages/PageNotFound'

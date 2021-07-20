@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Container } from '@/client/Container'
+    import { Container } from '@/client/layout/Container'
     import { FocusOnMe } from '@/client/FocusOnMe'
 
     export let title: string

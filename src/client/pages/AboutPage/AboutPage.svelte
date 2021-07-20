@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { DocumentInfo } from '@/client/DocumentInfo'
-    import { Container } from '@/client/Container'
-    import { Content } from '@/client/Content'
+    import { DocumentInfo } from '@/client/layout/DocumentInfo'
+    import { Container } from '@/client/layout/Container'
+    import { Content } from '@/client/layout/Content'
     import { FocusOnMe } from '@/client/FocusOnMe'
 
     import { navigation, UrlBuilder } from '@/client/routes'

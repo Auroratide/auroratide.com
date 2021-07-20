@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { DocumentInfo } from '@/client/DocumentInfo'
-    import { Container } from '@/client/Container'
+    import { DocumentInfo } from '@/client/layout/DocumentInfo'
+    import { Container } from '@/client/layout/Container'
     import { Loading } from '@/client/Loading'
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'

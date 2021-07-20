@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { DocumentInfo } from '@/client/DocumentInfo'
-    import { Container } from '@/client/Container'
+    import { DocumentInfo } from '@/client/layout/DocumentInfo'
+    import { Container } from '@/client/layout/Container'
     import { UrlBuilder, navigation } from '@/client/routes'
     import { FocusOnMe } from '@/client/FocusOnMe'
 </script>

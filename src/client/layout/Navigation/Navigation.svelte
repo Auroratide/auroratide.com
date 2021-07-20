@@ -2,7 +2,7 @@
     import { Palette } from '@/client/color'
     import { Avatar } from '@/client/Avatar'
     import { socials, navigation, NavVisibility } from '@/client/routes'
-    import { Container } from '@/client/Container'
+    import { Container } from '@/client/layout/Container'
 </script>
 
 <Container>
