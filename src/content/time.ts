@@ -5,5 +5,5 @@ export const time = async (name: string, action: () => Promise<void>) => {
     await action()
 
     const endTime = new Date().getTime()
-    console.log(`...done! Took ${(endTime - startTime) / 1000} seconds.`)
+    console.log(`...${name} done! Took ${(endTime - startTime) / 1000} seconds.`)
 }
