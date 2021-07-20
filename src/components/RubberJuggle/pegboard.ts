@@ -47,7 +47,8 @@ export class PegboardElement extends HTMLElement {
         for (let i = 0; i < this.width * this.height; ++i) {
             const img = document.createElement('img')
             img.src = `${this.assetpath}/hole.png`
-            img.alt = 'Hole'
+            img.alt = ''
+            img.setAttribute('aria-hidden', 'true')
             img.classList.add('hole')
             pegboard.appendChild(img)
         }

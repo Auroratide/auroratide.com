@@ -58,6 +58,8 @@ class BandElement extends PegboardEntity {
         host.style.top = `${100 / p.height * e.from.y + 50 / p.height - 2.5}%`
         host.style.left = `${100 / p.width * e.from.x + 50 / p.width}%`
         host.style.transform = `rotate(${angle}deg)`
+
+        this.shadowRoot.querySelector('.band').setAttribute('aria-label', `Band connecting Peg ${this.from} and Peg ${this.to}`)
     }
 
     endpoints(): {

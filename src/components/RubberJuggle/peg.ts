@@ -42,7 +42,9 @@ export class PegElement extends PegboardEntity {
         const host = this.shadowRoot.host as HTMLElement
 
         host.style.width = `calc(100% / ${this.pegboard.width})`
-        host.style.transform = `translate(calc(100% * ${this.x}), calc(100% * ${this.y}))`
+        host.style.transform = `translate(calc(100% * ${this.x}), calc(100% * ${this.y}))`;
+
+        (this.shadowRoot.querySelector('.peg') as HTMLImageElement).alt = `Peg ${this.label} at (${this.x}, ${this.y})`
     }
 
     get x() { return parseInt(this.getAttribute('x')) }
@@ -50,6 +52,9 @@ export class PegElement extends PegboardEntity {
 
     get y() { return parseInt(this.getAttribute('y')) }
     set y(value: number) { this.setAttribute('y', value.toString()) }
+
+    get label() { return this.getAttribute('label') }
+    set label(value: string) { this.setAttribute('label', value) }
 
     get assetpath() { return this.pegboard.assetpath }
 }
