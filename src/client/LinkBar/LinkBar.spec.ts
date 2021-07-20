@@ -1,13 +1,13 @@
 import { LinkBar } from '.'
-import { PortfolioForge } from '../../testing/PortfolioForge'
+import { LinkForge } from './testing/LinkForge'
 import { component } from '@/testing/component'
 
 describe('LinkBar', () => {
     test('rendering', () => {
-        const post = new PortfolioForge().create('id')
+        const link = new LinkForge().create()
 
         expect(() => component(LinkBar)
-            .prop('links', post.links)
+            .prop('links', [link])
             .render()
         ).not.toThrow()
     })

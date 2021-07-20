@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Link } from '../../types'
+    import type { Link } from './types'
     import * as color from '@/client/color'
 
     export let links: Link[]

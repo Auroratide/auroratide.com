@@ -15,7 +15,7 @@
     import { Header } from './Header'
     import { Comments } from './Comments'
     import { RelatedItems } from './RelatedItems'
-    import { LinkBar } from './LinkBar'
+    import { LinkBar } from '@/client/LinkBar'
     import { Gallery } from '@/client/Gallery'
 
     import * as color from '@/client/color'

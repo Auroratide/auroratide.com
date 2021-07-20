@@ -1,12 +1,6 @@
 import type { Color } from '@/client/color'
 import type { GalleryItem } from '@/client/Gallery'
-
-export type Link = {
-    readonly title: string
-    readonly href: string
-    readonly icon?: string
-    readonly color?: Color | string
-}
+import type { Link } from '@/client/LinkBar'
 
 export type PortfolioItem = {
     readonly id: string
