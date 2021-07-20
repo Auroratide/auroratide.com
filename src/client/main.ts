@@ -1,7 +1,7 @@
 import App from './App.svelte'
-import { posts } from './posts/store'
-import { portfolio } from './portfolio/store'
-import { art } from './art/store'
+import { posts } from './pages/posts/store'
+import { portfolio } from './pages/portfolio/store'
+import { art } from './pages/art/store'
 
 const app = new App({
     target: document.body,

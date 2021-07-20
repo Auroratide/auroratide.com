@@ -6,7 +6,7 @@
     import { RawRenderer } from '@/client/RawRenderer'
     import type { Resource, Maybe } from '@/client/resources'
     import { Pending, Missing } from '@/client/resources'
-    import { PageNotFound } from '@/client/PageNotFound'
+    import { PageNotFound } from '@/client/pages/PageNotFound'
     import { UrlBuilder } from '@/client/routes'
     import { FocusOnMe } from '@/client/FocusOnMe'
 

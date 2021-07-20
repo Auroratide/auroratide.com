@@ -6,7 +6,7 @@
     import { Container } from '@/client/Container'
     import { RawRenderer } from '@/client/RawRenderer'
     import { Loading } from '@/client/Loading'
-    import { PageNotFound } from '@/client/PageNotFound'
+    import { PageNotFound } from '@/client/pages/PageNotFound'
     import { Pending, Missing } from '@/client/resources'
     import { UrlBuilder } from '@/client/routes'
     import { ArtCoverLink } from '../ArtCoverLink'
