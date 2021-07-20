@@ -52,7 +52,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article" style="--article-color: {color.fromJson(item.color)};">
+            <article aria-label={item.title} class="article" style="--article-color: {color.fromJson(item.color)};">
                 <FocusOnMe>
                     <Header title={item.title} icon={item.icon} />
                 </FocusOnMe>
@@ -68,7 +68,7 @@
                             <Loading text="Fetching content..." />
                         {/if}
                     </section>
-                    <aside slot="sidebar">
+                    <aside aria-label="Related Article Material" slot="sidebar">
                         {#if item.gallery}
                             <h2 class="more-title">Some Pics</h2>
                             <Gallery root={new UrlBuilder().assets().post(item.id)} gallery={item.gallery} />

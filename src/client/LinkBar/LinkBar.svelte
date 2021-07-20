@@ -5,7 +5,7 @@
     export let links: Link[]
 </script>
 
-<aside class="link-bar">
+<aside aria-label="Related Article Links" class="link-bar">
     {#each links as link}
         <a class="as-button" href={link.href} style={link.color ? `--btn-color: ${color.fromJson(link.color)};` : ''}>
             <span>{link.title}</span>

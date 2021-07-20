@@ -11,7 +11,7 @@
 <DocumentInfo title="About" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         <FocusOnMe>
-            <article class="page">
+            <article aria-label="About" class="page">
                 <Content>
                     <hgroup>
                         <h1 class="greeting">Hi! I'm Timothy.</h1>

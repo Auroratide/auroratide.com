@@ -61,7 +61,7 @@
         {:else if item === Missing}
             <PageNotFound />
         {:else}
-            <article class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
+            <article aria-label={item.title} class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
                 <header>
                     <FocusOnMe>
                         <h1>{title}</h1>

@@ -10,7 +10,7 @@
 <DocumentInfo title="Styleguide" description="My color and branding standards.">
     <Container>
         <Content>
-            <article class="styleguide">
+            <article aria-label="Styleguide" class="styleguide">
                 <FocusOnMe><h1>Styleguide</h1></FocusOnMe>
                 <section class="palettes">
                     <Palette name="Aurora Blue">
