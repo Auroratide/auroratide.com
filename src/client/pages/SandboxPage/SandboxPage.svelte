@@ -6,6 +6,8 @@
     import { Loading } from '@/client/Loading'
     import { RawRenderer } from '@/client/RawRenderer'
 
+    export let fetch: (input: RequestInfo) => Promise<Response> = window.fetch
+
     let loaded = false
     function load() {
         loaded = true
