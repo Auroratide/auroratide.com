@@ -47,7 +47,7 @@ export type Navigation = {
     visibility: NavVisibility,
 }
 
-export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal' | 'Whodoku' | 'Styleguide', Navigation> = {
+export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal' | 'Whodoku' | 'Styleguide' | 'Sandbox', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',
@@ -81,6 +81,11 @@ export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal
     Styleguide: {
         name: 'Styleguide',
         link: '/styleguide',
+        visibility: NavVisibility.Hidden,
+    },
+    Sandbox: {
+        name: 'Sandbox',
+        link: '/sandbox',
         visibility: NavVisibility.Hidden,
     },
 }

@@ -18,6 +18,7 @@
     import { LegalPage } from './pages/LegalPage'
     import { WhodokuPage } from './pages/WhodokuPage'
     import { Styleguide } from './pages/Styleguide'
+    import { SandboxPage } from './pages/SandboxPage'
     import { PageNotFound } from './pages/PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
     import { navigation } from './routes'
@@ -62,6 +63,7 @@
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
     page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
     page(navigation.Styleguide.link, () => context = { component: Styleguide, params: {} })
+    page(navigation.Sandbox.link, () => context = { component: SandboxPage, params: {} })
     
     page('*', () => context = { component: PageNotFound, params: {} })
 
