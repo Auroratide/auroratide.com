@@ -53,6 +53,7 @@
         padding: var(--sizing-spacing-sm) calc(2 * var(--sizing-spacing-xl)) var(--sizing-spacing-sm) var(--sizing-spacing-sm);
         margin-bottom: var(--sizing-spacing-sm);
         background: var(--article-color);
+        text-align: left;
     }
 
     .article-card .title a::after {
