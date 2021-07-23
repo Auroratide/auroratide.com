@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0 (23 Jul 2021)
+
+* Accessibility overhaul, improving the accessibility of multiple website aspects including better link contrast, navigation within cards, and the creation of a statement
+* Bugfix for colorscape not changing on art pages when it should
+* `icon-ul`, `icon-li`, and `icon-divider` components for articles
+
 ## 2.2.2 (07 Jul 2021)
 
 * Replace `popout-img` with new `img-popout` component
