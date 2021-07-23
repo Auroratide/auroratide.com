@@ -16,6 +16,7 @@
 
     import { AboutPage } from './pages/AboutPage'
     import { LegalPage } from './pages/LegalPage'
+    import { AccessibilityPage } from './pages/AccessibilityPage';
     import { WhodokuPage } from './pages/WhodokuPage'
     import { Styleguide } from './pages/Styleguide'
     import { SandboxPage } from './pages/SandboxPage'
@@ -61,6 +62,7 @@
 
     page(navigation.About.link, () => context = { component: AboutPage, params: {} })
     page(navigation.Legal.link, () => context = { component: LegalPage, params: {} })
+    page(navigation.Accessibility.link, () => context = { component: AccessibilityPage, params: {} })
     page(navigation.Whodoku.link, () => context = { component: WhodokuPage, params: {} })
     page(navigation.Styleguide.link, () => context = { component: Styleguide, params: {} })
     page(navigation.Sandbox.link, () => context = { component: SandboxPage, params: {} })
