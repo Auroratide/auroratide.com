@@ -1,7 +1,7 @@
 <header aria-label="Site Header">
     <slot name="header"></slot>
 </header>
-<main aria-label="Site Content">
+<main id="main" tabindex="-1" aria-label="Site Content">
     <slot></slot>
 </main>
 <footer aria-label="Site Footer">

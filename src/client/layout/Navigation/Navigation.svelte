@@ -3,12 +3,18 @@
     import { Avatar } from '@/client/Avatar'
     import { socials, navigation, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/layout/Container'
+    import { SkipLink } from '../SkipLink'
 </script>
 
 <Container>
     <div class="top-bar">
-        <div class="logo"><a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a></div>
-        <div class="title"><h1><a href="/">Auroratide</a></h1></div>
+        <div class="logo">
+            <a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a>
+        </div>
+        <div class="title">
+            <SkipLink />
+            <h1><a href="/">Auroratide</a></h1>
+        </div>
         <div class="subtitle">Coder and Teacher</div>
         <div class="socials">
             <ul>
@@ -58,6 +64,7 @@
 
     .title {
         grid-area: title;
+        position: relative;
     }
 
     .title h1 {
