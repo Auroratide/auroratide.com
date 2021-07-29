@@ -18,6 +18,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
+import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons/faExpandArrowsAlt'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
 import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
@@ -91,6 +92,7 @@ export const library = {
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.EllipsisH]: faEllipsisH,
     [IconName.ExchangeAlt]: faExchangeAlt,
+    [IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
     [IconName.EyeDropper]: faEyeDropper,
     [IconName.Fingerprint]: faFingerprint,
     [IconName.Fire]: faFire,

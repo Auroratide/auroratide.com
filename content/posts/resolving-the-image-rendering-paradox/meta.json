@@ -1,0 +1,15 @@
+{
+    "id": "resolving-the-image-rendering-paradox",
+    "title": "Resolving the image-rendering Paradox",
+    "category": "software engineering",
+    "icon": "expand-arrows-alt",
+    "tags": ["webdev", "image-rendering", "css", "browsers", "firefox", "chrome", "paradox"],
+    "color": {
+        "type": "palette",
+        "value": "aurora-blue"
+    },
+    "summary": "",
+    "long_summary": "",
+    "published_at": "",
+    "created_at": "2021-07-29T18:59:48.521Z"
+}

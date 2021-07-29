@@ -18,6 +18,7 @@ export const IconName = {
     Crosshairs: 'crosshairs',
     EllipsisH: 'ellipsis-h',
     ExchangeAlt: 'exchange-alt',
+    ExpandArrowsAlt: 'expand-arrows-alt',
     EyeDropper: 'eye-dropper',
     Fingerprint: 'fingerprint',
     Fire: 'fire',

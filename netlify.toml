@@ -120,6 +120,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/resolving-the-image-rendering-paradox"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/shannons-maxim-and-steganography"
   to = "/index.html"
   status = 200
