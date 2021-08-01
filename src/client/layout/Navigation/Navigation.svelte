@@ -13,7 +13,7 @@
         </div>
         <div class="title">
             <SkipLink />
-            <h1><a href="/">Auroratide</a></h1>
+            <a class="page-title" href="/">Auroratide</a>
         </div>
         <div class="subtitle">Coder and Teacher</div>
         <div class="socials">
@@ -67,11 +67,9 @@
         position: relative;
     }
 
-    .title h1 {
-        font-size: var(--sizing-font-md);
-    }
-
     .title a {
+        font-size: var(--sizing-font-md);
+        line-height: var(--sizing-spacing-xl);
         color: var(--palette-greyscale-100);
     }
 
