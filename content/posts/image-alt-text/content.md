@@ -30,7 +30,7 @@ Here's an excerpt from her article:
 
 Purpiter is a gas giant planet in orbit around the star Rigel Ba. Although beautiful at first glance, its iodine atmosphere would be toxic to our biology!
 
-<article-image src="/assets/posts/image-alt-text/purpiter.png" alt="Purple and pink clouds swirl about the planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance." size="md"></article-image>
+<article-image nopopout src="/assets/posts/image-alt-text/purpiter.png" alt="Purple and pink clouds swirl about the planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance." size="md"></article-image>
 
 Tourism to Purpiter is expected to take off within the next decade.
 
@@ -142,7 +142,7 @@ In an article about exoplanets in general, the image of Purpiter might just be d
 
 Exoplanets are planets outside of the solar system. We know they exist because of subtle clues provided by the light of their host stars.
 
-<article-image src="/assets/posts/image-alt-text/purpiter.png" alt="" size="md"></article-image>
+<article-image nopopout src="/assets/posts/image-alt-text/purpiter.png" alt="" size="md"></article-image>
 
 Over time, we've learned that exoplanets are incredibly diverse in size, composition, and countless other ways.
 

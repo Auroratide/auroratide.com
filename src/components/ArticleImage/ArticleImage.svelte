@@ -7,12 +7,17 @@
     export let alt: string
     export let caption: string = null
     export let size: Size = Size.md
+    export let nopopout: (boolean | '') = false
 </script>
 
 <figure class="article-image {size}">
-    <img-popout>
+    {#if nopopout || nopopout === ''}
         <img {src} {alt} />
-    </img-popout>
+    {:else}
+        <img-popout>
+            <img {src} {alt} />
+        </img-popout>
+    {/if}
     {#if caption}
         <figcaption>{caption}</figcaption>
     {/if}
