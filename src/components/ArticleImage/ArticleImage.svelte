@@ -33,25 +33,25 @@
         margin: 0 0 1em;
     }
 
-    .article-image img:not([slot="popped-out"]) {
+    .article-image img {
         max-width: 100%;
         margin: 0 0 0.25em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
 
-    .article-image.sm img:not([slot="popped-out"]) {
+    .article-image.sm img {
         max-height: 5em;
     }
 
-    .article-image.md img:not([slot="popped-out"]) {
+    .article-image.md img {
         max-height: 10em;
     }
 
-    .article-image.lg img:not([slot="popped-out"]) {
+    .article-image.lg img {
         max-height: 15em;
     }
 
-    .article-image.fit img:not([slot="popped-out"]) {
+    .article-image.fit img {
         width: 100%;
     }
 
