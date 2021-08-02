@@ -8,7 +8,7 @@ describe('DateDisplay', () => {
             .prop('date', new Date('2021-01-08T00:00:00.000Z'))
             .render()
 
-        expect(screen.getByText('Friday, 08 Jan 2021')).toBeInTheDocument()
+        expect(screen.getByText('08 Jan 2021')).toBeInTheDocument()
     })
 
     test('invalid date', () => {
