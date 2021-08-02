@@ -17,5 +17,6 @@
 
     h2 {
         margin: 0 0 var(--sizing-spacing-xs) 0;
+        font-size: var(--sizing-font-sm);
     }
 </style>

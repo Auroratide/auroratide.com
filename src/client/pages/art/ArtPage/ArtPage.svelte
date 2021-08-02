@@ -74,7 +74,7 @@
                         </img-popout>
                     </img-colorscape>
                 </section>
-                <section class="content">
+                <section class="content content-typography">
                     <div class="published"><date-display date={item.publishedAt} /></div>
                     {#if item.content}
                         <RawRenderer content={item.content} />
@@ -215,6 +215,7 @@
 
     .more-title {
         text-transform: capitalize;
+        font-size: var(--sizing-font-md);
     }
 
     .comments {

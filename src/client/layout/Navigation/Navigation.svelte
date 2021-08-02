@@ -39,7 +39,7 @@
     .top-bar {
         display: grid;
         grid-template-columns: auto auto 1fr;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas: 
             "logo title subtitle"
             "logo nav nav";
@@ -64,17 +64,19 @@
 
     .title {
         grid-area: title;
+        align-self: center;
         position: relative;
     }
 
     .title a {
         font-size: var(--sizing-font-md);
-        line-height: var(--sizing-spacing-xl);
+        line-height: 1.25;
         color: var(--palette-greyscale-100);
     }
 
     .subtitle {
         grid-area: subtitle;
+        align-self: center;
         font-size: var(--sizing-font-sm);
         align-self: center;
         font-weight: var(--typography-light);
@@ -113,6 +115,7 @@
     .nav {
         grid-area: nav;
         font-size: var(--sizing-font-sm);
+        align-self: center;
     }
 
     .nav ul {
@@ -124,6 +127,7 @@
 
     .nav ul li {
         display: inline-block;
+        margin: 0;
     }
 
     .nav a {
@@ -135,17 +139,17 @@
     @media screen and (min-width: 75rem) {
         .top-bar {
             grid-template-columns: auto 1fr 1fr;
-            grid-template-rows: 1fr auto;
+            grid-template-rows: 1fr 1fr;
             grid-template-areas: 
                 "logo title socials"
                 "logo subtitle nav";
-            column-gap: 1.5em;
-            max-height: 5em;
+            column-gap: 1.625em;
+            max-height: 5.625em;
             overflow: visible;
         }
 
         .logo {
-            font-size: 6em;
+            font-size: 6.75em;
             align-self: start;
         }
 

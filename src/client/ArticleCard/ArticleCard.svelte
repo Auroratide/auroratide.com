@@ -15,7 +15,7 @@
     }
 </script>
 
-<article aria-label={article.title} class="article-card" style="--article-color: {color.fromJson(article.color)};">
+<article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section>
         <h2 class="title"><a href={link}>{article.title}</a></h2>
         <small class="byline">
@@ -95,7 +95,7 @@
         top: 0;
         right: 0;
         overflow: hidden;
-        font-size: calc(2.25 * var(--sizing-font-xs));
+        font-size: calc(2 * var(--sizing-font-xs));
     }
 
     .article-card .summary.long {

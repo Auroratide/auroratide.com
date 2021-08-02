@@ -19,14 +19,17 @@
 <style>
     .link-bar {
         position: absolute;
-        top: calc(var(--header-height) - 0.75em);
+        top: var(--header-height);
         left: 0;
         right: 0;
         text-align: center;
     }
 
     .link-bar a {
+        position: relative;
         margin: 0 var(--sizing-spacing-sm);
+        font-size: calc(1.125 * var(--sizing-font-xs));
+        top: -0.75em;
     }
 
     .link-bar a vector-icon {

@@ -1,5 +1,7 @@
 <div class="content" class:has-sidebar={$$slots.sidebar}>
-    <slot></slot>
+    <div class="content-typography">
+        <slot></slot>
+    </div>
     <slot name="sidebar"></slot>
     <slot name="after"></slot>
 </div>

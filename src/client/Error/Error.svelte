@@ -12,7 +12,7 @@
             <h1>{title}</h1>
         </FocusOnMe>
         <h2>{subtitle}</h2>
-        <div class="content">
+        <div class="content content-typography">
             <slot></slot>
         </div>
     </div>

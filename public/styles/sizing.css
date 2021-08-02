@@ -17,8 +17,8 @@
     --sizing-border-lg: 0.5rem;
     --sizing-border-xl: 1rem;
 
-    --sizing-font-xs: 0.875em;
-    --sizing-font-sm: 1em;
+    --sizing-font-xs: 1em;
+    --sizing-font-sm: 1.125em;
     --sizing-font-md: 1.25em;
     --sizing-font-lg: 1.5em;
     --sizing-font-xl: 2em;
@@ -26,10 +26,10 @@
 
 @media screen and (min-width: 75rem) {
     :root {
-        --sizing-font-xs: 0.875em;
-        --sizing-font-sm: 1.125em;
-        --sizing-font-md: 1.375em;
-        --sizing-font-lg: 1.875em;
-        --sizing-font-xl: 2.5em;
+        --sizing-font-xs: 1em;
+        --sizing-font-sm: 1.25em;
+        --sizing-font-md: 1.625em;
+        --sizing-font-lg: 2em;
+        --sizing-font-xl: 2.75em;
     }
 }

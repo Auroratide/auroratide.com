@@ -52,14 +52,15 @@
     }
 
     .socials a {
+        --width: 2.375em;
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--skin-color-text-secondary);
         border: 0 solid var(--skin-color-bg-secondary);
-        width: 2.25em;
-        height: 2.25em;
-        border-radius: 1.125em;
+        width: var(--width);
+        height: var(--width);
+        border-radius: calc(var(--width) / 2);
         transition: border-width var(--transition-quick);
     }
 
@@ -94,7 +95,7 @@
 
     .license, .source {
         display: block;
-        font-size: 87.5%;
+        font-size: var(--sizing-font-xs);
         font-weight: var(--typography-light);
     }
 

@@ -30,7 +30,7 @@
 
     .article-image {
         text-align: center;
-        margin: 0 0 1em;
+        margin: 0 0 1.5em;
     }
 
     .article-image img {
@@ -57,7 +57,6 @@
 
     .article-image figcaption {
         font-weight: 300;
-        font-size: 87.5%;
         opacity: 0.75;
     }
 </style>

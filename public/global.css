@@ -14,8 +14,20 @@ html {
     overflow-y: scroll; /* So scrollbar is always there */
 }
 
-body {
+.content-typography p,
+.content-typography li,
+.content-typography button,
+.content-typography .as-button {
     font-size: var(--sizing-font-sm);
+}
+
+.content-typography p li {
+    font-size: 1em;
+}
+
+.content-typography p code,
+.content-typography li code {
+    font-size: 0.875em;
 }
 
 /* Headings
@@ -24,8 +36,9 @@ h1 { font-size: var(--sizing-font-xl); }
 h2, h3, h4, h5, h6 {
     font-weight: var(--typography-bold);
 }
-h2 { font-size: var(--sizing-font-md); }
-h3, h4 { font-size: var(--sizing-font-sm); }
+h2 { font-size: var(--sizing-font-lg); }
+h3 { font-size: var(--sizing-font-md); }
+h4 { font-size: var(--sizing-font-sm); }
 h5, h6 { font-size: var(--sizing-font-xs); }
 h4, h5, h6 { font-style: italic; }
 h1, h2, h3, h4, h5, h6 {
