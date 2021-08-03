@@ -1,3 +1,37 @@
+Imagine for a moment that you are eating some delicious soup with large, hearty potato chunks. However, you only get to use one utensil! You can use a fork to eat up the potatoes, but then you'd miss out on the delicious broth. Or, you can use a spoon to sip the soup, but that makes it harder to eat the potatoes.
+
+Turns out, there's a <abbr title="Cascading Style Sheets">CSS</abbr> property called `image-rendering` with a rather similar conundrum!
+
+[Can I Use](https://caniuse.com/) is an incredibly nifty website that lets web developers see what things different browsers support. Waddle on over to [the compatibility of image-rendering](https://caniuse.com/css-crisp-edges) and we see the following weirdness:
+
+TODO CANIUSE SCREENSHOTS
+
+That's right! Chrome supports `pixelated` but not `crisp-edges`, and Firefox supports `crisp-edges` but not `pixelated`.
+
+-------------------
+
+
+
+some kind of illustration or metaphor of a tool that can do one thing but not the other, and a different tool that does the opposite, and then like ok what would you do? -> this'll set the stage for the KIND of paradox
+
+then, explain that image-rendering has a similar issue
+
+
+
+[Can I Use](https://caniuse.com/) is an incrediby nifty website for web developers.
+
+* Can I Use, and why it's cool beans
+* the page for image-rendering has a weird thing
+* image of thing
+* text description of paradox
+* 
+
+
+
+
+
+-----------------
+
 CSS offers a nifty property called `image-rendering` which lets you influence how images scale. Normally, when you take a small image and make it bigger, the image becomes blurry. That's kinda ok for photos, but for pixelart, the effect is... rather devastating.
 
 TODO IMAGE OF UPSCALED LEA I GUESS, ANIMATED BECAUSE WHY NOT
