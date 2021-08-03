@@ -30,14 +30,6 @@ html {
     font-size: 0.875em;
 }
 
-.content-typography h2 {
-    line-height: 1;
-    padding-top: var(--sizing-spacing-sm);
-    padding-bottom: var(--sizing-spacing-xs);
-    margin-bottom: var(--sizing-spacing-sm);
-    border-bottom: var(--sizing-border-xs) solid var(--skin-color-bg);
-}
-
 /* Headings
    ========================================================================== */
 h1 { font-size: var(--sizing-font-xl); }

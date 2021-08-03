@@ -15,7 +15,7 @@
     }
 </script>
 
-<article aria-label={article.title} class="article-card" style="--article-color: {color.fromJson(article.color)};">
+<article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section>
         <h2 class="title"><a href={link}>{article.title}</a></h2>
         <small class="byline">
@@ -23,10 +23,8 @@
             <span class="bullet" aria-hidden="true">&bull;</span>
             <span class="category">{article.category}</span>
         </small>
-        <div class="content-typography">
-            <p class="summary short">{article.summary}</p>
-            <p class="summary long">{article.longSummary}</p>
-        </div>
+        <p class="summary short">{article.summary}</p>
+        <p class="summary long">{article.longSummary}</p>
     </section>
     <aside>
         <div class="circle">

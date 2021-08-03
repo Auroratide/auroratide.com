@@ -42,7 +42,6 @@
     .tagline {
         line-height: 1.25;
         margin-bottom: var(--sizing-spacing-md);
-        border: none;
         font-size: var(--sizing-font-md);
     }
     
