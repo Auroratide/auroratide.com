@@ -17,7 +17,8 @@ html {
 .content-typography p,
 .content-typography li,
 .content-typography button,
-.content-typography .as-button {
+.content-typography .as-button,
+.content-typography dl {
     font-size: var(--sizing-font-sm);
 }
 
@@ -105,6 +106,19 @@ hr {
 
 ul, ol, icon-ul {
     padding-left: 1em;
+}
+
+dt {
+    font-weight: var(--typography-bold);
+    background: rgba(var(--skin-rgb-bg), 0.5);
+    padding: var(--sizing-spacing-xs);
+}
+
+dd {
+    padding: var(--sizing-spacing-xs);
+    margin-left: 0;
+    margin-bottom: var(--sizing-spacing-p);
+    font-weight: var(--typography-light);
 }
 
 /* Buttons
