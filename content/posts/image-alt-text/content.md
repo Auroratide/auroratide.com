@@ -4,7 +4,7 @@ For years, I had been writing the wrong alt text for my images.
 
 Here's a pretty example:
 
-<article-image src="/assets/posts/image-alt-text/purpiter.png" alt="Purple and pink clouds swirl about a planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance." size="lg"></article-image>
+<article-image src="/assets/posts/image-alt-text/purpiter.png" alt="Purple clouds swirl about a planet, twisting into three red storms. Its icy ring reflects light from a star in the distance." size="lg"></article-image>
 
 What alt text should be used for this?
 
@@ -30,7 +30,7 @@ Here's an excerpt from her article:
 
 Purpiter is a gas giant planet in orbit around the star Rigel Ba. Although beautiful at first glance, its iodine atmosphere would be toxic to our biology!
 
-<article-image nopopout src="/assets/posts/image-alt-text/purpiter.png" alt="Purple and pink clouds swirl about the planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance." size="md"></article-image>
+<article-image nopopout src="/assets/posts/image-alt-text/purpiter.png" alt="Purple clouds swirl about the planet, twisting into three red storms. Its icy ring reflects light from a star in the distance." size="md"></article-image>
 
 Tourism to Purpiter is expected to take off within the next decade.
 
@@ -60,7 +60,7 @@ She wants the alt text to serve as a **replacement**, so she needs to use it to 
 
 Purpiter is a gas giant planet in orbit around the star Rigel Ba. Although beautiful at first glance, its iodine atmosphere would be toxic to our biology!
 
-**Purple and pink clouds swirl about the planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance.**
+**Purple clouds swirl about a planet, twisting into three red storms. Its icy ring reflects light from a star in the distance.**
 
 Tourism to Purpiter is expected to take off within the next decade.
 
@@ -158,7 +158,7 @@ Empty alt text is different from **no** alt text! You should always define alt t
 
 So it turns out, I learned most of this by reading the [HTML Living Standard](https://html.spec.whatwg.org/multipage/images.html#alt), a specification provided by <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr>.
 
-The **specification** is essentially the HTML rulebook. Browsers implement the standards defined by the spec. In a sense, since it is the HTML rulebook and web developers work in HTML, it's also the web developer rulebook. Despite that, I hadn't actually taken time to read it until recently in my career. Besides the notion that the word "specification" is scary, the document is also understandably technical and dense.
+The **specification** is essentially the HTML guidebook, which effectively means it's also the web developer guidebook. Despite that, I hadn't actually taken time to read it until recently in my career. Besides the notion that the word "specification" is scary, the document is also understandably technical and dense.
 
 _Or so I thought_. In fact, the spec is written to be very readable and thorough! It details the semantic intent of HTML tags and attributes with scenarios and examples, in similar fashion to how I'd expect an article _summarizing_ the spec to be written.
 
@@ -206,3 +206,20 @@ Although I covered what that means at a high level, there are more detailed ques
 This and more is covered directly by the HTML specification! It devotes no less than 15 subsections to image alt text, and while that may be intimidating, it also goes to show how important writing the right text is.
 
 My recommendation for learning more is to read the **[HTML Spec on Image Alt Text](https://html.spec.whatwg.org/multipage/images.html#alt)**. For supplementary material, [MDN's article on alt](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt) is pretty good as well.
+
+## Addendum: On Length
+
+I had received feedback that my original alt text examples were a bit lengthy. Indeed, it is important that the text be very concise! A picture may be worth 1000 words, but don't _actually_ use 1000 words to describe your picture.
+
+Tools exist for when a lengthier description is needed, such as the [figure HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) and [aria-labelledby property](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute). Notably, both of these expose the description to _everyone_, hinting that if your description is long enough to merit these tools, then it's probably important context for all readers, sighted and non-sighted.
+
+Here's a before-and-after of my example alt text to illustrate brevity without losing meaning:
+
+<dl>
+  <dt>Before:</dt>
+  <dd>Purple and pink clouds swirl about the planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance.</dd>
+  <dt>After:</dt>
+  <dd>Purple clouds swirl about a planet, twisting into three red storms. Its icy ring reflects light from a star in the distance.</dd>
+</dl>
+
+[WebAIM's article on alternative text](https://webaim.org/techniques/alttext/) goes into multiple examples on writing concise descriptions. Well worth a read!
