@@ -45,6 +45,7 @@ export const IconName = {
     ProjectDiagram: 'project-diagram',
     SearchPlus: 'search-plus',
     Shower: 'shower',
+    SquareFull: 'square-full',
     Stamp: 'stamp',
     SuitcaseRolling: 'suitcase-rolling',
     Sun: 'sun',
