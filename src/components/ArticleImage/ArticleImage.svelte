@@ -18,8 +18,8 @@
             <img {src} {alt} />
         </img-popout>
     {/if}
-    {#if caption}
-        <figcaption>{caption}</figcaption>
+    {#if caption || $$slots.caption}
+        <figcaption>{caption || ''}<slot name="caption"></slot></figcaption>
     {/if}
 </figure>
 
