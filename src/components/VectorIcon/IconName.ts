@@ -16,6 +16,7 @@ export const IconName = {
     ChessRook: 'chess-rook',
     Code: 'code',
     Crosshairs: 'crosshairs',
+    Css3Alt: 'css3-alt',
     EllipsisH: 'ellipsis-h',
     ExchangeAlt: 'exchange-alt',
     ExpandArrowsAlt: 'expand-arrows-alt',

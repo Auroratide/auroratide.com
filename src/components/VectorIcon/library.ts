@@ -59,6 +59,7 @@ import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
+import { faCss3Alt } from '@fortawesome/free-brands-svg-icons/faCss3Alt'
 import { faDev } from '@fortawesome/free-brands-svg-icons/faDev'
 import { faItchIo } from '@fortawesome/free-brands-svg-icons/faItchIo'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn'
@@ -90,6 +91,7 @@ export const library = {
     [IconName.ChessRook]: faChessRook,
     [IconName.Code]: faCode,
     [IconName.Crosshairs]: faCrosshairs,
+    [IconName.Css3Alt]: faCss3Alt,
     [IconName.EllipsisH]: faEllipsisH,
     [IconName.ExchangeAlt]: faExchangeAlt,
     [IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
