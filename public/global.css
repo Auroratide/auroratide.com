@@ -146,6 +146,18 @@ dt.info {
     background: rgba(var(--skin-rgb-info), 0.25);
 }
 
+dt.warning {
+    background: rgba(var(--skin-rgb-warning), 0.25);
+}
+
+dt.danger {
+    background: rgba(var(--skin-rgb-danger), 0.25);
+}
+
+dt.success {
+    background: rgba(var(--skin-rgb-success), 0.25);
+}
+
 summary {
     cursor: pointer;
     margin: 0;
