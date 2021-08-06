@@ -3,11 +3,11 @@
     export let description: string = ''
 
     let addedPart: string
-    $: addedPart = title ? ` - ${title}` : ''
+    $: addedPart = title ? `${title} | ` : ''
 </script>
 
 <svelte:head>
-    <title>Auroratide{addedPart}</title>
+    <title>{addedPart}Auroratide</title>
     {#if description}
         <meta name="description" content={description} />
     {/if}
