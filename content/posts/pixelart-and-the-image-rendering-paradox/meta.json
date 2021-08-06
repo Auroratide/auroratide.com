@@ -1,9 +1,9 @@
 {
-    "id": "resolving-the-image-rendering-paradox",
-    "title": "Resolving the image-rendering Paradox",
+    "id": "pixelart-and-the-image-rendering-paradox",
+    "title": "Pixelart and the image-rendering Paradox",
     "category": "software engineering",
     "icon": "expand-arrows-alt",
-    "tags": ["webdev", "image-rendering", "css", "browsers", "firefox", "chrome", "paradox"],
+    "tags": ["pixelart", "webdev", "image-rendering", "css", "browsers", "firefox", "chrome", "paradox"],
     "color": {
         "type": "palette",
         "value": "aurora-blue"

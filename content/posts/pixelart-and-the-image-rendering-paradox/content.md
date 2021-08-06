@@ -17,7 +17,7 @@
 
 <abbr title="Cascading Style Sheets">CSS</abbr> offers a nifty property called `image-rendering` which lets you influence how images scale. Normally, when you take a small image and make it bigger, the image becomes blurry. That's kinda ok for photos, but for pixelart, the effect is... rather devastating.
 
-<article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/lea-blurred.png" alt="A pixelart blue-haired character is upscaled into a fuzzy mess." size="lg">
+<article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/lea-blurred.png" alt="A pixelart blue-haired character is upscaled into a fuzzy mess." size="lg">
   <span slot="caption"><strong>Credit:</strong> Lea, a character from the game <a href="http://cross-code.com">Cross Code</a></span>
 </article-image>
 
@@ -53,8 +53,8 @@ _Except, wait just a second._ Why on earth does the above example CSS specify `i
 It turns out there's a bit of a **paradox** in the browser support for `image-rendering`. Waddle on over to [Can I Use](https://caniuse.com/css-crisp-edges) and we see the following weirdness.
 
 <figure>
-  <img src="/assets/posts/resolving-the-image-rendering-paradox/chrome-support.png" alt="Chrome supports the pixelated value, but not crisp-edges." />
-  <img src="/assets/posts/resolving-the-image-rendering-paradox/firefox-support.png" alt="Firefox supports the crisp-edges value, but not pixelated." />
+  <img src="/assets/posts/pixelart-and-the-image-rendering-paradox/chrome-support.png" alt="Chrome supports the pixelated value, but not crisp-edges." />
+  <img src="/assets/posts/pixelart-and-the-image-rendering-paradox/firefox-support.png" alt="Firefox supports the crisp-edges value, but not pixelated." />
   <figcaption>Chrome and Firefox notate that they support opposite properties</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ That's right! Chrome supports `pixelated` but not `crisp-edges`, and Firefox sup
 
 What I learned, though, is that resolving this paradox is **not** as simple as "just specify both properties", because the properties have different _semantics_. That is, even though `crisp-edges` and `pixelated` accomplish the same _result_, they _mean_ different things.
 
-![](/assets/posts/resolving-the-image-rendering-paradox/lea-shocked.png)
+![](/assets/posts/pixelart-and-the-image-rendering-paradox/lea-shocked.png)
 
 To resolve this, we'll need to embark on a mystical journey through different versions of the specification, discussions on implementations, and—
 
@@ -93,7 +93,7 @@ In fact, despite this property having first appeared in 2012, just a few months 
 
 As a result, the property has only ever been implemented to different degrees, with Firefox and Chrome having taken different routes. And since the spec is still under discussion, no one has a complete implementation.
 
-![](/assets/posts/resolving-the-image-rendering-paradox/lea-pensive.png)
+![](/assets/posts/pixelart-and-the-image-rendering-paradox/lea-pensive.png)
 
 In the end, Firefox developed `crisp-edges` because it already supported the non-standard property `-moz-crisp-edges` which represents the nearest neighbor algorithm. Chrome had implemented `pixelated` because, at the time in 2014, the spec for `pixelated` was more straightforward.
 
@@ -118,7 +118,7 @@ The image-rendering property provides a hint to the user-agent about **what aspe
 
 When an image is scaled, the computer either has to fill in missing details when scaled up or choose what to collapse when scaled down. That can be tricky, kinda like doubling a cooking recipe but realizing you don't have enough ingredients. And so, there's no single correct strategy for scaling images, leading to a diversity of **scaling algorithms** meant to do the job.
 
-<article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/lea-resized.png" alt="Lea is doubled in size, but the gaps in the large image are not filled in." caption="Scaling algorithms fill in the gaps."></article-image>
+<article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/lea-resized.png" alt="Lea is doubled in size, but the gaps in the large image are not filled in." caption="Scaling algorithms fill in the gaps."></article-image>
 
 That said, notice that the spec does _not_ say that the purpose of `image-rendering` is to choose a scaling algorithm. Rather, the goal is to specify <q cite="https://www.w3.org/TR/2020/CRD-css-images-3-20201217/">what aspects of an image are most important to preserve</q>. For example, when we scale an image, do we care more about the way colors blend, or about keeping the edges sharp? Depending on the answer, one algorithm may be better than another.
 
@@ -155,20 +155,20 @@ For `pixelated`, nearest neighbor is used to take the image to the nearest integ
 </details>
 </side-text>
 
-<article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/face-base.png" alt="A close-up of Lea's pixelart." caption="The original image for reference"></article-image>
+<article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/face-base.png" alt="A close-up of Lea's pixelart." caption="The original image for reference"></article-image>
 
 <dl class="image-array">
   <div class="image-array-item">
     <dt>pixelated</dt>
-    <dd><img src="/assets/posts/resolving-the-image-rendering-paradox/face-pixelated.png" alt="Some of the boundaries between pixels are slightly blurred." /></dd>
+    <dd><img src="/assets/posts/pixelart-and-the-image-rendering-paradox/face-pixelated.png" alt="Some of the boundaries between pixels are slightly blurred." /></dd>
   </div>
   <div class="image-array-item">
     <dt>crisp-edges</dt>
-    <dd><img src="/assets/posts/resolving-the-image-rendering-paradox/face-crisp-edges.png" alt="Pixels are of different sizes, and the boundaries between them are not blurred." /></dd>
+    <dd><img src="/assets/posts/pixelart-and-the-image-rendering-paradox/face-crisp-edges.png" alt="Pixels are of different sizes, and the boundaries between them are not blurred." /></dd>
   </div>
   <div class="image-array-item">
     <dt>auto</dt>
-    <dd><img src="/assets/posts/resolving-the-image-rendering-paradox/face-auto.png" alt="The entire image is blurry." /></dd>
+    <dd><img src="/assets/posts/pixelart-and-the-image-rendering-paradox/face-auto.png" alt="The entire image is blurry." /></dd>
   </div>
 </dl>
 
@@ -291,8 +291,8 @@ This change was introduced in order to better fit the semantics of `pixelated`. 
 Perhaps more interesting, however, is the change to `crisp-edges`. Although the semantic definition of the value is unchanged, the provided example is dramatically different. Both images below represent the same source image being upscaled several times, but are from different versions of the spec.
 
 <horizontal-flex>
-  <article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/spec-old.png" alt="The lines bounding various shapes are noticably smooth." caption="Before the change"></article-image>
-  <article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/spec-new.png" alt="The shapes have pixelated artifacting." caption="After the change"></article-image>
+  <article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/spec-old.png" alt="The lines bounding various shapes are noticably smooth." caption="Before the change"></article-image>
+  <article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/spec-new.png" alt="The shapes have pixelated artifacting." caption="After the change"></article-image>
 </horizontal-flex>
 
 Long story short, this property has been and presently is a point of discussion.

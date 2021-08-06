@@ -120,7 +120,7 @@
   force = false
 
 [[redirects]]
-  from = "/posts/resolving-the-image-rendering-paradox"
+  from = "/posts/pixelart-and-the-image-rendering-paradox"
   to = "/index.html"
   status = 200
   force = false
