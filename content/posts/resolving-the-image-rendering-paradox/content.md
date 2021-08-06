@@ -38,7 +38,7 @@ However, thanks to `image-rendering`, it's possible to upscale images in a way t
 }
 ```
 
-<iframe height="350" scrolling="no" title="image-rendering Example" src="https://codepen.io/auroratide/embed/RwVywNK?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="350" title="Codepen: image-rendering Example" src="https://codepen.io/auroratide/embed/RwVywNK?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/auroratide/pen/RwVywNK">
   image-rendering Example</a> by Timothy Foster (<a href="https://codepen.io/auroratide">@auroratide</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -52,7 +52,11 @@ _Except, wait just a second._ Why on earth does the above example CSS specify `i
 
 It turns out there's a bit of a **paradox** in the browser support for `image-rendering`. Waddle on over to [Can I Use](https://caniuse.com/css-crisp-edges) and we see the following weirdness.
 
-<article-image src="/assets/posts/resolving-the-image-rendering-paradox/firefox-chrome-support.png" alt="Firefox and Chrome notate that they support opposite properties." size="lg"></article-image>
+<figure>
+  <img src="/assets/posts/resolving-the-image-rendering-paradox/chrome-support.png" alt="Chrome supports the pixelated value, but not crisp-edges." />
+  <img src="/assets/posts/resolving-the-image-rendering-paradox/firefox-support.png" alt="Firefox supports the crisp-edges value, but not pixelated." />
+  <figcaption>Chrome and Firefox notate that they support opposite properties</figcaption>
+</figure>
 
 That's right! Chrome supports `pixelated` but not `crisp-edges`, and Firefox supports `crisp-edges` but not `pixelated`. In order to support both browsers, both values had to be specified in the example above, utilizing the fact of CSS that if one value is invalid then the other will be used.
 
@@ -91,16 +95,16 @@ As a result, the property has only ever been implemented to different degrees, w
 
 ![](/assets/posts/resolving-the-image-rendering-paradox/lea-pensive.png)
 
-In the end, Firefox implemented `crisp-edges` because it already supported the non-standard property `-moz-crisp-edges` which implements the nearest neighbor algorithm. Chrome had implemented `pixelated` because, at the time in 2014, the spec for `pixelated` was more straightforward.
+In the end, Firefox developed `crisp-edges` because it already supported the non-standard property `-moz-crisp-edges` which represents the nearest neighbor algorithm. Chrome had implemented `pixelated` because, at the time in 2014, the spec for `pixelated` was more straightforward.
 
-There's more I could cover, but I decided to make them "extra content".
+If you want to learn more about the history, I've got some extra bits at the end of the article!
 
 * [Timeline of image-rendering](#timeline-of-image-rendering)
 * [What changed in February 2021?](#what-changed-in-february-2021)
 
 ## Pixelated or Crisp Edges?
 
-To grasp the `pixelated` and `crisp-edges` values, it's important to understand, semantically, the purpose of the `image-rendering` property. 
+To grasp the `pixelated` and `crisp-edges` values, it's important to understand the purpose of the `image-rendering` property. 
 
 ### The Semantics of image-rendering
 
@@ -114,7 +118,7 @@ The image-rendering property provides a hint to the user-agent about **what aspe
 
 When an image is scaled, the computer either has to fill in missing details when scaled up or choose what to collapse when scaled down. That can be tricky, kinda like doubling a cooking recipe but realizing you don't have enough ingredients. And so, there's no single correct strategy for scaling images, leading to a diversity of **scaling algorithms** meant to do the job.
 
-<article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/lea-resized.png" alt="Lea is doubled in size, but the gaps in the large image are not filled in." caption="Scaling algorithms essentially fill in the gaps."></article-image>
+<article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/lea-resized.png" alt="Lea is doubled in size, but the gaps in the large image are not filled in." caption="Scaling algorithms fill in the gaps."></article-image>
 
 That said, notice that the spec does _not_ say that the purpose of `image-rendering` is to choose a scaling algorithm. Rather, the goal is to specify <q cite="https://www.w3.org/TR/2020/CRD-css-images-3-20201217/">what aspects of an image are most important to preserve</q>. For example, when we scale an image, do we care more about the way colors blend, or about keeping the edges sharp? Depending on the answer, one algorithm may be better than another.
 
@@ -168,15 +172,15 @@ For `pixelated`, nearest neighbor is used to take the image to the nearest integ
   </div>
 </dl>
 
-Because the image is scaled by a non-integer, the resulting "pixels" cannot all be the same size. Therefore, a compromise must be made, and the different rendering values make different compromises as a result of their semantics.
+Because the image is scaled by a non-integer, the resulting enlarged "pixels" cannot all be the same size. Therefore, a compromise must be made, and the different rendering values make different compromises as a result of their semantics.
 
-* For `pixelated`, pixels must be square, and the only way to preserve that property is to allow pixels to overlap. The blurring on pixel boundaries represent places where pixels are overlapping.
-* For `crisp-edges`, blurring is not allowed since the contrast between colors is most important. Resizing a pixelart image, therefore, results in "pixels" that are not square, which distorts the pixelation aesthetic.
+* For `pixelated`, pixels must be square, and the only way to preserve that property is to allow the enlarged pixels to overlap. The blurring on cell boundaries represent places where pixels are overlapping.
+* For `crisp-edges`, blurring is not allowed since the contrast between colors is most important. Resizing a pixelart image, therefore, results in cells that are not square, which distorts the pixelation aesthetic.
 * And `auto`, the browser default and included here mostly for reference, treats the image like a photo where smoothing is both allowed and expected.
 
-Finally, equipped with the history and semantics of `image-rendering`, we can resolve the paradox.
-
 ## Resolving the Paradox
+
+Equipped with the history and semantics of `image-rendering`, we can resolve the paradox!
 
 For pixelart, it is clear the `pixelated` value should be used; that's what most closely matches the semantics of the art. However, since Firefox does not yet support `pixelated`, we can fall back onto its currently provided solution, `crisp-edges`, which will resolve to the nearest neighbor algorithm.
 
@@ -212,7 +216,7 @@ Chrome and Safari do not support `crisp-edges`, but instead support a webkit pro
 
 And with that, we can celebrate with the final demo!
 
-<iframe height="368" scrolling="no" title="image-rendering Example End" src="https://codepen.io/auroratide/embed/wvdYgwv?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="368" title="image-rendering Example End" src="https://codepen.io/auroratide/embed/wvdYgwv?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/auroratide/pen/wvdYgwv">
   image-rendering Example End</a> by Timothy Foster (<a href="https://codepen.io/auroratide">@auroratide</a>)
   on <a href="https://codepen.io">CodePen</a>.
