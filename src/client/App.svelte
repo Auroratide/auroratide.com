@@ -41,7 +41,7 @@
     }
 
     page('*', (ctx, next) => {
-        if (!ctx.state.visited) {
+        if (!ctx.state.visited && !ctx.hash) {
             scroll.toTop()
             ctx.state.visited = true
             setTimeout(() => ctx.save(), 0)
