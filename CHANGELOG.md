@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.1 (06 Aug 2021)
+
+* Accessibility tweaks
+* Bugfix for visiting hash links within the site
+
 ## 2.3.0 (23 Jul 2021)
 
 * Accessibility overhaul, improving the accessibility of multiple website aspects including better link contrast, navigation within cards, and the creation of a statement
