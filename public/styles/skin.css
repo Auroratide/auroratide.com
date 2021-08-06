@@ -22,6 +22,8 @@
     --skin-color-danger: var(--palette-autumn-red);
     --skin-rgb-danger: var(--palette-rgb-autumn-red);
 
+    --skin-text-visited: var(--palette-fable-lavender-text);
+
     --skin-font-heading: var(--typography-sans);
     --skin-font-text: var(--typography-sans);
     --skin-font-code: var(--typography-code);

@@ -89,6 +89,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+a:visited {
+    color: var(--skin-text-visited);
+}
+
 p, ul, ol {
     font-weight: var(--typography-light);
     text-align: justify;
