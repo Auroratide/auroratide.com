@@ -24,7 +24,6 @@
         margin: 0;
         padding: 0.25em 0.5em 0.25em 1.5em;
         border-left: 0.375rem solid;
-        font-style: italic;
         font-weight: normal;
         border-left-color: var(--skin-color-info);
         background: rgba(var(--skin-rgb-info), 0.06);
