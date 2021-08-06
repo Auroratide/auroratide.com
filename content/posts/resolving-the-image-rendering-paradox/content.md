@@ -171,7 +171,7 @@ For `pixelated`, nearest neighbor is used to take the image to the nearest integ
 Because the image is scaled by a non-integer, the resulting "pixels" cannot all be the same size. Therefore, a compromise must be made, and the different rendering values make different compromises as a result of their semantics.
 
 * For `pixelated`, pixels must be square, and the only way to preserve that property is to allow pixels to overlap. The blurring on pixel boundaries represent places where pixels are overlapping.
-* For `crisp-edges`, blurring is not allowed since the contrast between colors is most important. Resizing a pixelart image, therefore, results in "pixels" that are not square, which can distort the image.
+* For `crisp-edges`, blurring is not allowed since the contrast between colors is most important. Resizing a pixelart image, therefore, results in "pixels" that are not square, which distorts the pixelation aesthetic.
 * And `auto`, the browser default and included here mostly for reference, treats the image like a photo where smoothing is both allowed and expected.
 
 Finally, equipped with the history and semantics of `image-rendering`, we can resolve the paradox.
