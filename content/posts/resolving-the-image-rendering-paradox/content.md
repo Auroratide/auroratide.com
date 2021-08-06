@@ -112,7 +112,7 @@ The image-rendering property provides a hint to the user-agent about **what aspe
 
 </blockquote>
 
-When an image is scaled, the computer either has to fill in missing details when scaled up or choose what to collapse when scaled down. That can be pretty tricky, kinda like TODO ANALOGY. And so, there's no single correct strategy for scaling images, leading to a diversity of **scaling algorithms** meant to do the job.
+When an image is scaled, the computer either has to fill in missing details when scaled up or choose what to collapse when scaled down. That can be tricky, kinda like doubling a cooking recipe but realizing you don't have enough ingredients. And so, there's no single correct strategy for scaling images, leading to a diversity of **scaling algorithms** meant to do the job.
 
 <article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/lea-resized.png" alt="Lea is doubled in size, but the gaps in the large image are not filled in." caption="Scaling algorithms essentially fill in the gaps."></article-image>
 
