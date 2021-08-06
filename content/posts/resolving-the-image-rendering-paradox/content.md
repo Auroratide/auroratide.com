@@ -269,4 +269,26 @@ As part of my research, I tried to uncover as much of the history of `image-rend
 
 ### What changed in February 2021?
 
-TODO FILL THIS IN SOMEHOW
+In <time datetime="2021-02-25">February 2021</time>, the CSS specification for `image-rendering` was updated in a non-trivial way. Although the semantics for `pixelated` and `crisp-edges` remained the same, the recommended algorithms for each changed.
+
+It's easiest to see the change when comparing the description for `pixelated` between the current Candidate Recommendation (from <time datetime="2020-12-17">December 2020</time>) and the more recent Editor's Draft:
+
+<dl>
+  <dt class="danger">Candidate Recommendation</dt>
+  <dd>The image must be scaled with the "nearest neighbor" or similar algorithm, to preserve a "pixelated" look as the image changes in size.</dd>
+  <dt class="success">Editor's Draft</dt>
+  <dd>For each axis, independently determine the integer multiple of its natural size that puts it closest to the target size and is greater than zero. Scale it to this integer-multiple-size as for crisp-edges, then scale it the rest of the way to the target size as for smooth.</dd>
+</dl>
+
+Meanwhile, `crisp-edges` was changed to explicitly call for the nearest neighbor algorithm.
+
+This change was introduced in order to better fit the semantics of `pixelated`. The nearest neighbor algorithm does not preserve the squareness of pixels when sized to non-integer scales; the new algorithm, on the other hand, introduces some blurring along pixel borders, but overall retains the gridded look pixelart should have.
+
+Perhaps more interesting, however, is the change to `crisp-edges`. Although the semantic definition of the value is unchanged, the provided example is dramatically different. Both images below represent the same source image being upscaled several times, but are from different versions of the spec.
+
+<horizontal-flex>
+  <article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/spec-old.png" alt="The lines bounding various shapes are noticably smooth." caption="Before the change"></article-image>
+  <article-image nopopout src="/assets/posts/resolving-the-image-rendering-paradox/spec-new.png" alt="The shapes have pixelated artifacting." caption="After the change"></article-image>
+</horizontal-flex>
+
+Long story short, this property has been and presently is a point of discussion.
