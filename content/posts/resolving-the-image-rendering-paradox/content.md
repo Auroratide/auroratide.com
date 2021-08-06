@@ -212,7 +212,11 @@ Chrome and Safari do not support `crisp-edges`, but instead support a webkit pro
 
 And with that, we can celebrate with the final demo!
 
-TODO DEMO HERE
+<iframe height="368" scrolling="no" title="image-rendering Example End" src="https://codepen.io/auroratide/embed/wvdYgwv?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/auroratide/pen/wvdYgwv">
+  image-rendering Example End</a> by Timothy Foster (<a href="https://codepen.io/auroratide">@auroratide</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 <icon-divider icon="square-full"></icon-divider>
 
