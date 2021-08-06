@@ -43,6 +43,25 @@ html {
     margin-bottom: var(--sizing-spacing-p);
 }
 
+.content-typography figure {
+    margin-bottom: var(--sizing-spacing-p);
+    text-align: center;
+}
+
+.content-typography figcaption {
+    text-align: center;
+    font-weight: var(--typography-light);
+    font-size: var(--sizing-font-sm);
+}
+
+.content-typography figcaption:last-child {
+    padding-top: var(--sizing-spacing-sm);
+}
+
+.content-typography figcaption:first-child {
+    padding-bottom: var(--sizing-spacing-sm);
+}
+
 /* Headings
    ========================================================================== */
 h1 { font-size: var(--sizing-font-xl); }
@@ -165,6 +184,10 @@ summary {
 
 details[open] > summary {
     margin-bottom: var(--sizing-spacing-md);
+}
+
+figure {
+    margin: 0;
 }
 
 /* Buttons
