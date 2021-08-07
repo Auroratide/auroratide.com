@@ -9,6 +9,7 @@
     import { PageNotFound } from '@/client/pages/PageNotFound'
     import { UrlBuilder } from '@/client/routes'
     import { FocusOnMe } from '@/client/FocusOnMe'
+    import { scroll } from '@/client/scroll'
 
     import type { Post } from '../types'
 
@@ -30,6 +31,7 @@
     $: {
         item = resource.one(id)
         if (item !== Pending && item !== Missing) {
+            scroll.toHash()
             title = item.title
             description = item.summary
             relatedItems = resource.list()
