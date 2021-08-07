@@ -38,6 +38,7 @@
     .article-image img {
         max-width: 100%;
         width: auto;
+        height: auto;
         margin: 0 0 0.25em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }
