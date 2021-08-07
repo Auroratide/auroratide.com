@@ -8,14 +8,16 @@
     export let caption: string = null
     export let size: Size = Size.md
     export let nopopout: (boolean | '') = false
+    export let width: string = ''
+    export let height: string = ''
 </script>
 
 <figure class="article-image {size}">
     {#if nopopout || nopopout === ''}
-        <img {src} {alt} />
+        <img {src} {alt} {width} {height} />
     {:else}
         <img-popout>
-            <img {src} {alt} />
+            <img {src} {alt} {width} {height} />
         </img-popout>
     {/if}
     {#if caption || $$slots.caption}
@@ -35,6 +37,7 @@
 
     .article-image img {
         max-width: 100%;
+        width: auto;
         margin: 0 0 0.25em;
         box-shadow: 0 0.25em 0.5em -0.25em rgba(0, 0, 0, 0.333);
     }

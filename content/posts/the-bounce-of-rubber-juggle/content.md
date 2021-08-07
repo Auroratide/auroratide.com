@@ -12,7 +12,7 @@ Last week, I participated in the annual [GMTK Game Jam](https://itch.io/jam/gmtk
 
 **[Rubber Juggle](/portfolio/rubber-juggle)**, a minigame where the goal is to keep balloons on screen for as long as possible! You do that by rubber-banding pegs on a pegboard that the balloons bounce off of, like below.
 
-<article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="Animated image of a balloon bouncing off a rubber band." size="lg">
+<article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="Animated image of a balloon bouncing off a rubber band." size="lg" width="593" height="390">
 </article-image>
 
 That bounce may look fairly innoculous, but it turns out to be slightly tricky to code (especially for me who hadn't touched any linear algebra in years)! The bounce mechanic was the core of Rubber Juggle, so I spent most of my time during the jam coding it to work well and feel good.
