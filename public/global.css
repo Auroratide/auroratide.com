@@ -251,6 +251,10 @@ a.as-button {
     text-decoration: none;
 }
 
+a.as-button:visited {
+    color: var(--skin-color-text-secondary);
+}
+
 /* Inputs
    ========================================================================== */
 textarea, ::part(textarea) {
