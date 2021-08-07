@@ -8,8 +8,8 @@
         "type": "palette",
         "value": "aurora-blue"
     },
-    "summary": "",
-    "long_summary": "",
-    "published_at": "",
+    "summary": "There's a paradox in the support of image-rendering among browsers. How can we resolve that paradox in order to properly upscale pixelart?",
+    "long_summary": "On a webpage, pixelart can be scaled up using a CSS property called image-rendering. However, if you look at its browser support, you find a paradox, that browsers support seemingly opposite values. So if you want to upscale pixelart, how do you get around that paradox?",
+    "published_at": "2021-08-07T16:24:00.000Z",
     "created_at": "2021-07-29T18:59:48.521Z"
 }
