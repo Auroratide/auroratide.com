@@ -139,7 +139,7 @@ For pixelated images, the emphasis is on the pixels, but for crispy images, the 
 
 <major-point>
 
-The `pixelated` and `crisp-edges` values are not semantically interchangable.
+The `pixelated` and `crisp-edges` values are not semantically interchangeable.
 
 </major-point>
 
