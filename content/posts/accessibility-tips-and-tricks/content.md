@@ -15,7 +15,7 @@ If you want to learn more about creating accessible content, I highly recommend 
 
 The article may look daunting at first, and indeed it took me some hours over the course of a few days to read through and digest everything, but it's worth every minute!
 
-I like this article for taking enormity of accessibility and condensing it into quick wins applicable to a majority of cases. It's a great entry point, providing a list of topics into which you can dig deeper over time.
+I like this article for taking the enormity of accessibility and condensing it into quick wins applicable to a majority of cases. It's a great entry point, providing a list of topics into which you can dig deeper over time.
 
 Although I had already been making accessibility improvements to my website, I was still able to find some valuable action items for myself. Here are the **top five ways** I was able to improve my website!
 
