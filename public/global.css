@@ -29,7 +29,10 @@ html {
 
 .content-typography p code,
 .content-typography li code,
-.content-typography dd code {
+.content-typography dd code,
+.content-typography p kbd,
+.content-typography li kbd,
+.content-typography dd kbd {
     font-size: 0.875em;
 }
 
@@ -198,6 +201,16 @@ details[open] > summary {
 
 figure {
     margin: 0;
+}
+
+kbd {
+    font-family: var(--skin-font-code);
+    font-size: var(--sizing-font-xs);
+    color: var(--skin-code-default);
+    border: var(--sizing-border-xs) solid var(--skin-color-bg);
+    border-bottom-width: var(--sizing-border-sm);
+    border-radius: var(--sizing-spacing-xs);
+    padding: var(--sizing-unit) var(--sizing-spacing-xs);
 }
 
 /* Buttons
