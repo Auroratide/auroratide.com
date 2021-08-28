@@ -57,6 +57,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
 import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
+import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
@@ -134,6 +135,7 @@ export const library = {
     [IconName.TrafficLight]: faTrafficLight,
     [IconName.TruckMoving]: faTruckMoving,
     [IconName.Undo]: faUndo,
+    [IconName.Users]: faUsers,
     [IconName.UserTie]: faUserTie,
 
     [IconName.Android]: faAndroid,

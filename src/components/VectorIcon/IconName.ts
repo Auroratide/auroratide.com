@@ -58,6 +58,7 @@ export const IconName = {
     TrafficLight: 'traffic-light',
     TruckMoving: 'truck-moving',
     Undo: 'undo',
+    Users: 'users',
     UserTie: 'user-tie',
 
     Android: 'android',
