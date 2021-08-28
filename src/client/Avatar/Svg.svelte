@@ -16,6 +16,7 @@
     class="avatar-svg"
     style="position: {absolute ? 'absolute' : 'relative'}; font-size: {size}; top: {absolute ? '50%' : '0'}; left: {absolute ? '50%' : '0'}; transform: {absolute ? 'translate(-50%, -50%)' : 'none'}; z-index: {layer};"
 >
+    <title>Auroratide Logo</title>
     <defs />
     <path id="avatar-aurora-behind-top" transform="matrix(0.999999920527145 0 0 0.999999920527145 303.210609331799 145.352865167471)" fill="{auroraColor}" fill-rule="evenodd" d="M2.99136 88.8727C6.23712 89.0087 8.18873 88.8072 8.84621 88.2681C18.3168 76.6 22.3155 48.2803 20.8423 3.30926L3.65958 0C-0.985904 58.0655 -1.20864 87.6897 2.99136 88.8727Z" />
     <path id="avatar-aurora-behind-bottom" transform="matrix(0.999999960263572 0 0 0.999999960263572 49.1849766904237 188.8200001531)" fill="{auroraColor}" fill-rule="evenodd" d="M22.6005 69.5568L26.3552 68.1567L4.63502 0L0.405023 1.89C-1.882 21.2927 5.51649 43.8483 22.6005 69.5568Z" />
