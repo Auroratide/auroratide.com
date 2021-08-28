@@ -17,6 +17,9 @@ export enum Category {
     // For professional-level coding content derived from my experience in industry
     SoftwareEngineering = 'software engineering',
 
+    // For resources I like and want to share
+    Resources = 'resources',
+
     // For fiction writing commentary (ie. on worldbuilding, character development, etc)
     Storytelling = 'storytelling',
 
