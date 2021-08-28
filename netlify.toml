@@ -78,6 +78,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/accessibility-tips-and-tricks"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/as3-to-haxe-conversion"
   to = "/index.html"
   status = 200
