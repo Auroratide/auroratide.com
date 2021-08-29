@@ -24,7 +24,7 @@ Although I had already been making accessibility improvements to my website, I w
 The principle is simple: each page should have one and only one `<h1>` heading!
 
 * Of the many pages on your site, the `<h1>` heading tells your visitors exactly where they are.
-* Assistive technology such as **screen readers** rely on this heading to annouce that location.
+* Assistive technology such as **screen readers** rely on this heading to announce that location.
 * And usually, this heading demarks the start of the main content, after all the navigation at the top.
 
 A screen reader is capable of reading the content of a site out loud to those who either can't or would rather not read the text. As a feature, they allow people to look at all the headings on a page to jump to where they want to go.
