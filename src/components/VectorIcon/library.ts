@@ -29,6 +29,7 @@ import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons/faGripLin
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
+import { faICursor } from '@fortawesome/free-solid-svg-icons/faICursor'
 import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
@@ -107,6 +108,7 @@ export const library = {
     [IconName.HandPointer]: faHandPointer,
     [IconName.HospitalAlt]: faHospitalAlt,
     [IconName.HourglassHalf]: faHourglassHalf,
+    [IconName.ICursor]: faICursor,
     [IconName.Image]: faImage,
     [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,

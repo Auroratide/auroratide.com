@@ -30,6 +30,7 @@ export const IconName = {
     HandPointer: 'hand-pointer',
     HospitalAlt: 'hospital-alt',
     HourglassHalf: 'hourglass-half',
+    ICursor: 'i-cursor',
     Image: 'image',
     Key: 'key',
     LayerGroup: 'layer-group',

@@ -330,6 +330,12 @@
   force = false
 
 [[redirects]]
+  from = "/portfolio/typewritten-text"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/portfolio/vsts-monitor"
   to = "/index.html"
   status = 200
