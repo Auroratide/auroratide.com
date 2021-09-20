@@ -78,6 +78,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/a-typewriter-battle-between-devs"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/accessibility-tips-and-tricks"
   to = "/index.html"
   status = 200
