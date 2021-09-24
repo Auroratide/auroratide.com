@@ -23,7 +23,8 @@ html {
     font-size: var(--sizing-font-sm);
 }
 
-.content-typography p li {
+.content-typography p li,
+.content-typography ul ul li {
     font-size: 1em;
 }
 
@@ -301,6 +302,10 @@ code {
     padding: var(--sizing-unit) var(--sizing-spacing-xs);
 }
 
+pre {
+    margin-bottom: var(--sizing-spacing-p);
+}
+
 pre code {
     display: block;
     line-height: 1.5em;
@@ -377,7 +382,7 @@ side-text {
     margin-bottom: var(--sizing-spacing-p);
 }
 
-side-text p {
+side-text p, side-text li {
     font-weight: normal;
 }
 
