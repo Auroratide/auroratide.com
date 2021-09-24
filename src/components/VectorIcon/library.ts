@@ -34,6 +34,7 @@ import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
 import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
@@ -44,6 +45,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
+import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons/faSquareFull'
 import { faStamp } from '@fortawesome/free-solid-svg-icons/faStamp'
@@ -113,6 +115,7 @@ export const library = {
     [IconName.Key]: faKey,
     [IconName.LayerGroup]: faLayerGroup,
     [IconName.LevelUpAlt]: faLevelUpAlt,
+    [IconName.Lightbulb]: faLightbulb,
     [IconName.LowVision]: faLowVision,
     [IconName.Mobile]: faMobile,
     [IconName.Newspaper]: faNewspaper,
@@ -123,6 +126,7 @@ export const library = {
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
     [IconName.SearchPlus]: faSearchPlus,
+    [IconName.Seedling]: faSeedling,
     [IconName.Shower]: faShower,
     [IconName.SquareFull]: faSquareFull,
     [IconName.Stamp]: faStamp,
