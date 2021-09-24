@@ -120,6 +120,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/making-a-toggle-switch"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/meet-kafka"
   to = "/index.html"
   status = 200
