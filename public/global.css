@@ -24,7 +24,10 @@ html {
 }
 
 .content-typography p li,
-.content-typography ul ul li {
+.content-typography ul ul li,
+.content-typography ol ul li,
+.content-typography ul ol li,
+.content-typography ol ol li {
     font-size: 1em;
 }
 
@@ -112,6 +115,14 @@ p, ul, ol {
 
 li {
     margin-bottom: var(--sizing-spacing-sm);
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    padding-top: var(--sizing-spacing-sm);
+    margin-bottom: 0;
 }
 
 li:last-child {
