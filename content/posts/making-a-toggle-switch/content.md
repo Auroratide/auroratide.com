@@ -407,13 +407,11 @@ Setting a **property** for the element's class essentially declares the attribut
 
 ```js
 class ToggleSwitch extends HTMLElement {
-  get checked() { return this.hasAttribute('checked') }
+  get checked() {
+    return this.hasAttribute('checked')
+  }
   set checked(value) {
-    if (value) {
-      this.setAttribute('checked', '')
-    } else {
-      this.removeAttribute('checked')
-    }
+    this.toggleAttribute('checked', value)
   }
 }
 ```
@@ -447,7 +445,7 @@ it('checked attribute is updated', async () => {
 
   expect(el.getAttribute('aria-checked')).to.equal('false')
 
-  el.setAttribute('checked', '')
+  el.toggleAttribute('checked', true)
   expect(el.getAttribute('aria-checked')).to.equal('true')
 })
 ```
@@ -989,13 +987,11 @@ export class ToggleSwitch extends HTMLElement {
     }
   }
 
-  get checked() { return this.hasAttribute('checked') }
+  get checked() {
+    return this.hasAttribute('checked')
+  }
   set checked(value) {
-    if (value) {
-      this.setAttribute('checked', '')
-    } else {
-      this.removeAttribute('checked')
-    }
+    this.toggleAttribute('checked', value)
   }
 
   toggle = () => {
@@ -1032,7 +1028,7 @@ describe('toggle-switch', () => {
 
       expect(el.getAttribute('aria-checked')).to.equal('false')
 
-      el.setAttribute('checked', '')
+      el.toggleAttribute('checked', true)
       expect(el.getAttribute('aria-checked')).to.equal('true')
     })
   })
