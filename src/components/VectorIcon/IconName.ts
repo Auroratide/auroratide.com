@@ -38,6 +38,7 @@ export const IconName = {
     Lightbulb: 'lightbulb',
     LowVision: 'low-vision',
     Mobile: 'mobile',
+    Moon: 'moon',
     Newspaper: 'newspaper',
     PaintBrush: 'paint-brush',
     Pause: 'pause',

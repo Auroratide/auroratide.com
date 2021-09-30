@@ -4,6 +4,7 @@
     import { socials, navigation, NavVisibility } from '@/client/routes'
     import { Container } from '@/client/layout/Container'
     import { SkipLink } from '../SkipLink'
+    import { DarkModeSwitch } from '@/client/DarkModeSwitch'
 </script>
 
 <Container>
@@ -25,6 +26,9 @@
                 {/each}
             </ul>
         </div>
+        <div class="theme" hidden>
+            <DarkModeSwitch />
+        </div>
         <nav class="nav" aria-label="Site Navigation">
             <ul>
                 {#each Object.values(navigation).filter(item => item.visibility <= NavVisibility.Visible) as item}
@@ -41,8 +45,8 @@
         grid-template-columns: auto auto 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
-            "logo title subtitle"
-            "logo nav nav";
+            "logo title subtitle theme"
+            "logo nav nav theme";
         column-gap: 1em;
         overflow: hidden;
         padding: 0 0.25em;
@@ -112,6 +116,13 @@
         color: var(--skin-banner-text);
     }
 
+    .theme {
+        grid-area: theme;
+        font-size: var(--sizing-font-md);
+        text-align: right;
+        align-self: center;
+    }
+
     .nav {
         grid-area: nav;
         font-size: var(--sizing-font-sm);
@@ -141,7 +152,7 @@
             grid-template-columns: auto 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas: 
-                "logo title socials"
+                "logo title theme"
                 "logo subtitle nav";
             column-gap: 1.625em;
             max-height: 5.625em;
