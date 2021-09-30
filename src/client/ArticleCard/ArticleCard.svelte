@@ -26,11 +26,11 @@
         <p class="summary short">{article.summary}</p>
         <p class="summary long">{article.longSummary}</p>
     </section>
-    <aside>
+    <figure>
         <div class="circle">
             <vector-icon icon={article.icon}></vector-icon>
         </div>
-    </aside>
+    </figure>
 </article>
 
 <style>
@@ -73,7 +73,7 @@
 
     .article-card .byline {
         display: block;
-        opacity: 0.5;
+        opacity: 0.75;
         margin-bottom: var(--sizing-spacing-sm);
         padding-left: var(--sizing-spacing-sm);
         font-weight: var(--typography-normal);
@@ -90,7 +90,7 @@
         margin-bottom: 0;
     }
 
-    .article-card aside {
+    .article-card figure {
         position: absolute;
         top: 0;
         right: 0;
@@ -159,9 +159,10 @@
             padding: 0;
         }
 
-        .article-card aside {
+        .article-card figure {
             position: relative;
             font-size: calc(4 * var(--sizing-font-xs));
+            margin: 0;
         }
 
         .article-card .summary.short {
