@@ -1,9 +1,10 @@
 :root {
-    --skin-color-bg: var(--palette-greyscale-075);
-    --skin-rgb-bg: var(--palette-rgb-greyscale-075);
-    --skin-color-content: var(--palette-greyscale-100);
-    --skin-color-text: var(--palette-greyscale-010);
-    --skin-rgb-text: var(--palette-rgb-greyscale-010);
+    --skin-bg: var(--palette-greyscale-075);
+    --skin-bg-title: var(--palette-greyscale-085);
+    --skin-bg-text: var(--palette-greyscale-090);
+
+    --skin-content: var(--palette-greyscale-100);
+    --skin-content-text: var(--palette-greyscale-010);
 
     --skin-color-bg-secondary: var(--palette-deep-blue);
     --skin-color-text-secondary: var(--palette-greyscale-100);

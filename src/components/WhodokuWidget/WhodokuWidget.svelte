@@ -77,7 +77,7 @@
 
     .solved-text {
         font-size: 3em;
-        background: var(--skin-color-bg);
+        background: var(--skin-bg);
         position: absolute;
         top: 3em;
         width: 100%;

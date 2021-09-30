@@ -37,6 +37,6 @@
     }
 
     .link-bar a.as-button::before {
-        border: var(--sizing-border-sm) solid var(--skin-color-content);
+        border: var(--sizing-border-sm) solid var(--skin-content);
     }
 </style>

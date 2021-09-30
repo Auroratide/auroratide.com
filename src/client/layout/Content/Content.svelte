@@ -8,7 +8,7 @@
 
 <style>
     .content {
-        background: var(--skin-color-content);
+        background: var(--skin-content);
         padding: var(--sizing-spacing-md);
     }
 

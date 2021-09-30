@@ -166,10 +166,10 @@
         flex: 0 0 1.75em;
         height: 1.75em;
         border-radius: 1.75em;
-        background: rgba(var(--skin-rgb-text), 0.25);/*var(--skin-color-bg);*/
-        border: 0.1875em solid var(--skin-color-content);
-        box-shadow: 0 0 0 0 rgba(var(--skin-rgb-text), 0.25);
-        color: rgba(var(--skin-rgb-text), 0.667);
+        background: var(--skin-bg);
+        border: 0.1875em solid var(--skin-content);
+        box-shadow: 0 0 0 0 var(--skin-bg);
+        color: var(--skin-content-text);
         margin: 0 0.25em;
         opacity: 0.5;
         transition: opacity 256ms linear, box-shadow 256ms linear;
@@ -179,7 +179,7 @@
 
     .indicator-container li.active {
         opacity: 1;
-        box-shadow: 0 0 0 0.1875em rgba(var(--skin-rgb-text), 0.25);
+        box-shadow: 0 0 0 0.1875em var(--skin-bg);
     }
 
     ::slotted(*) {

@@ -172,13 +172,13 @@
 
     .content {
         grid-area: content;
-        background: var(--skin-color-content);
+        background: var(--skin-content);
         padding: var(--article-padding) var(--article-padding) 0;
     }
 
     .related-items {
         grid-area: related-items;
-        background: var(--skin-color-content);
+        background: var(--skin-content);
         padding: 0 var(--article-padding) var(--article-padding);
     }
 

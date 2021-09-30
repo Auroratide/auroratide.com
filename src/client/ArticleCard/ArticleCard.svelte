@@ -39,7 +39,7 @@
         display: block;
         margin: 0 0 var(--sizing-spacing-md);
         padding: 0;
-        background: var(--skin-color-content);
+        background: var(--skin-content);
     }
 
     .article-card:hover, .article-card:focus-within {
@@ -127,7 +127,7 @@
             width: 100%;
             transition: border-left-width var(--transition-quick), width var(--transition-quick);
             display: flex;
-            background: var(--skin-color-content);
+            background: var(--skin-content);
         }
 
         .article-card:hover, .article-card:focus-within {
@@ -148,7 +148,7 @@
         }
 
         .article-card .title a {
-            color: var(--skin-color-text);
+            color: var(--skin-content-text);
         }
 
         .article-card .byline {

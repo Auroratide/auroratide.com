@@ -9,8 +9,8 @@
    ========================================================================== */
 html {
     font-family: var(--skin-font-text);
-    background-color: var(--skin-color-bg);
-    color: var(--skin-color-text);
+    background-color: var(--skin-bg);
+    color: var(--skin-content-text);
     overflow-y: scroll; /* So scrollbar is always there */
 }
 
@@ -140,9 +140,9 @@ small {
 blockquote {
     margin: 0 0 var(--sizing-spacing-p) 0;
     padding: var(--sizing-spacing-xs) var(--sizing-spacing-sm) var(--sizing-spacing-xs) var(--sizing-spacing-lg);
-    border-left: var(--sizing-border-md) solid var(--skin-color-bg);
+    border-left: var(--sizing-border-md) solid var(--skin-bg);
     font-style: italic;
-    background: rgba(var(--skin-rgb-bg), 0.12);
+    background: var(--skin-bg-text);
 }
 
 blockquote p {
@@ -155,7 +155,7 @@ blockquote p:last-child {
 
 hr {
     border: none;
-    border-top: var(--sizing-border-xs) solid var(--skin-color-bg);
+    border-top: var(--sizing-border-xs) solid var(--skin-bg);
     margin: 0 var(--sizing-spacing-sm) var(--sizing-spacing-lg);
 }
 
@@ -173,7 +173,7 @@ dl > dd:last-child {
 
 dt {
     font-weight: var(--typography-bold);
-    background: rgba(var(--skin-rgb-bg), 0.5);
+    background: var(--skin-bg-title);
     padding: var(--sizing-spacing-xs);
     margin-bottom: var(--sizing-spacing-xs);
 }
@@ -219,7 +219,7 @@ kbd {
     font-family: var(--skin-font-code);
     font-size: var(--sizing-font-xs);
     color: var(--skin-code-default);
-    border: var(--sizing-border-xs) solid var(--skin-color-bg);
+    border: var(--sizing-border-xs) solid var(--skin-bg);
     border-bottom-width: var(--sizing-border-sm);
     border-radius: var(--sizing-spacing-xs);
     padding: var(--sizing-unit) var(--sizing-spacing-xs);
@@ -291,7 +291,7 @@ a.as-button:visited {
 textarea, ::part(textarea) {
     font-family: var(--skin-font-text);
     font-size: 1em;
-    border: var(--sizing-border-sm) solid var(--skin-color-bg);
+    border: var(--sizing-border-sm) solid var(--skin-bg);
     border-radius: 0.25em;
     padding: var(--sizing-spacing-sm);
     transition: border-color var(--transition-quick);
@@ -308,7 +308,7 @@ code {
     font-family: var(--skin-font-code);
     font-size: var(--sizing-font-xs);
     color: var(--skin-code-default);
-    background: rgba(var(--skin-rgb-bg), 0.5);
+    background: var(--skin-bg-title);
     border-radius: var(--sizing-spacing-xs);
     padding: var(--sizing-unit) var(--sizing-spacing-xs);
 }

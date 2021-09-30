@@ -52,7 +52,7 @@ export default () => {
             line-height: 1;
             font-size: 1.375em;
             font-weight: normal;
-            background-color: var(--skin-color-content);
+            background-color: var(--skin-content);
             z-index: 2;
         }
     
