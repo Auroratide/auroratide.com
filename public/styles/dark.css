@@ -8,4 +8,13 @@
 
     --skin-banner: var(--palette-deep-blue);
     --skin-banner-text: var(--palette-greyscale-100);
+
+    /* Darcula Color Scheme */
+    --skin-code-default: #A9B7C6;
+    --skin-code-comment: #629755;
+    --skin-code-keyword: #CC7832;
+    --skin-code-literal: #6897BB;
+    --skin-code-name: #FFC66D;
+    --skin-code-string:  #6A8759;
+    --skin-code-annotation:  #9876AA;
 }
