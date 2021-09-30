@@ -14,7 +14,6 @@
     import type { Post } from '../types'
 
     import { Header } from './Header'
-    import { Comments } from './Comments'
     import { RelatedItems } from './RelatedItems'
     import { LinkBar } from '@/client/LinkBar'
     import { Gallery } from '@/client/Gallery'
@@ -82,9 +81,6 @@
                             <Loading text="Finding posts..." />
                         {/if}
                     </aside>
-                    <section slot="after">
-                        <Comments id={item.id} />
-                    </section>
                 </Content>
             </article>
         {/if}
