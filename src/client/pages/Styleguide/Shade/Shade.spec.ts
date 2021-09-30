@@ -3,13 +3,14 @@ import { component } from '@/testing/component'
 import { screen } from '@testing-library/svelte'
 
 describe('Shade', () => {
-    test('shows hex and rgb', () => {
+    test('shows hex, rgb, and hsl', () => {
         component(Shade)
             .prop('hex', 0x123456)
             .render()
 
-        expect(screen.queryByText('#123456')).toBeInTheDocument()
-        expect(screen.queryByText('rgb(18, 52, 86)')).toBeInTheDocument()
+        expect(screen.queryByText(/#123456/)).toBeInTheDocument()
+        expect(screen.queryByText(/rgb\(18, 52, 86\)/)).toBeInTheDocument()
+        expect(screen.queryByText(/hsl\(210, 65%, 20%\)/)).toBeInTheDocument()
     })
 
     test('pads hex', () => {
@@ -17,6 +18,6 @@ describe('Shade', () => {
             .prop('hex', 0x000123)
             .render()
 
-        expect(screen.queryByText('#000123')).toBeInTheDocument()
+        expect(screen.queryByText(/#000123/)).toBeInTheDocument()
     })
 })

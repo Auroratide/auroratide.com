@@ -11,7 +11,7 @@
     .palette {
         text-align: center;
         margin-bottom: var(--sizing-spacing-md);
-        flex: 0 0 12.5em;
+        flex: 0 0 16em;
         padding: 0 var(--sizing-spacing-md);
     }
 

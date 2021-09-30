@@ -1,3 +1,8 @@
+import type {
+    HexValue,
+    RgbaValue,
+} from './types'
+
 export enum Format {
     Palette = 'palette',
     Hex = 'hex',
@@ -5,13 +10,6 @@ export enum Format {
 }
 
 export type PaletteValue = string
-export type HexValue = string
-export type RgbaValue = {
-    r: number, // [0, 255]
-    g: number, // [0, 255]
-    b: number, // [0, 255]
-    a?: number, // [0, 1]
-}
 
 export type Value = PaletteValue | HexValue | RgbaValue
 
