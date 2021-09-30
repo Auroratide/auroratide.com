@@ -10,8 +10,8 @@
 
 <style>
     header {
-        background: var(--skin-color-bg-secondary);
-        color: var(--skin-color-text-secondary);
+        background: var(--skin-banner);
+        color: var(--skin-banner-text);
     }
 
     main {
@@ -19,7 +19,7 @@
     }
 
     footer {
-        background: var(--skin-color-bg-secondary);
-        color: var(--skin-color-text-secondary);
+        background: var(--skin-banner);
+        color: var(--skin-banner-text);
     }
 </style>

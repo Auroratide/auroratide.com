@@ -43,7 +43,7 @@ const css = `
     .controls button {
         font-size: 1em;
         border-radius: 2em;
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
         padding: 0.5em;
         display: inline-flex;
         align-items: center;

@@ -109,7 +109,7 @@
     }
 
     .socials a {
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
     }
 
     .nav {
@@ -133,7 +133,7 @@
     .nav a {
         display: inline-block;
         padding: 0 var(--sizing-spacing-sm);
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
     }
 
     @media screen and (min-width: 75rem) {

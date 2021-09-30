@@ -56,8 +56,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--skin-color-text-secondary);
-        border: 0 solid var(--skin-color-bg-secondary);
+        color: var(--skin-banner-text);
+        border: 0 solid var(--skin-banner);
         width: var(--width);
         height: var(--width);
         border-radius: calc(var(--width) / 2);
@@ -85,7 +85,7 @@
     }
 
     .nav a {
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
         text-decoration: none;
     }
 
@@ -108,7 +108,7 @@
     }
 
     .source a {
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
         text-decoration: underline;
     }
 

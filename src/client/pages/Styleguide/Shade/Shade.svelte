@@ -25,7 +25,7 @@
 
 <style>
     .shade {
-        color: var(--skin-color-text-secondary);
+        color: var(--skin-banner-text);
         background-color: var(--shade-color);
         padding: var(--sizing-spacing-sm) var(--sizing-spacing-md);
         margin: 0;

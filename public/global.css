@@ -235,7 +235,7 @@ button, .as-button, ::part(button) {
     background: none;
     display: inline-block;
     position: relative;
-    color: var(--skin-color-text-secondary);
+    color: var(--skin-banner-text);
     z-index: 2;
     cursor: pointer;
     padding: var(--sizing-spacing-xs) var(--sizing-spacing-lg);
@@ -283,7 +283,7 @@ a.as-button {
 }
 
 a.as-button:visited {
-    color: var(--skin-color-text-secondary);
+    color: var(--skin-banner-text);
 }
 
 /* Inputs

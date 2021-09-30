@@ -15,7 +15,7 @@
     --palette-shade-050: rgba(0, 0, 0, 0.5);
     --palette-shade-067: rgba(0, 0, 0, 0.667);
   
-    --palette-deep-blue: #001533;
+    --palette-deep-blue: hsl(215, 100%, 10%);
     --palette-aurora-blue: #448DDD;
     --palette-aurora-blue-text: #2575CB;
     --palette-rgb-aurora-blue: 68, 141, 221;
