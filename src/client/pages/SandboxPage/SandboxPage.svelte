@@ -8,11 +8,6 @@
 
     export let fetch: (input: RequestInfo) => Promise<Response> = window.fetch
 
-    let loaded = false
-    function load() {
-        loaded = true
-    }
-
     const content = fetch('/api/sandbox/index.json')
         .then(res => res.json())
 </script>
@@ -26,20 +21,8 @@
             {#await content}
                 <Loading large text="Fetching content..." />
             {:then value}
-                {#if loaded}
-                    <side-text success>Everything has loaded!</side-text>
-                {:else}
-                    <Loading text="Waiting for page to fully load..." />
-                {/if}
                 <RawRenderer content={value.content} />
-                <img src="/assets/posts/the-bounce-of-rubber-juggle/bounce.webp" alt="" on:load={load} />
             {/await}
         </Content>
     </Container>
 </DocumentInfo>
-
-<style>
-    side-text {
-        font-size: var(--sizing-font-lg);
-    }
-</style>
