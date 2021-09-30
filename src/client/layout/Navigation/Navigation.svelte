@@ -172,6 +172,10 @@
             display: none;
         }
 
+        .theme {
+            margin-right: calc(-1 * var(--sizing-spacing-sm));
+        }
+
         .nav ul {
             margin: 0 calc(-1 * var(--sizing-spacing-md));
             text-align: right;
