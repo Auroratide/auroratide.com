@@ -5,6 +5,7 @@ import { screen } from '@testing-library/svelte'
 describe('Shade', () => {
     test('shows hex, rgb, and hsl', () => {
         component(Shade)
+            .prop('label', 'test')
             .prop('hex', 0x123456)
             .render()
 
@@ -15,6 +16,7 @@ describe('Shade', () => {
 
     test('pads hex', () => {
         component(Shade)
+            .prop('label', 'test')
             .prop('hex', 0x000123)
             .render()
 
