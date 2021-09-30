@@ -1,0 +1,11 @@
+.theme-dark {
+    --skin-bg: var(--palette-greyscale-000);
+    --skin-bg-title: var(--palette-greyscale-000);
+    --skin-bg-text: var(--palette-greyscale-005);
+
+    --skin-content: var(--palette-greyscale-010);
+    --skin-content-text: var(--palette-greyscale-090);
+
+    --skin-banner: var(--palette-deep-blue);
+    --skin-banner-text: var(--palette-greyscale-100);
+}

@@ -1,5 +1,6 @@
 :root {
     --palette-greyscale-000: hsl(0, 0%, 0%);
+    --palette-greyscale-005: hsl(0, 0%, 12%);
     --palette-greyscale-010: hsl(0, 0%, 16%);
     --palette-greyscale-025: hsl(0, 0%, 44%);
     --palette-greyscale-050: hsl(0, 0%, 69%);

@@ -4,14 +4,18 @@
 @import url('/styles/sizing.css');
 @import url('/styles/transitions.css');
 @import url('/styles/skin.css');
+@import url('/styles/dark.css');
 
 /* Page-level Items
    ========================================================================== */
 html {
+    overflow-y: scroll; /* So scrollbar is always there */
+}
+
+body {
     font-family: var(--skin-font-text);
     background-color: var(--skin-bg);
     color: var(--skin-content-text);
-    overflow-y: scroll; /* So scrollbar is always there */
 }
 
 .content-typography p,
