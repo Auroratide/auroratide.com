@@ -10,7 +10,7 @@
 <Container>
     <div class="top-bar">
         <div class="logo">
-            <a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.colors.DeepBlue} shadowWidth="1.25em" /></a>
+            <a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.newColors.DeepBlue} shadowWidth="1.25em" /></a>
         </div>
         <div class="title">
             <SkipLink />

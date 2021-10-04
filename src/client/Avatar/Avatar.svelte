@@ -2,7 +2,7 @@
     import Svg from './Svg.svelte'
     import { Palette } from '@/client/color'
 
-    export let color: string = Palette.colors.AuroraBlue
+    export let color: string = Palette.newColors.AuroraBlue.colorOnBlack
     export let shadowColor: string = null
     export let shadowWidth: string = null
 </script>

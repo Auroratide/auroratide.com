@@ -1,9 +1,9 @@
 <script lang="ts">
     import { Palette } from '@/client/color'
 
-    export let circleColor: string = Palette.colors.AuroraBlue
+    export let circleColor: string = Palette.newColors.AuroraBlue.colorOnBlack
     export let auroraColor: string = Palette.greyscale[100]
-    export let tideColor: string = Palette.colors.DeepBlue
+    export let tideColor: string = Palette.newColors.DeepBlue
     export let absolute: boolean = false
     export let size: string = '1em'
     export let layer: number = 1
