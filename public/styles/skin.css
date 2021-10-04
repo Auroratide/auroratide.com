@@ -59,9 +59,9 @@
     --skin-code-string:  #a31515;
     --skin-code-annotation:  #808000;
 
-    --maslow-color-selfactualization: var(--palette-autumn-red);
-    --maslow-color-esteem: var(--palette-autumn-orange);
-    --maslow-color-belonging: var(--palette-livian-yellow);
-    --maslow-color-safety: var(--palette-aella-green);
-    --maslow-color-physiological: var(--palette-aurora-blue);
+    --maslow-color-selfactualization: var(--palette-autumnred-wc);
+    --maslow-color-esteem: var(--palette-autumnorange-wc);
+    --maslow-color-belonging: var(--palette-livianyellow-wc);
+    --maslow-color-safety: var(--palette-aellagreen-wc);
+    --maslow-color-physiological: var(--palette-aurorablue-wc);
 }
