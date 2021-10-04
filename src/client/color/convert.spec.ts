@@ -1,4 +1,4 @@
-import { hexToRgb, hexToHsl } from '.'
+import { hexToRgb, hexToHsl, hslToHex } from '.'
 
 describe('color conversion', () => {
     describe('hex to rgb', () => {
@@ -68,6 +68,34 @@ describe('color conversion', () => {
                 s: 62,
                 l: 46,
             })
+        })
+    })
+
+    describe('hsl to hex', () => {
+        it('black', () => {
+            expect(hslToHex({
+                h: 0, s: 0, l: 0,
+            })).toEqual(0x000000)
+        })
+
+        it('white', () => {
+            expect(hslToHex({
+                h: 0, s: 0, l: 100,
+            })).toEqual(0xffffff)
+        })
+
+        it('other colors', () => {
+            expect(hslToHex({
+                h: 210, s: 65, l: 20,
+            })).toEqual(0x123354)
+
+            expect(hslToHex({
+                h: 30, s: 51, l: 26,
+            })).toEqual(0x644220)
+
+            expect(hslToHex({
+                h: 355, s: 62, l: 46,
+            })).toEqual(0xbe2d39)
         })
     })
 })

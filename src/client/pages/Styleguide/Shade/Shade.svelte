@@ -1,15 +1,16 @@
 <script lang="ts">
-    import { hexToRgb, hexToHsl } from '@/client/color'
+    import type { HslaValue } from '@/client/color/types'
+    import { hexToRgb, hslToHex } from '@/client/color'
 
     export let label: string
-    export let hex: number = 0
+    export let hsl: HslaValue
     let hexText: string
     let rgbText: string
     let hslText: string
 
     $: {
+        const hex = hslToHex(hsl)
         const rgb = hexToRgb(hex)
-        const hsl = hexToHsl(hex)
 
         hexText = `#${hex.toString(16).padStart(6, '0').toUpperCase()}`
         rgbText = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`

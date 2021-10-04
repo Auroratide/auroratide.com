@@ -38,3 +38,16 @@ export const hexToHsl = (hex: number): HslaValue => {
         l: Math.round(100 * l),
     }
 }
+
+// https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex
+export const hslToHex = ({h, s, l}: HslaValue): number => {
+    l /= 100
+    const a = s * Math.min(l, 1 - l) / 100
+    const f = n => {
+        const k = (n + h / 30) % 12
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1)
+        return Math.round(255 * color)
+    }
+
+    return (f(0) << 16) + (f(8) << 8) + f(4)
+}

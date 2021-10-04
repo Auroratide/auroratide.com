@@ -6,20 +6,20 @@ describe('Shade', () => {
     test('shows hex, rgb, and hsl', () => {
         component(Shade)
             .prop('label', 'test')
-            .prop('hex', 0x123456)
+            .prop('hsl', { h: 210, s: 65, l: 20 })
             .render()
 
-        expect(screen.queryByText(/#123456/)).toBeInTheDocument()
-        expect(screen.queryByText(/rgb\(18, 52, 86\)/)).toBeInTheDocument()
+        expect(screen.queryByText(/#123354/)).toBeInTheDocument()
+        expect(screen.queryByText(/rgb\(18, 51, 84\)/)).toBeInTheDocument()
         expect(screen.queryByText(/hsl\(210, 65%, 20%\)/)).toBeInTheDocument()
     })
 
     test('pads hex', () => {
         component(Shade)
             .prop('label', 'test')
-            .prop('hex', 0x000123)
+            .prop('hsl', { h: 238, s: 100, l: 7 })
             .render()
 
-        expect(screen.queryByText(/#000123/)).toBeInTheDocument()
+        expect(screen.queryByText(/#000124/)).toBeInTheDocument()
     })
 })
