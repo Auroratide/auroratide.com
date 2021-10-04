@@ -34,6 +34,66 @@
     --palette-autumn-orange: #D88F30;
     --palette-aella-green: #5EBF36;
     --palette-rgb-aella-green: 94, 191, 54;
+
+    --palette-aurorablue-wc: hsl(210, 68%, 45%);
+    --palette-aurorablue-cb: hsl(210, 72%, 57%);
+    --palette-aurorablue-lo: hsl(207, 52%, 97%);
+    --palette-aurorablue-do: hsl(213, 15%, 14%);
+    --palette-aurorablue-hsl: 210, 72%, 57%;
+
+    --palette-auroragreen-wc: hsl(155, 44%, 35%);
+    --palette-auroragreen-cb: hsl(155, 50%, 50%);
+    --palette-auroragreen-lo: hsl(153, 47%, 97%);
+    --palette-auroragreen-do: hsl(157, 12%, 14%);
+    --palette-auroragreen-hsl: 155, 50%, 50%;
+
+    --palette-fablelavender-wc: hsl(262, 58%, 58%);
+    --palette-fablelavender-cb: hsl(262, 64%, 68%);
+    --palette-fablelavender-lo: hsl(264, 50%, 97%);
+    --palette-fablelavender-do: hsl(260, 10%, 15%);
+    --palette-fablelavender-hsl: 262, 64%, 68%;
+
+    --palette-fablepink-wc: hsl(330, 60%, 49%);
+    --palette-fablepink-cb: hsl(330, 88%, 68%);
+    --palette-fablepink-lo: hsl(332, 83%, 97%);
+    --palette-fablepink-do: hsl(328, 12%, 16%);
+    --palette-fablepink-hsl: 330, 88%, 68%;
+
+    --palette-livianyellow-wc: hsl(48, 86%, 29%);
+    --palette-livianyellow-cb: hsl(48, 94%, 42%);
+    --palette-livianyellow-lo: hsl(50, 63%, 96%);
+    --palette-livianyellow-do: hsl(46, 19%, 14%);
+    --palette-livianyellow-hsl: 48, 94%, 42%;
+
+    --palette-autumnred-wc: hsl(357, 68%, 45%);
+    --palette-autumnred-cb: hsl(357, 98%, 60%);
+    --palette-autumnred-lo: hsl(359, 52%, 96%);
+    --palette-autumnred-do: hsl(355, 15%, 13%);
+    --palette-autumnred-hsl: 357, 68%, 45%;
+
+    --palette-autumnorange-wc: hsl(34, 60%, 37%);
+    --palette-autumnorange-cb: hsl(34, 70%, 52%);
+    --palette-autumnorange-lo: hsl(36, 66%, 96%);
+    --palette-autumnorange-do: hsl(30, 16%, 15%);
+    --palette-autumnorange-hsl: 34, 70%, 52%;
+
+    --palette-aellagreen-wc: hsl(102, 46%, 36%);
+    --palette-aellagreen-cb: hsl(102, 56%, 46%);
+    --palette-aellagreen-lo: hsl(100, 43%, 96%);
+    --palette-aellagreen-do: hsl(104, 12%, 14%);
+    --palette-aellagreen-hsl: 102, 56%, 46%;
+
+    --palette-eventideblack-wc: hsl(240, 8%, 20%);
+    --palette-eventideblack-cb: hsl(240, 8%, 56%);
+    --palette-eventideblack-lo: hsl(240, 0%, 94%);
+    --palette-eventideblack-do: hsl(240, 2%, 13%);
+    --palette-eventideblack-hsl: 240, 8%, 20%;
+
+    --palette-wintergrey-wc: hsl(200, 8%, 44%);
+    --palette-wintergrey-cb: hsl(200, 12%, 68%);
+    --palette-wintergrey-lo: hsl(180, 8%, 97%);
+    --palette-wintergrey-do: hsl(180, 1%, 16%);
+    --palette-wintergrey-hsl: 200, 12%, 68%;
   
     --palette-dev: #08090a;
     --palette-github: #333333;

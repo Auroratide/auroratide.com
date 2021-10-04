@@ -25,22 +25,22 @@
         padding: 0.25em 0.5em 0.25em 1.5em;
         border-left: 0.375rem solid;
         font-weight: normal;
-        border-left-color: var(--skin-color-info);
-        background: rgba(var(--skin-rgb-info), 0.06);
+        border-left-color: var(--skin-info-banner);
+        background: var(--skin-info-overlay);
     }
 
     small.warning {
-        border-left-color: var(--skin-color-warning);
-        background: rgba(var(--skin-rgb-warning), 0.06);
+        border-left-color: var(--skin-warning-banner);
+        background: var(--skin-warning-overlay);
     }
 
     small.success {
-        border-left-color: var(--skin-color-success);
-        background: rgba(var(--skin-rgb-success), 0.06);
+        border-left-color: var(--skin-success-banner);
+        background: var(--skin-success-overlay);
     }
 
     small.danger {
-        border-left-color: var(--skin-color-danger);
-        background: rgba(var(--skin-rgb-danger), 0.06);
+        border-left-color: var(--skin-danger-banner);
+        background: var(--skin-danger-overlay);
     }
 </style>

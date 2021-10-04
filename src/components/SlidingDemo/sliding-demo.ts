@@ -89,11 +89,11 @@ const css = `
     }
 
     .playing .controls button.play-pause {
-        background: var(--skin-color-danger);
+        background: var(--skin-danger-interactive);
     }
 
     .paused .controls button.play-pause {
-        background: var(--skin-color-success);
+        background: var(--skin-success-interactive);
     }
 
     .playing .controls button.play-pause vector-icon.play {

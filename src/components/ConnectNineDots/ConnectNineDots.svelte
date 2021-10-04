@@ -85,13 +85,13 @@
     }
 
     .puzzle-area.success {
-        border-color: var(--skin-color-success);
-        background-color: rgba(var(--skin-rgb-success), 0.1);
+        border-color: var(--skin-success-banner);
+        background-color: var(--skin-success-overlay);
     }
 
     .puzzle-area.failure {
-        border-color: var(--skin-color-danger);
-        background-color: rgba(var(--skin-rgb-danger), 0.1);
+        border-color: var(--skin-danger-banner);
+        background-color: var(--skin-danger-overlay);
     }
 
     .dot-area {

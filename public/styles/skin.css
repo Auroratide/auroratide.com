@@ -9,21 +9,43 @@
     --skin-banner: var(--palette-deep-blue);
     --skin-banner-text: var(--palette-greyscale-100);
 
-    --skin-color-primary: var(--palette-aurora-blue);
-    --skin-rgb-primary: var(--palette-rgb-aurora-blue);
-    --skin-text-primary: var(--palette-aurora-blue-text);
-    --skin-color-secondary: var(--palette-aurora-green);
-    --skin-rgb-secondary: var(--palette-rgb-aurora-green);
-    --skin-color-info: var(--palette-aurora-blue);
-    --skin-rgb-info: var(--palette-rgb-aurora-blue);
-    --skin-color-success: var(--palette-aella-green);
-    --skin-rgb-success: var(--palette-rgb-aella-green);
-    --skin-color-warning: var(--palette-livian-yellow);
-    --skin-rgb-warning: var(--palette-rgb-livian-yellow);
-    --skin-color-danger: var(--palette-autumn-red);
-    --skin-rgb-danger: var(--palette-rgb-autumn-red);
+    --skin-primary-banner: var(--palette-aurorablue-cb);
+    --skin-primary-interactive: var(--palette-aurorablue-wc);
+    --skin-primary-text: var(--palette-aurorablue-wc);
+    --skin-primary-overlay: var(--palette-aurorablue-lo);
+    --skin-primary-hsl: var(--palette-aurorablue-hsl);
 
-    --skin-text-visited: var(--palette-fable-lavender-text);
+    --skin-secondary-banner: var(--palette-auroragreen-cb);
+    --skin-secondary-interactive: var(--palette-auroragreen-wc);
+    --skin-secondary-text: var(--palette-auroragreen-wc);
+    --skin-secondary-overlay: var(--palette-auroragreen-lo);
+    --skin-secondary-hsl: var(--palette-auroragreen-hsl);
+
+    --skin-info-banner: var(--palette-aurorablue-cb);
+    --skin-info-interactive: var(--palette-aurorablue-wc);
+    --skin-info-text: var(--palette-aurorablue-wc);
+    --skin-info-overlay: var(--palette-aurorablue-lo);
+    --skin-info-hsl: var(--palette-aurorablue-hsl);
+
+    --skin-success-banner: var(--palette-aellagreen-cb);
+    --skin-success-interactive: var(--palette-aellagreen-wc);
+    --skin-success-text: var(--palette-aellagreen-wc);
+    --skin-success-overlay: var(--palette-aellagreen-lo);
+    --skin-success-hsl: var(--palette-aellagreen-hsl);
+
+    --skin-warning-banner: var(--palette-livianyellow-cb);
+    --skin-warning-interactive: var(--palette-livianyellow-wc);
+    --skin-warning-text: var(--palette-livianyellow-wc);
+    --skin-warning-overlay: var(--palette-livianyellow-lo);
+    --skin-warning-hsl: var(--palette-livianyellow-hsl);
+
+    --skin-danger-banner: var(--palette-autumnred-cb);
+    --skin-danger-interactive: var(--palette-autumnred-wc);
+    --skin-danger-text: var(--palette-autumnred-wc);
+    --skin-danger-overlay: var(--palette-autumnred-lo);
+    --skin-danger-hsl: var(--palette-autumnred-hsl);
+
+    --skin-visited: var(--palette-fablelavender-cb);
 
     --skin-font-heading: var(--typography-sans);
     --skin-font-text: var(--typography-sans);

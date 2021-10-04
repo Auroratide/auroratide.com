@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 a {
     text-decoration: underline;
-    color: var(--skin-text-primary);
+    color: var(--skin-primary-text);
 }
 
 a:hover, a:focus {
@@ -107,7 +107,7 @@ a:hover, a:focus {
 }
 
 a:visited {
-    color: var(--skin-text-visited);
+    color: var(--skin-visited);
 }
 
 p, ul, ol {
@@ -191,19 +191,19 @@ dd {
 }
 
 dt.info {
-    background: rgba(var(--skin-rgb-info), 0.25);
+    background: hsla(var(--skin-info-hsl), 0.2);
 }
 
 dt.warning {
-    background: rgba(var(--skin-rgb-warning), 0.25);
+    background: hsla(var(--skin-warning-hsl), 0.2);
 }
 
 dt.danger {
-    background: rgba(var(--skin-rgb-danger), 0.25);
+    background: hsla(var(--skin-danger-hsl), 0.2);
 }
 
 dt.success {
-    background: rgba(var(--skin-rgb-success), 0.25);
+    background: hsla(var(--skin-success-hsl), 0.2);
 }
 
 summary {
@@ -232,7 +232,7 @@ kbd {
 /* Buttons
    ========================================================================== */
 button, .as-button, ::part(button) {
-    --btn-color: var(--skin-color-primary);
+    --btn-color: var(--skin-primary-interactive);
     font-family: var(--skin-font-text);
     font-size: 1em;
     border: none;
@@ -271,7 +271,7 @@ button:active::before, .as-button:active::before, ::part(button):active::before 
 }
 
 button.secondary, .as-button.secondary, ::part(button secondary) {
-    --btn-color: var(--skin-color-secondary);
+    --btn-color: var(--skin-secondary-interactive);
 }
 
 button[disabled] {
@@ -302,7 +302,7 @@ textarea, ::part(textarea) {
 }
 
 textarea:focus, ::part(textarea):focus {
-    border-color: var(--skin-color-primary);
+    border-color: var(--skin-primary-interactive);
     outline: none;
 }
 
@@ -324,29 +324,29 @@ pre {
 pre code {
     display: block;
     line-height: 1.5em;
-    border: var(--sizing-border-xs) solid var(--skin-color-primary);
+    border: var(--sizing-border-xs) solid var(--skin-primary-banner);
     border-left-width: var(--sizing-border-md);
     padding: 0 var(--sizing-spacing-md);
     overflow: auto;
     background: none;
-    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-primary), 0.06) 50%);
+    background-image: linear-gradient(transparent 50%, var(--skin-primary-overlay) 50%);
     background-size: 3em 3em;
     border-radius: 0;
 }
 
 .success > pre code {
-    border-color: var(--skin-color-success);
-    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-success), 0.06) 50%);
+    border-color: var(--skin-success-banner);
+    background-image: linear-gradient(transparent 50%, var(--skin-success-overlay) 50%);
 }
 
 .warning > pre code {
-    border-color: var(--skin-color-warning);
-    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-warning), 0.06) 50%);
+    border-color: var(--skin-warning-banner);
+    background-image: linear-gradient(transparent 50%, var(--skin-warning-overlay) 50%);
 }
 
 .danger > pre code {
-    border-color: var(--skin-color-danger);
-    background-image: linear-gradient(transparent 50%, rgba(var(--skin-rgb-danger), 0.06) 50%);
+    border-color: var(--skin-warning-banner);
+    background-image: linear-gradient(transparent 50%, var(--skin-warning-overlay) 50%);
 }
 
 code .comment {

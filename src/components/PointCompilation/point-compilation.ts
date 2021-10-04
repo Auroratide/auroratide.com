@@ -29,7 +29,7 @@ export default () => {
         :host {
             display: block;
             margin-bottom: 1.5em;
-            --point-compilation-color: var(--skin-color-primary)
+            --point-compilation-color: var(--skin-primary-banner)
         }
 
         .point-compilation {

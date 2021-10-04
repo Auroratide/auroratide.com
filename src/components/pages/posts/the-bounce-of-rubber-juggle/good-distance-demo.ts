@@ -73,7 +73,7 @@ const css = `
 
     .on-collision {
         display: none;
-        color: var(--skin-color-success);
+        color: var(--skin-success-text);
     }
 
     .colliding .on-collision {

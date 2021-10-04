@@ -56,7 +56,7 @@ const css = `
 
     .on-collision {
         display: none;
-        color: var(--skin-color-success);
+        color: var(--skin-danger-text);
     }
 
     .colliding .on-collision {

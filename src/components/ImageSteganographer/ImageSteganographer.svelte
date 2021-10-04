@@ -164,11 +164,11 @@
     }
 
     .status-area.success {
-        background: var(--skin-color-success);
+        background: var(--skin-success-banner);
     }
 
     .status-area.failure {
-        background: var(--skin-color-danger);
+        background: var(--skin-danger-banner);
     }
 
     .feedback {
@@ -185,11 +185,11 @@
     }
 
     .feedback.success {
-        --burst-color: rgba(var(--skin-rgb-success), 0.25);
+        --burst-color: hsla(var(--skin-success-hsl), 0.2);
     }
 
     .feedback.failure {
-        --burst-color: rgba(var(--skin-rgb-danger), 0.25);
+        --burst-color: hsla(var(--skin-danger-hsl), 0.2);
     }
 
     canvas { display: none; }
