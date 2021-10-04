@@ -106,4 +106,16 @@
     --palette-adobe: #E61A23;
     --palette-stack-overflow: #f48024;
     --palette-npm: #cb3837;
+
+    --brand-dev: #08090a;
+    --brand-github: #333333;
+    --brand-itch-io: #ff5c5b;
+    --brand-linked-in: #0077B5;
+    --brand-twitter: #29AAE1;
+    --brand-facebook: #3B5998;
+    --brand-windows: #1DAEEC;
+    --brand-android: #A4C639;
+    --brand-adobe: #E61A23;
+    --brand-stack-overflow: #f48024;
+    --brand-npm: #cb3837;
 }

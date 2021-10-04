@@ -17,7 +17,7 @@
         "href": "https://www.npmjs.com/package/@auroratide/img-popout",
         "icon": "npm",
         "color": {
-            "type": "palette",
+            "type": "brand",
             "value": "npm"
         }
     }, {
@@ -32,7 +32,7 @@
         "href": "https://github.com/Auroratide/img-popout",
         "icon": "github-alt",
         "color": {
-            "type": "palette",
+            "type": "brand",
             "value": "github"
         }
     } ],

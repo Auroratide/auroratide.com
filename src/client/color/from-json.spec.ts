@@ -1,13 +1,33 @@
 import * as color from '.'
 
 describe('color from json', () => {
-    test('palette', () => {
-        const result = color.fromJson({
-            type: color.Format.Palette,
-            value: 'fable-pink',
+    describe('palette', () => {
+        test('palette', () => {
+            const result = color.fromJson({
+                type: color.Format.Palette,
+                value: 'fablepink',
+            })
+    
+            expect(result).toEqual('var(--skin-fablepink-banner)')
         })
 
-        expect(result).toEqual('var(--palette-fable-pink)')
+        test('old format (using hyphens)', () => {
+            const result = color.fromJson({
+                type: color.Format.Palette,
+                value: 'fable-pink',
+            })
+    
+            expect(result).toEqual('var(--skin-fablepink-banner)')
+        })
+    })
+
+    test('brand', () => {
+        const result = color.fromJson({
+            type: color.Format.Brand,
+            value: 'github',
+        })
+
+        expect(result).toEqual('var(--brand-github)')
     })
 
     test('hex', () => {
@@ -50,7 +70,13 @@ describe('color from json', () => {
         test('palette string', () => {
             const result = color.fromJson('fable-pink')
     
-            expect(result).toEqual('var(--palette-fable-pink)')
+            expect(result).toEqual('var(--skin-fablepink-banner)')
+        })
+
+        test('brand string', () => {
+            const result = color.fromJson('github')
+    
+            expect(result).toEqual('var(--brand-github)')
         })
     })
 })

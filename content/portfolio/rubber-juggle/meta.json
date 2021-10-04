@@ -17,7 +17,7 @@
         "href": "https://auroratide.itch.io/rubber-juggle",
         "icon": "itch-io",
         "color": {
-            "type": "palette",
+            "type": "brand",
             "value": "itch-io"
         }
     }, {
@@ -25,7 +25,7 @@
         "href": "https://github.com/Auroratide/rubber-juggle",
         "icon": "github",
         "color": {
-            "type": "palette",
+            "type": "brand",
             "value": "github"
         }
     } ],

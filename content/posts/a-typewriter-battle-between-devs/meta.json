@@ -17,7 +17,7 @@
         "href": "https://github.com/Auroratide/typewritten-text",
         "icon": "github-alt",
         "color": {
-            "type": "palette",
+            "type": "brand",
             "value": "github"
         }
     } ]
