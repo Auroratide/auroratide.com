@@ -7,6 +7,7 @@
     let hexText: string
     let rgbText: string
     let hslText: string
+    let textColor: string = '#ffffff'
 
     $: {
         const hex = hslToHex(hsl)
@@ -15,10 +16,11 @@
         hexText = `#${hex.toString(16).padStart(6, '0').toUpperCase()}`
         rgbText = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`
         hslText = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
+        textColor = hsl.l > 70 ? '#000000' : '#ffffff'
     }
 </script>
 
-<figure class="shade" style="--shade-color: {hexText};">
+<figure class="shade" style="--shade-color: {hexText}; --text-color: {textColor};">
     <figcaption>{label}</figcaption>
     <p class="hsl">{hslText}</p>
     <p class="hex rgb">{hexText} | {rgbText}</p>
@@ -26,7 +28,7 @@
 
 <style>
     .shade {
-        color: var(--skin-banner-text);
+        color: var(--text-color);
         background-color: var(--shade-color);
         padding: var(--sizing-spacing-sm) var(--sizing-spacing-md);
         margin: 0;

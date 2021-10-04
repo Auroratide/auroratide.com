@@ -22,4 +22,17 @@ describe('Shade', () => {
 
         expect(screen.queryByText(/#000124/)).toBeInTheDocument()
     })
+
+    test('very light background', () => {
+        component(Shade)
+            .prop('label', 'test')
+            .prop('hsl', { h: 0, s: 0, l: 100 })
+            .render()
+
+        expect(screen
+            .queryByText(/hsl\(0, 0%, 100%\)/)
+            .parentElement.style
+            .getPropertyValue('--text-color')
+        ).toEqual('#000000')
+    })
 })
