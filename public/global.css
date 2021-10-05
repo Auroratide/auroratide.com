@@ -297,10 +297,13 @@ textarea, ::part(textarea) {
     border: var(--sizing-border-sm) solid var(--skin-bg);
     border-radius: 0.25em;
     padding: var(--sizing-spacing-sm);
-    transition: border-color var(--transition-quick);
+    transition: all var(--transition-quick);
+    background: var(--skin-input);
+    color: var(--skin-content-color);
 }
 
 textarea:focus, ::part(textarea):focus {
+    background: var(--skin-content);
     border-color: var(--skin-primary-interactive);
     outline: none;
 }

@@ -5,6 +5,7 @@
 
     --skin-content: var(--palette-greyscale-100);
     --skin-content-text: var(--palette-greyscale-010);
+    --skin-input: var(--palette-greyscale-090);
 
     --skin-banner: var(--palette-deep-blue);
     --skin-banner-text: var(--palette-greyscale-100);
@@ -84,6 +85,7 @@
 
     --skin-content: var(--palette-greyscale-005);
     --skin-content-text: var(--palette-greyscale-075);
+    --skin-input: var(--palette-greyscale-010);
 
     --skin-banner: var(--palette-deep-blue);
     --skin-banner-text: var(--palette-greyscale-100);
