@@ -26,7 +26,7 @@
                 {/each}
             </ul>
         </div>
-        <div class="theme" hidden>
+        <div class="theme">
             <DarkModeSwitch />
         </div>
         <nav class="nav" aria-label="Site Navigation">
@@ -118,7 +118,7 @@
 
     .theme {
         grid-area: theme;
-        font-size: var(--sizing-font-md);
+        font-size: var(--sizing-font-sm);
         text-align: right;
         align-self: center;
     }
