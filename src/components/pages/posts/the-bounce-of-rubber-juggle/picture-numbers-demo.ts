@@ -58,6 +58,7 @@ const css = `
         background: #f7f7f7;
         padding: 1em;
         font-family: var(--skin-font-code);
+        color: #333;
     }
 
     .numbers dl {

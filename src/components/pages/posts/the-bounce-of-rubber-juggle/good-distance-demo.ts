@@ -61,6 +61,7 @@ const css = `
         font-size: 1.25em;
         background: #f7f7f7;
         padding: 1em 0.25em;
+        color: #333;
     }
     .indicator p {
         margin-top: 0;
@@ -87,10 +88,6 @@ const css = `
     @media screen and (min-width: 75rem) {
         .indicators {
             flex-direction: column;
-        }
-        
-        .indicator {
-            font-size: 1.5em;
         }
     }
 `
