@@ -1,11 +1,15 @@
 <script lang="ts">
+    import { onMount } from 'svelte'
+    import { isDark } from '@/client/stash/theme'
     import { quadInOut } from 'svelte/easing'
 
-    let isDark = false
+    onMount(() => {
+        document.body.classList.toggle('theme-dark', $isDark)
+    })
 
     const toggle = () => {
-        isDark = !isDark
-        document.body.classList.toggle('theme-dark', isDark)
+        $isDark = !$isDark
+        document.body.classList.toggle('theme-dark', $isDark)
     }
 
     const spinFade = (node: HTMLElement, params: any) => ({
@@ -19,8 +23,8 @@
     })
 </script>
 
-<button role="switch" aria-label="Dark Mode" aria-checked="{isDark}" on:click={toggle}>
-    {#if isDark}
+<button role="switch" aria-label="Dark Mode" aria-checked="{$isDark}" on:click={toggle}>
+    {#if $isDark}
         <vector-icon class="dark" icon="moon" transition:spinFade></vector-icon>
     {:else}
         <vector-icon class="light" icon="sun" transition:spinFade></vector-icon>
