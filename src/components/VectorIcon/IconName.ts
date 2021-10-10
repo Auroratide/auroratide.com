@@ -49,6 +49,7 @@ export const IconName = {
     SearchPlus: 'search-plus',
     Seedling: 'seedling',
     Shower: 'shower',
+    SmileWink: 'smile-wink',
     SquareFull: 'square-full',
     Stamp: 'stamp',
     SuitcaseRolling: 'suitcase-rolling',
