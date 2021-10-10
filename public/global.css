@@ -132,7 +132,7 @@ li:last-child {
     margin-bottom: 0;
 }
 
-strong {
+strong, b {
     font-weight: var(--typography-bold);
 }
 
@@ -154,6 +154,10 @@ blockquote p {
 
 blockquote p:last-child {
     margin-bottom: 0;
+}
+
+blockquote mark {
+    font-weight: var(--typography-bold);
 }
 
 hr {
@@ -226,6 +230,10 @@ kbd {
     border-bottom-width: var(--sizing-border-sm);
     border-radius: var(--sizing-spacing-xs);
     padding: var(--sizing-unit) var(--sizing-spacing-xs);
+}
+
+.font-larger {
+    font-size: 1.15em;
 }
 
 /* Buttons
