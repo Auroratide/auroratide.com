@@ -210,6 +210,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/what-html-tag-do-you-use-for-sarcasm"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/when-to-use-type-inference-in-haxe"
   to = "/index.html"
   status = 200

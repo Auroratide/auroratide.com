@@ -1,0 +1,15 @@
+{
+    "id": "what-html-tag-do-you-use-for-sarcasm",
+    "title": "What HTML tag do you use for sarcasm?",
+    "category": "software engineering",
+    "icon": "smile-wink",
+    "tags": ["html", "spec", "i", "sarcasm", "semantics"],
+    "color": {
+        "type": "palette",
+        "value": "fablepink"
+    },
+    "summary": "",
+    "long_summary": "",
+    "published_at": "",
+    "created_at": "2021-10-06T20:32:13.627Z"
+}
