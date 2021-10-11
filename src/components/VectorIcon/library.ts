@@ -8,6 +8,7 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons/faAngleLeft'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons/faAngleUp'
 import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
+import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
@@ -15,6 +16,7 @@ import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkbo
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck'
 import { faChessRook } from '@fortawesome/free-solid-svg-icons/faChessRook'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
+import { faCookieBite } from '@fortawesome/free-solid-svg-icons/faCookieBite'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
@@ -45,6 +47,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
@@ -90,6 +93,7 @@ export const library = {
     [IconName.AngleRight]: faAngleRight,
     [IconName.AngleUp]: faAngleUp,
     [IconName.Bomb]: faBomb,
+    [IconName.Book]: faBook,
     [IconName.BookOpen]: faBookOpen,
     [IconName.Calculator]: faCalculator,
     [IconName.CandyCane]: faCandyCane,
@@ -97,6 +101,7 @@ export const library = {
     [IconName.Check]: faCheck,
     [IconName.ChessRook]: faChessRook,
     [IconName.Code]: faCode,
+    [IconName.CookieBite]: faCookieBite,
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.Css3Alt]: faCss3Alt,
     [IconName.EllipsisH]: faEllipsisH,
@@ -128,6 +133,7 @@ export const library = {
     [IconName.Play]: faPlay,
     [IconName.Plus]: faPlus,
     [IconName.ProjectDiagram]: faProjectDiagram,
+    [IconName.QuestionCircle]: faQuestionCircle,
     [IconName.SearchPlus]: faSearchPlus,
     [IconName.Seedling]: faSeedling,
     [IconName.Shower]: faShower,
