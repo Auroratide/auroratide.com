@@ -210,7 +210,7 @@
   force = false
 
 [[redirects]]
-  from = "/posts/what-html-tag-do-you-use-for-sarcasm"
+  from = "/posts/making-sarcastic-text"
   to = "/index.html"
   status = 200
   force = false

@@ -48,10 +48,10 @@ And people have tried that! Let me introduce you to...
 
 <div class="punctuation-marks font-larger">
 
-* The <i lang="fr">point d'ironie</i> ![like a sullen, reversed question mark](/assets/posts/what-html-tag-do-you-use-for-sarcasm/point-d-ironie.svg) (1899)
-* The <i>irony point</i> ![an exclamation point with a curve through the middle](/assets/posts/what-html-tag-do-you-use-for-sarcasm/irony-point.svg) (1966)
-* The <i lang="nl">ironieteken</i> ![an exclamation mark bent like a lightning bolt](/assets/posts/what-html-tag-do-you-use-for-sarcasm/ironieteken.svg) (2007)
-* The [SarkMark](https://www.sarcmark.com/)<sup>TM</sup> ![a semi-spiral around a dot](/assets/posts/what-html-tag-do-you-use-for-sarcasm/sarkmark.svg) (2010, and yes... it's even trademarked ![sarkmark](/assets/posts/what-html-tag-do-you-use-for-sarcasm/sarkmark.svg))
+* The <i lang="fr">point d'ironie</i> ![like a sullen, reversed question mark](/assets/posts/making-sarcastic-text/point-d-ironie.svg) (1899)
+* The <i>irony point</i> ![an exclamation point with a curve through the middle](/assets/posts/making-sarcastic-text/irony-point.svg) (1966)
+* The <i lang="nl">ironieteken</i> ![an exclamation mark bent like a lightning bolt](/assets/posts/making-sarcastic-text/ironieteken.svg) (2007)
+* The [SarkMark](https://www.sarcmark.com/)<sup>TM</sup> ![a semi-spiral around a dot](/assets/posts/making-sarcastic-text/sarkmark.svg) (2010, and yes... it's even trademarked ![sarkmark](/assets/posts/making-sarcastic-text/sarkmark.svg))
 
 </div>
 
@@ -59,7 +59,7 @@ And of course, none of these ever caught on. Looks like we're stuck with just th
 
 <b>Except...</b>
 
-<article-image src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/what-if-i-told-you.png" alt="What if I told you we have hundreds of punctuation marks?" size="lg" width="834" height="438"></article-image>
+<article-image src="/assets/posts/making-sarcastic-text/what-if-i-told-you.png" alt="What if I told you we have hundreds of punctuation marks?" size="lg" width="834" height="438"></article-image>
 
 ## Beyond the period 🧐
 
@@ -111,7 +111,7 @@ And while `<sarcasm>` is _not_ a real HTML tag, people started using "&lt;/sarca
 
 _Wait wait wait_, did I say it wasn't a real tag? Let me correct myself real quick...
 
-<article-image nopopout src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/book-confusion.gif" alt="A man quickly flips through a book." width="640" height="360" size="lg">
+<article-image nopopout src="/assets/posts/making-sarcastic-text/book-confusion.gif" alt="A man quickly flips through a book." width="640" height="360" size="lg">
     <span slot="caption"><a href="https://tenor.com/view/book-confusion-huh-what-read-gif-16432979">Book Confusion</a> by <a href="https://tenor.com">tenor.com</a></span>
 </article-image>
 
@@ -137,7 +137,7 @@ In other words, **is there a way to denote sarcasm... with code?!**
 
 Did you know that some knives have holes in them?
 
-<article-image src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/knife.png" alt="A knife with three large holes on the blade." width="1157" height="593" size="lg">
+<article-image src="/assets/posts/making-sarcastic-text/knife.png" alt="A knife with three large holes on the blade." width="1157" height="593" size="lg">
     <span slot="caption">A <a href="https://www.cutco.com/products/product.jsp?item=traditional-cheese-knife">Cutco Cheese Knife</a></span>
 </article-image>
 
@@ -195,7 +195,7 @@ There's one **very big problem** with this idea, though.
 
 By default, the `<i>` tag _italicizes_ text, and by convention, italic text is interpretted as verbal stress, not sarcasm. It is possible to undo the italics with Cascading Style Sheets (<abbr>CSS</abbr>), a web technology that lets authors adjust how things look. But doing that leaves us back at the beginning: "That was perfect," with no indication of sarcasm!
 
-<article-image nopopout src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/eye-roll.gif" alt="A man dramatically rolls his eyes." width="220" height="118" size="md">
+<article-image nopopout src="/assets/posts/making-sarcastic-text/eye-roll.gif" alt="A man dramatically rolls his eyes." width="220" height="118" size="md">
     <span slot="caption"><a href="https://tenor.com/view/house-md-gregory-house-ugh-whatever-eye-roll-gif-7380271">Gregory House</a> by <a href="https://tenor.com">tenor.com</a></span>
 </article-image>
 
