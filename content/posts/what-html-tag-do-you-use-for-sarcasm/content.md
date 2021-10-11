@@ -1,16 +1,31 @@
+<style>
+    .percontation-mark-figure vector-icon {
+        font-size: calc(2 * var(--sizing-font-xl));
+        transform: scaleX(-1);
+    }
+
+    .punctuation-marks img {
+        height: 1em;
+        vertical-align: baseline;
+    }
+</style>
+
 Ah yes, sarcasm, the _pinnacle_ of human language. Life would be so _incredibly_ dull without it.
 
 And yet, despite sarcasm's profound influence on both oral and written conversation, we don't have a way to denote it in text! I mean, at least in person you can roll your eyes or change your tone to indicate some witty derision. But text? It's just neutral words on a page. We can't even use code to properly mark something as sarcastic!
 
-<b>Or <em>can</em> we?</b>
-
-**Important sections**
+**Or _can_ we?**
 
 * [Can't we use punctuation&#x2e2e;](#cant-we-use-punctuation)
 * [Beyond the period 🧐](#beyond-the-period-🧐)
 * [Huh, textual punctuation? &lt;/sarcasm&gt;](#huh-textual-punctuation-sarcasm)
 * [&lt;/sarcasm&gt; is official?!](#sarcasm-is-official)
 * [HTML Tags are like Knives](#html-tags-are-like-knives)
+* [Tagging Sarcasm with HTML](#tagging-sarcasm-with-html)
+  * [The... &lt;i&gt; Tag?](#the-i-tag)
+  * [<em>Em</em>ulating Verbal Cues](#emulating-verbal-cues)
+  * [But don't use &lt;q&gt;!](#but-dont-use-q)
+* [Sooo... where does this leave us?](#sooo-where-does-this-leave-us)
 
 ## Can't we use punctuation&#x2e2e;
 
@@ -18,9 +33,12 @@ Do you enjoy lemonade on a hot summer day. I know I sure do?
 
 ...Is it just me, or is something _off_ about those two sentences&#x2e2e;
 
-Sorry, that was meant to be a rhetorical question! You could tell because I used the <b class="keyword">percontation point</b>, that backwards question mark thing. It was invented in the 1500s specifically for our friendly question-statement hybrids. You don't really see it a lot nowadays though, as it fell out of favor a long time ago.
+Sorry, that was meant to be a rhetorical question! You could tell because I used the <b class="keyword">percontation point</b>, that backwards question mark thing. It was invented in the 1500s specifically for questions not meant to be answered. You don't really see it <del>a lot</del> <ins>ever</ins> nowadays though, as it fell out of favor a long time ago.
 
-TODO PIC?
+<figure class="percontation-mark-figure">
+    <vector-icon icon="question-circle" role="img" aria-label="A backwards question mark"></vector-icon>
+    <figcaption>The Percontation Point sure looks funky.</figcaption>
+</figure>
 
 Anyways, those first couple sentences feel wrong because I used unexpected punctuation. In a way, our periods, exclamation points, and question marks convey _tone_, namely a neutral, excited, and questioning tone respectively.
 
@@ -28,12 +46,12 @@ So if punctuation makes words sound exciting, how about punctuation for making s
 
 And people have tried that! Let me introduce you to...
 
-<div class="font-larger">
+<div class="punctuation-marks font-larger">
 
-* The <i lang="fr">point d'ironie</i> TODO (1899)
-* The <i>irony point</i> TODO (1966)
-* The <i lang="nl">ironieteken</i> TODO (2007)
-* The [SarkMark](https://www.sarcmark.com/)<sup>TM</sup> TODO (2010, and yes... it's even trademarked TODO SARKMARK)
+* The <i lang="fr">point d'ironie</i> ![like a sullen, reversed question mark](/assets/posts/what-html-tag-do-you-use-for-sarcasm/point-d-ironie.svg) (1899)
+* The <i>irony point</i> ![an exclamation point with a curve through the middle](/assets/posts/what-html-tag-do-you-use-for-sarcasm/irony-point.svg) (1966)
+* The <i lang="nl">ironieteken</i> ![an exclamation mark bent like a lightning bolt](/assets/posts/what-html-tag-do-you-use-for-sarcasm/ironieteken.svg) (2007)
+* The [SarkMark](https://www.sarcmark.com/)<sup>TM</sup> ![a semi-spiral around a dot](/assets/posts/what-html-tag-do-you-use-for-sarcasm/sarkmark.svg) (2010, and yes... it's even trademarked ![sarkmark](/assets/posts/what-html-tag-do-you-use-for-sarcasm/sarkmark.svg))
 
 </div>
 
@@ -41,7 +59,7 @@ And of course, none of these ever caught on. Looks like we're stuck with just th
 
 <b>Except...</b>
 
-TODO what if I told you we have hundreds of punctuation marks
+<article-image src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/what-if-i-told-you.png" alt="What if I told you we have hundreds of punctuation marks?" size="lg" width="834" height="438"></article-image>
 
 ## Beyond the period 🧐
 
@@ -59,7 +77,7 @@ The first two seem sincere in their praise, albeit in different ways. That last 
 
 So in a way, emoji used this way can be thought of _like_ punctuation, giving sentences a very wide variety of tones you'd otherwise only be able to pick up in person.
 
-TODO some image
+<icon-divider icon="smile-wink"></icon-divider>
 
 But maybe a yellow face isn't appropriate or possible where you want to make your snide comment. Is there a way to use _just text_ as punctuation?
 
@@ -91,9 +109,11 @@ Every start tag is paired with an end tag, so the `</strong>` there indicates th
 
 And while `<sarcasm>` is _not_ a real HTML tag, people started using "&lt;/sarcasm&gt;" to indicate the end of a sarcastic phrase!
 
-TODO PIC?
+_Wait wait wait_, did I say it wasn't a real tag? Let me correct myself real quick...
 
-Wait wait wait, did I say it wasn't a real tag? Let me correct myself real quick...
+<article-image nopopout src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/book-confusion.gif" alt="A man quickly flips through a book." width="640" height="360" size="lg">
+    <span slot="caption"><a href="https://tenor.com/view/book-confusion-huh-what-read-gif-16432979">Book Confusion</a> by <a href="https://tenor.com">tenor.com</a></span>
+</article-image>
 
 ## &lt;/sarcasm&gt; is official?!
 
@@ -107,7 +127,7 @@ Ironically, the instruction itself is rather sarcastic. But perhaps disappointin
 
 And besides, this just the _end_ tag; the handbook has nothing for a start tag `<sarcasm>`, and every _real_ HTML element has a start tag.
 
-TODO PIC IDEA
+<icon-divider icon="code"></icon-divider>
 
 Hmm, speaking of _real_ HTML elements... above we saw that `<strong>` was used to mark text as being very important, and yet it wasn't _named_ `<important>`. So, even if there's not an HTML element _named_ `<sarcasm>`, is it possible for there to be something we could _use_ for sarcasm?
 
@@ -117,8 +137,9 @@ In other words, **is there a way to denote sarcasm... with code?!**
 
 Did you know that some knives have holes in them?
 
-TODO PICTURE OF CHEESE KNIFE https://images.cutco.com/products/1000/p3/traditional-cheese-knife.jpg
-https://www.cutco.com/products/product.jsp?item=traditional-cheese-knife
+<article-image src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/knife.png" alt="A knife with three large holes on the blade." width="1157" height="593" size="lg">
+    <span slot="caption">A <a href="https://www.cutco.com/products/product.jsp?item=traditional-cheese-knife">Cutco Cheese Knife</a></span>
+</article-image>
 
 Those holes aren't there to be trendy. It turns out a knife like this is designed specifically for cutting _cheese_. I dunno if you're like me and just cut cheese with a normal knife, but sometimes when I do that the cheese sticks to the blade. The holes on a cheese knife prevent that stickage, allowing for a cleaner, far more exquisite cut.
 
@@ -126,7 +147,7 @@ Indeed, cooking is an advanced enough field that it has a specific knife for pra
 
 ...kinda like HTML tags! The [official HTML rulebook](https://html.spec.whatwg.org) lists a myriad of tags, each with a specific purpose in mind.
 
-TODO Image of the standard? or something like that
+<icon-divider icon="book"></icon-divider>
 
 See, HTML tags impart meaning, or **semantics**, to text they annotate. Here are some examples:
 
@@ -146,9 +167,9 @@ So our question, really, is whether or not the glorious HTML handbook has a tag 
   </details>
 </side-text>
 
-## Coding Sarcasm
+## Tagging Sarcasm with HTML
 
-Let's say your friend told a pretty bad joke, and somehow your able to respond with HTML code. You want to say, "That was perfect." Problem is, that phrase on its own is very ambiguous. If only you could mark it somehow...
+Let's say your friend told a pretty bad pun, and somehow your able to respond with HTML code. You want to say, "That was perfect." Problem is, that phrase on its own is very ambiguous. If only you could mark it somehow...
 
 ```html
 <SOMETHING?>That was perfect.</SOMETHING?>
@@ -158,7 +179,7 @@ Let's say your friend told a pretty bad joke, and somehow your able to respond w
 
 Well, there are dozens upon dozens of HTML tags, and _none_ of them are specifically for sarcasm. How perfect 🙃
 
-The one tag that comes the closest is the `<i>` tag. It has many uses, one of being used for text that is in an <q cite="https://html.spec.whatwg.org/#the-i-element">alternate voice or mood</q>. In a way, sarcasm _is_ a different mood from the rest of the text, so lacking an alternative...
+The one tag that comes the closest is the `<i>` tag. It has many uses, one of them being used for text that is in an <q cite="https://html.spec.whatwg.org/#the-i-element">alternate voice or mood</q>. In a way, sarcasm _is_ a different mood from the rest of the text, so lacking an alternative...
 
 ```html
 <i class="sarcasm">That was perfect.</i>
@@ -172,83 +193,84 @@ It is recommended to use `class` to specify why the `<i>` tag is being used, sin
 
 There's one **very big problem** with this idea, though.
 
-By default, the `<i>` tag _italicizes_ text, and by convention, italic text is interpretted as stress, not sarcasm.
+By default, the `<i>` tag _italicizes_ text, and by convention, italic text is interpretted as verbal stress, not sarcasm. It is possible to undo the italics with Cascading Style Sheets (<abbr>CSS</abbr>), a web technology that lets authors adjust how things look. But doing that leaves us back at the beginning: "That was perfect," with no indication of sarcasm!
 
+<article-image nopopout src="/assets/posts/what-html-tag-do-you-use-for-sarcasm/eye-roll.gif" alt="A man dramatically rolls his eyes." width="220" height="118" size="md">
+    <span slot="caption"><a href="https://tenor.com/view/house-md-gregory-house-ugh-whatever-eye-roll-gif-7380271">Gregory House</a> by <a href="https://tenor.com">tenor.com</a></span>
+</article-image>
 
-
---------------------
-
-### Don't use strong, q, or b
-
-There are dozens upon dozens of HTML tags, but most of them are irrelevant for sarcasm. Like, `<code>` is clearly for code and not sarcasm. Some tags, though, are not as clear.
-
-The `<strong>` tag is used to mark text as important or urgent. Sarcastic text is neither more important nor urgent than normal text, so `<strong>` is... _not_ so strong here 🙃
-
-The `<q>` tag is for an inline quote <q cite="https://html.spec.whatwg.org/#the-q-element">from another source</q>. Although "air quotes" hint at sarcasm, this tag should _only_ ever be used for quotes from _different_ source material. In fact, the handbook explicitly states <q cite="https://html.spec.whatwg.org/#the-q-element">it is inappropriate to use the q element for marking up sarcastic statements</q>.
-
-The `<b>` tag brings attention to text without imparting importance, such as denoting key words or actions. I like to call it the <b class="keyword">beckon</b> element, as by default it bolds text kinda like `<strong>` does, beckoning viewers toward it. Sarcastic text does not necessarily garner extra attention, so `<b>` isn't a good candidate, either.
-
-<side-text danger>
-
-The `<b>`, `<i>`, `<u>`, and `<s>` tags have a bad reputation among web authors because in older HTML versions, they did not actually have semantics and only changed formatting. However, in the current HTML standard, these elements have renewed semantic purpose.
-
-</side-text>
-
-### What about em?
-
-The `<em>` tag is for adding _stress_ to certain words or phrases in order to subtly change the meaning of a sentence. For example, the following two sentences are exactly the same, but because a different word is stressed in each (denoted with italics), they imply different situations.
-
-* "I did not eat the _donut_." - implying something else was eaten
-* "I did not _eat_ the donut." - implying something else happened to the donut
-
-For sarcasm, it does not make sense to emphasize the _entire_ sarcastic phrase, as people rarely verbally stress an _entire_ sentence. But maybe there's something else we can do with `<em>`. I'll get to that later...
-
-### What about i?
-
-And finally, the `<i>` tag represents text set apart from the surrounding text. Reasons for this could be the text is in an alternate voice/mood or the word is a technical term.
-
-<i class="internal-monologue">Hmm, should I put an example of an internal monologue here to demonstrate what "alternate voice/mood" can mean? I kinda don't want the article to be too long, but examples are cool...</i>
-
-Oh sorry, I dunno how my internal thought process got onto the page like that 🤭
-
-Does sarcasm constitute an "alternate mood"? Possibly! If the goal is to find an HTML tag which can mark an entire sentence as sarcastic, the `<i>` tag is probably the best one. That said, there's something better we can do...
-
-```html
-<i class="sarcasm">What a splendid way to denote sarcasm!</i>
-```
-
-<side-text>
-
-It is recommended to use `class` to specify why the `<i>` tag is being used, since the tag can be used for many different things.
-
-</side-text>
-
-## Combining em, i, and a secret ingredient
-
-There's one very big problem with using the `<i>` tag to denote sarcasm. Let's say I respond to someone's bad joke with "That was perfect," but I want to say it sarcastically. If I use `<i>` alone...
-
-```html
-<i class="sarcasm">That was perfect.</i>
-```
-
-The result is some italicized text, "<span style="font-style: italic;">That was perfect</span>." Thing is, italicized text conventionally means something _other_ than sarcasm, namely emphasis. Even if the text technically bears the "alternate mood" semantics, visually it is not useful.
+Even though the text is _semantically_ tagged as being sarcastic, it does not outwardly present itself that way, which is arguably _less_ than useless. If only there were _some_ other way to make something appear sarcastic...
 
 <side-text success>
 
-Among webdev conversation, textual semantics is usually tied with <b class="keyword">accessibility</b>, making pages work for abled and disabled people alike. By adding semantics to a page, it makes it more usable by people who cannot otherwise see the page.
+Textual semantics is usually tied with conversations about <b class="keyword">accessibility</b>, making pages work for abled and disabled people alike. By adding semantics to a page, it becomes more usable by people who cannot otherwise see the page.
 
-Thing is, accessibility goes both ways.
+Thing is, accessibility goes both ways. If a screen reader announces text as a title to a non-sighted person, then that text better _appear_ like a title to sighted people as well!
 
 </side-text>
 
-<major-point>
+### <em>Em</em>ulating Verbal Cues
 
-Accessibility applies equally to disabled and non-disabled folk.
+Sarcasm gets lost in text due to losing certain cues, like body language and tone. We saw that emoji are kind of able to simulate facial language, so is there a way to simulate _tone_?
 
-</major-point>
+In fact, there _is_, and I've been using it all throughout this post!
+
+All of the **_italic text_** hints at some kind of verbal stress. In HTML code, this is accomplished using the `<em>` tag, and according to the rulebook, its purpose is to <em>em</em>phasize words and phrases in order to change the overall meaning of the sentence.
+
+```html
+This <em>emphasizes</em> the word.
+```
+
+For example, the following two sentences are exactly the same, but because a different word is emphasized in each, they imply different situations.
+
+* "I did not eat the _cookie_." - implying something else was eaten
+* "I did not _eat_ the cookie." - implying something else happened to the cookie
+
+<icon-divider icon="cookie-bite"></icon-divider>
+
+So let's get back to our "That was perfect" phrase. Now equipped with the glorious power of `<em>`, we can do two things:
+
+* Add _word cues_, extra words that suggest a deeper meaning
+* Add _verbal stress_ to sharpen the phrase's sarcasm
+
+<blockquote style="font-style: normal;">
+    <p>Wow, <em>that</em> was <em>just</em> perfect.</p>
+</blockquote>
+
+```html
+Wow, <em>that</em> was <em>just</em> perfect.
+```
+
+### But don't use &lt;q&gt;!
+
+There's one last HTML element worth talking about: `<q>`! It represents text that is <q cite="https://html.spec.whatwg.org/#the-q-element">quoted from another source</q>, and has the effect of automatically adding quotation marks.
+
+Sarcasm is often associated with so-called "air quotes", but the `<q>` element is _only_ for quoting some other thing. In fact, the HTML handbook goes so far to say <q cite="https://html.spec.whatwg.org/#the-q-element">it is inappropriate to use the q element for marking up sarcastic statements</q>!
+
+So yeah, don't use it 🙃
+
+## Sooo... where does this leave us?
+
+Text loses both verbal and non-verbal cues, making it harder to detect sarcasm. Oh no!
+
+But when there's a will, there's a way!
+
+* Recreate facial cues with emoji 🙃
+* Wittily use textual convention to your advantage &lt;/sarcasm&gt;
+* In HTML code, tag a sentence as sarcastic with the `<i>` tag.
+* Or, strategically stress words with italics and `<em>`.
+
+So thousands of words later, I guess I should end by asking one last question.
+
+Was this ever _really_ a problem to begin with&#x2e2e;
 
 ## Resources
 
 * [How to show sarcasm in text](https://www.quickanddirtytips.com/education/grammar/how-to-show-sarcasm-in-text) - Sarah Peters
 * [Irony Punctuation](https://en.wikipedia.org/wiki/Irony_punctuation) - Wikipedia
-* 
+* [Egocentrism Over E-Mail](https://web-docs.stern.nyu.edu/pa/kruger_email_ego.pdf) - Kruger et al
+* [Extracting relevant knowledge for the detection of sarcasm](https://users.soe.ucsc.edu/~maw/papers/kbs_2014_justo.pdf) - Justo et al
+* [HTML Living Standard](https://html.spec.whatwg.org)
+  * [The i element](https://html.spec.whatwg.org/#the-i-element)
+  * [The em element](https://html.spec.whatwg.org/#the-em-element)
+  * [The q element](https://html.spec.whatwg.org/#the-q-element)
