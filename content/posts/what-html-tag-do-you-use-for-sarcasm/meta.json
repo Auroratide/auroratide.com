@@ -3,7 +3,7 @@
     "title": "What HTML tag do you use for sarcasm?",
     "category": "software engineering",
     "icon": "smile-wink",
-    "tags": ["html", "spec", "i", "sarcasm", "semantics"],
+    "tags": ["html", "spec", "i", "sarcasm", "semantics", "em", "emoji", "punctuation", "irony"],
     "color": {
         "type": "palette",
         "value": "fablepink"
