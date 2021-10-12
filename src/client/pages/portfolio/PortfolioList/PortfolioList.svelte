@@ -7,7 +7,7 @@
     import type { PortfolioItem } from '../types'
     import { CatastrophicError } from '@/client/CatastrophicError'
     import { UrlBuilder } from '@/client/routes'
-    import { ArticleCard } from '@/client/ArticleCard'
+    import { Card } from '../Card'
     import { SrOnly } from '@/client/SrOnly'
     import { FocusOnMe } from '@/client/FocusOnMe'
 
@@ -30,7 +30,7 @@
             <ul class="item-holder">
                 {#each items.filter(it => it.publishedAt) as item}
                     <li>
-                        <ArticleCard article={item} link={new UrlBuilder().portfolioItem(item.id)} />
+                        <Card article={item} link={new UrlBuilder().portfolioItem(item.id)} />
                     </li>
                 {/each}
             </ul>
