@@ -40,13 +40,17 @@
 
 <style>
     .item-holder {
-        padding: var(--sizing-spacing-md);
+        --gap-size: var(--sizing-spacing-md);
         list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(max(33%, 20em) - var(--gap-size)), 1fr));
+        grid-gap: var(--gap-size);
+        padding: var(--sizing-spacing-md);
         margin-bottom: 0;
     }
 
     .item-holder li {
-        margin-bottom: 0;
+        margin: 0;
     }
 
     @media screen and (min-width: 75rem) {

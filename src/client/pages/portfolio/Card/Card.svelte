@@ -16,28 +16,27 @@
 </script>
 
 <article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
-    <section>
+    <section class="info">
         <h2 class="title"><a href={link}>{article.title}</a></h2>
-        <small class="byline">
-            <date-display date={article.publishedAt} />
-            <span class="bullet" aria-hidden="true">&bull;</span>
-            <span class="category">{article.category}</span>
-        </small>
-        <p class="summary short">{article.summary}</p>
-        <p class="summary long">{article.longSummary}</p>
+        <p class="summary">{article.summary}</p>
     </section>
-    <figure>
-        <div class="circle">
-            <vector-icon icon={article.icon}></vector-icon>
-        </div>
-    </figure>
+    <section class="supplementary">
+        <span class="category">{article.category}</span>
+        <date-display date={article.publishedAt} />
+        <figure>
+            <div class="circle">
+                <vector-icon icon={article.icon}></vector-icon>
+            </div>
+        </figure>
+    </section>
 </article>
 
 <style>
     .article-card {
         position: relative;
-        display: block;
-        margin: 0 0 var(--sizing-spacing-md);
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
         padding: 0;
         background: var(--skin-content);
     }
@@ -45,14 +44,17 @@
     .article-card:hover, .article-card:focus-within {
         outline: var(--sizing-border-sm) solid var(--article-color);
     }
+    
+    .article-card .info {
+        padding: var(--sizing-spacing-sm);
+    }
 
     .article-card .title {
         font-size: var(--sizing-font-md);
         font-weight: var(--typography-bold);
         line-height: 1;
-        padding: var(--sizing-spacing-sm) calc(2 * var(--sizing-spacing-xl)) var(--sizing-spacing-sm) var(--sizing-spacing-sm);
-        margin-bottom: var(--sizing-spacing-sm);
-        background: var(--article-color);
+        padding: var(--sizing-spacing-sm) 0;
+        margin-bottom: 0;
         text-align: left;
     }
 
@@ -67,43 +69,51 @@
     }
 
     .article-card .title a {
-        color: var(--palette-greyscale-100);
+        color: var(--skin-content-text);
         text-decoration: none;
     }
 
-    .article-card .byline {
-        display: block;
-        opacity: 0.75;
-        margin-bottom: var(--sizing-spacing-sm);
-        padding-left: var(--sizing-spacing-sm);
-        font-weight: var(--typography-normal);
-        line-height: 1.15;
-    }
-
-    .article-card .bullet {
-        display: inline-block;
-        margin: 0 var(--sizing-spacing-xs);
-    }
-
     .article-card .summary {
-        padding: 0 var(--sizing-spacing-sm) var(--sizing-spacing-sm) var(--sizing-spacing-sm);
+        padding: 0;
         margin-bottom: 0;
     }
 
     .article-card figure {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         overflow: hidden;
-        font-size: calc(2 * var(--sizing-font-xs));
-    }
-
-    .article-card .summary.long {
-        display: none;
+        font-size: calc(5 * var(--sizing-font-xs));
+        margin: 0;
     }
 
     .article-card .category {
         text-transform: capitalize;
+    }
+
+    .article-card .supplementary {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        height: calc(9 * var(--sizing-font-xs));
+    }
+
+    .article-card .category {
+        background: var(--article-color);
+        color: var(--skin-banner-text);
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: right;
+        padding-right: var(--sizing-spacing-sm);
+        font-weight: var(--typography-normal);
+    }
+
+    .article-card date-display {
+        text-align: right;
+        padding-right: var(--sizing-spacing-sm);
+        font-weight: var(--typography-normal);
+        opacity: 0.75;
     }
 
     .circle {
@@ -117,60 +127,6 @@
         color: var(--palette-greyscale-100);
         position: relative;
         bottom: 0.375em;
-        left: 0.375em;
-    }
-
-    @media screen and (min-width: 75rem) {
-        .article-card {
-            margin-bottom: var(--sizing-spacing-xl);
-            border-left: 0 solid var(--article-color);
-            width: 100%;
-            transition: border-left-width var(--transition-quick), width var(--transition-quick);
-            display: flex;
-            background: var(--skin-content);
-        }
-
-        .article-card:hover, .article-card:focus-within {
-            border-left-width: var(--sizing-border-lg);
-            width: calc(100% + var(--sizing-border-lg));
-            outline: none;
-        }
-        
-        .article-card section {
-            flex: 1;
-            padding: var(--sizing-spacing-md);
-        }
-
-        .article-card .title {
-            margin-bottom: var(--sizing-spacing-xs);
-            padding: 0;
-            background: none;
-        }
-
-        .article-card .title a {
-            color: var(--skin-content-text);
-        }
-
-        .article-card .byline {
-            padding: 0;
-        }
-
-        .article-card .summary {
-            padding: 0;
-        }
-
-        .article-card figure {
-            position: relative;
-            font-size: calc(4 * var(--sizing-font-xs));
-            margin: 0;
-        }
-
-        .article-card .summary.short {
-            display: none;
-        }
-
-        .article-card .summary.long {
-            display: block;
-        }
+        left: -0.375em;
     }
 </style>
