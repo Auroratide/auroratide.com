@@ -1,11 +1,14 @@
 <script lang="ts">
     import type { Color } from '@/client/color'
+    import type { ImageSet } from '../types'
+    import { UrlBuilder } from '@/client/routes'
     import * as color from '@/client/color'
 
     export let link: string
     export let article: {
         id: string,
         title: string,
+        cover?: ImageSet,
         publishedAt?: Date,
         category: string,
         summary: string,
@@ -25,7 +28,11 @@
         <date-display date={article.publishedAt} />
         <figure>
             <div class="circle">
-                <vector-icon icon={article.icon}></vector-icon>
+                {#if article.cover}
+                    <img src={new UrlBuilder().assets().portfolioItem(article.id).asset(article.cover.original)} alt={article.cover.alt} />
+                {:else}
+                    <vector-icon icon={article.icon}></vector-icon>
+                {/if}
             </div>
         </figure>
     </section>
@@ -87,6 +94,10 @@
         margin: 0;
     }
 
+    .article-card figure img {
+        width: 100%;
+    }
+
     .article-card .category {
         text-transform: capitalize;
     }
@@ -128,5 +139,7 @@
         position: relative;
         bottom: 0.375em;
         left: -0.375em;
+        overflow: hidden;
+        box-shadow: 0 0 0.25em var(--palette-shade-025);
     }
 </style>

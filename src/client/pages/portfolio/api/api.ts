@@ -11,6 +11,7 @@ class Fetch extends FetchResourceApi<PortfolioItem> {
         title: data.title,
         category: data.category,
         tags: data.tags,
+        cover: data.cover,
         icon: data.icon,
         color: data.color,
         summary: data.summary,
