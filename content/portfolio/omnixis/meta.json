@@ -3,6 +3,10 @@
   "title": "Omnixis",
   "category": "games",
   "tags": ["tetris", "haxe", "flixel", "jam", "ludum dare", "innovation", "survial"],
+  "cover": {
+    "original": "cover.png",
+    "alt": "A conglomeration of tetris pieces."
+  },
   "icon": "th",
   "color": "fable-pink",
   "summary": "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions!",

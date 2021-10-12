@@ -3,6 +3,10 @@
   "title": "Nonupo",
   "category": "games",
   "tags": ["flash", "actionscript", "artificial intelligence", "puzzle", "math", "multiplayer"],
+  "cover": {
+    "original": "cover.png",
+    "alt": "Some numbers and a plus sign in a grid."
+  },
   "icon": "plus",
   "color": "aurora-blue",
   "summary": "A mathy game where you and an opponent place numbers on a grid to get the score closest to 0. My first object-oriented project, affectionately made in Flash.",

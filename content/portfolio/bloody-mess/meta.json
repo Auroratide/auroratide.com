@@ -3,6 +3,10 @@
     "title": "Bloody Mess",
     "category": "games",
     "tags": ["unity", "jam", "blood", "cartoon", "3d", "hospital", "survival"],
+    "cover": {
+      "original": "cover.png",
+      "alt": "A cartoonified blood puddle."
+    },
     "icon": "hospital-alt",
     "color": "autumn-red",
     "summary": "A Unity game made for University of Advancing Technology's summer game jam where stay alive by collecting puddles of blood before mops clean you up.",

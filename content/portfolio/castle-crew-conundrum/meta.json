@@ -3,6 +3,10 @@
   "title": "Castle Crew Conundrum",
   "category": "games",
   "tags": ["construct", "html5", "multiplayer", "jam", "defense"],
+  "cover": {
+    "original": "cover.png",
+    "alt": "A stick figure operating a crane."
+  },
   "icon": "chess-rook",
   "color": "eventide-black",
   "summary": "Game made for Ludum Dare 34, an online game jam. It's a local multiplayer game, so invite some friends to help defend your castle from some golems!",

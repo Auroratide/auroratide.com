@@ -3,6 +3,10 @@
     "title": "Rubber Juggle",
     "category": "games",
     "tags": ["html5", "typescript", "pixi", "survival", "mobile", "jam", "balloons", "pegs", "connections"],
+    "cover": {
+        "original": "cover.png",
+        "alt": "A blue balloon next to a red peg."
+      },
     "icon": "thumbtack",
     "color": {
         "type": "palette",

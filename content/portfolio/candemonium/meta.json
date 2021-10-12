@@ -3,6 +3,10 @@
     "title": "Candemonium",
     "category": "games",
     "tags": ["flash", "actionscript", "candy", "jam", "bullet hell", "levels"],
+    "cover": {
+      "original": "cover.png",
+      "alt": "Some candy."
+    },
     "icon": "candy-cane",
     "color": "fable-lavender",
     "summary": "A game I made for a Texas Aggie Game Developers jam. All you have to do is dodge the candies!",

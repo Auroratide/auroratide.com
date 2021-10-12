@@ -3,6 +3,10 @@
   "title": "Cosmic Upheaval",
   "category": "games",
   "tags": ["jam", "gamemaker", "space", "shooter", "windows", "sun", "sidescroller", "star"],
+  "cover": {
+    "original": "cover.png",
+    "alt": "A big blue sun."
+  },
   "icon": "sun",
   "color": "livian-yellow",
   "summary": "A game where you are an antimatter star trying to survive a hostile universe. Made in Gamemaker for a Texas Aggie Game Developers contest.",
