@@ -1,0 +1,24 @@
+{
+    "id": "darkness-and-screaming",
+    "title": "Microstory: Darkness and Screaming",
+    "category": "storytelling",
+    "icon": "heart",
+    "tags": ["story", "writing prompt", "reddit", "microstory", "romance", "blind", "disability", "horror", "dialog"],
+    "color": {
+        "type": "palette",
+        "value": "eventideblack"
+    },
+    "summary": "People find their soulmates through dreams they have of each other, but all I get are nightmares of darkness and screaming.",
+    "long_summary": "People find their soulmates through dreams they have of each other, but all I get are nightmares of darkness and screaming.",
+    "published_at": "2021-11-15T20:00:00.000Z",
+    "created_at": "2021-11-15T16:30:23.985Z",
+    "links": [ {
+        "title": "Reddit",
+        "href": "https://www.reddit.com/r/WritingPrompts/comments/qpwssv/wp_soulmates_exist_you_have_flashes_of_of_what/",
+        "icon": "reddit-alien",
+        "color": {
+            "type": "brand",
+            "value": "reddit"
+        }
+    } ]
+}

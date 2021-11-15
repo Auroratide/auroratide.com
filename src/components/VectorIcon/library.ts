@@ -29,6 +29,7 @@ import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
 import { faGavel } from '@fortawesome/free-solid-svg-icons/faGavel'
 import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons/faGripLinesVertical'
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
 import { faICursor } from '@fortawesome/free-solid-svg-icons/faICursor'
@@ -77,6 +78,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5'
 import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
+import { faRedditAlien } from '@fortawesome/free-brands-svg-icons'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow'
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
 import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
@@ -115,6 +117,7 @@ export const library = {
     [IconName.Gavel]: faGavel,
     [IconName.GripLinesVertical]: faGripLinesVertical,
     [IconName.HandPointer]: faHandPointer,
+    [IconName.Heart]: faHeart,
     [IconName.HospitalAlt]: faHospitalAlt,
     [IconName.HourglassHalf]: faHourglassHalf,
     [IconName.ICursor]: faICursor,
@@ -163,6 +166,7 @@ export const library = {
     [IconName.Html5]: faHtml5,
     [IconName.Kafka]: kafka,
     [IconName.Npm]: faNpm,
+    [IconName.RedditAlien]: faRedditAlien,
     [IconName.StackOverflow]: faStackOverflow,
     [IconName.Unity]: faUnity,
     [IconName.Windows]: faWindows,

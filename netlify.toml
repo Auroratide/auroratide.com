@@ -102,6 +102,12 @@
   force = false
 
 [[redirects]]
+  from = "/posts/darkness-and-screaming"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/posts/enhancing-creativity-by-deferring-judgement"
   to = "/index.html"
   status = 200
@@ -121,6 +127,12 @@
 
 [[redirects]]
   from = "/posts/making-a-toggle-switch"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/making-sarcastic-text"
   to = "/index.html"
   status = 200
   force = false
@@ -205,12 +217,6 @@
 
 [[redirects]]
   from = "/posts/veritasium-this-will-revolutionize-education"
-  to = "/index.html"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/posts/making-sarcastic-text"
   to = "/index.html"
   status = 200
   force = false
