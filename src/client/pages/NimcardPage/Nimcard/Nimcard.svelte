@@ -46,4 +46,8 @@
     :global(nimcard-game ol ol li) {
         margin-bottom: 0;
     }
+
+    :global(nimcard-game .dialog) {
+        background-color: var(--skin-bg) !important;
+    }
 </style>
