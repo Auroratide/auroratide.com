@@ -22,8 +22,8 @@
 </script>
 
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.0/lib/define.js"></external-resource>
-<external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.0/component/lib/define.js"></external-resource>
-<external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.0/component/lib/style.css"></external-resource>
+<external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/define.js"></external-resource>
+<external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/style.css"></external-resource>
 <nimcard-game bind:this={element} aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
 
 <style>
