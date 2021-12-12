@@ -29,13 +29,18 @@ export class ExternalResource extends HTMLElement {
     get type(): ExternalResourceType {
         return this.getAttribute('type') as ExternalResourceType
     }
+    set type(value: ExternalResourceType) {
+        this.setAttribute('type', value)
+    }
 
     get src(): string {
         return this.getAttribute('src')
     }
+    set src(value: string) {
+        this.setAttribute('src', value)
+    }
 
     private createExternalResource() {
-        console.log(this.type)
         if (!this.created && this.type && this.src) {
             if (this.type === ExternalResourceType.JsModule) {
                 const elem = document.createElement('script')

@@ -8,8 +8,12 @@ module.exports = {
   transform: {
     '^.+\\.svelte$': ['svelte-jester', {
       preprocess: true
-    }]
+    }],
+    "\\.[jt]sx?$": "babel-jest",
   },
   setupFilesAfterEnv: [ path.join(__dirname, 'src', 'testing', 'setup.ts') ],
   modulePathIgnorePatterns: ['<rootDir>/scripts'],
+  transformIgnorePatterns: [
+    "/node_modules/(?!@auroratide/nimcard)"
+  ]
 };

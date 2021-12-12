@@ -21,6 +21,7 @@
     import { Styleguide } from './pages/Styleguide'
     import { SandboxPage } from './pages/SandboxPage'
     import { Carica } from './pages/Carica'
+    import { NimcardPage } from './pages/NimcardPage'
     import { PageNotFound } from './pages/PageNotFound'
     import { ResourceProvider } from './ResourceProvider'
     import { navigation } from './routes'
@@ -68,6 +69,7 @@
     page(navigation.Styleguide.link, () => context = { component: Styleguide, params: {} })
     page(navigation.Sandbox.link, () => context = { component: SandboxPage, params: {} })
     page(navigation.Carica.link, () => context = { component: Carica, params: {} })
+    page(navigation.Nimcard.link, () => context = { component: NimcardPage, params: {} })
     
     page('*', () => context = { component: PageNotFound, params: {} })
 
