@@ -71,7 +71,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@types/page": "^1.11.1",
-    "marked": "^2.0.1",
+    "marked": "^4.0.10",
     "page": "^1.11.6",
     "prismjs": "^1.23.0",
     "serve": "^11.3.2",
