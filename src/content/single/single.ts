@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs/promises'
 import mkdirp from 'mkdirp'
-import marked from 'marked'
+import { marked } from 'marked'
 
 interface Options {
     name: string
@@ -10,7 +10,7 @@ interface Options {
 }
 
 const parse = async (dir: string) => {
-    const content = marked(await fs.readFile(path.join(dir, 'content.md'), { encoding: 'utf-8' }))
+    const content = marked.parse(await fs.readFile(path.join(dir, 'content.md'), { encoding: 'utf-8' }))
 
     return { content }
 }

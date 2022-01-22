@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs/promises'
 import mkdirp from 'mkdirp'
-import marked from 'marked'
+import { marked } from 'marked'
 
 interface Options {
     name: string
@@ -14,7 +14,7 @@ const parseAll = async (dir: string) => {
     return Promise.all(entries.map(async entry => {
         const entryPath = path.join(dir, entry)
         const meta = JSON.parse(await fs.readFile(path.join(entryPath, 'meta.json'), { encoding: 'utf-8' }))
-        const content = marked(await fs.readFile(path.join(entryPath, 'content.md'), { encoding: 'utf-8' }))
+        const content = marked.parse(await fs.readFile(path.join(entryPath, 'content.md'), { encoding: 'utf-8' }))
 
         return { content, ...meta }
     }))
