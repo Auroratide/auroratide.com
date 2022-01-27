@@ -66,6 +66,12 @@
   force = false
 
 [[redirects]]
+  from = "/nimcard"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/portfolio/peggle-juggle"
   to = "/portfolio/rubber-juggle"
   status = 301
@@ -157,6 +163,12 @@
 
 [[redirects]]
   from = "/posts/pixelart-and-the-image-rendering-paradox"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/posts/server-side-rendering-a-random-number"
   to = "/index.html"
   status = 200
   force = false

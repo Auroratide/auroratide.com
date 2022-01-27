@@ -55,6 +55,10 @@
         max-height: 15em;
     }
 
+    .article-image.xl img {
+        max-height: 20em;
+    }
+
     .article-image.fit img {
         width: 100%;
     }

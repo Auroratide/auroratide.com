@@ -52,6 +52,7 @@ export const IconName = {
     QuestionCircle: 'question-circle',
     SearchPlus: 'search-plus',
     Seedling: 'seedling',
+    Server: 'server',
     Shower: 'shower',
     SmileWink: 'smile-wink',
     SquareFull: 'square-full',
