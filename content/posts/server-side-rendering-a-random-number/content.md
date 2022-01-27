@@ -31,8 +31,8 @@ The footage here is slowed down, but for some reason _two_ random numbers get sh
 Essentially, the random number is being generated twice: once on the **server**, and once on the **client** computer. This is because some frontend frameworks, SvelteKit included, practice something called <dfn>server-side rendering</dfn> (<abbr>SSR</abbr>):
 
 1. The server runs the framework's Javascript code to generate nice juicy <abbr title="Hypertext Markup Language">HTML</abbr>, and the result is sent to the browser to render.
-2. The browser renders the result, and begins downloading the framework's javascript code.
-3. Once downloaded, the framework **hydrates** the existing HTML with the javascript, making the page interactive and reactive.
+2. The browser renders the result, and begins downloading the Javascript code.
+3. Once downloaded, the framework **hydrates** the existing HTML with the Javascript, making the page interactive.
 
 <article-image src="/assets/posts/server-side-rendering-a-random-number/ssr-flow.png" alt="Step 1: JS on server becomes HTML; Step 2: HTML goes to client; Step 3: JS hydrates on client" size="xl" width="900" height="642">
   <span slot="caption">Flow diagram illustrating server-side rendering</span>
@@ -42,7 +42,7 @@ Essentially, the random number is being generated twice: once on the **server**,
 
 The hydration step is key to understanding the problem with randomness.
 
-Imagine for a moment that you just purchased a new flashlight. Dang, it sure is nice that you don't have to build one yourself! Unfortunately, the flashlight does not come with batteries, so you have to install those yourself before you can light up your day. To help you out, the shipment provides instructions on where the batteries should go:
+Imagine for a moment that you just purchased a new flashlight. Dang, it sure is nice that you don't have to build one yourself! Unfortunately, the flashlight does not come with batteries, so you have to install those before you can light up your day. To help you out, the shipment provides instructions on where the batteries should go:
 
 <article-image src="/assets/posts/server-side-rendering-a-random-number/flashlight-analogy.png" alt="A flashlight on the left contrasted with a different kind of flashlight on the right, the right demonstrating where the battery goes" size="lg" width="1000" height="554">
   <span slot="caption">What you got does not match the provided instructions</span>
@@ -218,6 +218,8 @@ And _finally_, we can use all this infrastructure to get a random number that is
 
 The approach I took above was perfect for my use case in which the random numbers were used solely for aesthetics. If, however, you need random numbers for something security-related, definitely double check whether this approach fits within your constraints!
 
+Additionally, the solution presented here works iff the server and client generate content _in the same order_. You could imagine that if the client built the page backward, the same sequence of random numbers would be generated but they'd be applied to different pieces of the page. I'm not sure why this would happen, but if this is a significant factor for you, then it requires a more nuanced approach.
+
 ### Github Repo
 
 As usual, here's a repo to explore the raw solution. Hopefully it is helpful!
@@ -235,4 +237,4 @@ As usual, here's a repo to explore the raw solution. Hopefully it is helpful!
 
 And a bonus tip:
 
-* When you get stuck, ask for help! I was scratching my head for a while before asking the folks at [Stack Overflow](https://stackoverflow.com/questions/70714461/sveltekit-rendering-a-random-prop-is-different-between-server-and-client/70776238), and as a result I got not just a potential solution but learned more about how SvelteKit works.
+* When you get stuck, ask for help! I was scratching my head for a while before asking the folks at [Stack Overflow](https://stackoverflow.com/questions/70714461/sveltekit-rendering-a-random-prop-is-different-between-server-and-client/70776238), and as a result I learned something new about how SvelteKit works.

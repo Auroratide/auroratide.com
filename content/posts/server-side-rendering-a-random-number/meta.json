@@ -10,6 +10,6 @@
     },
     "summary": "If you are not careful, rendering a random number with SSR can lead to inconsistencies.",
     "long_summary": "On a recent project of mine, I was trying to create a component with some randomized parameters in SvelteKit. To my dismay, SvelteKit's server-side rendering was causing a problem! Let's talk about what the problem was and how to render random numbers with SSR.",
-    "published_at": "",
+    "published_at": "2022-01-27T23:50:00.000Z",
     "created_at": "2022-01-26T17:58:20.774Z"
 }
