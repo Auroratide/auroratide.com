@@ -6,7 +6,7 @@
   "scripts": {
     "start": "svelte-kit preview",
     "ci": "npm-run-all validate test build",
-    "dev": "npm-run-all --parallel build:components dev:kit",
+    "dev": "npm run build:content && npm-run-all --parallel build:components dev:kit",
     "dev:kit": "svelte-kit dev",
     "build": "npm-run-all build:components build:content build:kit",
     "build:kit": "svelte-kit build",
