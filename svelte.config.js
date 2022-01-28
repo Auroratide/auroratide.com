@@ -1,5 +1,11 @@
-const sveltePreprocess = require("svelte-preprocess")
+import adapter from '@sveltejs/adapter-static'
+import sveltePreprocess from 'svelte-preprocess'
 
-module.exports = {
+/** @type {import('@sveltejs/kit').Config} */
+export default {
     preprocess: sveltePreprocess(),
+    kit: {
+        adapter: adapter(),
+        target: '#root',
+    },
 }

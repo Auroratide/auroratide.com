@@ -1,7 +1,7 @@
 <external-resource type="css" src="https://unpkg.com/@auroratide/typewritten-text@0.1.4/lib/style.css"></external-resource>
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/typewritten-text@0.1.4/lib/define.js"></external-resource>
 
-A couple weeks ago, an interesting battle of sorts spontaneously erupted between a few developers on a site a frequent, [dev.to](dev.to). It was pretty simple: make a classic **typewriter animation** using your favorite web technologies!
+A couple weeks ago, an interesting battle of sorts spontaneously erupted between a few developers on a site a frequent, [dev.to](https://dev.to). It was pretty simple: make a classic **typewriter animation** using your favorite web technologies!
 
 <p style="text-align: center;">This is a <typewritten-text repeat><strong>typewriter animation!</strong></typewritten-text></p>
 

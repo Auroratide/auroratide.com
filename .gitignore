@@ -2,5 +2,16 @@
 /public/build
 /public/api
 
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+.netlify
+
 # Mac
 .DS_Store
+
+/static/api
+/static/build

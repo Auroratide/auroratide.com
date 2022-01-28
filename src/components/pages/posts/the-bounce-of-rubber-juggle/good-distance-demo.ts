@@ -1,6 +1,6 @@
-import type { SlidingDemoElement } from '@/components/SlidingDemo/sliding-demo'
-import type { BalloonElement } from '@/components/RubberJuggle/balloon'
-import type { PegElement } from '@/components/RubberJuggle/peg'
+import type { SlidingDemoElement } from '../../../SlidingDemo/sliding-demo'
+import type { BalloonElement } from '../../../RubberJuggle/balloon'
+import type { PegElement } from '../../../RubberJuggle/peg'
 
 const html = `
     <sliding-demo autoplay>

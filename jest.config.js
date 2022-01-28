@@ -1,9 +1,11 @@
-const path = require('path')
+import path from 'path'
 
-module.exports = {
+export default {
   preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^@\/(.*)': '<rootDir>/src/$1'
+    '\\$lib(.*)': '<rootDir>/src/lib$1',
+    '^@\/(.*)': '<rootDir>/src/$1',
   },
   transform: {
     '^.+\\.svelte$': ['svelte-jester', {
@@ -11,9 +13,9 @@ module.exports = {
     }],
     "\\.[jt]sx?$": "babel-jest",
   },
-  setupFilesAfterEnv: [ path.join(__dirname, 'src', 'testing', 'setup.ts') ],
+  setupFilesAfterEnv: [ path.resolve('test', 'testing', 'setup.ts') ],
   modulePathIgnorePatterns: ['<rootDir>/scripts'],
   transformIgnorePatterns: [
     "/node_modules/(?!@auroratide/nimcard)"
   ]
-};
+}
