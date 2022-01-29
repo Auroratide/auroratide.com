@@ -2,7 +2,7 @@
   ID = "auroratide"
 
 [build]
-  publish = "public"
+  publish = "build"
   command = "npm run ci"
 
 [[redirects]]
