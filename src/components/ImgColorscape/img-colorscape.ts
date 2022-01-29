@@ -4,8 +4,8 @@ export default () => {
     const IMGLOADED_EVENT = 'imgloaded'
 
     const html = `
-        <img class="colorscape" alt="Colorscape" aria-hidden="true" />
-        <div class="image hide">
+        <img class="colorscape hide" alt="Colorscape" aria-hidden="true" />
+        <div class="image">
             <slot></slot>
         </div>
     `
@@ -64,7 +64,7 @@ export default () => {
         }
 
         connectedCallback() {
-            this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
+            // this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
         }
 
         hide = () => {
@@ -86,7 +86,7 @@ export default () => {
 
         attributeChangedCallback() {
             this.colorscapeImg.src = this.colorscape
-            this.hide()
+            // this.hide()
         }
 
         get colorscape() { return this.getAttribute('colorscape') }
