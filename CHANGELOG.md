@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 (28 Jan 2021)
+
+* Update to SvelteKit for the sake of static site generation, which improves SEO and performance
+
 ## 2.3.1 (06 Aug 2021)
 
 * Accessibility tweaks
