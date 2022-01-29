@@ -9,3 +9,11 @@
     <slot></slot>
     <div slot="footer"><Footer /></div>
 </Page>
+
+<style>
+    @media print {
+        [slot="header"], [slot="footer"] {
+            display: none;
+        }
+    }
+</style>
