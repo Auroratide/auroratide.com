@@ -10,7 +10,7 @@ Some of the things I strive for in a good frontend codebase include:
 
 ## Tech Stack
 
-auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), and [Jest](https://jestjs.io/) with [Testing Library](https://testing-library.com/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), along with a custom static content generator.
+auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), [Jest](https://jestjs.io/) with [Testing Library](https://testing-library.com/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
 ### Svelte
 
@@ -18,8 +18,6 @@ Svelte is responsible for rendering the website's HTML and providing most of the
 
 * I enjoyed the developer experience more than with React, as the svelte file format just felt very natural and much like how I wanted web components to work
 * Svelte's runtime is much smaller than React's, meaning less code sent to the client and hence faster loading times
-
-Most Svelte code can be found in [/src/client](/src/client).
 
 ### Typescript
 
@@ -58,9 +56,7 @@ Web components can be found in [/src/components](/src/components). There's a mix
 
 All of the content is written in markdown. However, browsers cannot render markdown; they render HTML. Therefore, a process must exist to convert markdown into HTML.
 
-The code in [/src/content](/src/content) is responsible for doing this. It's basically just a few lines of typescript that look for markdown files and parse them with [Marked](https://www.npmjs.com/package/marked).
-
-Nowadays I might have just elected to use [11ty](https://www.11ty.dev/), but what I made works without issue, so I have no need to change or migrate it.
+SvelteKit is used to statically generate each page, while a small custom engine converts markdown into HTML. The code in [/content/_build](/content/_build) is responsible for doing this, basically just looking for content files and parsing them with [Marked](https://www.npmjs.com/package/marked).
 
 ## Commands
 
