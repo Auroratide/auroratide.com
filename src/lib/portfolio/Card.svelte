@@ -20,7 +20,7 @@
 
 <article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section class="info">
-        <h2 class="title"><a sveltekit:prefetch href={link}>{article.title}</a></h2>
+        <h2 class="title"><a href={link} sveltekit:prefetch>{article.title}</a></h2>
         <p class="summary">{article.summary}</p>
     </section>
     <section class="supplementary">
