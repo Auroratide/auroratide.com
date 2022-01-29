@@ -12,7 +12,7 @@
 </script>
 
 <article class="item" aria-label={item.title} style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)};">
-    <h2 class="title"><a href={linkTo}>{item.title}</a></h2>
+    <h2 class="title"><a sveltekit:prefetch href={linkTo}>{item.title}</a></h2>
     <section class="image-container" class:pixelart data-testid="art-section">
         <img-colorscape colorscape={colorscapeAsset}>
             <img src={imgAsset} alt={item.alt} loading="lazy" />
