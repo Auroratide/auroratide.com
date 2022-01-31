@@ -1,6 +1,6 @@
 {
     "id": "making-a-toggle-switch",
-    "title": "Making a Toggle Switch into a New HTML Element",
+    "title": "Making a Toggle Switch with Web Components",
     "category": "software engineering",
     "icon": "lightbulb",
     "tags": ["web component", "tutorial", "light", "accessibility", "html", "css", "javascript"],
