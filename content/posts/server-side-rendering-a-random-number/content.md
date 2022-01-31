@@ -10,7 +10,7 @@ Have you ever tried rendering a random number with [Svelte](https://svelte.dev/)
 
 Seems like nothing can go wrong, right? It even works if you plug it into the [REPL](https://svelte.dev/repl/b7a6b10307254f83afc900661b980974?version=3.46.3). But as soon you plug it into [SvelteKit](https://kit.svelte.dev/), Svelte's website framework, oh dear what's happening?
 
-<article-image nopopout src="/assets/posts/server-side-rendering-a-random-number/refresh.webp" size="lg" width="470" height="233">
+<article-image nopopout src="/assets/posts/server-side-rendering-a-random-number/refresh.webp" alt="When 'Reload' is clicked, two random numbers flash on the screen instead of one." size="lg" width="470" height="233">
     <span slot="caption">When the page is refreshed, a number shows briefly before being replaced</span>
 </article-image>
 
