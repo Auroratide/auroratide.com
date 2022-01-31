@@ -66,7 +66,6 @@ body {
 
 .content-typography figcaption {
     text-align: center;
-    font-weight: var(--typography-light);
     font-size: var(--sizing-font-sm);
 }
 
@@ -110,7 +109,6 @@ a:visited {
 }
 
 p, ul, ol {
-    font-weight: var(--typography-light);
     text-align: justify;
     line-height: 1.5em;
     margin-bottom: var(--sizing-spacing-p);
@@ -189,7 +187,6 @@ dd {
     padding: 0 var(--sizing-spacing-xs);
     margin-left: 0;
     margin-bottom: var(--sizing-spacing-md);
-    font-weight: var(--typography-light);
     line-height: 1.4;
 }
 
@@ -450,6 +447,10 @@ math-inline {
 
 img-popout img:not([slot="popped-out"]) {
     max-width: 100%;
+}
+
+major-point p {
+    font-weight: var(--typography-light);
 }
 
 /* Large Screens

@@ -96,7 +96,6 @@
     .license, .source {
         display: block;
         font-size: var(--sizing-font-xs);
-        font-weight: var(--typography-light);
     }
 
     .license {

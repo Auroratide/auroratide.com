@@ -46,7 +46,6 @@
     }
 
     p.rgb, p.hex, figcaption {
-        font-weight: var(--typography-light);
         font-size: var(--sizing-font-xs);
     }
 </style>

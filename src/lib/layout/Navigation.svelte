@@ -83,7 +83,6 @@
         align-self: center;
         font-size: var(--sizing-font-sm);
         align-self: center;
-        font-weight: var(--typography-light);
         margin-left: calc(-1 * var(--sizing-spacing-sm));
         opacity: 0.9;
     }

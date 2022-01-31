@@ -41,7 +41,6 @@
     }
 
     .text {
-        font-weight: var(--typography-light);
         font-style: italic;
     }
 

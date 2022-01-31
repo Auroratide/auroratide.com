@@ -160,7 +160,6 @@
 
     .published {
         margin-bottom: var(--sizing-spacing-md);
-        font-weight: var(--typography-light);
         font-size: var(--sizing-font-xs);
         text-align: center;
     }

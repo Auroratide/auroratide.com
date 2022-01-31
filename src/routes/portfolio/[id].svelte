@@ -88,7 +88,6 @@
 
     .published {
         margin-bottom: var(--sizing-spacing-p);
-        font-weight: var(--typography-light);
     }
 
     .category {
@@ -97,7 +96,6 @@
 
     @media screen and (min-width: 75rem) {
         .more-title {
-            font-weight: var(--typography-light);
             font-size: var(--sizing-font-sm);
             line-height: 1;
             margin-bottom: var(--sizing-spacing-p);
