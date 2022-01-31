@@ -4,7 +4,7 @@ Welcome to the source code of my website, **[auroratide.com](https://auroratide.
 
 Some of the things I strive for in a good frontend codebase include:
 
-* **Simplicity** (don't bring in big frameworks unless they actually make things simpler)
+* **Simplicity** (me 10 years from now might want to edit something)
 * **Accessibility** (the resultant website should work for almost everyone)
 * **Testability** (tests improve confidence and longevity)
 
@@ -16,8 +16,8 @@ auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https:/
 
 Svelte is responsible for rendering the website's HTML and providing most of the interactivity. I chose Svelte for two primary reasons:
 
-* I enjoyed the developer experience more than with React, as the svelte file format just felt very natural and much like how I wanted web components to work
-* Svelte's runtime is much smaller than React's, meaning less code sent to the client and hence faster loading times
+* I knew React and wanted to try one of the other competing frontend paradigms, and Svelte's style felt natural to me (and a little like how I wished web components worked)
+* Svelte's runtime was smaller as well, meaning less code sent to the client and hence faster loading times
 
 ### Typescript
 
@@ -36,7 +36,7 @@ Testing code in general is important, as improves the longevity of the code and 
 
 I've written on testing components in [The What, How, and Why of Nicely Testing React Components](https://auroratide.com/posts/nicely-testing-react-components). Yeah I know it says React, but the core principles apply universally.
 
-In this codebase, tests live with the component they test. A good example is [DarkModeSwitch.spec.ts](/src/client/DarkModeSwitch/DarkModeSwitch.spec.ts).
+A good example is [DarkModeSwitch.spec.ts](/test/lib/design/DarkModeSwitch.spec.ts).
 
 ### Web Components
 
@@ -69,3 +69,15 @@ SvelteKit is used to statically generate each page, while a small custom engine 
 | Developer Start  | `npm run dev`         |
 | Create Post      | `npm run posts:create -- slug-path` |
 | Create Component | `npm run components:create -- NameOfComponent` |
+
+## Accessibility
+
+The Internet is for all people, not just some people. As such, it is both my aspiration and my duty to make this website and all my products as accessible to to everyone as possible, regardless of ability.
+
+To that end, I devote time to studying and applying good accessibility practices. Some of the things I do include:
+
+* Reading established guidelines and standards, and evaluating my content against them
+* Testing every widget and article in a variety of conditions (for example, using a screen reader or foregoing a mouse)
+* Ensuring good color contrast
+* Providing at least two ways of accessing content (what I call the principle of engaging two senses)
+* Only utilizing third-party components which themselves consider accessibility
