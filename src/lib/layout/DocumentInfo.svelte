@@ -20,6 +20,11 @@
         <meta property="og:image" content={og.image} />
         <meta property="og:url" content={og.url} />
         <meta property="og:type" content={og.type} />
+        <meta property="og:site_name" content="Auroratide" />
+
+        {#if description}
+            <meta property="og:description" content={description} />
+        {/if}
 
         {#if og.article !== undefined}
             <meta property="og:article:published_time" content={og.article.published.toISOString()} />
