@@ -1,0 +1,40 @@
+{
+    "id": "nimcard",
+    "title": "Nimcard",
+    "category": "games",
+    "tags": ["typescript", "ai", "casino", "roleplaying", "strategy", "turns"],
+    "icon": "diamonds",
+    "cover": {
+        "original": "cover.png",
+        "alt": "A playing card face down."
+    },
+    "color": {
+        "type": "palette",
+        "value": "eventideblack"
+    },
+    "summary": "A turn-based strategy game based on playing cards with a difficult, yet beatable, AI to play against.",
+    "long_summary": "A turn-based strategy game based on playing cards where the goal is to end with the highest score. Features a difficult AI and accessible interface, and served as an opportunity to practice immutable functional javascript and Web Workers.",
+    "published_at": "2021-12-11T02:00:00.000Z",
+    "created_at": "2021-12-11T02:00:00.000Z",
+    "links": [ {
+        "title": "Play!",
+        "href": "/nimcard"
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/nimcard",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ],
+    "gallery": [ {
+        "image": "board.png",
+        "alt": "A matrix of several cards laid out in a grid.",
+        "caption": "The initial board of cards."
+    }, {
+        "image": "ai-turn.png",
+        "alt": "A matrix of cards in a grid, with two cards in the player's pile and a thinking indicator for the AI.",
+        "caption": "I've chosen two cards, so it is the AI's turn."
+    } ]
+}

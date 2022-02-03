@@ -85,7 +85,9 @@ import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverf
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
 import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
 
+import { diamonds } from './custom/diamonds'
 import { kafka } from './custom/kafka'
+import { spades } from './custom/spades'
 
 export const library = {
     [IconName.AngleDoubleDown]: faAngleDoubleDown,
@@ -108,6 +110,7 @@ export const library = {
     [IconName.CookieBite]: faCookieBite,
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.Css3Alt]: faCss3Alt,
+    [IconName.Diamonds]: diamonds,
     [IconName.EllipsisH]: faEllipsisH,
     [IconName.ExchangeAlt]: faExchangeAlt,
     [IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
@@ -145,6 +148,7 @@ export const library = {
     [IconName.Server]: faServer,
     [IconName.Shower]: faShower,
     [IconName.SmileWink]: faSmileWink,
+    [IconName.Spades]: spades,
     [IconName.SquareFull]: faSquareFull,
     [IconName.Stamp]: faStamp,
     [IconName.SuitcaseRolling]: faSuitcaseRolling,
