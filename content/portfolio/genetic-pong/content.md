@@ -20,3 +20,5 @@ So how do you train the AI? Simply set one side or the other to Trainer mode! My
 * You can reset the AI at any time using the **Reset Genetic** button if you feel your AI has adopted a poor strategy.
 
 This project was made using HaxeFlixel and the Haxe programming language.
+
+Flash is no longer a thing, but if you have the means to play Flash content, you can **[download the SWF](https://drive.google.com/file/d/1kVsZD22RyCR12ywrvUY8A34v0vuQt-VT/view?usp=sharing)**.

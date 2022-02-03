@@ -36,3 +36,7 @@ In this local multiplayer game, each of six roles is assigned two buttons. Divid
 * Brendan Phillips - Game Design and "Art"
 * Timothy Foster - Game Design and PROgramming (@tfAuroratide)
 * DuskRaven - Music and Sound Effects
+
+## How to Play
+
+Unfortunately, it looks like Scirra's site underwent a change and took our game with it.

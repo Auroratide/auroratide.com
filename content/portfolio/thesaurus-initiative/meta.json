@@ -13,6 +13,14 @@
     "title": "Adobe Air",
     "href": "https://drive.google.com/open?id=1KXcJCbb1Z6NMoEFR0BoDrYsMH-LV7_8C",
     "color": "adobe"
+  }, {
+    "title": "Source",
+    "href": "https://github.com/Auroratide/ThesaurusInitiative-legacy",
+    "icon": "github",
+    "color": {
+        "type": "brand",
+        "value": "github"
+    }
   } ],
   "gallery": [ {
     "image": "words.png",
