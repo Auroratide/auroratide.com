@@ -1,0 +1,39 @@
+{
+    "id": "toggle-switch",
+    "title": "toggle-switch Web Component",
+    "category": "components",
+    "tags": ["web component", "custom element", "toggle", "switch", "accessibility"],
+    "icon": "lightbulb",
+    "color": {
+        "type": "palette",
+        "value": "livianyellow"
+    },
+    "summary": "This is a web component that lets you turn something on and off.",
+    "long_summary": "This is a web component that lets you turn something on and off, built to be generic, customizable, and accessible. I made this to serve a comprehensive tutorial on making and testing web components.",
+    "published_at": "2021-09-24T12:00:00.000Z",
+    "created_at": "2021-09-24T12:00:00.000Z",
+    "links": [ {
+        "title": "Install",
+        "href": "https://www.npmjs.com/package/@auroratide/toggle-switch",
+        "icon": "npm",
+        "color": {
+            "type": "brand",
+            "value": "npm"
+        }
+    }, {
+        "title": "Demo",
+        "href": "https://auroratide.github.io/toggle-switch/",
+        "color": {
+            "type": "palette",
+            "value": "aurora-blue"
+        }
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/toggle-switch",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ]
+}
