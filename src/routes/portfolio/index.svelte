@@ -55,7 +55,7 @@
         --gap-size: var(--sizing-spacing-md);
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(calc(max(33%, 20em) - var(--gap-size)), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(max(50%, 20em) - var(--gap-size)), 1fr));
         grid-gap: var(--gap-size);
         padding: var(--sizing-spacing-md);
         margin-bottom: 0;

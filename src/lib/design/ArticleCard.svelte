@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Color } from './color'
     import * as color from './color'
+    import BreakpointContent from './BreakpointContent.svelte'
 
     export let link: string
     export let article: {
@@ -23,8 +24,10 @@
             <span class="bullet" aria-hidden="true">&bull;</span>
             <span class="category">{article.category}</span>
         </small>
-        <p class="summary short">{article.summary}</p>
-        <p class="summary long">{article.longSummary}</p>
+        <BreakpointContent>
+            <p slot="small" class="summary">{article.summary}</p>    
+            <p slot="large" class="summary">{article.longSummary}</p>
+        </BreakpointContent>
     </section>
     <figure>
         <div class="circle">
@@ -98,10 +101,6 @@
         font-size: calc(2 * var(--sizing-font-xs));
     }
 
-    .article-card .summary.long {
-        display: none;
-    }
-
     .article-card .category {
         text-transform: capitalize;
     }
@@ -163,14 +162,6 @@
             position: relative;
             font-size: calc(4 * var(--sizing-font-xs));
             margin: 0;
-        }
-
-        .article-card .summary.short {
-            display: none;
-        }
-
-        .article-card .summary.long {
-            display: block;
         }
     }
 </style>

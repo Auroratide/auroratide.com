@@ -3,6 +3,7 @@
     import type { ImageSet } from './types'
     import { UrlBuilder } from '../routes'
     import * as color from '../design/color'
+    import BreakpointContent from '../design/BreakpointContent.svelte'
 
     export let link: string
     export let article: {
@@ -21,7 +22,10 @@
 <article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section class="info">
         <h2 class="title"><a href={link} sveltekit:prefetch>{article.title}</a></h2>
-        <p class="summary">{article.summary}</p>
+        <BreakpointContent>
+            <p slot="small" class="summary">{article.summary}</p>
+            <p slot="large" class="summary">{article.longSummary}</p>
+        </BreakpointContent>
     </section>
     <section class="supplementary">
         <span class="category">{article.category}</span>
