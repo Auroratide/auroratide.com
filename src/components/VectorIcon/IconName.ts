@@ -42,6 +42,7 @@ export const IconName = {
     LowVision: 'low-vision',
     Mobile: 'mobile',
     Moon: 'moon',
+    Music: 'music',
     Newspaper: 'newspaper',
     PaintBrush: 'paint-brush',
     Pause: 'pause',
