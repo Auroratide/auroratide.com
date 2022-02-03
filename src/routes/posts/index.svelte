@@ -24,10 +24,17 @@
     import type { Post } from '$lib/posts/types'
     import { UrlBuilder } from '$lib/routes'
 
+    import { buildOpenGraph } from '$lib/open-graph'
+
     export let all: Post[]
+
+    const og = buildOpenGraph({
+        title: 'Auroratide Posts',
+        url: new UrlBuilder().withBase().posts(),
+    }).website()
 </script>
 
-<DocumentInfo title="Posts" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
+<DocumentInfo {og} title="Posts" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         <SrOnly><FocusOnMe>
             <h1>My Posts List</h1>

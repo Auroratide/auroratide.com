@@ -43,6 +43,8 @@
 
     import * as color from '$lib/design/color'
 
+    import { buildOpenGraph } from '$lib/open-graph'
+
     export let item: Post
     export let all: Post[]
 
@@ -51,9 +53,19 @@
         .filter(i => i.id !== item.id)
         .filter(i => i.publishedAt)
         .slice(0, 5)
+
+    $: og = buildOpenGraph({
+        title: item.title,
+        url: new UrlBuilder().withBase().post(item.id),
+    }).article({
+        published: item.publishedAt,
+        author: 'Timothy Foster',
+        section: item.category,
+        tags: item.tags,
+    })
 </script>
 
-<DocumentInfo title={item.title} description={item.summary}>
+<DocumentInfo {og} title={item.title} description={item.summary}>
     <Container>
         <article aria-label={item.title} class="article" style="--article-color: {color.fromJson(item.color)};">
             <FocusOnMe>

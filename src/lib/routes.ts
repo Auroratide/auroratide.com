@@ -162,6 +162,10 @@ export class UrlBuilder {
     artItem(id: string) {
         return `${this.url}${navigation.Art.link}/${id}${this.api ? UrlBuilder.API_SUFFIX : ''}`
     }
+
+    static(path: Navigation) {
+        return `${this.url}${path.link}`
+    }
 }
 
 export class AssetUrlBuilder {

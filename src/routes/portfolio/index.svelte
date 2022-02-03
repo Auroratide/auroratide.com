@@ -23,12 +23,19 @@
     import type { PortfolioItem } from '$lib/portfolio/types'
     import { UrlBuilder } from '$lib/routes'
 
+    import { buildOpenGraph } from '$lib/open-graph'
+
     import Card from '$lib/portfolio/Card.svelte'
 
     export let all: PortfolioItem[]
+
+    const og = buildOpenGraph({
+        title: 'Auroratide Portfolio',
+        url: new UrlBuilder().withBase().portfolio(),
+    }).website()
 </script>
 
-<DocumentInfo title="Portfolio" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
+<DocumentInfo {og} title="Portfolio" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         <SrOnly><FocusOnMe>
             <h1>My Portfolio List</h1>

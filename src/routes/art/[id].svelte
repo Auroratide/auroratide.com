@@ -38,6 +38,8 @@
 
     import * as color from '$lib/design/color'
 
+    import { buildOpenGraph } from '$lib/open-graph'
+
     export let item: ArtItem
     export let all: ArtItem[]
     let ratioClassification: 'horizontal' | 'vertical' | 'square'
@@ -60,9 +62,22 @@
             ratioClassification = 'square'
         }
     }
+
+    $: assetRoot = new UrlBuilder().assets().artItem(item.id)
+
+    $: og = buildOpenGraph({
+        title: item.title,
+        url: new UrlBuilder().withBase().artItem(item.id),
+        image: assetRoot.asset(item.cover.original)
+    }).article({
+        published: item.publishedAt,
+        author: 'Timothy Foster',
+        section: item.category,
+        tags: item.tags,
+    })
 </script>
 
-<DocumentInfo title={item.title} description={item.summary}>
+<DocumentInfo {og} title={item.title} description={item.summary}>
     <Container>
         <article aria-label={item.title} class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
             <header>
@@ -71,9 +86,9 @@
                 </FocusOnMe>
             </header>
             <section class="art" class:pixelart data-testid="art-section">
-                <img-colorscape class="image" colorscape={new UrlBuilder().assets().artItem(item.id).asset(item.image.colorscape)}>
+                <img-colorscape class="image" colorscape={assetRoot.asset(item.image.colorscape)}>
                     <img-popout>
-                        <img src={new UrlBuilder().assets().artItem(item.id).asset(item.image.original)} alt={item.alt} />
+                        <img src={assetRoot.asset(item.image.original)} alt={item.alt} />
                     </img-popout>
                 </img-colorscape>
             </section>

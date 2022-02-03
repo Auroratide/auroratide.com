@@ -6,8 +6,15 @@
     import * as Nimcard from '@auroratide/nimcard'
     import type { NimcardGame } from '@auroratide/nimcard/component/lib'
     import { onMount } from 'svelte'
+    import { buildOpenGraph } from '$lib/open-graph'
+    import { navigation, UrlBuilder } from '$lib/routes'
 
     export let scoring = Nimcard.Board.standardScoring
+
+    const og = buildOpenGraph({
+        title: 'Nimcard',
+        url: new UrlBuilder().withBase().static(navigation.Nimcard),
+    }).website()
 
     let element: NimcardGame
     onMount(() => {
@@ -28,7 +35,7 @@
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.0/lib/define.js"></external-resource>
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/define.js"></external-resource>
 <external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/style.css"></external-resource>
-<DocumentInfo title="Nimcard" description="A strategy card game">
+<DocumentInfo {og} title="Nimcard" description="A strategy card game">
     <Container>
         <Content>
             <FocusOnMe>

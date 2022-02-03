@@ -43,17 +43,32 @@
 
     import * as color from '$lib/design/color'
 
+    import { buildOpenGraph } from '$lib/open-graph'
+
     export let item: PortfolioItem
     export let all: PortfolioItem[]
+
+    $: assetRoot = new UrlBuilder().assets().portfolioItem(item.id)
 
     $: relatedItems = all
         .filter(i => i.category === item.category)
         .filter(i => i.id !== item.id)
         .filter(i => i.publishedAt)
         .slice(0, 5)
+
+    $: og = buildOpenGraph({
+        title: item.title,
+        url: new UrlBuilder().withBase().portfolioItem(item.id),
+        image: item.cover != null ? assetRoot.asset(item.cover.original) : undefined,
+    }).article({
+        published: item.publishedAt,
+        author: 'Timothy Foster',
+        section: item.category,
+        tags: item.tags,
+    })
 </script>
 
-<DocumentInfo title={item.title} description={item.summary}>
+<DocumentInfo {og} title={item.title} description={item.summary}>
     <Container>
         <article aria-label={item.title} class="article" style="--article-color: {color.fromJson(item.color)};">
             <FocusOnMe>
@@ -70,7 +85,7 @@
                 <aside aria-label="Related Article Material" slot="sidebar">
                     {#if item.gallery}
                         <h2 class="more-title">Some Pics</h2>
-                        <Gallery root={new UrlBuilder().assets().portfolioItem(item.id)} gallery={item.gallery} />
+                        <Gallery root={assetRoot} gallery={item.gallery} />
                     {/if}
                     <h2 class="more-title">More on <span class="category">{item.category}</span> I've Made</h2>
                     <RelatedItems items={relatedItems} />

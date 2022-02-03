@@ -23,10 +23,18 @@
     import type { ArtItem } from '$lib/art/types'
     import ArtCoverLink from '$lib/art/ArtCoverLink.svelte'
 
+    import { UrlBuilder } from '$lib/routes'
+    import { buildOpenGraph } from '$lib/open-graph'
+
     export let all: ArtItem[]
+
+    const og = buildOpenGraph({
+        title: 'Auroratide Art',
+        url: new UrlBuilder().withBase().art(),
+    }).website()
 </script>
 
-<DocumentInfo title="Art" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
+<DocumentInfo {og} title="Art" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         <SrOnly><FocusOnMe>
             <h1>My Art List</h1>

@@ -3,12 +3,18 @@
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
     import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
-
     import { navigation, UrlBuilder } from '../lib/routes'
+    import { buildOpenGraph } from '$lib/open-graph'
+
     const assetRoot = new UrlBuilder().assets().page(navigation.About.link)
+    const og = buildOpenGraph({
+        title: 'About Auroratide',
+        url: new UrlBuilder().withBase().static(navigation.About),
+        image: assetRoot.asset('profile/720w.png'),
+    }).website()
 </script>
 
-<DocumentInfo title="About" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
+<DocumentInfo {og} title="About" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
         <FocusOnMe>
             <article aria-label="About" class="page">
