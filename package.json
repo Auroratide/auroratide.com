@@ -18,11 +18,8 @@
     "components:create": "node scripts/components/create",
     "posts:create": "npm run _posts:create",
     "_posts:create": "node scripts/posts/create",
-    "post_posts:create": "npm run netlify:update",
     "portfolio:create": "node scripts/portfolio/create",
-    "postportfolio:create": "npm run netlify:update",
     "art:create": "node scripts/art/create",
-    "postart:create": "npm run netlify:update",
     "netlify:update": "node scripts/netlify/update"
   },
   "repository": {
