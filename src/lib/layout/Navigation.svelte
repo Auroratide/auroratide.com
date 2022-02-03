@@ -32,7 +32,7 @@
         <nav class="nav" aria-label="Site Navigation">
             <ul>
                 {#each Object.values(navigation).filter(item => item.visibility <= NavVisibility.Visible) as item}
-                    <li><a href={item.link}>{item.name}</a></li>
+                    <li><a href={item.link} sveltekit:prefetch>{item.name}</a></li>
                 {/each}
             </ul>
         </nav>
