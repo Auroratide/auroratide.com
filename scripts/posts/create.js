@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const mkdirp = require('mkdirp')
-const { exec } = require('child_process')
-const program = require('commander')
+import * as fs from 'fs'
+import * as path from 'path'
+import { fileURLToPath } from 'url'
+import mkdirp from 'mkdirp'
+import { exec } from 'child_process'
+import program from 'commander'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 let slug = null
 
