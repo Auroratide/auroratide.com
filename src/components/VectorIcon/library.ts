@@ -26,6 +26,7 @@ import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
 import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
 import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
+import { faFolderMinus } from '@fortawesome/free-solid-svg-icons/faFolderMinus'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
 import { faGavel } from '@fortawesome/free-solid-svg-icons/faGavel'
 import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons/faGripLinesVertical'
@@ -120,6 +121,7 @@ export const library = {
     [IconName.Fingerprint]: faFingerprint,
     [IconName.Fire]: faFire,
     [IconName.Folder]: faFolder,
+    [IconName.FolderMinus]: faFolderMinus,
     [IconName.Gamepad]: faGamepad,
     [IconName.Gavel]: faGavel,
     [IconName.GripLinesVertical]: faGripLinesVertical,

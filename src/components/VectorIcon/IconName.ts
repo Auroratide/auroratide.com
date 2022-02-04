@@ -28,6 +28,7 @@ export const IconName = {
     Fingerprint: 'fingerprint',
     Fire: 'fire',
     Folder: 'folder',
+    FolderMinus: 'folder-minus',
     Gamepad: 'gamepad',
     Gavel: 'gavel',
     GripLinesVertical: 'grip-lines-vertical',
