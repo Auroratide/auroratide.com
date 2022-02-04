@@ -32,9 +32,9 @@
     })
 </script>
 
-<external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.0/lib/define.js"></external-resource>
-<external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/define.js"></external-resource>
-<external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.1/component/lib/style.css"></external-resource>
+<external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.1/lib/define.js"></external-resource>
+<external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.4/component/lib/define.js"></external-resource>
+<external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.4/component/lib/style.css"></external-resource>
 <DocumentInfo {og} title="Nimcard" description="A strategy card game">
     <Container>
         <Content>
