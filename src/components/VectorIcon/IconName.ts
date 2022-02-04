@@ -20,6 +20,7 @@ export const IconName = {
     Crosshairs: 'crosshairs',
     Css3Alt: 'css3-alt',
     Diamonds: 'diamonds',
+    DiceD20: 'dice-d20',
     EllipsisH: 'ellipsis-h',
     ExchangeAlt: 'exchange-alt',
     ExpandArrowsAlt: 'expand-arrows-alt',
