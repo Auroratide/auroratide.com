@@ -1,11 +1,9 @@
 export default () => {
     const name = 'img-colorscape'
     
-    const IMGLOADED_EVENT = 'imgloaded'
-
     const html = `
-        <img class="colorscape hide" alt="Colorscape" aria-hidden="true" />
-        <div class="image">
+        <img class="colorscape" alt="Colorscape" aria-hidden="true" />
+        <div class="image hide">
             <slot></slot>
         </div>
     `
@@ -64,20 +62,21 @@ export default () => {
         }
 
         connectedCallback() {
-            // this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
+            this.revealWhenImagesComplete()
+
+            this.shadowRoot.querySelector('slot').addEventListener('slotchange', () => {
+                this.revealWhenImagesComplete()
+            })
         }
 
         hide = () => {
             this.imageImg.classList.add('hide')
             this.colorscapeImg.classList.remove('hide')
-            this.shadowRoot.host.addEventListener(IMGLOADED_EVENT, this.reveal)
         }
 
-        reveal = (e: Event) => {
+        reveal = () => {
             this.imageImg.classList.remove('hide')
             this.colorscapeImg.classList.add('hide')
-            this.shadowRoot.host.removeEventListener(IMGLOADED_EVENT, this.reveal)
-            e.stopPropagation()
         }
 
         static get observedAttributes() {
@@ -86,26 +85,36 @@ export default () => {
 
         attributeChangedCallback() {
             this.colorscapeImg.src = this.colorscape
-            // this.hide()
         }
 
         get colorscape() { return this.getAttribute('colorscape') }
         set colorscape(value: string) { this.setAttribute('colorscape', value) }
-    })
 
-    /**
-     * <img-colorscape> assumes the slotted element emits a 'load' event
-     * The load event is then used to dispatch the imgloaded event in order to
-     * reveal the actual image over the colorscape
-     */
-    document.body.addEventListener('load', (e: Event) => {
-        if (e.target instanceof HTMLElement) {
-            let curParent = e.target.parentNode
-            while (curParent !== null && curParent.nodeName.toUpperCase() !== 'IMG-COLORSCAPE') {
-                curParent = curParent.parentNode
-            }
+        findImageChildren(parent: Element = this): HTMLImageElement[] {
+            let result = parent.nodeName.toUpperCase() === 'IMG'
+                ? [parent as HTMLImageElement]
+                : []
 
-            curParent?.dispatchEvent(new Event(IMGLOADED_EVENT))
+            if (parent.children.length === 0)
+                return result
+
+            return result.concat(Array.from(parent.children)
+                .flatMap(child => this.findImageChildren(child)))
         }
-    }, true)
+
+        waitForImageCompletion = async (img: HTMLImageElement) => {
+            while(!img.complete)
+                await new Promise(r => setTimeout(r, 100))
+        }
+
+        revealWhenImagesComplete = () => {
+            const imgs = this.findImageChildren()
+            if (imgs.length === 0)
+                return Promise.resolve()
+
+            return Promise.all(imgs.map(this.waitForImageCompletion)).then(() => {
+                this.reveal()
+            }).catch(() => {})
+        }
+    })
 }
