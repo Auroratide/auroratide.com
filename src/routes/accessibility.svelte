@@ -11,7 +11,7 @@
             <FocusOnMe>
                 <h1>Accessibility</h1>
             </FocusOnMe>
-            <p>The Internet is for all people, not just some people. As such, it is both my aspiration and my duty to make this website and all my products as accessible to to everyone as possible, regardless of ability. Whether it be articles, videos, games, or whatever it is I even make, I want everyone to feel included.</p>
+            <p>The Internet is for all people, not just some people. As such, it is both my aspiration and my duty to make this website and all my products as accessible to everyone as possible, regardless of ability. Whether it be articles, videos, games, or whatever it is I even make, I want everyone to feel included.</p>
             <p>To that end, I devote time to studying and applying good accessibility practices. Some of the things I do include:</p>
             <ul>
                 <li>Reading established guidelines and standards, and evaluating my content against them</li>
