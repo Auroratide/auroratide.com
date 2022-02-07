@@ -46,13 +46,25 @@
     }
 
     .categories ul {
-        list-style: disc;
+        list-style: none;
         margin-bottom: 1em;
-        padding-left: 2em;
+        padding-left: 1em;
     }
 
     .categories li {
         line-height: 1;
         margin-bottom: 0.15em;
+    }
+
+    .categories ul li::before {
+        content: '-';
+        margin-right: 0.5em;
+    }
+
+    @media print {
+        .skills {
+            background: var(--skin-bg);
+            padding: 1.5em;
+        }
     }
 </style>

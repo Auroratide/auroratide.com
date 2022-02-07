@@ -24,4 +24,13 @@
         font-size: 3em;
         margin-bottom: 0.125em;
     }
+
+    @media print {
+        header {
+            background: var(--skin-banner);
+            color: var(--skin-banner-text);
+            margin: 0;
+            padding: 1.5em;
+        }
+    }
 </style>

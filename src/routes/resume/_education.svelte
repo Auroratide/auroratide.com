@@ -49,4 +49,19 @@
         font-size: 0.8em;
         font-style: italic;
     }
+
+    @media print {
+        .education {
+            background: var(--skin-bg);
+            padding: 0 1.5em 1.5em;
+        }
+
+        .contents {
+            grid-template-areas:
+                "degree"
+                "time"
+                "college"
+                "minor";
+        }
+    }
 </style>

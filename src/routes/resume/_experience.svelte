@@ -90,4 +90,18 @@
         font-size: 1em;
         font-weight: bold;
     }
+
+    li {
+        text-align: left;
+    }
+
+    @media print {
+        .experience {
+            padding: 1.5em;
+        }
+
+        li {
+            margin-bottom: 0.15em;
+        }
+    }
 </style>

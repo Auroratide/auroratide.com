@@ -4,10 +4,10 @@
 
 <address>
     <ul>
-        <li><strong>Email:</strong> <a href="mailto:tf.auroratide@gmail.com">tf.auroratide@gmail.com</a></li>
-        <li><strong>Github:</strong> <a href={socials.Github.link}>github.com/Auroratide</a></li>
-        <li><strong>LinkedIn:</strong> <a href={socials.LinkedIn.link}>timothy-foster-224946120</a></li>
-        <li><strong>Portfolio:</strong> <a href="https://auroratide.com/portfolio">auroratide.com/portfolio</a></li>
+        <li><vector-icon icon="envelope" aria-label="Email"></vector-icon> <a href="mailto:tf.auroratide@gmail.com">tf.auroratide@gmail.com</a></li>
+        <li><vector-icon icon="github" aria-label="Github"></vector-icon> <a href={socials.Github.link}>github.com/Auroratide</a></li>
+        <li><vector-icon icon="linked-in" aria-label="LinkedIn"></vector-icon> <a href={socials.LinkedIn.link}>timothy-foster-224946120</a></li>
+        <li><vector-icon icon="hammer" aria-label="Portfolio"></vector-icon> <a href="https://auroratide.com/portfolio">auroratide.com/portfolio</a></li>
     </ul>
 </address>
 
@@ -28,5 +28,24 @@
     address ul li {
         line-height: 1.15;
         margin: 0;
+    }
+
+    address vector-icon {
+        vertical-align: middle;
+        margin-right: 0.25em;
+        font-size: 0.95em;
+    }
+
+    @media print {
+        address {
+            background: var(--skin-banner);
+            color: var(--skin-banner-text);
+            margin: 0;
+            padding: 0 1.5em 1.5em;
+        }
+
+        a {
+            color: var(--skin-banner-text);
+        }
     }
 </style>

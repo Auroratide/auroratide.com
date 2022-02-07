@@ -20,6 +20,7 @@ import { faCookieBite } from '@fortawesome/free-solid-svg-icons/faCookieBite'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons/faDiceD20'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
 import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons/faExpandArrowsAlt'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
@@ -30,6 +31,7 @@ import { faFolderMinus } from '@fortawesome/free-solid-svg-icons/faFolderMinus'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
 import { faGavel } from '@fortawesome/free-solid-svg-icons/faGavel'
 import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons/faGripLinesVertical'
+import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
@@ -115,6 +117,7 @@ export const library = {
     [IconName.DiceD20]: faDiceD20,
     [IconName.Diamonds]: diamonds,
     [IconName.EllipsisH]: faEllipsisH,
+    [IconName.Envelope]: faEnvelope,
     [IconName.ExchangeAlt]: faExchangeAlt,
     [IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
     [IconName.EyeDropper]: faEyeDropper,
@@ -125,6 +128,7 @@ export const library = {
     [IconName.Gamepad]: faGamepad,
     [IconName.Gavel]: faGavel,
     [IconName.GripLinesVertical]: faGripLinesVertical,
+    [IconName.Hammer]: faHammer,
     [IconName.HandPointer]: faHandPointer,
     [IconName.Heart]: faHeart,
     [IconName.HospitalAlt]: faHospitalAlt,
