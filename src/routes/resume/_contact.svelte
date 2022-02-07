@@ -16,6 +16,7 @@
         grid-area: contact;
         font-style: normal;
         font-size: 0.9em;
+        margin-bottom: 0.5em;
     }
 
     address ul {

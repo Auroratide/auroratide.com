@@ -10,6 +10,7 @@
 <style>
     header {
         grid-area: header;
+        margin-bottom: 0.5em;
     }
 
     .role {
