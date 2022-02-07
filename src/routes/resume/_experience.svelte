@@ -29,7 +29,7 @@
             </ul>
             <h4>ThoughtWorks University - Trainer in China/India</h4>
             <ul>
-                <li>Mentored 18 entry-level developers and career changers in the fundamentals of agile delivery, test-driven code, and industry software principles, enabling them to successfully deliver an ecommerce product to their client.</li>
+                <li>Mentored 18 entry-level developers and career changers in the fundamentals of agile delivery, test-driven code, and industry software principles, enabling them to successfully deliver an e-commerce product to their client.</li>
                 <li>Doubled the program's capacity for trainees after I visualized the overall curriculum with a chart that enabled the trainer team to identify redundancies and revise the program.</li>
                 <li>Engaged a few dozen trainees in optional sessions about creativity and received feedback about the success of the techniques within their teams.</li>
             </ul>
