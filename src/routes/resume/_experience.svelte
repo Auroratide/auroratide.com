@@ -9,7 +9,7 @@
             <ul>
                 <li>Achieved over 30,000 views through technical writing on topics including web accessibility and semantics, authoring and testing web components, specification-centered HTML/CSS development, and Kotlin concurrency.</li>
                 <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, integrating feedback over time as it is received by beta users.</li>
-                <li>Composed three generic, reusable web components with thousands of weekly downloads.</li>
+                <li>Composed three reusable web components with thousands of weekly downloads.</li>
             </ul>
         </section>
     </section>
@@ -21,11 +21,11 @@
             <p class="duration"><time>2016</time> - <time datetime="2021-04">Apr 2021</time></p>
         </header>
         <section>
-            <h4>Healthcare Client - Query Language Tech Anchor</h4>
+            <h4>Healthcare Client - Query Language Co-Tech Lead</h4>
             <ul>
                 <li>Shortened the development cycle of new features by 40 days after I led the team in designing a Kotlin Domain Specific Language which bridged communication gaps between the business and the developers.</li>
                 <li>Processed billions of claims 90% faster than the existing system after I proposed a mechanism for reusing historical results into our data pipeline with RabbitMQ at the core.</li>
-                <li>Presented a live view into our data pipeline to business executives to achieve buy-in for our product, built using Javascript and Express connected to our Kotlin REST API.</li>
+                <li>Presented a live view into our data pipeline to the client CEO and CTO, built using Javascript and Express connected to our Kotlin REST API.</li>
             </ul>
             <h4>ThoughtWorks University - Trainer in China/India</h4>
             <ul>
