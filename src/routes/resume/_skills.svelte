@@ -13,14 +13,14 @@
         <li>
             <strong>Technologies:</strong>
             <ul>
-                <li>Svelte, React</li>
-                <li>Web Components</li>
+                <li>React, React</li>
                 <li>NodeJS, Express</li>
                 <li>Jest, Mocha, JUnit</li>
+                <li>Gradle, Ktor, RabbitMQ</li>
                 <li>Git</li>
                 <li>Azure Devops, Docker</li>
                 <li>Postgres, SQL Server</li>
-                <li>Gradle, Ktor, RabbitMQ</li>
+                <li>Web Components</li>
             </ul>
         </li>
         <li>
@@ -30,6 +30,7 @@
                 <li>Automated Testing</li>
                 <li>Web Accessibility</li>
                 <li>CI/CD Pipelines</li>
+                <li>Agile Delivery</li>
             </ul>
         </li>
     </ul>

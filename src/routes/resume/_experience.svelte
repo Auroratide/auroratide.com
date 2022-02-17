@@ -2,13 +2,13 @@
     <h2>Experience</h2>
     <section class="position">
         <header>
-            <h3>Independent Developer</h3>
+            <h3>Auroratide Founder and Creator</h3>
             <p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
         </header>
         <section>
             <ul>
                 <li>Achieved over 30,000 views through technical writing on topics including web accessibility and semantics, authoring and testing web components, specification-centered HTML/CSS development, and Kotlin concurrency.</li>
-                <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, integrating feedback over time as it is received by beta users.</li>
+                <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li>
                 <li>Composed three reusable web components with thousands of weekly downloads.</li>
             </ul>
         </section>
@@ -24,7 +24,7 @@
             <h4>Healthcare Client - Query Language Co-Tech Lead</h4>
             <ul>
                 <li>Shortened the development cycle of new features by 40 days after I led the team in designing a Kotlin Domain Specific Language which bridged communication gaps between the business and the developers.</li>
-                <li>Processed billions of claims 90% faster than the existing system after I proposed a mechanism for reusing historical results into our data pipeline with RabbitMQ at the core.</li>
+                <li>Processed billions of claims 90% faster than the existing system after I proposed a mechanism for reusing historical results with RabbitMQ at the core.</li>
                 <li>Presented a live view into our data pipeline to the client CEO and CTO, built using Javascript and Express connected to our Kotlin REST API.</li>
             </ul>
             <h4>ThoughtWorks University - Trainer in China/India</h4>
@@ -38,7 +38,7 @@
                 <li>Published the client's first online origination experience, integrating an isolated React app into the existing Ruby on Rails site to decouple their pipelines.</li>
                 <li>Accelerated our deployment to production by four weeks after I introduced Pact contract testing and API stubbing to the team.</li>
                 <li>Created codebase alignment through the presentation of several workshops ranging in topics from asynchronous state management with Redux Sagas, testing React component behavior with Enzyme, and functional testing with Testcafe.</li>
-                <li>Established a model for working as a distributed US/India team, which became a standard across multiple other teams on the client.</li>
+                <li>Established a model for working as a distributed US/India team, which became a standard across multiple teams on the client.</li>
             </ul>
             <h4>Food Distribution Client - API Developer</h4>
             <ul>
