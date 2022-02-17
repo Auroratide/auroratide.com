@@ -8,6 +8,7 @@
     import Skills from './_skills.svelte'
     import Education from './_education.svelte'
     import Experience from './_experience.svelte'
+    import FunFacts from './_fun-facts.svelte'
 </script>
 
 <DocumentInfo title="Timothy Foster Resume" description="Timothy Foster's resume and qualifications.">
@@ -19,6 +20,7 @@
                 <Experience />
                 <Skills />
                 <Education />
+                <FunFacts />
                 <div class="blank"></div>
             </article>
         </Content>
@@ -42,27 +44,30 @@
         .resume {
             display: grid;
             grid-template-columns: 25fr 9fr;
-            grid-template-rows: auto auto 1fr;
+            grid-template-rows: auto auto auto 1fr;
             grid-template-areas:
                 "header contact"
                 "experience skills"
-                "experience education";
+                "experience education"
+                "experience fun-facts";
             gap: 2em;
         }
     }
 
     @media print {
         .resume {
+            height: 101.15vh;
             font-size: 13px;
             margin: calc(var(--sizing-spacing-lg) * -1);
             display: grid;
             grid-template-columns: 2fr 5fr;
-            grid-template-rows: auto auto auto 1fr 1fr;
+            grid-template-rows: auto auto auto auto auto 1fr;
             grid-template-areas:
                 "header experience"
                 "contact experience"
                 "skills experience"
                 "education experience"
+                "fun-facts experience"
                 "blank experience";
         }
 
