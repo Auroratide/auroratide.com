@@ -12,6 +12,10 @@
 
 <style>
     @media print {
+        :global(body) {
+            background-color: white;
+        }
+
         [slot="header"], [slot="footer"] {
             display: none;
         }
