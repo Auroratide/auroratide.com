@@ -4,7 +4,11 @@
         <p class="degree"><strong>B.S. Computer Science</strong></p>
         <p class="time"><time>2012</time> - <time>2016</time></p>
         <p class="college">Texas A&M University, USA</p>
-        <p class="minor"><small>Creative Studies Minor</small></p>
+        <p class="gpa"><small><strong>GPA:</strong> 3.97</small></p>
+        <ul class="activities">
+            <li><small>Researched Creativity Expression</small></li>
+            <li><small>President of Texas Aggie Game Developers</small></li>
+        </ul>
     </div>
 </section>
 
@@ -23,7 +27,8 @@
         grid-template-areas:
             "degree time"
             "college college"
-            "minor minor";
+            "gpa gpa"
+            "activities activities";
     }
 
     .degree {
@@ -35,19 +40,37 @@
         font-weight: bold;
         font-size: 0.9em;
         align-self: center;
+        text-align: right;
     }
 
     .college {
         grid-area: college;
     }
 
-    .minor {
-        grid-area: minor;
+    .gpa {
+        grid-area: gpa;
+    }
+
+    .activities {
+        grid-area: activities;
+        list-style: none;
+        padding-left: 1em;
+        font-style: italic;
+        line-height: 1.15;
+    }
+
+    .activities li {
+        margin: 0;
+        text-indent: -0.75em;
+    }
+
+    .activities li::before {
+        content: '-';
+        margin-right: 0.5em;
     }
 
     small {
         font-size: 0.8em;
-        font-style: italic;
     }
 
     @media print {
@@ -57,11 +80,21 @@
         }
 
         .contents {
+            text-align: left;
             grid-template-areas:
                 "degree"
                 "time"
                 "college"
-                "minor";
+                "gpa"
+                "activities";
+        }
+
+        .time {
+            text-align: left;
+        }
+
+        .activities {
+            text-align: left;
         }
     }
 </style>
