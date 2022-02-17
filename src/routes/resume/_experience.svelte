@@ -55,8 +55,7 @@
     }
 
     .position header {
-        display: flex;
-        align-items: center;
+        margin-bottom: 0.5em;
     }
 
     hr {
@@ -67,14 +66,7 @@
         margin: 0;
     }
 
-    .position .role::before {
-        content: '—';
-        margin: 0 0.25em;
-    }
-
     .position .duration {
-        flex: 1;
-        text-align: right;
         font-size: 1em;
         font-weight: bold;
         margin: 0;
@@ -83,6 +75,8 @@
     .position h3 {
         font-size: 1.25em;
         font-weight: bold;
+        margin: 0;
+        line-height: 1;
     }
 
     .position h4 {
@@ -93,6 +87,27 @@
 
     li {
         text-align: left;
+    }
+
+    @media screen and (min-width: 75rem), print {
+        .position header {
+            display: flex;
+            align-items: center;
+        }
+
+        .position .role {
+            margin: 0;
+        }
+
+        .position .role::before {
+            content: '—';
+            margin: 0 0.25em;
+        }
+
+        .position .duration {
+            flex: 1;
+            text-align: right;
+        }
     }
 
     @media print {
