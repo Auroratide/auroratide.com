@@ -13,10 +13,10 @@
         <li>
             <strong>Technologies:</strong>
             <ul>
-                <li>React, React</li>
+                <li>React, Svelte</li>
                 <li>NodeJS, Express</li>
                 <li>Jest, Mocha, JUnit</li>
-                <li>Gradle, Ktor, RabbitMQ</li>
+                <li>Spring, Ktor, RabbitMQ</li>
                 <li>Git</li>
                 <li>Azure Devops, Docker</li>
                 <li>Postgres, SQL Server</li>
