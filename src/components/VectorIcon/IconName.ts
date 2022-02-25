@@ -45,6 +45,7 @@ export const IconName = {
     LevelUpAlt: 'level-up-alt',
     Lightbulb: 'lightbulb',
     LowVision: 'low-vision',
+    MapMarkerAlt: 'map-marker-alt',
     Mobile: 'mobile',
     Moon: 'moon',
     Music: 'music',

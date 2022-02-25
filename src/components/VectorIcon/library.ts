@@ -43,6 +43,7 @@ import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
 import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt'
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
 import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'
 import { faMusic } from '@fortawesome/free-solid-svg-icons/faMusic'
@@ -140,6 +141,7 @@ export const library = {
     [IconName.LevelUpAlt]: faLevelUpAlt,
     [IconName.Lightbulb]: faLightbulb,
     [IconName.LowVision]: faLowVision,
+    [IconName.MapMarkerAlt]: faMapMarkerAlt,
     [IconName.Mobile]: faMobile,
     [IconName.Moon]: faMoon,
     [IconName.Music]: faMusic,
