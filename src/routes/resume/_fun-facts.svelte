@@ -1,7 +1,7 @@
 <section class="fun-facts">
     <h2>Fun Facts</h2>
     <ul>
-        <li>NASA Aerospace Scholar</li>
+        <li>Shaken the hand of Apollo 13 astronaut Fred Haise</li>
         <li>Bronze Medal, most innovative game in Ludum Dare competition</li>
         <li>Taken unplanned adventures in India and Ireland</li>
         <li>Writing a science fiction story</li>
