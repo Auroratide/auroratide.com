@@ -2,11 +2,11 @@
     "id": "coloring-an-input-label",
     "title": "Coloring an Input Label",
     "category": "Software Engineering",
-    "icon": "",
-    "tags": [],
+    "icon": "tag",
+    "tags": ["html", "css", "javascript", "input", "label", "stackazon", "reviews", "solutions"],
     "color": {
         "type": "palette",
-        "value": ""
+        "value": "auroragreen"
     },
     "summary": "",
     "long_summary": "",
