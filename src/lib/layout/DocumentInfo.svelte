@@ -27,7 +27,7 @@
         {/if}
 
         {#if og.article !== undefined}
-            <meta property="og:article:published_time" content={og.article.published.toISOString()} />
+            <meta property="og:article:published_time" content={og.article.published?.toISOString()} />
             <meta property="og:article:author" content={og.article.author} />
             <meta property="og:article:section" content={og.article.section} />
             {#each og.article.tags as tag}
