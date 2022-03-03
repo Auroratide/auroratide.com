@@ -68,6 +68,7 @@ export const IconName = {
     SuitcaseRolling: 'suitcase-rolling',
     Sun: 'sun',
     TableTennis: 'table-tennis',
+    Tag: 'tag',
     Taxi: 'taxi',
     Th: 'th',
     Tty: 'tty',

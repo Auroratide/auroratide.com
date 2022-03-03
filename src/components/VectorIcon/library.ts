@@ -65,6 +65,7 @@ import { faStamp } from '@fortawesome/free-solid-svg-icons/faStamp'
 import { faSuitcaseRolling } from '@fortawesome/free-solid-svg-icons/faSuitcaseRolling'
 import { faSun } from '@fortawesome/free-solid-svg-icons/faSun'
 import { faTableTennis } from '@fortawesome/free-solid-svg-icons/faTableTennis'
+import { faTag } from '@fortawesome/free-solid-svg-icons/faTag'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons/faTaxi'
 import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
 import { faTty } from '@fortawesome/free-solid-svg-icons/faTty'
@@ -164,6 +165,7 @@ export const library = {
     [IconName.SuitcaseRolling]: faSuitcaseRolling,
     [IconName.Sun]: faSun,
     [IconName.TableTennis]: faTableTennis,
+    [IconName.Tag]: faTag,
     [IconName.Taxi]: faTaxi,
     [IconName.Th]: faTh,
     [IconName.Tty]: faTty,
