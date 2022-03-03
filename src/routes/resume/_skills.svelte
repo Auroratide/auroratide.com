@@ -5,7 +5,7 @@
             <strong>Languages:</strong>
             <ul>
                 <li>Typescript, Javascript</li>
-                <li>HTML, CSS</li>
+                <li>HTML, CSS, SCSS</li>
                 <li>Kotlin, Java, C#</li>
                 <li>SQL</li>
             </ul>
