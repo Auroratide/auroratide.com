@@ -81,7 +81,7 @@ input:focus + label {
 
 However, for a text field, conventionally the label is supposed to come _before_ the input.
 
-<article-image nopopout src="/assets/posts/coloring-an-input-label/input-then-label.png" alt="A text input field is followed by a label, 'First Name'.">
+<article-image nopopout src="/assets/posts/styling-a-focused-input-label/input-then-label.png" alt="A text input field is followed by a label, 'First Name'.">
   <span slot="caption">When the label comes after the text input field, it looks strange.</span>
 </article-image>
 
