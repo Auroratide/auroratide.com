@@ -1,15 +1,15 @@
 {
     "id": "coloring-an-input-label",
     "title": "Coloring an Input Label",
-    "category": "Software Engineering",
+    "category": "software engineering",
     "icon": "tag",
     "tags": ["html", "css", "javascript", "input", "label", "stackazon", "reviews", "solutions"],
     "color": {
         "type": "palette",
         "value": "auroragreen"
     },
-    "summary": "",
-    "long_summary": "",
+    "summary": "Using CSS to style a label when its input has focus is tricky! Let's review 5 possible solutions for compatibility, accessibility, and complexity.",
+    "long_summary": "Using CSS to style a label when its input has focus is tricky! Thankfully, Stackazon has rated and reviewed five different solutions for browser compatibility, accessibility, and complexity to see which serves the most use cases.",
     "published_at": "",
     "created_at": "2022-02-16T17:04:10.420Z"
 }

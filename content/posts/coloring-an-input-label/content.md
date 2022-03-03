@@ -16,8 +16,8 @@ This is mostly my wacky way of demonstrating how to evaluate important factors w
 * [Solutions](#solutions)
   * [Using Adjacent Siblings](#using-adjacent-siblings) (<moon-rating rating="3.5"></moon-rating>)
   * [Using Javascript](#using-javascript) (<moon-rating rating="3.25"></moon-rating>)
-  * [Using Explicit :focus-within](#using-explicit-focus-within) (<moon-rating rating="4.25"></moon-rating>)
-  * [Using Implicit :focus-within](#using-implicit-focus-within) (<moon-rating rating="4"></moon-rating>)
+  * [Using :focus-within with Explicit Labels](#using-focus-within-with-explicit-labels) (<moon-rating rating="4.25"></moon-rating>)
+  * [Using :focus-within with Implicit Labels](#using-focus-within-with-implicit-labels) (<moon-rating rating="4"></moon-rating>)
   * [Using :has](#using-has) (<moon-rating rating="0.75"></moon-rating>)
 * [Codepen](#codepen)
 
@@ -53,7 +53,7 @@ For each solution, we provide a rating and some reviews. Our Stackazon reviewers
 
 * [Can I Use](https://caniuse.com/) - Tracks the browser compatibility of various web features
 * [Accessibility Support](https://a11ysupport.io/) - Tracks to what degree assistive technologies implement accessibility specifications
-* [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/) - Essentially a specification for maximizing web accessibility
+* [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/) - Essentially a specification for maximizing web accessibility, also called <abbr>WCAG</abbr>
 * [MDN Web Docs](https://developer.mozilla.org/en-US/) - Curated documentation of web features including best practices (and recently got an upgrade!)
 
 ### Using Adjacent Siblings
@@ -169,7 +169,7 @@ Our reviewers gave this solution 3.25 out of 5 moons, citing some browser compat
 > 
 > That said, this solution may be preferred if an input has many labels or the input and its label are far apart in the HTML hierarchy such that it is difficult to use CSS selectors to style them.
 
-### Using Explicit :focus-within
+### Using :focus-within with Explicit Labels
 
 **Rating:** <moon-rating rating="4.25"></moon-rating>
 
@@ -188,7 +188,7 @@ CSS offers a relatively new pseudo-class called `:focus-within` which matches an
 }
 ```
 
-This works since the focused input is _within_ the `input-container` div. The selector is essentially saying, "find an input container with focus somewhere inside of it, then find all its child labels."
+This works since the focused input is _within_ the `input-container` div. The selector is essentially saying, "find an input container with focus somewhere inside of it, then find all the container's child labels."
 
 <side-text success>
 
@@ -212,7 +212,7 @@ Our reviewers gave this solution 4.25 out of 5 moons, citing lack of support in 
 
 > Of solutions presented, this supports accessibility tools the best: it properly assigns a label to an input and keeps code-order and visual-order the same, both being WCAG requirements.
 
-### Using Implicit :focus-within
+### Using :focus-within with Implicit Labels
 
 **Rating:** <moon-rating rating="4"></moon-rating>
 
@@ -242,7 +242,7 @@ Our reviewers gave this solution 4 out of 5 moons, citing minor accessibility is
 
 > Implicit labels are best used when the id of the input is not known and hence an explicit label cannot be created. This is because, generally, <q cite="https://www.w3.org/WAI/tutorials/forms/labels/">explicit labels are better supported by assistive technology</q> (Ref: [Labeling Controls](https://www.w3.org/WAI/tutorials/forms/labels/)). That said, support has gotten better with time.
 > 
-> For example, as of today, most screen readers now support implicit labels as well as explicit labels. However, **[voice control](https://webaim.org/articles/motor/assistive#voicerecognition)** software, which can be used by people with movement disabilities preventing them from using a keyboard or mouse, does not always adequately support implicit labels.
+> For example, as of today, most screen readers now equally support implicit labels and explicit labels. However, **[voice control](https://webaim.org/articles/motor/assistive#voicerecognition)** software, which can be used by people with movement disabilities preventing them from using a keyboard or mouse, does not always adequately support implicit labels.
 > 
 > See: [Accessibility Support for labels](https://a11ysupport.io/tech/html/label_element)
 
