@@ -8,9 +8,10 @@
         </header>
         <section>
             <ul>
-                <li>Achieved over 30,000 views through technical writing on topics including web accessibility and semantics, authoring and testing web components, specification-centered HTML/CSS development, and Kotlin concurrency.</li>
+                <li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
                 <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li>
                 <li>Composed three reusable web components with thousands of weekly downloads.</li>
+                <li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
             </ul>
         </section>
     </section>
