@@ -3,7 +3,7 @@
     <section class="position">
         <header>
             <h3>Auroratide</h3>
-            <p class="role">Founder, Content Creator</p>
+            <p class="role">Founder, Technical Author</p>
             <p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
         </header>
         <section>
