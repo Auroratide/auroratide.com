@@ -20,7 +20,7 @@
         <header>
             <h3>ThoughtWorks</h3>
             <p class="role">Senior Consultant Developer</p>
-            <p class="duration"><time>2016</time> - <time datetime="2021-04">Apr 2021</time></p>
+            <p class="duration"><time datetime="2016-08">Aug 2016</time> - <time datetime="2021-04">Apr 2021</time></p>
         </header>
         <section>
             <h4>Co-Tech Lead - Healthcare Client</h4>
