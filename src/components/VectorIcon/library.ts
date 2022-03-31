@@ -86,6 +86,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5'
 import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact'
 import { faRedditAlien } from '@fortawesome/free-brands-svg-icons'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow'
 import { faUnity } from '@fortawesome/free-brands-svg-icons/faUnity'
@@ -186,6 +187,7 @@ export const library = {
     [IconName.Html5]: faHtml5,
     [IconName.Kafka]: kafka,
     [IconName.Npm]: faNpm,
+    [IconName.React]: faReact,
     [IconName.RedditAlien]: faRedditAlien,
     [IconName.StackOverflow]: faStackOverflow,
     [IconName.Unity]: faUnity,
