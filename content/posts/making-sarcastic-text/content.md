@@ -1,6 +1,6 @@
 <style>
     .percontation-mark-figure vector-icon {
-        font-size: calc(2 * var(--sizing-font-xl));
+        font-size: calc(2 * var(--font-sz-jupiter));
         transform: scaleX(-1);
     }
 

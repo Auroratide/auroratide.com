@@ -30,7 +30,7 @@
     .shade {
         color: var(--text-color);
         background-color: var(--shade-color);
-        padding: var(--sizing-spacing-sm) var(--sizing-spacing-md);
+        padding: var(--sp-st-o) var(--sp-st-s);
         margin: 0;
     }
 
@@ -42,10 +42,10 @@
     }
 
     p.hsl {
-        margin-bottom: var(--sizing-spacing-sm);
+        margin-bottom: var(--sp-st-o);
     }
 
     p.rgb, p.hex, figcaption {
-        font-size: var(--sizing-font-xs);
+        font-size: var(--font-sz-earth);
     }
 </style>

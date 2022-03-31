@@ -27,16 +27,16 @@
 
     .link-bar a {
         position: relative;
-        margin: 0 var(--sizing-spacing-sm);
-        font-size: calc(1.125 * var(--sizing-font-xs));
+        margin: 0 var(--sp-st-o);
+        font-size: calc(1.125 * var(--font-sz-earth));
         top: -0.75em;
     }
 
     .link-bar a vector-icon {
-        margin-left: var(--sizing-spacing-xs);
+        margin-left: var(--sp-st-be);
     }
 
     .link-bar a.as-button::before {
-        border: var(--sizing-border-sm) solid var(--skin-content);
+        border: var(--bd-fx-he) solid var(--skin-content);
     }
 </style>

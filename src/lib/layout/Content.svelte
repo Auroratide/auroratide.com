@@ -9,22 +9,22 @@
 <style>
     .content {
         background: var(--skin-content);
-        padding: var(--sizing-spacing-md);
+        padding: var(--sp-st-s);
     }
 
     @media screen and (min-width: 75rem) {
         .content {
-            padding: var(--sizing-spacing-xl);
+            padding: var(--sp-st-ge);
         }
 
         .content.has-sidebar {
             display: grid;
             grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
-            padding: var(--sizing-spacing-xl) calc(var(--sizing-spacing-xl) - var(--sizing-spacing-sm));
+            padding: var(--sp-st-ge) calc(var(--sp-st-ge) - var(--sp-st-o));
         }
 
         .content.has-sidebar > :global(*) {
-            padding: 0 var(--sizing-spacing-sm);
+            padding: 0 var(--sp-st-o);
         }
     }
 </style>

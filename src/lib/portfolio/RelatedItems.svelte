@@ -34,9 +34,9 @@
         display: block;
         background: var(--palette-shade-067);
         color: var(--palette-greyscale-100);
-        padding: calc(0.75 * var(--sizing-spacing-sm)) var(--sizing-spacing-sm);
+        padding: calc(0.75 * var(--sp-st-o)) var(--sp-st-o);
         overflow: hidden;
-        margin-bottom: var(--sizing-spacing-md);
+        margin-bottom: var(--sp-st-s);
         transition: background var(--transition-quick);
         text-align: left;
         line-height: 1.5;
@@ -45,8 +45,8 @@
     .item vector-icon {
         font-size: 4.5em;
         position: absolute;
-        right: calc(0.25 * var(--sizing-spacing-sm));
-        top: calc(-0.25 * var(--sizing-spacing-xs));
+        right: calc(0.25 * var(--sp-st-o));
+        top: calc(-0.25 * var(--sp-st-be));
         color: var(--palette-shade-050);
         z-index: 1;
         transition: color var(--transition-quick);
@@ -54,7 +54,7 @@
 
     .item .title {
         position: relative;
-        font-size: var(--sizing-font-xs);
+        font-size: var(--font-sz-earth);
         font-weight: var(--typography-normal);
         z-index: 2;
     }

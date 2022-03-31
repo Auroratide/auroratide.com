@@ -30,13 +30,13 @@
 
 <style>
     .footer {
-        padding: var(--sizing-spacing-xl) 0;
+        padding: var(--sp-st-ge) 0;
         text-align: center;
     }
 
     .socials {
-        margin-bottom: var(--sizing-spacing-p);
-        font-size: var(--sizing-font-md);
+        margin-bottom: var(--sp-paragraph);
+        font-size: var(--font-sz-uranus);
     }
 
     .socials ul {
@@ -48,7 +48,7 @@
 
     .socials ul li {
         display: inline-block;
-        margin: 0 var(--sizing-spacing-sm);
+        margin: 0 var(--sp-st-o);
     }
 
     .socials a {
@@ -65,12 +65,12 @@
     }
 
     .socials a:hover {
-        border-width: var(--sizing-border-md);
+        border-width: var(--bd-fx-c);
     }
 
     .nav {
-        font-size: var(--sizing-font-sm);
-        margin-bottom: var(--sizing-spacing-p);
+        font-size: var(--font-sz-neptune);
+        margin-bottom: var(--sp-paragraph);
     }
 
     .nav ul {
@@ -81,7 +81,7 @@
 
     .nav ul li {
         display: inline-block;
-        margin: 0 var(--sizing-spacing-md);
+        margin: 0 var(--sp-st-s);
     }
 
     .nav a {
@@ -95,11 +95,11 @@
 
     .license, .source {
         display: block;
-        font-size: var(--sizing-font-xs);
+        font-size: var(--font-sz-earth);
     }
 
     .license {
-        margin-bottom: var(--sizing-spacing-p);
+        margin-bottom: var(--sp-paragraph);
     }
 
     .source {

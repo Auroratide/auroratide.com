@@ -53,18 +53,18 @@
     }
 
     .article-card:hover, .article-card:focus-within {
-        outline: var(--sizing-border-sm) solid var(--article-color);
+        outline: var(--bd-fx-he) solid var(--article-color);
     }
     
     .article-card .info {
-        padding: var(--sizing-spacing-sm);
+        padding: var(--sp-st-o);
     }
 
     .article-card .title {
-        font-size: var(--sizing-font-md);
+        font-size: var(--font-sz-uranus);
         font-weight: var(--typography-bold);
         line-height: 1;
-        padding: var(--sizing-spacing-sm) 0;
+        padding: var(--sp-st-o) 0;
         margin-bottom: 0;
         text-align: left;
     }
@@ -94,7 +94,7 @@
         top: 0;
         left: 0;
         overflow: hidden;
-        font-size: calc(5 * var(--sizing-font-xs));
+        font-size: calc(5 * var(--font-sz-earth));
         margin: 0;
     }
 
@@ -110,7 +110,7 @@
         grid-area: info;
         display: flex;
         flex-direction: column;
-        height: calc(9 * var(--sizing-font-xs));
+        height: calc(9 * var(--font-sz-earth));
     }
 
     .article-card .category {
@@ -120,13 +120,13 @@
         display: flex;
         align-items: flex-end;
         justify-content: right;
-        padding-right: var(--sizing-spacing-sm);
+        padding-right: var(--sp-st-o);
         font-weight: var(--typography-normal);
     }
 
     .article-card date-display {
         text-align: right;
-        padding-right: var(--sizing-spacing-sm);
+        padding-right: var(--sp-st-o);
         font-weight: var(--typography-normal);
         opacity: 0.75;
     }

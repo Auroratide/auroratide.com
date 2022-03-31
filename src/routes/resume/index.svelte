@@ -58,7 +58,7 @@
         .resume {
             height: 101.15vh;
             font-size: 13px;
-            margin: calc(var(--sizing-spacing-lg) * -1);
+            margin: calc(var(--sp-st-cr) * -1);
             display: grid;
             grid-template-columns: 2fr 5fr;
             grid-template-rows: auto auto auto auto auto 1fr;

@@ -47,8 +47,8 @@
 
     .tagline {
         line-height: 1.25;
-        margin-bottom: var(--sizing-spacing-md);
-        font-size: var(--sizing-font-md);
+        margin-bottom: var(--sp-st-s);
+        font-size: var(--font-sz-uranus);
     }
     
     .profile {
@@ -60,7 +60,7 @@
         border-radius: 20em;
         overflow: hidden;
         margin: auto;
-        margin-bottom: var(--sizing-spacing-lg);
+        margin-bottom: var(--sp-st-cr);
         box-shadow: 0 0.25em 0.5em -0.25em var(--palette-shade-050);
     }
 

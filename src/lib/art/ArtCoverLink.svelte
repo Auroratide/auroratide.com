@@ -38,7 +38,7 @@
         width: 100%;
         color: var(--palette-greyscale-100);
         background: var(--palette-shade-050);
-        font-size: var(--sizing-font-md);
+        font-size: var(--font-sz-uranus);
         font-weight: var(--typography-normal);
         line-height: 1.5;
         z-index: 2;
@@ -88,7 +88,7 @@
     }
 
     .item:hover, .item:focus-within {
-        border-bottom-width: var(--sizing-border-lg);
+        border-bottom-width: var(--bd-fx-o);
     }
 
     .item:hover .image-container, .item:focus-within .image-container {

@@ -22,7 +22,7 @@
     h1 {
         position: relative;
         width: 100%;
-        padding: var(--sizing-spacing-md);
+        padding: var(--sp-st-s);
         color: var(--palette-greyscale-100);
         text-align: center;
         background: var(--palette-shade-033);

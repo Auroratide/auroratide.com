@@ -38,6 +38,6 @@
 <style>
     h1 {
         text-align: center;
-        margin-bottom: var(--sizing-spacing-md);
+        margin-bottom: var(--sp-st-s);
     }
 </style>

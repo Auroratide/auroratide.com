@@ -51,7 +51,7 @@
 
 <style>
     .item-holder {
-        padding: var(--sizing-spacing-md);
+        padding: var(--sp-st-s);
         list-style: none;
         margin-bottom: 0;
     }
@@ -62,7 +62,7 @@
 
     @media screen and (min-width: 75rem) {
         .item-holder {
-            padding: var(--sizing-spacing-xl);
+            padding: var(--sp-st-ge);
         }
     }
 </style>

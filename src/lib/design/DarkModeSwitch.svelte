@@ -34,7 +34,7 @@
 <style>
     button {
         background: none;
-        padding: var(--sizing-spacing-sm);
+        padding: var(--sp-st-o);
         border-radius: 0;
         display: inline-grid;
         grid-template-columns: 1fr;

@@ -21,23 +21,23 @@
 <style>
     .error {
         text-align: center;
-        padding: var(--sizing-spacing-xl) var(--sizing-spacing-md);
+        padding: var(--sp-st-ge) var(--sp-st-s);
     }
 
     h1 {
-        font-size: calc(3.5 * var(--sizing-font-xl));
-        text-shadow: var(--sizing-border-sm) var(--sizing-border-sm) 0 var(--palette-shade-033);
+        font-size: calc(3.5 * var(--font-sz-jupiter));
+        text-shadow: var(--bd-fx-he) var(--bd-fx-he) 0 var(--palette-shade-033);
         opacity: 0.5;
         line-height: 1;
-        margin-bottom: var(--sizing-spacing-xs);
+        margin-bottom: var(--sp-st-be);
     }
 
     h2 {
-        font-size: var(--sizing-font-lg);
+        font-size: var(--font-sz-saturn);
         font-weight: var(--typography-normal);
         opacity: 0.5;
         line-height: 1;
-        margin-bottom: var(--sizing-spacing-md);
+        margin-bottom: var(--sp-st-s);
     }
 
     .content {
@@ -46,7 +46,7 @@
 
     @media screen and (min-width: 75rem) {
         .content {
-            padding: 0 calc(5 * var(--sizing-spacing-xl));
+            padding: 0 calc(5 * var(--sp-st-ge));
         }
     }
 </style>

@@ -11,13 +11,13 @@
         text-align: center;
         position: absolute;
         left: -9999px;
-        font-size: var(--sizing-font-md);
+        font-size: var(--font-sz-uranus);
     }
 
     .skip-link:focus {
         position: fixed;
-        top: var(--sizing-spacing-md);
-        left: var(--sizing-spacing-md);
+        top: var(--sp-st-s);
+        left: var(--sp-st-s);
         z-index: 999;
     }
 

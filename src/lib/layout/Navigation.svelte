@@ -73,7 +73,7 @@
     }
 
     .title a {
-        font-size: var(--sizing-font-md);
+        font-size: var(--font-sz-uranus);
         line-height: 1.25;
         color: var(--palette-greyscale-100);
     }
@@ -81,15 +81,15 @@
     .subtitle {
         grid-area: subtitle;
         align-self: center;
-        font-size: var(--sizing-font-sm);
+        font-size: var(--font-sz-neptune);
         align-self: center;
-        margin-left: calc(-1 * var(--sizing-spacing-sm));
+        margin-left: calc(-1 * var(--sp-st-o));
         opacity: 0.9;
     }
 
     .subtitle::before {
         content: '\2022';
-        margin-right: var(--sizing-spacing-sm);
+        margin-right: var(--sp-st-o);
     }
 
     .socials {
@@ -103,12 +103,12 @@
         padding: 0;
         margin: 0;
         text-align: right;
-        margin: 0 calc(-1 * var(--sizing-spacing-xs));
+        margin: 0 calc(-1 * var(--sp-st-be));
     }
 
     .socials ul li {
         display: inline-block;
-        margin: 0 var(--sizing-spacing-xs);
+        margin: 0 var(--sp-st-be);
     }
 
     .socials a {
@@ -117,21 +117,21 @@
 
     .theme {
         grid-area: theme;
-        font-size: var(--sizing-font-sm);
+        font-size: var(--font-sz-neptune);
         text-align: right;
         align-self: center;
     }
 
     .nav {
         grid-area: nav;
-        font-size: var(--sizing-font-sm);
+        font-size: var(--font-sz-neptune);
         align-self: center;
     }
 
     .nav ul {
         list-style: none;
         padding: 0;
-        margin: 0 calc(-1 * var(--sizing-spacing-sm));
+        margin: 0 calc(-1 * var(--sp-st-o));
         text-align: left;
     }
 
@@ -142,7 +142,7 @@
 
     .nav a {
         display: inline-block;
-        padding: 0 var(--sizing-spacing-sm);
+        padding: 0 var(--sp-st-o);
         color: var(--skin-banner-text);
     }
 
@@ -172,16 +172,16 @@
         }
 
         .theme {
-            margin-right: calc(-1 * var(--sizing-spacing-sm));
+            margin-right: calc(-1 * var(--sp-st-o));
         }
 
         .nav ul {
-            margin: 0 calc(-1 * var(--sizing-spacing-md));
+            margin: 0 calc(-1 * var(--sp-st-s));
             text-align: right;
         }
 
         .nav ul li a {
-            padding: 0 var(--sizing-spacing-md);
+            padding: 0 var(--sp-st-s);
         }
     }
 </style>

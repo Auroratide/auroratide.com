@@ -26,19 +26,19 @@
         justify-content: space-evenly;
         list-style: none;
         padding: 0;
-        margin: 0 calc(-1 * var(--sizing-spacing-sm));
+        margin: 0 calc(-1 * var(--sp-st-o));
     }
 
     .gallery li {
-        margin: 0 var(--sizing-spacing-sm);
+        margin: 0 var(--sp-st-o);
     }
 
     figure {
-        margin: 0 0 var(--sizing-spacing-p);
+        margin: 0 0 var(--sp-paragraph);
     }
 
     figcaption {
-        font-size: var(--sizing-font-xs);
+        font-size: var(--font-sz-earth);
         text-align: center;
         opacity: 0.75;
         line-height: 1.25;

@@ -99,7 +99,7 @@
     }
 
     .published {
-        margin-bottom: var(--sizing-spacing-p);
+        margin-bottom: var(--sp-paragraph);
     }
 
     .category {
@@ -108,9 +108,9 @@
 
     @media screen and (min-width: 75rem) {
         .more-title {
-            font-size: var(--sizing-font-sm);
+            font-size: var(--font-sz-neptune);
             line-height: 1;
-            margin-bottom: var(--sizing-spacing-p);
+            margin-bottom: var(--sp-paragraph);
         }
     }
 </style>

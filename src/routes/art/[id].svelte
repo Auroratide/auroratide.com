@@ -114,7 +114,7 @@
 
 <style>
     .article {
-        --article-padding: var(--sizing-spacing-md);
+        --article-padding: var(--sp-st-s);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -140,10 +140,10 @@
     }
 
     h1 {
-        font-size: var(--sizing-font-lg);
+        font-size: var(--font-sz-saturn);
         position: relative;
         width: 100%;
-        padding: var(--sizing-spacing-xs);
+        padding: var(--sp-st-be);
         color: var(--palette-greyscale-100);
         text-align: center;
         background: var(--palette-shade-033);
@@ -174,8 +174,8 @@
     }
 
     .published {
-        margin-bottom: var(--sizing-spacing-md);
-        font-size: var(--sizing-font-xs);
+        margin-bottom: var(--sp-st-s);
+        font-size: var(--font-sz-earth);
         text-align: center;
     }
 
@@ -216,12 +216,12 @@
 
     .more-title {
         text-transform: capitalize;
-        font-size: var(--sizing-font-md);
+        font-size: var(--font-sz-uranus);
     }
 
     @media screen and (min-width: 75rem) {
         h1 {
-            padding: var(--sizing-spacing-sm);
+            padding: var(--sp-st-o);
         }
 
         .article {

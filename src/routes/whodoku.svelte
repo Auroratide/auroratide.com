@@ -25,6 +25,6 @@
     }
 
     whodoku-widget {
-        margin-bottom: var(--sizing-spacing-xl);
+        margin-bottom: var(--sp-st-ge);
     }
 </style>

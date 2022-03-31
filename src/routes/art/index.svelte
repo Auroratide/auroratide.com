@@ -49,13 +49,13 @@
 
 <style>
     .item-list {
-        --gap-size: var(--sizing-spacing-md);
+        --gap-size: var(--sp-st-s);
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(calc(max(25%, 10em) - var(--gap-size)), 1fr));
         grid-auto-rows: 1fr;
         grid-gap: var(--gap-size);
-        padding: var(--sizing-spacing-md);
+        padding: var(--sp-st-s);
     }
 
     .item-list > li {

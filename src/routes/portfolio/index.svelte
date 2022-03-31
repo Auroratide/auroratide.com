@@ -52,12 +52,12 @@
 
 <style>
     .item-holder {
-        --gap-size: var(--sizing-spacing-md);
+        --gap-size: var(--sp-st-s);
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(calc(max(50%, 20em) - var(--gap-size)), 1fr));
         grid-gap: var(--gap-size);
-        padding: var(--sizing-spacing-md);
+        padding: var(--sp-st-s);
         margin-bottom: 0;
     }
 
@@ -67,7 +67,7 @@
 
     @media screen and (min-width: 75rem) {
         .item-holder {
-            padding: var(--sizing-spacing-xl);
+            padding: var(--sp-st-ge);
         }
     }
 </style>
