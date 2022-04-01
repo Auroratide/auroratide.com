@@ -1,0 +1,15 @@
+{
+    "id": "using-astronomy-chemistry-and-meteorology-to-name-css-variables",
+    "title": "Using Astronomy, Chemistry, and Meteorology to Name CSS Variables",
+    "category": "software engineering",
+    "icon": "atom",
+    "tags": ["css", "variables", "design system", "astronomy", "chemistry", "meteorology"],
+    "color": {
+        "type": "palette",
+        "value": "wintergrey"
+    },
+    "summary": "",
+    "long_summary": "",
+    "published_at": "",
+    "created_at": "2022-03-31T13:58:02.475Z"
+}
