@@ -7,6 +7,7 @@ export const IconName = {
     AngleLeft: 'angle-left',
     AngleRight: 'angle-right',
     AngleUp: 'angle-up',
+    Atom: 'atom',
     Bomb: 'bomb',
     Book: 'book',
     BookOpen: 'book-open',
