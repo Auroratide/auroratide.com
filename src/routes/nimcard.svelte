@@ -8,6 +8,8 @@
     import { onMount } from 'svelte'
     import { buildOpenGraph } from '$lib/open-graph'
     import { navigation, UrlBuilder } from '$lib/routes'
+    import Loading from '$lib/design/Loading.svelte'
+    import { browser } from '$app/env'
 
     export let scoring = Nimcard.Board.standardScoring
 
@@ -16,9 +18,12 @@
         url: new UrlBuilder().withBase().static(navigation.Nimcard),
     }).website()
 
+    let loading = browser ? window.customElements.get('nimcard-game') === undefined : true
+
     let element: NimcardGame
     onMount(() => {
         window.customElements.whenDefined('nimcard-game').then(() => {
+            loading = false
             element.onnewgame = () => {
                 const deck = Nimcard.Deck.shuffle(Nimcard.Deck.createFullDeck())
                 const board = Nimcard.Board.create(deck, [4, 5, 5, 5], scoring)
@@ -41,6 +46,9 @@
             <FocusOnMe>
                 <h1>Nimcard</h1>
             </FocusOnMe>
+            {#if loading}
+                <Loading large text="Dealing cards..." />
+            {/if}
             <nimcard-game bind:this={element} aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
         </Content>
     </Container>
