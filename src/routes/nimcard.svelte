@@ -20,21 +20,23 @@
 
     let loading = browser ? window.customElements.get('nimcard-game') === undefined : true
 
-    let element: NimcardGame
     onMount(() => {
         window.customElements.whenDefined('nimcard-game').then(() => {
             loading = false
-            element.onnewgame = () => {
-                const deck = Nimcard.Deck.shuffle(Nimcard.Deck.createFullDeck())
-                const board = Nimcard.Board.create(deck, [4, 5, 5, 5], scoring)
-                const game = Nimcard.Game.start(board)
-
-                element.start(game, ['human', 'ai'])
-            }
-
-            element.onnewgame()
         })
     })
+
+    const nimcard = (node: NimcardGame) => {
+        node.onnewgame = () => {
+            const deck = Nimcard.Deck.shuffle(Nimcard.Deck.createFullDeck())
+            const board = Nimcard.Board.create(deck, [4, 5, 5, 5], scoring)
+            const game = Nimcard.Game.start(board)
+
+            node.start(game, ['human', 'ai'])
+        }
+
+        node.onnewgame()
+    }
 </script>
 
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.1/lib/define.js"></external-resource>
@@ -48,8 +50,9 @@
             </FocusOnMe>
             {#if loading}
                 <Loading large text="Dealing cards..." />
+            {:else}
+                <nimcard-game use:nimcard aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
             {/if}
-            <nimcard-game bind:this={element} aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
         </Content>
     </Container>
 </DocumentInfo>
