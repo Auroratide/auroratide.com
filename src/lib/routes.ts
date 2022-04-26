@@ -41,7 +41,7 @@ export type Navigation = {
     visibility: NavVisibility,
 }
 
-export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal' | 'Accessibility' | 'Whodoku' | 'Styleguide' | 'Sandbox' | 'Carica' | 'Nimcard' | 'Resume', Navigation> = {
+export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal' | 'Accessibility' | 'Whodoku' | 'PokemonTypeCalculator' | 'Styleguide' | 'Sandbox' | 'Carica' | 'Nimcard' | 'Resume', Navigation> = {
     Posts: {
         name: 'Posts',
         link: '/posts',
@@ -75,6 +75,11 @@ export const navigation: Record<'Posts' | 'Portfolio' | 'Art' | 'About' | 'Legal
     Whodoku: {
         name: 'Whodoku',
         link: '/whodoku',
+        visibility: NavVisibility.Hidden,
+    },
+    PokemonTypeCalculator: {
+        name: 'Pokemon Type Calculator',
+        link: '/pokemon-type-calculator',
         visibility: NavVisibility.Hidden,
     },
     Styleguide: {
