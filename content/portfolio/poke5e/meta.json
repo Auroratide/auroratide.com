@@ -1,0 +1,45 @@
+{
+    "id": "poke5e",
+    "title": "Pokemon 5e Reference",
+    "category": "websites",
+    "tags": ["pokemon", "dnd", "reference", "svelte", "sveltekit", "homebrew"],
+    "icon": "dragon",
+    "color": {
+        "type": "palette",
+        "value": "livianyellow"
+    },
+    "cover": {
+        "original": "cover.png",
+        "alt": "Pokemon 5e Logo"
+    },
+    "summary": "This website makes community-made content two popular games (Pokemon, and Dungeons and Dragons) online and searchable.",
+    "long_summary": "This website unites two popular franchises: Pokemon with Dungeons and Dragons. Fans from these communities invented content to make Pokemon playable within Dungeons and Dragons, and as a fan myself, I converted their PDF documents into a searchable website.",
+    "published_at": "2022-03-09T12:00:00.000Z",
+    "created_at": "2022-05-09T14:18:23.368Z",
+    "links": [ {
+        "title": "Visit",
+        "href": "https://auroratide.github.io/poke5e/",
+        "icon": "dragon",
+        "color": {
+            "type": "palette",
+            "value": "aurorablue"
+        }
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/poke5e",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ],
+    "gallery": [ {
+        "image": "pikachu.png",
+        "alt": "The filter field spells 'PIK', with Pikachu's info on the right.",
+        "caption": "Let's search for Pikachu!"
+    }, {
+        "image": "moves.png",
+        "alt": "The filter field says 'fairy', with the list showing 21 matching moves.",
+        "caption": "Filtering for all fairy-type moves."
+    } ]
+}
