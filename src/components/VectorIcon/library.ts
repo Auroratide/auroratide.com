@@ -26,6 +26,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
 import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons/faExpandArrowsAlt'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
+import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter'
 import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
 import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
@@ -128,6 +129,7 @@ export const library = {
     [IconName.ExchangeAlt]: faExchangeAlt,
     [IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
     [IconName.EyeDropper]: faEyeDropper,
+    [IconName.Filter]: faFilter,
     [IconName.Fingerprint]: faFingerprint,
     [IconName.Fire]: faFire,
     [IconName.Folder]: faFolder,

@@ -28,6 +28,7 @@ export const IconName = {
     ExchangeAlt: 'exchange-alt',
     ExpandArrowsAlt: 'expand-arrows-alt',
     EyeDropper: 'eye-dropper',
+    Filter: 'filter',
     Fingerprint: 'fingerprint',
     Fire: 'fire',
     Folder: 'folder',
