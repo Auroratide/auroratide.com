@@ -1,0 +1,39 @@
+{
+    "id": "text-filter",
+    "title": "text-filter Web Component",
+    "category": "components",
+    "tags": ["web component", "custom element", "text", "filter", "input"],
+    "icon": "filter",
+    "color": {
+        "type": "palette",
+        "value": "wintergrey"
+    },
+    "summary": "This web component enhances a native input with the ability to filter a list live.",
+    "long_summary": "This web component enhances a native input with the ability to filter a list live. It's perfect for finding what you need in a long static list.",
+    "published_at": "2022-04-19T12:00:00.000Z",
+    "created_at": "2022-05-09T13:15:44.936Z",
+    "links": [ {
+        "title": "Install",
+        "href": "https://www.npmjs.com/package/@auroratide/text-filter",
+        "icon": "npm",
+        "color": {
+            "type": "brand",
+            "value": "npm"
+        }
+    }, {
+        "title": "Demo",
+        "href": "https://auroratide.github.io/text-filter/",
+        "color": {
+            "type": "palette",
+            "value": "aurora-blue"
+        }
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/text-filter",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ]
+}
