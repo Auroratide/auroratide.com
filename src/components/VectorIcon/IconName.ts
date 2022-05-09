@@ -23,6 +23,7 @@ export const IconName = {
     Css3Alt: 'css3-alt',
     Diamonds: 'diamonds',
     DiceD20: 'dice-d20',
+    Dragon: 'dragon',
     EllipsisH: 'ellipsis-h',
     Envelope: 'envelope',
     ExchangeAlt: 'exchange-alt',
