@@ -1,14 +1,14 @@
 import path from 'path'
 import fs from 'fs/promises'
 import mkdirp from 'mkdirp'
-import { marked } from 'marked'
+import { parseMarkdown } from './markdown'
 
 const parseAll = async (dir) => {
     const entries = await fs.readdir(dir)
     return Promise.all(entries.map(async entry => {
         const entryPath = path.join(dir, entry)
         const meta = JSON.parse(await fs.readFile(path.join(entryPath, 'meta.json'), { encoding: 'utf-8' }))
-        const content = marked.parse(await fs.readFile(path.join(entryPath, 'content.md'), { encoding: 'utf-8' }))
+        const content = parseMarkdown(await fs.readFile(path.join(entryPath, 'content.md'), { encoding: 'utf-8' }))
 
         return { content, ...meta }
     }))
