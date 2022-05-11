@@ -1,6 +1,6 @@
 import path from 'path'
-import { resource } from './resource/resource.js'
-import { single } from './single/single.js'
+import { resource } from './resource.js'
+import { single } from './single.js'
 import { time } from './time.js'
 
 time('posts', () => resource({

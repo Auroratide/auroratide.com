@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs/promises'
-import { single } from '.'
+import { single } from '../../../content/_build/single'
 import rimraf from 'rimraf'
 
 describe('single content builder', () => {

@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs/promises'
-import { resource } from '.'
+import { resource } from '../../../content/_build/resource'
 import rimraf from 'rimraf'
 
 describe('resource content builder', () => {
