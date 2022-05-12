@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs/promises'
 import mkdirp from 'mkdirp'
-import { parseMarkdown } from './markdown'
+import { parseMarkdown } from './markdown.js'
 
 const parse = async (dir) => {
     const content = parseMarkdown(await fs.readFile(path.join(dir, 'content.md'), { encoding: 'utf-8' }))
