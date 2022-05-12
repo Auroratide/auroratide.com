@@ -46,7 +46,6 @@ import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
-import { faLink } from '@fortawesome/free-solid-svg-icons/faLink'
 import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt'
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
@@ -151,7 +150,6 @@ export const library = {
     [IconName.LayerGroup]: faLayerGroup,
     [IconName.LevelUpAlt]: faLevelUpAlt,
     [IconName.Lightbulb]: faLightbulb,
-    [IconName.Link]: faLink,
     [IconName.LowVision]: faLowVision,
     [IconName.MapMarkerAlt]: faMapMarkerAlt,
     [IconName.Mobile]: faMobile,
