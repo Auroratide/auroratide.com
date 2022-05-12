@@ -48,6 +48,7 @@ export const IconName = {
     LayerGroup: 'layer-group',
     LevelUpAlt: 'level-up-alt',
     Lightbulb: 'lightbulb',
+    Link: 'link',
     LowVision: 'low-vision',
     MapMarkerAlt: 'map-marker-alt',
     Mobile: 'mobile',

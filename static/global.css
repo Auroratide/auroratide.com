@@ -77,6 +77,45 @@ body {
     padding-bottom: var(--sp-st-o);
 }
 
+.content-typography .anchored-heading {
+    position: relative;
+}
+
+.anchored-heading a.heading-anchor {
+    font-size: var(--font-sz-mercury);
+    display: inline-block;
+    margin-left: var(--sp-st-o);
+}
+
+@media screen and (min-width: 75rem) {
+    .content-typography .anchored-heading {
+        margin-left: calc(-1 * var(--sp-st-s));
+        padding-left: var(--sp-st-s);
+    }
+
+    .anchored-heading a.heading-anchor {
+        position: absolute;
+        top: 0.125em;
+        left: 0;
+        visibility: hidden;
+    }
+
+    .anchored-heading:hover a.heading-anchor {
+        visibility: visible;
+    }
+}
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 /* Headings
    ========================================================================== */
 h1 { font-size: var(--font-sz-jupiter); }
