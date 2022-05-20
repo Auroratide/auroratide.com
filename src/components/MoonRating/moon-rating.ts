@@ -22,7 +22,6 @@ export default () => {
         }
 
         attributeChangedCallback() {
-            this.setAttribute('aria-label', `${this.rating} out of 5 moons`)
             this.setAttribute('title', `${this.rating} out of 5 moons`)
             this.shadowRoot.querySelector('#moons').textContent = this.moonText()
         }
