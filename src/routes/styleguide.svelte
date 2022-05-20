@@ -2,7 +2,6 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
     import Palette from '$lib/design/Palette.svelte'
     import Shade from '$lib/design/Shade.svelte'
 </script>
@@ -11,7 +10,7 @@
     <Container>
         <Content>
             <article aria-label="Styleguide" class="styleguide">
-                <FocusOnMe><h1>Styleguide</h1></FocusOnMe>
+                <h1>Styleguide</h1>
                 <section class="palettes">
                     <Palette name="Aurora Blue">
                         <Shade label="white-on-color" hsl={{h: 210, s: 68, l: 45}} />

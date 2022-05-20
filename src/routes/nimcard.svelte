@@ -2,7 +2,6 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
     import * as Nimcard from '@auroratide/nimcard'
     import type { NimcardGame } from '@auroratide/nimcard/component/lib'
     import { onMount } from 'svelte'
@@ -45,9 +44,7 @@
 <DocumentInfo {og} title="Nimcard" description="A strategy card game">
     <Container>
         <Content>
-            <FocusOnMe>
-                <h1>Nimcard</h1>
-            </FocusOnMe>
+            <h1>Nimcard</h1>
             {#if loading}
                 <Loading large text="Dealing cards..." />
             {:else}

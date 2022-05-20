@@ -2,15 +2,12 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
 </script>
 
 <DocumentInfo title="Legal" description="Website terms and conditions and privacy policy.">
     <Container>
         <Content>
-            <FocusOnMe>
-                <h1>Terms and Conditions</h1>
-            </FocusOnMe>
+            <h1>Terms and Conditions</h1>
             <p>All content provided on this site is for informational purposes only. The owner of this site makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site. The owner will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information. These terms and conditions of use are subject to change at any time and without notice.</p>
 
             <h1>Privacy Policy</h1>

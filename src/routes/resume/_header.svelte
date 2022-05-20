@@ -1,9 +1,5 @@
-<script lang="ts">
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
-</script>
-
 <header>
-    <FocusOnMe><h1>Timothy Foster</h1></FocusOnMe>
+    <h1>Timothy Foster</h1>
     <strong class="role">Full-Stack Software Engineer</strong>
 </header>
 

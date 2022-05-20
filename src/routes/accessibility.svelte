@@ -2,15 +2,12 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
 </script>
 
 <DocumentInfo title="Accessibility" description="Statement about this website's accessibility goals.">
     <Container>
         <Content>
-            <FocusOnMe>
-                <h1>Accessibility</h1>
-            </FocusOnMe>
+            <h1>Accessibility</h1>
             <p>The Internet is for all people, not just some people. As such, it is both my aspiration and my duty to make this website and all my products as accessible to everyone as possible, regardless of ability. Whether it be articles, videos, games, or whatever it is I even make, I want everyone to feel included.</p>
             <p>To that end, I devote time to studying and applying good accessibility practices. Some of the things I do include:</p>
             <ul>

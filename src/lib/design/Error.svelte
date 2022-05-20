@@ -1,6 +1,5 @@
 <script lang="ts">
     import Container from '../layout/Container.svelte'
-    import FocusOnMe from '../layout/FocusOnMe.svelte'
 
     export let title: string
     export let subtitle: string
@@ -8,9 +7,7 @@
 
 <Container>
     <div class="error">
-        <FocusOnMe>
-            <h1>{title}</h1>
-        </FocusOnMe>
+        <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <div class="content content-typography">
             <slot></slot>

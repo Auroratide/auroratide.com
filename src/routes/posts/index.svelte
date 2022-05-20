@@ -17,7 +17,6 @@
 <script lang="ts">
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
     import ArticleCard from '$lib/design/ArticleCard.svelte'
     import SrOnly from '$lib/design/SrOnly.svelte'
 
@@ -36,9 +35,9 @@
 
 <DocumentInfo {og} title="Posts" description="My name's Timothy! I code and teach for a living, and sometimes I write about programming, worldbuilding, and stuff I've built.">
     <Container>
-        <SrOnly><FocusOnMe>
+        <SrOnly>
             <h1>My Posts List</h1>
-        </FocusOnMe></SrOnly>
+        </SrOnly>
         <ul class="item-holder">
             {#each all.filter(it => it.publishedAt) as item}
                 <li>

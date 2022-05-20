@@ -29,7 +29,6 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
 
     import RawRenderer from '$lib/design/RawRenderer.svelte'
     import { UrlBuilder } from '$lib/routes'
@@ -68,9 +67,7 @@
 <DocumentInfo {og} title={item.title} description={item.summary}>
     <Container>
         <article aria-label={item.title} class="article" style="--article-color: {color.fromJson(item.color)};">
-            <FocusOnMe>
-                <Header title={item.title} icon={item.icon} />
-            </FocusOnMe>
+            <Header title={item.title} icon={item.icon} />
             {#if item.links}
                 <LinkBar links={item.links} />
             {/if}

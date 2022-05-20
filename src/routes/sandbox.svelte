@@ -18,7 +18,6 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
     import RawRenderer from '$lib/design/RawRenderer.svelte'
 
     export let content: string
@@ -27,9 +26,7 @@
 <DocumentInfo title="Sandbox" description="A page for me to test things">
     <Container>
         <Content>
-            <FocusOnMe>
-                <h1>Sandbox</h1>
-            </FocusOnMe>
+            <h1>Sandbox</h1>
             <RawRenderer content={content} />
         </Content>
     </Container>

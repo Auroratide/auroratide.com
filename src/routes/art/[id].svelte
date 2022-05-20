@@ -28,7 +28,6 @@
 <script lang="ts">
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
 
     import RawRenderer from '$lib/design/RawRenderer.svelte'
     import { UrlBuilder } from '$lib/routes'
@@ -81,9 +80,7 @@
     <Container>
         <article aria-label={item.title} class="article {ratioClassification}" style="--article-color: {color.fromJson(item.color)}; --bg-color: {color.fromJson(item.background)}">
             <header>
-                <FocusOnMe>
-                    <h1>{item.title}</h1>
-                </FocusOnMe>
+                <h1>{item.title}</h1>
             </header>
             <section class="art" class:pixelart data-testid="art-section">
                 <img-colorscape class="image" colorscape={assetRoot.asset(item.image.colorscape)}>

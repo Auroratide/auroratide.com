@@ -2,13 +2,10 @@
     import type { PokemonType } from '@auroratide/pokemon-types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
-    import FocusOnMe from '$lib/layout/FocusOnMe.svelte'
     import { UrlBuilder, navigation } from '$lib/routes'
     import { buildOpenGraph } from '$lib/open-graph'
     import { defensiveMultipliers } from '@auroratide/pokemon-types'
-    import TypeTag from './_TypeTag.svelte'
     import TypeOption from './_TypeOption.svelte'
-    import DamageMultiplier from './_DamageMultiplier.svelte'
     import Multipliers from './_Multipliers.svelte'
 
     const allTypes: PokemonType[] = ['normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost', 'steel', 'fire', 'water', 'grass', 'electric', 'psychic', 'ice', 'dragon', 'dark', 'fairy']
@@ -34,7 +31,7 @@
 <DocumentInfo {og} title="Pokemon Type Calculator" description="Calculate vulnerabilities and resistances of pokemon types, including pokemon with three or more types.">
     <Container>
         <div class="pokemon">
-            <FocusOnMe><h1 class="title">Pokemon Type Calculator</h1></FocusOnMe>
+            <h1 class="title">Pokemon Type Calculator</h1>
             <p class="instructions">Select types below to calculate the damage multipliers of a pokemon with that typing. Yes, you can even imagine a hypothetical pokemon with three or more types!</p>
             <fieldset>
                 <legend>Choose Types</legend>
