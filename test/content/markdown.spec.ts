@@ -38,4 +38,28 @@ describe('parseMarkdown', () => {
         expect(id(headingMatches[1])).toEqual('another-heading')
         expect(anchor(headingMatches[1])).toContain('href="#another-heading"')
     })
+
+    test('duplicate heading names', () => {
+        const id = (match) => match[1].match(/id="(.*?)"/)[1]
+
+        const content = `
+## Heading
+
+## Heading
+
+## Heading 1
+
+## Heading`
+
+        const result = parseMarkdown(content)
+
+        const headingMatches = Array.from(result.matchAll(/<h\d(.*?)>(.*?)<\/h\d>/g))
+        expect(headingMatches).toHaveLength(4)
+
+        // all unique
+        const uniqueHeadings = new Set(headingMatches.map(it => id(it)))
+        expect(uniqueHeadings.size).toEqual(headingMatches.length)
+
+        // For now, ignoring the case of ## Heading_1, as it's unlikely I'll use an underscore in a heading
+    })
 })
