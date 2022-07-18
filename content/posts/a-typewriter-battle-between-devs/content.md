@@ -1,7 +1,7 @@
 <external-resource type="css" src="https://unpkg.com/@auroratide/typewritten-text@0.1.4/lib/style.css"></external-resource>
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/typewritten-text@0.1.4/lib/define.js"></external-resource>
 
-A couple weeks ago, an interesting battle of sorts spontaneously erupted between a few developers on a site a frequent, [dev.to](https://dev.to). It was pretty simple: make a classic **typewriter animation** using your favorite web technologies!
+A couple weeks ago, an interesting battle of sorts spontaneously erupted between a few developers on a site I frequent, [dev.to](https://dev.to). It was pretty simple: make a classic **typewriter animation** using your favorite web technologies!
 
 <p style="text-align: center;">This is a <typewritten-text repeat><strong>typewriter animation!</strong></typewritten-text></p>
 
@@ -17,7 +17,7 @@ A couple weeks ago, an interesting battle of sorts spontaneously erupted between
 </details>
 </side-text>
 
-The typewriter animation types one letter at a type to a screen, and usually this means at minimum Javascript is needed, since neither HTML nor CSS are complex enough to allow that level of custom animation. However, some people were coming up with solutions that used no Javascript, relying only on HTML and CSS:
+The typewriter animation types one letter at a time to a screen, and usually this means at minimum Javascript is needed, since neither HTML nor CSS are complex enough to allow that level of custom animation. However, some people were coming up with solutions that used no Javascript, relying only on HTML and CSS:
 
 * [Alvaro Montoro](https://twitter.com/alvaro_montoro) started with a [Typewriter Effect with CSS](https://dev.to/alvaromontoro/typewriter-effect-with-css-38im)
 * [Temani Afif](https://twitter.com/ChallengesCss) followed up with a [Scalable CSS-only Typewriter Effect](https://dev.to/afif/a-scalable-css-only-typewriter-effect-2opn)
