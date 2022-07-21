@@ -25,11 +25,11 @@ describe('parseMarkdown', () => {
 
     test('heading anchors', () => {
         const id = (match) => match[1].match(/id="(.*?)"/)[1]
-        const anchor = (match) => match[2].match(/<a(.*?)>.*?<\/a>/)[1]
+        const anchor = (match) => match[3].match(/<a(.*?)>.*?<\/a>/)[1]
 
         const result = parseMarkdown(content)
 
-        const headingMatches = Array.from(result.matchAll(/<h\d(.*?)>(.*?)<\/h\d>/g))
+        const headingMatches = Array.from(result.matchAll(/<div.*?><h\d(.*?)>(.*?)<\/h\d>(.*?)<\/div>/g))
         expect(headingMatches).toHaveLength(2)
 
         expect(id(headingMatches[0])).toEqual('a-heading')
