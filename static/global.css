@@ -78,26 +78,24 @@ body {
 }
 
 .content-typography .anchored-heading {
+    display: flex;
     position: relative;
+    align-items: center;
 }
 
 .anchored-heading a.heading-anchor {
-    font-size: var(--font-sz-mercury);
+    font-size: var(--font-sz-venus);
     display: inline-block;
     margin-left: var(--sp-st-o);
 }
 
 @media screen and (min-width: 75rem) {
-    .content-typography .anchored-heading {
-        margin-left: calc(-1 * var(--sp-st-s));
-        padding-left: var(--sp-st-s);
-    }
-
     .anchored-heading a.heading-anchor {
         position: absolute;
-        top: 0.125em;
-        left: 0;
+        top: 50%;
+        left: -1.75em;
         visibility: hidden;
+        transform: translateY(-50%);
     }
 
     .anchored-heading:hover a.heading-anchor {
