@@ -1,31 +1,5 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-    import Api from '$lib/art/api'
-
-    export const load: Load = async ({ fetch, params }) => {
-        const api = new Api(fetch)
-        const [ item, all ] = await Promise.all([
-            api.one(params.id).catch(() => null),
-            api.list().catch(() => []),
-        ])
-
-        if (!item) {
-            return {
-                status: 404,
-                error: new Error(`Item with id ${params.id} does not exist`),
-            }
-        }
-
-        return {
-            props: {
-                item,
-                all,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
 
@@ -39,8 +13,9 @@
 
     import { buildOpenGraph } from '$lib/open-graph'
 
-    export let item: ArtItem
-    export let all: ArtItem[]
+    export let data: PageData
+    $: item = data.item
+    $: all = data.all
     let ratioClassification: 'horizontal' | 'vertical' | 'square'
 
     $: relatedItems = all

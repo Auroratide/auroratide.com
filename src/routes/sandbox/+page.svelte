@@ -1,26 +1,12 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-
-    export const load: Load = async ({ fetch }) => {
-        const content = await fetch('/api/sandbox/index.json')
-            .then(res => res.json())
-            .then(json => json.content)
-        
-        return {
-            props: {
-                content,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
     import RawRenderer from '$lib/design/RawRenderer.svelte'
 
-    export let content: string
+    export let data: PageData
+    $: content = data.content
 </script>
 
 <DocumentInfo title="Sandbox" description="A page for me to test things">

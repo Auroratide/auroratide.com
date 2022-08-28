@@ -6,6 +6,8 @@ export default {
     preprocess: sveltePreprocess(),
     kit: {
         adapter: adapter(),
-        target: '#root',
+        prerender: {
+            default: true,
+        },
     },
 }

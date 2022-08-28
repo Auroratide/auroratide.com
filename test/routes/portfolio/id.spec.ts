@@ -1,4 +1,4 @@
-import Page from '../../../src/routes/portfolio/[id].svelte'
+import Page from '../../../src/routes/portfolio/[id]/+page.svelte'
 import { PortfolioForge } from '../../lib/portfolio/PortfolioForge'
 import { component } from '../../testing/component'
 import { screen } from '@testing-library/svelte'
@@ -19,8 +19,10 @@ describe('Portfolio', () => {
         }
 
         component(Page)
-            .prop('item', items.apple)
-            .prop('all', Object.values(items))
+            .prop('data', {
+                item: items.apple,
+                all: Object.values(items)
+            })
             .render()
 
         expect(screen.getByText(items.apple.title)).toBeInTheDocument()
@@ -35,8 +37,10 @@ describe('Portfolio', () => {
         }
 
         component(Page)
-            .prop('item', items.apple)
-            .prop('all', Object.values(items))
+            .prop('data', {
+                item: items.apple,
+                all: Object.values(items)
+            })
             .render()
 
         expect(screen.queryByText(items.orange.title)).toBeInTheDocument()

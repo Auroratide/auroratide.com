@@ -5,8 +5,8 @@
     import { UrlBuilder, navigation } from '$lib/routes'
     import { buildOpenGraph } from '$lib/open-graph'
     import { defensiveMultipliers } from '@auroratide/pokemon-types'
-    import TypeOption from './_TypeOption.svelte'
-    import Multipliers from './_Multipliers.svelte'
+    import TypeOption from './TypeOption.svelte'
+    import Multipliers from './Multipliers.svelte'
 
     const allTypes: PokemonType[] = ['normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost', 'steel', 'fire', 'water', 'grass', 'electric', 'psychic', 'ice', 'dragon', 'dark', 'fairy']
 

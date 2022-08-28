@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PokemonType } from '@auroratide/pokemon-types'
-    import TypeTag from './_TypeTag.svelte'
-    import DamageMultiplier from './_DamageMultiplier.svelte'
+    import TypeTag from './TypeTag.svelte'
+    import DamageMultiplier from './DamageMultiplier.svelte'
 
     export let values: {
         name: PokemonType,

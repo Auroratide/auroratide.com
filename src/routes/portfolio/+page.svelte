@@ -1,32 +1,17 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-    import Api from '$lib/portfolio/api'
-
-    export const load: Load = async ({ fetch }) => {
-        const api = new Api(fetch)
-        const all = await api.list()
-
-        return {
-            props: {
-                all,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import SrOnly from '$lib/design/SrOnly.svelte'
 
-    import type { PortfolioItem } from '$lib/portfolio/types'
     import { UrlBuilder } from '$lib/routes'
 
     import { buildOpenGraph } from '$lib/open-graph'
 
     import Card from '$lib/portfolio/Card.svelte'
 
-    export let all: PortfolioItem[]
+    export let data: PageData
+    $: all = data.all
 
     const og = buildOpenGraph({
         title: 'Auroratide Portfolio',

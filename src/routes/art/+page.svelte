@@ -1,20 +1,5 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-    import Api from '$lib/art/api'
-
-    export const load: Load = async ({ fetch, params }) => {
-        const api = new Api(fetch)
-        const all = await api.list()
-
-        return {
-            props: {
-                all,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import SrOnly from '$lib/design/SrOnly.svelte'
@@ -25,7 +10,8 @@
     import { UrlBuilder } from '$lib/routes'
     import { buildOpenGraph } from '$lib/open-graph'
 
-    export let all: ArtItem[]
+    export let data: PageData
+    $: all = data.all
 
     const og = buildOpenGraph({
         title: 'Auroratide Art',

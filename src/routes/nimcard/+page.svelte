@@ -8,9 +8,9 @@
     import { buildOpenGraph } from '$lib/open-graph'
     import { navigation, UrlBuilder } from '$lib/routes'
     import Loading from '$lib/design/Loading.svelte'
-    import { browser } from '$app/env'
+    import { browser } from '$app/environment'
 
-    export let scoring = Nimcard.Board.standardScoring
+    const scoring = Nimcard.Board.standardScoring
 
     const og = buildOpenGraph({
         title: 'Nimcard',

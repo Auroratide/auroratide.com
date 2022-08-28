@@ -3,12 +3,12 @@
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
 
-    import Header from './_header.svelte'
-    import Contact from './_contact.svelte'
-    import Skills from './_skills.svelte'
-    import Education from './_education.svelte'
-    import Experience from './_experience.svelte'
-    import FunFacts from './_fun-facts.svelte'
+    import Header from './Header.svelte'
+    import Contact from './Contact.svelte'
+    import Skills from './Skills.svelte'
+    import Education from './Education.svelte'
+    import Experience from './Experience.svelte'
+    import FunFacts from './FunFacts.svelte'
 </script>
 
 <DocumentInfo title="Timothy Foster Resume" description="Timothy Foster's resume and qualifications.">

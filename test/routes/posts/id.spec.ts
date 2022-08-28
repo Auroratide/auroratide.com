@@ -1,4 +1,4 @@
-import Page from '../../../src/routes/posts/[id].svelte'
+import Page from '../../../src/routes/posts/[id]/+page.svelte'
 import { PostForge } from '../../lib/posts/PostForge'
 import { component } from '../../testing/component'
 import { screen } from '@testing-library/svelte'
@@ -19,8 +19,10 @@ describe('PostPage', () => {
         }
 
         component(Page)
-            .prop('item', posts.apple)
-            .prop('all', Object.values(posts))
+            .prop('data', {
+                item: posts.apple,
+                all: Object.values(posts)
+            })
             .render()
 
         expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
@@ -35,8 +37,10 @@ describe('PostPage', () => {
         }
 
         component(Page)
-            .prop('item', posts.apple)
-            .prop('all', Object.values(posts))
+            .prop('data', {
+                item: posts.apple,
+                all: Object.values(posts)
+            })
             .render()
 
         expect(screen.queryByText(posts.orange.title)).toBeInTheDocument()

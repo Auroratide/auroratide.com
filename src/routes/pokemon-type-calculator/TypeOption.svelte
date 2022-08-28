@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { PokemonType } from '@auroratide/pokemon-types'
-    import TypeTag from './_TypeTag.svelte'
+    import TypeTag from './TypeTag.svelte'
 
     export let type: PokemonType
     export let checked: boolean

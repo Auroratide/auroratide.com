@@ -15,11 +15,11 @@
 
         <script defer src="/build/components.js"></script>
 
-        %svelte.head%
+        %sveltekit.head%
     </head>
 
     <body>
-        <div id="root">%svelte.body%</div>
+        <div id="root">%sveltekit.body%</div>
         <script>
             // Ensure we do not get a flash of light mode
             if (localStorage.getItem('darkmode') === 'true') {

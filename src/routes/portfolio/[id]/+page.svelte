@@ -1,31 +1,5 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-    import PostsApi from '$lib/posts/api'
-
-    export const load: Load = async ({ fetch, params }) => {
-        const api = new PostsApi(fetch)
-        const [ item, all ] = await Promise.all([
-            api.one(params.id).catch(() => null),
-            api.list().catch(() => []),
-        ])
-
-        if (!item) {
-            return {
-                status: 404,
-                error: new Error(`Item with id ${params.id} does not exist`),
-            }
-        }
-
-        return {
-            props: {
-                item,
-                all,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
@@ -33,10 +7,10 @@
     import RawRenderer from '$lib/design/RawRenderer.svelte'
     import { UrlBuilder } from '$lib/routes'
 
-    import type { Post } from '$lib/posts/types'
+    import type { PortfolioItem } from '$lib/portfolio/types'
 
-    import Header from '$lib/posts/Header.svelte'
-    import RelatedItems from '$lib/posts/RelatedItems.svelte'
+    import Header from '$lib/portfolio/Header.svelte'
+    import RelatedItems from '$lib/portfolio/RelatedItems.svelte'
     import LinkBar from '$lib/design/links/LinkBar.svelte'
     import Gallery from '$lib/design/gallery/Gallery.svelte'
 
@@ -44,8 +18,11 @@
 
     import { buildOpenGraph } from '$lib/open-graph'
 
-    export let item: Post
-    export let all: Post[]
+    export let data: PageData
+    $: item = data.item
+    $: all = data.all
+
+    $: assetRoot = new UrlBuilder().assets().portfolioItem(item.id)
 
     $: relatedItems = all
         .filter(i => i.category === item.category)
@@ -55,7 +32,8 @@
 
     $: og = buildOpenGraph({
         title: item.title,
-        url: new UrlBuilder().withBase().post(item.id),
+        url: new UrlBuilder().withBase().portfolioItem(item.id),
+        image: item.cover != null ? assetRoot.asset(item.cover.original) : undefined,
     }).article({
         published: item.publishedAt,
         author: 'Timothy Foster',
@@ -79,9 +57,9 @@
                 <aside aria-label="Related Article Material" slot="sidebar">
                     {#if item.gallery}
                         <h2 class="more-title">Some Pics</h2>
-                        <Gallery root={new UrlBuilder().assets().post(item.id)} gallery={item.gallery} />
+                        <Gallery root={assetRoot} gallery={item.gallery} />
                     {/if}
-                    <h2 class="more-title">More on <span class="category">{item.category}</span></h2>
+                    <h2 class="more-title">More on <span class="category">{item.category}</span> I've Made</h2>
                     <RelatedItems items={relatedItems} />
                 </aside>
             </Content>

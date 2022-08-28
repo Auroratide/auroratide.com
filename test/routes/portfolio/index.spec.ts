@@ -1,4 +1,4 @@
-import List from '../../../src/routes/portfolio/index.svelte'
+import List from '../../../src/routes/portfolio/+page.svelte'
 import { component } from '../../testing/component'
 import { PortfolioForge } from '../../lib/portfolio/PortfolioForge'
 import { screen } from '@testing-library/svelte'
@@ -19,7 +19,9 @@ describe('PostList', () => {
         }
 
         component(List)
-            .prop('all', Object.values(items))
+            .prop('data', {
+                all: Object.values(items)
+            })
             .render()
 
         expect(screen.getByText(items.apple.title)).toBeInTheDocument()
@@ -33,7 +35,9 @@ describe('PostList', () => {
         }
 
         component(List)
-            .prop('all', Object.values(items))
+            .prop('data', {
+                all: Object.values(items)
+            })
             .render()
 
         expect(screen.queryByText(items.apple.title)).toBeInTheDocument()

@@ -2,7 +2,7 @@
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
-    import { navigation, UrlBuilder } from '../lib/routes'
+    import { navigation, UrlBuilder } from '../../lib/routes'
     import { buildOpenGraph } from '$lib/open-graph'
 
     const assetRoot = new UrlBuilder().assets().page(navigation.About.link)

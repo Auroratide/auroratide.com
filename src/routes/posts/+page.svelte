@@ -1,20 +1,5 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-    import PostsApi from '$lib/posts/api'
-
-    export const load: Load = async ({ fetch, params }) => {
-        const api = new PostsApi(fetch)
-        const all = await api.list()
-
-        return {
-            props: {
-                all,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { PageData } from './$types'
     import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
     import Container from '$lib/layout/Container.svelte'
     import ArticleCard from '$lib/design/ArticleCard.svelte'
@@ -25,7 +10,8 @@
 
     import { buildOpenGraph } from '$lib/open-graph'
 
-    export let all: Post[]
+    export let data: PageData
+    $: all = data.all
 
     const og = buildOpenGraph({
         title: 'Auroratide Posts',

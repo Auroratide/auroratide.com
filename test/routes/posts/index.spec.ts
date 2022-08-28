@@ -1,4 +1,4 @@
-import List from '../../../src/routes/posts/index.svelte'
+import List from '../../../src/routes/posts/+page.svelte'
 import { component } from '../../testing/component'
 import { PostForge } from '../../lib/posts/PostForge'
 import { screen } from '@testing-library/svelte'
@@ -19,7 +19,9 @@ describe('PostList', () => {
         }
 
         component(List)
-            .prop('all', Object.values(posts))
+            .prop('data', {
+                all: Object.values(posts)
+            })
             .render()
 
         expect(screen.getByText(posts.apple.title)).toBeInTheDocument()
@@ -33,7 +35,9 @@ describe('PostList', () => {
         }
 
         component(List)
-            .prop('all', Object.values(posts))
+            .prop('data', {
+                all: Object.values(posts)
+            })
             .render()
 
         expect(screen.queryByText(posts.apple.title)).toBeInTheDocument()
