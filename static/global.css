@@ -388,8 +388,8 @@ pre code {
 }
 
 .danger > pre code {
-    border-color: var(--skin-warning-banner);
-    background-image: linear-gradient(transparent 50%, var(--skin-warning-overlay) 50%);
+    border-color: var(--skin-danger-banner);
+    background-image: linear-gradient(transparent 50%, var(--skin-danger-overlay) 50%);
 }
 
 code .comment {
