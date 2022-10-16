@@ -21,7 +21,7 @@
 
 <article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section class="info">
-        <h2 class="title"><a href={link} sveltekit:prefetch>{article.title}</a></h2>
+        <h2 class="title"><a href={link}>{article.title}</a></h2>
         <BreakpointContent>
             <p slot="small" class="summary">{article.summary}</p>
             <p slot="large" class="summary">{article.longSummary}</p>

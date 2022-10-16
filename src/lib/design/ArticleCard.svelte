@@ -18,7 +18,7 @@
 
 <article aria-label={article.title} class="article-card content-typography" style="--article-color: {color.fromJson(article.color)};">
     <section>
-        <h2 class="title"><a href={link} sveltekit:prefetch>{article.title}</a></h2>
+        <h2 class="title"><a href={link}>{article.title}</a></h2>
         <small class="byline">
             <date-display date={article.publishedAt} />
             <span class="bullet" aria-hidden="true">&bull;</span>
