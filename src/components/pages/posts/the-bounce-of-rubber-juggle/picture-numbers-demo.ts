@@ -132,17 +132,20 @@ export class PictureNumbersDemo extends HTMLElement {
         }
     }
 
-    get caption() { return this.getAttribute('caption') }
+    get caption() { return this.getAttribute('caption') ?? '' }
     set caption(value: string) { this.setAttribute('caption', value) }
 
-    get slidingDemo() { return this.shadowRoot.querySelector('sliding-demo') as SlidingDemoElement }
-    get balloon() { return this.shadowRoot.querySelector('rubber-juggle-balloon') as BalloonElement }
-    peg(label: string) { return this.shadowRoot.querySelector(`rubber-juggle-peg[label="${label}"]`) as PegElement }
+    get slidingDemo() { return this.shadowRoot?.querySelector('sliding-demo') as SlidingDemoElement }
+    get balloon() { return this.shadowRoot?.querySelector('rubber-juggle-balloon') as BalloonElement }
+    peg(label: string) { return this.shadowRoot?.querySelector(`rubber-juggle-peg[label="${label}"]`) as PegElement }
     setVariable(name: string, value: number) {
-        this.shadowRoot.querySelector(`#${name}`).textContent = value.toLocaleString(undefined, {
-            minimumFractionDigits: 3,
-            maximumFractionDigits: 3,
-        })
+        const elem = this.shadowRoot?.querySelector(`#${name}`)
+        if (elem != null) {
+            elem.textContent = value.toLocaleString(undefined, {
+                minimumFractionDigits: 3,
+                maximumFractionDigits: 3,
+            })
+        }
     }
 }
 

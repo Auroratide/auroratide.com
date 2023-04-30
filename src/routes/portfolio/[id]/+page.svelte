@@ -7,8 +7,6 @@
     import RawRenderer from '$lib/design/RawRenderer.svelte'
     import { UrlBuilder } from '$lib/routes'
 
-    import type { PortfolioItem } from '$lib/portfolio/types'
-
     import Header from '$lib/portfolio/Header.svelte'
     import RelatedItems from '$lib/portfolio/RelatedItems.svelte'
     import LinkBar from '$lib/design/links/LinkBar.svelte'

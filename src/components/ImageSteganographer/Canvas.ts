@@ -1,13 +1,13 @@
 export class Canvas {
     private canvas: HTMLCanvasElement
-    private bitmap: ImageBitmap
-    constructor(canvas: HTMLCanvasElement, bitmap: ImageBitmap) {
+    private bitmap: ImageBitmap | null
+    constructor(canvas: HTMLCanvasElement, bitmap: ImageBitmap | null) {
         this.canvas = canvas
         this.bitmap = bitmap
     }
 
     private get context(): CanvasRenderingContext2D {
-        return this.canvas.getContext('2d')
+        return this.canvas.getContext('2d')!
     }
 
     public get base64(): string {
@@ -19,7 +19,7 @@ export class Canvas {
     }
 
     public reset(): Canvas {
-        this.context.drawImage(this.bitmap, 0, 0)
+        this.context.drawImage(this.bitmap ?? new ImageBitmap(), 0, 0)
         return new Canvas(this.canvas, this.bitmap)
     }
 
@@ -29,7 +29,7 @@ export class Canvas {
     }
 
     public async upload(source: ImageBitmapSource): Promise<Canvas> {
-        const ctx = this.canvas.getContext('2d')
+        const ctx = this.canvas.getContext('2d')!
         const bitmap = await createImageBitmap(source)
         this.canvas.width = bitmap.width
         this.canvas.height = bitmap.height

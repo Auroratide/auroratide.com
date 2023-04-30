@@ -3,7 +3,7 @@
 
     export let title: string = ''
     export let description: string = ''
-    export let og: OpenGraph = undefined
+    export let og: OpenGraph | undefined = undefined
 
     let addedPart: string
     $: addedPart = title ? `${title} | ` : ''
@@ -27,7 +27,9 @@
         {/if}
 
         {#if og.article !== undefined}
-            <meta property="og:article:published_time" content={og.article.published?.toISOString()} />
+            {#if og.article.published != null}
+                <meta property="og:article:published_time" content={og.article.published?.toISOString()} />
+            {/if}
             <meta property="og:article:author" content={og.article.author} />
             <meta property="og:article:section" content={og.article.section} />
             {#each og.article.tags as tag}

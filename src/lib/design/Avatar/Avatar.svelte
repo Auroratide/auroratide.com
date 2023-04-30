@@ -3,8 +3,8 @@
     import { Palette } from '../color'
 
     export let color: string = Palette.newColors.AuroraBlue.colorOnBlack
-    export let shadowColor: string = null
-    export let shadowWidth: string = null
+    export let shadowColor: string | undefined = undefined
+    export let shadowWidth: string | undefined = undefined
 </script>
 
 <div class="avatar">

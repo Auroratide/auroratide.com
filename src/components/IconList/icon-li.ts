@@ -46,11 +46,11 @@ class IconLi extends HTMLElement {
         this.vectorIcon().icon = this.icon
     }
 
-    get icon() { return this.getAttribute('icon') }
+    get icon() { return this.getAttribute('icon') ?? '' }
     set icon(value: string) { this.setAttribute('icon', value) }
 
     vectorIcon(): VectorIcon {
-        return this.shadowRoot.querySelector('vector-icon')
+        return this.shadowRoot!.querySelector('vector-icon')!
     }
 }
 

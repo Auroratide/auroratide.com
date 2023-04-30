@@ -20,7 +20,7 @@ export abstract class MathJaxElement extends HTMLElement {
             s.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
             s.onload = () => {
                 while (MathJaxElement.elementsAwaitingTypeset.length > 0)
-                    MathJaxElement.elementsAwaitingTypeset.pop().typeset()
+                    MathJaxElement.elementsAwaitingTypeset.pop()?.typeset()
                 console.info('...MathJax loaded!')
             }
 
@@ -34,7 +34,7 @@ export abstract class MathJaxElement extends HTMLElement {
         }
     }
 
-    get tex() { return this.getAttribute('tex') }
+    get tex() { return this.getAttribute('tex') ?? '' }
     set tex(value: string) { this.setAttribute('tex', value) }
 
     abstract wrap(s: string): string

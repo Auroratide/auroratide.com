@@ -2,11 +2,11 @@
     import { afterUpdate } from 'svelte'
     import { highlighter } from './syntax-highlighter'
 
-    export let content: string
+    export let content: string | undefined
     let container: HTMLElement
 
     afterUpdate(() => {
-        if (content !== null && container)
+        if (content != null && container)
             highlighter.highlightAllUnder(container)
     })
 </script>

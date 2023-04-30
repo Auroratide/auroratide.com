@@ -19,14 +19,14 @@ class ImageBitmapWithData extends ImageBitmap {
  */
 class CanvasWrapper {
     public canvas: HTMLCanvasElement
-    private current: ImageData
+    private current?: ImageData
 
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas
         const ctx = this.canvas.getContext('2d');
-        (ctx.drawImage as jest.Mock).mockImplementation((img: ImageBitmapWithData) => this.current = img.data);
-        (ctx.getImageData as jest.Mock).mockImplementation(() => this.current);
-        (ctx.putImageData as jest.Mock).mockImplementation((img: ImageData) => this.current = img);
+        (ctx?.drawImage as jest.Mock).mockImplementation((img: ImageBitmapWithData) => this.current = img.data);
+        (ctx?.getImageData as jest.Mock).mockImplementation(() => this.current);
+        (ctx?.putImageData as jest.Mock).mockImplementation((img: ImageData) => this.current = img);
         (this.canvas.toDataURL as jest.Mock).mockImplementation(() => this.current ? this.current.data.join('') : '');
     }
 }

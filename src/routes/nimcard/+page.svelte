@@ -3,7 +3,6 @@
     import Container from '$lib/layout/Container.svelte'
     import Content from '$lib/layout/Content.svelte'
     import * as Nimcard from '@auroratide/nimcard'
-    import type { NimcardGame } from '@auroratide/nimcard/component/lib'
     import { onMount } from 'svelte'
     import { buildOpenGraph } from '$lib/open-graph'
     import { navigation, UrlBuilder } from '$lib/routes'
@@ -25,7 +24,7 @@
         })
     })
 
-    const nimcard = (node: NimcardGame) => {
+    const nimcard = (node: any) => {
         node.onnewgame = () => {
             const deck = Nimcard.Deck.shuffle(Nimcard.Deck.createFullDeck())
             const board = Nimcard.Board.create(deck, [4, 5, 5, 5], scoring)

@@ -104,24 +104,24 @@ export class BadDistanceDemoElement extends HTMLElement {
             const length = Math.sqrt(dx * dx + dy * dy)
             const distance = area / length
 
-            if (distance <= radius && !indicator.classList.contains('colliding')) {
-                indicator.classList.add('colliding')
+            if (distance <= radius && !indicator?.classList.contains('colliding')) {
+                indicator?.classList.add('colliding')
             }
 
-            if (distance > radius && indicator.classList.contains('colliding')) {
+            if (distance > radius && indicator?.classList.contains('colliding')) {
                 indicator.classList.remove('colliding')
             }
         }
     }
 
-    get caption() { return this.getAttribute('caption') }
+    get caption() { return this.getAttribute('caption') ?? '' }
     set caption(value: string) { this.setAttribute('caption', value) }
 
-    get x() { return parseFloat(this.getAttribute('x')) }
+    get x() { return parseFloat(this.getAttribute('x') ?? '0') }
     set x(value: number) { this.setAttribute('x', value.toString()) }
 
-    get slidingDemo() { return this.shadowRoot.querySelector('sliding-demo') as SlidingDemoElement }
-    get balloon() { return this.shadowRoot.querySelector('rubber-juggle-balloon') as BalloonElement }
+    get slidingDemo() { return this.shadowRoot?.querySelector('sliding-demo') as SlidingDemoElement }
+    get balloon() { return this.shadowRoot?.querySelector('rubber-juggle-balloon') as BalloonElement }
 }
 
 export default () => {

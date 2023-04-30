@@ -1,13 +1,13 @@
 <script lang="ts">
     import { IconName } from '../../components/VectorIcon/IconName'
 
-    export let text: string = null
+    export let text: string | undefined = undefined
     export let large: boolean = false
 </script>
 
 <div class="loading" class:large>
     <vector-icon class="icon" icon={IconName.HourglassHalf} />
-    {#if text}
+    {#if text != null}
         <h2 class="text">{text}</h2>
     {/if}
 </div>

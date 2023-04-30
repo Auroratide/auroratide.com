@@ -57,14 +57,14 @@ export default () => {
                 .attachShadow({ mode: 'open' })
                 .appendChild(template.content.cloneNode(true))
 
-            this.imageImg = this.shadowRoot.querySelector('.image')
-            this.colorscapeImg = this.shadowRoot.querySelector('.colorscape')
+            this.imageImg = this.shadowRoot!.querySelector('.image')!
+            this.colorscapeImg = this.shadowRoot!.querySelector('.colorscape')!
         }
 
         connectedCallback() {
             this.revealWhenImagesComplete()
 
-            this.shadowRoot.querySelector('slot').addEventListener('slotchange', () => {
+            this.shadowRoot?.querySelector('slot')?.addEventListener('slotchange', () => {
                 this.revealWhenImagesComplete()
             })
         }
@@ -87,7 +87,7 @@ export default () => {
             this.colorscapeImg.src = this.colorscape
         }
 
-        get colorscape() { return this.getAttribute('colorscape') }
+        get colorscape() { return this.getAttribute('colorscape') ?? '' }
         set colorscape(value: string) { this.setAttribute('colorscape', value) }
 
         findImageChildren(parent: Element = this): HTMLImageElement[] {

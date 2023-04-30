@@ -4,7 +4,7 @@ export class Steganographer {
 
         let i = 0;
         const increment = () => i += i % 4 === 2 ? 2 : 1;
-        const setBits = (bits) => {
+        const setBits = (bits: number) => {
             if(i < data.length)
                 data[i] = (data[i] & 0xFC) | bits;
             increment()

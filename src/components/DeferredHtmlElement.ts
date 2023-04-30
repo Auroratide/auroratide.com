@@ -23,5 +23,5 @@ export abstract class DeferredHtmlElement extends HTMLElement {
     }
 
     abstract deferUntil(): boolean
-    abstract onFullyReady()
+    abstract onFullyReady(): void
 }

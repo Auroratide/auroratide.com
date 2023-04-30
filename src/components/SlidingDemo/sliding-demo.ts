@@ -137,11 +137,11 @@ template.innerHTML = `<style>${css}</style>${html}`
 export class SlidingDemoElement extends HTMLElement {
     static elementName = 'sliding-demo'
 
-    onslide: (t: number, host: SlidingDemoElement) => void
+    onslide?: (t: number, host: SlidingDemoElement) => void
 
     private input: HTMLInputElement
     private playing: boolean
-    private timeoutId: NodeJS.Timeout
+    private timeoutId?: NodeJS.Timeout
 
     constructor() {
         super()
@@ -152,7 +152,7 @@ export class SlidingDemoElement extends HTMLElement {
 
         this.playing = false
         
-        this.input = this.shadowRoot.querySelector('input')
+        this.input = this.shadowRoot!.querySelector('input')!
         
         this.input.onmousedown = this.pause
         this.input.ontouchstart = this.pause
@@ -160,7 +160,7 @@ export class SlidingDemoElement extends HTMLElement {
     }
 
     connectedCallback() {
-        this.input.oninput = () => this.onslide(this.t, this)
+        this.input.oninput = () => this.onslide?.(this.t, this)
         if (this.autoplay) {
             this.play()
         }
@@ -169,8 +169,8 @@ export class SlidingDemoElement extends HTMLElement {
     pause = () => {
         if (this.playing) {
             this.playPauseButton.setAttribute('aria-label', 'play')
-            this.figure.classList.remove('playing')
-            this.figure.classList.add('paused')
+            this.figure?.classList.remove('playing')
+            this.figure?.classList.add('paused')
             clearTimeout(this.timeoutId)
             this.playing = false
         }
@@ -179,8 +179,8 @@ export class SlidingDemoElement extends HTMLElement {
     play = () => {
         if (!this.playing) {
             this.playPauseButton.setAttribute('aria-label', 'pause')
-            this.figure.classList.add('playing')
-            this.figure.classList.remove('paused')
+            this.figure?.classList.add('playing')
+            this.figure?.classList.remove('paused')
             clearTimeout(this.timeoutId)
             this.playing = true
             requestAnimationFrame(this.tick)
@@ -203,7 +203,7 @@ export class SlidingDemoElement extends HTMLElement {
 
     private tick = () => {
         this.t += this.step
-        this.onslide(this.t, this)
+        this.onslide?.(this.t, this)
 
         if (this.playing) {
             if (this.t < this.max)
@@ -218,7 +218,7 @@ export class SlidingDemoElement extends HTMLElement {
     }
 
     attributeChangedCallback() {
-        const figcaption = this.shadowRoot.querySelector('figcaption')
+        const figcaption = this.shadowRoot!.querySelector('figcaption')!
         figcaption.innerText = this.caption
     }
 
@@ -228,7 +228,7 @@ export class SlidingDemoElement extends HTMLElement {
     get min() { return parseFloat(this.input.min) }
     get max() { return parseFloat(this.input.max) }
 
-    get caption() { return this.getAttribute('caption') }
+    get caption() { return this.getAttribute('caption') ?? '' }
     set caption(value: string) { this.setAttribute('caption', value) }
 
     get autoplay() {
@@ -242,9 +242,9 @@ export class SlidingDemoElement extends HTMLElement {
         }
     }
 
-    get playPauseButton() { return this.shadowRoot.querySelector('button.play-pause') as HTMLButtonElement }
+    get playPauseButton() { return this.shadowRoot?.querySelector('button.play-pause') as HTMLButtonElement }
 
-    get figure() { return this.shadowRoot.querySelector('figure') }
+    get figure() { return this.shadowRoot?.querySelector('figure') }
 }
 
 export default () => {

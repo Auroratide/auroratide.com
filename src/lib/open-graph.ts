@@ -14,7 +14,7 @@ export type OpenGraphBase = {
 export type OpenGraphType = 'website' | 'article'
 
 export type OpenGraphArticle = {
-    published: Date,
+    published?: Date,
     author: string,
     section: string,
     tags: string[],

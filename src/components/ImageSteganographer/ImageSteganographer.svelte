@@ -43,7 +43,11 @@
 
     const handleUpload = async (e: Event) => {
         try {
-            canvas = await canvas.upload((e.target as HTMLInputElement).files[0])
+            const files = (e.target as HTMLInputElement).files
+
+            if (files) {
+                canvas = await canvas.upload(files[0])
+            }
         } catch(e) {
             // console.warn((e as Error).message)
             fail('Unfortunately, the image could not be processed.')

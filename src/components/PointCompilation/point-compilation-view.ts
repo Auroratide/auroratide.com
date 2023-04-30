@@ -44,11 +44,11 @@ export default () => {
         }
 
         get container(): HTMLElement {
-            return this.shadowRoot.querySelector('.container')
+            return this.shadowRoot!.querySelector('.container')!
         }
 
         get using(): string {
-            return this.getAttribute('using')
+            return this.getAttribute('using') ?? ''
         }
 
         set using(value: string) {
@@ -57,7 +57,7 @@ export default () => {
         }
 
         get highlight(): string {
-            return this.getAttribute('highlight')
+            return this.getAttribute('highlight') ?? ''
         }
 
         set highlight(value: string) {

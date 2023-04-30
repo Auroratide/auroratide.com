@@ -23,7 +23,7 @@ export default () => {
 
         attributeChangedCallback() {
             this.setAttribute('title', `${this.rating} out of 5 moons`)
-            this.shadowRoot.querySelector('#moons').textContent = this.moonText()
+            this.shadowRoot!.querySelector('#moons')!.textContent = this.moonText()
         }
 
         get rating() { return Number(this.getAttribute('rating')) }

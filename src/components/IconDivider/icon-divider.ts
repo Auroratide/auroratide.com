@@ -58,11 +58,11 @@ class IconDivider extends HTMLElement {
         })
     }
 
-    get icon() { return this.getAttribute('icon') }
+    get icon() { return this.getAttribute('icon') ?? '' }
     set icon(value: string) { this.setAttribute('icon', value) }
 
     vectorIcons(): NodeListOf<VectorIcon> {
-        return this.shadowRoot.querySelectorAll('vector-icon')
+        return this.shadowRoot!.querySelectorAll('vector-icon')!
     }
 }
 

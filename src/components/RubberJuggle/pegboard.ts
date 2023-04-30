@@ -28,8 +28,8 @@ template.innerHTML = `<style>${css}</style>${html}`
 export class PegboardElement extends HTMLElement {
     static elementName = 'rubber-juggle-pegboard'
 
-    imageImg: HTMLImageElement
-    colorscapeImg: HTMLImageElement
+    imageImg?: HTMLImageElement
+    colorscapeImg?: HTMLImageElement
 
     constructor() {
         super()
@@ -38,11 +38,11 @@ export class PegboardElement extends HTMLElement {
             .attachShadow({ mode: 'open' })
             .appendChild(template.content.cloneNode(true));
 
-        (this.shadowRoot.host as HTMLElement).style.setProperty(PEGBOARD_URL_NAME, `url("${this.assetpath}/hole.png")`)
+        (this.shadowRoot!.host as HTMLElement).style.setProperty(PEGBOARD_URL_NAME, `url("${this.assetpath}/hole.png")`)
     }
 
     connectedCallback() {
-        const pegboard = this.shadowRoot.querySelector('.pegboard') as HTMLElement
+        const pegboard = this.shadowRoot!.querySelector('.pegboard') as HTMLElement
 
         for (let i = 0; i < this.width * this.height; ++i) {
             const img = document.createElement('img')
@@ -57,13 +57,13 @@ export class PegboardElement extends HTMLElement {
         pegboard.style.gridTemplateColumns = `repeat(${this.width}, 1fr)`
     }
 
-    get assetpath() { return this.getAttribute('assetpath') }
+    get assetpath() { return this.getAttribute('assetpath') ?? '' }
     set assetpath(value: string) { this.setAttribute('assetpath', value) }
 
-    get width() { return parseInt(this.getAttribute('width')) }
+    get width() { return parseInt(this.getAttribute('width') ?? '0') }
     set width(value: number) { this.setAttribute('width', value.toString()) }
 
-    get height() { return parseInt(this.getAttribute('height')) }
+    get height() { return parseInt(this.getAttribute('height') ?? '0') }
     set height(value: number) { this.setAttribute('height', value.toString()) }
 }
 

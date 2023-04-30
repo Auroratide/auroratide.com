@@ -34,7 +34,7 @@ export class ExternalResource extends HTMLElement {
     }
 
     get src(): string {
-        return this.getAttribute('src')
+        return this.getAttribute('src') ?? ''
     }
     set src(value: string) {
         this.setAttribute('src', value)

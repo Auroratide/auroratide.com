@@ -5,7 +5,7 @@
 
     export let src: string
     export let alt: string
-    export let caption: string = null
+    export let caption: string | null = null
     export let size: Size = Size.md
     export let nopopout: (boolean | '') = false
     export let width: string = ''

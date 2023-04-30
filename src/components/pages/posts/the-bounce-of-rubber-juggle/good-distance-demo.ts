@@ -119,26 +119,26 @@ export class GoodDistanceDemo extends HTMLElement {
             p2.y = p1.y
 
             if (this.distance(p1, a, b) <= radius) {
-                if (!indicator1.classList.contains('colliding'))
-                    indicator1.classList.add('colliding')
+                if (!indicator1?.classList.contains('colliding'))
+                    indicator1?.classList.add('colliding')
             } else {
-                indicator1.classList.remove('colliding')
+                indicator1?.classList.remove('colliding')
             }
 
             if (this.distance(p2, a, b) <= radius) {
-                if (!indicator2.classList.contains('colliding'))
-                    indicator2.classList.add('colliding')
+                if (!indicator2?.classList.contains('colliding'))
+                    indicator2?.classList.add('colliding')
             } else {
-                indicator2.classList.remove('colliding')
+                indicator2?.classList.remove('colliding')
             }
         }
     }
 
-    get caption() { return this.getAttribute('caption') }
+    get caption() { return this.getAttribute('caption') ?? '' }
     set caption(value: string) { this.setAttribute('caption', value) }
 
-    get slidingDemo() { return this.shadowRoot.querySelector('sliding-demo') as SlidingDemoElement }
-    get balloon() { return this.shadowRoot.querySelector('rubber-juggle-balloon') as BalloonElement }
+    get slidingDemo() { return this.shadowRoot?.querySelector('sliding-demo') as SlidingDemoElement }
+    get balloon() { return this.shadowRoot?.querySelector('rubber-juggle-balloon') as BalloonElement }
 
     distance(p: BalloonElement, a: PegElement, b: PegElement) {
         const dx = b.x - a.x

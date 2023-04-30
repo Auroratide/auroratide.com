@@ -1,6 +1,6 @@
 <script lang="ts">
     const skip = () => {
-        document.getElementById('main').focus()
+        document.getElementById('main')?.focus()
     }
 </script>
 

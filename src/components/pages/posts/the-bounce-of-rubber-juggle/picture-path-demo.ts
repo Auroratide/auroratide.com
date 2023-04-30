@@ -96,13 +96,13 @@ export class PicturePathDemo extends HTMLElement {
         }
     }
 
-    get caption() { return this.getAttribute('caption') }
+    get caption() { return this.getAttribute('caption') ?? '' }
     set caption(value: string) { this.setAttribute('caption', value) }
 
-    get slidingDemo() { return this.shadowRoot.querySelector('sliding-demo') as SlidingDemoElement }
-    get balloon() { return this.shadowRoot.querySelector('rubber-juggle-balloon') as BalloonElement }
-    get abstractBalloon() { return this.shadowRoot.querySelector('#abstract-balloon') as SVGCircleElement }
-    get balloonPath() { return this.shadowRoot.querySelector('#balloon-path') as SVGPolylineElement }
+    get slidingDemo() { return this.shadowRoot?.querySelector('sliding-demo') as SlidingDemoElement }
+    get balloon() { return this.shadowRoot?.querySelector('rubber-juggle-balloon') as BalloonElement }
+    get abstractBalloon() { return this.shadowRoot?.querySelector('#abstract-balloon') as SVGCircleElement }
+    get balloonPath() { return this.shadowRoot?.querySelector('#balloon-path') as SVGPolylineElement }
 }
 
 export default () => {

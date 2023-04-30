@@ -12,7 +12,7 @@
         document.body.classList.toggle('theme-dark', $isDark)
     }
 
-    const spinFade = (node: HTMLElement, params: any) => ({
+    const spinFade = (node: HTMLElement) => ({
         delay: 0,
         duration: 256,
         easing: quadInOut,

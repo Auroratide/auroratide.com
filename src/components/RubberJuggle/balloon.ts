@@ -25,8 +25,8 @@ template.innerHTML = `<style>${css}</style>${html}`
 export class BalloonElement extends PegboardEntity {
     static elementName = 'rubber-juggle-balloon'
 
-    imageImg: HTMLImageElement
-    colorscapeImg: HTMLImageElement
+    imageImg?: HTMLImageElement
+    colorscapeImg?: HTMLImageElement
 
     constructor() {
         super()
@@ -35,11 +35,11 @@ export class BalloonElement extends PegboardEntity {
             .attachShadow({ mode: 'open' })
             .appendChild(template.content.cloneNode(true));
 
-        (this.shadowRoot.querySelector('.balloon') as HTMLImageElement).src = `${this.assetpath}/balloon.png`
+        (this.shadowRoot!.querySelector('.balloon') as HTMLImageElement).src = `${this.assetpath}/balloon.png`
     }
 
     connectedCallback() {
-        this.host.style.width = `calc(100% / ${this.pegboard.width})`
+        this.host.style.width = `calc(100% / ${this.pegboard?.width ?? 1})`
     }
 
     static get observedAttributes() {
@@ -56,8 +56,8 @@ export class BalloonElement extends PegboardEntity {
     get y() { return parseFloat(this.getAttribute('y') ?? '0') }
     set y(value: number) { this.setAttribute('y', value.toString()) }
 
-    get assetpath() { return this.pegboard.assetpath }
-    get host() { return this.shadowRoot.host as HTMLElement }
+    get assetpath() { return this.pegboard?.assetpath }
+    get host() { return this.shadowRoot!.host as HTMLElement }
 }
 
 export default () => {

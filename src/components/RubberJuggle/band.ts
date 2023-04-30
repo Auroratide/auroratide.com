@@ -32,8 +32,8 @@ template.innerHTML = `<style>${css}</style>${html}`
 class BandElement extends PegboardEntity {
     static elementName = 'rubber-juggle-band'
 
-    imageImg: HTMLImageElement
-    colorscapeImg: HTMLImageElement
+    imageImg?: HTMLImageElement
+    colorscapeImg?: HTMLImageElement
 
     constructor() {
         super()
@@ -44,9 +44,11 @@ class BandElement extends PegboardEntity {
     }
 
     connectedCallback() {
-        const host = this.shadowRoot.host as HTMLElement
+        const host = this.shadowRoot!.host as HTMLElement
         const p = this.pegboard
         const e = this.endpoints()
+
+        if (!e || !p) return
 
         const dx = e.to.x - e.from.x
         const dy = e.to.y - e.from.y
@@ -59,15 +61,15 @@ class BandElement extends PegboardEntity {
         host.style.left = `${100 / p.width * e.from.x + 50 / p.width}%`
         host.style.transform = `rotate(${angle}deg)`
 
-        this.shadowRoot.querySelector('.band').setAttribute('aria-label', `Band connecting Peg ${this.from} and Peg ${this.to}`)
+        this.shadowRoot?.querySelector('.band')?.setAttribute('aria-label', `Band connecting Peg ${this.from} and Peg ${this.to}`)
     }
 
     endpoints(): {
         from: PegElement,
         to: PegElement,
-    } {
-        const f = this.pegboard.querySelector(`rubber-juggle-peg[label="${this.from}"]`) as PegElement
-        const t = this.pegboard.querySelector(`rubber-juggle-peg[label="${this.to}"]`) as PegElement
+    } | null {
+        const f = this.pegboard?.querySelector(`rubber-juggle-peg[label="${this.from}"]`) as PegElement
+        const t = this.pegboard?.querySelector(`rubber-juggle-peg[label="${this.to}"]`) as PegElement
 
         if (!f || !t) {
             if (!f) console.error(`Peg with label ${this.from} could not be found to make a band!`)
@@ -81,13 +83,13 @@ class BandElement extends PegboardEntity {
         }
     }
 
-    get from() { return this.getAttribute('from') }
+    get from() { return this.getAttribute('from') ?? '' }
     set from(value: string) { this.setAttribute('from', value) }
 
-    get to() { return this.getAttribute('to') }
+    get to() { return this.getAttribute('to') ?? '' }
     set to(value: string) { this.setAttribute('to', value) }
 
-    get assetpath() { return this.pegboard.assetpath }
+    get assetpath() { return this.pegboard?.assetpath }
 }
 
 export default () => {

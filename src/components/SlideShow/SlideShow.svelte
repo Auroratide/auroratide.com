@@ -41,7 +41,7 @@
                 
                 waitUntilChildrenExist()
             } else {
-                setSlides(container.querySelector('.slides').children)
+                setSlides(container.querySelector('.slides')!.children)
             }
         }
     }

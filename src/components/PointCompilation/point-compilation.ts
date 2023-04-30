@@ -95,7 +95,7 @@ export default () => {
                 .attachShadow({ mode: 'open' })
                 .appendChild(template.content.cloneNode(true))
 
-            this.shadowRoot.querySelector('.title').textContent = this.title
+            this.shadowRoot!.querySelector('.title')!.textContent = this.title
         }
 
         deferUntil(): boolean {
@@ -105,22 +105,22 @@ export default () => {
         onFullyReady() {
             this.setPointVisibility()
             if (!this.show)
-                (this.shadowRoot.host as HTMLElement).style.display = 'none'
+                (this.shadowRoot!.host as HTMLElement).style.display = 'none'
             else
-                (this.shadowRoot.host as HTMLElement).style.display = ''
+                (this.shadowRoot!.host as HTMLElement).style.display = ''
         }
 
         get title(): string {
-            return this.getAttribute('title')
+            return this.getAttribute('title') ?? ''
         }
 
         set title(value: string) {
             this.setAttribute('title', value)
-            this.shadowRoot.querySelector('.title').textContent = value
+            this.shadowRoot!.querySelector('.title')!.textContent = value
         }
 
         get highlight(): string {
-            return this.getAttribute('highlight')
+            return this.getAttribute('highlight') ?? ''
         }
 
         set highlight(value: string) {
@@ -129,7 +129,7 @@ export default () => {
         }
 
         get show(): string {
-            return this.getAttribute('show')
+            return this.getAttribute('show') ?? ''
         }
 
         set show(value: string) {
@@ -137,7 +137,7 @@ export default () => {
         }
 
         setPointVisibility = () => {
-            const points = this.shadowRoot.host.querySelector('[slot="items"]')?.children
+            const points = this.shadowRoot?.host.querySelector('[slot="items"]')?.children
             if (points) {
                 let highlightAsNum = parseInt(this.highlight)
                 if (!isNaN(highlightAsNum)) {
