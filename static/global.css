@@ -90,10 +90,15 @@ body {
 }
 
 @media screen and (min-width: 75rem) {
+    .anchored-heading {
+        margin-inline-start: -2em;
+        padding-inline-start: 2em;
+    }
+
     .anchored-heading a.heading-anchor {
         position: absolute;
-        top: 50%;
-        left: -1.75em;
+        top: calc(50% + 0.15em);
+        left: 0.25em;
         visibility: hidden;
         transform: translateY(-50%);
     }
