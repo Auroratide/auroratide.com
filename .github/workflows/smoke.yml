@@ -1,0 +1,21 @@
+name: Smoke Test
+
+on:
+  schedule:
+    - cron: 0 12 * * *
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - run: npm install --frozen-lockfile
+      - name: Smoke Test
+        run: npm run test:smoke
