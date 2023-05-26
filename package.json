@@ -14,7 +14,7 @@
     "build:components": "rollup -c",
     "clean": "rm -rf static/build static/api build .svelte-kit",
     "test": "jest test",
-    "test:smoke": "node test/smoke/smoke.spec.js",
+    "test:smoke": "node smoke/smoke.spec.js",
     "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "components:create": "node scripts/components/create",
     "posts:create": "npm run _posts:create",
