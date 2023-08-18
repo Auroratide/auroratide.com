@@ -3,7 +3,7 @@
     <ul>
         <li>Shaken the hand of Apollo 13 astronaut Fred Haise</li>
         <li>Bronze Medal, most innovative game in Ludum Dare competition</li>
-        <li>Taken unplanned adventures in India and Ireland</li>
+        <li>Taken unplanned adventures in India, Ireland, and Colorado</li>
         <li>Writing a science fiction story</li>
     </ul>
 </section>

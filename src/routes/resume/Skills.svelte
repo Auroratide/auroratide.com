@@ -15,20 +15,20 @@
             <ul>
                 <li>React, Svelte</li>
                 <li>NodeJS, Express</li>
-                <li>Jest, Mocha, JUnit</li>
+                <li>AWS, Docker</li>
+                <li>Jest, Playwright, JUnit</li>
                 <li>Spring, Ktor, RabbitMQ</li>
                 <li>Git</li>
-                <li>Azure Devops, Docker</li>
-                <li>Postgres, SQL Server</li>
+                <li>Postgres, MongoDB</li>
                 <li>Web Components</li>
             </ul>
         </li>
         <li>
             <strong>Practices:</strong>
             <ul>
+                <li>Web Accessibility</li>
                 <li>REST API Design</li>
                 <li>Automated Testing</li>
-                <li>Web Accessibility</li>
                 <li>CI/CD Pipelines</li>
                 <li>Agile Delivery</li>
             </ul>

@@ -2,9 +2,24 @@
     <h2>Experience</h2>
     <section class="position">
         <header>
+            <h3>Compoze Labs</h3>
+            <p class="role">Lead Engineer, Tech Lead</p>
+            <p class="duration"><time datetime="2022-06">Jun 2022</time> - Present</p>
+        </header>
+        <section>
+            <ul>
+                <li>Released an accessibility-audited website that thousands of people have used to order compost bags.</li>
+                <li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
+                <li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
+            </ul>
+        </section>
+    </section>
+    <hr />
+    <section class="position">
+        <header>
             <h3>Auroratide</h3>
             <p class="role">Founder, Technical Author</p>
-            <p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
+            <p class="duration"><time datetime="2021-05">May 2021</time> - <time datetime="2022-06">Jun 2022</time></p>
         </header>
         <section>
             <ul>
@@ -42,11 +57,6 @@
                 <li>Accelerated our deployment to production by four weeks after I introduced Pact contract testing and API stubbing to the team.</li>
                 <li>Created codebase alignment through workshops about state management with Redux Sagas, testing React with Enzyme, and functional testing with Testcafe.</li>
                 <li>Established a model for working as a distributed US/India team, which became a standard across multiple teams on the client.</li>
-            </ul>
-            <h4>API Developer - Food Distribution Client</h4>
-            <ul>
-                <li>Enabled the use of state-of-the-art features by upgrading our Postgres database after I proposed a migration strategy to ensure data integrity.</li>
-                <li>Created consistency in the error handling of our inventory REST API after I built an aspect-oriented validation framework in Groovy.</li>
             </ul>
         </section>
     </section>
