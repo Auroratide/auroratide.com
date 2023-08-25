@@ -8,7 +8,7 @@
         </header>
         <section>
             <ul>
-                <li>Released an accessibility-audited website that thousands of people have used to order compost bags.</li>
+                <li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
                 <li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
                 <li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
             </ul>
