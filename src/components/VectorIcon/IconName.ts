@@ -12,6 +12,7 @@ export const IconName = {
     Bomb: 'bomb',
     Book: 'book',
     BookOpen: 'book-open',
+    Boxes: 'boxes',
     Calculator: 'calculator',
     CandyCane: 'candy-cane',
     ChalkboardTeacher: 'chalkboard-teacher',
@@ -21,6 +22,7 @@ export const IconName = {
     CookieBite: 'cookie-bite',
     Crosshairs: 'crosshairs',
     Css3Alt: 'css3-alt',
+    Cube: 'cube',
     Diamonds: 'diamonds',
     DiceD20: 'dice-d20',
     Dragon: 'dragon',
@@ -84,6 +86,7 @@ export const IconName = {
     Undo: 'undo',
     Users: 'users',
     UserTie: 'user-tie',
+    Utensils: 'utensils',
 
     Android: 'android',
     Dev: 'dev',

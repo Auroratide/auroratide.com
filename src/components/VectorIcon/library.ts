@@ -12,6 +12,7 @@ import { faAtom } from '@fortawesome/free-solid-svg-icons/faAtom'
 import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
+import { faBoxes } from '@fortawesome/free-solid-svg-icons/faBoxes'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher'
@@ -20,6 +21,7 @@ import { faChessRook } from '@fortawesome/free-solid-svg-icons/faChessRook'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons/faCookieBite'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
+import { faCube } from '@fortawesome/free-solid-svg-icons/faCube'
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons/faDiceD20'
 import { faDragon } from '@fortawesome/free-solid-svg-icons/faDragon'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
@@ -81,6 +83,7 @@ import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons/faUtensils'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
 import { faCss3Alt } from '@fortawesome/free-brands-svg-icons/faCss3Alt'
@@ -115,6 +118,7 @@ export const library = {
     [IconName.Bomb]: faBomb,
     [IconName.Book]: faBook,
     [IconName.BookOpen]: faBookOpen,
+    [IconName.Boxes]: faBoxes,
     [IconName.Calculator]: faCalculator,
     [IconName.CandyCane]: faCandyCane,
     [IconName.ChalkboardTeacher]: faChalkboardTeacher,
@@ -124,6 +128,7 @@ export const library = {
     [IconName.CookieBite]: faCookieBite,
     [IconName.Crosshairs]: faCrosshairs,
     [IconName.Css3Alt]: faCss3Alt,
+    [IconName.Cube]: faCube,
     [IconName.Diamonds]: diamonds,
     [IconName.DiceD20]: faDiceD20,
     [IconName.Dragon]: faDragon,
@@ -187,6 +192,7 @@ export const library = {
     [IconName.Undo]: faUndo,
     [IconName.Users]: faUsers,
     [IconName.UserTie]: faUserTie,
+    [IconName.Utensils]: faUtensils,
 
     [IconName.Android]: faAndroid,
     [IconName.Dev]: faDev,

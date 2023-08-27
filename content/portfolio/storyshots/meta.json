@@ -1,0 +1,33 @@
+{
+    "id": "storyshots",
+    "title": "Storyshots",
+    "category": "tools",
+    "tags": ["storybook", "open source", "testing", "react", "visual regression"],
+    "icon": "book-open",
+    "color": {
+        "type": "palette",
+        "value": "fablepink"
+    },
+    "summary": "Storyshots takes screenshots of a website's components before and after a change to avoid unintended breaks in the website.",
+    "long_summary": "Storyshots does visual regression testing by taking screenshots of a website's components before and after a change in order to avoid unintended breaks in the website.",
+    "published_at": "2023-02-28T12:00:00.000Z",
+    "created_at": "2023-02-28T12:00:00.000Z",
+    "links": [ {
+        "title": "Try it",
+        "href": "https://github.com/compoze-labs/storyshots",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ],
+    "gallery": [ {
+        "image": "tests.png",
+        "alt": "A list of visual regression tests that have just run.",
+        "caption": "Looks like every test passed!"
+    }, {
+        "image": "comparison.png",
+        "alt": "Side-by-side comparison of two screenshots of a button, before and after being edited.",
+        "caption": "VS Code lets you compare screenshots"
+    } ]
+}

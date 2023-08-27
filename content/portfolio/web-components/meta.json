@@ -1,0 +1,41 @@
+{
+    "id": "web-components",
+    "title": "Web Components Hub",
+    "category": "components",
+    "tags": ["web component", "custom element", "list", "switch", "reorder", "tabs"],
+    "icon": "boxes",
+    "color": {
+        "type": "palette",
+        "value": "aurorablue"
+    },
+    "cover": {
+        "original": "cover.png",
+        "alt": "Web Components Logo"
+    },
+    "summary": "A website that shows how to use custom web components I have made.",
+    "long_summary": "A website that shows how to use custom web components I have made. Web components give developers common concepts, such as a reorderable list, for free, without them having to code it themselves.",
+    "published_at": "2022-09-08T12:00:00.000Z",
+    "created_at": "2022-09-08T12:00:00.000Z",
+    "links": [ {
+        "title": "Visit",
+        "href": "https://auroratide.github.io/web-components/",
+        "icon": "boxes",
+        "color": {
+            "type": "palette",
+            "value": "aurorablue"
+        }
+    }, {
+        "title": "Source",
+        "href": "https://github.com/Auroratide/web-components",
+        "icon": "github-alt",
+        "color": {
+            "type": "brand",
+            "value": "github"
+        }
+    } ],
+    "gallery": [ {
+        "image": "front-page.png",
+        "alt": "Frontpage of Web Components by Auroratide",
+        "caption": "A collection of web components"
+    } ]
+}
