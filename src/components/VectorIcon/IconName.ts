@@ -25,6 +25,7 @@ export const IconName = {
     Cube: 'cube',
     Diamonds: 'diamonds',
     DiceD20: 'dice-d20',
+    DotCircle: 'dot-circle',
     Dragon: 'dragon',
     EllipsisH: 'ellipsis-h',
     Envelope: 'envelope',
