@@ -49,7 +49,7 @@
 </point-compilation>
 
 <side-text>
-   <p>This article is an adaptation from a presentation I gave to all the developers in a company I contracted for.</p>
+   <p>This article is an adaptation from a presentation I gave.</p>
 </side-text>
 
 Here are some different shades of **<span style="color: var(--skin-autumnred-text);">red</span>** and **<span style="color: var(--skin-aurorablue-text);">blue</span>**:
