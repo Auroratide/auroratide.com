@@ -59,6 +59,17 @@
     --skin-eventideblack-banner: var(--palette-eventideblack-wc);
     --skin-wintergrey-banner: var(--palette-wintergrey-cb);
 
+    --skin-aurorablue-text: var(--palette-aurorablue-wc);
+    --skin-auroragreen-text: var(--palette-auroragreen-wc);
+    --skin-fablelavender-text: var(--palette-fablelavender-wc);
+    --skin-fablepink-text: var(--palette-fablepink-wc);
+    --skin-livianyellow-text: var(--palette-livianyellow-wc);
+    --skin-autumnred-text: var(--palette-autumnred-wc);
+    --skin-autumnorange-text: var(--palette-autumnorange-wc);
+    --skin-aellagreen-text: var(--palette-aellagreen-wc);
+    --skin-eventideblack-text: var(--palette-eventideblack-wc);
+    --skin-wintergrey-text: var(--palette-wintergrey-wc);
+
     --skin-font-heading: var(--typography-sans);
     --skin-font-text: var(--typography-sans);
     --skin-font-code: var(--typography-code);
@@ -126,6 +137,17 @@
     --skin-aellagreen-banner: var(--palette-aellagreen-wc);
     --skin-eventideblack-banner: var(--palette-eventideblack-wc);
     --skin-wintergrey-banner: var(--palette-wintergrey-wc);
+
+    --skin-aurorablue-text: var(--palette-aurorablue-cb);
+    --skin-auroragreen-text: var(--palette-auroragreen-cb);
+    --skin-fablelavender-text: var(--palette-fablelavender-cb);
+    --skin-fablepink-text: var(--palette-fablepink-cb);
+    --skin-livianyellow-text: var(--palette-livianyellow-cb);
+    --skin-autumnred-text: var(--palette-autumnred-cb);
+    --skin-autumnorange-text: var(--palette-autumnorange-cb);
+    --skin-aellagreen-text: var(--palette-aellagreen-cb);
+    --skin-eventideblack-text: var(--palette-eventideblack-wc);
+    --skin-wintergrey-text: var(--palette-wintergrey-cb);
 
     /* Darcula Color Scheme */
     --skin-code-default: #A9B7C6;

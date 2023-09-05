@@ -52,11 +52,13 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
 import { faLink } from '@fortawesome/free-solid-svg-icons/faLink'
 import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt'
+import { faMedal } from '@fortawesome/free-solid-svg-icons/faMedal'
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
 import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'
 import { faMusic } from '@fortawesome/free-solid-svg-icons/faMusic'
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
+import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
@@ -161,11 +163,13 @@ export const library = {
     [IconName.Link]: faLink,
     [IconName.LowVision]: faLowVision,
     [IconName.MapMarkerAlt]: faMapMarkerAlt,
+    [IconName.Medal]: faMedal,
     [IconName.Mobile]: faMobile,
     [IconName.Moon]: faMoon,
     [IconName.Music]: faMusic,
     [IconName.Newspaper]: faNewspaper,
     [IconName.PaintBrush]: faPaintBrush,
+    [IconName.Palette]: faPalette,
     [IconName.Pause]: faPause,
     [IconName.Phone]: faPhone,
     [IconName.Play]: faPlay,

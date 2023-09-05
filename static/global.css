@@ -458,6 +458,14 @@ major-point p {
 }
 
 /* Needed since shadow styling cannot style the light dom */
+point-compilation {
+    display: none;
+}
+
+point-compilation-view point-compilation {
+    display: block;
+}
+
 point-compilation ul, point-compilation ol {
     margin-bottom: 0;
 }
