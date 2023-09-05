@@ -74,9 +74,9 @@ But before we can answer that, we need to answer a different question first... h
 </side-text>
 
 * [How do you measure temperature?](#how-do-you-measure-temperature)
-* [Is it possible to measure "shade"?](#is-it-possible-to-measure-shade)
+* [Is it possible to measure "shade"?](#is-it-possible-to-measure-quotshadequot)
   * [According to physics](#according-to-physics)
-  * [Why physics can't help us](#why-physics-cant-help-us)
+  * [Why physics can't help us](#why-physics-can39t-help-us)
   * [According to vision](#according-to-vision)
   * [According to code](#according-to-code)
 * [Different Ways to Notate Color](#different-ways-to-notate-color)
