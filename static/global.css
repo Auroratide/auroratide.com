@@ -131,7 +131,8 @@ h4 { font-size: var(--font-sz-neptune); }
 h5, h6 { font-size: var(--font-sz-earth); }
 h4, h5, h6 { font-style: italic; }
 h1, h2, h3, h4, h5, h6 {
-    margin: var(--sp-st-o) 0;
+    margin-top: 0;
+    margin-bottom: var(--sp-st-o);
     line-height: 1.125;
 }
 
