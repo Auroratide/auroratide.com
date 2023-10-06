@@ -51,11 +51,11 @@ And people have tried that! Let me introduce you to...
 * The <i lang="fr">point d'ironie</i> ![like a sullen, reversed question mark](/assets/posts/making-sarcastic-text/point-d-ironie.svg) (1899)
 * The <i>irony point</i> ![an exclamation point with a curve through the middle](/assets/posts/making-sarcastic-text/irony-point.svg) (1966)
 * The <i lang="nl">ironieteken</i> ![an exclamation mark bent like a lightning bolt](/assets/posts/making-sarcastic-text/ironieteken.svg) (2007)
-* The [SarkMark](https://www.sarcmark.com/)<sup>TM</sup> ![a semi-spiral around a dot](/assets/posts/making-sarcastic-text/sarkmark.svg) (2010, and yes... it's even trademarked ![sarkmark](/assets/posts/making-sarcastic-text/sarkmark.svg))
+* The [SarcMark](https://www.sarcmark.com/)<sup>TM</sup> ![a semi-spiral around a dot](/assets/posts/making-sarcastic-text/sarkmark.svg) (2010, and yes... it's even trademarked ![sarkmark](/assets/posts/making-sarcastic-text/sarkmark.svg))
 
 </div>
 
-And of course, none of these ever caught on. Looks like we're stuck with just three ways to end a sentence, `.`, `?`, or `!`.
+And of course, none of these ever caught on. Looks like we're stuck with just three ways to end a sentence: `.`, `?`, or `!`.
 
 <b>Except...</b>
 
