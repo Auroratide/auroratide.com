@@ -8,12 +8,12 @@
 </script>
 
 <Container>
+    <SkipLink />
     <div class="top-bar">
         <div class="logo">
             <a href="/" aria-label="Homepage"><Avatar shadowColor={Palette.newColors.DeepBlue} shadowWidth="1.25em" /></a>
         </div>
         <div class="title">
-            <SkipLink />
             <a class="page-title" href="/">Auroratide</a>
         </div>
         <div class="subtitle">Coder and Teacher</div>
