@@ -77,6 +77,34 @@ body {
     padding-bottom: var(--sp-st-o);
 }
 
+.content-typography table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--sp-paragraph);
+}
+
+.content-typography thead {
+    background: var(--skin-primary-banner);
+    color: var(--skin-bg-text);
+    font-size: var(--font-sz-neptune);
+}
+
+.content-typography tbody {
+    font-size: var(--font-sz-earth);
+}
+
+.content-typography th, .content-typography td {
+    padding: var(--sp-st-be) var(--sp-st-o);
+}
+
+.content-typography tbody tr:nth-child(even) {
+    background: var(--skin-bg-text);
+}
+
+.content-typography th {
+    text-align: left;
+}
+
 .content-typography .anchored-heading {
     display: flex;
     position: relative;
