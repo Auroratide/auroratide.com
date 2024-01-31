@@ -1,4 +1,4 @@
-<svelte:options tag="vector-icon" />
+<svelte:options customElement="vector-icon" />
 
 <script lang="ts">
     import { library } from './library'

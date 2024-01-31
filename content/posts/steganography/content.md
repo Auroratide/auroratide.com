@@ -43,7 +43,7 @@ Want to know a secret? The digital PNG image of Sullivan's note above actually h
 
 In the digital world, any media (images, documents, music, etc) could be used to embed messages. Images, like the one above, provide a very illustrative example of steganography (literally). It all centers around one key fact: our eyeballs aren't good enough.
 
-It is very difficult for us to tell the difference between two colors if they differ only very slightly. For example, **<colored-text color="#d88f30">this orange</colored-text>** and **<colored-text color="#d88f31">that orange</colored-text>** are actually different colors according to the computer, but to us they look the same. Therefore, we can change the colors in an image just a tiny bit and it will still look exactly the same to us.
+It is very difficult for us to tell the difference between two colors if they differ only very slightly. For example, **<span style="color: #d88f30;">this orange</span>** and **<span style="color: #d88f31;">that orange</span>** are actually different colors according to the computer, but to us they look the same. Therefore, we can change the colors in an image just a tiny bit and it will still look exactly the same to us.
 
 But the computer knows the difference, and it's in that difference where the secret message lives.
 

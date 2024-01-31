@@ -98,12 +98,12 @@ A common trap is to do both ideation and evaluation simultaneously, judging idea
 
 Deferring judgement enhances creativity.
 
-<horizontal-flex>
+<div class="horizontal-flex">
 <article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-1.png" alt="A gavel is about to crush some ideas" caption="A common antipattern is to ideate and evaluate at the same time." size="fit" style="flex: 1;">
 </article-image>
 <article-image src="/assets/posts/enhancing-creativity-by-deferring-judgement/defer-judgement-2.png" alt="Ideas are separated far from the gavel" caption="Ideation and evaluation should be distinct exercises!" size="fit" style="flex: 1;">
 </article-image>
-</horizontal-flex>
+</div>
 
 ## Creating Provocations
 

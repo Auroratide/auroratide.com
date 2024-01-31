@@ -290,9 +290,9 @@ This change was introduced in order to better fit the semantics of `pixelated`. 
 
 Perhaps more interesting, however, is the change to `crisp-edges`. Although the semantic definition of the value is unchanged, the provided example is dramatically different. Both images below represent the same source image being upscaled several times, but are from different versions of the spec.
 
-<horizontal-flex>
+<div class="horizontal-flex">
   <article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/spec-old.png" alt="The lines bounding various shapes are noticably smooth." caption="Before the change" width="320" height="160"></article-image>
   <article-image nopopout src="/assets/posts/pixelart-and-the-image-rendering-paradox/spec-new.png" alt="The shapes have pixelated artifacting." caption="After the change" width="320" height="160"></article-image>
-</horizontal-flex>
+</div>
 
 Long story short, this property has been and presently is a point of discussion.

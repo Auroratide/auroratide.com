@@ -34,17 +34,10 @@ export class PegElement extends PegboardEntity {
         this
             .attachShadow({ mode: 'open' })
             .appendChild(template.content.cloneNode(true));
-
-        (this.shadowRoot!.querySelector('.peg') as HTMLImageElement).src = `${this.assetpath}/peg.png`
     }
 
     connectedCallback() {
-        const host = this.shadowRoot!.host as HTMLElement
-
-        host.style.width = `calc(100% / ${this.pegboard?.width ?? 1})`
-        host.style.transform = `translate(calc(100% * ${this.x}), calc(100% * ${this.y}))`;
-
-        (this.shadowRoot!.querySelector('.peg') as HTMLImageElement).alt = `Peg ${this.label} at (${this.x}, ${this.y})`
+        this.refreshAsset()
     }
 
     get x() { return parseInt(this.getAttribute('x') ?? '0') }
@@ -57,6 +50,16 @@ export class PegElement extends PegboardEntity {
     set label(value: string) { this.setAttribute('label', value) }
 
     get assetpath() { return this.pegboard?.assetpath }
+
+    refreshAsset() {
+        const host = this.shadowRoot!.host as HTMLElement
+
+        host.style.width = `calc(100% / ${this.pegboard?.width ?? 1})`
+        host.style.transform = `translate(calc(100% * ${this.x}), calc(100% * ${this.y}))`
+
+        ;(this.shadowRoot!.querySelector('.peg') as HTMLImageElement).src = `${this.assetpath}/peg.png`
+        ;(this.shadowRoot!.querySelector('.peg') as HTMLImageElement).alt = `Peg ${this.label} at (${this.x}, ${this.y})`
+    }
 }
 
 export default () => {

@@ -4,7 +4,7 @@ import type { PegElement } from '../../../RubberJuggle/peg'
 
 const html = `
     <sliding-demo autoplay>
-        <horizontal-flex>
+        <div class="horizontal-flex">
             <rubber-juggle-pegboard width="6" height="4" assetpath="/assets/components/rubber-juggle">
                 <rubber-juggle-peg label="a" x="1" y="2"></rubber-juggle-peg>
                 <rubber-juggle-peg label="b" x="4" y="1"></rubber-juggle-peg>
@@ -20,7 +20,7 @@ const html = `
                     <polyline id="balloon-path" stroke="#000000" fill="none" stroke-width="0.05" stroke-dasharray="0.1" points="1.3,0.7 1.3,0.7" />
                 </svg>
             </section>
-        </horizontal-flex>
+        </div>
     </sliding-demo>
 `
 
@@ -54,6 +54,14 @@ const css = `
         font-size: 1.125em;
         background: #f7f7f7;
         padding: 0;
+    }
+
+    .horizontal-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin-block-end: 1em;
     }
 
     @media screen and (min-width: 75rem) {

@@ -1,1 +1,5 @@
-export { default as SideText } from './SideText.svelte'
+import { default as SideText } from './side-text'
+
+SideText()
+
+export { SideText }

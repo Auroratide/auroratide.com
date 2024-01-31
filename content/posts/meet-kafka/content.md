@@ -78,19 +78,11 @@ Pat cannot just _walk_ over to Carol because she lives too far away. Instead, ma
 
 So, meet Kirk, the mail guy! His main job is to deliver messages between different people, kind of like so:
 
-<slide-show width="960px" height="540px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-01.png" alt="Pat says, 'Hey Kirk here's a message!'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-02.png" alt="Kirk says, 'Thanks Pat, I'll hold onto this.'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-03.png" alt="Carol asks, 'Hey Kirk, got a message for me yet?'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/messages-04.png" alt="Kirk replies, 'Sure do! Here's a copy.'" />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/meet-kafka/messages-01.png" alt="Pat says, 'Hey Kirk here's a message!'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/messages-02.png" alt="Kirk says, 'Thanks Pat, I'll hold onto this.'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/messages-03.png" alt="Carol asks, 'Hey Kirk, got a message for me yet?'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/messages-04.png" alt="Kirk replies, 'Sure do! Here's a copy.'" />
 </slide-show>
 
 Turns out, this is a useful way of thinking about what Kafka can do! In this analogy:
@@ -140,22 +132,12 @@ That's fine! Kirk has a clever idea.
 
 He can set up _mailboxes_ for different kinds of messages! Casual messages will go into the Casual mailbox, and Business messages will go into the Business mailbox. Carol can then _subscribe_ to only the Casual mailbox and therefore only receive casual messages.
 
-<slide-show width="960px" height="540px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-01.png" alt="Pat says, 'Hey Kirk, here's some messages!' One envelope is white, and the other is pink." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-02.png" alt="Kirk is confused." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-03.png" alt="Two boxes appear below Kirk. One is white, and the other is pink." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-04.png" alt="The white message goes into the white box, and the pink messages go into the pink box." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/topics-05.png" alt="Carol accepts a message from the white box." />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/meet-kafka/topics-01.png" alt="Pat says, 'Hey Kirk, here's some messages!' One envelope is white, and the other is pink." />
+  <img slot="slide" src="/assets/posts/meet-kafka/topics-02.png" alt="Kirk is confused." />
+  <img slot="slide" src="/assets/posts/meet-kafka/topics-03.png" alt="Two boxes appear below Kirk. One is white, and the other is pink." />
+  <img slot="slide" src="/assets/posts/meet-kafka/topics-04.png" alt="The white message goes into the white box, and the pink messages go into the pink box." />
+  <img slot="slide" src="/assets/posts/meet-kafka/topics-05.png" alt="Carol accepts a message from the white box." />
 </slide-show>
 
 Notice what this mailbox strategy accomplishes:
@@ -204,16 +186,10 @@ Kirk will actually divide the topic into mini-mailboxes. Each member of Team Car
 
 As you might have guessed, these "mini-mailboxes" are what Kafka calls **partitions**.
 
-<slide-show width="960px" height="540px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-01.png" alt="Kirk is on the left with three Carols on the right. Between them is a white box labeled 'Casual Topic'." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-02.png" alt="The white box now contains three smaller boxes, with each box pointing to one of the three Carols." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/partitions-03.png" alt="Kirk puts his three messages into the casual topic, with one message going into each of the three inner-boxes." />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/meet-kafka/partitions-01.png" alt="Kirk is on the left with three Carols on the right. Between them is a white box labeled 'Casual Topic'." />
+  <img slot="slide" src="/assets/posts/meet-kafka/partitions-02.png" alt="The white box now contains three smaller boxes, with each box pointing to one of the three Carols." />
+  <img slot="slide" src="/assets/posts/meet-kafka/partitions-03.png" alt="Kirk puts his three messages into the casual topic, with one message going into each of the three inner-boxes." />
 </slide-show>
 
 So in this illustration, three events enter the Casual Topic, but are divided evenly across three partitions. Since each Carol is responsible for one partition, each message will be read exactly once, and in parallel.
@@ -296,25 +272,13 @@ This can be different from traditional messaging systems, wherein a message is r
 
 </side-text>
 
-<slide-show width="960px" height="540px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Cathy is with Carol on the right. Pat says, 'Hey Kirk, here's a message!'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Kirk says, 'Thanks, Pat!'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Carol asks, 'Got a message for me?'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Kirk responds, 'Yep! Here's a copy.'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Cathy asks, 'What about me?'" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Kirk replies, 'Don't worry, got you covered!' In the end, both Carol and Cathy have received the same message from Pat." />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-01.png" alt="Cathy is with Carol on the right. Pat says, 'Hey Kirk, here's a message!'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-02.png" alt="Kirk says, 'Thanks, Pat!'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-03.png" alt="Carol asks, 'Got a message for me?'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-04.png" alt="Kirk responds, 'Yep! Here's a copy.'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-05.png" alt="Cathy asks, 'What about me?'" />
+  <img slot="slide" src="/assets/posts/meet-kafka/consumer-groups-06.png" alt="Kirk replies, 'Don't worry, got you covered!' In the end, both Carol and Cathy have received the same message from Pat." />
 </slide-show>
 
 <side-text>
@@ -335,16 +299,10 @@ With consumer groups, Kirk can:
 * Broadcast messages to all different consumer groups invested in the topic
 * Or a combination of the two approaches above
 
-<slide-show width="960px" height="540px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly: Two partitions each have messages. There are two Carols; one of them receives message from the first partition, and the other receives messages from the other partition." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All: Two partitions each have messages. There is one Carol and one Cathy; both Carol and Cathy each receive all the messages from both partitions." />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/meet-kafka/combination.png" alt="Combination: Two partitions each have messages. There are two Carols and one Cathy; the first Carol receives the first partition messages, the second Carol receives the second partition messages, and Cathy receives all the messages." />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/meet-kafka/distribute-evenly.png" alt="Distribute Evenly: Two partitions each have messages. There are two Carols; one of them receives message from the first partition, and the other receives messages from the other partition." />
+  <img slot="slide" src="/assets/posts/meet-kafka/broadcast-to-all.png" alt="Broadcast To All: Two partitions each have messages. There is one Carol and one Cathy; both Carol and Cathy each receive all the messages from both partitions." />
+  <img slot="slide" src="/assets/posts/meet-kafka/combination.png" alt="Combination: Two partitions each have messages. There are two Carols and one Cathy; the first Carol receives the first partition messages, the second Carol receives the second partition messages, and Cathy receives all the messages." />
 </slide-show>
 
 Note that in all the above approaches, each consumer group sees all three messages in the topic. Therefore, both Carol and Cathy each see all three messages, though in Carol's case (because she's a cloner) she may divide the work between herself and other clones.

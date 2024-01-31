@@ -1,3 +1,5 @@
+import { PegboardEntity } from "./entity"
+
 const PEGBOARD_URL_NAME = '--rubber-juggle-pegboard'
 
 const html = `
@@ -55,6 +57,8 @@ export class PegboardElement extends HTMLElement {
 
         pegboard.style.gridTemplateRows = `repeat(${this.height}, 1fr)`
         pegboard.style.gridTemplateColumns = `repeat(${this.width}, 1fr)`
+
+        this.#notifyChildrenConnected()
     }
 
     get assetpath() { return this.getAttribute('assetpath') ?? '' }
@@ -65,6 +69,14 @@ export class PegboardElement extends HTMLElement {
 
     get height() { return parseInt(this.getAttribute('height') ?? '0') }
     set height(value: number) { this.setAttribute('height', value.toString()) }
+
+    #notifyChildrenConnected() {
+        for (const child of this.children) {
+            if (child instanceof PegboardEntity) {
+                child.refreshAsset()
+            }
+        }
+    }
 }
 
 export default () => {

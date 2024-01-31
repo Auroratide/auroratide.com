@@ -1,4 +1,4 @@
-<svelte:options tag="whodoku-widget" />
+<svelte:options customElement="whodoku-widget" />
 
 <script lang="ts">
     import { Sudoku, SudokuValue } from './Sudoku'

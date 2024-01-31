@@ -25,9 +25,9 @@
 
 <button role="switch" aria-label="Dark Mode" aria-checked="{$isDark}" on:click={toggle}>
     {#if $isDark}
-        <vector-icon class="dark" icon="moon" transition:spinFade></vector-icon>
+        <vector-icon class="dark" icon="moon" transition:spinFade|global></vector-icon>
     {:else}
-        <vector-icon class="light" icon="sun" transition:spinFade></vector-icon>
+        <vector-icon class="light" icon="sun" transition:spinFade|global></vector-icon>
     {/if}
 </button>
 

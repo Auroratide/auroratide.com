@@ -10,7 +10,7 @@ Below, though, you can find some quick conversions from AS3 code to Haxe, along 
 * Many sources will compare Haxe's Dynamic construct to AS3 or Java's Object class. However, I believe that Dynamic is more similar to the * (untyped) in AS3. Dynamic removes compile-time type checking just like the * typing in AS3.
 * We essentially replace Vectors with Arrays. In Java, this is the same as ArrayList&lt;T&gt;, and in C++, we use vector&lt;T&gt;.
 
-<horizontal-flex>
+<div class="horizontal-flex">
 <div style="flex: 1; margin: 0;">
 
 ### AS3
@@ -39,7 +39,7 @@ Below, though, you can find some quick conversions from AS3 code to Haxe, along 
 8. Array&lt;T&gt;
 
 </div>
-</horizontal-flex>
+</div>
 
 ## Class Definition
 

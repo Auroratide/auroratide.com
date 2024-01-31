@@ -125,7 +125,7 @@ Now, in the game jam I was using raw [PixiJS](https://www.pixijs.com/), which is
 
 Faced with a task like this, I personally like drawing a bunch of scenarios to see if a pattern can be picked out. For instance:
 
-<horizontal-flex>
+<div class="horizontal-flex">
     <figure>
         <rubber-juggle-pegboard width="3" height="3" assetpath="/assets/components/rubber-juggle">
             <rubber-juggle-peg label="a" x="1" y="2"></rubber-juggle-peg>
@@ -133,7 +133,7 @@ Faced with a task like this, I personally like drawing a bunch of scenarios to s
             <rubber-juggle-balloon x="0.7" y="0.7"></rubber-juggle-balloon>
             <rubber-juggle-band from="a" to="b"></rubber-juggle-band>
         </rubber-juggle-pegboard>
-        <figcaption><p>Not colliding</p></figcaption>
+        <figcaption>Not colliding</figcaption>
     </figure>
     <figure>
         <rubber-juggle-pegboard width="3" height="3" assetpath="/assets/components/rubber-juggle">
@@ -142,7 +142,7 @@ Faced with a task like this, I personally like drawing a bunch of scenarios to s
             <rubber-juggle-balloon x="1.3" y="0.7"></rubber-juggle-balloon>
             <rubber-juggle-band from="a" to="b"></rubber-juggle-band>
         </rubber-juggle-pegboard>
-        <figcaption><p>Just colliding</p></figcaption>
+        <figcaption>Just colliding</figcaption>
     </figure>
     <figure>
         <rubber-juggle-pegboard width="3" height="3" assetpath="/assets/components/rubber-juggle">
@@ -151,19 +151,19 @@ Faced with a task like this, I personally like drawing a bunch of scenarios to s
             <rubber-juggle-balloon x="1.6" y="0.7"></rubber-juggle-balloon>
             <rubber-juggle-band from="a" to="b"></rubber-juggle-band>
         </rubber-juggle-pegboard>
-        <figcaption><p>Definitely colliding</p></figcaption>
+        <figcaption>Definitely colliding</figcaption>
     </figure>
-</horizontal-flex>
+</div>
 
 Pictorially, it can be easy to pick out in which scenarios a bounce should happen, but it doesn't really help actually solve how to code the bounce. For that, we have to start thinking in terms of our domain model, simplifying the problem a bit and bringing us a step closer to how the computer sees the interacting elements.
 
 Redrawing the exact same three scenarios above but using only our domain representation, we get this:
 
-<horizontal-flex>
+<div class="horizontal-flex">
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-01.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle and brown line do not intersect. The distance between them is labeled d." size="fit"></article-image>
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-02.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle barely touches the brown line." size="fit"></article-image>
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-03.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is on top of the brown line." size="fit"></article-image>
-</horizontal-flex>
+</div>
 
 * `(x, y)` represents the balloon's position, which in our code is `balloon.position`
 * `(ax, ay)` and `(bx, by)` represent the peg positions, which in or code is `band.from.position` and `band.to.position`
@@ -247,10 +247,10 @@ As it turns out, that's because there _is_ an infinite line stretching the entir
 
 What we really want is the distance from a point to a line _segment_. Knowing this, we can add a couple more diagrams to our scenarios above:
 
-<horizontal-flex>
+<div class="horizontal-flex">
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-04.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is above one of the red circles. The distance between them is labeled d." size="lg"></article-image>
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/model-05.png" alt="A blue circle marked (x, y) with radius r. Two small, red circles marked (ax, ay) and (bx, by) are connected with a brown line. The blue circle is lined up with the brown line, but not going through it. The distance between them is labeled d." size="lg"></article-image>
-</horizontal-flex>
+</div>
 
 Finding this version of `d` will be far more accurate for collision detection.
 
@@ -491,10 +491,10 @@ As before, I like to think of the problem pictorially before analyizing possible
 
 In this case, the simplest way to represent the bounce is with a symmetrical reflection; in physics, this is known as **[specular reflection](https://en.wikipedia.org/wiki/Specular_reflection)**. If we compare a typical diagram for specular reflection against the diagram created by our simulated bounce, we can see the similarity:
 
-<horizontal-flex>
+<div class="horizontal-flex">
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/bounce-physics.png" alt="A blue circle's path bouncing off a brown line is drawn, with a dashed line bisecting the angle formed." size="lg" caption="Bounce Reflection"></article-image>
     <article-image src="/assets/posts/the-bounce-of-rubber-juggle/reflection.png" alt="Two line segments QO and OP depect reflection on a mirror. A line bisects the angle formed." size="lg" caption="Specular Reflection" cite="https://commons.wikimedia.org/wiki/File:Reflection_angles.svg"></article-image>
-</horizontal-flex>
+</div>
 
 So that's great and all, but how the heck do we actually _code_ this?
 

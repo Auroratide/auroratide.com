@@ -1,1 +1,5 @@
-export { default as MajorPoint } from './MajorPoint.svelte'
+import { default as MajorPoint } from './major-point'
+
+MajorPoint()
+
+export { MajorPoint }

@@ -1,4 +1,4 @@
-<svelte:options tag="image-steganographer" />
+<svelte:options customElement="image-steganographer" />
 
 <script lang="ts">
     import { onMount } from 'svelte'
@@ -99,7 +99,7 @@
         <textarea part="textarea" bind:value={message} id="steganography-message-input"></textarea>
     </div>
     {#if showFeedback}
-        <div in:burst={{duration: 400}} class="feedback {status.type}"></div>
+        <div in:burst|global={{duration: 400}} class="feedback {status.type}"></div>
     {/if}
     <div class="area status-area {status.type}">
         <span>{status.message}</span>

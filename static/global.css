@@ -147,6 +147,15 @@ body {
     position: absolute;
 }
 
+.content-typography .horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5em;
+    margin-block-end: var(--sp-paragraph);
+}
+
 /* Headings
    ========================================================================== */
 h1 { font-size: var(--font-sz-jupiter); }
@@ -529,6 +538,26 @@ img-popout img:not([slot="popped-out"]) {
 
 major-point p {
     font-weight: var(--typography-light);
+}
+
+slide-show {
+    margin-block-end: var(--sp-paragraph);
+}
+
+slide-show::part(nav-item) {
+    display: inline-block;
+    background: var(--skin-bg);
+    border: 0.1875em solid var(--skin-content);
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    line-height: 1;
+    border-radius: 2em;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+slide-show::part(nav-selected) {
+    box-shadow: 0 0 0 0.1875em var(--skin-bg);
 }
 
 /* Large Screens

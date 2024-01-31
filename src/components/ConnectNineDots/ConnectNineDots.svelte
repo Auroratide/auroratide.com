@@ -1,4 +1,4 @@
-<svelte:options tag="connect-nine-dots" />
+<svelte:options customElement="connect-nine-dots" />
 
 <script lang="ts">
     import type { Angle } from './geometry/Angle'

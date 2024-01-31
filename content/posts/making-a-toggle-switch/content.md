@@ -28,7 +28,7 @@
   </ul>
 </point-compilation>
 
-Hey, let's build a <colored-text color="#8F7200">light bulb</colored-text>!
+Hey, let's build a <span style="color: #8F7200;">light bulb</span>!
 
 Or, at least the on/off switch part of the light bulb... The **toggle switch** is a super common user interface element to indicate whether some feature is active or not.
 
@@ -55,13 +55,13 @@ Switches like these are in fact so common, it would sure be nice if they were th
 
 Well, through the magic of **[web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)**, it's actually possible to make this!
 
-My goal is to illustrate one way how to both **build** and **test** a web component. However, instead of going step-by-step "here's the code for making a toggle switch," we're gonna acutally (in some sense) assemble a <colored-text color="#8F7200">light bulb</colored-text> representing the **key aspects to building a reusable web component**, which apply when creating _any_ reusable element.
+My goal is to illustrate one way how to both **build** and **test** a web component. However, instead of going step-by-step "here's the code for making a toggle switch," we're gonna acutally (in some sense) assemble a <span style="color: #8F7200;">light bulb</span> representing the **key aspects to building a reusable web component**, which apply when creating _any_ reusable element.
 
 <article-image src="/assets/posts/making-a-toggle-switch/map.png" alt="Light bulb, with parts represented by accessibility, attributes, javascript, events, and styling." size="fit" width="1000" height="512"></article-image>
 
 As we assemble this light bulb piece by piece, we will also be making the `toggle-switch` component we know and love!
 
-So all that said, let's build a <colored-text color="#8F7200">light bulb</colored-text>!
+So all that said, let's build a <span style="color: #8F7200;">light bulb</span>!
 
 * [Inventing a Light Bulb](#inventing-a-light-bulb)
   * [Semantics: The Schematic](#semantics-the-schematic)
@@ -673,7 +673,7 @@ describe('events', () => {
 
 Answering the questions...
 
-1. **Name**: Since our event represents a _change_ in the state, we'll call the event <colored-text color="var(--skin-code-string)">"toggle-switch:change"</colored-text>.
+1. **Name**: Since our event represents a _change_ in the state, we'll call the event <span style="color: var(--skin-code-string);">"toggle-switch:change"</span>.
 2. **When**: Let's emit the event any time `checked` is added or removed from the element.
 3. **Details**: Events can carry additional information so that listeners know both _what_ happened and anything else that may be relevant. For our one event, it's probably important to know whether the switch was toggled on or toggled off, so we'll add that to details.
 

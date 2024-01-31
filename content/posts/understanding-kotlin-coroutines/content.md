@@ -98,7 +98,7 @@ However, if you write this code as-is, the compiler will complain about `launch`
 
 At least for our toy example, there are a couple of ways to immediately get a coroutine scope.
 
-<horizontal-flex>
+<div class="horizontal-flex">
 
 ```kotlin
 fun main() {
@@ -118,7 +118,7 @@ fun main(): Unit = runBlocking {
 }
 ```
 
-</horizontal-flex>
+</div>
 
 * In the first example, `GlobalScope` _is_ a coroutine scope, and it theoretically allows a coroutine to be created from anywhere.
 * In the second example, `runBlocking` opens a block within which `launch` can be called. `runBlocking` gives you a context, within which is a coroutine scope.
@@ -224,7 +224,7 @@ And this is why **structured programming** was proposed.
 
 As the name implies, **structured programming** utilizes structure to make it possible to understand code in smaller, hierarchical chunks. And actually, you probably rarely ever hear the term "structured programming" nowadays because, well lemme show you:
 
-<horizontal-flex>
+<div class="horizontal-flex">
 
 ```
 01: Input a sorted list of numbers -> LIST
@@ -255,7 +255,7 @@ fun search(list, num) {
 }
 ```
 
-</horizontal-flex>
+</div>
 
 <side-text>
 

@@ -1,3 +1,56 @@
+<style>
+    .maslows-hierarchy-of-needs {
+        display: block;
+        margin-bottom: 1.5em;
+        margin: 0;
+    }
+
+    .maslows-hierarchy-of-needs .layer {
+        margin-bottom: 0.25em;
+        padding: 0.25em 0.25em 0.5em calc(26% + 0.25em);
+        color: #ffffff;
+    }
+
+    .maslows-hierarchy-of-needs .layer strong {
+        display: block;
+        font-size: 1.5em;
+        margin-bottom: 0.25em;
+        font-weight: 700;
+        text-align: start;
+    }
+
+    .maslows-hierarchy-of-needs .layer p {
+        margin: 0;
+        text-align: start;
+        line-height: 1;
+    }
+
+    .maslows-hierarchy-of-needs .self-actualization {
+        clip-path: polygon(26% 0, 100% 0, 100% 100%, 21% 100%);
+        background-color: var(--maslow-color-selfactualization);
+    }
+
+    .maslows-hierarchy-of-needs .esteem {
+        clip-path: polygon(20.75% 0, 100% 0, 100% 100%, 15.75% 100%);
+        background-color: var(--maslow-color-esteem);
+    }
+
+    .maslows-hierarchy-of-needs .belonging {
+        clip-path: polygon(15.5% 0, 100% 0, 100% 100%, 10.5% 100%);
+        background-color: var(--maslow-color-belonging);
+    }
+
+    .maslows-hierarchy-of-needs .safety {
+        clip-path: polygon(10.25% 0, 100% 0, 100% 100%, 5.25% 100%);
+        background-color: var(--maslow-color-safety);
+    }
+
+    .maslows-hierarchy-of-needs .physiological {
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+        background-color: var(--maslow-color-physiological);
+    }
+</style>
+
 A **dystopia** is a society where something, somehow, is just _wrong_. Often when we think of dystopias, we think of corrupt governments, or of specific examples like George Orwell's _1984_, or Suzanne Collins's _The Hunger Games_. They are worlds that are just believable enough to be plausible, a chilling reminder of what life could be like if society is not careful.
 
 Y'know, sometimes it's fun to think of all the ways a society can go wrong! Below I have a list of five interesting dystopian scenarios, forming a sort of hierarchy where each differs from the last. It's possible that as you read them, these five categories might become familiar...
@@ -76,8 +129,28 @@ For example, as social beings we have a need to feel like we belong, to have fri
 
 Maslow's original model categorizes five kinds of needs, organized neatly in the pyramid below, where needs at the bottom should be satisfied before the needs at the top:
 
-<maslows-hierarchy-of-needs>
-</maslows-hierarchy-of-needs>
+<figure class="maslows-hierarchy-of-needs">
+    <div class="layer self-actualization">
+        <strong>Self-Actualization</strong>
+        <p>Need for self-expression and meeting personal goals</p>
+    </div>
+    <div class="layer esteem">
+        <strong>Esteem</strong>
+        <p>Need for respect, recognition, and self worth</p>
+    </div>
+    <div class="layer belonging">
+        <strong>Belonging</strong>
+        <p>Need for friendship, family, and intimacy</p>
+    </div>
+    <div class="layer safety">
+        <strong>Safety</strong>
+        <p>Need for security, consistency, employment, and health</p>
+    </div>
+    <div class="layer physiological">
+        <strong>Physiological</strong>
+        <p>Need for food, water, air, and sleep</p>
+    </div>
+</figure>
 
 Today, we know the hierarchy is not a strict pyramid. In fact, our needs overlap through the layers in a dynamic sort of way. That said, the general trend Maslow's model suggests tends to resonate with people which is why it has become so popular over the years even among non-psychologists such as myself.
 

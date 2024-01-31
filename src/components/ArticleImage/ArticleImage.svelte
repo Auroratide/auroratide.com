@@ -1,4 +1,4 @@
-<svelte:options tag="article-image" />
+<svelte:options customElement="article-image" />
 
 <script lang="ts">
     import { Size } from './Size'

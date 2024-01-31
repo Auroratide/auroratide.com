@@ -13,12 +13,12 @@ In a brief experiment, we can actually see this merely by changing the image's b
 
 So what about the people who see blue and gold? To help explain this, I actually went to inspect the RGB values of the image itself to see what the computer thinks the colors are. Interestingly, the blue/white patches are seen as a bluish grey, and the black/gold patches are a very impure yellow. Below are two boxes indicating the colors without any context:
 
-<horizontal-flex>
+<div class="horizontal-flex">
 <article-image src="/assets/posts/the-blue-and-gold-dress/blue.png" alt="Blue" caption="RGB: (133, 149, 183) - Since the blue component is largest, we see mostly a faded blue." size="md" style="flex: 1;">
 </article-image>
 <article-image src="/assets/posts/the-blue-and-gold-dress/yellow.png" alt="Yellow" caption="RGB: (127, 110, 67) - Since red and green are nearly the same and blue is very low, it is objectively yellow." size="md" style="flex: 1;">
 </article-image>
-</horizontal-flex>
+</div>
 
 In other words, the computer thinks the dress is blue and gold. Hence, the people who see a blue and gold dress see the image as it is actually portrayed, irrespective of the contextual background lighting.
 

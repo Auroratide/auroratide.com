@@ -4,7 +4,7 @@ import type { PegElement } from '../../../RubberJuggle/peg'
 
 const html = `
     <sliding-demo autoplay>
-        <horizontal-flex>
+        <div class="horizontal-flex">
             <rubber-juggle-pegboard width="6" height="4" assetpath="/assets/components/rubber-juggle">
                 <rubber-juggle-peg label="a" x="0" y="2"></rubber-juggle-peg>
                 <rubber-juggle-peg label="b" x="3" y="2"></rubber-juggle-peg>
@@ -21,7 +21,7 @@ const html = `
                     <vector-icon class="no-collision" icon="times"></vector-icon>
                 </div>
             </section>
-        </horizontal-flex>
+        </div>
     </sliding-demo>
 `
 
@@ -66,6 +66,14 @@ const css = `
 
     .colliding .no-collision {
         display: none;
+    }
+
+    .horizontal-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin-block-end: 1em;
     }
 
     @media screen and (min-width: 75rem) {

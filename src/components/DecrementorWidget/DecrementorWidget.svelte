@@ -1,4 +1,4 @@
-<svelte:options tag="decrementor-widget" />
+<svelte:options customElement="decrementor-widget" />
 
 <script lang="ts">
     export let initialvalue: number

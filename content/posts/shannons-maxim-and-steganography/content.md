@@ -62,12 +62,12 @@ In my post on steganography, I detailed a technique that hides messages in image
 
 However, consider a slight modification to this idea. Instead of changing every pixel in the image, we can change every Xth pixel, where X is a key. So let's say Dan and Rei were using image steganography to hide their images. They could agree on the number 13 as their key, and so only every 13th pixel in the image would encode their secret message.
 
-<horizontal-flex>
+<div class="horizontal-flex">
 <article-image src="/assets/posts/shannons-maxim-and-steganography/stego01.png" alt="An array of pixels, where each pixel is marked with a red dot." caption="An example where we change every single pixel in the image. This is not secure since there is no concept of keys involved." size="md" style="flex: 1;">
 </article-image>
 <article-image src="/assets/posts/shannons-maxim-and-steganography/stego02.png" alt="An array of pixels, where every third pixel is marked with a red dot." caption="An example with 3 as the key. Now only every third pixel is altered. Even if others knew of the algorithm, they would need to guess the correct key." size="md" style="flex: 1;">
 </article-image>
-</horizontal-flex>
+</div>
 
 Note that this now follows Shannon's Maxim! Even if other people were to know how the algorithm works, they might not know the key, and the information can still be difficult to detect. Now, I know this particular example is a bit silly since there are so few keys, but one can use a bit of mathematical black magic to circumvent the limitation.
 

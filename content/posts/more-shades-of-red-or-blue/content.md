@@ -118,13 +118,9 @@ Can we measure **shade** itself?
 
 Here is a random picture of my yard with a cute animal in it.
 
-<slide-show width="640px" height="479px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/puppy-1.png" alt="Grass, some shaded and some not. Also a cute puppy." width="960" height="719" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/puppy-2.png" alt="Grass in the shade and grass in the sun are emphasized." width="960" height="719" />
-  </img-popout>
+<slide-show style="max-width: 640px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/puppy-1.png" alt="Grass, some shaded and some not. Also a cute puppy." width="960" height="719" />
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/puppy-2.png" alt="Grass in the shade and grass in the sun are emphasized." width="960" height="719" />
 </slide-show>
 
 We know that the grass in the shade and the grass in the sun are the same green color, yet they appear different to us when viewed in isolation. What we are seeing are different **<span style="color: var(--skin-aellagreen-text);">shades of green</span>**.
@@ -191,19 +187,11 @@ At the back of our eyes are special cells that are responsible for detecting dif
 2. Light that is more red, for instance, triggers the red cone cell more than it triggers the green cone cell.
 3. The brain interprets the relative strengths of these cellular signals as a specific color!
 
-<slide-show width="960px" height="543px" mode="blink">
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/vision-1.png" alt="Red, green, and blue cones in front of a brain." width="960" height="543" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/vision-2.png" alt="Purple rays enter the red, green, and blue cones." width="960" height="543" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/vision-3.png" alt="Rays go from the cones to the brain. The thinnest ray comes from the green cone, and the other rays are thick." width="960" height="543" />
-  </img-popout>
-  <img-popout>
-    <img src="/assets/posts/more-shades-of-red-or-blue/vision-4.png" alt="The brain says, 'Purple!'" width="960" height="543" />
-  </img-popout>
+<slide-show style="max-width: 960px; --slide-show-transition-duration: 0s;">
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/vision-1.png" alt="Red, green, and blue cones in front of a brain." width="960" height="543" />
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/vision-2.png" alt="Purple rays enter the red, green, and blue cones." width="960" height="543" />
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/vision-3.png" alt="Rays go from the cones to the brain. The thinnest ray comes from the green cone, and the other rays are thick." width="960" height="543" />
+  <img slot="slide" src="/assets/posts/more-shades-of-red-or-blue/vision-4.png" alt="The brain says, 'Purple!'" width="960" height="543" />
 </slide-show>
 
 So, knowing all this, where _does_ **<span style="color: var(--skin-fablepink-text);">pink</span>** come from? **[Pink is an invention of the brain!](https://www.youtube.com/watch?v=DRuPF6JtWdw)** It's just how we perceive a relatively equal amount of red and blue light.

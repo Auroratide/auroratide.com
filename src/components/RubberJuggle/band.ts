@@ -44,24 +44,7 @@ class BandElement extends PegboardEntity {
     }
 
     connectedCallback() {
-        const host = this.shadowRoot!.host as HTMLElement
-        const p = this.pegboard
-        const e = this.endpoints()
-
-        if (!e || !p) return
-
-        const dx = e.to.x - e.from.x
-        const dy = e.to.y - e.from.y
-        const distance = Math.sqrt(dx * dx + dy * dy)
-
-        const angle = -180 / Math.PI * Math.acos((e.to.x - e.from.x) / distance)
-
-        host.style.width = `${100 / p.width * distance}%`
-        host.style.top = `${100 / p.height * e.from.y + 50 / p.height - 2.5}%`
-        host.style.left = `${100 / p.width * e.from.x + 50 / p.width}%`
-        host.style.transform = `rotate(${angle}deg)`
-
-        this.shadowRoot?.querySelector('.band')?.setAttribute('aria-label', `Band connecting Peg ${this.from} and Peg ${this.to}`)
+        this.refreshAsset()
     }
 
     endpoints(): {
@@ -90,6 +73,27 @@ class BandElement extends PegboardEntity {
     set to(value: string) { this.setAttribute('to', value) }
 
     get assetpath() { return this.pegboard?.assetpath }
+
+    refreshAsset() {
+        const host = this.shadowRoot!.host as HTMLElement
+        const p = this.pegboard
+        const e = this.endpoints()
+
+        if (!e || !p) return
+
+        const dx = e.to.x - e.from.x
+        const dy = e.to.y - e.from.y
+        const distance = Math.sqrt(dx * dx + dy * dy)
+
+        const angle = -180 / Math.PI * Math.acos((e.to.x - e.from.x) / distance)
+
+        host.style.width = `${100 / p.width * distance}%`
+        host.style.top = `${100 / p.height * e.from.y + 50 / p.height - 2.5}%`
+        host.style.left = `${100 / p.width * e.from.x + 50 / p.width}%`
+        host.style.transform = `rotate(${angle}deg)`
+
+        this.shadowRoot?.querySelector('.band')?.setAttribute('aria-label', `Band connecting Peg ${this.from} and Peg ${this.to}`)
+    }
 }
 
 export default () => {

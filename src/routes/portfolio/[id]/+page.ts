@@ -10,7 +10,7 @@ export const load: PageLoad = async ({ fetch, params }) => {
     ])
 
     if (!item) {
-        throw error(404, `Item with id ${params.id} does not exist`);
+        error(404, `Item with id ${params.id} does not exist`);
     }
 
     return {

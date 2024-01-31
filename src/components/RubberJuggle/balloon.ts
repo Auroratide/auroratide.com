@@ -39,7 +39,7 @@ export class BalloonElement extends PegboardEntity {
     }
 
     connectedCallback() {
-        this.host.style.width = `calc(100% / ${this.pegboard?.width ?? 1})`
+        this.refreshAsset()
     }
 
     static get observedAttributes() {
@@ -58,6 +58,12 @@ export class BalloonElement extends PegboardEntity {
 
     get assetpath() { return this.pegboard?.assetpath }
     get host() { return this.shadowRoot!.host as HTMLElement }
+
+    refreshAsset() {
+        this.host.style.width = `calc(100% / ${this.pegboard?.width ?? 1})`
+
+        ;(this.shadowRoot!.querySelector('.balloon') as HTMLImageElement).src = `${this.assetpath}/balloon.png`
+    }
 }
 
 export default () => {
