@@ -10,7 +10,7 @@ Some of the things I strive for in a good frontend codebase include:
 
 ## Tech Stack
 
-auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), [Jest](https://jestjs.io/) with [Testing Library](https://testing-library.com/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
+auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), [Vitest](https://vitest.dev/), [Playwright](https://playwright.dev/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
 ### Svelte
 
@@ -28,15 +28,13 @@ Typescript provides static typing to Javascript, which is otherwise a dynamicall
 * Creating discoverable APIs, improving intellisense in code editors
 * And those things combined make it easier to maintain the codebase in the long term, where I'm apt to forget what chunks of code do
 
-### Jest
+### Vitest and Playwright
 
-Jest is a testing framework with in-built support for testing frontend components. Testing Library provides some useful abstractions, meaning overall less boilerplate code in the tests.
+Vitest is a simple testing framework, and Playwright is a browser testing framework. I use vitest to (very) quickly test units of logic, and playwright to verify that everything works properly on a real browser.
 
 Testing code in general is important, as improves the longevity of the code and increases confidence in changes that are made. In a world without automated tests, a change to the code could accidentally break something and you would never know until encountered in production. With (well-written) tests, there's at least a good chance of catching such bugs beforehand!
 
 I've written on testing components in [The What, How, and Why of Nicely Testing React Components](https://auroratide.com/posts/nicely-testing-react-components). Yeah I know it says React, but the core principles apply universally.
-
-A good example is [DarkModeSwitch.spec.ts](/test/lib/design/DarkModeSwitch.spec.ts).
 
 ### Web Components
 
@@ -62,13 +60,13 @@ SvelteKit is used to statically generate each page, while a small custom engine 
 
 | Action           | Command               |
 | ---------------- | --------------------- |
-| Build Project    | `npm run build`       |
-| Clean Output     | `npm run clean`       |
-| Start Server     | `npm start`           |
-| Run All Tests    | `npm test`            |
-| Developer Start  | `npm run dev`         |
-| Create Post      | `npm run posts:create -- slug-path` |
-| Create Component | `npm run components:create -- NameOfComponent` |
+| Build Project    | `pnpm build`       |
+| Clean Output     | `pnpm clean`       |
+| Start Server     | `pnpm start`           |
+| Run All Tests    | `pnpm test`            |
+| Developer Start  | `pnpm dev`         |
+| Create Post      | `pnpm posts:create -- slug-path` |
+| Create Component | `pnpm components:create -- NameOfComponent` |
 
 ## Accessibility
 
