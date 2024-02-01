@@ -9,6 +9,7 @@
 .env.*
 !.env.example
 .netlify
+.playwright
 
 # Mac
 .DS_Store

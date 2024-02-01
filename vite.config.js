@@ -6,4 +6,10 @@ export default defineConfig({
 	server: {
 		port: 3000,
 	},
+	test: {
+		include: [
+			"test/lib/**/*.{test,spec}.{js,ts}",
+			"test/content/**/*.{test,spec}.{js,ts}",
+		],
+	},
 });

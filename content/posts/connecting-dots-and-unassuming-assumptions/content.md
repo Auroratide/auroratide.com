@@ -7,7 +7,7 @@ Below are nine dots arranged in a neat little grid. The goal is simple: **Connec
 * Tap again to create a connected line
 * You only get **4** lines. Try to connect **all 9** dots!
 
-<connect-nine-dots assetspath="/assets/posts/connecting-dots-and-unassuming-assumptions">
+<connect-nine-dots data-testid="nine-dots-puzzle" assetspath="/assets/posts/connecting-dots-and-unassuming-assumptions">
 </connect-nine-dots>
 
 <side-text>

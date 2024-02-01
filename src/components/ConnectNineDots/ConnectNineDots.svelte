@@ -62,6 +62,15 @@
         {/if}
     </div>
     <button part="button" on:click={handleReset}>Reset</button>
+    <p aria-live="polite">
+        {#if success}
+            You did it!
+        {:else if lineMaker.atLimit}
+            You're out of lines! Try again!
+        {:else}
+            Hit all 9 dots with 4 straight lines
+        {/if}
+    </p>
 </div>
 
 <style>
