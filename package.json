@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "vite preview",
-    "ci": "pnpm build",
     "dev": "npm run build:content && npm-run-all --parallel build:components dev:kit",
     "dev:kit": "vite dev",
-    "build": "npm-run-all build:components build:content build:kit",
+    "build": "npm-run-all validate build:components build:content build:kit ",
     "build:kit": "vite build",
     "build:content": "node content/_build/index.js",
     "build:components": "rollup -c",
