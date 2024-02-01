@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.0 (01 Feb 2024)
+
+* Upgrade SvelteKit to v2
+* Obliterate Jest in favor of Vitest and Playwright
+
 ## 3.0.0 (28 Jan 2021)
 
 * Update to SvelteKit for the sake of static site generation, which improves SEO and performance
