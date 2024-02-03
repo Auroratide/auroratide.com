@@ -9,13 +9,13 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - run: npm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
       - name: Smoke Test
-        run: npm run test:smoke
+        run: pnpm test:smoke
