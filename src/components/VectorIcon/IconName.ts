@@ -77,6 +77,7 @@ export const IconName = {
     Stamp: 'stamp',
     SuitcaseRolling: 'suitcase-rolling',
     Sun: 'sun',
+    Sync: 'sync',
     TableTennis: 'table-tennis',
     Tag: 'tag',
     Taxi: 'taxi',
