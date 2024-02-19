@@ -109,12 +109,19 @@ body {
     display: flex;
     position: relative;
     align-items: center;
+    margin-block-start: var(--sp-st-ge);
+    margin-block-end: var(--sp-st-s);
+}
+.anchored-heading :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
 }
 
 .anchored-heading a.heading-anchor {
     font-size: var(--font-sz-venus);
     display: inline-block;
     margin-left: var(--sp-st-o);
+    position: relative;
+    top: 0.1em;
 }
 
 @media screen and (min-width: 75rem) {
