@@ -267,7 +267,6 @@ The strategy here is to assemble four empty `div` blocks, representing the card'
 }
 ```
 
-</div>
 </details>
 
 ## Level 3: Round Corners + Thickness
@@ -404,7 +403,7 @@ The strategy is to simulate each rounded corner as a series of small, flat `divs
 <a id="#level-%F0%9F%A7%A0-keep-accessibility-in-mind"></a>
 ## Level 🧠: Keep Accessibility in mind!
 
-**Accessibility** is the practice of considering all the people who might use your website and making usable by as many of them as possible. Flippy cards can create a few pitfalls if we're not careful!
+**Accessibility** is the practice of considering all the people who might use your website and making it usable by as many of them as possible. Flippy cards can create a few pitfalls if we're not careful!
 
 * What if the person cannot use a mouse? Is hover the only way to flip your card?
 * What if the person uses the <kbd>Tab</kbd> key to navigate? Will they run into a button hidden on the backside of your card?
@@ -423,4 +422,5 @@ Ok I admit, nothing's actually _wrong_ with the normal card flip and the tutoria
 
 I just wanted to share something I tried and liked, and if you like it, feel free to use it too!
 
+* [@auroratide/flip-card](https://github.com/Auroratide/web-components/tree/main/components/flip-card) web component
 * [Card Flip Codepen Collection](https://codepen.io/collection/JGxVRZ)
