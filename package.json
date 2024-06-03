@@ -72,6 +72,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "marked": "^4.3.0",
+    "normalize.css": "^8.0.1",
     "prismjs": "^1.29.0",
     "sudoku": "^0.0.3"
   },
