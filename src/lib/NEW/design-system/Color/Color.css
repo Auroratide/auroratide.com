@@ -1,0 +1,14 @@
+.text-blue-a { color: var(--c-blue-a); }
+.text-purple-a { color: var(--c-purple-a); }
+.text-yellow-a { color: var(--c-yellow-a); }
+.text-green-a { color: var(--c-green-a); }
+.text-red-a { color: var(--c-red-a); }
+.text-bg-a { color: var(--c-bg-a); }
+.text-fg-a { color: var(--c-fg-a); }
+.text-blue-b { color: var(--c-blue-b); }
+.text-purple-b { color: var(--c-purple-b); }
+.text-yellow-b { color: var(--c-yellow-b); }
+.text-green-b { color: var(--c-green-b); }
+.text-red-b { color: var(--c-red-b); }
+.text-bg-b { color: var(--c-bg-b); }
+.text-fg-b { color: var(--c-fg-b); }

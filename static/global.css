@@ -5,23 +5,38 @@
 /* Config
  * ======================================================================= */
 :root {
-	--c-blue-d: oklch(55% 0.119 250);
-	--c-purple-d: oklch(53% 0.11 304);
-	--c-yellow-d: oklch(56.5% 0.11 95.5);
-	--c-green-d: oklch(55% 0.111 134);
-	--c-red-d: oklch(50% 0.11 30);
-	--c-dark-d: oklch(22% 0.021 255);
-	--c-dark-l: oklch(24% 0.02 255);
-	--c-light-l: oklch(100% 0 0);
+	--c-blue-dark: oklch(55% 0.119 250);
+	--c-purple-dark: oklch(53% 0.11 304);
+	--c-yellow-dark: oklch(56.5% 0.11 95.5);
+	--c-green-dark: oklch(55% 0.111 134);
+	--c-red-dark: oklch(50% 0.11 30);
+	--c-dark-dark: oklch(22% 0.021 255);
+	--c-dark-light: oklch(24% 0.02 255);
+	--c-light-dark: oklch(90% 0 0);
+	--c-light-light: oklch(100% 0 0);
 
 	--f-normal: "Urbanist", sans-serif;
 	--f-code: monospace;
+
+	--c-logo-light: var(--c-light-light);
+	--c-logo-dark: var(--c-dark-dark);
+	--c-logo-main: var(--c-blue-dark);
+
+	--c-blue-a: var(--c-blue-dark);
+	--c-purple-a: var(--c-purple-dark);
+	--c-yellow-a: var(--c-yellow-dark);
+	--c-green-a: var(--c-green-dark);
+	--c-red-a: var(--c-red-dark);
+	--c-bg-a: var(--c-dark-dark);
+	--c-fg-a: var(--c-light-light);
+	--c-fg-b: var(--c-light-dark);
 }
 
 /* Page-level Items
  * ======================================================================== */
 body {
 	font-family: var(--f-normal);
-	background-color: var(--c-dark-d);
-	color: var(--c-light-l);
+	font-size: clamp(1rem, 2vw, 1.333rem);
+	background-color: var(--c-bg-a);
+	color: var(--c-fg-a);
 }
