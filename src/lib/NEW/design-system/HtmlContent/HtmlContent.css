@@ -1,0 +1,16 @@
+.html-content {
+	p {
+		line-height: 1.5em;
+		margin-block-end: 1.75em;
+	}
+
+	a {
+		text-decoration: underline;
+		color: var(--t-primary-b);
+	}
+
+	a:hover, a:focus {
+		text-decoration: none;
+		filter: brightness(1.25);
+	}
+}

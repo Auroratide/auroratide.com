@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Logo } from "$lib/NEW/auroratide/Logo"
+	import { Article, type ArticleType } from "$lib/NEW/design-system/Article"
 	import { PageLayout } from "$lib/NEW/design-system/PageLayout"
+	import { attributes, html } from "./content.md"
    //  import type { PageData } from './$types'
    //  import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
    //  import Container from '$lib/layout/Container.svelte'
@@ -9,6 +11,12 @@
 
    //  export let data: PageData
    //  $: content = data.content
+
+	const article: ArticleType = {
+		title: attributes.title as string,
+		publishedAt: new Date(attributes.publishedAt as string),
+		content: html,
+	}
 </script>
 
 <PageLayout sitetitle="Auroratide" subtitle="Coding + Storytelling" nav={[ {
@@ -28,8 +36,7 @@
 	name: "About Me",
 } ]}>
 	<Logo slot="logo" />
-	<h1>Hello world!</h1>
-	<p>This is a test.</p>
+	<Article value={article} />
 </PageLayout>
 
 <!-- <DocumentInfo title="Sandbox" description="A page for me to test things">

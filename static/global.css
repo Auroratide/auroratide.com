@@ -6,14 +6,19 @@
  * ======================================================================= */
 :root {
 	--c-blue-dark: oklch(55% 0.119 250);
+	--c-blue-light: oklch(64% 0.142 250);
 	--c-purple-dark: oklch(53% 0.11 304);
+	--c-purple-light: oklch(64% 0.13 305);
 	--c-yellow-dark: oklch(56.5% 0.11 95.5);
+	--c-yellow-light: oklch(71% 0.14 96);
 	--c-green-dark: oklch(55% 0.111 134);
+	--c-green-light: oklch(66% 0.129 134);
 	--c-red-dark: oklch(50% 0.11 30);
+	--c-red-light: oklch(63% 0.13 30.5);
 	--c-dark-dark: oklch(22% 0.021 255);
 	--c-dark-light: oklch(24% 0.02 255);
-	--c-light-dark: oklch(90% 0 0);
-	--c-light-light: oklch(100% 0 0);
+	--c-light-dark: oklch(80% 0.005 255);
+	--c-light-light: oklch(97.5% 0.005 255);
 
 	--f-normal: "Urbanist", sans-serif;
 	--f-code: monospace;
@@ -22,21 +27,45 @@
 	--c-logo-dark: var(--c-dark-dark);
 	--c-logo-main: var(--c-blue-dark);
 
-	--c-blue-a: var(--c-blue-dark);
-	--c-purple-a: var(--c-purple-dark);
-	--c-yellow-a: var(--c-yellow-dark);
-	--c-green-a: var(--c-green-dark);
-	--c-red-a: var(--c-red-dark);
-	--c-bg-a: var(--c-dark-dark);
-	--c-fg-a: var(--c-light-light);
-	--c-fg-b: var(--c-light-dark);
+	--t-blue-a: var(--c-blue-dark);
+	--t-blue-b: var(--c-blue-light);
+	--t-purple-a: var(--c-purple-dark);
+	--t-purple-b: var(--c-purple-light);
+	--t-yellow-a: var(--c-yellow-dark);
+	--t-yellow-b: var(--c-yellow-light);
+	--t-green-a: var(--c-green-dark);
+	--t-green-b: var(--c-green-light);
+	--t-red-a: var(--c-red-dark);
+	--t-red-b: var(--c-red-light);
+	--t-bg-a: var(--c-dark-dark);
+	--t-fg-a: var(--c-light-dark);
+	--t-fg-b: var(--c-light-light);
+	--t-primary-a: var(--t-blue-a);
+	--t-primary-b: var(--t-blue-b);
 }
 
-/* Page-level Items
+/* Base Styles
  * ======================================================================== */
 body {
 	font-family: var(--f-normal);
 	font-size: clamp(1rem, 2vw, 1.333rem);
-	background-color: var(--c-bg-a);
-	color: var(--c-fg-a);
+	background-color: var(--t-bg-a);
+	color: var(--t-fg-a);
 }
+
+*:focus-visible {
+	outline: 0.125em solid var(--t-primary-b);
+	outline-offset: 0.15em;
+}
+
+small {
+	font-size: 0.875em;
+	opacity: 0.8;
+}
+
+strong {
+	font-weight: 700;
+	filter: brightness(1.2);
+}
+
+strong strong { font-weight: 900; }

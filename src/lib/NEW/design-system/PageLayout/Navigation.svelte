@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { NavItem } from "./NavItem"
-	import { PrimaryColors } from "../Color"
+	import { Color, PrimaryColors } from "../Color"
 
 	export let nav: NavItem[]
 </script>
@@ -9,7 +9,7 @@
 	<ul class="no-list column">
 		{#each nav as it, i (it.href)}
 			<li>
-				<a href="{it.href}" class="bg-circle wider-text" style:--bg-circle-color="var(--c-{PrimaryColors[i % PrimaryColors.length]}-a)">{it.name}</a>
+				<a href="{it.href}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var(--t-{PrimaryColors[i % PrimaryColors.length]}-a)">{it.name}</a>
 			</li>
 		{/each}
 	</ul>
@@ -27,14 +27,8 @@
 		gap: 0.75em;
 	}
 
-	a {
-		text-decoration: none;
-		color: var(--c-light-l);
-	}
-
-	a:hover, a:focus {
-		text-decoration: underline;
-	}
+	a { text-decoration: none; }
+	a:hover, a:focus { text-decoration: underline; }
 
 	.wider-text { letter-spacing: 0.05em; }
 

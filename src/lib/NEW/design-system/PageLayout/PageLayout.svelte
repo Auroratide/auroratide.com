@@ -9,7 +9,7 @@
 </script>
 
 <div class="container">
-	<header aria-label="Site">
+	<header aria-label="Site" class="column large-spaces-between">
 		<LogoTitle title={sitetitle} {subtitle}>
 			<slot name="logo"></slot>
 		</LogoTitle>
@@ -28,13 +28,20 @@
 		max-width: 75rem;
 		margin: auto;
 		border: 1px solid red;
-		padding: 0.5em;
+		padding: 0.75em 0.5em;
 	}
 
-	@media screen and (min-width: 75rem) {
+	.column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.large-spaces-between { gap: 2em; }
+
+	@media screen and (min-width: 60rem) {
 		.container {
 			display: grid;
-			grid-template-columns: 25rem 1fr;
+			grid-template-columns: 20rem 1fr;
 		}
 
 		header {

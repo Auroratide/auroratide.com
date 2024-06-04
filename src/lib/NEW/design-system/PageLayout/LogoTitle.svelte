@@ -11,8 +11,8 @@
 			<slot></slot>
 		</a>
 	</div>
-	<p style:grid-area="title" class="larger"><a href="/">{title}</a></p>
-	<p style:grid-area="subtitle" class="smaller {Color.text.fg.b}">{subtitle}</p>
+	<p style:grid-area="title" class="larger"><a href="/" class="{Color.text.fg.b}">{title}</a></p>
+	<p style:grid-area="subtitle" class="smaller {Color.text.fg.a}">{subtitle}</p>
 </section>
 
 <style>
@@ -31,11 +31,7 @@
 		block-size: 3em;
 	}
 
-	a {
-		text-decoration: none;
-		color: var(--c-light-l);
-	}
-
+	a { text-decoration: none; }
 	a:hover, a:focus { text-decoration: underline; }
 
 	.larger { font-size: 1.125em; }
