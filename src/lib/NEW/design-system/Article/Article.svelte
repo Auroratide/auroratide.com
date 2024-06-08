@@ -9,7 +9,7 @@
 
 <article>
 	<header class="large-space-after">
-		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing">{value.title}</h1>
+		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
 		<p><small><DateDisplay value={value.publishedAt} /></small></p>
 	</header>
 	<section>
@@ -26,4 +26,6 @@
 	}
 
 	.large-space-after { margin-block-end: 4em; }
+
+	.balance { text-wrap: balance; }
 </style>

@@ -16,7 +16,7 @@
 	--c-red-dark: oklch(50% 0.11 30);
 	--c-red-light: oklch(63% 0.13 30.5);
 	--c-dark-dark: oklch(22% 0.021 255);
-	--c-dark-light: oklch(24% 0.02 255);
+	--c-dark-light: oklch(27% 0.02 255);
 	--c-light-dark: oklch(80% 0.005 255);
 	--c-light-light: oklch(97.5% 0.005 255);
 
@@ -38,6 +38,7 @@
 	--t-red-a: var(--c-red-dark);
 	--t-red-b: var(--c-red-light);
 	--t-bg-a: var(--c-dark-dark);
+	--t-bg-b: var(--c-dark-light);
 	--t-fg-a: var(--c-light-dark);
 	--t-fg-b: var(--c-light-light);
 	--t-primary-a: var(--t-blue-a);
