@@ -3,6 +3,7 @@
 	import { HtmlContent } from "../HtmlContent"
 	import { Color } from "../Color";
 	import { DateDisplay } from "../DateDisplay";
+	import ArticleLinks from "./ArticleLinks.svelte";
 
 	export let value: ArticleType
 </script>
@@ -11,6 +12,9 @@
 	<header class="large-space-after">
 		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
 		<p><small><DateDisplay value={value.publishedAt} /></small></p>
+		{#if value.links.length > 0}
+			<ArticleLinks value={value.links} />
+		{/if}
 	</header>
 	<section>
 		<HtmlContent value={value.content} />

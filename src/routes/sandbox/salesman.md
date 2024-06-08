@@ -16,7 +16,7 @@ longSummary: "The Traveling Salesman is a notorious computer algorithm problem. 
 publishedAt: 2015-02-28T22:24:34.873Z
 createdAt: 2015-02-28T22:24:34.873Z
 links:
-  - title: "Source"
+  - title: "Source Code"
     href: "https://github.com/Ardeol/publicvar.tsp"
     icon: github
     color: github

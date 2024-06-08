@@ -16,6 +16,12 @@
 		title: attributes.title as string,
 		publishedAt: new Date(attributes.publishedAt as string),
 		content: html,
+		links: (attributes.links as any[])?.map((it) => ({
+			title: it.title,
+			href: it.href,
+			icon: it.icon,
+			color: it.color,
+		})) ?? []
 	}
 </script>
 

@@ -20,6 +20,19 @@
 	--c-light-dark: oklch(80% 0.005 255);
 	--c-light-light: oklch(97.5% 0.005 255);
 
+	--c-brand-dev: #08090a;
+	--c-brand-github: #333333;
+	--c-brand-itch-io: #ff5c5b;
+	--c-brand-linked-in: #0077B5;
+	--c-brand-twitter: #29AAE1;
+	--c-brand-facebook: #3B5998;
+	--c-brand-windows: #1DAEEC;
+	--c-brand-android: #A4C639;
+	--c-brand-adobe: #E61A23;
+	--c-brand-stack-overflow: #f48024;
+	--c-brand-npm: #cb3837;
+	--c-brand-reddit: #ff4500;
+
 	--f-normal: "Urbanist", sans-serif;
 	--f-code: monospace;
 
