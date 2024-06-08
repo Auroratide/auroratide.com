@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "@auroratide/img-popout": "^1.0.1",
+    "@auroratide/img-zoom": "^0.1.2",
     "@auroratide/nimcard": "^0.1.4",
     "@auroratide/pokemon-types": "^0.1.0",
     "@auroratide/svelte-custom-element-transitions": "^0.1.1",

@@ -2,7 +2,7 @@
 	import { Logo } from "$lib/NEW/auroratide/Logo"
 	import { Article, type ArticleType } from "$lib/NEW/design-system/Article"
 	import { PageLayout } from "$lib/NEW/design-system/PageLayout"
-	import { attributes, html } from "./veratasium.md"
+	import { attributes, html } from "./salesman.md"
    //  import type { PageData } from './$types'
    //  import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
    //  import Container from '$lib/layout/Container.svelte'

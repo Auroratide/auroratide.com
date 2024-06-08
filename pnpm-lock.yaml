@@ -8,6 +8,9 @@ dependencies:
   '@auroratide/img-popout':
     specifier: ^1.0.1
     version: 1.0.1
+  '@auroratide/img-zoom':
+    specifier: ^0.1.2
+    version: 0.1.2
   '@auroratide/nimcard':
     specifier: ^0.1.4
     version: 0.1.4
@@ -133,6 +136,10 @@ packages:
 
   /@auroratide/img-popout@1.0.1:
     resolution: {integrity: sha512-ludeCBJVblnSH6uAj1NjGGWVY7FB0By4I4BO27UP3XkhJu1t2hR/xwJiU6hRN6T1skJB+Ba0TNsEcMZpweJSIg==}
+    dev: false
+
+  /@auroratide/img-zoom@0.1.2:
+    resolution: {integrity: sha512-OccqXJKYRIP8w8Uy5uDnvbDBwjO9q6EdVMN+nqxW3fYBdSjupxs34kihl/yvbNkvpiJc+MvqYnB5HAU/zAMrAA==}
     dev: false
 
   /@auroratide/nimcard@0.1.4:
