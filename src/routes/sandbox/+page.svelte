@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Logo } from "$lib/NEW/auroratide/Logo"
 	import { Article, type ArticleType } from "$lib/NEW/design-system/Article"
+    import type { ThemeName } from "$lib/NEW/design-system/Color";
 	import { PageLayout } from "$lib/NEW/design-system/PageLayout"
 	import { attributes, html } from "./salesman.md"
    //  import type { PageData } from './$types'
@@ -16,6 +17,7 @@
 		title: attributes.title as string,
 		publishedAt: new Date(attributes.publishedAt as string),
 		content: html,
+		color: attributes.color as ThemeName,
 		links: (attributes.links as any[])?.map((it) => ({
 			title: it.title,
 			href: it.href,

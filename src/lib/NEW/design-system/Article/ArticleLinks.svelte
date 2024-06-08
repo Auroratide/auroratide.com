@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Color, Theme } from "../Color";
     import { Icon } from "../Icon";
 	import type { ArticleType } from "./ArticleType"
 
@@ -7,8 +8,8 @@
 
 <ul class="no-list row">
 	{#each value as link}
-		<li>
-			<a href="{link.href}" class="label-button" style:--color="var(--c-brand-{link.color})">
+		<li class="{Theme(link.color)}">
+			<a href="{link.href}" class="label-button {Color.text.fg.a} {Color.bg.primary.a}">
 				<span class="icon-bg">
 					<Icon icon="{link.icon}" />
 				</span>
@@ -33,9 +34,7 @@
 
 	.label-button {
 		display: inline-block;
-		color: #ffffff;
 		letter-spacing: 0.05ch;
-		background: var(--color);
 		border-radius: 0.25em;
 		text-decoration: none;
 		line-height: 1;

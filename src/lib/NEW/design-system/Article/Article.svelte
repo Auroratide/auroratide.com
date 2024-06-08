@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { ArticleType } from "./ArticleType"
 	import { HtmlContent } from "../HtmlContent"
-	import { Color } from "../Color";
+	import { Color, Theme } from "../Color";
 	import { DateDisplay } from "../DateDisplay";
 	import ArticleLinks from "./ArticleLinks.svelte";
 
 	export let value: ArticleType
 </script>
 
-<article>
+<article class="{Theme(value.color)}">
 	<header class="large-space-after">
 		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
 		<p><small><DateDisplay value={value.publishedAt} /></small></p>

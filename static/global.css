@@ -39,23 +39,6 @@
 	--c-logo-light: var(--c-light-light);
 	--c-logo-dark: var(--c-dark-dark);
 	--c-logo-main: var(--c-blue-dark);
-
-	--t-blue-a: var(--c-blue-dark);
-	--t-blue-b: var(--c-blue-light);
-	--t-purple-a: var(--c-purple-dark);
-	--t-purple-b: var(--c-purple-light);
-	--t-yellow-a: var(--c-yellow-dark);
-	--t-yellow-b: var(--c-yellow-light);
-	--t-green-a: var(--c-green-dark);
-	--t-green-b: var(--c-green-light);
-	--t-red-a: var(--c-red-dark);
-	--t-red-b: var(--c-red-light);
-	--t-bg-a: var(--c-dark-dark);
-	--t-bg-b: var(--c-dark-light);
-	--t-fg-a: var(--c-light-dark);
-	--t-fg-b: var(--c-light-light);
-	--t-primary-a: var(--t-blue-a);
-	--t-primary-b: var(--t-blue-b);
 }
 
 /* Base Styles
@@ -86,4 +69,57 @@ strong strong { font-weight: 900; }
 
 button, details {
 	cursor: pointer;
+}
+
+/* Themes
+ * ======================================================================== */
+.theme-dark {
+	--t-blue-a: var(--c-blue-dark);
+	--t-blue-b: var(--c-blue-light);
+	--t-purple-a: var(--c-purple-dark);
+	--t-purple-b: var(--c-purple-light);
+	--t-yellow-a: var(--c-yellow-dark);
+	--t-yellow-b: var(--c-yellow-light);
+	--t-green-a: var(--c-green-dark);
+	--t-green-b: var(--c-green-light);
+	--t-red-a: var(--c-red-dark);
+	--t-red-b: var(--c-red-light);
+	--t-bg-a: var(--c-dark-dark);
+	--t-bg-b: var(--c-dark-light);
+	--t-fg-a: var(--c-light-dark);
+	--t-fg-b: var(--c-light-light);
+	--t-primary-a: var(--t-blue-a);
+	--t-primary-b: var(--t-blue-b);
+}
+
+.theme-blue {
+	--t-primary-a: var(--t-blue-a);
+	--t-primary-b: var(--t-blue-b);
+}
+
+.theme-purple {
+	--t-primary-a: var(--t-purple-a);
+	--t-primary-b: var(--t-purple-b);
+}
+
+.theme-yellow {
+	--t-primary-a: var(--t-yellow-a);
+	--t-primary-b: var(--t-yellow-b);
+}
+
+.theme-green {
+	--t-primary-a: var(--t-green-a);
+	--t-primary-b: var(--t-green-b);
+}
+
+.theme-red {
+	--t-primary-a: var(--t-red-a);
+	--t-primary-b: var(--t-red-b);
+}
+
+.theme-github {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-github);
+	--t-primary-b: var(--c-brand-github);
 }

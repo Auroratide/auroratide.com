@@ -11,11 +11,13 @@ const colors = (name: string) => ({
 	red: variants(name, "red"),
 	bg: variants(name, "bg"),
 	fg: variants(name, "fg"),
+	primary: variants(name, "primary"),
 })
 
 export const Color = {
 	var: colors("--t"),
 	text: colors("text"),
+	bg: colors("bg"),
 } as const
 
 export const PrimaryColors = ["blue", "purple", "yellow", "green", "red"] as const

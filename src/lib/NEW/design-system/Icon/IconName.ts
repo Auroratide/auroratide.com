@@ -106,4 +106,6 @@ export const IconName = {
 	StackOverflow: 'stack-overflow',
 	Unity: 'unity',
 	Windows: 'windows',
-}
+} as const
+
+export type IconName = typeof IconName[keyof typeof IconName]
