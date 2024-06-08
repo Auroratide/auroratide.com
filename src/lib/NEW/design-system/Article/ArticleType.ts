@@ -5,6 +5,7 @@ export type ArticleType = {
 	title: string,
 	publishedAt: Date,
 	content: string,
+	icon: IconName,
 	color: ThemeName,
 	links: {
 		title: string,
