@@ -9,7 +9,7 @@
 </script>
 
 <div class="container">
-	<header aria-label="Site" class="column large-spaces-between">
+	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between">
 		<LogoTitle title={sitetitle} {subtitle}>
 			<slot name="logo"></slot>
 		</LogoTitle>
@@ -29,12 +29,19 @@
 		margin: auto;
 		border: 1px solid red;
 		padding: 0.75em 0.5em;
-	}
-
-	.column {
 		display: flex;
 		flex-direction: column;
+		gap: 2em;
 	}
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+
+	.overlap-root { position: relative; }
 
 	.large-spaces-between { gap: 2em; }
 
@@ -46,6 +53,12 @@
 
 		header {
 			grid-row: span 2;
+		}
+
+		.lg\:column {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: flex-start;
 		}
 	}
 </style>

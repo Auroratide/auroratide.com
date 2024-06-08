@@ -69,3 +69,7 @@ strong {
 }
 
 strong strong { font-weight: 900; }
+
+button, details {
+	cursor: pointer;
+}

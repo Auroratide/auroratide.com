@@ -14,6 +14,7 @@ const colors = (name: string) => ({
 })
 
 export const Color = {
+	var: colors("--t"),
 	text: colors("text"),
 } as const
 
