@@ -8,7 +8,7 @@ tags:
   - transition
   - evolution
 icon: truck-moving
-color: red
+color: blue
 summary: Flash is dying. Thankfully, I've found an alternative in Haxe and OpenFL.
 longSummary: Flash is dying. The rise of HTML5 has made the old technology obsolete, meaning that Flash programmers like myself must adapt and find alternatives. Thankfully, I've discovered Haxe and OpenFL!
 publishedAt: 2014-12-21T01:40:05.691Z

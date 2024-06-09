@@ -31,3 +31,20 @@
 .bg-bg-b { background-color: var(--t-bg-b); }
 .bg-fg-b { background-color: var(--t-fg-b); }
 .bg-primary-b { background-color: var(--t-primary-b); }
+
+.border-blue-a { border-color: var(--t-blue-a); }
+.border-purple-a { border-color: var(--t-purple-a); }
+.border-yellow-a { border-color: var(--t-yellow-a); }
+.border-green-a { border-color: var(--t-green-a); }
+.border-red-a { border-color: var(--t-red-a); }
+.border-bg-a { border-color: var(--t-bg-a); }
+.border-fg-a { border-color: var(--t-fg-a); }
+.border-primary-a { border-color: var(--t-primary-a); }
+.border-blue-b { border-color: var(--t-blue-b); }
+.border-purple-b { border-color: var(--t-purple-b); }
+.border-yellow-b { border-color: var(--t-yellow-b); }
+.border-green-b { border-color: var(--t-green-b); }
+.border-red-b { border-color: var(--t-red-b); }
+.border-bg-b { border-color: var(--t-bg-b); }
+.border-fg-b { border-color: var(--t-fg-b); }
+.border-primary-b { border-color: var(--t-primary-b); }

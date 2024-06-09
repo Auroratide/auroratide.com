@@ -18,6 +18,7 @@ export const Color = {
 	var: colors("--t"),
 	text: colors("text"),
 	bg: colors("bg"),
+	border: colors("border"),
 } as const
 
 export const PrimaryColors = ["blue", "purple", "yellow", "green", "red"] as const
