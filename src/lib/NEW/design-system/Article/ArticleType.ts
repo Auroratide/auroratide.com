@@ -20,3 +20,5 @@ export type ArticleType = {
 		color: ThemeName,
 	}[],
 }
+
+export type SummarizedArticle = Omit<ArticleType, "content" | "links">

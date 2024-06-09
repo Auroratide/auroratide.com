@@ -1,16 +1,15 @@
 <script lang="ts">
-    import type { ArticleType } from "$lib/NEW/design-system/Article"
+    import type { SummarizedArticle } from "$lib/NEW/design-system/Article"
     import { Byline } from "$lib/NEW/design-system/Byline";
     import { Color, Theme } from "$lib/NEW/design-system/Color";
-    import { DateDisplay } from "$lib/NEW/design-system/DateDisplay";
     import { Icon } from "$lib/NEW/design-system/Icon";
 
-	export let value: ArticleType
+	export let value: SummarizedArticle
 </script>
 
 <article aria-labelledby="{value.id}" class="{Theme(value.color)} {Color.bg.bg.b} {Color.border.primary.a} border-after column lift-on-focus">
 	<h2 id="{value.id}" class="balance no-margin">
-		<a href="/" class="{Color.text.fg.b} no-underline card-link">{value.title}</a>
+		<a href="/posts2/{value.id}" class="{Color.text.fg.b} no-underline card-link">{value.title}</a>
 	</h2>
 	<Byline {value} />
 	<p class="no-margin space-above">{value.summary.long}</p>

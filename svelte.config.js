@@ -3,8 +3,11 @@ import sveltePreprocess from 'svelte-preprocess'
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
-    preprocess: sveltePreprocess(),
-    kit: {
-        adapter: adapter(),
-    },
+	preprocess: sveltePreprocess(),
+	kit: {
+		adapter: adapter(),
+		alias: {
+			"$content": "src/content/*",
+		},
+	},
 }
