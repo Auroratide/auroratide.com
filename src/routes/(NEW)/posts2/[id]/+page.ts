@@ -5,7 +5,7 @@ import type { ThemeName } from "$lib/NEW/design-system/Color"
 
 export const load: PageLoad = async ({ params }) => {
 	const id = params.id
-	const { attributes, html } = await import(`$content/posts/${id}/content.md`)
+	const { attributes, html } = await import(`$content/posts2/${id}/content.md`)
 
 	const value: ArticleType = {
 		id: attributes.id as string,

@@ -4,7 +4,7 @@ import type { IconName } from "$lib/NEW/design-system/Icon"
 import type { ThemeName } from "$lib/NEW/design-system/Color"
 
 export const load: PageLoad = async () => {
-	const modules = import.meta.glob("$content/posts/*/content.md")
+	const modules = import.meta.glob("$content/posts2/*/content.md")
 
 	const values: SummarizedArticle[] = await Promise.all(Object.values(modules).map((imp) => {
 		return imp().then((module: any) => ({
