@@ -1,7 +1,14 @@
 import { defineConfig } from "vite"
 import { sveltekit } from "@sveltejs/kit/vite"
 import { plugin as mdPlugin, Mode } from "vite-plugin-markdown"
+import MarkdownIt from "markdown-it"
 import rollupCopy from "rollup-plugin-copy"
+import MarkdownItGitHubAlerts from "./vite-plugins/md-alerts"
+
+const mdit = MarkdownIt({
+	html: true,
+})
+mdit.use(MarkdownItGitHubAlerts)
 
 export default defineConfig({
 	plugins: [
@@ -12,7 +19,10 @@ export default defineConfig({
 			} ],
 			copyOnce: true,
 		}),
-		mdPlugin({ mode: [Mode.HTML] }),
+		mdPlugin({
+			mode: [Mode.HTML],
+			markdownIt: mdit,
+		}),
 		sveltekit()
 	],
 	server: {

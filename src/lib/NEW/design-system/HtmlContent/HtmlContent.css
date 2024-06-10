@@ -32,6 +32,14 @@
 		gap: 0.5em;
 	}
 
+	hr {
+		border: none;
+		block-size: 0.0625em;
+		background: var(--t-fg-a);
+		opacity: 0.5;
+		margin-inline: 2em;
+	}
+
 	blockquote {
 		background:
 			radial-gradient(circle at 4em 0%, var(--t-bg-b) 15%, transparent 50%),
@@ -102,5 +110,59 @@
 		text-align: center;
 
 		p:last-child { margin-block-end: 0; }
+	}
+
+	.markdown-alert {
+		font-size: 0.925em;
+		position: relative;
+		background: var(--t-bg-b);
+		overflow: hidden;
+		margin-inline: 0;
+		padding: 0.5em 1em 1em;
+		border-block-start: 0.25em solid var(--alert-color);
+
+		&.markdown-alert-note { --alert-color: var(--t-blue-a); }
+		&.markdown-alert-warning { --alert-color: var(--t-yellow-a); }
+		&.markdown-alert-tip { --alert-color: var(--t-green-a); }
+		&.markdown-alert-important { --alert-color: var(--t-purple-a); }
+		&.markdown-alert-caution { --alert-color: var(--t-red-a); }
+
+		.markdown-alert-title {
+			margin-block: 0 0.5em;
+
+			& + * { margin-block-start: 0; }
+		}
+
+		.markdown-alert-title span {
+			font-weight: bold;
+			font-size: 0.875em;
+			margin: 0;
+			position: relative;
+			letter-spacing: 0.125ch;
+			opacity: 0.75;
+		}
+
+		.markdown-alert-title svg {
+			position: absolute;
+			font-size: 12em;
+			inline-size: 1em;
+			block-size: 1em;
+			inset: -0.125em -0.125em;
+			transform: rotate(-5deg);
+			color: var(--alert-color);
+			fill: currentColor;
+			opacity: 0.15;
+		}
+
+		& > * { position: relative; }
+		& > *:last-child { margin-block-end: 0; }
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(circle at 2em 2em, var(--alert-color), transparent);
+			opacity: 0.11;
+		}
 	}
 }

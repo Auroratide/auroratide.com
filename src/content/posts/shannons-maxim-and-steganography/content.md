@@ -57,15 +57,12 @@ As a result of Ellie knowing the algorithm, we suddenly find that Dan and Rei's 
 
 In actual cryptography systems used today, our strongest algorithms (like AES) can have a number of keys comparable to the number of atoms in the universe. The beauty of Shannon's Maxim is that, despite these algorithms being common knowledge (ie. they are all on Wikipedia), they are very secure due to their complexity and large number of keys.
 
-<side-text>
-
-But couldn't we just keep the algorithm secret as well? Yes, we can, and should! However, Shannon's Maxim states that we cannot _reliably_ say a cryptosystem is secure if we rely on the algorithm being secret. This technique is called "security through obscurity", and it isn't inherently bad. However, what if someone does find out the algorithm? We would then need to replace the entire thing, and this can be very hard since algorithms can be very complicated. On the other hand, if the key was leaked to the public, then all we would need to do is change the key to achieve security again.
-
-Simply put, keys are easier to change than algorithms, so it is better to invest security in the key.
-
-Additionally, following this maxim allows for many people to use the same cryptosystem but have different keys. As a matter of fact, this is why the Internet even works.
-
-</side-text>
+> [!NOTE]
+> But couldn't we just keep the algorithm secret as well? Yes, we can, and should! However, Shannon's Maxim states that we cannot _reliably_ say a cryptosystem is secure if we rely on the algorithm being secret. This technique is called "security through obscurity", and it isn't inherently bad. However, what if someone does find out the algorithm? We would then need to replace the entire thing, and this can be very hard since algorithms can be very complicated. On the other hand, if the key was leaked to the public, then all we would need to do is change the key to achieve security again.
+> 
+> Simply put, keys are easier to change than algorithms, so it is better to invest security in the key.
+> 
+> Additionally, following this maxim allows for many people to use the same cryptosystem but have different keys. As a matter of fact, this is why the Internet even works.
 
 ## What about Steganography?
 
