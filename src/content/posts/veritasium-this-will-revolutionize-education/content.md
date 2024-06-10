@@ -9,7 +9,6 @@ tags:
   - philosophy
   - paradigm
   - teaching
-
 icon: chalkboard-teacher
 color: green
 summary: 'Teachers do more than convey information to students. If that all they did, the Internet would make them obsolete.'

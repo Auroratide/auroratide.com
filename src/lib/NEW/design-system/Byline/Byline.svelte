@@ -5,7 +5,6 @@
 		publishedAt: Date,
 		category: string,
 	}
-
 </script>
 
 <small class="row">

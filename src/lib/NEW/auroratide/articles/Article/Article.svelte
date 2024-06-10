@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { ArticleType } from "./ArticleType"
-	import { HtmlContent } from "../HtmlContent"
-	import { Color, Theme } from "../Color";
-	import { DateDisplay } from "../DateDisplay";
+	import type { ArticleType } from "../ArticleType"
+	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
+	import { Color, Theme } from "$lib/NEW/design-system/Color";
+	import { DateDisplay } from "$lib/NEW/design-system/DateDisplay";
 	import ArticleLinks from "./ArticleLinks.svelte";
-	import { Icon } from "../Icon"
+	import { Icon } from "$lib/NEW/design-system/Icon"
 
 	export let value: ArticleType
 </script>

@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { Logo } from "$lib/NEW/auroratide/Logo"
-	import { Article, type ArticleType } from "$lib/NEW/design-system/Article"
+	import type { ArticleType } from "$lib/NEW/auroratide/articles"
     import type { ThemeName } from "$lib/NEW/design-system/Color";
     import type { IconName } from "$lib/NEW/design-system/Icon";
 	import { PageLayout } from "$lib/NEW/design-system/PageLayout"
 	import { attributes as sAttr, html as sHtml } from "./salesman.md"
 	import { attributes as vAttr, html as vHtml } from "./veratasium.md"
 	import { attributes as tAttr, html as tHtml } from "./time-to-learn-haxe.md"
-    import { ArticleCard } from "$lib/NEW/auroratide/ArticleCard";
+    import { ArticleCard } from "$lib/NEW/auroratide/articles/ArticleCard";
    //  import type { PageData } from './$types'
    //  import DocumentInfo from '$lib/layout/DocumentInfo.svelte'
    //  import Container from '$lib/layout/Container.svelte'

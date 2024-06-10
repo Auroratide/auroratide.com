@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { Color, Theme } from "../Color";
-    import { Icon } from "../Icon";
-	import type { ArticleType } from "./ArticleType"
+    import { Color, Theme } from "$lib/NEW/design-system/Color";
+    import { Icon } from "$lib/NEW/design-system/Icon";
+	import type { ArticleType } from "../ArticleType"
 
 	export let value: ArticleType["links"]
 </script>
