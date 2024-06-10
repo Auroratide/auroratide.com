@@ -1,3 +1,22 @@
+---
+id: shannons-maxim-and-steganography
+title: "Shannon's Maxim and Steganography Segmentation"
+category: Software Engineering
+tags:
+  - security
+  - steganography
+  - principle
+  - cryptography
+  - hidden
+  - message
+icon: key
+color: green
+summary: '"The enemy knows the system." This cryptography principle applies to steganography as well'
+longSummary: '"The enemy knows the system." These famous words uttered by mathematician Claude Shannon serve as a guiding principle for cryptography. It turns out the same principle applies to steganography as well.'
+publishedAt: 2016-07-04T02:17:22.022Z
+createdAt: 2016-07-04T02:17:22.022Z
+---
+
 "The enemy knows the system." These are famous words uttered by a mathematician named Claude Shannon regarding cryptography. Nowadays, Shannon's words have become a sort of rule of thumb for computer geeks coming up with ways to improve Internet privacy. Known as Shannon's Maxim, the rule basically goes that in spite of our enemies knowing _how_ we are making information secret, our information needs to be secure anyway.
 
 To cryptographers, Shannon's Maxim makes sense, but it might seem counter-intuitive when applied to steganography. This post will take a look at how this little rule can be applied to both fields in order to maximize security and privacy.
@@ -62,11 +81,15 @@ In my post on steganography, I detailed a technique that hides messages in image
 
 However, consider a slight modification to this idea. Instead of changing every pixel in the image, we can change every Xth pixel, where X is a key. So let's say Dan and Rei were using image steganography to hide their images. They could agree on the number 13 as their key, and so only every 13th pixel in the image would encode their secret message.
 
-<div class="horizontal-flex">
-<article-image src="/assets/posts/shannons-maxim-and-steganography/stego01.png" alt="An array of pixels, where each pixel is marked with a red dot." caption="An example where we change every single pixel in the image. This is not secure since there is no concept of keys involved." size="md" style="flex: 1;">
-</article-image>
-<article-image src="/assets/posts/shannons-maxim-and-steganography/stego02.png" alt="An array of pixels, where every third pixel is marked with a red dot." caption="An example with 3 as the key. Now only every third pixel is altered. Even if others knew of the algorithm, they would need to guess the correct key." size="md" style="flex: 1;">
-</article-image>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+	<figure>
+		<img src="./stego01.png" alt="An array of pixels, where each pixel is marked with a red dot." loading="lazy" width="128" height="128" />
+		<figcaption>An example where we change every single pixel in the image. This is not secure since there is no concept of keys involved.</figcaption>
+	</figure>
+	<figure>
+		<img src="./stego02.png" alt="An array of pixels, where every third pixel is marked with a red dot." loading="lazy" width="128" height="128" />
+		<figcaption>An example with 3 as the key. Now only every third pixel is altered. Even if others knew of the algorithm, they would need to guess the correct key.</figcaption>
+	</figure>
 </div>
 
 Note that this now follows Shannon's Maxim! Even if other people were to know how the algorithm works, they might not know the key, and the information can still be difficult to detect. Now, I know this particular example is a bit silly since there are so few keys, but one can use a bit of mathematical black magic to circumvent the limitation.

@@ -1,3 +1,23 @@
+---
+id: the-blue-and-gold-dress
+title: "The Blue and Gold Dress"
+category: Anything Else
+tags:
+  - social media
+  - color
+  - perception
+  - clothing
+  - dress
+  - optic
+  - illusion
+icon: eye-dropper
+color: blue
+summary: "Instead of using the Greedy Algorithm to approximate the Traveling Salesman problem, I attempt an algorithm of my own contrivance."
+longSummary: "The Traveling Salesman is a notorious computer algorithm problem. Instead of using the popular Greedy Method to get an approximate solution, I attempt an alternative algorithm of my own contrivance."
+publishedAt: 2015-03-08T21:14:17.280Z
+createdAt: 2015-03-08T21:14:17.280Z
+---
+
 Apparently, about a little over a week ago, someone posted the picture of a dress asking others what its colors were. The post managed to go viral since viewers could not agree with each other regarding what they saw. Some saw a blue and black dress, while others saw gold and white. The world erupted into a wild debate, and now only in the aftermath did I take the time to look at the dress myself to see what I saw. But what I saw was somewhat shocking.
 
 I in fact see a Blue and Gold dress, a compromise between the two camps. I am not entirely surprised that people perceive colors differently due to the image's context, but it does shock me that the mass majority of people see either Black and Blue or Gold and White and not what is the obvious middleground of Blue and Gold. This prompted the obvious question: why?
@@ -8,16 +28,24 @@ Interestingly, it has to do with the lighting of the image. The brain ascertains
 
 In a brief experiment, we can actually see this merely by changing the image's brightness.
 
-<article-image src="/assets/posts/the-blue-and-gold-dress/dresses.png" alt="A series of images depicting the same dress, with some darkened and others brightened." caption="Darkening the image makes it blue and black, whereas lightening it makes it gold and white." size="lg">
-</article-image>
+<figure>
+	<img-zoom>
+		<img src="./dresses.png" alt="A series of images depicting the same dress, with some darkened and others brightened." loading="lazy" width="1000" height="304" />
+	</img-zoom>
+	<figcaption>Darkening the image makes it blue and black, whereas lightening it makes it gold and white.</figcaption>
+</figure>
 
 So what about the people who see blue and gold? To help explain this, I actually went to inspect the RGB values of the image itself to see what the computer thinks the colors are. Interestingly, the blue/white patches are seen as a bluish grey, and the black/gold patches are a very impure yellow. Below are two boxes indicating the colors without any context:
 
-<div class="horizontal-flex">
-<article-image src="/assets/posts/the-blue-and-gold-dress/blue.png" alt="Blue" caption="RGB: (133, 149, 183) - Since the blue component is largest, we see mostly a faded blue." size="md" style="flex: 1;">
-</article-image>
-<article-image src="/assets/posts/the-blue-and-gold-dress/yellow.png" alt="Yellow" caption="RGB: (127, 110, 67) - Since red and green are nearly the same and blue is very low, it is objectively yellow." size="md" style="flex: 1;">
-</article-image>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+	<figure>
+		<img src="./blue.png" alt="Blue" loading="lazy" width="324" height="200" />
+		<figcaption>RGB: (133, 149, 183) - Since the blue component is largest, we see mostly a faded blue.</figcaption>
+	</figure>
+	<figure>
+		<img src="./yellow.png" alt="Yellow" loading="lazy" width="324" height="200" />
+		<figcaption>RGB: (127, 110, 67) - Since red and green are nearly the same and blue is very low, it is objectively yellow.</figcaption>
+	</figure>
 </div>
 
 In other words, the computer thinks the dress is blue and gold. Hence, the people who see a blue and gold dress see the image as it is actually portrayed, irrespective of the contextual background lighting.

@@ -1,7 +1,7 @@
 ---
 id: solving-the-traveling-salesman
 title: "Solving the Traveling Salesman with Radial Segmentation"
-category: coding
+category: Projects
 tags:
   - c++
   - assignment

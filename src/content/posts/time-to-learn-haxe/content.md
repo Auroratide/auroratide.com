@@ -1,7 +1,7 @@
 ---
 id: time-to-learn-haxe
 title: Time to Learn Haxe
-category: technology
+category: Game Dev
 tags:
   - haxe
   - flash

@@ -1,7 +1,7 @@
 ---
 id: veritasium-this-will-revolutionize-education
 title: 'Veritasium: This Will Revolutionize Education'
-category: education
+category: Anything Else
 tags:
   - school
   - veritasium
