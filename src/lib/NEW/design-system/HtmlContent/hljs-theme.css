@@ -1,5 +1,6 @@
 .hljs-comment {
 	color: var(--t-fg-b);
+	opacity: 0.75;
 }
 
 .hljs-keyword,

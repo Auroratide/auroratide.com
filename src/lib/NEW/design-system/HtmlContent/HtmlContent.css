@@ -187,4 +187,13 @@
 			tab-size: 3;
 		}
 	}
+
+	.danger > pre code,
+	.caution > pre code { border-color: var(--t-red-a); }
+	.info > pre code,
+	.note > pre code { border-color: var(--t-blue-a); }
+	.warning > pre code { border-color: var(--t-yellow-a); }
+	.success > pre code,
+	.tip > pre code { border-color: var(--t-green-a); }
+	.important > pre code { border-color: var(--t-purple-a); }
 }

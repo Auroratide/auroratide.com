@@ -1,3 +1,20 @@
+---
+id: when-to-use-type-inference-in-haxe
+title: "When to use Type Inference in Haxe"
+category: Game Dev
+tags:
+  - haxe
+  - types
+  - inference
+  - guide
+icon: fingerprint
+color: yellow
+summary: "After using Haxe for a month, I've realized type inference can really simply your code without losing any information."
+longSummary: "Unlike AS3, Haxe has a feature called type inference that allows you to forgo specifying the types of variables or functions. After having used the language for a month, I've come to realize that type inference can really simply your code without losing any information."
+publishedAt: 2015-01-24T00:40:46.137Z
+createdAt: 2015-01-24T00:40:46.137Z
+---
+
 Unlike AS3, Haxe has a feature called type inference that allows you to forgo specifying the types of variables or functions. Instead, Haxe will try and determine the types of variables for you if you leave them unspecified. At first, I was hesitant about taking advantage of this feature since it made me feel more organized when everything was labeled. But, after having used the language for a month, I've come to realize that type inference can really simply your code without losing any information.
 
 Here is an example of the power of type inference. In AS3, every variable required an explicit type in order for the compiler to be happy:
@@ -67,10 +84,10 @@ Then, there are at least two places where types must be specified. The first of 
 
 ```haxe
 class Ellipse{
-    public var semimajor(default, null): Float; // good!
-    public var semiminor(default, null); // bad!  needs type.
- 
-    public static var nextId(default, null) = 0; // ok, since initialized
+	public var semimajor(default, null): Float; // good!
+	public var semiminor(default, null); // bad!  needs type.
+
+	public static var nextId(default, null) = 0; // ok, since initialized
 }
 ```
 
