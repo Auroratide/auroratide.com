@@ -44,6 +44,35 @@
 		margin-inline: 2em;
 	}
 
+	button, ::part(button) {
+		font-size: 1em;
+		font-family: var(--f-normal);
+		display: inline-block;
+		letter-spacing: 0.05ch;
+		border-radius: 0.25em;
+		text-decoration: none;
+		line-height: 1;
+		padding-block: 0.375em;
+		padding-inline: 1em;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+		border: none;
+		background: var(--t-primary-a);
+		color: var(--t-fg-b);
+	}
+
+	button:hover, ::part(button):hover,
+	button:focus, ::part(button):focus {
+		text-decoration: none;
+		filter: brightness(1.25);
+	}
+
+	button:active, ::part(button):active {
+		filter: brightness(0.875);
+		box-shadow: 0 0.125em 0.25em oklch(0% 0 0 / 0.25) inset;
+	}
+
 	blockquote {
 		background:
 			radial-gradient(circle at 4em 0%, var(--t-bg-b) 15%, transparent 50%),
@@ -95,6 +124,11 @@
 
 	img.make-dark, img-zoom:has(.make-dark)::part(content) {
 		filter: invert();
+	}
+
+	p > img {
+		display: block;
+		margin: 2.5em auto;
 	}
 
 	figure {

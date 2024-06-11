@@ -1,3 +1,21 @@
+---
+id: connecting-dots-and-unassuming-assumptions
+title: "Connecting Dots and Unassuming Assumptions"
+category: Creativity
+tags:
+  - puzzle
+  - interactive
+  - blocker
+  - perception
+  - assumptions
+icon: ellipsis-h
+color: red
+summary: "Can you connect 9 dots with just 4 lines? This decepitvely simple puzzle can teach us a lot about assumptions and creative problem solving."
+longSummary: "The 9-Dots is simple: connect all 9 dots with 4 connected lines. But in spite of its simplicity, it is very hard to solve. Let's find out why the 9-Dots puzzle is so hard to solve and see how we can use it to improve our creative problem solving abilities!"
+publishedAt: 2018-10-14T08:00:00.000Z
+createdAt: 2018-10-06T23:29:10.166Z
+---
+
 Let's start off with a simple little connect-the-dots puzzle. You might have seen it before, but if you haven't, definitely give it a try!
 
 Below are nine dots arranged in a neat little grid. The goal is simple: **Connect all 9 dots with 4 connected strokes**!
@@ -7,12 +25,10 @@ Below are nine dots arranged in a neat little grid. The goal is simple: **Connec
 * Tap again to create a connected line
 * You only get **4** lines. Try to connect **all 9** dots!
 
-<connect-nine-dots data-testid="nine-dots-puzzle" assetspath="/assets/posts/connecting-dots-and-unassuming-assumptions">
-</connect-nine-dots>
+<connect-nine-dots data-testid="nine-dots-puzzle" assetspath="." style="margin-block: 4em;"></connect-nine-dots>
 
-<side-text>
-<p>This 9-dots puzzle is at least as old as 1914, as it appeared in Sam Loyd's "Cyclopedia of Puzzles". My hope is to take this old puzzle and use it to talk about creativity so that you can be more creative when solving problems!</p>
-</side-text>
+> [!NOTE]
+> This 9-dots puzzle is at least as old as 1914, as it appeared in Sam Loyd's "Cyclopedia of Puzzles". My hope is to take this old puzzle and use it to talk about creativity so that you can be more creative when solving problems!
 
 ## Let's solve it.
 
@@ -20,10 +36,10 @@ If you've never seen this 9-dots puzzle before, it can be frustrating at first.
 
 Let's try a few strategies here...
 
-<div class="horizontal-flex">
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-1.png" alt="An attempt drawing the four lines through the outer dots, but leaving the middle dot unmarked." />
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-2.png" alt="An attempt drawing lines through the diagonals, but leaving two dots unmarked." />
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/attempt-3.png" alt="An attempt mixing horizontal and diagonal lines, but leaving two dots unmarked." />
+<div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center; justify-content: space-around;">
+	<img src="./attempt-1.png" alt="An attempt drawing the four lines through the outer dots, but leaving the middle dot unmarked." />
+	<img src="./attempt-2.png" alt="An attempt drawing lines through the diagonals, but leaving two dots unmarked." />
+	<img src="./attempt-3.png" alt="An attempt mixing horizontal and diagonal lines, but leaving two dots unmarked." />
 </div>
 
 Darn! None of these patterns work. No matter what we do, it feels like we need _five_ lines, not four.
@@ -52,9 +68,7 @@ Let's pick apart our assumptions one bit at a time.
 
 The nine dots are arranged in a 3x3 box. However, **do our lines need to stay inside of this box?** What if we allow the lines to go a little outside the confines of the grid...
 
-<div class="horizontal-flex">
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/solution.png" alt="The solution, showing all nine dots connected by allowing the lines to go beyond the confines of the dots." />
-</div>
+![The solution, showing all nine dots connected by allowing the lines to go beyond the confines of the dots.](./solution.png)
 
 Ah ha! And just like that, we can connect 9 dots with 4 connected lines. We just needed to think outside the box.
 
@@ -68,9 +82,7 @@ Cool, the puzzle is solved! We're done now, right? Perhaps, but we made an awful
 
 Usually this problem is given on a piece of paper. However, **does the paper need to be flat?** What if we curl the paper up and use the third dimension to our advantage? We can curl the paper into a spiral tube and draw a single line that wraps around the tube, intersecting all nine dots:
 
-<div class="horizontal-flex">
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/3d.png" alt="The dots are on a tube of paper, with a single line connecting all the dots by going around the tube." />
-</div>
+![The dots are on a tube of paper, with a single line connecting all the dots by going around the tube.](./3d.png)
 
 Wait, you mean this puzzle can be solved with _just one line_? Indeed! We just needed to think beyond two dimensions.
 
@@ -84,9 +96,7 @@ We're not done yet though! Is there at least one more assumption we can tackle?
 
 Why constrain ourselves to a particular tool? **Do we need to use a pencil?** What if we use a paintbrush instead...
 
-<div class="horizontal-flex">
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/brush.png" alt="All nine dots have a single, wide stroke crossing them all." />
-</div>
+![All nine dots have a single, wide stroke crossing them all.](./brush.png)
 
 Perhaps this is not a solution intended by the original author of the 9-dots puzzle, but it definitely meets the original criteria of "connect all 9 dots with 4 connected strokes". It's easy to make the assumption that we must use thin lines to solve the puzzle because, frankly, the puzzle is too easy if we allow a giant, thick line.
 
@@ -102,9 +112,7 @@ What we have here is an example of **perceptual blockers** to creative problem s
 
 The 9-dots puzzle is a perfect example. The nine dots are arranged in a box. That box creates an invisible barrier, and this makes people think the lines must be contained within the barrier.
 
-<div class="horizontal-flex">
-    <img src="/assets/posts/connecting-dots-and-unassuming-assumptions/perceptual-blocker.png" alt="" />
-</div>
+![Nine dots are tightly enclosed by a red boundary.](./perceptual-blocker.png)
 
 Now, this page presents the puzzle with an actual visible barrier for the simple reason that the interactive area needed to be clearly defined. However, this time the _dots themselves_ may have been a perceptual blocker. People like to click on objects rather than whitespace, so it is more tempting to only ever click on the dots. Yet to solve the puzzle, you must click on the whitespace!
 
@@ -134,15 +142,11 @@ This is an exercise in **divergent thinking**, allowing us to expand the scope o
 
 The reason is because _assumptions tend to be left unsaid_. By forcing ourselves to say everything, we may invariably put to light assumptions we've been making the whole time. And once they are on paper, it becomes easier to question them.
 
-<side-text>
-<p>To help elaborate the problem in Step 1, you can ask yourself some standard questions.</p>
-<ul>
-  <li>What tools am I using to solve the problem?</li>
-  <li>What are all the verbs in the problem description?</li>
-<li>Who are all the parties involved?</li>
-</ul>
-<p>And so on.</p>
-</side-text>
+> [!NOTE]
+> To help elaborate the problem in Step 1, you can ask yourself some standard questions.
+> - What tools am I using to solve the problem?
+> - What are all the verbs in the problem description?
+> And so on.
 
 ## Summary
 
