@@ -1,3 +1,22 @@
+---
+id: folderized-react-components
+title: "Folderized React Components"
+category: Web Dev
+tags:
+  - react
+  - tip
+  - javascript
+  - organization
+  - folder
+  - domain
+icon: folder
+color: purple
+summary: "Many of web developers organize their code based on type (CSS, state, view). However, we can avoid drawbacks if we instead \"folderize\" our React components."
+longSummary: "A React component can be made of different files, and it can be tempting to organize these files into individual folders based on their type (CSS, state, presentation). However, this approach has some drawbacks that can be avoided if we \"folderize\" the entire React component instead."
+publishedAt: 2018-10-02T14:35:54.600Z
+createdAt: 2018-10-02T14:35:54.600Z
+---
+
 A component on a web page, like a button, is composed of structure (html), styling (css), and behaviour (javascript). React gives us a very convenient way of packaging this complexity into a single, nice reusable Component. Cool!
 
 Or does it?
@@ -12,7 +31,7 @@ In its simplest form, a React component is just a javascript file, perhaps like 
 
 ```jsx
 const ClosableAlert = ({ text }) =>
-  <div>{text}</div>;
+	<div>{text}</div>;
 
 export default Alert;
 ```
@@ -25,12 +44,12 @@ The most natural approach might be to try and separate the files by _type_.
 
 ```
 /components
-  ClosableAlert.jsx
-  ClosableAlertHeader.jsx
+	ClosableAlert.jsx
+	ClosableAlertHeader.jsx
 /containers
-  ClosableAlert.js
+	ClosableAlert.js
 /styles
-  ClosableAlert.css
+	ClosableAlert.css
 ```
 
 So, all of the CSS files go in one place. All the state-related stuff goes in another place. So on and so forth. Seems pretty organized!
@@ -47,10 +66,9 @@ That last point is perhaps the most important, especially for newcomers on a pro
 
 I don't know about you, but it feels like we can organize our code better.
 
-<side-text>
-<p>Separating code into its "types" is very intuitive because we tend to organize our possessions in the same way. We separate socks from shirts, forks from spoons, and so forth. So why not separate styles from behaviour in code?</p>
-<p>Well, we separate socks from shirts because we want to mix-and-match them. But we don't mix-and-match with code. The CloseableAlert CSS will only ever go with the ClosableAlert component. Therefore, those two pieces of code should be as close together as possible.</p>
-</side-text>
+> [!NOTE]
+> Separating code into its "types" is very intuitive because we tend to organize our possessions in the same way. We separate socks from shirts, forks from spoons, and so forth. So why not separate styles from behaviour in code?
+> Well, we separate socks from shirts because we want to mix-and-match them. But we don't mix-and-match with code. The CloseableAlert CSS will only ever go with the ClosableAlert component. Therefore, those two pieces of code should be as close together as possible.
 
 ## Folderizing the Component
 
@@ -62,14 +80,14 @@ You can actually package your entire component as a _folder_. Something like thi
 
 ```
 /ClosableAlert
-  component.jsx
-  container.js
-  style.css
-  index.js
-  /Header
-    component.jsx
-    style.css
-    index.js
+	component.jsx
+	container.js
+	style.css
+	index.js
+	/Header
+		component.jsx
+		style.css
+		index.js
 ```
 
 Wow, look at that! Everything is inside of a single folder, the "ClosableAlert" folder!
