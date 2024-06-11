@@ -1,21 +1,21 @@
 <script lang="ts">
 	import type { ArticleType } from "../ArticleType"
 	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
-	import { Color, Theme } from "$lib/NEW/design-system/Color";
-	import { DateDisplay } from "$lib/NEW/design-system/DateDisplay";
-	import ArticleLinks from "./ArticleLinks.svelte";
+	import { Color, Theme } from "$lib/NEW/design-system/Color"
+	import ArticleLinks from "./ArticleLinks.svelte"
 	import { Icon } from "$lib/NEW/design-system/Icon"
+	import { Byline } from "$lib/NEW/design-system/Byline"
 
 	export let value: ArticleType
 </script>
 
 <article class="{Theme(value.color)}">
 	<header class="large-space-after icon-bg-container">
-		<div class="icon-bg {Color.text.primary.a}">
+		<div class="icon-bg {Color.text.bg.a} {Color.bg.primary.a}">
 			<Icon icon="{value.icon}" />
 		</div>
 		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
-		<p><small><DateDisplay value={value.publishedAt} /></small></p>
+		<p><Byline {value} /></p>
 		{#if value.links.length > 0}
 			<ArticleLinks value={value.links} />
 		{/if}
@@ -42,17 +42,23 @@
 
 	.icon-bg-container {
 		position: relative;
-		overflow: hidden;
+		overflow: visible;
 	}
 	.icon-bg-container > *:not(.icon-bg) { position: relative; }
 	.icon-bg {
 		position: absolute;
-		display: block;
 		font-size: 12em;
-		inset-block-start: 0;
-		inset-inline-end: 0.125em;
+		inset-block-start: -0.3em;
+		inset-inline-end: -0.15em;
+		inline-size: 1.75em;
+		block-size: 1.75em;
+		border-radius: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		opacity: 0.125;
 		transform: rotate(5deg);
 		pointer-events: none;
+		z-index: -1;
 	}
 </style>
