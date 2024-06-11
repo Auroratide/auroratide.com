@@ -1,3 +1,21 @@
+---
+id: as3-to-haxe-conversion
+title: "AS3 to Haxe Conversion"
+category: Game Dev
+tags:
+  - flash
+  - actionscript
+  - haxe
+  - conversion
+  - guide
+icon: exchange-alt
+color: purple
+summary: "Let's look at some of the similarities and differences between Haxe and Actionscript 3."
+longSummary: "Haxe shares many similarities with the Actionscript 3 (AS3) language, and therefore AS3 developers like myself can pick it up rather easily. There are, of course, some immediate differences that should be noted if wanting to write Haxe code."
+publishedAt: 2014-12-25T01:48:37.958Z
+createdAt: 2014-12-25T01:48:37.958Z
+---
+
 Haxe shares many similarities with the Actionscript 3 (AS3) language, and therefore AS3 developers like myself can pick it up rather easily. There are, of course, some immediate differences that should be noted if wanting to write Haxe code, and I attempt to note the most important ones here. This post borrows and augments the information found at [OpenFL's site](http://www.openfl.org/archive/developer/documentation/actionscript-developers/).
 
 Please note that this is by no means a complete guide to Haxe! One of the most glaring differences between AS3 and Haxe is Haxe's incredibly expansive functionality. For instance, Haxe allows for generic type parameters whereas AS3 does not; such a feature can be found in Java generics and C++ templates. Haxe furthermore allows for Enum structures, inlining, type abstraction, and much more. I will explore such things in later posts, but you can get a head start by peeking at [Haxe's manual](http://haxe.org/manual/introduction.html).
@@ -10,8 +28,8 @@ Below, though, you can find some quick conversions from AS3 code to Haxe, along 
 * Many sources will compare Haxe's Dynamic construct to AS3 or Java's Object class. However, I believe that Dynamic is more similar to the * (untyped) in AS3. Dynamic removes compile-time type checking just like the * typing in AS3.
 * We essentially replace Vectors with Arrays. In Java, this is the same as ArrayList&lt;T&gt;, and in C++, we use vector&lt;T&gt;.
 
-<div class="horizontal-flex">
-<div style="flex: 1; margin: 0;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+<div>
 
 ### AS3
 
@@ -25,7 +43,7 @@ Below, though, you can find some quick conversions from AS3 code to Haxe, along 
 8. Vector.&lt;T&gt;
 
 </div>
-<div style="flex: 1; margin: 0;">
+<div>
 
 ### Haxe
 
@@ -49,10 +67,10 @@ Below, though, you can find some quick conversions from AS3 code to Haxe, along 
 ### AS3
 
 ```actionscript
-package com.newprogrammer{ 
-    public class Circle extends Shape implements Drawable { 
-        public function Circle() { } 
-    } 
+package com.newprogrammer {
+	public class Circle extends Shape implements Drawable { 
+		public function Circle() { } 
+	} 
 }
 ```
 
@@ -62,7 +80,7 @@ package com.newprogrammer{
 package com.newprogrammer; 
  
 class Circle extends Shape implements Drawable {
-    public function new() { } 
+	public function new() { } 
 }
 ```
 
@@ -75,18 +93,18 @@ class Circle extends Shape implements Drawable {
 
 ```actionscript
 public class Circle {
-    public static const PI: Number = 3.1415;
- 
-    private var _radius: Number; 
- 
-    public function get radius(): Number{ 
-        return _radius; 
-    } 
-    public function set radius(value: Number): void { 
-        if(value < 0)
-            throw "Error";
-        _radius = value;
-    } 
+	public static const PI: Number = 3.1415;
+
+	private var _radius: Number; 
+
+	public function get radius(): Number{ 
+		return _radius; 
+	} 
+	public function set radius(value: Number): void { 
+		if(value < 0)
+			throw "Error";
+		_radius = value;
+	} 
 }
 ```
 
@@ -94,14 +112,14 @@ public class Circle {
 
 ```haxe
 class Circle { 
-    public static inline var PI: Float = 3.1415;
-    public var radius(default, set): Float;
- 
-    public function set_radius(value: Float): Float { 
-        if(value < 0) 
-            throw "Error"; 
-        return radius = value; 
-    } 
+	public static inline var PI: Float = 3.1415;
+	public var radius(default, set): Float;
+
+	public function set_radius(value: Float): Float { 
+		if(value < 0) 
+			throw "Error"; 
+		return radius = value; 
+	} 
 }
 ```
 
@@ -136,14 +154,14 @@ for(v in items) { }
 
 ```actionscript
 switch(value) { 
-    case 1: 
-        trace("Value is 1"); 
-        break; 
-    case 2: 
-        trace("Value is 2"); 
-        break; 
-    default: 
-        trace("Default reached"); 
+	case 1: 
+		trace("Value is 1"); 
+		break; 
+	case 2: 
+		trace("Value is 2"); 
+		break; 
+	default: 
+		trace("Default reached"); 
 }
 ```
 
@@ -151,12 +169,12 @@ switch(value) {
 
 ```haxe
 switch(value) { 
-    case 1: 
-        trace("Value is 1"); 
-    case 2: 
-        trace("Value is 2"); 
-    default: 
-        trace("Default reached"); 
+	case 1: 
+		trace("Value is 1"); 
+	case 2: 
+		trace("Value is 2"); 
+	default: 
+		trace("Default reached"); 
 }
 ```
 
@@ -171,7 +189,7 @@ var table: Object = new Object();
 table["key"] = 1; 
  
 if(table.hasOwnProperty("key")) 
-    trace(table["key"]); 
+	trace(table["key"]);
  
 for(var key: Object in table) { } 
  
@@ -185,7 +203,7 @@ var table = new Map<String, Int>();
 table["key"] = 1;
  
 if (table.exists("key")) 
-    trace(table["key"]); 
+	trace(table["key"]);
  
 for (key in table.keys()) { } 
  

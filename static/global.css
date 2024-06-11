@@ -1,4 +1,5 @@
 @import url("/fonts/urbanist/font-face.css");
+@import url("/fonts/sono/font-face.css");
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -34,7 +35,7 @@
 	--c-brand-reddit: #ff4500;
 
 	--f-normal: "Urbanist", sans-serif;
-	--f-code: monospace;
+	--f-code: "Sono", monospace;
 
 	--c-logo-light: var(--c-light-light);
 	--c-logo-dark: var(--c-dark-dark);
@@ -69,6 +70,10 @@ strong strong { font-weight: 900; }
 
 button, details {
 	cursor: pointer;
+}
+
+code {
+	font-family: var(--f-code);
 }
 
 /* Themes

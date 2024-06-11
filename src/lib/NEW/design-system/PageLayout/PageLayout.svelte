@@ -47,7 +47,7 @@
 	@media screen and (min-width: 60rem) {
 		.container {
 			display: grid;
-			grid-template-columns: 20rem 1fr;
+			grid-template-columns: 20rem minmax(0, 1fr);
 		}
 
 		header {

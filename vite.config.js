@@ -3,11 +3,13 @@ import { sveltekit } from "@sveltejs/kit/vite"
 import { plugin as mdPlugin, Mode } from "vite-plugin-markdown"
 import MarkdownIt from "markdown-it"
 import rollupCopy from "rollup-plugin-copy"
+import MarkdownItHighlightJs from "markdown-it-highlightjs"
 import MarkdownItGitHubAlerts from "./vite-plugins/md-alerts"
 
 const mdit = MarkdownIt({
 	html: true,
 })
+mdit.use(MarkdownItHighlightJs)
 mdit.use(MarkdownItGitHubAlerts)
 
 export default defineConfig({
