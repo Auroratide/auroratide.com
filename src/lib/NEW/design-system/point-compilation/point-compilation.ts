@@ -44,6 +44,10 @@ export class PointCompilationElement extends HTMLElement {
 	get using(): string | null { return this.getAttribute("using") }
 	set using(value: string) { this.setAttribute("using", value) }
 
+	connectedCallback() {
+		this.#triggerElemsUsingMe()
+	}
+
 	attributeChangedCallback(attribute: string, oldValue: string, newValue: string) {
 		this.#attributeCallbacks[attribute]?.(newValue, oldValue)
 	}
@@ -52,15 +56,26 @@ export class PointCompilationElement extends HTMLElement {
 		"highlight": () => {
 			this.#renderHighlight()
 		},
-		"using": (newValue: string | undefined | null) => {
-			this.#reference?.removeEventListener("slotchange", this.#cloneReference)
-
-			this.#reference = newValue ? document.querySelector<PointCompilationElement>(`#${newValue}`) : undefined
-			if (this.#reference) {
-				this.#cloneReference()
-				this.#reference.addEventListener("slotchange", this.#cloneReference)
-			}
+		"using": () => {
+			this.#seekReference()
 		},
+	}
+
+	#triggerElemsUsingMe = () => {
+		if (this.id) {
+			const elems = document.querySelectorAll<PointCompilationElement>(`${this.nodeName.toLowerCase()}[using="${this.id}"]`)
+			elems.forEach((elem) => elem.#seekReference?.())
+		}
+	}
+
+	#seekReference = () => {
+		this.#reference?.removeEventListener("slotchange", this.#cloneReference)
+
+		this.#reference = this.using ? document.querySelector<PointCompilationElement>(`#${this.using}`) : undefined
+		if (this.#reference) {
+			this.#cloneReference()
+			this.#reference.addEventListener("slotchange", this.#cloneReference)
+		}
 	}
 
 	#parseHighlight = (): [number, number] | undefined => {
@@ -73,7 +88,6 @@ export class PointCompilationElement extends HTMLElement {
 	#renderHighlight = () => {
 		const points = this.#points()
 		const highlight = this.#parseHighlight()
-		console.log(highlight)
 		if (points && highlight != null && !isNaN(highlight[0]) && !isNaN(highlight[1])) {
 			points.forEach((point, i) => {
 				if (highlight[0] <= i && i <= highlight[1]) {

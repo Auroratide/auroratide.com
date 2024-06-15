@@ -101,7 +101,6 @@ export class SlideShowElement extends HTMLElement {
 	nav = () => this.shadowRoot!.querySelector('[part="nav"]')!
 
 	connectedCallback() {
-		console.log(this.shadowRoot!.querySelector('#prev'))
 		this.shadowRoot!.querySelector('#prev')?.addEventListener('click', this.previous)
 		this.shadowRoot!.querySelector('#next')?.addEventListener('click', this.next)
 
