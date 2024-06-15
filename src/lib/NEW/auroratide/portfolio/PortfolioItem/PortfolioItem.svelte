@@ -2,9 +2,9 @@
 	import type { PortfolioType } from "../PortfolioType"
 	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
 	import { Color, Theme } from "$lib/NEW/design-system/Color"
-	import ArticleLinks from "./ArticleLinks.svelte"
 	import { Byline } from "$lib/NEW/design-system/Byline"
 	import { TransparentList } from "$lib/NEW/design-system/TransparentList"
+	import { LinkList } from "$lib/NEW/design-system/LinkList"
 
 	export let value: PortfolioType
 </script>
@@ -17,11 +17,11 @@
 		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
 		<p><Byline {value} /></p>
 		{#if value.links.length > 0}
-			<ArticleLinks value={value.links} />
+			<LinkList values={value.links} />
 		{/if}
 	</header>
 	<section>
-		<TransparentList.ul>
+		<ul class="{TransparentList()}">
 			{#each value.gallery as img (img.src)}
 				<li>
 					<figure>
@@ -32,7 +32,7 @@
 					</figure>
 				</li>
 			{/each}
-		</TransparentList.ul>
+		</ul>
 	</section>
 	<section>
 		<HtmlContent value={value.content} />
