@@ -1,3 +1,43 @@
+---
+id: omnixis
+title: "Omnixis"
+category: Game
+tags:
+  - tetris
+  - haxe
+  - flixel
+  - jam
+  - ludum dare
+  - innovation
+  - survial
+icon: th
+color: purple
+summary: "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions!"
+summaryDisp: "Tetris, but blocks fall from every direction."
+publishedAt: 2016-04-18T00:00:00.000Z
+order: 10
+links:
+  - title: "Play"
+    href: "http://auroratide.github.io/Omnixis/"
+    icon: gamepad
+    color: purple
+  - title: "Code"
+    href: "https://github.com/Auroratide/Omnixis"
+    icon: github-alt
+    color: github
+gallery:
+  - src: "./title.png"
+    alt: "The title screen."
+    caption: "The game keeps a highscore like an arcade game"
+    width: 679
+    height: 360
+  - src: "./gameplay.png"
+    alt: "A bunch of connected Tetris blocks spanning in all directions haphazardly."
+    caption: "Don't let the blocks get to the edges!"
+    width: 679
+    height: 360
+---
+
 Omnixis is an HTML5 webgame made with HaxeFlixel for [Ludum Dare 35](http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=93230). In Ludum Dare, participants only have 72 hours to make a game from scratch given a theme. This time, the theme was "Shapeshift", and I decided it was time to make a Tetris clone. Except, it totally isn't a clone, and I'm not just saying that. Out of nearly 3000 entries, Omnixis was voted the 23rd most innovative game.
 
 ## The Game
@@ -22,5 +62,3 @@ The game ends if your structure builds beyond the visible field. You probably sh
 
 * Kevin McLeod - Music, "The Lift" (CC-BY 3.0) at incompetech.com
 * Kenney Vleugels - SFX (CC-BY 3.0) at www.kenney.nl
-
-This game was built in Haxe using HaxeFlixel. You can view the source code on **[Github](https://github.com/Auroratide/Omnixis)**, but be warned: the code is Game Jam quality!
