@@ -3,7 +3,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import { Canvas } from './Canvas'
-    import { IconName } from '../VectorIcon/IconName'
     import { Steganographer } from './Steganographer'
     import { Status } from './Status'
     import { burst } from './burst'
@@ -84,14 +83,14 @@
     </div>
     <div class="area action-area">
         <button part="button" on:click={handleEncode}>
-            <vector-icon icon={IconName.AngleDoubleUp} />
+            <vector-icon icon="angle-double-up" />
             <span>Encode</span>
-            <vector-icon icon={IconName.AngleDoubleUp} />
+            <vector-icon icon="angle-double-up" />
         </button>
         <button part="button" on:click={handleDecode}>
-            <vector-icon icon={IconName.AngleDoubleDown} />
+            <vector-icon icon="angle-double-down" />
             <span>Decode</span>
-            <vector-icon icon={IconName.AngleDoubleDown} />
+            <vector-icon icon="angle-double-down" />
         </button>
     </div>
     <div class="area message-area">
@@ -163,16 +162,16 @@
 
     .status-area {
         text-align: center;
-        color: var(--palette-greyscale-100);
+        color: var(--t-fg-b);
         padding: 0.5em;
     }
 
     .status-area.success {
-        background: var(--skin-success-banner);
+        background: var(--t-green-a);
     }
 
     .status-area.failure {
-        background: var(--skin-danger-banner);
+        background: var(--t-red-a);
     }
 
     .feedback {
@@ -189,11 +188,11 @@
     }
 
     .feedback.success {
-        --burst-color: hsla(var(--skin-success-hsl), 0.2);
+        --burst-color: oklch(55% 0.111 134 / 0.2);
     }
 
     .feedback.failure {
-        --burst-color: hsla(var(--skin-danger-hsl), 0.2);
+        --burst-color: oklch(50% 0.11 30 / 0.2);
     }
 
     canvas { display: none; }

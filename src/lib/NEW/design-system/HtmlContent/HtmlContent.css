@@ -26,14 +26,47 @@
 		filter: brightness(1.25);
 	}
 
+	abbr[title] { cursor: help; }
+
 	ul, ol {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5em;
 	}
 
-	:is(ul, ol) li::marker {
-		font-weight: bold;
+	:is(ul, ol) li::marker { font-weight: bold; }
+	:is(ul, ol) :is(ul, ol) { margin-block: 0.5em; }
+
+	dl {
+		line-height: 1.5em;
+		background: var(--t-bg-b);
+		padding: 0.5em 1em;
+		border-inline-start: 0.25em solid var(--t-primary-a);
+
+		dt { font-weight: bold; }
+
+		dd {
+			margin-inline: 0;
+			margin-block-end: 1.5em;
+
+			&:last-child {
+				margin-block: 0;
+			}
+		}
+
+		@media screen and (min-width: 60rem) {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			column-gap: 0.75em;
+			row-gap: 1.5em;
+
+			dt { grid-column: 1; }
+
+			dd {
+				grid-column: 2;
+				margin-block: 0;
+			}
+		}
 	}
 
 	hr {
@@ -44,7 +77,9 @@
 		margin-inline: 2em;
 	}
 
-	button, ::part(button) {
+	icon-divider { margin-block: 3em; }
+
+	button, ::part(button), a.button {
 		font-size: 1em;
 		font-family: var(--f-normal);
 		display: inline-block;
@@ -60,24 +95,47 @@
 		border: none;
 		background: var(--t-primary-a);
 		color: var(--t-fg-b);
+
+		&:hover, &:focus {
+			text-decoration: none;
+			filter: brightness(1.25);
+		}
+
+		&:active {
+			filter: brightness(0.875);
+			box-shadow: 0 0.125em 0.25em oklch(0% 0 0 / 0.25) inset;
+		}
+
+		vector-icon {
+			position: absolute;
+			display: block;
+			font-size: 2em;
+			inset-block-start: calc(50% + 0.0625em);
+			inset-inline-start: -0.15em;
+			transform: translateY(-50%);
+			opacity: 0.25;
+		}
+
+		&:has(vector-icon) { padding-inline: 1.5em 0.875em; }
 	}
 
-	button:hover, ::part(button):hover,
-	button:focus, ::part(button):focus {
+	/* Not 100% sure why this is needed */
+	::part(button):hover, ::part(button):focus {
 		text-decoration: none;
 		filter: brightness(1.25);
 	}
 
-	button:active, ::part(button):active {
+	::part(button):active {
 		filter: brightness(0.875);
 		box-shadow: 0 0.125em 0.25em oklch(0% 0 0 / 0.25) inset;
 	}
+	/* */
 
 	blockquote {
 		background:
 			radial-gradient(circle at 4em 0%, var(--t-bg-b) 15%, transparent 50%),
 			radial-gradient(circle at calc(100% - 4em) 100%, var(--t-bg-b) 15%, transparent 50%);
-		margin-inline: 0;
+		margin: 3em 0;
 		padding: 2em 1em;
 		position: relative;
 		overflow: hidden;
@@ -120,6 +178,7 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+		object-fit: contain;
 	}
 
 	img.make-dark, img-zoom:has(.make-dark)::part(content) {
@@ -139,6 +198,9 @@
 		flex-direction: column;
 		gap: 1em;
 		align-items: center;
+
+		&.h-15 img { max-height: 15em; }
+		&.h-10 img { max-height: 10em; }
 	}
 
 	figcaption {
@@ -155,7 +217,7 @@
 		position: relative;
 		background: var(--t-bg-b);
 		overflow: hidden;
-		margin-inline: 0;
+		margin: 1.5em 0 3em;
 		padding: 0.5em 1em 1em;
 		border-block-start: 0.25em solid var(--alert-color);
 
@@ -204,10 +266,70 @@
 		}
 	}
 
+	details {
+		font-size: 0.825em;
+		padding: 0 1.25em 1.25em;
+		border-radius: 0.25em;
+
+		summary {
+			border: 0.125em solid var(--t-primary-a);
+			padding: 0.375em 1em;
+			border-radius: 0.25em;
+			margin: 0 -1.25em;
+			letter-spacing: 0.05ch;
+		}
+
+		&[open] summary {
+			background: var(--t-primary-a);
+			color: var(--t-fg-b);
+			border-radius: 0.25em 0.25em 0 0;
+		}
+
+		&[open] {
+			background: var(--t-bg-b);
+		}
+
+		summary + * { margin-block-start: 1.25em; }
+		& > *:last-child { margin-block-end: 0; }
+	}
+
+	iframe {
+		width: 100%;
+		margin-block: 2em;
+	}
+
+	textarea, ::part(textarea) {
+		font-size: 1em;
+		font-family: var(--f-normal);
+		background: var(--t-bg-b);
+		border: 0.125em solid transparent;
+		border-block-end: 0.25em solid var(--t-fg-a);
+		padding: 0.5em;
+		color: var(--t-fg-a);
+	}
+
+	textarea:focus, ::part(textarea):focus {
+		color: var(--t-fg-b);
+		border-color: var(--t-primary-a);
+		border-block-end-color: var(--t-primary-b);
+		outline: none;
+		background: var(--t-bg-a);
+	}
+
+	kbd {
+		display: inline-block;
+		font-size: 0.8em;
+		background: var(--t-bg-b);
+		border: 0.125em solid var(--t-primary-a);
+		border-block-end-width: 0.25em;
+		border-radius: 0.25em;
+		padding: 0 0.375em;
+	}
+
 	code {
 		font-size: 0.875em;
 		background: var(--t-bg-b);
-		padding: 0.333em;
+		padding: 0.25em 0.333em;
 		border-radius: 0.25em;
 	}
 
@@ -235,4 +357,8 @@
 	.success > pre code,
 	.tip > pre code { border-color: var(--t-green-a); }
 	.important > pre code { border-color: var(--t-purple-a); }
+
+	math-inline, math-block {
+		font-size: 0.8em;
+	}
 }

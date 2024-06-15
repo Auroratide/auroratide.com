@@ -68,11 +68,11 @@ strong {
 
 strong strong { font-weight: 900; }
 
-button, details {
+button, summary {
 	cursor: pointer;
 }
 
-code {
+code, kbd {
 	font-family: var(--f-code);
 }
 
@@ -127,4 +127,18 @@ code {
 	--t-fg-b: oklch(100% 0 0);
 	--t-primary-a: var(--c-brand-github);
 	--t-primary-b: var(--c-brand-github);
+}
+
+.theme-dev {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-dev);
+	--t-primary-b: var(--c-brand-dev);
+}
+
+.theme-reddit {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-reddit);
+	--t-primary-b: var(--c-brand-reddit);
 }

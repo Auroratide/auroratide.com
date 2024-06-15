@@ -3,7 +3,6 @@
 	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
 	import { Color, Theme } from "$lib/NEW/design-system/Color"
 	import ArticleLinks from "./ArticleLinks.svelte"
-	import { Icon } from "$lib/NEW/design-system/Icon"
 	import { Byline } from "$lib/NEW/design-system/Byline"
 
 	export let value: ArticleType
@@ -12,7 +11,7 @@
 <article class="{Theme(value.color)}">
 	<header class="large-space-after icon-bg-container">
 		<div class="icon-bg {Color.text.bg.a} {Color.bg.primary.a}">
-			<Icon icon="{value.icon}" />
+			<vector-icon icon="{value.icon}"></vector-icon>
 		</div>
 		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{value.title}</h1>
 		<p><Byline {value} /></p>

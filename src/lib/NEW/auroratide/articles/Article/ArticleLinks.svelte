@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { Color, Theme } from "$lib/NEW/design-system/Color";
-    import { Icon } from "$lib/NEW/design-system/Icon";
+	import { Color, Theme } from "$lib/NEW/design-system/Color"
 	import type { ArticleType } from "../ArticleType"
 
 	export let value: ArticleType["links"]
@@ -9,9 +8,9 @@
 <ul class="no-list row">
 	{#each value as link}
 		<li class="{Theme(link.color)}">
-			<a href="{link.href}" class="label-button {Color.text.fg.a} {Color.bg.primary.a}">
+			<a href="{link.href}" class="label-button {Color.text.fg.b} {Color.bg.primary.a}">
 				<span class="icon-bg">
-					<Icon icon="{link.icon}" />
+					<vector-icon icon="{link.icon}"></vector-icon>
 				</span>
 				<span>{link.title}</span>
 			</a>
@@ -55,8 +54,8 @@
 		position: absolute;
 		display: block;
 		font-size: 2em;
-		top: calc(50% + 0.0625em);
-		left: -0.15em;
+		inset-block-start: calc(50% + 0.0625em);
+		inset-inline-start: -0.15em;
 		transform: translateY(-50%);
 		opacity: 0.25;
 	}

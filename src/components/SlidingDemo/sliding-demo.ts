@@ -43,7 +43,7 @@ const css = `
     .controls button {
         font-size: 1em;
         border-radius: 2em;
-        color: var(--skin-banner-text);
+        color: var(--t-fg-b);
         padding: 0.5em;
         display: inline-flex;
         align-items: center;
@@ -89,11 +89,11 @@ const css = `
     }
 
     .playing .controls button.play-pause {
-        background: var(--skin-danger-interactive);
+        background: var(--t-red-a);
     }
 
     .paused .controls button.play-pause {
-        background: var(--skin-success-interactive);
+        background: var(--t-green-a);
     }
 
     .playing .controls button.play-pause vector-icon.play {

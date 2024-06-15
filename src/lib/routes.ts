@@ -1,4 +1,4 @@
-import { IconName } from '../components/VectorIcon/IconName'
+import { IconName } from "$lib/NEW/design-system/vector-icon/IconName"
 import { Palette } from './design/color'
 
 export type Social = {

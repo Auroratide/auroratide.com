@@ -1,8 +1,7 @@
 <script lang="ts">
     import type { SummarizedArticle } from "../ArticleType"
-    import { Byline } from "$lib/NEW/design-system/Byline";
-    import { Color, Theme } from "$lib/NEW/design-system/Color";
-    import { Icon } from "$lib/NEW/design-system/Icon";
+    import { Byline } from "$lib/NEW/design-system/Byline"
+    import { Color, Theme } from "$lib/NEW/design-system/Color"
 	 import { Routes } from "$lib/NEW/auroratide/routes"
 
 	export let value: SummarizedArticle
@@ -15,7 +14,7 @@
 	<Byline {value} />
 	<p class="no-margin space-above">{value.summary.long}</p>
 	<div class="icon-bg {Color.text.primary.a}">
-		<Icon icon="{value.icon}" />
+		<vector-icon icon="{value.icon}"></vector-icon>
 	</div>
 </article>
 
