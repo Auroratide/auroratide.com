@@ -18,7 +18,7 @@
 			<ul class="no-list column space-start">
 				{#each nav as it, i}
 					<li>
-						<a href="{it.href}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
+						<a href="{it.href}" data-first-letter="{it.name[0]}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
 					</li>
 				{/each}
 			</ul>
@@ -31,7 +31,7 @@
 		<ul class="no-list column space-start">
 			{#each nav as it, i}
 				<li>
-					<a href="{it.href}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
+					<a href="{it.href}" data-first-letter="{it.name[0]}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
 				</li>
 			{/each}
 		</ul>
@@ -69,7 +69,7 @@
 	.column {
 		display: flex;
 		flex-direction: column;
-		gap: 0.75em;
+		gap: 1em;
 	}
 
 	.space-start { padding-inline-start: 0.75em; }
@@ -82,19 +82,16 @@
 	.bg-circle {
 		display: block;
 		position: relative;
-		padding-inline-start: 0.25em;
+		padding-inline-start: 1.25em;
 	}
 
-	.bg-circle::first-letter {
-		font-weight: bold;
-		font-size: 1.125em;
-		inline-size: 5em;
-		display: inline-block;
-	}
+	.bg-circle::first-letter { font-size: 0.01px; }
 
 	.bg-circle::before {
-		content: "";
-		display: block;
+		content: attr(data-first-letter);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		inline-size: 1.5em;
 		block-size: 1.5em;
 		background-color: var(--bg-circle-color);
@@ -104,6 +101,8 @@
 		inset-block: 50%;
 		transform: translateY(-50%);
 		z-index: -1;
+		font-weight: bold;
+		font-size: 1.125em;
 	}
 
 	.lg\:show { display: none; }
