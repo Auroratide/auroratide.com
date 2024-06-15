@@ -5,6 +5,7 @@
 	import { Byline } from "$lib/NEW/design-system/Byline"
 	import { TransparentList } from "$lib/NEW/design-system/TransparentList"
 	import { LinkList } from "$lib/NEW/design-system/LinkList"
+	import { Gallery } from "$lib/NEW/design-system/Gallery"
 
 	export let value: PortfolioType
 </script>
@@ -21,18 +22,7 @@
 		{/if}
 	</header>
 	<section>
-		<ul class="{TransparentList()}">
-			{#each value.gallery as img (img.src)}
-				<li>
-					<figure>
-						<img-zoom>
-							<img src="{img.src}" alt="{img.alt}" loading="lazy" width="{img.width}" height="{img.height}" />
-						</img-zoom>
-						<figcaption>{img.caption}</figcaption>
-					</figure>
-				</li>
-			{/each}
-		</ul>
+		<Gallery values={value.gallery} />
 	</section>
 	<section>
 		<HtmlContent value={value.content} />

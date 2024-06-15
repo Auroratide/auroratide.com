@@ -268,8 +268,9 @@
 
 	details {
 		font-size: 0.825em;
-		padding: 0 1.25em 1.25em;
+		padding: 0 1.25em;
 		border-radius: 0.25em;
+		margin-block: 2em;
 
 		summary {
 			border: 0.125em solid var(--t-primary-a);
@@ -287,6 +288,7 @@
 
 		&[open] {
 			background: var(--t-bg-b);
+			padding: 0 1.25em 1.25em;
 		}
 
 		summary + * { margin-block-start: 1.25em; }

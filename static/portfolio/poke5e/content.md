@@ -1,3 +1,52 @@
+---
+id: poke5e
+title: "Pokemon 5e Reference"
+category: Website
+tags:
+  - pokemon
+  - dnd
+  - reference
+  - svelte
+  - sveltekit
+  - homebrew
+icon: dragon
+color: yellow
+summary: "This website makes community-made content two popular games (Pokemon, and Dungeons and Dragons) online and searchable."
+summaryDisp: "It's Pokemon + Dungeons and Dragons! You can even manage your character's pokemon."
+publishedAt: 2022-03-09T12:00:00.000Z
+order: 1
+links:
+  - title: "Visit"
+    href: "https://auroratide.github.io/poke5e/"
+    icon: dragon
+    color: yellow
+  - title: "Code"
+    href: "https://github.com/Auroratide/poke5e"
+    icon: github-alt
+    color: github
+gallery:
+  - src: "./pokemon.webp"
+    alt: "The filter field spells 'PIK', with Pikachu's info on the right."
+    caption: "A searchable reference for over 900 pokemon"
+    width: 2468
+    height: 1360
+  - src: "./trainers.webp"
+    alt: "The filter field says 'fairy', with the list showing 21 matching moves."
+    caption: "A searchable reference for all pokemon abilities"
+    width: 2468
+    height: 1360
+  - src: "./moves.webp"
+    alt: "The filter field says 'fairy', with the list showing 21 matching moves."
+    caption: "A searchable reference for all pokemon abilities"
+    width: 2468
+    height: 1360
+  - src: "./tms.webp"
+    alt: "The filter field says 'fairy', with the list showing 21 matching moves."
+    caption: "A searchable reference for all pokemon abilities"
+    width: 2468
+    height: 1360
+---
+
 **Pokemon 5e Reference** is a website dedicated to Dungeons and Dragons homebrew, adding Pokemon to a world of magic!
 
 [Dungeons and Dragons](https://dnd.wizards.com/) is a popular game where people act as characters in a world of magic to defeat evil. I like to think of it as _collaborative storytelling_, as the people playing essentially create the story of their characters' adventures. As an inherently creative game, the creation of <dfn>homebrew</dfn>, or custom content, is incredibly common, personalizing and expanding an already expressive universe.
