@@ -11,8 +11,10 @@ tags:
   - homebrew
 icon: dragon
 color: yellow
+cover:
+  alt: "Website showing Pokemon, Moves, TMs, and Trainers as options."
 summary: "This website makes community-made content two popular games (Pokemon, and Dungeons and Dragons) online and searchable."
-summaryDisp: "It's Pokemon + Dungeons and Dragons! You can even manage your character's pokemon."
+summaryDisp: "Play D&D with Pokemon"
 publishedAt: 2022-03-09T12:00:00.000Z
 order: 1
 links:

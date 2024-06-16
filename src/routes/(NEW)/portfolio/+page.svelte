@@ -1,26 +1,31 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	// import { ArticleCard } from "$lib/NEW/auroratide/articles/ArticleCard"
+	import { PortfolioCard } from "$lib/NEW/auroratide/portfolio/PortfolioCard"
+	import { TransparentList } from "$lib/NEW/design-system/TransparentList"
 
 	export let data: PageData
 </script>
 
-<p>TODO</p>
-<!-- <ul class="transparent-list">
+<ul class="{TransparentList()} flexible-grid">
 	{#each data.values as value (value.id)}
-		<li>
-			<ArticleCard {value} />
+		<li class="align-to-grid">
+			<PortfolioCard {value} />
 		</li>
 	{/each}
-</ul> -->
+</ul>
+
 
 <style>
-	.transparent-list {
-		list-style: none;
-		padding: 0;
+	.flexible-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(calc(max(50%, 17.5em) - 1em), 1fr));
+		column-gap: 1em;
+		row-gap: 0;
 	}
 
-	.transparent-list li {
-		margin: 0;
+	.align-to-grid {
+		display: grid;
+		grid-template-rows: subgrid;
+		grid-row: span 2;
 	}
 </style>

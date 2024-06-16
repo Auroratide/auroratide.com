@@ -10,7 +10,10 @@ export type PortfolioType = {
 	content: string,
 	icon: IconName,
 	color: ThemeName,
-	order: number
+	order: number,
+	cover: {
+		alt: string,
+	},
 	summary: {
 		short: string,
 		display: string,
@@ -62,4 +65,5 @@ export const mdToSummarizedPortfolio = (attributes: Record<string, unknown>): Su
 		display: attributes.summaryDisp as string,
 	},
 	order: attributes.order as number,
+	cover: attributes.cover as any,
 })

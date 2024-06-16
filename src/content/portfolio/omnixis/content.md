@@ -12,6 +12,8 @@ tags:
   - survial
 icon: th
 color: purple
+cover:
+  alt: "A bunch of connected Tetris blocks spanning in all directions haphazardly."
 summary: "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions!"
 summaryDisp: "Tetris, but blocks fall from every direction."
 publishedAt: 2016-04-18T00:00:00.000Z
