@@ -1,7 +1,0 @@
-I designed this tool mainly to help post nice pretty code on Wikidot sites. I wanted something more powerful than Wikidot's native highlighter, and I wanted the potential to support as many languages as possible. This code.highlight() program achieves just that. By defining simple rules, potentially any language can have custom highlighting. This was my first major experience with parsing.
-
-The code.highlight() tool supports AS3, Haxe, C++, CSS, and Java. It highlights key words, type names, and strings, and it allows the user to specify his own type names as well. It will also allow for the insertion of line numbers in the code. Support for new languages is achievable with additional JSON files describing the parse. The code.highlight() program uses a simple linear transformation parse in order to perform syntax highlighting.
-
-To use this tool with Wikidot, the use of the [Better Code Blocks](http://css.wikidot.com/cssnippet:better-code-blocks) CSSnippet is required. This is simply CSS code that is imported that allows the generated Wikidot code to actually be highlighted.
-
-The previous version of this program, 1.01.140204, was not as general as this version, nor was it able to produce actual HTML code. However, the previous version did possess the ability to link type names (like `Int` or `Array`) to relevant documentation pages. Since the parsing process became more complicated in 2.00, linking became a wishlist feature and ultimately left unimplemented.

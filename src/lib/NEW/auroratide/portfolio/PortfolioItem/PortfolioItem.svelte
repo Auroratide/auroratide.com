@@ -24,6 +24,7 @@
 	<section>
 		<Gallery values={value.gallery} />
 	</section>
+	<icon-divider icon="{value.icon}"></icon-divider>
 	<section>
 		<HtmlContent value={value.content} />
 	</section>
@@ -64,5 +65,9 @@
 		transform: rotate(5deg);
 		pointer-events: none;
 		z-index: -1;
+	}
+
+	icon-divider {
+		margin-block: 3em;
 	}
 </style>

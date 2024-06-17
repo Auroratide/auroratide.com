@@ -1,4 +1,5 @@
 export const PortfolioCategory = {
+	App: "App",
 	Game: "Game",
 	Library: "Library",
 	Tool: "Tool",

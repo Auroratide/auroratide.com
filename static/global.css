@@ -148,3 +148,31 @@ img-zoom img {
 	--t-primary-a: var(--c-brand-reddit);
 	--t-primary-b: var(--c-brand-reddit);
 }
+
+.theme-itch-io {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-itch-io);
+	--t-primary-b: var(--c-brand-itch-io);
+}
+
+.theme-windows {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-windows);
+	--t-primary-b: var(--c-brand-windows);
+}
+
+.theme-android {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-android);
+	--t-primary-b: var(--c-brand-android);
+}
+
+.theme-adobe {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-adobe);
+	--t-primary-b: var(--c-brand-adobe);
+}

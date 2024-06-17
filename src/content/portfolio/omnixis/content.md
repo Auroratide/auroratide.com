@@ -17,7 +17,7 @@ cover:
 summary: "A tetris-like game made in HaxeFlixel for Ludum Dare 35. Only difference is instead of tetrominoes falling from above, they fall from all directions!"
 summaryDisp: "Tetris, but blocks fall from every direction."
 publishedAt: 2016-04-18T00:00:00.000Z
-order: 10
+order: 20
 links:
   - title: "Play"
     href: "http://auroratide.github.io/Omnixis/"
