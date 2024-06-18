@@ -37,9 +37,11 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder'
 import { faFolderMinus } from '@fortawesome/free-solid-svg-icons/faFolderMinus'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons/faGamepad'
 import { faGavel } from '@fortawesome/free-solid-svg-icons/faGavel'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe'
 import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons/faGripLinesVertical'
 import { faHammer } from '@fortawesome/free-solid-svg-icons/faHammer'
 import { faHandPointer } from '@fortawesome/free-solid-svg-icons/faHandPointer'
+import { faHatCowboySide } from '@fortawesome/free-solid-svg-icons/faHatCowboySide'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
@@ -149,9 +151,11 @@ export const library = {
 	[IconName.FolderMinus]: faFolderMinus,
 	[IconName.Gamepad]: faGamepad,
 	[IconName.Gavel]: faGavel,
+	[IconName.Globe]: faGlobe,
 	[IconName.GripLinesVertical]: faGripLinesVertical,
 	[IconName.Hammer]: faHammer,
 	[IconName.HandPointer]: faHandPointer,
+	[IconName.HatCowboySide]: faHatCowboySide,
 	[IconName.Heart]: faHeart,
 	[IconName.HospitalAlt]: faHospitalAlt,
 	[IconName.HourglassHalf]: faHourglassHalf,

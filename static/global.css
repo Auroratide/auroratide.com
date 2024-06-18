@@ -82,6 +82,12 @@ img-zoom img {
 	height: auto;
 }
 
+img-colorscape img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 /* Themes
  * ======================================================================== */
 .theme-dark {
