@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	// import { Article } from "$lib/NEW/auroratide/articles/Article"
 	import { page } from "$app/stores"
+	import { ArtItem } from "$lib/NEW/auroratide/art/ArtItem"
 
 	export let data: PageData
 </script>
@@ -10,5 +10,4 @@
 	<base href="{$page.url.pathname}/" />
 </svelte:head>
 
-<p>Hello</p>
-<!-- <Article value={data.value} /> -->
+<ArtItem value={data.value} />

@@ -47,8 +47,6 @@
 		border-block-end-style: solid;
 	}
 
-	p { line-height: 1.5em; }
-
 	.icon-bg {
 		position: absolute;
 		inset-inline-end: -0.05em;

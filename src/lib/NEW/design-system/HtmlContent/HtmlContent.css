@@ -1,4 +1,6 @@
 .html-content {
+	& > *:first-child { margin-block-start: 0; }
+
 	p, ul, ol {
 		line-height: 1.5em;
 		margin-block: 1.75em;

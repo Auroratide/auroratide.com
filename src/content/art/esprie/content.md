@@ -20,8 +20,13 @@ summary: "A mech pilot I played in the Lancer TTRPG. She likes bringing a knife 
 publishedAt: 2021-05-22T12:00:00.000Z
 ---
 
-Esprie is a character I run for a far-future tabletop rpg called [Lancer](https://massifpress.com/lancer). She had lived her entire life aboard a space station where her parents researched ways of containing alien-like consciousnesses called Non-Human Persons (NHPs). Space raiders one day destroyed the space station, killing everyone inside, but Esprie miraculously survived.
+Esprie is a character I ran for a far-future tabletop rpg called [Lancer](https://massifpress.com/lancer). She had lived her entire life aboard a space station where her parents researched ways of containing alien-like consciousnesses called Non-Human Persons (<abbr>NHPs</abbr>). Space raiders one day destroyed the space station, killing everyone inside, but Esprie miraculously survived.
 
-In our campaign, Esprie became a mech pilot after wandering the planet Hekkit and stumbling into an abandoned mech. With it, she ended up joining actual mech pilots on an escort mission and figured this to be the best way to eventually find out who destroyed her former home.
+Esprie became a mech pilot in order to hunt these raiders down.
 
-Her callsign is Fizz, the name of an NHP she befriended while living on the space station.
+Her callsign is **Fizz**, the name of an NHP she befriended while living on the space station.
+
+<details>
+	<summary>Except...</summary>
+	<p>Esprie actually died in the attack. Who people interact with is Fizz, an alien consciousness, inhabiting her body. Fizz is driven solely by the desire to find Earth, where they might have the technology to restore Esprie to life as long as Fizz preserves the body.</p>
+</details>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { IconName } from "../vector-icon"
 	import { Color, Theme, type ThemeName } from "$lib/NEW/design-system/Color"
+	import { PageTitle } from "../PageTitle"
 
 	export let title: string
 	export let theme: ThemeName
@@ -12,26 +13,17 @@
 		<div class="icon-bg {Color.text.bg.a} {Color.bg.primary.a}">
 			<vector-icon icon="{icon}"></vector-icon>
 		</div>
-		<h1 class="{Color.text.fg.b} very-large topmost-item-spacing balance">{title}</h1>
+		<PageTitle>{title}</PageTitle>
 		<slot name="header"></slot>
 	</header>
 	<slot name="content"></slot>
 </article>
 
 <style>
-	.very-large { font-size: 2.5em; }
-
-	.topmost-item-spacing {
-		margin-block-start: 0;
-		line-height: 1em;
-	}
-
 	.large-space-after {
 		min-height: 12.5em;
 		margin-block-end: 1em;
 	}
-
-	.balance { text-wrap: balance; }
 
 	.icon-bg-container {
 		position: relative;

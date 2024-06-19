@@ -1,12 +1,22 @@
 <script lang="ts">
-    import { Color } from "../Color";
+	import { Color } from "../Color"
 	import type { IconName } from "../vector-icon"
 
 	export let href: string | undefined = undefined
 	export let icon: IconName | undefined = undefined
+	export let summary: boolean = false
 </script>
 
-{#if href != null}
+{#if summary}
+	<summary class="button {Color.text.fg.b} {Color.bg.primary.a}" class:has-icon={icon != null}>
+		{#if icon != null}
+			<span class="icon-bg">
+				<vector-icon {icon}></vector-icon>
+			</span>
+		{/if}
+		<span><slot></slot></span>
+	</summary>
+{:else if href != null}
 	<a {href} class="button {Color.text.fg.b} {Color.bg.primary.a}" class:has-icon={icon != null}>
 		{#if icon != null}
 			<span class="icon-bg">
@@ -37,6 +47,7 @@
 		padding-inline: 0.875em;
 		overflow: hidden;
 		position: relative;
+		border: none;
 	}
 
 	.button.has-icon {
