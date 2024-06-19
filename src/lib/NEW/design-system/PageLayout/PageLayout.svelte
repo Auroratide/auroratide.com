@@ -25,7 +25,7 @@
 
 <style>
 	.container {
-		max-width: 75rem;
+		max-width: 90rem;
 		margin: auto;
 		padding: 0.75em 0.5em;
 		display: flex;
