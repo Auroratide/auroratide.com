@@ -40,6 +40,10 @@
 	--c-logo-light: var(--c-light-light);
 	--c-logo-dark: var(--c-dark-dark);
 	--c-logo-main: var(--c-blue-dark);
+
+	--z-base: 1;
+	--z-nav: 10;
+	--z-dialog: 20;
 }
 
 /* Base Styles

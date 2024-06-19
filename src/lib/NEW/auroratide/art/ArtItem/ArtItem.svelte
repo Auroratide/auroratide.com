@@ -66,7 +66,8 @@
 	.full-screen {
 		position: fixed;
 		inset: 0;
-		background: oklch(0% 0 0 / 0.75);
+		background: oklch(0% 0 0 / 0.875);
+		z-index: var(--z-dialog);
 	}
 
 	.grid {

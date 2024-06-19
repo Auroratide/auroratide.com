@@ -1,8 +1,8 @@
-import type { PageLoad } from "./$types"
+import type { LayoutLoad } from "./$types"
 import { mdToSummarizedArt, type SummarizedArt } from "$lib/NEW/auroratide/art"
 import { byPublishedAt } from "$lib/NEW/auroratide/art/sort"
 
-export const load: PageLoad = async () => {
+export const load: LayoutLoad = async () => {
 	const modules = import.meta.glob("$content/art/*/content.md")
 
 	const values: SummarizedArt[] = await Promise.all(
