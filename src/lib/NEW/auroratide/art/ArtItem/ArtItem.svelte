@@ -9,6 +9,9 @@
 	import { VisuallyHidden } from "$lib/NEW/design-system/VisuallyHidden"
 	import { isPixelart } from "../is-pixelart"
 	import { Pixelart } from "$lib/NEW/design-system/Pixelart"
+	import { PageMeta } from "$lib/NEW/design-system/PageMeta"
+	import type { OpenGraph } from "$lib/NEW/design-system/OpenGraph"
+	import { SiteInfo } from "$lib/NEW/design-system/SiteInfo"
 
 	export let value: ArtType
 
@@ -22,8 +25,31 @@
 	const toggleDetails = () => {
 		detailsElem?.toggleAttribute("open")
 	}
+
+	const {
+		title: sitetitle,
+		logo,
+		url,
+		author,
+	} = SiteInfo.get()
+
+	$: opengraph = {
+		type: "article",
+		title: value.title,
+		description: value.summary.short,
+		url: url + Routes.Art.href(value.id),
+		image: logo,
+		site_name: sitetitle,
+		article: {
+			section: value.category,
+			tags: value.tags,
+			published_time: value.publishedAt,
+			author: author.url,
+		},
+	} satisfies OpenGraph
 </script>
 
+<PageMeta pagetitle={value.title} description={value.summary.short} {opengraph} />
 <article class="{Theme(value.color)} full-screen grid">
 	<div class="above-image space-away-from-screen-edges">
 		<vector-icon aria-hidden="true" icon="{value.icon}" class="bg-icon"></vector-icon>

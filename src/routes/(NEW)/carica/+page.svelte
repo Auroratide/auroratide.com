@@ -2,11 +2,13 @@
 	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
 	import { StaticPage } from "$lib/NEW/design-system/pages"
 	import { attributes, html } from "./content.md"
+	import { page } from "$app/stores"
 
 	const title = attributes.title as string
+	const description = attributes.description as string
 </script>
 
-<StaticPage {title}>
+<StaticPage {title} {description} pathname={$page.url.pathname}>
 	<section slot="content">
 		<HtmlContent value={html} />
 	</section>

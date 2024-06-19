@@ -7,6 +7,7 @@ export type PortfolioType = {
 	title: string,
 	category: PortfolioCategory,
 	publishedAt: Date,
+	tags: string[],
 	content: string,
 	icon: IconName,
 	color: ThemeName,
@@ -58,6 +59,7 @@ export const mdToSummarizedPortfolio = (attributes: Record<string, unknown>): Su
 	title: attributes.title as string,
 	category: attributes.category as PortfolioCategory,
 	publishedAt: new Date(attributes.publishedAt as string),
+	tags: attributes.tags as string[],
 	icon: attributes.icon as IconName,
 	color: attributes.color as ThemeName,
 	summary: {

@@ -1,16 +1,20 @@
 <script lang="ts">
+	import { SiteInfo } from "../SiteInfo"
 	import LogoTitle from "./LogoTitle.svelte"
 	import type { NavItem } from "./NavItem"
-    import Navigation from "./Navigation.svelte";
+	import Navigation from "./Navigation.svelte"
 
-	export let sitetitle: string
-	export let subtitle: string
 	export let nav: NavItem[]
+
+	const {
+		title,
+		subtitle,
+	} = SiteInfo.get()
 </script>
 
 <div class="container">
 	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between">
-		<LogoTitle title={sitetitle} {subtitle}>
+		<LogoTitle {title} {subtitle}>
 			<slot name="logo"></slot>
 		</LogoTitle>
 		<Navigation {nav} />
