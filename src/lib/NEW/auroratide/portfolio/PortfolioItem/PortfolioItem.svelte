@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PortfolioType } from "../PortfolioType"
-	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
+	import { PageContent } from "$lib/NEW/design-system/PageContent"
 	import { Byline } from "$lib/NEW/design-system/Byline"
 	import { LinkList } from "$lib/NEW/design-system/LinkList"
 	import { Gallery } from "$lib/NEW/design-system/Gallery"
@@ -32,7 +32,7 @@
 		</section>
 		<icon-divider icon="{value.icon}"></icon-divider>
 		<section>
-			<HtmlContent value={value.content} />
+			<PageContent value={value.content} />
 		</section>
 	</div>
 </ArticlePage>

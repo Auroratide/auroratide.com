@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
-	import { StaticPage } from "$lib/NEW/design-system/pages"
+	import { HtmlContent } from "$lib/NEW/design-system/PageContent"
+	import {PageContent } from "$lib/NEW/design-system/pages"
 	import { attributes, html } from "./content.md"
 	import { page } from "$app/stores"
 
@@ -13,3 +13,4 @@
 		<HtmlContent value={html} />
 	</section>
 </StaticPage>
+PageContent

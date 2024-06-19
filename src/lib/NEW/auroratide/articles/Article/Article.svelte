@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ArticleType } from "../ArticleType"
-	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
+	import { PageContent } from "$lib/NEW/design-system/PageContent"
 	import { Byline } from "$lib/NEW/design-system/Byline"
 	import { LinkList } from "$lib/NEW/design-system/LinkList"
 	import { ArticlePage } from "$lib/NEW/design-system/pages"
@@ -26,6 +26,6 @@
 		{/if}
 	</div>
 	<section slot="content">
-		<HtmlContent value={value.content} />
+		<PageContent value={value.content} />
 	</section>
 </ArticlePage>

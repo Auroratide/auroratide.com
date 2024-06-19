@@ -2,7 +2,7 @@
 	import { Color, Theme } from "$lib/NEW/design-system/Color"
 	import { Routes } from "$lib/NEW/auroratide/routes"
 	import type { ArtType } from "../ArtType"
-	import { HtmlContent } from "$lib/NEW/design-system/HtmlContent"
+	import { PageContent } from "$lib/NEW/design-system/PageContent"
 	import { Byline } from "$lib/NEW/design-system/Byline"
 	import { Button } from "$lib/NEW/design-system/Button"
 	import { PageTitle } from "$lib/NEW/design-system/PageTitle"
@@ -61,7 +61,7 @@
 			<section class="lg:hide summary-next-to-footer">
 				<details bind:this={detailsElem} class="open:hide-summary open:show-surrogate column">
 					<Button summary>Read Details</Button>
-					<HtmlContent value={value.content} />
+					<PageContent value={value.content} />
 				</details>
 				<footer class="row">
 					<span class="surrogate-summary"><Button on:click={toggleDetails}>Hide Details</Button></span>
@@ -69,7 +69,7 @@
 				</footer>
 			</section>
 			<section class="lg:show">
-				<HtmlContent value={value.content} />
+				<PageContent value={value.content} />
 				<footer>
 					<Button href="{Routes.Art.href()}">Back to Art</Button>
 				</footer>
