@@ -189,3 +189,15 @@ img-colorscape img {
 	--t-primary-a: var(--c-brand-adobe);
 	--t-primary-b: var(--c-brand-adobe);
 }
+
+
+/* Print
+ * ======================================================================== */
+@media print {
+	.theme-dark {
+		--t-bg-a: white;
+		--t-bg-b: white;
+		--t-fg-a: black;
+		--t-fg-b: black;
+	}
+}

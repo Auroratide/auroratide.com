@@ -13,7 +13,7 @@
 </script>
 
 <div class="container">
-	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between">
+	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide">
 		<LogoTitle {title} {subtitle}>
 			<slot name="logo"></slot>
 		</LogoTitle>
@@ -22,7 +22,7 @@
 	<main id="main">
 		<slot></slot>
 	</main>
-	<footer aria-label="Site">
+	<footer aria-label="Site" class="print:hide">
 		<p>Footer</p>
 	</footer>
 </div>
@@ -62,6 +62,16 @@
 			flex-direction: column;
 			align-items: stretch;
 			justify-content: flex-start;
+		}
+	}
+
+	@media print {
+		.container {
+			padding: 0;
+		}
+
+		.print\:hide {
+			display: none;
 		}
 	}
 </style>
