@@ -15,7 +15,6 @@ img:
   alt: "A human-like spirit with flames for hair and a ruby protruding from their chest."
   width: 1004
   height: 1300
-background: oklch(30% 0 0)
 summary: "A non-human intelligence with a fiery personality."
 publishedAt: 2021-12-04T12:00:00.000Z
 ---

@@ -14,7 +14,6 @@ img:
   alt: "A titleless cartridge with an ominous, glowing red square on a black background."
   width: 1080
   height: 1080
-background: oklch(30% 0 0)
 summary: "Cartridge cover I made for a local game jam. It's deliberately titleless, to make the cover appear enigmatic."
 publishedAt: 2018-04-08T12:00:00.000Z
 ---

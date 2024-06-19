@@ -14,7 +14,6 @@ img:
   alt: "A blocky Minecraft landscape, except the ground and sky are orange, and the trees red."
   width: 1000
   height: 530
-background: oklch(30% 0 0)
 summary: "Marscraft is a texture pack I made for Minecraft meant to make the world look a lot more like Mars."
 publishedAt: 2013-04-08T12:00:00.000Z
 ---

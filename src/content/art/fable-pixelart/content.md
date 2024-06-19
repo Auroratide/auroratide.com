@@ -13,7 +13,6 @@ img:
   alt: "Pixelart depiction of a girl with pink hair and a sun hat."
   width: 120
   height: 120
-background: oklch(30% 0 0)
 summary: "Fable is a magical hacker in a game a friend and I sporadically develop."
 publishedAt: 2017-12-30T12:00:00.000Z
 ---

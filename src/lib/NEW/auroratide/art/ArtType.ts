@@ -16,7 +16,6 @@ export type ArtType = {
 		width: number
 		height: number
 	},
-	background: string,
 	summary: {
 		short: string,
 	},
@@ -43,7 +42,6 @@ export const mdToSummarizedArt = (attributes: Record<string, unknown>): Summariz
 		width: (attributes as any).img.width as number,
 		height: (attributes as any).img.height as number,
 	},
-	background: attributes.background as string,
 	summary: {
 		short: attributes.summary as string,
 	},

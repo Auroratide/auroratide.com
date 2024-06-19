@@ -15,7 +15,6 @@ img:
   alt: "A pale woman with light-pink hair, magenta armor, and a cord for a belt. Also has a rod-like weapon at her side."
   width: 708
   height: 1584
-background: oklch(30% 0 0)
 summary: "A mech pilot I played in the Lancer TTRPG. She likes bringing a knife to a gun fight."
 publishedAt: 2021-05-22T12:00:00.000Z
 ---

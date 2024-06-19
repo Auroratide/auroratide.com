@@ -15,7 +15,6 @@ img:
   alt: "A girl with pink hair wearing a broad sun hat. She's got a yellow skirt and oversized red coat."
   width: 1773
   height: 2293
-background: oklch(30% 0 0)
 summary: "Fable is a magical hacker in a game a friend and I sporadically develop."
 publishedAt: 2019-01-16T12:00:00.000Z
 ---

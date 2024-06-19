@@ -14,7 +14,6 @@ img:
   alt: "A brown-haired woman with complete heterochromia. One eye is blue and the other green, but the green eye is mostly covered with her hair."
   width: 2099
   height: 5459
-background: oklch(30% 0 0)
 summary: "Aurora is an artificial intelligence put into the body of a dying young girl to, in some sense, save her life."
 publishedAt: 2015-10-03T12:00:00.000Z
 ---

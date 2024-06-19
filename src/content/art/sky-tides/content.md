@@ -16,7 +16,6 @@ img:
   alt: "Four glowing green ribbons of aurorae spanning an indigo sky. Etched into the sky are shadows of jellyfish and a woman with an umbrella, from which the aurorae originate."
   width: 1920
   height: 1080
-background: oklch(22% 0.074 269)
 summary: "A desktop background I drew myself in Krita, representing aurorae as jellyfish arms, and jellyfish as umbrellas."
 publishedAt: 2020-11-06T12:00:00.000Z
 ---

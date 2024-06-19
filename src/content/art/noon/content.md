@@ -16,7 +16,6 @@ img:
   alt: "A woman in long, blue robes with purple hair, wearing a circular religious hat. In her hand is a staff with a glowing orange orb on the end."
   width: 1012
   height: 1885
-background: oklch(30% 0 0)
 summary: "A light domain human cleric for a D&D campaign I am in. She is essentially a sun gun nun."
 publishedAt: 2020-02-15T12:00:00.000Z
 ---

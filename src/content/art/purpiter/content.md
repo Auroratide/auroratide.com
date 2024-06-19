@@ -15,7 +15,6 @@ img:
   alt: "Purple and pink clouds swirl about a planet, twisting into a knot of three deep red storms. An icy blue ring encircles the planet reflecting light from a bright star in the distance."
   width: 1920
   height: 1080
-background: oklch(30% 0 0)
 summary: "A purple gaseous exoplanet in orbit around a blue-white star."
 publishedAt: 2021-07-16T22:00:00.000Z
 ---

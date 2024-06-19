@@ -27,7 +27,7 @@
 <article class="{Theme(value.color)} full-screen grid">
 	<div class="above-image space-away-from-screen-edges">
 		<vector-icon aria-hidden="true" icon="{value.icon}" class="bg-icon"></vector-icon>
-		<div class="scroll-container fit-to-screen column" style:--fit-padding="3em">
+		<div class="scroll-container fit-to-screen column">
 			<header>
 				<PageTitle>{value.title}</PageTitle>
 				<Byline {value} />
@@ -50,7 +50,7 @@
 			</section>
 		</div>
 	</div>
-	<section class="below-text">
+	<section class="below-text space-away-from-screen-edges">
 		<div class="scroll-container fit-to-screen">
 			<img-colorscape {colorscape} class:fit-to-screen={!maximized} class="animate-zoom {pixelart ? Pixelart() : ""}" style:--native-height="{value.img.height}px">
 				<img src="{value.img.src}" alt="{value.img.alt}" loading="lazy" width="{value.img.width}" height="{value.img.height}" />
@@ -111,7 +111,7 @@
 	}
 
 	.fit-to-screen {
-		max-height: calc(100dvh - var(--fit-padding, 2em));
+		max-height: calc(100dvh - 3em);
 	}
 
 	.overlay-button {
