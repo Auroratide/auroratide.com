@@ -90,6 +90,7 @@ import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
 import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie'
 import { faUtensils } from '@fortawesome/free-solid-svg-icons/faUtensils'
+import { faWater } from '@fortawesome/free-solid-svg-icons/faWater'
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons/faAndroid'
 import { faCss3Alt } from '@fortawesome/free-brands-svg-icons/faCss3Alt'
@@ -205,6 +206,7 @@ export const library = {
 	[IconName.Users]: faUsers,
 	[IconName.UserTie]: faUserTie,
 	[IconName.Utensils]: faUtensils,
+	[IconName.Water]: faWater,
 
 	[IconName.Android]: faAndroid,
 	[IconName.Dev]: faDev,

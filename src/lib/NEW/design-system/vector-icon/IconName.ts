@@ -93,6 +93,7 @@ export const IconName = {
 	Users: 'users',
 	UserTie: 'user-tie',
 	Utensils: 'utensils',
+	Water: 'water',
 
 	Android: 'android',
 	Dev: 'dev',
