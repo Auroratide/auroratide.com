@@ -44,6 +44,9 @@
 	--z-base: 1;
 	--z-nav: 10;
 	--z-dialog: 20;
+
+	--grounded: 0 0 0 0 oklch(0% 0 0 / 0.5);
+	--elevated: 0 1em 1em -0.5em oklch(0% 0 0 / 0.5);
 }
 
 /* Base Styles

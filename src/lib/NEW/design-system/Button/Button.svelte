@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { Color } from "../Color"
+	import { Color, Theme, type ThemeName } from "../Color"
 	import type { IconName } from "../vector-icon"
 
 	export let href: string | undefined = undefined
+	export let theme: ThemeName | undefined = undefined
 	export let icon: IconName | undefined = undefined
 	export let summary: boolean = false
 </script>
 
 {#if summary}
-	<summary class="button {Color.text.fg.b} {Color.bg.primary.a}" class:has-icon={icon != null}>
+	<summary class="button {Color.text.fg.b} {Color.bg.primary.a} {theme ? Theme(theme) : ""}" class:has-icon={icon != null}>
 		{#if icon != null}
 			<span class="icon-bg">
 				<vector-icon {icon}></vector-icon>
@@ -17,7 +18,7 @@
 		<span><slot></slot></span>
 	</summary>
 {:else if href != null}
-	<a {href} class="button {Color.text.fg.b} {Color.bg.primary.a}" class:has-icon={icon != null}>
+	<a {href} class="button {Color.text.fg.b} {Color.bg.primary.a} {theme ? Theme(theme) : ""}" class:has-icon={icon != null}>
 		{#if icon != null}
 			<span class="icon-bg">
 				<vector-icon {icon}></vector-icon>
@@ -26,7 +27,7 @@
 		<span><slot></slot></span>
 	</a>
 {:else}
-	<button class="button {Color.text.fg.b} {Color.bg.primary.a}" class:has-icon={icon != null} on:click>
+	<button class="button {Color.text.fg.b} {Color.bg.primary.a} {theme ? Theme(theme) : ""}" class:has-icon={icon != null} on:click>
 		{#if icon != null}
 			<span class="icon-bg">
 				<vector-icon {icon}></vector-icon>

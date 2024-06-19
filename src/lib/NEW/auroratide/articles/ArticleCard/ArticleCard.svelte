@@ -63,17 +63,17 @@
 
 	.lift-on-focus {
 		transition: all 0.2s ease-in-out;
-		box-shadow: 0 0 0 0 oklch(0% 0 0 / 0.5);
+		box-shadow: var(--grounded);
 	}
 
 	.lift-on-focus:hover, .lift-on-focus:focus-within {
 		transform: scale(1.025);
-		box-shadow: 0 1em 1em -0.5em oklch(0% 0 0 / 0.5);
+		box-shadow: var(--elevated);
 	}
 
 	.lift-on-focus:active {
 		transition: all 0.08s ease-out;
 		transform: scale(1);
-		box-shadow: 0 0 0 0 oklch(0% 0 0 / 0.5);
+		box-shadow: var(--grounded);
 	}
 </style>
