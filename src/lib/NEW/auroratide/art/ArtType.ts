@@ -6,6 +6,7 @@ export type ArtType = {
 	title: string,
 	category: string,
 	publishedAt: Date,
+	tags: string[],
 	content: string,
 	icon: IconName,
 	color: ThemeName,
@@ -33,6 +34,7 @@ export const mdToSummarizedArt = (attributes: Record<string, unknown>): Summariz
 	title: attributes.title as string,
 	category: attributes.category as string,
 	publishedAt: new Date(attributes.publishedAt as string),
+	tags: attributes.tags as string[],
 	icon: attributes.icon as IconName,
 	color: attributes.color as ThemeName,
 	img: {

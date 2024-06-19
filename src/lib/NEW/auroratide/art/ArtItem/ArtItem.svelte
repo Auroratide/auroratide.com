@@ -7,8 +7,13 @@
 	import { Button } from "$lib/NEW/design-system/Button"
 	import { PageTitle } from "$lib/NEW/design-system/PageTitle"
 	import { VisuallyHidden } from "$lib/NEW/design-system/VisuallyHidden"
+	import { isPixelart } from "../is-pixelart"
+	import { Pixelart } from "$lib/NEW/design-system/Pixelart"
 
 	export let value: ArtType
+
+	$: pixelart = isPixelart(value)
+	$: colorscape = pixelart ? value.img.src : Routes.Art.colorscape(value.id)
 
 	let maximized = false
 	const toggleMaximization = () => maximized = !maximized
@@ -47,7 +52,7 @@
 	</div>
 	<section class="below-text">
 		<div class="scroll-container fit-to-screen">
-			<img-colorscape colorscape="{Routes.Art.colorscape(value.id)}" class:fit-to-screen={!maximized} class="animate-zoom" style:--native-height="{value.img.height}px">
+			<img-colorscape {colorscape} class:fit-to-screen={!maximized} class="animate-zoom {pixelart ? Pixelart() : ""}" style:--native-height="{value.img.height}px">
 				<img src="{value.img.src}" alt="{value.img.alt}" loading="lazy" width="{value.img.width}" height="{value.img.height}" />
 			</img-colorscape>
 		</div>
@@ -177,5 +182,4 @@
 			display: none;
 		}
 	}
-	
 </style>

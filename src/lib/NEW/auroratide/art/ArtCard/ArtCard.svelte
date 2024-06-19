@@ -2,15 +2,19 @@
 	import type { SummarizedArt } from "../ArtType"
 	import { Color, Theme } from "$lib/NEW/design-system/Color"
 	import { Routes } from "$lib/NEW/auroratide/routes"
+	import { isPixelart } from "../is-pixelart"
+	import { Pixelart } from "$lib/NEW/design-system/Pixelart"
 
 	export let value: SummarizedArt
+	$: pixelart = isPixelart(value)
+	$: colorscape = pixelart ? Routes.Art.cover.main(value.id) : Routes.Art.cover.colorscape(value.id)
 </script>
 
 <article aria-labelledby="{value.id}" class="{Theme(value.color)} {Color.bg.bg.b} {Color.border.primary.a} border-after column lift-on-focus">
 	<h2 id="{value.id}" class="balance no-margin overlay-bottom title-padding text-center">
 		<a href="{Routes.Art.href(value.id)}" class="{Color.text.fg.b} no-underline">{value.title}</a>
 	</h2>
-	<img-colorscape colorscape="{Routes.Art.cover.colorscape(value.id)}">
+	<img-colorscape {colorscape} class="{pixelart ? Pixelart() : ""}">
 		<img src="{Routes.Art.cover.main(value.id)}" alt="{value.img.alt}" loading="lazy" width="400" height="400" />
 	</img-colorscape>
 	<a href="{Routes.Art.href(value.id)}" class="{Color.text.fg.b} card-link" aria-hidden="true" tabindex="-1">{value.title}</a>

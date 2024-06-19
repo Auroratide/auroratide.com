@@ -13,6 +13,7 @@ import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faBoxes } from '@fortawesome/free-solid-svg-icons/faBoxes'
+import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher'
@@ -62,11 +63,13 @@ import { faNewspaper } from '@fortawesome/free-solid-svg-icons/faNewspaper'
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
+import { faPaw } from '@fortawesome/free-solid-svg-icons/faPaw'
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle'
+import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
 import { faServer } from '@fortawesome/free-solid-svg-icons/faServer'
@@ -126,6 +129,7 @@ export const library = {
 	[IconName.Book]: faBook,
 	[IconName.BookOpen]: faBookOpen,
 	[IconName.Boxes]: faBoxes,
+	[IconName.Brain]: faBrain,
 	[IconName.Calculator]: faCalculator,
 	[IconName.CandyCane]: faCandyCane,
 	[IconName.ChalkboardTeacher]: faChalkboardTeacher,
@@ -177,11 +181,13 @@ export const library = {
 	[IconName.PaintBrush]: faPaintBrush,
 	[IconName.Palette]: faPalette,
 	[IconName.Pause]: faPause,
+	[IconName.Paw]: faPaw,
 	[IconName.Phone]: faPhone,
 	[IconName.Play]: faPlay,
 	[IconName.Plus]: faPlus,
 	[IconName.ProjectDiagram]: faProjectDiagram,
 	[IconName.QuestionCircle]: faQuestionCircle,
+	[IconName.Rocket]: faRocket,
 	[IconName.SearchPlus]: faSearchPlus,
 	[IconName.Seedling]: faSeedling,
 	[IconName.Server]: faServer,
