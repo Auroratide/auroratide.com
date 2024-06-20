@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { StaticPage } from "$lib/NEW/design-system/pages"
+	import { StaticPage } from "$lib/design-system/pages"
 	import { page } from "$app/stores"
 
 	import Palette from './Palette.svelte'

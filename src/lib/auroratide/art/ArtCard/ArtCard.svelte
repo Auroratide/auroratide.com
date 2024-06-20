@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { SummarizedArt } from "../ArtType"
-	import { Color, Theme } from "$lib/NEW/design-system/Color"
-	import { Routes } from "$lib/NEW/auroratide/routes"
+	import { Color, Theme } from "$lib/design-system/Color"
+	import { Routes } from "$lib/auroratide/routes"
 	import { isPixelart } from "../is-pixelart"
-	import { Pixelart } from "$lib/NEW/design-system/Pixelart"
+	import { Pixelart } from "$lib/design-system/Pixelart"
 
 	export let value: SummarizedArt
 	$: pixelart = isPixelart(value)

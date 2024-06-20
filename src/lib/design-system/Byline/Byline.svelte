@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DateDisplay } from "$lib/NEW/design-system/DateDisplay"
+	import { DateDisplay } from "$lib/design-system/DateDisplay"
 
 	export let value: {
 		publishedAt: Date,

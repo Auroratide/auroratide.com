@@ -1,6 +1,6 @@
 import type { LayoutLoad } from "./$types"
-import { mdToSummarizedArt, type SummarizedArt } from "$lib/NEW/auroratide/art"
-import { byPublishedAt } from "$lib/NEW/auroratide/art/sort"
+import { mdToSummarizedArt, type SummarizedArt } from "$lib/auroratide/art"
+import { byPublishedAt } from "$lib/auroratide/art/sort"
 
 export const load: LayoutLoad = async () => {
 	const modules = import.meta.glob("$content/art/*/content.md")

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { ArticleType } from "../ArticleType"
-	import { PageContent } from "$lib/NEW/design-system/PageContent"
-	import { Byline } from "$lib/NEW/design-system/Byline"
-	import { LinkList } from "$lib/NEW/design-system/LinkList"
-	import { ArticlePage } from "$lib/NEW/design-system/pages"
+	import { PageContent } from "$lib/design-system/PageContent"
+	import { Byline } from "$lib/design-system/Byline"
+	import { LinkList } from "$lib/design-system/LinkList"
+	import { ArticlePage } from "$lib/design-system/pages"
 	import { Routes } from "../../routes"
 
 	export let value: ArticleType

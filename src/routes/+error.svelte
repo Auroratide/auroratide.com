@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import { Routes } from '$lib/NEW/auroratide/routes'
-	import { Button } from '$lib/NEW/design-system/Button'
-	import { ErrorPage } from '$lib/NEW/design-system/pages'
+	import { Routes } from '$lib/auroratide/routes'
+	import { Button } from '$lib/design-system/Button'
+	import { ErrorPage } from '$lib/design-system/pages'
 
 	let title: string = ""
 	let message: string = ""

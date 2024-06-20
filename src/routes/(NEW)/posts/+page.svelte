@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	import { ArticleCard } from "$lib/NEW/auroratide/articles/ArticleCard"
-	import { ListPage } from "$lib/NEW/design-system/pages"
+	import { ArticleCard } from "$lib/auroratide/articles/ArticleCard"
+	import { ListPage } from "$lib/design-system/pages"
 	import { page } from "$app/stores"
-	import { ArticleCategories } from "$lib/NEW/auroratide/articles/Category"
+	import { ArticleCategories } from "$lib/auroratide/articles/Category"
 
 	export let data: PageData
 </script>

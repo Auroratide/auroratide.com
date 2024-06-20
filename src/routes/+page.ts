@@ -1,6 +1,6 @@
 import type { PageLoad } from "./$types"
-import { mdToSummarizedArticle, type SummarizedArticle } from "$lib/NEW/auroratide/articles"
-import { byPublishedAt } from "$lib/NEW/auroratide/articles/sort"
+import { mdToSummarizedArticle, type SummarizedArticle } from "$lib/auroratide/articles"
+import { byPublishedAt } from "$lib/auroratide/articles/sort"
 
 export const load: PageLoad = async () => {
 	const modules = import.meta.glob("$content/posts/*/content.md")

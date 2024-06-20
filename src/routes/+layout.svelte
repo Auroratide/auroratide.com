@@ -1,19 +1,19 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
-	import { SiteInfo } from "$lib/NEW/design-system/SiteInfo"
+	import { SiteInfo } from "$lib/design-system/SiteInfo"
 
-	import "$lib/NEW/design-system/major-point/style.css"
-	import "$lib/NEW/design-system/point-compilation/style.css"
-	import "$lib/NEW/design-system/slide-show/style.css"
+	import "$lib/design-system/major-point/style.css"
+	import "$lib/design-system/point-compilation/style.css"
+	import "$lib/design-system/slide-show/style.css"
 
 	if (browser) {
 		import("@auroratide/img-zoom/lib/define.js")
 
-		import("$lib/NEW/design-system/icon-divider/define.js")
-		import("$lib/NEW/design-system/major-point/define.js")
-		import("$lib/NEW/design-system/point-compilation/define.js")
-		import("$lib/NEW/design-system/slide-show/define.js")
-		import("$lib/NEW/design-system/vector-icon/define.js")
+		import("$lib/design-system/icon-divider/define.js")
+		import("$lib/design-system/major-point/define.js")
+		import("$lib/design-system/point-compilation/define.js")
+		import("$lib/design-system/slide-show/define.js")
+		import("$lib/design-system/vector-icon/define.js")
 	}
 
 	SiteInfo.set({

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import * as Nimcard from '@auroratide/nimcard'
 	import { onMount } from 'svelte'
-	import { Loading } from "$lib/NEW/design-system/Loading"
+	import { Loading } from "$lib/design-system/Loading"
 	import { browser } from '$app/environment'
-	import { StaticPage } from '$lib/NEW/design-system/pages'
+	import { StaticPage } from '$lib/design-system/pages'
 	import { page } from "$app/stores"
 
 	const scoring = Nimcard.Board.standardScoring

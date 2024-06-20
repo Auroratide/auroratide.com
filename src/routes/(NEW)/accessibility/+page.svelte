@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { PageContent } from "$lib/NEW/design-system/PageContent"
-	import { StaticPage } from "$lib/NEW/design-system/pages"
+	import { PageContent } from "$lib/design-system/PageContent"
+	import { StaticPage } from "$lib/design-system/pages"
 	import { attributes, html } from "./content.md"
 	import { page } from "$app/stores"
 

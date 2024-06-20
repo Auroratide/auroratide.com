@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { StaticPage } from '$lib/NEW/design-system/pages'
+	import { StaticPage } from '$lib/design-system/pages'
 	import { page } from "$app/stores"
 	import WhodokuWidget from './WhodokuWidget.svelte'
-	import { PageContent } from '$lib/NEW/design-system/PageContent'
+	import { PageContent } from '$lib/design-system/PageContent'
 </script>
 
 <div style:text-align="center">

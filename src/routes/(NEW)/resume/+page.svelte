@@ -5,7 +5,7 @@
 	import Education from './Education.svelte'
 	import Experience from './Experience.svelte'
 	import FunFacts from './FunFacts.svelte'
-	import { PageMeta } from "$lib/NEW/design-system/PageMeta"
+	import { PageMeta } from "$lib/design-system/PageMeta"
 </script>
 
 <PageMeta pagetitle="Timothy Foster's Resume" description="Timothy Foster's resume and qualifications." />

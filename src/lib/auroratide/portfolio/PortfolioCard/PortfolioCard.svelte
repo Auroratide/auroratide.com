@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { SummarizedPortfolio } from "../PortfolioType"
-	import { Byline } from "$lib/NEW/design-system/Byline"
-	import { Color, Theme } from "$lib/NEW/design-system/Color"
-	import { Routes } from "$lib/NEW/auroratide/routes"
+	import { Byline } from "$lib/design-system/Byline"
+	import { Color, Theme } from "$lib/design-system/Color"
+	import { Routes } from "$lib/auroratide/routes"
 
 	export let value: SummarizedPortfolio
 </script>

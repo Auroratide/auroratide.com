@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	import { PortfolioCard } from "$lib/NEW/auroratide/portfolio/PortfolioCard"
-	import { ListPage } from "$lib/NEW/design-system/pages"
-	import { PortfolioCategories } from "$lib/NEW/auroratide/portfolio/Category"
+	import { PortfolioCard } from "$lib/auroratide/portfolio/PortfolioCard"
+	import { ListPage } from "$lib/design-system/pages"
+	import { PortfolioCategories } from "$lib/auroratide/portfolio/Category"
 	import { page } from "$app/stores"
 
 	export let data: PageData

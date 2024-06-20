@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { PortfolioType } from "../PortfolioType"
-	import { PageContent } from "$lib/NEW/design-system/PageContent"
-	import { Byline } from "$lib/NEW/design-system/Byline"
-	import { LinkList } from "$lib/NEW/design-system/LinkList"
-	import { Gallery } from "$lib/NEW/design-system/Gallery"
-	import { ArticlePage } from "$lib/NEW/design-system/pages"
-	import { Routes } from "$lib/NEW/auroratide/routes"
+	import { PageContent } from "$lib/design-system/PageContent"
+	import { Byline } from "$lib/design-system/Byline"
+	import { LinkList } from "$lib/design-system/LinkList"
+	import { Gallery } from "$lib/design-system/Gallery"
+	import { ArticlePage } from "$lib/design-system/pages"
+	import { Routes } from "$lib/auroratide/routes"
 
 	export let value: PortfolioType
 </script>

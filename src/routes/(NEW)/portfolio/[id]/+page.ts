@@ -1,5 +1,5 @@
 import type { PageLoad } from "./$types"
-import { mdToPortfolio } from "$lib/NEW/auroratide/portfolio"
+import { mdToPortfolio } from "$lib/auroratide/portfolio"
 
 export const load: PageLoad = async ({ params }) => {
 	const id = params.id

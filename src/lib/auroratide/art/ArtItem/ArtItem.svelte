@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { Color, Theme } from "$lib/NEW/design-system/Color"
-	import { Routes } from "$lib/NEW/auroratide/routes"
+	import { Color, Theme } from "$lib/design-system/Color"
+	import { Routes } from "$lib/auroratide/routes"
 	import type { ArtType } from "../ArtType"
-	import { PageContent } from "$lib/NEW/design-system/PageContent"
-	import { Byline } from "$lib/NEW/design-system/Byline"
-	import { Button } from "$lib/NEW/design-system/Button"
-	import { PageTitle } from "$lib/NEW/design-system/PageTitle"
-	import { VisuallyHidden } from "$lib/NEW/design-system/VisuallyHidden"
+	import { PageContent } from "$lib/design-system/PageContent"
+	import { Byline } from "$lib/design-system/Byline"
+	import { Button } from "$lib/design-system/Button"
+	import { PageTitle } from "$lib/design-system/PageTitle"
+	import { VisuallyHidden } from "$lib/design-system/VisuallyHidden"
 	import { isPixelart } from "../is-pixelart"
-	import { Pixelart } from "$lib/NEW/design-system/Pixelart"
-	import { PageMeta } from "$lib/NEW/design-system/PageMeta"
-	import type { OpenGraph } from "$lib/NEW/design-system/OpenGraph"
-	import { SiteInfo } from "$lib/NEW/design-system/SiteInfo"
+	import { Pixelart } from "$lib/design-system/Pixelart"
+	import { PageMeta } from "$lib/design-system/PageMeta"
+	import type { OpenGraph } from "$lib/design-system/OpenGraph"
+	import { SiteInfo } from "$lib/design-system/SiteInfo"
 
 	export let value: ArtType
 

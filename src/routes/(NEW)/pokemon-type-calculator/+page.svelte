@@ -3,9 +3,9 @@
 	import { defensiveMultipliers } from '@auroratide/pokemon-types'
 	import TypeOption from './TypeOption.svelte'
 	import Multipliers from './Multipliers.svelte'
-	import { StaticPage } from '$lib/NEW/design-system/pages'
+	import { StaticPage } from '$lib/design-system/pages'
 	import { page } from "$app/stores"
-    import { PageContent } from '$lib/NEW/design-system/PageContent';
+    import { PageContent } from '$lib/design-system/PageContent';
 
 	const allTypes: PokemonType[] = ['normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost', 'steel', 'fire', 'water', 'grass', 'electric', 'psychic', 'ice', 'dragon', 'dark', 'fairy']
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from '$lib/NEW/design-system/Button'
+	import { Button } from '$lib/design-system/Button'
 	import SquareImg from './SquareImg.svelte'
 	import { Sudoku, SudokuValue } from './Sudoku'
 

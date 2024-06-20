@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Logo } from "$lib/NEW/auroratide/Logo"
-	import { Nav } from "$lib/NEW/auroratide/routes"
-	import { PageLayout } from "$lib/NEW/design-system/PageLayout"
+	import { Logo } from "$lib/auroratide/Logo"
+	import { Nav } from "$lib/auroratide/routes"
+	import { PageLayout } from "$lib/design-system/PageLayout"
 </script>
 
 <PageLayout nav={Nav}>

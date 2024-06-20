@@ -1,5 +1,5 @@
-import type { ThemeName } from "$lib/NEW/design-system/Color"
-import type { IconName } from "$lib/NEW/design-system/vector-icon"
+import type { ThemeName } from "$lib/design-system/Color"
+import type { IconName } from "$lib/design-system/vector-icon"
 
 export type ArticleType = {
 	id: string,

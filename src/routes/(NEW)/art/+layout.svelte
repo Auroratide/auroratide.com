@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	import { ArtCard } from "$lib/NEW/auroratide/art/ArtCard"
-	import { TransparentList } from "$lib/NEW/design-system/TransparentList"
+	import { ArtCard } from "$lib/auroratide/art/ArtCard"
+	import { TransparentList } from "$lib/design-system/TransparentList"
 
 	export let data: PageData
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	import { Article } from "$lib/NEW/auroratide/articles/Article"
+	import { Article } from "$lib/auroratide/articles/Article"
 	import { page } from "$app/stores"
 
 	export let data: PageData

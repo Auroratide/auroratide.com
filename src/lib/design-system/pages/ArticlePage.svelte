@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { IconName } from "../vector-icon"
-	import { Color, Theme, type ThemeName } from "$lib/NEW/design-system/Color"
+	import { Color, Theme, type ThemeName } from "$lib/design-system/Color"
 	import { PageTitle } from "../PageTitle"
 	import { PageMeta } from "../PageMeta"
 	import type { OpenGraph } from "../OpenGraph"

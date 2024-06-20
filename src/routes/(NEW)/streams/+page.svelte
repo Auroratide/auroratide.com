@@ -1,5 +1,5 @@
 <script>
-	import { StaticPage } from "$lib/NEW/design-system/pages"
+	import { StaticPage } from "$lib/design-system/pages"
 	import { page } from "$app/stores"
 </script>
 

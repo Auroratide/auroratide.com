@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Theme } from "$lib/NEW/design-system/Color"
+	import { Theme } from "$lib/design-system/Color"
 	import { Button } from "../Button"
 	import { TransparentList } from "../TransparentList"
 	import type { LinkListLink } from "./LinkListLink"
