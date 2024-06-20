@@ -14,6 +14,12 @@ export const Routes = {
 		},
 		colorscape: (id: string) => `/art/${id}/colorscape.svg`,
 	},
+	Stories: {
+		href: (id?: string) => `/stories${id == null ? "" : "/" + id}`,
+	},
+	Streams: {
+		href: () => "/streams",
+	}
 } as const
 
 export const Nav = [ {
@@ -21,13 +27,13 @@ export const Nav = [ {
 	name: "Content I Wrote",
 }, {
 	href: Routes.Portfolio.href(),
-	name: "Stuff I Built",
+	name: "Everything I've Built",
 }, {
-	href: Routes.Posts.href(),
-	name: "Games I Designed",
+	href: Routes.Stories.href(),
+	name: "Stories I Authored",
 }, {
-	href: Routes.Posts.href(),
-	name: "Tools I Made",
+	href: Routes.Streams.href(),
+	name: "Streams, Maybe",
 }, {
 	href: Routes.Art.href(),
 	name: "Art I Drew",
