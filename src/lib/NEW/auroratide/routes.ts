@@ -1,4 +1,7 @@
 export const Routes = {
+	Home: {
+		href: () => "/",
+	},
 	Posts: {
 		href: (id?: string) => `/posts${id == null ? "" : "/" + id}`,
 	},

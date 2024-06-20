@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { SiteInfo } from "../SiteInfo"
+	import { SkipLink } from "../SkipLink"
 	import LogoTitle from "./LogoTitle.svelte"
 	import type { NavItem } from "./NavItem"
 	import Navigation from "./Navigation.svelte"
@@ -12,6 +13,7 @@
 	} = SiteInfo.get()
 </script>
 
+<SkipLink />
 <div class="container">
 	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide">
 		<LogoTitle {title} {subtitle}>

@@ -29,6 +29,7 @@ import { faDragon } from '@fortawesome/free-solid-svg-icons/faDragon'
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle'
 import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons/faExpandArrowsAlt'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
 import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter'
@@ -147,6 +148,7 @@ export const library = {
 	[IconName.EllipsisH]: faEllipsisH,
 	[IconName.Envelope]: faEnvelope,
 	[IconName.ExchangeAlt]: faExchangeAlt,
+	[IconName.ExclamationTriangle]: faExclamationTriangle,
 	[IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
 	[IconName.EyeDropper]: faEyeDropper,
 	[IconName.Filter]: faFilter,

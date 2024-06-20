@@ -1,11 +1,17 @@
-import type { PageLoad } from './$types'
-import PostsApi from '$lib/posts/api'
+import type { PageLoad } from "./$types"
+import { mdToSummarizedArticle, type SummarizedArticle } from "$lib/NEW/auroratide/articles"
+import { byPublishedAt } from "$lib/NEW/auroratide/articles/sort"
 
-export const load: PageLoad = async ({ fetch }) => {
-    const api = new PostsApi(fetch)
-    const all = await api.list()
+export const load: PageLoad = async () => {
+	const modules = import.meta.glob("$content/posts/*/content.md")
 
-    return {
-        all,
-    }
+	const values: SummarizedArticle[] = await Promise.all(
+		Object.values(modules).map((imp) =>
+			imp().then((module: any) => mdToSummarizedArticle(module.attributes))
+		)
+	)
+
+	return {
+		values: values.toSorted(byPublishedAt),
+	}
 }

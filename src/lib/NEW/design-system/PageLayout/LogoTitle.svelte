@@ -7,7 +7,7 @@
 
 <section class="grid">
 	<div style:grid-area="logo" class="svg-full-height" aria-hidden="true">
-		<a href="/">
+		<a href="/" tabindex="-1">
 			<slot></slot>
 		</a>
 	</div>

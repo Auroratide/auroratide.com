@@ -31,6 +31,7 @@ export const IconName = {
 	EllipsisH: 'ellipsis-h',
 	Envelope: 'envelope',
 	ExchangeAlt: 'exchange-alt',
+	ExclamationTriangle: 'exclamation-triangle',
 	ExpandArrowsAlt: 'expand-arrows-alt',
 	EyeDropper: 'eye-dropper',
 	Filter: 'filter',

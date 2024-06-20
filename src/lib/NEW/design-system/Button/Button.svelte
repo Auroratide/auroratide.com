@@ -18,7 +18,7 @@
 		<span><slot></slot></span>
 	</summary>
 {:else if href != null}
-	<a {href} class="button {Color.text.fg.b} {Color.bg.primary.a} {theme ? Theme(theme) : ""}" class:has-icon={icon != null}>
+	<a {href} class="button {Color.text.fg.b} {Color.bg.primary.a} {theme ? Theme(theme) : ""}" class:has-icon={icon != null} on:click>
 		{#if icon != null}
 			<span class="icon-bg">
 				<vector-icon {icon}></vector-icon>
