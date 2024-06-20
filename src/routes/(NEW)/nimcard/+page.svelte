@@ -32,21 +32,17 @@
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/playing-card@0.1.1/lib/define.js"></external-resource>
 <external-resource type="js-module" src="https://unpkg.com/@auroratide/nimcard@0.1.4/component/lib/define.js"></external-resource>
 <external-resource type="css" src="https://unpkg.com/@auroratide/nimcard@0.1.4/component/lib/style.css"></external-resource>
-<div class="center">
-	<StaticPage title="Nimcard" description="A strategy card game" pathname={$page.url.pathname}>
-		<section slot="content">
-			{#if loading}
-				<Loading large text="Dealing cards..." />
-			{:else}
-				<nimcard-game use:nimcard aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
-			{/if}
-		</section>
-	</StaticPage>
-</div>
+<StaticPage centered title="Nimcard" description="A strategy card game" pathname={$page.url.pathname}>
+	<section slot="content">
+		{#if loading}
+			<Loading large text="Dealing cards..." />
+		{:else}
+			<nimcard-game use:nimcard aiworker="/assets/nimcard/ai-worker.js"></nimcard-game>
+		{/if}
+	</section>
+</StaticPage>
 
 <style>
-	.center { text-align: center; }
-
 	:global(nimcard-game) {
 		font-size: 1rem;
 	}

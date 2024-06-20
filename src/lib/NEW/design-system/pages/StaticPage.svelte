@@ -7,6 +7,7 @@
 	export let title: string
 	export let description: string
 	export let pathname: string
+	export let centered: boolean = false
 
 	const {
 		title: sitetitle,
@@ -25,7 +26,7 @@
 </script>
 
 <PageMeta pagetitle={title} {description} {opengraph} />
-<header class="medium-space-after">
+<header class="medium-space-after" class:centered>
 	<PageTitle>{title}</PageTitle>
 </header>
 <slot name="content"></slot>
@@ -35,4 +36,6 @@
 		min-height: 5em;
 		margin-block-end: 1em;
 	}
+
+	.centered { text-align: center; }
 </style>

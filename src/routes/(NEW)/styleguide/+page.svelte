@@ -6,7 +6,7 @@
 	import Shade from './Shade.svelte'
 </script>
 
-<StaticPage title="Styleguide" description="My color and branding standards." pathname={$page.url.pathname}>
+<StaticPage centered title="Styleguide" description="My color and branding standards." pathname={$page.url.pathname}>
 	<section slot="content" class="palettes">
 		<Palette name="Blue">
 			<Shade label="Dark" value="oklch(55% 0.119 250)" />
