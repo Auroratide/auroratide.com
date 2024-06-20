@@ -1,3 +1,6 @@
+import type { ThemeName } from "../design-system/Color"
+import { IconName } from "../design-system/vector-icon/IconName"
+
 export const Routes = {
 	Home: {
 		href: () => "/",
@@ -24,6 +27,34 @@ export const Routes = {
 		href: () => "/streams",
 	}
 } as const
+
+export type SocialLink = {
+	name: string,
+	icon: IconName,
+	color: ThemeName,
+	href: string,
+}
+
+export const Socials = {
+	LinkedIn: {
+		name: 'Linked In',
+		icon: IconName.LinkedIn,
+		color: "linked-in",
+		href: "https://www.linkedin.com/in/timothy-foster-224946120",
+	},
+	Github: {
+		name: 'Github',
+		icon: IconName.GithubAlt,
+		color: "github",
+		href: "https://github.com/Auroratide",
+	},
+	StackOverflow: {
+		name: 'Stack Overflow',
+		icon: IconName.StackOverflow,
+		color: "stack-overflow",
+		href: "https://stackoverflow.com/users/6163066/auroratide",
+	},
+} satisfies Record<string, SocialLink>
 
 export const Nav = [ {
 	href: Routes.Posts.href(),
