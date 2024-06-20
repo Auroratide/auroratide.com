@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { socials } from '$lib/routes'
+	import { Socials } from '$lib/auroratide/routes'
 </script>
 
 <address>
 	<ul>
 		<li><vector-icon icon="envelope" label="Email"></vector-icon> <a href="mailto:tf.auroratide@gmail.com">tf.auroratide@gmail.com</a></li>
-		<li><vector-icon icon="github" label="Github"></vector-icon> <a href={socials.Github.link}>github.com/Auroratide</a></li>
-		<li><vector-icon icon="linked-in" label="LinkedIn"></vector-icon> <a href={socials.LinkedIn.link}>timothy-foster-224946120</a></li>
+		<li><vector-icon icon="github" label="Github"></vector-icon> <a href={Socials.Github.href}>github.com/Auroratide</a></li>
+		<li><vector-icon icon="linked-in" label="LinkedIn"></vector-icon> <a href={Socials.LinkedIn.href}>timothy-foster-224946120</a></li>
 		<li><vector-icon icon="hammer" label="Portfolio"></vector-icon> <a href="https://auroratide.com">auroratide.com</a></li>
 	</ul>
 </address>
