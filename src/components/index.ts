@@ -1,7 +1,6 @@
 import '@auroratide/img-popout'
 
 import './ConnectNineDots'
-import './DateDisplay'
 import './DecrementorWidget'
 import './ExternalResource'
 import './ImageSteganographer'
