@@ -25,7 +25,16 @@ export const Routes = {
 	},
 	Streams: {
 		href: () => "/streams",
-	}
+	},
+	Accessibility: {
+		href: () => "/accessibility",
+	},
+	Legal: {
+		href: () => "/legal",
+	},
+	Resume: {
+		href: () => "/resume",
+	},
 } as const
 
 export type SocialLink = {
@@ -56,7 +65,7 @@ export const Socials = {
 	},
 } satisfies Record<string, SocialLink>
 
-export const Nav = [ {
+export const MainNav = [ {
 	href: Routes.Posts.href(),
 	name: "Content I Wrote",
 }, {
@@ -71,4 +80,30 @@ export const Nav = [ {
 }, {
 	href: Routes.Art.href(),
 	name: "Art I Drew",
+} ]
+
+export const FooterNav = [ {
+	href: Routes.Posts.href(),
+	name: "Posts",
+}, {
+	href: Routes.Portfolio.href(),
+	name: "Portfolio",
+}, {
+	href: Routes.Stories.href(),
+	name: "Stories",
+}, {
+	href: Routes.Streams.href(),
+	name: "Streams",
+}, {
+	href: Routes.Art.href(),
+	name: "Art",
+}, {
+	href: Routes.Accessibility.href(),
+	name: "Accessibility",
+}, {
+	href: Routes.Legal.href(),
+	name: "Legal",
+}, {
+	href: Routes.Resume.href(),
+	name: "Resume",
 } ]

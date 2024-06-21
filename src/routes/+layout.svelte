@@ -25,7 +25,7 @@
 		},
 		url: "https://auroratide.com",
 		author: {
-			name: "Auroratide, Timothy Foster",
+			name: "Auroratide",
 			url: "https://auroratide.com",
 		},
 	})

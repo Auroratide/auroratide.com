@@ -1,11 +1,13 @@
 <script lang="ts">
+    import { PageFooter } from "../PageFooter";
 	import { SiteInfo } from "../SiteInfo"
 	import { SkipLink } from "../SkipLink"
 	import LogoTitle from "./LogoTitle.svelte"
 	import type { NavItem } from "./NavItem"
 	import Navigation from "./Navigation.svelte"
 
-	export let nav: NavItem[]
+	export let headerNav: NavItem[]
+	export let footerNav: NavItem[]
 
 	const {
 		title,
@@ -19,14 +21,14 @@
 		<LogoTitle {title} {subtitle}>
 			<slot name="logo"></slot>
 		</LogoTitle>
-		<Navigation {nav} />
+		<Navigation nav={headerNav} />
 	</header>
 	<main id="main">
 		<slot></slot>
 	</main>
-	<footer aria-label="Site" class="print:hide">
-		<p>Footer</p>
-	</footer>
+	<PageFooter nav={footerNav}>
+		<slot name="footer"></slot>
+	</PageFooter>
 </div>
 
 <style>
