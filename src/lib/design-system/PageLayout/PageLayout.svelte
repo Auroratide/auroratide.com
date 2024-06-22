@@ -39,6 +39,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
+		overflow: hidden;
 	}
 
 	.row {

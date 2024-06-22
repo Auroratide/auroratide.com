@@ -50,7 +50,7 @@
 
 	.flexible-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(calc(var(--item-width) - 1em), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--item-width) - 1em)), 1fr));
 		column-gap: 1em;
 		row-gap: 0;
 	}
