@@ -190,6 +190,20 @@ img-colorscape img {
 	--t-primary-b: var(--c-brand-adobe);
 }
 
+.theme-linked-in {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-linked-in);
+	--t-primary-b: var(--c-brand-linked-in);
+}
+
+.theme-stack-overflow {
+	--t-fg-a: oklch(100% 0 0);
+	--t-fg-b: oklch(100% 0 0);
+	--t-primary-a: var(--c-brand-stack-overflow);
+	--t-primary-b: var(--c-brand-stack-overflow);
+}
+
 
 /* Print
  * ======================================================================== */

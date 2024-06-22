@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { DateDisplay } from "$lib/design-system/DateDisplay"
+	import { BulletDivider } from "../BulletDivider"
 
 	export let value: {
 		publishedAt: Date,
@@ -9,7 +10,7 @@
 
 <small class="row">
 	<DateDisplay value={value.publishedAt} />
-	<span class="large">&bull;</span>
+	<BulletDivider />
 	<span class="capital">{value.category}</span>
 </small>
 
@@ -17,12 +18,6 @@
 	.row {
 		display: flex;
 		gap: 0.75ch;
-	}
-
-	.large {
-		font-size: 2em;
-		font-weight: bold;
-		line-height: 0.5em;
 	}
 
 	.capital { text-transform: capitalize; }

@@ -40,7 +40,12 @@
 	}
 
 	.small-text { font-size: 0.875em; }
-	a { text-decoration: none; }
+	a {
+		text-decoration: none;
+	} a:hover, a:focus {
+		color: var(--t-fg-b);
+		text-decoration: underline;
+	}
 
 	.no-space { margin: 0; }
 

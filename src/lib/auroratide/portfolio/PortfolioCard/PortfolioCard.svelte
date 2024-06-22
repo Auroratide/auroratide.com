@@ -3,6 +3,7 @@
 	import { Byline } from "$lib/design-system/Byline"
 	import { Color, Theme } from "$lib/design-system/Color"
 	import { Routes } from "$lib/auroratide/routes"
+	import { BulletDivider } from "$lib/design-system/BulletDivider"
 
 	export let value: SummarizedPortfolio
 </script>
@@ -15,7 +16,7 @@
 		<p class="no-margin space-above small relative row align-start">
 			<span class="row">
 				<span class="capital">{value.category}</span>
-				<span class="large-bullet">&bull;</span>
+				<BulletDivider />
 			</span>
 			<span>{value.summary.display}</span>
 		</p>
@@ -116,12 +117,6 @@
 	.small {
 		font-size: 0.875em;
 		line-height: 1.25em;
-	}
-
-	.large-bullet {
-		font-size: 2em;
-		font-weight: bold;
-		line-height: 0.5em;
 	}
 
 	.align-to-grid {
