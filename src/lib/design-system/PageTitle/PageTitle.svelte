@@ -10,7 +10,7 @@
 	.very-large { font-size: 2.5em; }
 
 	.topmost-item-spacing {
-		margin-block-start: 0;
+		margin-block: 0;
 		line-height: 1em;
 	}
 

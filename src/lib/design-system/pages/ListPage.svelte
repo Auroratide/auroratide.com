@@ -1,4 +1,5 @@
-<script lang="ts" generics="T extends { id: string }">
+<script lang="ts" generics="T extends { id: string, category?: string }">
+	import { SimpleCheckboxList } from "../SimpleCheckboxList"
 	import type { OpenGraph } from "../OpenGraph"
 	import { PageMeta } from "../PageMeta"
 	import { PageTitle } from "../PageTitle"
@@ -8,9 +9,11 @@
 	export let title: string
 	export let description: string
 	export let pathname: string
-	export let categories: string[]
+	export let categories: string[] | undefined = undefined
 	export let items: T[]
 	export let columns: number = 1
+
+	let activeCategories: string[] = []
 
 	const {
 		title: sitetitle,
@@ -31,12 +34,19 @@
 <PageMeta pagetitle={title} {description} {opengraph} />
 <header class="medium-space-after">
 	<PageTitle>{title}</PageTitle>
+	{#if categories}
+		<div class="smaller">
+			<SimpleCheckboxList label="Categories" options={categories} bind:value={activeCategories} />
+		</div>
+	{/if}
 </header>
 <ul class="{TransparentList()} flexible-grid" style:--item-width="max({100 / columns}%, {45 / columns}em)">
 	{#each items as item (item.id)}
-		<li class="align-to-grid">
-			<slot name="item" {item}></slot>
-		</li>
+		{#if activeCategories.length === 0 || activeCategories.includes(item.category ?? "")}
+			<li class="align-to-grid">
+				<slot name="item" {item}></slot>
+			</li>
+		{/if}
 	{/each}
 </ul>
 
@@ -60,4 +70,6 @@
 		grid-template-rows: subgrid;
 		grid-row: span 2;
 	}
+
+	.smaller { font-size: 0.875em; }
 </style>

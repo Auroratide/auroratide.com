@@ -4,7 +4,6 @@ export const ArticleCategory = {
 	Creativity: "Creativity",
 	GameDev: "Game Dev",
 	Projects: "Projects",
-	Resources: "Resources",
 	SoftwareEngineering: "Software Engineering",
 	Storytelling: "Storytelling",
 	WebDev: "Web Dev",
