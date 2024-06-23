@@ -74,6 +74,7 @@ import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
 import { faServer } from '@fortawesome/free-solid-svg-icons/faServer'
+import { faShapes } from '@fortawesome/free-solid-svg-icons/faShapes'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons/faSmileWink'
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons/faSquareFull'
@@ -193,6 +194,7 @@ export const library = {
 	[IconName.SearchPlus]: faSearchPlus,
 	[IconName.Seedling]: faSeedling,
 	[IconName.Server]: faServer,
+	[IconName.Shapes]: faShapes,
 	[IconName.Shower]: faShower,
 	[IconName.SmileWink]: faSmileWink,
 	[IconName.Spades]: spades,

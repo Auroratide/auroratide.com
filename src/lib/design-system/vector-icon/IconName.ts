@@ -76,6 +76,7 @@ export const IconName = {
 	SearchPlus: 'search-plus',
 	Seedling: 'seedling',
 	Server: 'server',
+	Shapes: 'shapes',
 	Shower: 'shower',
 	SmileWink: 'smile-wink',
 	Spades: 'spades',

@@ -85,18 +85,23 @@ export const MainNav = [ {
 export const FooterNav = [ {
 	href: Routes.Posts.href(),
 	name: "Posts",
+	icon: IconName.Newspaper,
 }, {
 	href: Routes.Portfolio.href(),
 	name: "Portfolio",
+	icon: IconName.Shapes,
 }, {
 	href: Routes.Stories.href(),
 	name: "Stories",
+	icon: IconName.BookOpen,
 }, {
 	href: Routes.Streams.href(),
 	name: "Streams",
+	icon: IconName.Play,
 }, {
 	href: Routes.Art.href(),
 	name: "Art",
+	icon: IconName.PaintBrush,
 }, {
 	href: Routes.Accessibility.href(),
 	name: "Accessibility",

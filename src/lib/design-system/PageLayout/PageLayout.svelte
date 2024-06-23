@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { PageFooter } from "../PageFooter";
+	import { Container } from "../Container"
+	import { PageFooter } from "../PageFooter";
 	import { SiteInfo } from "../SiteInfo"
 	import { SkipLink } from "../SkipLink"
 	import LogoTitle from "./LogoTitle.svelte"
@@ -16,32 +17,24 @@
 </script>
 
 <SkipLink />
-<div class="container">
-	<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide">
-		<LogoTitle {title} {subtitle}>
-			<slot name="logo"></slot>
-		</LogoTitle>
-		<Navigation nav={headerNav} />
-	</header>
-	<main id="main">
-		<slot></slot>
-	</main>
-	<PageFooter nav={footerNav}>
-		<slot name="footer"></slot>
-	</PageFooter>
-</div>
+<Container>
+	<div class="lg:two-columns">
+		<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide">
+			<LogoTitle {title} {subtitle}>
+				<slot name="logo"></slot>
+			</LogoTitle>
+			<Navigation nav={headerNav} />
+		</header>
+		<main id="main">
+			<slot></slot>
+		</main>
+		<PageFooter nav={footerNav}>
+			<slot name="footer"></slot>
+		</PageFooter>
+	</div>
+</Container>
 
 <style>
-	.container {
-		max-width: 90rem;
-		margin: auto;
-		padding: 0.75em 0.5em;
-		display: flex;
-		flex-direction: column;
-		gap: 2em;
-		overflow: hidden;
-	}
-
 	.row {
 		display: flex;
 		flex-direction: row;
@@ -54,7 +47,7 @@
 	.large-spaces-between { gap: 2em; }
 
 	@media screen and (min-width: 60rem) {
-		.container {
+		.lg\:two-columns {
 			display: grid;
 			grid-template-columns: 20rem minmax(0, 1fr);
 		}
@@ -71,10 +64,6 @@
 	}
 
 	@media print {
-		.container {
-			padding: 0;
-		}
-
 		.print\:hide {
 			display: none;
 		}

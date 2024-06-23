@@ -13,7 +13,9 @@ export class VectorIconElement extends HTMLElement {
 
 	static css = `
 		:host, svg {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			height: 1em;
 			line-height: 1;
 			overflow: visible;
