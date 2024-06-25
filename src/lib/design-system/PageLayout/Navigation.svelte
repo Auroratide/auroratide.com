@@ -14,15 +14,20 @@
 			<DetailsLabel closed="Menu" opened="Close" />
 			<NavDots />
 		</summary>
-		<nav aria-label="Site" class="overlap-bottom animate-wipe">
-			<ul class="no-list column space-start">
-				{#each nav as it, i}
-					<li>
-						<a href="{it.href}" data-first-letter="{it.name[0]}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+		<div class="overlap-bottom animate-wipe">
+			<nav aria-label="Site">
+				<ul class="no-list column space-start">
+					{#each nav as it, i}
+						<li>
+							<a href="{it.href}" data-first-letter="{it.name[0]}" class="bg-circle wider-text {Color.text.fg.b}" style:--bg-circle-color="var({Color.var[PrimaryColors[i % PrimaryColors.length]].a})">{it.name}</a>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+			<section class="extra-content">
+				<slot></slot>
+			</section>
+		</div>
 	</details>
 </div>
 
@@ -36,6 +41,9 @@
 			{/each}
 		</ul>
 	</nav>
+	<section class="extra-content">
+		<slot></slot>
+	</section>
 </div>
 
 <style>
@@ -50,7 +58,11 @@
 		inset-inline: 0;
 		inset-block-start: 100%;
 		background: var(--t-bg-a);
-		z-index: 2;
+		z-index: var(--z-nav);
+	}
+
+	nav {
+		margin-block-end: 2em;
 	}
 
 	.dots-overlap-container { position: relative; }
@@ -124,5 +136,14 @@
 	@keyframes circle-wipe-out {
 		from { clip-path: circle(100%); }
 		to { clip-path: circle(0% at calc(100% - 1em) 0%); }
+	}
+
+	.extra-content {
+		position: relative;
+		font-size: 0.875em;
+		padding-inline: 1em;
+	} .extra-content :global(p) {
+		line-height: 1.5em;
+		margin-block: 1.5em;
 	}
 </style>

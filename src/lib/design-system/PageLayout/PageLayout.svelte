@@ -23,7 +23,9 @@
 			<LogoTitle {title} {subtitle}>
 				<slot name="logo"></slot>
 			</LogoTitle>
-			<Navigation nav={headerNav} />
+			<Navigation nav={headerNav}>
+				<slot name="header"></slot>
+			</Navigation>
 		</header>
 		<main id="main">
 			<slot></slot>
