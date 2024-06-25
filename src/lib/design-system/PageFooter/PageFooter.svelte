@@ -5,13 +5,14 @@
 	import { TransparentList } from "../TransparentList"
 
 	export let nav: NavItem[]
+	export let centered = false
 
 	const { author } = SiteInfo.get()
 
 	const year = new Date().getFullYear()
 </script>
 
-<footer aria-label="Site" class="print:hide">
+<footer aria-label="Site" class="print:hide" class:centered>
 	<slot></slot>
 	<div class="column lg:row-reverse">
 		<ul class="row {TransparentList()} small-text no-space">
@@ -26,6 +27,8 @@
 <style>
 	footer { padding-block: 1.5em; }
 
+	.centered { text-align: center; }
+
 	.column {
 		display: flex;
 		flex-direction: column;
@@ -37,6 +40,8 @@
 		flex-wrap: wrap;
 		column-gap: 1em;
 		row-gap: 0.5em;
+	} .centered .row {
+		justify-content: center;
 	}
 
 	.small-text { font-size: 0.875em; }
@@ -54,6 +59,8 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			justify-content: flex-end;
+		} .centered .lg\:row-reverse {
+			justify-content: center;
 		}
 	}
 
