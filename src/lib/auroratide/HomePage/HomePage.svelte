@@ -2,12 +2,15 @@
 	import { PageFooter } from "$lib/design-system/PageFooter"
 	import { Container } from "$lib/design-system/Container"
 	import { SocialLinks } from "$lib/design-system/SocialLinks"
-	import { FooterNav } from "../routes"
+	import { FooterNav, Socials } from "../routes"
 	import { ArticleCard } from "$lib/auroratide/articles/ArticleCard"
 	import CircularNav from "./CircularNav.svelte"
 	import type { SummarizedArticle } from "$lib/auroratide/articles"
+	import type { SummarizedStory } from "../stories"
+	import { StoryCard } from "../stories/StoryCard"
 
 	export let posts: SummarizedArticle[]
+	export let stories: SummarizedStory[]
 </script>
 
 <Container>
@@ -22,10 +25,12 @@
 		<section>
 			<h2>Latest by me</h2>
 			<ArticleCard value={posts[0]} />
+			<h2>More by me</h2>
+			<StoryCard value={stories[0]} />
 		</section>
 	</main>
 	<PageFooter nav={FooterNav}>
-		<!-- <SocialLinks /> -->
+		<SocialLinks title="Find me on" values={Object.values(Socials)} />
 	</PageFooter>
 </Container>
 
