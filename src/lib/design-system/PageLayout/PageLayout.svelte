@@ -9,6 +9,7 @@
 
 	export let headerNav: NavItem[]
 	export let footerNav: NavItem[]
+	export let inert = false
 
 	const {
 		title,
@@ -17,9 +18,9 @@
 </script>
 
 <SkipLink />
-<Container>
+<Container noscroll={inert}>
 	<div class="lg:two-columns">
-		<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide">
+		<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide" {inert} aria-hidden="{inert}">
 			<LogoTitle {title} {subtitle}>
 				<slot name="logo"></slot>
 			</LogoTitle>
@@ -30,7 +31,7 @@
 		<main id="main">
 			<slot></slot>
 		</main>
-		<PageFooter nav={footerNav}>
+		<PageFooter nav={footerNav} {inert}>
 			<slot name="footer"></slot>
 		</PageFooter>
 	</div>

@@ -1,18 +1,19 @@
 <script lang="ts">
-    import { Color } from "../Color";
+	import { Color } from "../Color"
 	import type { NavItem } from "../PageLayout"
 	import { SiteInfo } from "../SiteInfo"
 	import { TransparentList } from "../TransparentList"
 
 	export let nav: NavItem[]
 	export let centered = false
+	export let inert = false
 
 	const { author } = SiteInfo.get()
 
 	const year = new Date().getFullYear()
 </script>
 
-<footer aria-label="Site" class="print:hide" class:centered>
+<footer aria-label="Site" class="print:hide" class:centered {inert} aria-hidden="{inert}">
 	<slot></slot>
 	<div class="column lg:row-reverse">
 		<ul class="row {TransparentList()} small-text no-space">

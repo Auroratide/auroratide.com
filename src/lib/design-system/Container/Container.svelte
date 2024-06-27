@@ -1,4 +1,8 @@
-<div class="container">
+<script lang="ts">
+	export let noscroll = false
+</script>
+
+<div class="container" class:noscroll>
 	<slot></slot>
 </div>
 
@@ -10,6 +14,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
+	}
+
+	.noscroll {
+		max-block-size: 100dvh;
+		overflow: hidden;
 	}
 
 	@media print {

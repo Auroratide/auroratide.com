@@ -4,10 +4,13 @@
 	import { PageLayout } from "$lib/design-system/PageLayout"
 	import { SocialLinks } from "$lib/design-system/SocialLinks"
 	import { page } from "$app/stores"
+	import { isFullPageOverlayRoute } from "$lib/auroratide/is-full-page-overlay-route"
+
+	$: inert = isFullPageOverlayRoute($page.url.pathname)
 </script>
 
 {#key $page.data.navcontent}
-	<PageLayout headerNav={MainNav} footerNav={FooterNav}>
+	<PageLayout headerNav={MainNav} footerNav={FooterNav} {inert}>
 		<Logo slot="logo" />
 		<svelte:fragment slot="header">
 			{#if $page.data.navcontent}
