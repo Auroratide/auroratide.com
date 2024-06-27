@@ -8,7 +8,9 @@
 	$: color = $page.data.value?.color
 
 	onMount(() => {
-		document.querySelector<TableOfContentsElement>("table-of-contents")?.build?.()
+		document.querySelectorAll<TableOfContentsElement>("table-of-contents").forEach((it) => {
+			it.build?.()
+		})
 	})
 </script>
 
