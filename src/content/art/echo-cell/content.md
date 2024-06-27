@@ -1,7 +1,7 @@
 ---
 id: echo-cell
 title: "Echo Cell"
-category: Object
+category: Anything Else
 tags:
   - cartidge
   - cover

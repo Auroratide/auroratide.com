@@ -1,7 +1,7 @@
 ---
 id: callie
 title: "Callie"
-category: Animal
+category: Anything Else
 tags:
   - dog
   - gift
