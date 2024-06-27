@@ -6,14 +6,13 @@
 	import type { TableOfContentsElement } from "@auroratide/table-of-contents"
 
 	$: color = $page.data.value?.color
-	$: toc = $page.data.value?.toc
 
 	onMount(() => {
 		document.querySelector<TableOfContentsElement>("table-of-contents")?.build?.()
 	})
 </script>
 
-{#if color != null && toc != null && toc.length > 0}
+{#if color != null}
 	<div class="{Theme(color)}">
 		<TableOfContents contentId="article-content" />
 	</div>

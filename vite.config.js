@@ -15,6 +15,12 @@ mdit.use(MarkdownItHighlightJs)
 mdit.use(MarkdownItGitHubAlerts)
 mdit.use(MarkdownItAnchor, {
 	slugify,
+	permalink: MarkdownItAnchor.permalink.linkAfterHeader({
+		style: "visually-hidden",
+		assistiveText: (title) => `Permalink to "${title}"`,
+		visuallyHiddenClass: "visually-hidden",
+		wrapper: ['<div class="heading-with-link">', '</div>'],
+	})
 })
 
 export default defineConfig({
@@ -27,7 +33,7 @@ export default defineConfig({
 			copyOnce: true,
 		}),
 		mdPlugin({
-			mode: [Mode.HTML, Mode.TOC],
+			mode: [Mode.HTML],
 			markdownIt: mdit,
 		}),
 		sveltekit()
