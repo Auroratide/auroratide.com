@@ -8,6 +8,7 @@
 
 	if (browser) {
 		import("@auroratide/img-zoom/lib/define.js")
+		import("@auroratide/table-of-contents/lib/define.js")
 
 		import("$lib/design-system/icon-divider/define.js")
 		import("$lib/design-system/major-point/define.js")

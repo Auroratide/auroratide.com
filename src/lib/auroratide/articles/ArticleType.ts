@@ -8,6 +8,7 @@ export type ArticleType = {
 	publishedAt: Date,
 	tags: string[],
 	content: string,
+	toc: { level: number, content: string }[],
 	icon: IconName,
 	color: ThemeName,
 	summary: {
@@ -22,11 +23,12 @@ export type ArticleType = {
 	}[],
 }
 
-export type SummarizedArticle = Omit<ArticleType, "content" | "links">
+export type SummarizedArticle = Omit<ArticleType, "content" | "links" | "toc">
 
-export const mdToArticle = (attributes: Record<string, unknown>, html: string): ArticleType => ({
+export const mdToArticle = (attributes: Record<string, unknown>, html: string, toc: { level: number, content: string }[]): ArticleType => ({
 	...mdToSummarizedArticle(attributes),
 	content: html,
+	toc: toc,
 	links: (attributes.links as any[])?.map((it) => ({
 		title: it.title,
 		href: it.href,

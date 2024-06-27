@@ -3,14 +3,19 @@ import { sveltekit } from "@sveltejs/kit/vite"
 import { plugin as mdPlugin, Mode } from "vite-plugin-markdown"
 import MarkdownIt from "markdown-it"
 import rollupCopy from "rollup-plugin-copy"
+import MarkdownItAnchor from "markdown-it-anchor"
 import MarkdownItHighlightJs from "markdown-it-highlightjs"
 import MarkdownItGitHubAlerts from "./vite-plugins/md-alerts"
+import { slugify } from "./src/lib/design-system/TableOfContents/slugify"
 
 const mdit = MarkdownIt({
 	html: true,
 })
 mdit.use(MarkdownItHighlightJs)
 mdit.use(MarkdownItGitHubAlerts)
+mdit.use(MarkdownItAnchor, {
+	slugify,
+})
 
 export default defineConfig({
 	plugins: [
@@ -22,7 +27,7 @@ export default defineConfig({
 			copyOnce: true,
 		}),
 		mdPlugin({
-			mode: [Mode.HTML],
+			mode: [Mode.HTML, Mode.TOC],
 			markdownIt: mdit,
 		}),
 		sveltekit()

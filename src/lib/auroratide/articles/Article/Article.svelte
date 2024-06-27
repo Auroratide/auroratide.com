@@ -25,7 +25,7 @@
 			<LinkList values={value.links} />
 		{/if}
 	</div>
-	<section slot="content">
+	<section id="article-content" slot="content">
 		<PageContent value={value.content} />
 	</section>
 </ArticlePage>
