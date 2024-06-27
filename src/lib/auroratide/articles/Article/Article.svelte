@@ -4,7 +4,9 @@
 	import { Byline } from "$lib/design-system/Byline"
 	import { LinkList } from "$lib/design-system/LinkList"
 	import { ArticlePage } from "$lib/design-system/pages"
+	import { TagsList } from "$lib/design-system/TagsList"
 	import { Routes } from "../../routes"
+	import { BulletDivider } from "$lib/design-system/BulletDivider"
 
 	export let value: ArticleType
 </script>
@@ -21,6 +23,11 @@
 >
 	<div slot="header">
 		<p><Byline {value} /></p>
+		<div class="topics-row">
+			<span>Topics</span>
+			<BulletDivider />
+			<TagsList values={value.tags} />
+		</div>
 		{#if value.links.length > 0}
 			<LinkList values={value.links} />
 		{/if}
@@ -29,3 +36,13 @@
 		<PageContent value={value.content} />
 	</section>
 </ArticlePage>
+
+<style>
+	.topics-row {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5em;
+		margin-block-end: 1.5em;
+		font-size: 0.875em;
+	}
+</style>
