@@ -5,4 +5,9 @@
 	export let data: PageData
 </script>
 
-<HomePage posts={data.posts} stories={data.stories} />
+<HomePage
+	posts={data.posts}
+	stories={data.stories}
+	arts={data.arts}
+	portfolio={data.portfolio}
+/>
