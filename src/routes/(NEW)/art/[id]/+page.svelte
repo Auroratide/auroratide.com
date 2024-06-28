@@ -6,8 +6,4 @@
 	export let data: PageData
 </script>
 
-<svelte:head>
-	<base href="{$page.url.pathname}/" />
-</svelte:head>
-
 <ArtItem value={data.value} />

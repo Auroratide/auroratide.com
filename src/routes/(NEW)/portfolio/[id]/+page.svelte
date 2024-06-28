@@ -6,8 +6,4 @@
 	export let data: PageData
 </script>
 
-<svelte:head>
-	<base href="{$page.url.pathname}/" />
-</svelte:head>
-
 <PortfolioItem value={data.value} />
