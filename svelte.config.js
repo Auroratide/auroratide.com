@@ -5,7 +5,9 @@ import sveltePreprocess from 'svelte-preprocess'
 export default {
 	preprocess: sveltePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: "404.html",
+		}),
 		alias: {
 			"$content": "src/content/*",
 		},
