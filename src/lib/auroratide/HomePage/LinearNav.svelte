@@ -41,7 +41,7 @@
 		gap: 0.875em;
 	}
 
-	.fit-font-to-screen { font-size: min(2.3vw, 1em); }
+	.fit-font-to-screen { font-size: min(2.4vw, 1em); }
 
 	.large {
 		font-size: 1.5em;

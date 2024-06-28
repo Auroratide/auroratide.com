@@ -38,6 +38,10 @@
 </Container>
 
 <style>
+	header {
+		margin-block-end: 1em;
+	}
+
 	.row {
 		display: flex;
 		flex-direction: row;
