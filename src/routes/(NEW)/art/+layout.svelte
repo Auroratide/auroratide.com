@@ -12,7 +12,7 @@
 
 	let activeCategories: string[] = []
 
-	$: isListPage = $page.url.pathname === Routes.Art.href()
+	$: isListPage = $page.url.pathname === Routes.Art.href() + "/"
 </script>
 
 <!-- This is a manual copy of ListPage, because I cannot render the page meta in layout -->
