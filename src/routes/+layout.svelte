@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
+    import { onNavigate } from "$app/navigation";
 	import { SiteInfo } from "$lib/design-system/SiteInfo"
 
 	import "$lib/design-system/major-point/style.css"
@@ -16,6 +17,17 @@
 		import("$lib/design-system/slide-show/define.js")
 		import("$lib/design-system/vector-icon/define.js")
 	}
+
+	// onNavigate((navigation) => {
+	// 	if (!document.startViewTransition) return
+
+	// 	return new Promise((resolve) => {
+	// 		document.startViewTransition(async () => {
+	// 			resolve()
+	// 			await navigation.complete
+	// 		})
+	// 	})
+	// })
 
 	SiteInfo.set({
 		title: "Auroratide",
