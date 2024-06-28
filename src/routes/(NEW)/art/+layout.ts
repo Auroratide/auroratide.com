@@ -1,6 +1,7 @@
 import type { LayoutLoad } from "./$types"
 import { mdToSummarizedArt, type SummarizedArt } from "$lib/auroratide/art"
 import { byPublishedAt } from "$lib/auroratide/art/sort"
+import NavContent from "./NavContent.svelte"
 
 export const load: LayoutLoad = async () => {
 	const modules = import.meta.glob("$content/art/*/content.md")
@@ -13,5 +14,6 @@ export const load: LayoutLoad = async () => {
 
 	return {
 		values: values.toSorted(byPublishedAt),
+		navcontent: NavContent,
 	}
 }

@@ -14,6 +14,9 @@
 
 <PageLayout headerNav={MainNav} footerNav={FooterNav}>
 	<Logo slot="logo" />
+	<svelte:fragment slot="header">
+		<p>There's not a lot here, but that'll change pretty soon!</p>
+	</svelte:fragment>
 	<ListPage
 		title="Stories"
 		description="Stories by Auroratide, Timothy Foster"
