@@ -1,4 +1,4 @@
-<span class="bullet-divider">&bull;</span>
+<span class="bullet-divider" aria-hidden="true">&bull;</span>
 
 <style>
 	.bullet-divider {
