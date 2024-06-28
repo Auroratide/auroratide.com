@@ -26,7 +26,7 @@ Visually, you would see a "×", which indicates a window will be closed. Meanwhi
 
 So, `aria-label` is very useful! However, generally speaking, it isn't the first tool you should reach for when providing a [textual representation](https://webaim.org/techniques/alttext/) for an element.
 
-* [Many elements can't use aria-label](#elements-that-can39t-use-aria-label)
+* [Many elements can't use aria-label](#elements-that-cant-use-aria-label)
 * [Native HTML should be preferred when possible](#use-native-html-instead)
 * [Sometimes, the text you want to use is actually for everyone](#some-text-is-for-everyone)
 

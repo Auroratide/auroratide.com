@@ -88,9 +88,9 @@ But before we can answer that, we need to answer a different question first... h
 > And, if you're a web developer like me, I'm gonna try and convince you why we should move away from using RGB and Hex notation for colors!
 
 * [How do you measure temperature?](#how-do-you-measure-temperature)
-* [Is it possible to measure "shade"?](#is-it-possible-to-measure-quotshadequot)
+* [Is it possible to measure "shade"?](#is-it-possible-to-measure-shade)
   * [According to physics](#according-to-physics)
-  * [Why physics can't help us](#why-physics-can39t-help-us)
+  * [Why physics can't help us](#why-physics-cant-help-us)
   * [According to vision](#according-to-vision)
   * [According to code](#according-to-code)
 * [Different Ways to Notate Color](#different-ways-to-notate-color)

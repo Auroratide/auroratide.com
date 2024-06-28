@@ -40,15 +40,15 @@ And yet, despite sarcasm's profound influence on both oral and written conversat
 
 **Or _can_ we?**
 
-* [Can't we use punctuation&#x2e2e;](#can39t-we-use-punctuationx2e2e)
-* [Beyond the period 🧐](#beyond-the-period-🧐)
-* [Huh, textual punctuation? &lt;/sarcasm&gt;](#huh-textual-punctuation-ltsarcasmgt)
-* [&lt;/sarcasm&gt; is official?!](#ltsarcasmgt-is-official)
+* [Can't we use punctuation&#x2e2e;](#cant-we-use-punctuation)
+* [Beyond the period 🧐](#beyond-the-period-)
+* [Huh, textual punctuation? &lt;/sarcasm&gt;](#huh-textual-punctuation-sarcasm)
+* [&lt;/sarcasm&gt; is official?!](#sarcasm-is-official)
 * [HTML Tags are like Knives](#html-tags-are-like-knives)
 * [Tagging Sarcasm with HTML](#tagging-sarcasm-with-html)
-  * [The... &lt;i&gt; Tag?](#the-ltigt-tag)
+  * [The... &lt;i&gt; Tag?](#the-i-tag)
   * [<em>Em</em>ulating Verbal Cues](#emulating-verbal-cues)
-  * [But don't use &lt;q&gt;!](#but-don39t-use-ltqgt)
+  * [But don't use &lt;q&gt;!](#but-dont-use-q)
 * [Sooo... where does this leave us?](#sooo-where-does-this-leave-us)
 
 ## Can't we use punctuation&#x2e2e;

@@ -62,7 +62,7 @@ Subtlety is the difference between something feeling _good_ and something feelin
 * [Level 1: Verticality](#level-1-verticality)
 * [Level 2: Thickness](#level-2-thickness)
 * [Level 3: Round Corners + Thickness](#level-3-round-corners--thickness)
-* [Level 🧠: Keep Accessibility in mind!](#level-%F0%9F%A7%A0-keep-accessibility-in-mind)
+* [Level 🧠: Keep Accessibility in mind!](#level--keep-accessibility-in-mind)
 
 ## Level -1: Cheating with a component
 
