@@ -46,6 +46,7 @@ export class PointCompilationElement extends HTMLElement {
 
 	connectedCallback() {
 		this.#triggerElemsUsingMe()
+		this.#seekReference()
 	}
 
 	attributeChangedCallback(attribute: string, oldValue: string, newValue: string) {
