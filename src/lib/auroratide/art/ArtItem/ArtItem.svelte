@@ -103,6 +103,12 @@
 		place-items: center;
 	}
 
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 0.333em;
+	}
+
 	.above-image {
 		position: relative;
 		grid-area: 1 / 1 / 1 / 1;
