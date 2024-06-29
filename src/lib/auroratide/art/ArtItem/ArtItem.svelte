@@ -77,7 +77,7 @@
 		</div>
 	</div>
 	<section class="below-text space-away-from-screen-edges">
-		<div class="scroll-container fit-to-screen">
+		<div class="scroll-container fit-to-screen sm:off-center">
 			<img-colorscape {colorscape} class:fit-to-screen={!maximized} class="animate-zoom {pixelart ? Pixelart() : ""}" style:--native-height="{value.img.height}px">
 				<img src="{value.img.src}" alt="{value.img.alt}" loading="lazy" width="{value.img.width}" height="{value.img.height}" />
 			</img-colorscape>
@@ -145,6 +145,16 @@
 
 	.fit-to-screen {
 		max-height: calc(100dvh - 3em);
+	} .fit-to-screen.sm\:off-center {
+		max-height: calc(100dvh - 5em);
+		position: relative;
+		inset-block-start: -1.75em;
+	} @media screen and (min-width: 60rem) {
+		.fit-to-screen.sm\:off-center {
+			max-height: calc(100dvh - 3em);
+			position: relative;
+			inset-block-start: 0;
+		}
 	}
 
 	.overlay-button {
