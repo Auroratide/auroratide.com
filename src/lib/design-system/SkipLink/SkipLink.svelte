@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { Button } from "../Button"
 
+	export let href: string
+
 	const blur = (e: Event) => (e.target as HTMLElement).blur()
 </script>
 
 <div class="skip-link">
-	<Button href="#main" on:click={blur}>Skip to Content</Button>
+	<Button {href} on:click={blur}>
+		<slot>Skip to Content</slot>
+	</Button>
 </div>
 
 <style>

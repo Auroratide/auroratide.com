@@ -17,7 +17,9 @@
 	} = SiteInfo.get()
 </script>
 
-<SkipLink />
+<div {inert}>
+	<SkipLink href="#main">Skip to Content</SkipLink>
+</div>
 <Container noscroll={inert}>
 	<div class="lg:two-columns">
 		<header aria-label="Site" class="overlap-root row lg:column large-spaces-between print:hide" {inert} aria-hidden="{inert}">

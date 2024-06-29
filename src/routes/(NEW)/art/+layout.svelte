@@ -7,6 +7,7 @@
 	import { TransparentList } from "$lib/design-system/TransparentList"
 	import { page } from "$app/stores"
 	import { Routes } from "$lib/auroratide/routes"
+	import { SkipLink } from "$lib/design-system/SkipLink"
 
 	export let data: PageData
 
@@ -20,11 +21,12 @@
 <div aria-hidden="{!isListPage}" inert={!isListPage}>
 	<header class="medium-space-after">
 		<PageTitle>Art</PageTitle>
+		<SkipLink href="#content-list">Skip Category Selection</SkipLink>
 		<div class="smaller">
 			<SimpleCheckboxList label="Categories" options={ArtCategories} bind:value={activeCategories} />
 		</div>
 	</header>
-	<ul class="{TransparentList()} flexible-grid" style:--item-width="max({100 / 3}%, {45 / 3}em)">
+	<ul id="content-list" class="{TransparentList()} flexible-grid" style:--item-width="max({100 / 3}%, {45 / 3}em)">
 		{#each data.values as item (item.id)}
 			{#if activeCategories.length === 0 || activeCategories.includes(item.category ?? "")}
 				<li class="align-to-grid">

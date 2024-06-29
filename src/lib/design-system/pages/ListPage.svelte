@@ -1,4 +1,6 @@
 <script lang="ts" generics="T extends { id: string, category?: string }">
+	import { SkipLink } from "../SkipLink"
+
 	import { SimpleCheckboxList } from "../SimpleCheckboxList"
 	import type { OpenGraph } from "../OpenGraph"
 	import { PageMeta } from "../PageMeta"
@@ -35,12 +37,13 @@
 <header class="medium-space-after">
 	<PageTitle>{title}</PageTitle>
 	{#if categories}
+		<SkipLink href="#content-list">Skip Category Selection</SkipLink>
 		<div class="smaller">
 			<SimpleCheckboxList label="Categories" options={categories} bind:value={activeCategories} />
 		</div>
 	{/if}
 </header>
-<ul class="{TransparentList()} flexible-grid" style:--item-width="max({100 / columns}%, {45 / columns}em)">
+<ul id="content-list" class="{TransparentList()} flexible-grid" style:--item-width="max({100 / columns}%, {45 / columns}em)">
 	{#each items as item (item.id)}
 		{#if activeCategories.length === 0 || activeCategories.includes(item.category ?? "")}
 			<li class="align-to-grid">
