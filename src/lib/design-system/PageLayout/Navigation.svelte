@@ -115,22 +115,34 @@
 
 	.bg-circle::first-letter { font-size: 0; }
 
-	.bg-circle::before {
-		content: attr(data-first-letter);
+	.bg-circle::before, .bg-circle::after {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		inline-size: 1.5em;
-		block-size: 1.5em;
-		background-color: var(--bg-circle-color);
-		position: absolute;
+		block-size: 1.5em;position: absolute;
 		border-radius: 100%;
 		inset-inline: 0;
 		inset-block: 50%;
 		transform: translateY(-50%);
 		z-index: -1;
-		font-weight: bold;
 		font-size: 1.125em;
+	} .bg-circle::before {
+		content: "";
+		background-color: var(--bg-circle-color);
+		transition: transform 0.075s ease-out;
+	} .bg-circle::after {
+		content: attr(data-first-letter);
+		font-weight: bold;
+		text-shadow: 0 0.125em 0 oklch(0% 0 0 / 0.25);
+	} .bg-circle:hover, .bg-circle:focus {
+		filter: brightness(1.15);
+	} .bg-circle:hover::before, .bg-circle:focus::before {
+		transform: translateY(-50%) scale(1.1);
+	} .bg-circle:active::before {
+		transform: translateY(-50%) scale(0.875);
+		transition: transform 0.025s ease-out;
+		filter: brightness(0.9);
 	}
 
 	.lg\:show { display: none; }
