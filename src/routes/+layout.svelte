@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
-    import { onNavigate } from "$app/navigation";
+	import { onNavigate } from "$app/navigation"
 	import { SiteInfo } from "$lib/design-system/SiteInfo"
+	import { onMount } from "svelte"
 
 	import "$lib/design-system/major-point/style.css"
 	import "$lib/design-system/point-compilation/style.css"
@@ -13,6 +14,7 @@
 
 		import("$lib/design-system/icon-divider/define.js")
 		import("$lib/design-system/major-point/define.js")
+		import("$lib/design-system/navigation-ripple/define.js")
 		import("$lib/design-system/point-compilation/define.js")
 		import("$lib/design-system/slide-show/define.js")
 		import("$lib/design-system/vector-icon/define.js")
@@ -41,6 +43,13 @@
 			name: "Auroratide, Timothy Foster",
 			url: "https://auroratide.com",
 		},
+	})
+
+	onMount(() => {
+		// disabled: does not play well with view transitions
+		// import("$lib/design-system/navigation-ripple").then(({ setupNavigationRipple }) => {
+		// 	setupNavigationRipple()
+		// })
 	})
 </script>
 
