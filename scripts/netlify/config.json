@@ -1,8 +1,0 @@
-{
-  "routes": ["legal", "accessibility", "whodoku", "about", "styleguide", "posts", "portfolio", "art", "carica", "nimcard"],
-  "resources": ["posts", "portfolio", "art"],
-  "renames": [ {
-    "from": "portfolio/peggle-juggle",
-    "to": "portfolio/rubber-juggle"
-  } ]
-}

@@ -16,13 +16,7 @@
     "test:ui": "playwright test",
     "test:ui:debug": "PWDEBUG=1 playwright test",
     "test:smoke": "node smoke/smoke.spec.js",
-    "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "components:create": "node scripts/components/create",
-    "posts:create": "npm run _posts:create",
-    "_posts:create": "node scripts/posts/create",
-    "portfolio:create": "node scripts/portfolio/create",
-    "art:create": "node scripts/art/create",
-    "netlify:update": "node scripts/netlify/update"
+    "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "repository": {
     "type": "git",
