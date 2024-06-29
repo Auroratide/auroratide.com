@@ -57,7 +57,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<section class="extra-content">
+	<section class="extra-content slide-view-transition">
 		<slot></slot>
 	</section>
 </div>
@@ -173,5 +173,22 @@
 	} .extra-content :global(p) {
 		line-height: 1.5em;
 		margin-block: 1.5em;
+	}
+
+	@keyframes slide-transition {
+		to {
+			opacity: 0;
+			transform: translateX(-2em);
+		}
+	} .slide-view-transition {
+		view-transition-name: navigation-content;
+	} :global(::view-transition-group(navigation-content)) {
+		animation-duration: 0.333s;
+		animation-timing-function: ease-in-out;
+	} :global(::view-transition-old(navigation-content)) {
+		animation-name: slide-transition;
+	} :global(::view-transition-new(navigation-content)) {
+		animation-name: slide-transition;
+		animation-direction: reverse;
 	}
 </style>
