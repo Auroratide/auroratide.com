@@ -117,6 +117,12 @@
 		margin-inline: 2em;
 	}
 
+	dfn {
+		font-style: normal;
+		font-weight: bold;
+		filter: brightness(1.2);
+	}
+
 	icon-divider { margin-block: 3em; }
 
 	button, ::part(button), a.button {
