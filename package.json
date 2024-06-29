@@ -11,10 +11,8 @@
     "build:kit": "vite build",
     "build:components": "rollup -c",
     "clean": "rm -rf static/build static/api build .svelte-kit",
-    "test": "pnpm test:unit && pnpm test:ui",
-    "test:unit": "vitest run",
-    "test:ui": "playwright test",
-    "test:ui:debug": "PWDEBUG=1 playwright test",
+    "test": "playwright test",
+    "test:debug": "PWDEBUG=1 playwright test",
     "test:smoke": "node smoke/smoke.spec.js",
     "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
@@ -59,8 +57,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.12",
-    "vite-plugin-markdown": "^2.2.0",
-    "vitest": "^1.6.0"
+    "vite-plugin-markdown": "^2.2.0"
   },
   "dependencies": {
     "@auroratide/img-popout": "^1.0.1",
