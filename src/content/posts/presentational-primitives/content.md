@@ -27,7 +27,7 @@ links:
 
 On one of my mini projects called [Monado Recipes](/portfolio/monado-recipes), I attempted a reusable styling pattern that I haven't really seen before I'm sorta calling the "**presentational primitive**". It's basically just a _configurable CSS class_, where the end goal is to have code that looks like the following:
 
-```svelte
+```html
 <h2 class="{Font.size.stars(3)} {TriangleCorners({ type: "right" })}">
 ```
 
@@ -54,7 +54,7 @@ This is a core principle of utility-first design: document semantics and present
 
 A <dfn>presentational primitive</dfn> is a configurable CSS class.
 
-```svelte
+```html
 <h2 class="{Font.size.stars(3)} {TriangleCorners({ type: "right" })}">
 ```
 
@@ -74,7 +74,7 @@ I often find myself conflicted by design systems which try to create components 
 
 That's the fancy way of saying I don't like this code:
 
-```svelte
+```html
 <Spacing type="around" amount="3">
    <Font size="3" color="primary">
       <Heading level="2">Hello</Heading>
@@ -86,7 +86,7 @@ HTML eliminated the [font tag](https://developer.mozilla.org/en-US/docs/Web/HTML
 
 So here's code that's better by applying the presentational ideas to the heading directly:
 
-```svelte
+```html
 <Heading level="2" size="3" color="primary" spacing="around 3">
    Hello
 </Heading>
