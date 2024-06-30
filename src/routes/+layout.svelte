@@ -46,10 +46,9 @@
 	})
 
 	onMount(() => {
-		// disabled: does not play well with view transitions
-		// import("$lib/design-system/navigation-ripple").then(({ setupNavigationRipple }) => {
-		// 	setupNavigationRipple()
-		// })
+		import("$lib/design-system/navigation-ripple").then(({ setupNavigationRipple }) => {
+			setupNavigationRipple()
+		})
 	})
 </script>
 

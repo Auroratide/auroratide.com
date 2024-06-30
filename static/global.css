@@ -97,6 +97,10 @@ img-colorscape img {
 	height: auto;
 }
 
+::view-transition-group(root) {
+	animation-duration: 0s;
+}
+
 /* Themes
  * ======================================================================== */
 .theme-dark {

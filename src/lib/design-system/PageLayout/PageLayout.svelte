@@ -30,7 +30,7 @@
 				<slot name="header"></slot>
 			</Navigation>
 		</header>
-		<main id="main">
+		<main id="main" class="circle-view-transition">
 			<slot></slot>
 		</main>
 		<PageFooter nav={footerNav} {inert}>
@@ -70,6 +70,22 @@
 			align-items: stretch;
 			justify-content: flex-start;
 		}
+	}
+
+	@keyframes fade-out {
+		to { opacity: 0; }
+	} @keyframes circle-transition {
+		from { clip-path: circle(0% at 3em 3em); }
+		to { clip-path: circle(100vmax at 3em 3em); }
+	} .circle-view-transition {
+		view-transition-name: main-content;
+	} :global(::view-transition-old(main-content)) {
+		animation: 0.333s ease-out both fade-out;
+	} :global(::view-transition-new(main-content)) {
+		background: var(--c-dark-dark); /* TODO: Theme is not available here */
+		animation: 0.333s ease-out both circle-transition;
+	} :global(::view-transition-group(main-content)) {
+		animation: none; /* Prevents wonky scrolling due to animating the relative positions of the snapshots */
 	}
 
 	@media print {

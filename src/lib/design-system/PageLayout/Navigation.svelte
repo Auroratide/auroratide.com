@@ -183,6 +183,8 @@
 	} .slide-view-transition {
 		view-transition-name: navigation-content;
 	} :global(::view-transition-group(navigation-content)) {
+		animation: none; /* Prevents wonky scrolling due to animating the relative positions of the snapshots */
+		animation-fill-mode: both;
 		animation-duration: 0.333s;
 		animation-timing-function: ease-in-out;
 	} :global(::view-transition-old(navigation-content)) {

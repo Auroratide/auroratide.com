@@ -14,12 +14,22 @@
 
 <style>
 	.skip-link {
+		clip-path: inset(50%);
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
 		position: absolute;
-		left: -9999px;
 		font-size: 1.125em;
 	}
 
 	.skip-link:focus-within {
+		clip-path: none;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
 		position: fixed;
 		inset: 0;
 		z-index: var(--z-dialog);
