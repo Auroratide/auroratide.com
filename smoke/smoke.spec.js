@@ -7,7 +7,7 @@ fetch('https://auroratide.com').then((res) => {
 
     return res.text()
 }).then((html) => {
-    if (!html.includes('<title>Posts | Auroratide</title>'))
+    if (!html.includes('<title>Coding + Storytelling | Auroratide</title>'))
         fail()
 }).then(() => {
     console.log('Success!')
