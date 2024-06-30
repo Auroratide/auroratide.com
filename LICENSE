@@ -1,8 +1,8 @@
-Copyright 2021 Timothy Foster
+Copyright 2024 Timothy Foster
 
 When a folder has a LICENSE file, that license applies to that folder, its contents, and all its subfolders.
 
-* content/ - CC BY-SA 4.0 (see `content/LICENSE`)
+* src/content/ - CC BY-SA 4.0 (see `src/content/LICENSE`)
 * Unless specified otherwise, all other content is subject to the ISC License, reprinted below.
 
 # ISC

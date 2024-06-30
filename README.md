@@ -10,7 +10,7 @@ Some of the things I strive for in a good frontend codebase include:
 
 ## Tech Stack
 
-auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), [Vitest](https://vitest.dev/), [Playwright](https://playwright.dev/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
+auroratide.com is built with [Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/), [Playwright](https://playwright.dev/), and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
 ### Svelte
 
@@ -28,9 +28,9 @@ Typescript provides static typing to Javascript, which is otherwise a dynamicall
 * Creating discoverable APIs, improving intellisense in code editors
 * And those things combined make it easier to maintain the codebase in the long term, where I'm apt to forget what chunks of code do
 
-### Vitest and Playwright
+### Playwright
 
-Vitest is a simple testing framework, and Playwright is a browser testing framework. I use vitest to (very) quickly test units of logic, and playwright to verify that everything works properly on a real browser.
+Playwright is a browser testing framework. I use playwright to verify that everything works properly on a real browser.
 
 Testing code in general is important, as improves the longevity of the code and increases confidence in changes that are made. In a world without automated tests, a change to the code could accidentally break something and you would never know until encountered in production. With (well-written) tests, there's at least a good chance of catching such bugs beforehand!
 
@@ -44,17 +44,11 @@ Since posts are written in markdown, and HTML is valid markdown syntax, _and_ we
 
 ```html
 <major-point>
-    <p>This is very important to read!</p>
+	<p>This is very important to read!</p>
 </major-point>
 ```
 
 Web components can be found in [/src/components](/src/components). There's a mix of Svelte-style components and vanilla web components in there; I started moving toward vanilla components because I kept running into weird limitations trying to force Svelte to compile web components.
-
-### Static Site Generation
-
-All of the content is written in markdown. However, browsers cannot render markdown; they render HTML. Therefore, a process must exist to convert markdown into HTML.
-
-SvelteKit is used to statically generate each page, while a small custom engine converts markdown into HTML. The code in [/content/_build](/content/_build) is responsible for doing this, basically just looking for content files and parsing them with [Marked](https://www.npmjs.com/package/marked).
 
 ## Commands
 
@@ -65,8 +59,6 @@ SvelteKit is used to statically generate each page, while a small custom engine 
 | Start Server     | `pnpm start`           |
 | Run All Tests    | `pnpm test`            |
 | Developer Start  | `pnpm dev`         |
-| Create Post      | `pnpm posts:create -- slug-path` |
-| Create Component | `pnpm components:create -- NameOfComponent` |
 
 ## Accessibility
 

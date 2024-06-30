@@ -1,5 +1,14 @@
 # Changelog
 
+## 4.0.0 (30 Jun 2024)
+
+* Overhaul theme
+  * Dark by default
+  * Standardize around five core colors
+  * Larger font size, and new standard fonts
+* Added Stories and Streams sections
+* Eliminate custom SSG framework entirely in favor of... just importing markdown files via vite, the normal-a** way.
+
 ## 3.1.0 (01 Feb 2024)
 
 * Upgrade SvelteKit to v2
