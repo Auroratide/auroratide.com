@@ -34,7 +34,7 @@ export class NavigationRippleElement extends HTMLElement {
 			left: calc(var(--ripple-x) - 0.5em);
 			inline-size: 1em;
 			block-size: 1em;
-			background: red;
+			background: var(--t-primary-a);
 			border-radius: 100%;
 			transform: scale(0);
 			opacity: 1;
