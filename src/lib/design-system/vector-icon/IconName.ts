@@ -14,6 +14,7 @@ export const IconName = {
 	BookOpen: 'book-open',
 	Boxes: 'boxes',
 	Brain: 'brain',
+	Bug: 'bug',
 	Calculator: 'calculator',
 	CandyCane: 'candy-cane',
 	ChalkboardTeacher: 'chalkboard-teacher',

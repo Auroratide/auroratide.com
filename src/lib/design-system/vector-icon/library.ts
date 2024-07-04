@@ -13,6 +13,7 @@ import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faBoxes } from '@fortawesome/free-solid-svg-icons/faBoxes'
+import { faBug } from '@fortawesome/free-solid-svg-icons/faBug'
 import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain'
 import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
@@ -132,6 +133,7 @@ export const library = {
 	[IconName.BookOpen]: faBookOpen,
 	[IconName.Boxes]: faBoxes,
 	[IconName.Brain]: faBrain,
+	[IconName.Bug]: faBug,
 	[IconName.Calculator]: faCalculator,
 	[IconName.CandyCane]: faCandyCane,
 	[IconName.ChalkboardTeacher]: faChalkboardTeacher,
