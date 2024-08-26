@@ -8,6 +8,7 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons/faAngleLeft'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons/faAngleUp'
 import { faArchive } from '@fortawesome/free-solid-svg-icons/faArchive'
+import { faAssistiveListeningSystems } from '@fortawesome/free-solid-svg-icons/faAssistiveListeningSystems'
 import { faAtom } from '@fortawesome/free-solid-svg-icons/faAtom'
 import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
@@ -127,6 +128,7 @@ export const library = {
 	[IconName.AngleRight]: faAngleRight,
 	[IconName.AngleUp]: faAngleUp,
 	[IconName.Archive]: faArchive,
+	[IconName.AssistiveListeningSystems]: faAssistiveListeningSystems,
 	[IconName.Atom]: faAtom,
 	[IconName.Bomb]: faBomb,
 	[IconName.Book]: faBook,

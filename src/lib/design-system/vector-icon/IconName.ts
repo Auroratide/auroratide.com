@@ -8,6 +8,7 @@ export const IconName = {
 	AngleRight: 'angle-right',
 	AngleUp: 'angle-up',
 	Archive: 'archive',
+	AssistiveListeningSystems: 'assistive-listening-systems',
 	Atom: 'atom',
 	Bomb: 'bomb',
 	Book: 'book',
