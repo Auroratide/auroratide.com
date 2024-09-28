@@ -6,6 +6,13 @@
 		margin-block: 1.75em;
 	}
 
+	mark {
+		font-weight: bold;
+		color: var(--t-fg-a);
+		filter: brightness(1.25);
+		background: none;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold;
 		margin-block: 2em 0.5em;
@@ -211,13 +218,6 @@
 
 		& > *:first-child { margin-block-start: 0; }
 		& > *:last-child { margin-block-end: 0; }
-
-		mark {
-			font-weight: bold;
-			color: var(--t-fg-a);
-			filter: brightness(1.25);
-			background: none;
-		}
 	}
 
 	img {
@@ -404,6 +404,28 @@
 	.success > pre code,
 	.tip > pre code { border-color: var(--t-green-a); }
 	.important > pre code { border-color: var(--t-purple-a); }
+
+	table {
+		border-collapse: collapse;
+		line-height: 1.5em;
+		inline-size: 100%;
+
+		th {
+			text-align: start;
+			background-color: var(--t-primary-a);
+			color: var(--t-fg-b);
+			padding: 0.5em 0.625em;
+		}
+
+		td {
+			padding: 0.5em 0.625em;
+			vertical-align: top;
+		}
+
+		tr:nth-child(even) {
+			background: var(--t-bg-b);
+		}
+	}
 
 	math-inline, math-block {
 		font-size: 0.8em;

@@ -20,6 +20,7 @@ import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator'
 import { faCandyCane } from '@fortawesome/free-solid-svg-icons/faCandyCane'
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher'
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck'
+import { faChessQueen } from '@fortawesome/free-solid-svg-icons/faChessQueen'
 import { faChessRook } from '@fortawesome/free-solid-svg-icons/faChessRook'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons/faCookieBite'
@@ -140,6 +141,7 @@ export const library = {
 	[IconName.CandyCane]: faCandyCane,
 	[IconName.ChalkboardTeacher]: faChalkboardTeacher,
 	[IconName.Check]: faCheck,
+	[IconName.ChessQueen]: faChessQueen,
 	[IconName.ChessRook]: faChessRook,
 	[IconName.Code]: faCode,
 	[IconName.CookieBite]: faCookieBite,

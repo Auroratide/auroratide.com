@@ -20,6 +20,7 @@ export const IconName = {
 	CandyCane: 'candy-cane',
 	ChalkboardTeacher: 'chalkboard-teacher',
 	Check: 'check',
+	ChessQueen: 'chess-queen',
 	ChessRook: 'chess-rook',
 	Code: 'code',
 	CookieBite: 'cookie-bite',
