@@ -62,11 +62,12 @@
   },
   "dependencies": {
     "@auroratide/img-popout": "^1.0.1",
-    "@auroratide/img-zoom": "^0.1.2",
+    "@auroratide/img-zoom": "^0.1.4",
     "@auroratide/nimcard": "^0.1.4",
     "@auroratide/pokemon-types": "^0.1.0",
     "@auroratide/svelte-custom-element-transitions": "^0.1.1",
     "@auroratide/table-of-contents": "^0.1.0",
+    "@auroratide/typewritten-text": "^0.2.3",
     "@auroratide/wait": "^0.2.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

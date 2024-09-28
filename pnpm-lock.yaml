@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1
   '@auroratide/img-zoom':
-    specifier: ^0.1.2
-    version: 0.1.2
+    specifier: ^0.1.4
+    version: 0.1.4
   '@auroratide/nimcard':
     specifier: ^0.1.4
     version: 0.1.4
@@ -23,6 +23,9 @@ dependencies:
   '@auroratide/table-of-contents':
     specifier: ^0.1.0
     version: 0.1.0
+  '@auroratide/typewritten-text':
+    specifier: ^0.2.3
+    version: 0.2.3
   '@auroratide/wait':
     specifier: ^0.2.0
     version: 0.2.0
@@ -156,8 +159,8 @@ packages:
     resolution: {integrity: sha512-ludeCBJVblnSH6uAj1NjGGWVY7FB0By4I4BO27UP3XkhJu1t2hR/xwJiU6hRN6T1skJB+Ba0TNsEcMZpweJSIg==}
     dev: false
 
-  /@auroratide/img-zoom@0.1.2:
-    resolution: {integrity: sha512-OccqXJKYRIP8w8Uy5uDnvbDBwjO9q6EdVMN+nqxW3fYBdSjupxs34kihl/yvbNkvpiJc+MvqYnB5HAU/zAMrAA==}
+  /@auroratide/img-zoom@0.1.4:
+    resolution: {integrity: sha512-4HPyfoGwP5C4GqQtAvnfMxxbZE36OL7RP7koa+0HNS/rbKtxjN6Hgb1j84AKkPnWvRzJMvJK9LhD4HAUzfzcvA==}
     dev: false
 
   /@auroratide/nimcard@0.1.4:
@@ -184,6 +187,10 @@ packages:
 
   /@auroratide/table-of-contents@0.1.0:
     resolution: {integrity: sha512-dmXZusDx7U3tsf1/jI9UPHKaKXS7HOTX0bu+I3z/rGGZSPQbqJYTNL57PAxkQKYz2JDP5tCX2AIGSJwIRP3m8Q==}
+    dev: false
+
+  /@auroratide/typewritten-text@0.2.3:
+    resolution: {integrity: sha512-3BuuTdlLYjfhTv+FSdeIDN997yoCO95/2sqzDHfAYr4PyLs2jtR6Hv+BX+75+q/sfje5EEJQKAn8Jk2JogJUYA==}
     dev: false
 
   /@auroratide/wait@0.2.0:
