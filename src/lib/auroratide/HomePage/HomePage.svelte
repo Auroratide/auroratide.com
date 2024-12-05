@@ -56,11 +56,15 @@
 			<section class="content-list {Theme(posts[0].color)}">
 				<h2>Dev Content</h2>
 				<ArticleCard value={posts[0]} />
+				<ArticleCard value={posts[1]} />
 				<p><Button href="{Routes.Posts.href()}">More Dev Content</Button></p>
 			</section>
 			<section class="content-list {Theme(stories[0].color)}">
 				<h2>Stories</h2>
 				<StoryCard value={stories[0]} />
+				{#if stories[1] != null}
+					<StoryCard value={stories[1]} />
+				{/if}
 				<p><Button href="{Routes.Stories.href()}">More Stories</Button></p>
 			</section>
 		</div>
