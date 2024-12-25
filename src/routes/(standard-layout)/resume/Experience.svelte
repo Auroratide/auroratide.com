@@ -11,6 +11,7 @@
 				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
 				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
 				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
+				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
 			</ul>
 		</section>
 	</section>
@@ -24,8 +25,9 @@
 		<section>
 			<ul>
 				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li>
-				<li>Composed three reusable web components with thousands of weekly downloads.</li>
+				<li>Built <a href="https://auroratide.github.io/poke5e">Poke 5e</a>, a web application for managing your team of creatures in a table top game.</li>
+				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
+				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
 			</ul>
 		</section>
@@ -56,7 +58,7 @@
 				<li>Published the client's first online origination experience, integrating an isolated React app into the existing Ruby on Rails site to decouple their pipelines.</li>
 				<li>Accelerated our deployment to production by four weeks after I introduced Pact contract testing and API stubbing to the team.</li>
 				<li>Created codebase alignment through workshops about state management with Redux Sagas, testing React with Enzyme, and functional testing with Testcafe.</li>
-				<li>Established a model for working as a distributed US/India team, which became a standard across multiple teams on the client.</li>
+				<!-- <li>Established a model for working as a distributed US/India team, which became a standard across multiple teams on the client.</li> -->
 			</ul>
 		</section>
 	</section>
