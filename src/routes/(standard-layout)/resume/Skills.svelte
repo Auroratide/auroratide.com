@@ -5,8 +5,8 @@
 			<strong>Languages:</strong>
 			<ul>
 				<li>Typescript, Javascript</li>
-				<li>HTML, CSS, SCSS</li>
 				<li>Kotlin, Java, C#</li>
+				<li>HTML, CSS, SCSS</li>
 				<li>SQL</li>
 			</ul>
 		</li>
@@ -26,11 +26,11 @@
 		<li>
 			<strong>Practices:</strong>
 			<ul>
-				<li>Web Accessibility</li>
-				<li>REST API Design</li>
 				<li>Automated Testing</li>
 				<li>CI/CD Pipelines</li>
+				<li>Web Accessibility</li>
 				<li>Agile Delivery</li>
+				<li>REST API Design</li>
 			</ul>
 		</li>
 	</ul>

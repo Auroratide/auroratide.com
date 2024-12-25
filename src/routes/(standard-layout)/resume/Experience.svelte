@@ -8,10 +8,11 @@
 		</header>
 		<section>
 			<ul>
-				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
+				<li>Created a company-wide pattern for visual regression testing, used by multiple teams to build complex interfaces.</li>
 				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
-				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
+				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
 				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
+				<!-- <li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li> -->
 			</ul>
 		</section>
 	</section>
@@ -24,11 +25,11 @@
 		</header>
 		<section>
 			<ul>
-				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Built <a href="https://auroratide.github.io/poke5e">Poke 5e</a>, a web application for managing your team of creatures in a table top game.</li>
-				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
-				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
+				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
+				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
+				<li>Built <a href="https://auroratide.github.io/poke5e">Poke 5e</a>, a web application for managing your team of creatures in a table top game, used by thousands of people.</li>
+				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
 			</ul>
 		</section>
 	</section>
