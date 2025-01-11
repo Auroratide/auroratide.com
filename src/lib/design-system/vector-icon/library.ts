@@ -26,6 +26,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons/faCookieBite'
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons/faCrosshairs'
 import { faCube } from '@fortawesome/free-solid-svg-icons/faCube'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons/faDatabase'
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons/faDiceD20'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons/faDotCircle'
 import { faDragon } from '@fortawesome/free-solid-svg-icons/faDragon'
@@ -148,6 +149,7 @@ export const library = {
 	[IconName.Crosshairs]: faCrosshairs,
 	[IconName.Css3Alt]: faCss3Alt,
 	[IconName.Cube]: faCube,
+	[IconName.Database]: faDatabase,
 	[IconName.Diamonds]: diamonds,
 	[IconName.DiceD20]: faDiceD20,
 	[IconName.DotCircle]: faDotCircle,

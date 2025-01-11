@@ -27,6 +27,7 @@ export const IconName = {
 	Crosshairs: 'crosshairs',
 	Css3Alt: 'css3-alt',
 	Cube: 'cube',
+	Database: 'database',
 	Diamonds: 'diamonds',
 	DiceD20: 'dice-d20',
 	DotCircle: 'dot-circle',
