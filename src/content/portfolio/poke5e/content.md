@@ -19,7 +19,7 @@ publishedAt: 2022-03-09T12:00:00.000Z
 order: 1
 links:
   - title: "Visit"
-    href: "https://auroratide.github.io/poke5e/"
+    href: "https://poke5e.app"
     icon: dragon
     color: yellow
   - title: "Code"
