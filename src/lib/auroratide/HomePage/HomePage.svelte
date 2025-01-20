@@ -53,14 +53,16 @@
 			<LinearNav />
 		</section>
 		<div class="content-section">
-			<section class="content-list {Theme(posts[0].color)}">
+			<section class="content-list {Theme(posts[1].color)}">
 				<h2>Dev Content</h2>
 				<ArticleCard value={posts[0]} />
+				<ArticleCard value={posts[1]} />
 				<p><Button href="{Routes.Posts.href()}">More Dev Content</Button></p>
 			</section>
-			<section class="content-list {Theme(stories[0].color)}">
+			<section class="content-list {Theme(stories[1].color)}">
 				<h2>Stories</h2>
 				<StoryCard value={stories[0]} />
+				<StoryCard value={stories[1]} />
 				<p><Button href="{Routes.Stories.href()}">More Stories</Button></p>
 			</section>
 		</div>
@@ -74,7 +76,7 @@
 			</div>
 		</section>
 		<div class="content-section">
-			<section class="content-list {Theme(portfolio[0].color)}">
+			<section class="content-list {Theme(portfolio[1].color)}">
 				<h2>Portfolio</h2>
 				<div class="row">
 					<PortfolioCard value={portfolio[0]} />
@@ -82,7 +84,7 @@
 				</div>
 				<p><Button href="{Routes.Portfolio.href()}">More Stuff I Made</Button></p>
 			</section>
-			<section class="content-list {Theme(arts[0].color)}">
+			<section class="content-list {Theme(arts[1].color)}">
 				<h2>Art</h2>
 				<div class="row">
 					<ArtCard value={arts[0]} />
@@ -196,7 +198,7 @@
 		} .content-section section {
 			display: grid;
 			grid-template-rows: subgrid;
-			grid-row: span 3;
+			grid-row: span 4;
 		} .content-section section > *:last-child {
 			margin: 0;
 			place-self: end;

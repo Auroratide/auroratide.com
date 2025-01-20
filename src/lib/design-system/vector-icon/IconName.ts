@@ -24,6 +24,7 @@ export const IconName = {
 	ChessRook: 'chess-rook',
 	Code: 'code',
 	CookieBite: 'cookie-bite',
+	CommentDots: 'comment-dots',
 	Crosshairs: 'crosshairs',
 	Css3Alt: 'css3-alt',
 	Cube: 'cube',
