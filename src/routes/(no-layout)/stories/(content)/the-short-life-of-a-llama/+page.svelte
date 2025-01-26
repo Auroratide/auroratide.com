@@ -181,6 +181,7 @@
 		text-align: center;
 		margin: auto;
 		padding: 0.5em 1em;
+		text-transform: uppercase;
 	}
 
 	.extra-space {
