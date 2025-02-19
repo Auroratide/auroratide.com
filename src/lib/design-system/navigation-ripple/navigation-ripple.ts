@@ -23,7 +23,7 @@ export class NavigationRippleElement extends HTMLElement {
 
 		@keyframes ripple {
 			to {
-				transform: scale(4);
+				transform: scale(8);
 				opacity: 0;
 			}
 		}
