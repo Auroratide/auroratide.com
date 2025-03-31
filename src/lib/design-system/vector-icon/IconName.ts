@@ -19,6 +19,7 @@ export const IconName = {
 	Calculator: 'calculator',
 	CandyCane: 'candy-cane',
 	ChalkboardTeacher: 'chalkboard-teacher',
+	ChartLine: 'chart-line',
 	Check: 'check',
 	ChessQueen: 'chess-queen',
 	ChessRook: 'chess-rook',
