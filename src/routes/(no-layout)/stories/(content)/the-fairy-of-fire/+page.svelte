@@ -10,6 +10,7 @@
 	import "./fonts.css"
 	import Paragraph from "./Paragraph.svelte"
 	import ImgSection from "./ImgSection.svelte"
+	import { PageMeta } from "$lib/design-system/PageMeta"
 
 	const story = mdToSummarizedStory(attributes)
 
@@ -32,6 +33,7 @@
 	</style>
 </svelte:head>
 
+<PageMeta pagetitle={story.title} description={story.summary.short} />
 <article aria-labelledby="page-title" class="container">
 	<header>
 		<h1 id="page-title" class="text-center">
