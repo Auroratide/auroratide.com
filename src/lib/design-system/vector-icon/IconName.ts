@@ -88,6 +88,7 @@ export const IconName = {
 	Spades: 'spades',
 	SquareFull: 'square-full',
 	Stamp: 'stamp',
+	Suitcase: 'suitcase',
 	SuitcaseRolling: 'suitcase-rolling',
 	Sun: 'sun',
 	Sync: 'sync',
