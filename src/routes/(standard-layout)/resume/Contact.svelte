@@ -4,7 +4,7 @@
 
 <address>
 	<ul>
-		<li><vector-icon icon="envelope" label="Email"></vector-icon> <a href="mailto:tf.auroratide@gmail.com">tf.auroratide@gmail.com</a></li>
+		<li><vector-icon icon="envelope" label="Email"></vector-icon> <a href="mailto:contact@auroratide.com">contact@auroratide.com</a></li>
 		<li><vector-icon icon="github" label="Github"></vector-icon> <a href={Socials.Github.href}>github.com/Auroratide</a></li>
 		<li><vector-icon icon="linked-in" label="LinkedIn"></vector-icon> <a href={Socials.LinkedIn.href}>timothy-foster-224946120</a></li>
 		<li><vector-icon icon="hammer" label="Portfolio"></vector-icon> <a href="https://auroratide.com">auroratide.com</a></li>
