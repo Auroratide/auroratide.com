@@ -13,7 +13,7 @@ icon: dragon
 color: yellow
 cover:
   alt: "Website showing Pokemon, Moves, TMs, and Trainers as options."
-summary: "This website makes community-made content two popular games (Pokemon, and Dungeons and Dragons) online and searchable."
+summary: "An app that helps over 5,000 people manage their content for a table-top game based on Pokemon and Dungeons & Dragons."
 summaryDisp: "Play D&D with Pokemon"
 publishedAt: 2022-03-09T12:00:00.000Z
 order: 1
@@ -49,12 +49,11 @@ gallery:
     height: 1360
 ---
 
-**Pokemon 5e Reference** is a website dedicated to Dungeons and Dragons homebrew, adding Pokemon to a world of magic!
+**Pokemon 5e Reference** is a website dedicated to Dungeons and Dragons homebrew, adding Pokemon to a world of magic! Over 5,000 people use the site regularly, and I manage an online Discord community with hundreds of members.
 
 * I converted a bunch of PDFs into a structured format and an API that the website uses to make interactivity possible.
 * Trainers can be managed online, without the need to create an account. This is possible using [Supabase](https://supabase.com/).
 * The website is built using [SvelteKit](https://kit.svelte.dev/), designed after the UI of [Pokemon Sword and Shield](https://swordshield.pokemon.com/en-us/).
-* At least **100** people use or have used the site!
 
 <details>
 	<summary>What is Dungeons and Dragons?</summary>

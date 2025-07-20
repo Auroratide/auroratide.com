@@ -6,7 +6,7 @@
 			<ul>
 				<li>Typescript, Javascript</li>
 				<li>HTML, CSS, SCSS</li>
-				<li>Kotlin, Java, C#</li>
+				<li>Python, Kotlin, C#</li>
 				<li>SQL</li>
 			</ul>
 		</li>

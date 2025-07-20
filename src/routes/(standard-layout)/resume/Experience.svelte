@@ -25,7 +25,7 @@
 		<section>
 			<ul>
 				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application for managing your team of creatures in a table top game.</li>
+				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 5,000 people for managing teams of creatures in a table top game.</li>
 				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
 				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
