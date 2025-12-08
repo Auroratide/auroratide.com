@@ -19,13 +19,13 @@
 	<section class="position">
 		<header>
 			<h3>Auroratide</h3>
-			<p class="role">Founder, Technical Author</p>
+			<p class="role">Technical Author</p>
 			<p class="duration"><time datetime="2021-05">May 2021</time> - <time datetime="2022-06">Jun 2022</time></p>
 		</header>
 		<section>
 			<ul>
 				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 5,000 people for managing teams of creatures in a table top game.</li>
+				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 10,000 people for managing teams of creatures in a table top game.</li>
 				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
 				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
