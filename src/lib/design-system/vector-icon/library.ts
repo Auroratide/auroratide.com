@@ -82,6 +82,7 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
 import { faServer } from '@fortawesome/free-solid-svg-icons/faServer'
 import { faShapes } from '@fortawesome/free-solid-svg-icons/faShapes'
 import { faShower } from '@fortawesome/free-solid-svg-icons/faShower'
+import { faSignature } from '@fortawesome/free-solid-svg-icons/faSignature'
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons/faSmileWink'
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons/faSquareFull'
 import { faStamp } from '@fortawesome/free-solid-svg-icons/faStamp'
@@ -209,6 +210,7 @@ export const library = {
 	[IconName.Server]: faServer,
 	[IconName.Shapes]: faShapes,
 	[IconName.Shower]: faShower,
+	[IconName.Signature]: faSignature,
 	[IconName.SmileWink]: faSmileWink,
 	[IconName.Spades]: spades,
 	[IconName.SquareFull]: faSquareFull,

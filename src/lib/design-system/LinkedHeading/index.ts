@@ -1,0 +1,1 @@
+export { default as LinkedHeading } from "./LinkedHeading.svelte"

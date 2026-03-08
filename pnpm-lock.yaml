@@ -41,6 +41,9 @@ importers:
       culori:
         specifier: ^4.0.2
         version: 4.0.2
+      highlight.js:
+        specifier: ^11.11.1
+        version: 11.11.1
       marked:
         specifier: ^4.3.0
         version: 4.3.0

@@ -12,6 +12,9 @@ export const Routes = {
 		href: (id?: string) => `/portfolio${id == null ? "" : "/" + id}`,
 		cover: (id: string) => `/portfolio/${id}/cover.webp`,
 	},
+	Doodles: {
+		href: (id?: string) => `/doodles${id == null ? "" : "/" + id}`,
+	},
 	Art: {
 		href: (id?: string) => `/art${id == null ? "" : "/" + id}`,
 		cover: {
@@ -75,8 +78,8 @@ export const MainNav = [ {
 	href: Routes.Stories.href(),
 	name: "Stories I Authored",
 }, {
-	href: Routes.Streams.href(),
-	name: "Streams, Maybe",
+	href: Routes.Doodles.href(),
+	name: "Doodles I Scribbled",
 }, {
 	href: Routes.Art.href(),
 	name: "Art I Drew",
@@ -95,9 +98,9 @@ export const FooterNav = [ {
 	name: "Stories",
 	icon: IconName.BookOpen,
 }, {
-	href: Routes.Streams.href(),
-	name: "Streams",
-	icon: IconName.Play,
+	href: Routes.Doodles.href(),
+	name: "Doodles",
+	icon: IconName.Signature,
 }, {
 	href: Routes.Art.href(),
 	name: "Art",

@@ -84,6 +84,7 @@ export const IconName = {
 	Server: 'server',
 	Shapes: 'shapes',
 	Shower: 'shower',
+	Signature: 'signature',
 	SmileWink: 'smile-wink',
 	Spades: 'spades',
 	SquareFull: 'square-full',
