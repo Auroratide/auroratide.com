@@ -54,10 +54,10 @@
 		</section>
 		<div class="content-section">
 			<section class="content-list {Theme(posts[1].color)}">
-				<h2>Dev Content</h2>
+				<h2>Content</h2>
 				<ArticleCard value={posts[0]} />
 				<ArticleCard value={posts[1]} />
-				<p><Button href="{Routes.Posts.href()}">More Dev Content</Button></p>
+				<p><Button href="{Routes.Posts.href()}">More Content</Button></p>
 			</section>
 			<section class="content-list {Theme(stories[1].color)}">
 				<h2>Stories</h2>
