@@ -4,8 +4,8 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
-import sveltePreprocess from 'svelte-preprocess'
 import typescript from '@rollup/plugin-typescript'
+import { mdsvex } from "mdsvex"
 
 const production = !process.env.ROLLUP_WATCH
 const componentsSrc = path.resolve(__dirname, 'src', 'components')
@@ -22,7 +22,8 @@ export default [ {
     plugins: [
         // Compile svelte program
         svelte({
-            preprocess: sveltePreprocess(),
+            preprocess: [mdsvex()],
+            extensions: [".svelte", ".svx"],
             compilerOptions: {
                 dev: !production,
                 customElement: true,
