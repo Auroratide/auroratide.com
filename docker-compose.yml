@@ -1,0 +1,25 @@
+services:
+  remark42:
+    image: ghcr.io/umputun/remark42:latest
+    container_name: "remark42"
+    environment:
+      - REMARK_URL=http://localhost:8080
+      - SITE=auroratide
+      - SECRET=password
+      - AUTH_ANON=true
+      - DEBUG=true
+    # ports:
+    #   - "8080:8080"
+    volumes:
+      - ./.remark42:/srv/var
+
+  nginx:
+    image: nginx:alpine
+    container_name: remark42-proxy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/css:/etc/nginx/css:ro
+    depends_on:
+      - remark42

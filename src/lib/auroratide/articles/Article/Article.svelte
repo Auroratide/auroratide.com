@@ -7,6 +7,7 @@
 	import { TagsList } from "$lib/design-system/TagsList"
 	import { Routes } from "../../routes"
 	import { BulletDivider } from "$lib/design-system/BulletDivider"
+	import { Comments } from "../Comments"
 
 	export let value: ArticleType
 </script>
@@ -34,6 +35,7 @@
 	</div>
 	<section id="article-content" slot="content">
 		<PageContent value={value.content} />
+		<Comments />
 	</section>
 </ArticlePage>
 

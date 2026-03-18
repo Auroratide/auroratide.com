@@ -15,7 +15,9 @@
     "test": "playwright test",
     "test:debug": "PWDEBUG=1 playwright test",
     "test:smoke": "node smoke/smoke.spec.js",
-    "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "validate": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "services:start": "docker compose up -d",
+    "services:stop": "docker compose down"
   },
   "repository": {
     "type": "git",

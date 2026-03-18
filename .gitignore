@@ -21,3 +21,6 @@
 /static/art
 /static/stories
 /static/LICENSE
+
+# Remark data volumne
+/.remark42

@@ -1,0 +1,67 @@
+@import "/web-orig/remark.css";
+
+:root .dark {
+	--c-blue-dark: oklch(55% 0.119 250);
+	--c-blue-light: oklch(64% 0.142 250);
+	--c-purple-dark: oklch(53% 0.11 304);
+	--c-purple-light: oklch(64% 0.13 305);
+	--c-yellow-dark: oklch(56.5% 0.11 95.5);
+	--c-yellow-light: oklch(71% 0.14 96);
+	--c-green-dark: oklch(55% 0.111 134);
+	--c-green-light: oklch(66% 0.129 134);
+	--c-red-dark: oklch(50% 0.11 30);
+	--c-red-light: oklch(63% 0.13 30.5);
+	--c-dark-dark: oklch(22% 0.021 255);
+	--c-dark-light: oklch(27% 0.02 255);
+	--c-light-dark: oklch(80% 0.005 255);
+	--c-light-light: oklch(97.5% 0.005 255);
+
+	--t-blue-a: var(--c-blue-dark);
+	--t-blue-b: var(--c-blue-light);
+	--t-purple-a: var(--c-purple-dark);
+	--t-purple-b: var(--c-purple-light);
+	--t-yellow-a: var(--c-yellow-dark);
+	--t-yellow-b: var(--c-yellow-light);
+	--t-green-a: var(--c-green-dark);
+	--t-green-b: var(--c-green-light);
+	--t-red-a: var(--c-red-dark);
+	--t-red-b: var(--c-red-light);
+	--t-bg-a: var(--c-dark-dark);
+	--t-bg-b: var(--c-dark-light);
+	--t-fg-a: var(--c-light-dark);
+	--t-fg-b: var(--c-light-light);
+	--t-primary-a: var(--t-blue-a);
+	--t-primary-b: var(--t-blue-b);
+
+	--primary-color: 51 117 180;
+	--primary-brighter-color: 62 144 222;
+	--color7: transparent;
+	--color8: var(--t-bg-a);
+	--color9: var(--t-blue-b);
+	--color15: var(--t-blue-a);
+	--color33: oklch(71% 0.142 250);
+}
+
+body {
+	font-size: clamp(1rem, 2vw, 1.333rem);
+}
+
+.comment-form {
+	padding: 0;
+	border-width: 0;
+}
+
+.comment-form_theme_dark .comment-form__field {
+	background: var(--t-bg-b);
+	border: 0.125em solid transparent;
+	border-block-end: 0.25em solid var(--t-fg-a);
+	padding: 0.5em;
+}
+
+.comment-form_theme_dark .comment-form__field:focus {
+	border-color: var(--color9);
+	border-block-end-color: var(--color33);
+	outline: none;
+	background: var(--t-bg-a);
+	box-shadow: none;
+}
