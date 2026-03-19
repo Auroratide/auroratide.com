@@ -17,5 +17,5 @@
 			"$content/*": ["./src/content/*"],
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", ".svelte-kit/ambient.d.ts"]
 }
