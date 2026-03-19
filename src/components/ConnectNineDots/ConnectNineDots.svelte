@@ -47,7 +47,7 @@
 				<img class="dot" src="{assetspath}/dot.png" alt="Dot" />
 			{/each}
 		</div>
-		<div class="line-area" on:click={handleClick} bind:this={lines} data-testid="line-area">
+		<div role="presentation" class="line-area" on:click={handleClick} bind:this={lines} data-testid="line-area">
 			{#each lineMaker.lines as line}
 				<img class="line" src="{assetspath}/line.png" alt="Line" style={`
 					left: ${line.origin.x}px;
@@ -58,7 +58,7 @@
 			{/each}
 		</div>
 		{#if lineMaker.lastPoint && !lineMaker.atLimit}
-			<vector-icon class="last-clicked" title="Last Clicked" icon="crosshairs" style="left: {lineMaker.lastPoint.x}px; top: {lineMaker.lastPoint.y}px;" />
+			<vector-icon class="last-clicked" title="Last Clicked" icon="crosshairs" style="left: {lineMaker.lastPoint.x}px; top: {lineMaker.lastPoint.y}px;"></vector-icon>
 		{/if}
 	</div>
 	<button part="button" on:click={handleReset}>Reset</button>

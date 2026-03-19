@@ -139,10 +139,6 @@
 		overflow: auto;
 	}
 
-	img-colorscape {
-		/* max-height: var(--native-height); */
-	}
-
 	.fit-to-screen {
 		max-height: calc(100dvh - 3em);
 	} .fit-to-screen.sm\:off-center {

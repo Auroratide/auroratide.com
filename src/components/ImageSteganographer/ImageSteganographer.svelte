@@ -83,14 +83,14 @@
     </div>
     <div class="area action-area">
         <button part="button" on:click={handleEncode}>
-            <vector-icon icon="angle-double-up" />
+            <vector-icon icon="angle-double-up"></vector-icon>
             <span>Encode</span>
-            <vector-icon icon="angle-double-up" />
+            <vector-icon icon="angle-double-up"></vector-icon>
         </button>
         <button part="button" on:click={handleDecode}>
-            <vector-icon icon="angle-double-down" />
+            <vector-icon icon="angle-double-down"></vector-icon>
             <span>Decode</span>
-            <vector-icon icon="angle-double-down" />
+            <vector-icon icon="angle-double-down"></vector-icon>
         </button>
     </div>
     <div class="area message-area">

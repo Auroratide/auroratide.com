@@ -6,7 +6,7 @@
 </script>
 
 <div class="loading" class:large>
-	<vector-icon class="icon" icon={IconName.HourglassHalf} />
+	<vector-icon class="icon" icon={IconName.HourglassHalf}></vector-icon>
 	{#if text != null}
 		<h2 class="text">{text}</h2>
 	{/if}
