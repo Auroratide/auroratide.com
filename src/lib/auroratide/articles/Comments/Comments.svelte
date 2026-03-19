@@ -4,6 +4,7 @@
 	let enabled = $state(false)
 
 	$effect(() => {
+		console.log("comments host", PUBLIC_REMARK_HOST)
 		enabled = localStorage.getItem("enable-comments") === "true"
 
 		if (enabled && PUBLIC_REMARK_HOST) {
