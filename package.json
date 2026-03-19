@@ -8,7 +8,7 @@
     "start": "vite preview",
     "dev": "npm-run-all --parallel build:components dev:kit",
     "dev:kit": "vite dev",
-    "build": "npm-run-all build:kit build:components",
+    "build": "npm-run-all build:kit build:components build:kit",
     "build:kit": "vite build",
     "build:components": "rollup -c",
     "clean": "rm -rf static/build static/api build .svelte-kit",
