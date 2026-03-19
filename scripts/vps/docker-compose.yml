@@ -1,0 +1,17 @@
+services:
+  remark42:
+    image: ghcr.io/umputun/remark42:latest
+    container_name: remark42
+    restart: always
+    environment: # TAKE THESE VALUES FROM .env
+      - REMARK_URL=
+      - SITE=
+      - SECRET=
+      - AUTH_ANON=
+      - AUTH_GOOGLE_CID=
+      - AUTH_GOOGLE_CSEC=
+      - ALLOWED_HOSTS=
+    volumes:
+      - ./data:/srv/var
+    ports:
+      - "127.0.0.1:8080:8080"
