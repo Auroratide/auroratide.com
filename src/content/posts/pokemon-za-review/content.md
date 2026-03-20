@@ -10,8 +10,8 @@ tags:
   - setting
 icon: pokeball
 color: green
-summary: "I liked the game, and to become better at interactive storytelling, I decided to analyize what I liked about it and what could improve."
-longSummary: "I liked the game, and to become better at interactive storytelling, I decided to analyize what I liked about it and what could improve, creating lessons for the city I'm personally building as a long-term project."
+summary: "I liked the game, and to become better at interactive storytelling, I decided to analyze what I liked about it and what could improve."
+longSummary: "I liked the game, and to become better at interactive storytelling, I decided to analyze what I liked about it and what could improve, creating lessons for the city I'm personally building as a long-term project."
 publishedAt: 2026-03-20T12:00:00.000Z
 createdAt: 2026-03-20T12:00:00.000Z
 ---
