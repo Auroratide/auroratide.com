@@ -10,7 +10,11 @@ services:
       - AUTH_ANON=
       - AUTH_GOOGLE_CID=
       - AUTH_GOOGLE_CSEC=
+      - AUTH_DISCORD_CID=
+      - AUTH_DISCORD_CSEC=
       - ALLOWED_HOSTS=
+      - ADMIN_SHARED_ID=
+      - RESTRICTED_NAMES=
     volumes:
       - ./data:/srv/var
     ports:
