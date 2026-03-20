@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { PUBLIC_REMARK_HOST } from "$env/static/public"
 
-	let enabled = $state(false)
-
 	$effect(() => {
-		console.log("comments host", PUBLIC_REMARK_HOST)
-		enabled = localStorage.getItem("enable-comments") === "true"
-
-		if (enabled && PUBLIC_REMARK_HOST) {
+		if (PUBLIC_REMARK_HOST) {
 			window.remark_config = {
 				host: PUBLIC_REMARK_HOST,
 				site_id: "auroratide",
@@ -35,11 +30,9 @@
 	})
 </script>
 
-{#if enabled}
-	<hr />
-	<h2 id="comments">Comments</h2>
-	<div id="remark42"></div>
-{/if}
+<hr />
+<h2 id="comments">Comments</h2>
+<div id="remark42"></div>
 
 <style>
 	hr {
