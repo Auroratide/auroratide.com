@@ -122,6 +122,7 @@ import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows'
 
 import { diamonds } from './custom/diamonds'
 import { kafka } from './custom/kafka'
+import { pokeball } from "./custom/pokeball"
 import { spades } from './custom/spades'
 
 export const library = {
@@ -243,6 +244,7 @@ export const library = {
 	[IconName.Html5]: faHtml5,
 	[IconName.Kafka]: kafka,
 	[IconName.Npm]: faNpm,
+	[IconName.Pokeball]: pokeball,
 	[IconName.React]: faReact,
 	[IconName.RedditAlien]: faRedditAlien,
 	[IconName.StackOverflow]: faStackOverflow,

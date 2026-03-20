@@ -117,6 +117,7 @@ export const IconName = {
 	Html5: 'html5',
 	Kafka: 'kafka',
 	Npm: 'npm',
+	Pokeball: "pokeball",
 	React: 'react',
 	RedditAlien: 'reddit-alien',
 	StackOverflow: 'stack-overflow',
