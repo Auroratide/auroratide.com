@@ -1,0 +1,3 @@
+Claude Opus 4.6
+
+Help me with the base code that I can extend for the following concept: HTML canvas element, takes place in space with a background of faint stars that slowly and infinitely scroll upward. You can control a star in the foreground with the arrow keys or WASD (cannot go off the edges). Also in the forground, binary pairs of stars gradually scroll upward. The stars may be of different sizes and colors (red, orange, yellow, white, blue). Occasionally, there will be a foreground single star you can't control that also scrolls gradually upward. When you approach any single star, it should be influenced by your gravity, but then it flings away from you in a direction, almost like trying to capture it into a binary system but failing every time.

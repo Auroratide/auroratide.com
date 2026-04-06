@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellar Drift</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Courier New', monospace;
+  }
+  canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  #ui-overlay {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(180, 200, 255, 0.4);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="ui-overlay">arrow keys / wasd to drift</div>
+<script>
+// ── Setup ──────────────────────────────────────────────
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W, H;
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ── Star colors ────────────────────────────────────────
+const STAR_COLORS = [
+  { name: 'red',    hex: '#ff6b5b', glow: 'rgba(255,107,91,' },
+  { name: 'orange', hex: '#ffab40', glow: 'rgba(255,171,64,' },
+  { name: 'yellow', hex: '#fff176', glow: 'rgba(255,241,118,' },
+  { name: 'white',  hex: '#e8eaff', glow: 'rgba(232,234,255,' },
+  { name: 'blue',   hex: '#64b5f6', glow: 'rgba(100,181,246,' },
+];
+
+function randColor() {
+  return STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)];
+}
+
+// ── Background stars ───────────────────────────────────
+const BG_COUNT = 260;
+const bgStars = [];
+
+function makeBgStar(randomY) {
+  return {
+    x: Math.random() * W,
+    y: randomY ? Math.random() * H : H + Math.random() * 40,
+    size: Math.random() * 1.4 + 0.3,
+    alpha: Math.random() * 0.5 + 0.1,
+    twinkleSpeed: Math.random() * 0.02 + 0.005,
+    twinklePhase: Math.random() * Math.PI * 2,
+    speed: Math.random() * 0.15 + 0.05,
+  };
+}
+
+for (let i = 0; i < BG_COUNT; i++) bgStars.push(makeBgStar(true));
+
+// ── Player star ────────────────────────────────────────
+const player = {
+  x: 0, y: 0,
+  vx: 0, vy: 0,
+  radius: 7,
+  color: STAR_COLORS[3], // white
+  accel: 0.45,
+  friction: 0.965,
+  maxSpeed: 5,
+};
+
+function resetPlayer() {
+  player.x = W / 2;
+  player.y = H * 0.7;
+  player.vx = 0;
+  player.vy = 0;
+}
+resetPlayer();
+
+// ── Input ──────────────────────────────────────────────
+const keys = {};
+window.addEventListener('keydown', e => {
+  keys[e.key.toLowerCase()] = true;
+  // Prevent page scroll
+  if (['arrowup','arrowdown','arrowleft','arrowright',' '].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
+});
+window.addEventListener('keyup', e => { keys[e.key.toLowerCase()] = false; });
+
+function handleInput() {
+  let ax = 0, ay = 0;
+  if (keys['arrowleft']  || keys['a']) ax -= 1;
+  if (keys['arrowright'] || keys['d']) ax += 1;
+  if (keys['arrowup']    || keys['w']) ay -= 1;
+  if (keys['arrowdown']  || keys['s']) ay += 1;
+
+  // Normalize diagonal
+  if (ax !== 0 && ay !== 0) {
+    const inv = 1 / Math.SQRT2;
+    ax *= inv;
+    ay *= inv;
+  }
+
+  player.vx += ax * player.accel;
+  player.vy += ay * player.accel;
+
+  // Friction
+  player.vx *= player.friction;
+  player.vy *= player.friction;
+
+  // Clamp speed
+  const speed = Math.hypot(player.vx, player.vy);
+  if (speed > player.maxSpeed) {
+    player.vx = (player.vx / speed) * player.maxSpeed;
+    player.vy = (player.vy / speed) * player.maxSpeed;
+  }
+
+  player.x += player.vx;
+  player.y += player.vy;
+
+  // Boundary clamping
+  const margin = player.radius;
+  player.x = Math.max(margin, Math.min(W - margin, player.x));
+  player.y = Math.max(margin, Math.min(H - margin, player.y));
+}
+
+// ── Binary pairs ───────────────────────────────────────
+const binaries = [];
+const SCROLL_SPEED = 0.4;
+
+function makeBinary() {
+  const c1 = randColor(), c2 = randColor();
+  const r1 = Math.random() * 3 + 2.5;
+  const r2 = Math.random() * 3 + 2.5;
+  const orbitRadius = Math.random() * 18 + 14;
+  const speed = (Math.random() * 0.015 + 0.008) * (Math.random() < 0.5 ? 1 : -1);
+  return {
+    cx: Math.random() * (W - 120) + 60,
+    cy: H + 40,
+    r1, r2, c1, c2,
+    orbitRadius,
+    angle: Math.random() * Math.PI * 2,
+    angularSpeed: speed,
+    scrollSpeed: SCROLL_SPEED + Math.random() * 0.15,
+  };
+}
+
+// Start with a few
+for (let i = 0; i < 3; i++) {
+  const b = makeBinary();
+  b.cy = Math.random() * H;
+  binaries.push(b);
+}
+
+// ── Singles (slingshot targets) ─────────────────────────
+const singles = [];
+
+function makeSingle() {
+  const col = randColor();
+  const r = Math.random() * 3.5 + 2;
+  return {
+    x: Math.random() * (W - 100) + 50,
+    y: H + 30,
+    vx: 0,
+    vy: 0,
+    radius: r,
+    color: col,
+    scrollSpeed: SCROLL_SPEED + Math.random() * 0.1,
+    // Slingshot state
+    influenced: false,    // is currently being pulled
+    flung: false,         // has been flung away
+    flingTimer: 0,
+    // Approach tracking
+    closestDist: Infinity,
+    approaching: true,
+  };
+}
+
+for (let i = 0; i < 2; i++) {
+  const s = makeSingle();
+  s.y = Math.random() * H * 0.6;
+  singles.push(s);
+}
+
+// ── Spawn timers ───────────────────────────────────────
+let binaryTimer = 0;
+let singleTimer = 0;
+const BINARY_INTERVAL = 180; // frames
+const SINGLE_INTERVAL = 300;
+
+// ── Physics: gravitational slingshot ───────────────────
+const GRAVITY_RANGE = 160;
+const GRAVITY_STRENGTH = 0.6;
+const FLING_BOOST = 3.5;
+
+function updateSingles() {
+  for (let i = singles.length - 1; i >= 0; i--) {
+    const s = singles[i];
+
+    if (!s.flung) {
+      // Scroll upward
+      s.y -= s.scrollSpeed;
+
+      // Gravity interaction with player
+      const dx = player.x - s.x;
+      const dy = player.y - s.y;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < GRAVITY_RANGE && dist > 5) {
+        s.influenced = true;
+
+        // Track approach / retreat
+        if (dist < s.closestDist) {
+          s.closestDist = dist;
+          s.approaching = true;
+        } else if (s.approaching && dist > s.closestDist + 8) {
+          // Player passed closest approach → fling!
+          s.approaching = false;
+          s.flung = true;
+
+          // Fling direction: away from player, tangential
+          const nx = -dx / dist;
+          const ny = -dy / dist;
+          // Add tangential component for a curved fling
+          const tx = -ny;
+          const ty = nx;
+          const side = Math.random() < 0.5 ? 1 : -1;
+
+          s.vx = (nx * FLING_BOOST + tx * side * FLING_BOOST * 0.7) + player.vx * 0.3;
+          s.vy = (ny * FLING_BOOST + ty * side * FLING_BOOST * 0.7) + player.vy * 0.3;
+          s.flingTimer = 0;
+          continue;
+        }
+
+        // Gentle pull toward player (gravity)
+        const force = GRAVITY_STRENGTH / (dist * 0.5);
+        s.vx += (dx / dist) * force;
+        s.vy += (dy / dist) * force;
+
+        // Dampen so it doesn't just crash in
+        s.vx *= 0.96;
+        s.vy *= 0.96;
+
+        s.x += s.vx;
+        s.y += s.vy;
+      } else {
+        // Out of range - drift normally
+        s.influenced = false;
+        s.vx *= 0.9;
+        s.vy *= 0.9;
+        s.x += s.vx;
+        // Reset tracking when out of range
+        s.closestDist = Infinity;
+        s.approaching = true;
+      }
+    } else {
+      // Flung state - fly away
+      s.x += s.vx;
+      s.y += s.vy;
+      s.vx *= 0.995;
+      s.vy *= 0.995;
+      s.flingTimer++;
+    }
+
+    // Remove if off screen
+    if (s.y < -60 || s.y > H + 80 || s.x < -80 || s.x > W + 80 || s.flingTimer > 300) {
+      singles.splice(i, 1);
+    }
+  }
+}
+
+// ── Drawing helpers ────────────────────────────────────
+function drawStar(x, y, radius, color, glowIntensity = 0.6) {
+  // Outer glow
+  const grad = ctx.createRadialGradient(x, y, 0, x, y, radius * 5);
+  grad.addColorStop(0, color.glow + (glowIntensity * 0.5) + ')');
+  grad.addColorStop(0.3, color.glow + (glowIntensity * 0.15) + ')');
+  grad.addColorStop(1, color.glow + '0)');
+  ctx.beginPath();
+  ctx.arc(x, y, radius * 5, 0, Math.PI * 2);
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Core
+  const core = ctx.createRadialGradient(x, y, 0, x, y, radius);
+  core.addColorStop(0, '#fff');
+  core.addColorStop(0.4, color.hex);
+  core.addColorStop(1, color.glow + '0.3)');
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, Math.PI * 2);
+  ctx.fillStyle = core;
+  ctx.fill();
+}
+
+function drawGravityTether(sx, sy, px, py, strength) {
+  const dist = Math.hypot(px - sx, py - sy);
+  const alpha = Math.max(0, (1 - dist / GRAVITY_RANGE)) * 0.25 * strength;
+  ctx.strokeStyle = `rgba(200, 220, 255, ${alpha})`;
+  ctx.lineWidth = 0.5;
+  ctx.setLineDash([3, 6]);
+  ctx.beginPath();
+  ctx.moveTo(sx, sy);
+  ctx.lineTo(px, py);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// ── Main loop ──────────────────────────────────────────
+let time = 0;
+
+function update() {
+  time++;
+
+  // Spawn
+  binaryTimer++;
+  singleTimer++;
+  if (binaryTimer >= BINARY_INTERVAL) {
+    binaries.push(makeBinary());
+    binaryTimer = 0;
+  }
+  if (singleTimer >= SINGLE_INTERVAL) {
+    singles.push(makeSingle());
+    singleTimer = 0;
+  }
+
+  handleInput();
+  updateSingles();
+
+  // Update binaries
+  for (let i = binaries.length - 1; i >= 0; i--) {
+    const b = binaries[i];
+    b.cy -= b.scrollSpeed;
+    b.angle += b.angularSpeed;
+    if (b.cy < -60) binaries.splice(i, 1);
+  }
+
+  // Update background stars
+  for (const s of bgStars) {
+    s.y -= s.speed;
+    if (s.y < -5) {
+      s.x = Math.random() * W;
+      s.y = H + Math.random() * 20;
+      s.alpha = Math.random() * 0.5 + 0.1;
+    }
+  }
+}
+
+function draw() {
+  // Clear
+  ctx.fillStyle = '#05060f';
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle deep-space gradient
+  const spaceGrad = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.7);
+  spaceGrad.addColorStop(0, 'rgba(15, 12, 30, 0.3)');
+  spaceGrad.addColorStop(1, 'rgba(5, 6, 15, 0)');
+  ctx.fillStyle = spaceGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // Background stars
+  for (const s of bgStars) {
+    const twinkle = Math.sin(time * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
+    const a = s.alpha * twinkle;
+    ctx.fillStyle = `rgba(200, 210, 240, ${a})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Binary pairs
+  for (const b of binaries) {
+    const x1 = b.cx + Math.cos(b.angle) * b.orbitRadius;
+    const y1 = b.cy + Math.sin(b.angle) * b.orbitRadius;
+    const x2 = b.cx + Math.cos(b.angle + Math.PI) * b.orbitRadius;
+    const y2 = b.cy + Math.sin(b.angle + Math.PI) * b.orbitRadius;
+
+    // Faint orbit trail
+    ctx.strokeStyle = 'rgba(100, 120, 180, 0.06)';
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.arc(b.cx, b.cy, b.orbitRadius, 0, Math.PI * 2);
+    ctx.stroke();
+
+    drawStar(x1, y1, b.r1, b.c1, 0.4);
+    drawStar(x2, y2, b.r2, b.c2, 0.4);
+  }
+
+  // Singles
+  for (const s of singles) {
+    let glow = 0.5;
+    if (s.influenced) {
+      glow = 0.9;
+      drawGravityTether(s.x, s.y, player.x, player.y, 1);
+    }
+    if (s.flung) {
+      // Fading trail
+      const trailAlpha = Math.max(0, 1 - s.flingTimer / 100);
+      glow = 0.7 * trailAlpha + 0.2;
+      ctx.strokeStyle = s.color.glow + (trailAlpha * 0.15) + ')';
+      ctx.lineWidth = s.radius * 0.6;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(s.x - s.vx * 6, s.y - s.vy * 6);
+      ctx.stroke();
+    }
+    drawStar(s.x, s.y, s.radius, s.color, glow);
+  }
+
+  // Player star
+  const playerPulse = Math.sin(time * 0.05) * 0.15 + 0.85;
+  drawStar(player.x, player.y, player.radius, player.color, playerPulse);
+
+  // Player motion trail
+  const speed = Math.hypot(player.vx, player.vy);
+  if (speed > 0.5) {
+    const trailAlpha = Math.min(speed / player.maxSpeed, 1) * 0.2;
+    ctx.strokeStyle = `rgba(232, 234, 255, ${trailAlpha})`;
+    ctx.lineWidth = player.radius * 0.5;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(player.x, player.y);
+    ctx.lineTo(player.x - player.vx * 4, player.y - player.vy * 4);
+    ctx.stroke();
+  }
+}
+
+function loop() {
+  update();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+// Fade out hint after a few seconds
+setTimeout(() => {
+  const overlay = document.getElementById('ui-overlay');
+  overlay.style.transition = 'opacity 3s';
+  overlay.style.opacity = '0';
+}, 5000);
+</script>
+</body>
+</html>
