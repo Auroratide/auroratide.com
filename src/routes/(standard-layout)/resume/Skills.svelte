@@ -6,7 +6,8 @@
 			<ul>
 				<li>Typescript, Javascript</li>
 				<li>HTML, CSS, SCSS</li>
-				<li>Python, Kotlin, C#</li>
+				<li>Python</li>
+				<li>Kotlin, Java, C#</li>
 				<li>SQL</li>
 			</ul>
 		</li>
@@ -15,12 +16,13 @@
 			<ul>
 				<li>React, Svelte</li>
 				<li>NodeJS, Express</li>
-				<li>AWS, Docker</li>
-				<li>Jest, Playwright, JUnit</li>
+				<li>AWS, Docker, Azure</li>
+				<li>Vitest, Playwright, JUnit</li>
 				<li>Spring, Ktor, RabbitMQ</li>
 				<li>Git</li>
 				<li>Postgres, MongoDB</li>
 				<li>Web Components</li>
+				<li>Claude Code, Vector DB</li>
 			</ul>
 		</li>
 		<li>
@@ -31,6 +33,7 @@
 				<li>Automated Testing</li>
 				<li>CI/CD Pipelines</li>
 				<li>Agile Delivery</li>
+				<li>AI-Powered Development</li>
 			</ul>
 		</li>
 	</ul>

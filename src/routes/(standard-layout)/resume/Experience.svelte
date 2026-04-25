@@ -2,33 +2,33 @@
 	<h2>Experience</h2>
 	<section class="position">
 		<header>
-			<h3>Compoze Labs</h3>
-			<p class="role">Lead Engineer, Tech Lead</p>
-			<p class="duration"><time datetime="2022-06">Jun 2022</time> - Present</p>
+			<h3>Auroratide</h3>
+			<p class="role">Dev Contractor, Technical Author</p>
+			<p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
 		</header>
 		<section>
 			<ul>
-				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
-				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
-				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
-				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
+				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 45,000 people for managing teams of creatures in a table top game.</li>
+				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
+				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
+				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
+				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
 			</ul>
 		</section>
 	</section>
 	<hr />
 	<section class="position">
 		<header>
-			<h3>Auroratide</h3>
-			<p class="role">Technical Author</p>
-			<p class="duration"><time datetime="2021-05">May 2021</time> - <time datetime="2022-06">Jun 2022</time></p>
+			<h3>Compoze Labs</h3>
+			<p class="role">Lead Engineer, Tech Lead</p>
+			<p class="duration"><time datetime="2022-06">Jun 2022</time> - <time datetime="2026-01">Jan 2026</time></p>
 		</header>
 		<section>
 			<ul>
-				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 10,000 people for managing teams of creatures in a table top game.</li>
-				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
-				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
-				<li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li>
+				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
+				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
+				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
+				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
 			</ul>
 		</section>
 	</section>
