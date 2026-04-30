@@ -18,3 +18,10 @@ export class Keytone {
 		return Pitch.toName(Keytone.keymap[key])
 	}
 }
+
+
+/*
+w3e4rt6y7u8io
+
+zsxdcvgbhnjm,
+*/
