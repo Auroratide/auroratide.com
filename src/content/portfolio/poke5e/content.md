@@ -13,7 +13,7 @@ icon: dragon
 color: yellow
 cover:
   alt: "Website showing Pokemon, Moves, TMs, and Trainers as options."
-summary: "An app that helps over 5,000 people manage their content for a table-top game based on Pokemon and Dungeons & Dragons."
+summary: "An app that helps over 40,000 people manage their content for a table-top game based on Pokemon and Dungeons & Dragons."
 summaryDisp: "Play D&D with Pokemon"
 publishedAt: 2022-03-09T12:00:00.000Z
 order: 1
@@ -29,7 +29,7 @@ links:
 gallery:
   - src: "./pokemon.webp"
     alt: "The filter field spells 'PIK', with Pikachu's info on the right."
-    caption: "A searchable reference for over 900 pokemon"
+    caption: "A searchable reference for over 1000 pokemon"
     width: 2468
     height: 1360
   - src: "./trainers.webp"
@@ -49,7 +49,7 @@ gallery:
     height: 1360
 ---
 
-**Pokemon 5e Reference** is a website dedicated to Dungeons and Dragons homebrew, adding Pokemon to a world of magic! Over 5,000 people use the site regularly, and I manage an online Discord community with hundreds of members.
+**Pokemon 5e Reference** is a website dedicated to Dungeons and Dragons homebrew, adding Pokemon to a world of magic! Over 40,000 people use the site regularly, and I manage an online Discord community with over a thousand members.
 
 * I converted a bunch of PDFs into a structured format and an API that the website uses to make interactivity possible.
 * Trainers can be managed online, without the need to create an account. This is possible using [Supabase](https://supabase.com/).
