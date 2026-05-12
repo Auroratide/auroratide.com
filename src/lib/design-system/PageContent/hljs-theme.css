@@ -1,6 +1,9 @@
 .hljs-comment {
 	color: var(--t-fg-b);
-	opacity: 0.75;
+	background: var(--t-bg-a);
+	opacity: 0.875;
+} .hljs-comment:has(+ .hljs-comment) {
+	padding-bottom: 0.375em;
 }
 
 .hljs-keyword,

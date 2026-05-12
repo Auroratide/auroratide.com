@@ -78,6 +78,7 @@ export const IconName = {
 	Plus: 'plus',
 	ProjectDiagram: 'project-diagram',
 	QuestionCircle: 'question-circle',
+	Robot: 'robot',
 	Rocket: 'rocket',
 	SearchPlus: 'search-plus',
 	Seedling: 'seedling',

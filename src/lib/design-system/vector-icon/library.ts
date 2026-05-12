@@ -76,6 +76,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle'
+import { faRobot } from '@fortawesome/free-solid-svg-icons/faRobot'
 import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons/faSearchPlus'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling'
@@ -205,6 +206,7 @@ export const library = {
 	[IconName.Plus]: faPlus,
 	[IconName.ProjectDiagram]: faProjectDiagram,
 	[IconName.QuestionCircle]: faQuestionCircle,
+	[IconName.Robot]: faRobot,
 	[IconName.Rocket]: faRocket,
 	[IconName.SearchPlus]: faSearchPlus,
 	[IconName.Seedling]: faSeedling,
