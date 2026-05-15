@@ -38,6 +38,9 @@ export const Routes = {
 	Resume: {
 		href: () => "/resume",
 	},
+	SupportMe: {
+		href: () => "/support-me",
+	},
 } as const
 
 export type SocialLink = {
@@ -114,4 +117,7 @@ export const FooterNav = [ {
 }, {
 	href: Routes.Resume.href(),
 	name: "Resume",
+}, {
+	href: Routes.SupportMe.href(),
+	name: "Support Me",
 } ]
