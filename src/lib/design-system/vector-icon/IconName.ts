@@ -65,6 +65,7 @@ export const IconName = {
 	LowVision: 'low-vision',
 	MapMarkerAlt: 'map-marker-alt',
 	Medal: 'medal',
+	Microphone: 'microphone',
 	Mobile: 'mobile',
 	Moon: 'moon',
 	Music: 'music',

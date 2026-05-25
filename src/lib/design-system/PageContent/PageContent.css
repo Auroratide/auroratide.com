@@ -245,6 +245,7 @@
 		gap: 1em;
 		align-items: center;
 
+		&.h-20 img { max-height: 20em; }
 		&.h-15 img { max-height: 15em; }
 		&.h-10 img { max-height: 10em; }
 	}

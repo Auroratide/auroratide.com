@@ -63,6 +63,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons/faLink'
 import { faLowVision } from '@fortawesome/free-solid-svg-icons/faLowVision'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt'
 import { faMedal } from '@fortawesome/free-solid-svg-icons/faMedal'
+import { faMicrophone } from '@fortawesome/free-solid-svg-icons/faMicrophone'
 import { faMobile } from '@fortawesome/free-solid-svg-icons/faMobile'
 import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'
 import { faMusic } from '@fortawesome/free-solid-svg-icons/faMusic'
@@ -193,6 +194,7 @@ export const library = {
 	[IconName.LowVision]: faLowVision,
 	[IconName.MapMarkerAlt]: faMapMarkerAlt,
 	[IconName.Medal]: faMedal,
+	[IconName.Microphone]: faMicrophone,
 	[IconName.Mobile]: faMobile,
 	[IconName.Moon]: faMoon,
 	[IconName.Music]: faMusic,
