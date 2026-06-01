@@ -33,7 +33,7 @@
 				<li>Automated Testing</li>
 				<li>CI/CD Pipelines</li>
 				<li>Agile Delivery</li>
-				<li>AI-Powered Development</li>
+				<!-- <li>AI-Powered Development</li> -->
 			</ul>
 		</li>
 	</ul>
