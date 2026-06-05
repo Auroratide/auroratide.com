@@ -59,7 +59,7 @@
 			<ul>
 				<li>Published the client's first online origination experience, integrating an isolated React app into the existing Ruby on Rails site to decouple their pipelines.</li>
 				<li>Accelerated our deployment to production by four weeks after I introduced Pact contract testing and API stubbing to the team.</li>
-				<li>Created codebase alignment through workshops about state management with Redux Sagas, testing React with Enzyme, and functional testing with Testcafe.</li>
+				<!-- <li>Created codebase alignment through workshops about state management with Redux Sagas, testing React with Enzyme, and functional testing with Testcafe.</li> -->
 				<!-- <li>Established a model for working as a distributed US/India team, which became a standard across multiple teams on the client.</li> -->
 			</ul>
 		</section>
