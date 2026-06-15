@@ -22,7 +22,8 @@
 				<li>Git</li>
 				<li>Postgres, MongoDB</li>
 				<li>Web Components</li>
-				<li>Claude Code, Vector DB</li>
+				<li>Claude Code, Qwen</li>
+				<li>Pinecone, Chroma</li>
 			</ul>
 		</li>
 		<li>

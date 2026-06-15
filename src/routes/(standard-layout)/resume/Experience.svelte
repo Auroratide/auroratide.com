@@ -26,6 +26,7 @@
 		</header>
 		<section>
 			<ul>
+				<li>As tech lead, architected an AI search feature on custom client data which accelerated their product development by over a week.</li>
 				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
 				<li>Released an accessibility-audited and compliant website that thousands of people have used to order compost bags.</li>
 				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
