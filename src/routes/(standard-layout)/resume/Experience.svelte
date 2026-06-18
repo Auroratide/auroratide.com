@@ -8,9 +8,10 @@
 		</header>
 		<section>
 			<ul>
-				<li>Contracted with Compoze Labs to deliver custom solutions, technical leadership, and accessibility expertise to over six company clients.</li>
+				<!-- <li>Contracted with Compoze Labs to deliver custom solutions, technical leadership, and accessibility expertise to over six company clients.</li> -->
 				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 45,000 people for managing teams of creatures in a table top game.</li>
 				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
+				<li>Using a semi-autonomous AI workflow, built <a href="https://disneybounding.com">disneybounding.com</a> and published my findings on AI's coding capabilities and limitations.</li>
 				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
 				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<!-- <li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li> -->
@@ -44,8 +45,8 @@
 		<section>
 			<h4>Co-Tech Lead - Healthcare Client</h4>
 			<ul>
-				<li>Revamped the client's data pipeline by introducing a horizontally scalable message queue for processing of claims in parallel, making the system 90% faster.</li>
 				<li>Led the design of a Domain Specific Language to bridge communication between the business and developers, shortening the development lifecycle by 40 days.</li>
+				<li>Revamped the client's data pipeline by introducing a horizontally scalable message queue for processing of claims in parallel, making the system 90% faster.</li>
 				<li>Proposed and implemented an architecture that reduced the number of claims our queue needed to process from billions to millions. </li>
 				<li>Presented a live view into our data pipeline to the client CEO and CTO, built using Javascript and Express connected to our Kotlin REST API.</li>
 			</ul>

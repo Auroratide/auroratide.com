@@ -6,24 +6,34 @@
 			<ul>
 				<li>Typescript, Javascript</li>
 				<li>HTML, CSS, SCSS</li>
-				<li>Python</li>
-				<li>Kotlin, Java, C#</li>
+				<li>Python, Kotlin, Java</li>
 				<li>SQL</li>
 			</ul>
 		</li>
 		<li>
-			<strong>Technologies:</strong>
+			<strong>Web and Cloud:</strong>
 			<ul>
 				<li>React, Svelte</li>
-				<li>NodeJS, Express</li>
-				<li>AWS, Docker, Azure</li>
-				<li>Vitest, Playwright, JUnit</li>
-				<li>Spring, Ktor, RabbitMQ</li>
-				<li>Git</li>
-				<li>Postgres, MongoDB</li>
 				<li>Web Components</li>
+				<li>NodeJS, Express, Lambdas</li>
+				<li>AWS, Azure, Docker</li>
+				<li>Spring, Ktor, RabbitMQ</li>
+			</ul>
+		</li>
+		<li>
+			<strong>AI and Data:</strong>
+			<ul>
 				<li>Claude Code, Qwen</li>
 				<li>Pinecone, Chroma</li>
+				<li>Postgres, MongoDB</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Testing and Tools:</strong>
+			<ul>
+				<li>Vitest, Jest, JUnit</li>
+				<li>Playwright, Storybook</li>
+				<li>Git</li>
 			</ul>
 		</li>
 		<li>

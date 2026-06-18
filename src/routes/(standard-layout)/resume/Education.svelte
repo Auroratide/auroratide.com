@@ -6,8 +6,8 @@
 		<p class="college">Texas A&M University, USA</p>
 		<p class="gpa"><small><strong>GPA:</strong> 3.97</small></p>
 		<ul class="activities">
-			<li><small>Researched Creativity Expression</small></li>
-			<li><small>President of Texas Aggie Game Developers</small></li>
+			<li><small>Creativity Science Minor</small></li>
+			<li><small>President of Aggie Game Developers</small></li>
 		</ul>
 	</div>
 </section>
