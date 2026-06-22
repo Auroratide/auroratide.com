@@ -1,6 +1,7 @@
 export const ArticleCategory = {
 	Accessibility: "Accessibility",
 	AnythingElse: "Anything Else",
+	ArtificialIntelligence: "Artificial Intelligence",
 	Creativity: "Creativity",
 	GameDev: "Game Dev",
 	Projects: "Projects",

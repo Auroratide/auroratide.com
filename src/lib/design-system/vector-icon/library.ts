@@ -76,6 +76,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons/faProjectDiagram'
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons/faPuzzlePiece'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle'
 import { faRobot } from '@fortawesome/free-solid-svg-icons/faRobot'
 import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket'
@@ -207,6 +208,7 @@ export const library = {
 	[IconName.Play]: faPlay,
 	[IconName.Plus]: faPlus,
 	[IconName.ProjectDiagram]: faProjectDiagram,
+	[IconName.PuzzlePiece]: faPuzzlePiece,
 	[IconName.QuestionCircle]: faQuestionCircle,
 	[IconName.Robot]: faRobot,
 	[IconName.Rocket]: faRocket,

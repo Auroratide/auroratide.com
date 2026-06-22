@@ -78,6 +78,7 @@ export const IconName = {
 	Play: 'play',
 	Plus: 'plus',
 	ProjectDiagram: 'project-diagram',
+	PuzzlePiece: 'puzzle-piece',
 	QuestionCircle: 'question-circle',
 	Robot: 'robot',
 	Rocket: 'rocket',
