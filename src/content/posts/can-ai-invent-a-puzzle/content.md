@@ -19,7 +19,7 @@ createdAt: 2026-06-22T12:00:00.000Z
 
 This is Part 1(?) of a weekly series where I'll be probing **Artificial Creativty**. Weekly is pretty ambitious of me, but I think I can do it if I'm willing to think of my posts as documenting a journey rather than a destination.
 
-This week, I randomly asked Gemini and Claude to invent an entirely new category of puzzle, and that sent me down a rabbit hole of experimentations where I realized I might be able to probe AI's propensity for creativity. I studied creativity in college, so besides the headknowledge that I have on the subject, I've also got some pent up curiosity. Is AI currently creative? In what ways is it different from human creativity? This is what I'll be investigating in the coming weeks.
+This week, I randomly asked Gemini and Claude to invent an entirely new category of puzzle, and that sent me down a rabbit hole of experimentations where I realized I might be able to probe AI's propensity for creativity. I studied creativity in college, so besides the head knowledge that I have on the subject, I've also got some pent-up curiosity. Is AI currently creative? In what ways is it different from human creativity? This is what I'll be investigating in the coming weeks.
 
 After playing a bit, my personal takeaway was this:
 
@@ -85,7 +85,7 @@ This is my best way to describe how to solve the puzzle without devolving into a
   1     2     3     4     5     6     7
 		</code></pre>
 		<p style="margin-block-start: 0; font-size: 0.875em;">Drift of A = 1 • Drift of B = 5 • Drift of C = 1</p>
-		<figcaption>It is not possible to fit the second configuration of Drift 5, since there's not enough slots.<br />Therefore, we need to fit two of <code>N * Δ * _ N</code> and one of <code>Δ * N _ _ N</code> onto the beam.</figcation>
+		<figcaption>It is not possible to fit the second configuration of Drift 5, since there are not enough slots.<br />Therefore, we need to fit two of <code>N * Δ * _ N</code> and one of <code>Δ * N _ _ N</code> onto the beam.</figcation>
 	</figure>
 	<figure slot="slide">
 		<pre style="margin-block-end: 0;"><code>
@@ -112,7 +112,7 @@ Technically this is an opinion, but I do believe there are certain qualities tha
 
 - **Solution Uniqueness**: A good logic puzzle should have exactly one unique, unambiguous solution. Every single Fulcrum Drift puzzle fails this. Simply mirror the solution and you get a second solution. And when two Drift values are the same, then those letters are effectively interchangeable in the solution.
 - **Logic Diversity**: Solving the puzzle should involve multiple kinds of deductions. Deploying the right kind of deduction at the right moment is what makes a puzzle fun. Fulcrum Drift is just a math equation. Drift values tell you how far apart numbers are, then you just sorta slot them onto the beam until everything fits.
-- **Incremental Progress**: Good puzzles are solved a piece at a time, sort of like discovering bits of the solution until you have the whole picture. When you need the whole picture all at once, then it feels less like "solving" and more like "finding" or "stumbling upon". In Fulcrum Drift, it's hard to know definitively whether a pair of numbers are correctly placed without also _trying_ all the other numbers. In other words, it's glorified guess and check.
+- **Incremental Progress**: Good puzzles are solved a piece at a time, sort of like discovering bits of the solution until you have the whole picture. When you need the whole picture all at once, then it feels less like "solving" and more like "finding" or "stumbling upon". In Fulcrum Drift, it's hard to know definitively whether a pair of numbers is correctly placed without also _trying_ all the other numbers. In other words, it's glorified guess and check.
 
 So why did AI produce such a bad puzzle? Is it because Gemini was not creative enough? Perhaps _too_ creative? Or was it something else?
 
@@ -138,7 +138,7 @@ In order to do better than "lackluster" though, I decided to try the same thing,
 
 ## Claude's Puzzle: Luminary
 
-Claude Code is a lot more powerful than the free browser Gemini AI. It engages in thinking loops, writes and executes code, and spins up sub agents.
+Claude Code is a lot more powerful than the free browser Gemini AI. It engages in thinking loops, writes and executes code, and spins up subagents.
 
 Given that power, Claude came up with what it calls **Luminary**.
 
@@ -175,7 +175,7 @@ The example puzzle is pretty easy, but demonstrates the core of the puzzle decen
 <slide-show style="margin-block-start: 0;">
 	<figure slot="slide">
 		<img src="./luminary-1-1.webp" loading="lazy" style="max-block-size: 20em;" alt="Row 1 Column 2 marked as a star. Row 5 Column 3 marked as a star." width="1241" height="975" />
-		<figcaption>Let's start by finding where the stars are. In row 1 and column 3, there is only one posible location for each star respectively, due to the 0-clues.</figcation>
+		<figcaption>Let's start by finding where the stars are. In row 1 and column 3, there is only one possible location for each star respectively, due to the 0-clues.</figcation>
 	</figure>
 	<figure slot="slide">
 		<img src="./luminary-1-2.webp" loading="lazy" style="max-block-size: 20em;" alt="Row 3 Column 4 marked as a star." width="1241" height="975" />
@@ -214,7 +214,7 @@ Making slideshows is a lot of work. Instead, here's a series of hints (they're m
 
 <details>
 	<summary>Hint 2</summary>
-	<p>You can deduce where the star in Row 2 goes, even if you do not know it's value. Consider the 4-Reading and what you learned in Hint 1.</p>
+	<p>You can deduce where the star in Row 2 goes, even if you do not know its value. Consider the 4-Reading and what you learned in Hint 1.</p>
 </details>
 
 <details>
@@ -248,7 +248,7 @@ Claude tried four different ideas before landing on Luminary as a concept, and t
 	<figcaption>Stars locations were given, and the goal was to figure out what values the stars had.</figcaption>
 </figure>
 
-But, because one of the improvement ideas was "players should deduce star locations", that led it to the puzzle I'm showing here, a puzzle which while imperfect is at least interesting.
+But, because one of the improvement ideas was "players should deduce star locations", that led it to the puzzle I'm showing here, a puzzle that is interesting even if imperfect.
 
 The lesson here is this:
 
@@ -272,18 +272,18 @@ Let's consider the creativity of this kind of puzzle on two dimensions: **novelt
 
 ### Novelty
 
-On the one hand, the _exact combination_ of rules that make up Luminary seem to be rare. On the other hand, the rules clearly borrow from several well-known puzzles:
+On the one hand, the _exact combination_ of rules that make up Luminary seems to be rare. On the other hand, the rules clearly borrow from several well-known puzzles:
 
 - [Star Battle](https://www.puzzle-star-battle.com/): Star locations must be deduced and cannot be adjacent.
 - [Tents & Trees](https://tentsandtrees.net/): Clues outside the grid tell you how many stars are in that row or column.
 - [Akari](https://dailyakari.com/): Stars light up cells in horizontal and vertical directions.
 - [Kakuro](https://www.kakuros.com/): Sums are clues to deduce where numbers go.
 
-To be fair, many classic puzzles borrow from each other already, and it takes creative effort to combine things in just the right way (see what I've written on [creativty as building bridges](/posts/enhancing-creativity-by-deferring-judgement/)). So this is still impressive.
+To be fair, many classic puzzles borrow from each other already, and it takes creative effort to combine things in just the right way (see what I've written on [creativity as building bridges](/posts/enhancing-creativity-by-deferring-judgement/)). So this is still impressive.
 
 ### Purpose
 
-For a puzzle, purpose really just comes down whether solving a Luminary puzzle is fun. Going by our criteria for what made Fulcrum Drift _not_ fun:
+For a puzzle, purpose really just comes down to whether solving a Luminary puzzle is fun. Going by our criteria for what made Fulcrum Drift _not_ fun:
 
 - **Solution Uniqueness**: Yep, puzzles can have unique solutions.
 - **Logic Diversity**: Solving my puzzle required using star adjacency to rule out spaces, deducing how many stars are in a row when it isn't given, using facts about star uniqueness to determine their values, and sum combinations. <small>I mean, unless I'm small-brained and didn't see a more obvious way to solve my own puzzle...</small>
