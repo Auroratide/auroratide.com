@@ -1,6 +1,15 @@
 slide-show {
 	margin-block: 3em;
 
+	figure {
+		padding: 0;
+		max-inline-size: 100%;
+	}
+
+	pre {
+		max-inline-size: 100%;
+	}
+
 	&::part(nav-item) {
 		font-size: 0.875em;
 		font-family: var(--f-normal);
