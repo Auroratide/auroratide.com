@@ -7,7 +7,7 @@
 			<p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
 		</header>
 		<section>
-			<h4>Tech Lead - Compoze Labs | Jun 2022 - Jan 2016</h4>
+			<h4 class="with-duration"><span>Tech Lead - Compoze Labs</span><span>Jun 2022 - Jan 2026</span></h4>
 			<ul>
 				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
 				<li>As tech lead, architected an AI search feature on custom client data which accelerated their product development by over a week.</li>
@@ -112,6 +112,11 @@
 		font-style: normal;
 		font-size: 0.875em;
 		font-weight: bold;
+	}
+
+	.with-duration {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	ul {
