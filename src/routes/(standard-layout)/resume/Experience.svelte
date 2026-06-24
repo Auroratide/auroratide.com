@@ -3,10 +3,19 @@
 	<section class="position">
 		<header>
 			<h3>Auroratide</h3>
-			<p class="role">Dev Contractor, Technical Author</p>
+			<p class="role">Lead Dev Contractor, Tech Consultant</p>
 			<p class="duration"><time datetime="2021-05">May 2021</time> - Present</p>
 		</header>
 		<section>
+			<h4>Tech Lead - Compoze Labs | Jun 2022 - Jan 2016</h4>
+			<ul>
+				<li>Led a team of five React developers in creating an interactive, fully offline-compatible guidebook for packaging machines and robots.</li>
+				<li>As tech lead, architected an AI search feature on custom client data which accelerated their product development by over a week.</li>
+				<li>Released an accessibility-audited and compliant government website that thousands of people have used to order compost bags.</li>
+				<li>Architected a pipeline for collecting, processing, and visualizing millions of data points on a device with no access to internet resources.</li>
+				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
+			</ul>
+			<h4>Independent Products and Publications</h4>
 			<ul>
 				<!-- <li>Contracted with Compoze Labs to deliver custom solutions, technical leadership, and accessibility expertise to over six company clients.</li> -->
 				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 45,000 people for managing teams of creatures in a table top game.</li>
@@ -18,7 +27,7 @@
 			</ul>
 		</section>
 	</section>
-	<hr />
+	<!-- <hr />
 	<section class="position">
 		<header>
 			<h3>Compoze Labs</h3>
@@ -34,7 +43,7 @@
 				<li>Built a native mobile app for visualizing the live video, audio, and locational feeds of teams of over 50 emergency personnel.</li>
 			</ul>
 		</section>
-	</section>
+	</section> -->
 	<hr />
 	<section class="position">
 		<header>
