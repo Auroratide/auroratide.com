@@ -23,6 +23,7 @@
 		display: grid;
 		grid-template-columns: auto 1fr;
 		column-gap: 0.75ch;
+		row-gap: 0.125em;
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
@@ -45,8 +46,8 @@
 		address {
 			background: var(--c-dark-dark);
 			color: var(--c-light-light);
-			margin: 0;
-			padding: 0 1.5em 1.5em;
+			margin: -2px 0 0 0;
+			padding: 2px 1.5em 1.5em;
 		}
 
 		a {
