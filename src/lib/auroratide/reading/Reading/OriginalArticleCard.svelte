@@ -1,23 +1,32 @@
 <script lang="ts">
     import { Color } from "$lib/design-system/Color";
     import { DateDisplay } from "$lib/design-system/DateDisplay";
+    import type { ReadingTypeType } from "../ReadingType";
 
 	let {
 		author,
 		publisher,
 		href,
 		publishedAt,
+		type,
 	}: {
 		author: string,
 		publisher: string,
 		href: string,
 		publishedAt: Date,
+		type: ReadingTypeType,
 	} = $props()
 </script>
 
 
 <div class="original-article-card {Color.bg.bg.b} lift-on-focus">
-	<h2><a {href} class="{Color.text.fg.b} card-link">Read the Original Article</a></h2>
+	<h2><a {href} class="{Color.text.fg.b} card-link">
+		{#if type === "video"}
+			Watch the Original Video
+		{:else}
+			Read the Original Article
+		{/if}
+	</a></h2>
 	<p>By {author}{#if publisher}{` on ${publisher}`}{/if}</p>
 	<p>Published <DateDisplay value={publishedAt} /></p>
 </div>

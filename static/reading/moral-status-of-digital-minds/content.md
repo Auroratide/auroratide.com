@@ -5,7 +5,6 @@ author: Cody Fenwick
 publisher: 80,000 Hours
 href: https://80000hours.org/problem-profiles/moral-status-digital-minds/
 category: Artificial Intelligence
-type: article
 tags:
   - ai
   - consciousness

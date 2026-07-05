@@ -29,7 +29,7 @@
 			<BulletDivider />
 			<TagsList values={value.tags} />
 		</div>
-		<OriginalArticleCard author={value.author} publisher={value.publisher} publishedAt={value.originalPublishedAt} href={value.href} />
+		<OriginalArticleCard author={value.author} publisher={value.publisher} publishedAt={value.originalPublishedAt} href={value.href} type={value.type} />
 	</div>
 	<section id="article-content" slot="content">
 		<PageContent value={value.content} />

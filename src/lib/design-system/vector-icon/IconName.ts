@@ -89,6 +89,7 @@ export const IconName = {
 	Shapes: 'shapes',
 	Shower: 'shower',
 	Signature: 'signature',
+	Smile: 'smile',
 	SmileWink: 'smile-wink',
 	Spades: 'spades',
 	SquareFull: 'square-full',

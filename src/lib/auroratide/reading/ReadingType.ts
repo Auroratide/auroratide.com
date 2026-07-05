@@ -1,6 +1,8 @@
 import type { ThemeName } from "$lib/design-system/Color"
 import type { IconName } from "$lib/design-system/vector-icon"
 
+export type ReadingTypeType = "article" | "video"
+
 export type ReadingType = {
 	id: string,
 	title: string,
@@ -8,6 +10,7 @@ export type ReadingType = {
 	author: string,
 	publisher: string,
 	href: string,
+	type: ReadingTypeType
 	publishedAt: Date,
 	originalPublishedAt: Date,
 	tags: string[],
@@ -33,6 +36,7 @@ export const mdToSummarizedReading = (attributes: Record<string, unknown>): Summ
 	category: attributes.category as string,
 	author: attributes.author as string,
 	publisher: attributes.publisher as string,
+	type: attributes.type as ReadingTypeType,
 	href: attributes.href as string,
 	publishedAt: new Date(attributes.publishedAt as string),
 	originalPublishedAt: new Date(attributes.originalPublishedAt as string),
