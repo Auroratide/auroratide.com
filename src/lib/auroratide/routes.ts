@@ -15,6 +15,9 @@ export const Routes = {
 	Doodles: {
 		href: (id?: string) => `/doodles${id == null ? "" : "/" + id}`,
 	},
+	Reading: {
+		href: (id?: string) => `/reading${id == null ? "" : "/" + id}`,
+	},
 	Art: {
 		href: (id?: string) => `/art${id == null ? "" : "/" + id}`,
 		cover: {
@@ -81,8 +84,8 @@ export const MainNav = [ {
 	href: Routes.Stories.href(),
 	name: "Stories I Authored",
 }, {
-	href: Routes.Doodles.href(),
-	name: "Doodles I Scribbled",
+	href: Routes.Reading.href(),
+	name: "Articles I've Read",
 }, {
 	href: Routes.Art.href(),
 	name: "Art I Drew",
@@ -101,9 +104,9 @@ export const FooterNav = [ {
 	name: "Stories",
 	icon: IconName.BookOpen,
 }, {
-	href: Routes.Doodles.href(),
-	name: "Doodles",
-	icon: IconName.Signature,
+	href: Routes.Reading.href(),
+	name: "Reading",
+	icon: IconName.Bookmark,
 }, {
 	href: Routes.Art.href(),
 	name: "Art",

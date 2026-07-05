@@ -12,6 +12,7 @@ export const IconName = {
 	Atom: 'atom',
 	Bomb: 'bomb',
 	Book: 'book',
+	Bookmark: 'bookmark',
 	BookOpen: 'book-open',
 	Boxes: 'boxes',
 	Brain: 'brain',

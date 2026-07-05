@@ -12,6 +12,7 @@ import { faAssistiveListeningSystems } from '@fortawesome/free-solid-svg-icons/f
 import { faAtom } from '@fortawesome/free-solid-svg-icons/faAtom'
 import { faBomb } from '@fortawesome/free-solid-svg-icons/faBomb'
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons/faBookmark'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen'
 import { faBoxes } from '@fortawesome/free-solid-svg-icons/faBoxes'
 import { faBug } from '@fortawesome/free-solid-svg-icons/faBug'
@@ -142,6 +143,7 @@ export const library = {
 	[IconName.Atom]: faAtom,
 	[IconName.Bomb]: faBomb,
 	[IconName.Book]: faBook,
+	[IconName.Bookmark]: faBookmark,
 	[IconName.BookOpen]: faBookOpen,
 	[IconName.Boxes]: faBoxes,
 	[IconName.Brain]: faBrain,
