@@ -36,6 +36,7 @@
 		border-inline-start: 0.5em solid var(--t-primary-a);
 		padding: 1em;
 		max-inline-size: 25em;
+		position: relative;
 	}
 
 	h2 {
