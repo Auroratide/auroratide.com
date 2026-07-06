@@ -10,6 +10,7 @@ import './MathDisplay'
 import './MoonRating'
 import './RubberJuggle'
 import './SlidingDemo'
+import './TangramBoard'
 
 import './pages/posts/the-bounce-of-rubber-juggle'
 

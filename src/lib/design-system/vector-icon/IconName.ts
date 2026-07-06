@@ -27,6 +27,7 @@ export const IconName = {
 	Code: 'code',
 	CookieBite: 'cookie-bite',
 	CommentDots: 'comment-dots',
+	Copy: 'copy',
 	Crosshairs: 'crosshairs',
 	Css3Alt: 'css3-alt',
 	Cube: 'cube',
