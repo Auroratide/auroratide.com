@@ -73,6 +73,7 @@ import { faPaintBrush } from '@fortawesome/free-solid-svg-icons/faPaintBrush'
 import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette'
 import { faPause } from '@fortawesome/free-solid-svg-icons/faPause'
 import { faPaw } from '@fortawesome/free-solid-svg-icons/faPaw'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons/faPencilAlt'
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay'
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus'
@@ -207,6 +208,7 @@ export const library = {
 	[IconName.Palette]: faPalette,
 	[IconName.Pause]: faPause,
 	[IconName.Paw]: faPaw,
+	[IconName.PencilAlt]: faPencilAlt,
 	[IconName.Phone]: faPhone,
 	[IconName.Play]: faPlay,
 	[IconName.Plus]: faPlus,

@@ -75,6 +75,7 @@ export const IconName = {
 	Palette: 'palette',
 	Pause: 'pause',
 	Paw: 'paw',
+	PencilAlt: 'pencil-alt',
 	Phone: 'phone',
 	Play: 'play',
 	Plus: 'plus',
