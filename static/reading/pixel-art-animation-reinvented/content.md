@@ -5,6 +5,7 @@ author: aarthificial
 publisher: Youtube
 href: https://www.youtube.com/watch?v=HsOKwUwL1bE
 category: Art
+type: video
 tags:
   - pixelart
   - unity

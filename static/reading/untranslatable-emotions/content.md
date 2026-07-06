@@ -5,6 +5,7 @@ author: David Robson
 publisher: BBC
 href: https://www.bbc.com/future/article/20170126-the-untranslatable-emotions-you-never-knew-you-had
 category: Psychology
+type: article
 tags:
   - emotion
   - language
