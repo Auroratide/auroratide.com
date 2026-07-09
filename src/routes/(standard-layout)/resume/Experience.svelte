@@ -18,9 +18,11 @@
 			<h4>Independent Products and Publications</h4>
 			<ul>
 				<!-- <li>Contracted with Compoze Labs to deliver custom solutions, technical leadership, and accessibility expertise to over six company clients.</li> -->
-				<li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 45,000 people for managing teams of creatures in a table top game.</li>
+				<!-- <li>Built <a href="https://poke5e.app">poke5e.app</a>, a web application used by over 45,000 people for managing teams of creatures in a table top game.</li> -->
+				<li>Independently designed, built, and maintain a full-stack web application serving 45,000+ active users, owning the entire system from the data layer through the UI and deployment.</li>
 				<li>Achieved over 30,000 views through technical writing on topics including web accessibility, web components, and frontend best practices.</li>
-				<li>Using a semi-autonomous AI workflow, built <a href="https://disneybounding.com">disneybounding.com</a> and published my findings on AI's coding capabilities and limitations.</li>
+				<li>Developed a semi-autonomous worflow to build, test, and verify a full-stack application and published my findings on AI's coding capabilities and limitations.</li>
+				<!-- <li>Using a semi-autonomous AI workflow, built <a href="https://disneybounding.com">disneybounding.com</a> and published my findings on AI's coding capabilities and limitations.</li> -->
 				<!-- <li>Built <a href="https://sifetti.com">sifetti.com</a>, a full-stack authenticated web application for efficiently organizing notes, currently integrating feedback received from by beta users.</li> -->
 				<li>Composed reusable web components with thousands of weekly downloads, published at <a href="https://components.auroratide.com">components.auroratide.com</a>.</li>
 				<!-- <li>Discovered, tested, and fixed a bug in the open source SvelteKit web framework.</li> -->
