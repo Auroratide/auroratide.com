@@ -59,6 +59,7 @@ export const IconName = {
 	HourglassHalf: 'hourglass-half',
 	ICursor: 'i-cursor',
 	Image: 'image',
+	Inbox: 'inbox',
 	Key: 'key',
 	LayerGroup: 'layer-group',
 	LevelUpAlt: 'level-up-alt',

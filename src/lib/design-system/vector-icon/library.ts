@@ -57,6 +57,7 @@ import { faHospitalAlt } from '@fortawesome/free-solid-svg-icons/faHospitalAlt'
 import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons/faHourglassHalf'
 import { faICursor } from '@fortawesome/free-solid-svg-icons/faICursor'
 import { faImage } from '@fortawesome/free-solid-svg-icons/faImage'
+import { faInbox } from '@fortawesome/free-solid-svg-icons/faInbox'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons/faLayerGroup'
 import { faLevelUpAlt } from '@fortawesome/free-solid-svg-icons/faLevelUpAlt'
@@ -193,6 +194,7 @@ export const library = {
 	[IconName.HourglassHalf]: faHourglassHalf,
 	[IconName.ICursor]: faICursor,
 	[IconName.Image]: faImage,
+	[IconName.Inbox]: faInbox,
 	[IconName.Key]: faKey,
 	[IconName.LayerGroup]: faLayerGroup,
 	[IconName.LevelUpAlt]: faLevelUpAlt,
