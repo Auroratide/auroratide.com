@@ -108,6 +108,7 @@ export const IconName = {
 	Tty: 'tty',
 	Thumbtack: 'thumbtack',
 	Times: 'times',
+	Tools: 'tools',
 	TrafficLight: 'traffic-light',
 	TruckMoving: 'truck-moving',
 	Undo: 'undo',

@@ -248,6 +248,10 @@
 		&.h-20 img { max-height: 20em; }
 		&.h-15 img { max-height: 15em; }
 		&.h-10 img { max-height: 10em; }
+
+		&.h-20 video { max-height: 20em; }
+		&.h-15 video { max-height: 15em; }
+		&.h-10 video { max-height: 10em; }
 	}
 
 	figcaption {

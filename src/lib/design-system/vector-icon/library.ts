@@ -105,6 +105,7 @@ import { faTh } from '@fortawesome/free-solid-svg-icons/faTh'
 import { faTty } from '@fortawesome/free-solid-svg-icons/faTty'
 import { faThumbtack } from '@fortawesome/free-solid-svg-icons/faThumbtack'
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes'
+import { faTools } from '@fortawesome/free-solid-svg-icons/faTools'
 import { faTrafficLight } from '@fortawesome/free-solid-svg-icons/faTrafficLight'
 import { faTruckMoving } from '@fortawesome/free-solid-svg-icons/faTruckMoving'
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo'
@@ -243,6 +244,7 @@ export const library = {
 	[IconName.Tty]: faTty,
 	[IconName.Thumbtack]: faThumbtack,
 	[IconName.Times]: faTimes,
+	[IconName.Tools]: faTools,
 	[IconName.TrafficLight]: faTrafficLight,
 	[IconName.TruckMoving]: faTruckMoving,
 	[IconName.Undo]: faUndo,
