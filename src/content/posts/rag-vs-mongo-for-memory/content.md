@@ -18,6 +18,8 @@ publishedAt: 2026-07-27T12:00:00.000Z
 createdAt: 2026-07-27T12:00:00.000Z
 ---
 
+Last week, [I brought up a bit of an AI memory puzzle](/posts/categorizing-ai-memory/#an-ai-memory-puzzle).
+
 Imagine, for a moment, that you have a sister, and that you're taking a trip somewhere soon. Now consider the following exceptionally simple question you could ask:
 
 > Is my sister's birthday before or after my trip?
@@ -43,11 +45,14 @@ How do we teach AI to remember?
 
 I tried two different approaches.
 
+> [!CAUTION]
+> Both approaches below ultimately get **step 6** wrong in that they think about the dates incorrectly. For this experiment, my focus was on memory retrieval, so I haven't tried solving that problem in earnest yet.
+
 ## Multistep RAG
 
 <abbr>RAG</abbr> (Retrieval-Augmented Generation) is often tied together with long-term memory in LLMs. It is a technique used to help AI remember relevant facts before responding to a user's query.
 
-For example, if I asked you, "What do cuttlefish eat?", you shouldn't try to guess off the top of your head. The better appoach would be to search the wikipedia page for Cuttlefish, find what it eats, and only then respond.
+For example, if I asked you, "What do cuttlefish eat?", you shouldn't try to guess off the top of your head. The better approach would be to search the Wikipedia page for Cuttlefish, find what it eats, and only then respond.
 
 Searching Wikipedia first helps you be _factual_ and _grounded_.
 
@@ -63,7 +68,7 @@ RAG works based on similarity. If I ask it to find all documents similar to "my 
 
 You have to split it up into its **component questions**:
 
-1. Who is User's sister? This should find the one document containing the User's name and the concept of either sibling or sister. Let's say it finds that the sister's name is Rebecca.
+1. Who is Florenne's sister? This should find the one document containing the User's name and the concept of either sibling or sister. Let's say it finds that the sister's name is Rebecca.
 2. When is Rebecca's birthday? Now this will specifically find the birthday document with Rebecca's name in it.
 
 To code up an agent to do this, I used a combination of a system prompt instructing the LLM how to break things down, along with code that loops through multiple steps.
@@ -149,7 +154,7 @@ There is also a mention of a trip to Central Academy with Parie Ellis in
 
 ## Structured Data
 
-Instead of RAG, there's an argument to be made that the data in question is **structured** and should not be represented with loosely written sentences. Instead of a document like "Candesse Trigg is female. Candesse Trigg's birthday is September 7," which squishes together too many semantic concepts together, it would have been better to think of people more deterministically:
+Instead of RAG, there's an argument to be made that the data in question is **structured** and should not be represented with loosely written sentences. Rather than a document like "Candesse Trigg is female. Candesse Trigg's birthday is September 7," which squishes too many semantic concepts together, it would have been better to think of people more deterministically:
 
 - Candesse
   - Birthday: 07 September 1999
