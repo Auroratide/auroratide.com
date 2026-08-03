@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@auroratide/arched-text':
+        specifier: ^0.1.0
+        version: 0.1.0
       '@auroratide/img-popout':
         specifier: ^1.0.1
         version: 1.0.1
@@ -24,6 +27,9 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1(svelte@5.53.7)
       '@auroratide/table-of-contents':
+        specifier: ^0.1.0
+        version: 0.1.0
+      '@auroratide/textarea-markdown':
         specifier: ^0.1.0
         version: 0.1.0
       '@auroratide/typewritten-text':
@@ -162,6 +168,9 @@ importers:
 
 packages:
 
+  '@auroratide/arched-text@0.1.0':
+    resolution: {integrity: sha512-iSyz7or1zm+AOUnJUV2L5YEt+oiz9k6TUGFv913e1eg0vsDPD8XJJn5xw15/aUNQssJYmTxo7RSTeqAwpIf1Gg==}
+
   '@auroratide/img-popout@1.0.1':
     resolution: {integrity: sha512-ludeCBJVblnSH6uAj1NjGGWVY7FB0By4I4BO27UP3XkhJu1t2hR/xwJiU6hRN6T1skJB+Ba0TNsEcMZpweJSIg==}
 
@@ -184,6 +193,9 @@ packages:
 
   '@auroratide/table-of-contents@0.1.0':
     resolution: {integrity: sha512-dmXZusDx7U3tsf1/jI9UPHKaKXS7HOTX0bu+I3z/rGGZSPQbqJYTNL57PAxkQKYz2JDP5tCX2AIGSJwIRP3m8Q==}
+
+  '@auroratide/textarea-markdown@0.1.0':
+    resolution: {integrity: sha512-cZ6C6jsPdoEk+5qgTpaoucGJ0MS79gA/3Xh41pPLMKiFZDw5sA6KTVA4OHcgmBC+dN0ZloCctr2pWJmgaGhtFg==}
 
   '@auroratide/typewritten-text@0.2.3':
     resolution: {integrity: sha512-3BuuTdlLYjfhTv+FSdeIDN997yoCO95/2sqzDHfAYr4PyLs2jtR6Hv+BX+75+q/sfje5EEJQKAn8Jk2JogJUYA==}
@@ -1965,6 +1977,8 @@ packages:
 
 snapshots:
 
+  '@auroratide/arched-text@0.1.0': {}
+
   '@auroratide/img-popout@1.0.1': {}
 
   '@auroratide/img-zoom@0.1.8': {}
@@ -1982,6 +1996,8 @@ snapshots:
       svelte: 5.53.7
 
   '@auroratide/table-of-contents@0.1.0': {}
+
+  '@auroratide/textarea-markdown@0.1.0': {}
 
   '@auroratide/typewritten-text@0.2.3': {}
 

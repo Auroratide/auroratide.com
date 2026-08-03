@@ -42,6 +42,7 @@ export const IconName = {
 	ExclamationTriangle: 'exclamation-triangle',
 	ExpandArrowsAlt: 'expand-arrows-alt',
 	EyeDropper: 'eye-dropper',
+	FileCode: 'file-code',
 	Filter: 'filter',
 	Fingerprint: 'fingerprint',
 	Fire: 'fire',

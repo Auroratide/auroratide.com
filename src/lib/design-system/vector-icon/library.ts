@@ -40,6 +40,7 @@ import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons/faExchangeAlt'
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle'
 import { faExpandArrowsAlt } from '@fortawesome/free-solid-svg-icons/faExpandArrowsAlt'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons/faEyeDropper'
+import { faFileCode } from '@fortawesome/free-solid-svg-icons/faFileCode'
 import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter'
 import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint'
 import { faFire } from '@fortawesome/free-solid-svg-icons/faFire'
@@ -178,6 +179,7 @@ export const library = {
 	[IconName.ExclamationTriangle]: faExclamationTriangle,
 	[IconName.ExpandArrowsAlt]: faExpandArrowsAlt,
 	[IconName.EyeDropper]: faEyeDropper,
+	[IconName.FileCode]: faFileCode,
 	[IconName.Filter]: faFilter,
 	[IconName.Fingerprint]: faFingerprint,
 	[IconName.Fire]: faFire,
